@@ -46,7 +46,10 @@ import system.net.configuration.HttpListenerTimeoutsElement;
  * The base .NET class managing System.Net.Configuration.HttpListenerElement, System, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089.
  * <p>
  * 
- * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Net.Configuration.HttpListenerElement" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Net.Configuration.HttpListenerElement</a>
+ * .NET documentation at <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Net.Configuration.HttpListenerElement" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Net.Configuration.HttpListenerElement</a>
+ * <p>
+ *
+ * Powered by JCOBridge: more info at <a href="https://www.jcobridge.com" target="_top">https://www.jcobridge.com</a>
  */
 public class HttpListenerElement extends ConfigurationElement  {
     /**

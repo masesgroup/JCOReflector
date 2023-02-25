@@ -43,7 +43,10 @@ import system.servicemodel.InstanceContext;
  * The Java interface to be implemented to receive events from the CLR using {@link InstanceContextIdleCallback}.
  * <p>
  * 
- * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.ServiceModel.Dispatcher.InstanceContextIdleCallback" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.ServiceModel.Dispatcher.InstanceContextIdleCallback</a>
+ * .NET documentation at <a href="https://docs.microsoft.com/en-us/dotnet/api/System.ServiceModel.Dispatcher.InstanceContextIdleCallback" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.ServiceModel.Dispatcher.InstanceContextIdleCallback</a>
+ * <p>
+ *
+ * Powered by JCOBridge: more info at <a href="https://www.jcobridge.com" target="_top">https://www.jcobridge.com</a>
  */
 public interface IInstanceContextIdleCallback {
     public void Invoke(InstanceContext instanceContext);

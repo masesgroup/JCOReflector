@@ -48,7 +48,10 @@ import system.servicemodel.description.IPolicyImportExtensionImplementation;
  * The base .NET class managing System.ServiceModel.Channels.UseManagedPresentationBindingElementImporter, System.ServiceModel, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089.
  * <p>
  * 
- * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.ServiceModel.Channels.UseManagedPresentationBindingElementImporter" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.ServiceModel.Channels.UseManagedPresentationBindingElementImporter</a>
+ * .NET documentation at <a href="https://docs.microsoft.com/en-us/dotnet/api/System.ServiceModel.Channels.UseManagedPresentationBindingElementImporter" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.ServiceModel.Channels.UseManagedPresentationBindingElementImporter</a>
+ * <p>
+ *
+ * Powered by JCOBridge: more info at <a href="https://www.jcobridge.com" target="_top">https://www.jcobridge.com</a>
  */
 public class UseManagedPresentationBindingElementImporter extends NetObject implements system.servicemodel.description.IPolicyImportExtension {
     /**

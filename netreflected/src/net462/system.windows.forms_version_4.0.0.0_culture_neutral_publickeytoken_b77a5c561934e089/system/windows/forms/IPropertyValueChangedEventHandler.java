@@ -43,7 +43,10 @@ import system.windows.forms.PropertyValueChangedEventArgs;
  * The Java interface to be implemented to receive events from the CLR using {@link PropertyValueChangedEventHandler}.
  * <p>
  * 
- * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Windows.Forms.PropertyValueChangedEventHandler" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Windows.Forms.PropertyValueChangedEventHandler</a>
+ * .NET documentation at <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Windows.Forms.PropertyValueChangedEventHandler" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Windows.Forms.PropertyValueChangedEventHandler</a>
+ * <p>
+ *
+ * Powered by JCOBridge: more info at <a href="https://www.jcobridge.com" target="_top">https://www.jcobridge.com</a>
  */
 public interface IPropertyValueChangedEventHandler {
     public void Invoke(NetObject s, PropertyValueChangedEventArgs e);

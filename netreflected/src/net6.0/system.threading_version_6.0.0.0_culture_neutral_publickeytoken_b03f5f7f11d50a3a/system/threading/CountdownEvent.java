@@ -47,7 +47,10 @@ import system.threading.WaitHandle;
  * The base .NET class managing System.Threading.CountdownEvent, System.Threading, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a.
  * <p>
  * 
- * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Threading.CountdownEvent" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Threading.CountdownEvent</a>
+ * .NET documentation at <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Threading.CountdownEvent" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Threading.CountdownEvent</a>
+ * <p>
+ *
+ * Powered by JCOBridge: more info at <a href="https://www.jcobridge.com" target="_top">https://www.jcobridge.com</a>
  */
 public class CountdownEvent extends NetObject implements AutoCloseable {
     /**

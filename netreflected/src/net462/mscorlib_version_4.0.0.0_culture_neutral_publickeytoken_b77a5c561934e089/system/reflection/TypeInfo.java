@@ -51,7 +51,10 @@ import system.reflection.IReflectableTypeImplementation;
  * The base .NET class managing System.Reflection.TypeInfo, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089.
  * <p>
  * 
- * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Reflection.TypeInfo" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Reflection.TypeInfo</a>
+ * .NET documentation at <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Reflection.TypeInfo" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Reflection.TypeInfo</a>
+ * <p>
+ *
+ * Powered by JCOBridge: more info at <a href="https://www.jcobridge.com" target="_top">https://www.jcobridge.com</a>
  */
 public class TypeInfo extends NetObject implements system.reflection.IReflectableType {
     /**

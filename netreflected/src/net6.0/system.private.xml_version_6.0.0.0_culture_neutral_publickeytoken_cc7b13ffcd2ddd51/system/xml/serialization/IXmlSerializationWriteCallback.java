@@ -42,7 +42,10 @@ import org.mases.jcobridge.netreflection.*;
  * The Java interface to be implemented to receive events from the CLR using {@link XmlSerializationWriteCallback}.
  * <p>
  * 
- * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Xml.Serialization.XmlSerializationWriteCallback" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Xml.Serialization.XmlSerializationWriteCallback</a>
+ * .NET documentation at <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Xml.Serialization.XmlSerializationWriteCallback" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Xml.Serialization.XmlSerializationWriteCallback</a>
+ * <p>
+ *
+ * Powered by JCOBridge: more info at <a href="https://www.jcobridge.com" target="_top">https://www.jcobridge.com</a>
  */
 public interface IXmlSerializationWriteCallback {
     public void Invoke(NetObject o);

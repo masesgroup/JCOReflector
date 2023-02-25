@@ -46,7 +46,10 @@ import system.reflection.TypeInfo;
  * The base .NET class managing System.Reflection.ReflectionContext, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089.
  * <p>
  * 
- * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Reflection.ReflectionContext" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Reflection.ReflectionContext</a>
+ * .NET documentation at <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Reflection.ReflectionContext" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Reflection.ReflectionContext</a>
+ * <p>
+ *
+ * Powered by JCOBridge: more info at <a href="https://www.jcobridge.com" target="_top">https://www.jcobridge.com</a>
  */
 public class ReflectionContext extends NetObject  {
     /**

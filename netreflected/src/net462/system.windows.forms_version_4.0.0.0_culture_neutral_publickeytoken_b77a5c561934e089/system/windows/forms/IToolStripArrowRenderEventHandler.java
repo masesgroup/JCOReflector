@@ -43,7 +43,10 @@ import system.windows.forms.ToolStripArrowRenderEventArgs;
  * The Java interface to be implemented to receive events from the CLR using {@link ToolStripArrowRenderEventHandler}.
  * <p>
  * 
- * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Windows.Forms.ToolStripArrowRenderEventHandler" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Windows.Forms.ToolStripArrowRenderEventHandler</a>
+ * .NET documentation at <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Windows.Forms.ToolStripArrowRenderEventHandler" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Windows.Forms.ToolStripArrowRenderEventHandler</a>
+ * <p>
+ *
+ * Powered by JCOBridge: more info at <a href="https://www.jcobridge.com" target="_top">https://www.jcobridge.com</a>
  */
 public interface IToolStripArrowRenderEventHandler {
     public void Invoke(NetObject sender, ToolStripArrowRenderEventArgs e);

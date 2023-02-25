@@ -47,7 +47,10 @@ import system.security.cryptography.CngProperty;
  * The base .NET class managing System.Security.Cryptography.CngProperty, System.Security.Cryptography.Cng, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a.
  * <p>
  * 
- * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Security.Cryptography.CngProperty" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Security.Cryptography.CngProperty</a>
+ * .NET documentation at <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Security.Cryptography.CngProperty" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Security.Cryptography.CngProperty</a>
+ * <p>
+ *
+ * Powered by JCOBridge: more info at <a href="https://www.jcobridge.com" target="_top">https://www.jcobridge.com</a>
  */
 public class CngProperty extends ValueType  {
     /**

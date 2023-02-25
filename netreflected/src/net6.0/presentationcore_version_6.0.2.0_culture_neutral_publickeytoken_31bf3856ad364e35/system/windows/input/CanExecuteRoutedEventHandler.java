@@ -44,7 +44,10 @@ import system.windows.input.ICanExecuteRoutedEventHandler;
  * The base .NET class managing System.Windows.Input.CanExecuteRoutedEventHandler, PresentationCore, Version=6.0.2.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35.
  * <p>
  * 
- * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Windows.Input.CanExecuteRoutedEventHandler" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Windows.Input.CanExecuteRoutedEventHandler</a>
+ * .NET documentation at <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Windows.Input.CanExecuteRoutedEventHandler" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Windows.Input.CanExecuteRoutedEventHandler</a>
+ * <p>
+ *
+ * Powered by JCOBridge: more info at <a href="https://www.jcobridge.com" target="_top">https://www.jcobridge.com</a>
  */
 public class CanExecuteRoutedEventHandler extends JCVoidDelegate implements IJCVoidEventEmit, IJCOBridgeReflected {
     /**

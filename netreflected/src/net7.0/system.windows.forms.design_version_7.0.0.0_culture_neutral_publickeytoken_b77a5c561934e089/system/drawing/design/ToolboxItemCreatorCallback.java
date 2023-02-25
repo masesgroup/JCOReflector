@@ -44,7 +44,10 @@ import system.drawing.design.IToolboxItemCreatorCallback;
  * The base .NET class managing System.Drawing.Design.ToolboxItemCreatorCallback, System.Windows.Forms.Design, Version=7.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089. Extends {@link JCDelegate}.
  * <p>
  * 
- * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Drawing.Design.ToolboxItemCreatorCallback" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Drawing.Design.ToolboxItemCreatorCallback</a>
+ * .NET documentation at <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Drawing.Design.ToolboxItemCreatorCallback" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Drawing.Design.ToolboxItemCreatorCallback</a>
+ * <p>
+ *
+ * Powered by JCOBridge: more info at <a href="https://www.jcobridge.com" target="_top">https://www.jcobridge.com</a>
  */
 public class ToolboxItemCreatorCallback extends JCDelegate implements IJCEventEmit, IJCOBridgeReflected {
     /**

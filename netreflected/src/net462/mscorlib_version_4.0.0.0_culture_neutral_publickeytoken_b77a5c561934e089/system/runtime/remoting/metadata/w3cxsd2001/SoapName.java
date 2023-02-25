@@ -45,7 +45,10 @@ import system.runtime.remoting.metadata.w3cxsd2001.SoapName;
  * The base .NET class managing System.Runtime.Remoting.Metadata.W3cXsd2001.SoapName, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089.
  * <p>
  * 
- * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Runtime.Remoting.Metadata.W3cXsd2001.SoapName" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Runtime.Remoting.Metadata.W3cXsd2001.SoapName</a>
+ * .NET documentation at <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Runtime.Remoting.Metadata.W3cXsd2001.SoapName" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Runtime.Remoting.Metadata.W3cXsd2001.SoapName</a>
+ * <p>
+ *
+ * Powered by JCOBridge: more info at <a href="https://www.jcobridge.com" target="_top">https://www.jcobridge.com</a>
  */
 public class SoapName extends NetObject  {
     /**

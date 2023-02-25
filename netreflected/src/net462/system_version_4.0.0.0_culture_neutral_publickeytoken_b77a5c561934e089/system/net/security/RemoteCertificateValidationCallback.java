@@ -47,7 +47,10 @@ import system.net.security.IRemoteCertificateValidationCallback;
  * The base .NET class managing System.Net.Security.RemoteCertificateValidationCallback, System, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089. Extends {@link JCDelegate}.
  * <p>
  * 
- * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Net.Security.RemoteCertificateValidationCallback" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Net.Security.RemoteCertificateValidationCallback</a>
+ * .NET documentation at <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Net.Security.RemoteCertificateValidationCallback" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Net.Security.RemoteCertificateValidationCallback</a>
+ * <p>
+ *
+ * Powered by JCOBridge: more info at <a href="https://www.jcobridge.com" target="_top">https://www.jcobridge.com</a>
  */
 public class RemoteCertificateValidationCallback extends JCDelegate implements IJCEventEmit, IJCOBridgeReflected {
     /**

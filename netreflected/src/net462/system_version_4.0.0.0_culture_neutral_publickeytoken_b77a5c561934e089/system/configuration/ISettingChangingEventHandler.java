@@ -43,7 +43,10 @@ import system.configuration.SettingChangingEventArgs;
  * The Java interface to be implemented to receive events from the CLR using {@link SettingChangingEventHandler}.
  * <p>
  * 
- * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Configuration.SettingChangingEventHandler" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Configuration.SettingChangingEventHandler</a>
+ * .NET documentation at <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Configuration.SettingChangingEventHandler" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Configuration.SettingChangingEventHandler</a>
+ * <p>
+ *
+ * Powered by JCOBridge: more info at <a href="https://www.jcobridge.com" target="_top">https://www.jcobridge.com</a>
  */
 public interface ISettingChangingEventHandler {
     public void Invoke(NetObject sender, SettingChangingEventArgs e);

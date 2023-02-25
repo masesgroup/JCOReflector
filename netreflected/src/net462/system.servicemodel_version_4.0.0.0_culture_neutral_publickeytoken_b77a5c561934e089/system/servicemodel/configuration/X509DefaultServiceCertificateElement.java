@@ -49,7 +49,10 @@ import system.security.cryptography.x509certificates.X509FindType;
  * The base .NET class managing System.ServiceModel.Configuration.X509DefaultServiceCertificateElement, System.ServiceModel, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089.
  * <p>
  * 
- * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.ServiceModel.Configuration.X509DefaultServiceCertificateElement" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.ServiceModel.Configuration.X509DefaultServiceCertificateElement</a>
+ * .NET documentation at <a href="https://docs.microsoft.com/en-us/dotnet/api/System.ServiceModel.Configuration.X509DefaultServiceCertificateElement" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.ServiceModel.Configuration.X509DefaultServiceCertificateElement</a>
+ * <p>
+ *
+ * Powered by JCOBridge: more info at <a href="https://www.jcobridge.com" target="_top">https://www.jcobridge.com</a>
  */
 public class X509DefaultServiceCertificateElement extends ConfigurationElement  {
     /**

@@ -48,7 +48,10 @@ import system.globalization.CultureInfo;
  * The base .NET class managing System.Configuration.TimeSpanSecondsConverter, System.Configuration.ConfigurationManager, Version=6.0.0.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51.
  * <p>
  * 
- * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Configuration.TimeSpanSecondsConverter" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Configuration.TimeSpanSecondsConverter</a>
+ * .NET documentation at <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Configuration.TimeSpanSecondsConverter" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Configuration.TimeSpanSecondsConverter</a>
+ * <p>
+ *
+ * Powered by JCOBridge: more info at <a href="https://www.jcobridge.com" target="_top">https://www.jcobridge.com</a>
  */
 public class TimeSpanSecondsConverter extends ConfigurationConverterBase  {
     /**

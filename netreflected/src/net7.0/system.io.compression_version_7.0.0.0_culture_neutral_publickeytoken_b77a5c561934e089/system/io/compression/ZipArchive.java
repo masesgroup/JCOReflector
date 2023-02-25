@@ -49,7 +49,10 @@ import system.io.compression.CompressionLevel;
  * The base .NET class managing System.IO.Compression.ZipArchive, System.IO.Compression, Version=7.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089.
  * <p>
  * 
- * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.IO.Compression.ZipArchive" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.IO.Compression.ZipArchive</a>
+ * .NET documentation at <a href="https://docs.microsoft.com/en-us/dotnet/api/System.IO.Compression.ZipArchive" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.IO.Compression.ZipArchive</a>
+ * <p>
+ *
+ * Powered by JCOBridge: more info at <a href="https://www.jcobridge.com" target="_top">https://www.jcobridge.com</a>
  */
 public class ZipArchive extends NetObject implements AutoCloseable {
     /**

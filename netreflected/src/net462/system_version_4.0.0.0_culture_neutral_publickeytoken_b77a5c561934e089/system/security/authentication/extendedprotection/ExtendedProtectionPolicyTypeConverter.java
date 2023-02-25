@@ -48,7 +48,10 @@ import system.globalization.CultureInfo;
  * The base .NET class managing System.Security.Authentication.ExtendedProtection.ExtendedProtectionPolicyTypeConverter, System, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089.
  * <p>
  * 
- * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Security.Authentication.ExtendedProtection.ExtendedProtectionPolicyTypeConverter" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Security.Authentication.ExtendedProtection.ExtendedProtectionPolicyTypeConverter</a>
+ * .NET documentation at <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Security.Authentication.ExtendedProtection.ExtendedProtectionPolicyTypeConverter" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Security.Authentication.ExtendedProtection.ExtendedProtectionPolicyTypeConverter</a>
+ * <p>
+ *
+ * Powered by JCOBridge: more info at <a href="https://www.jcobridge.com" target="_top">https://www.jcobridge.com</a>
  */
 public class ExtendedProtectionPolicyTypeConverter extends TypeConverter  {
     /**

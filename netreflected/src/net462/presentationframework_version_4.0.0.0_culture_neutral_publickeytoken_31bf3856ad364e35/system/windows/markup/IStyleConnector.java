@@ -43,7 +43,10 @@ import org.mases.jcobridge.netreflection.*;
  * The base .NET class managing System.Windows.Markup.IStyleConnector, PresentationFramework, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35.
  * <p>
  * 
- * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Windows.Markup.IStyleConnector" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Windows.Markup.IStyleConnector</a>
+ * .NET documentation at <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Windows.Markup.IStyleConnector" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Windows.Markup.IStyleConnector</a>
+ * <p>
+ *
+ * Powered by JCOBridge: more info at <a href="https://www.jcobridge.com" target="_top">https://www.jcobridge.com</a>
  */
 public interface IStyleConnector extends IJCOBridgeReflected {
     /**

@@ -49,7 +49,10 @@ import system.directoryservices.activedirectory.ActiveDirectorySiteLinkCollectio
  * The base .NET class managing System.DirectoryServices.ActiveDirectory.ActiveDirectorySiteLinkBridge, System.DirectoryServices, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a.
  * <p>
  * 
- * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.DirectoryServices.ActiveDirectory.ActiveDirectorySiteLinkBridge" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.DirectoryServices.ActiveDirectory.ActiveDirectorySiteLinkBridge</a>
+ * .NET documentation at <a href="https://docs.microsoft.com/en-us/dotnet/api/System.DirectoryServices.ActiveDirectory.ActiveDirectorySiteLinkBridge" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.DirectoryServices.ActiveDirectory.ActiveDirectorySiteLinkBridge</a>
+ * <p>
+ *
+ * Powered by JCOBridge: more info at <a href="https://www.jcobridge.com" target="_top">https://www.jcobridge.com</a>
  */
 public class ActiveDirectorySiteLinkBridge extends NetObject implements AutoCloseable {
     /**

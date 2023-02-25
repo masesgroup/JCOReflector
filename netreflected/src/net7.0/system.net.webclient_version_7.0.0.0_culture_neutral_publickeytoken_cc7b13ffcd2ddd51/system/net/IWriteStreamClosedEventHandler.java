@@ -43,7 +43,10 @@ import system.net.WriteStreamClosedEventArgs;
  * The Java interface to be implemented to receive events from the CLR using {@link WriteStreamClosedEventHandler}.
  * <p>
  * 
- * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Net.WriteStreamClosedEventHandler" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Net.WriteStreamClosedEventHandler</a>
+ * .NET documentation at <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Net.WriteStreamClosedEventHandler" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Net.WriteStreamClosedEventHandler</a>
+ * <p>
+ *
+ * Powered by JCOBridge: more info at <a href="https://www.jcobridge.com" target="_top">https://www.jcobridge.com</a>
  */
 public interface IWriteStreamClosedEventHandler {
     public void Invoke(NetObject sender, WriteStreamClosedEventArgs e);

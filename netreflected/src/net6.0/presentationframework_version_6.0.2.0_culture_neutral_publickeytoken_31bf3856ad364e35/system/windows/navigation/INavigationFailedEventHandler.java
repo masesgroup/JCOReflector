@@ -43,7 +43,10 @@ import system.windows.navigation.NavigationFailedEventArgs;
  * The Java interface to be implemented to receive events from the CLR using {@link NavigationFailedEventHandler}.
  * <p>
  * 
- * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Windows.Navigation.NavigationFailedEventHandler" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Windows.Navigation.NavigationFailedEventHandler</a>
+ * .NET documentation at <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Windows.Navigation.NavigationFailedEventHandler" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Windows.Navigation.NavigationFailedEventHandler</a>
+ * <p>
+ *
+ * Powered by JCOBridge: more info at <a href="https://www.jcobridge.com" target="_top">https://www.jcobridge.com</a>
  */
 public interface INavigationFailedEventHandler {
     public void Invoke(NetObject sender, NavigationFailedEventArgs e);

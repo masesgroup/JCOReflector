@@ -43,7 +43,10 @@ import org.mases.jcobridge.netreflection.*;
  * The base .NET class managing System.Runtime.InteropServices.LayoutKind, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089.
  * <p>
  * 
- * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Runtime.InteropServices.LayoutKind" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Runtime.InteropServices.LayoutKind</a>
+ * .NET documentation at <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Runtime.InteropServices.LayoutKind" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Runtime.InteropServices.LayoutKind</a>
+ * <p>
+ *
+ * Powered by JCOBridge: more info at <a href="https://www.jcobridge.com" target="_top">https://www.jcobridge.com</a>
  */
 public class LayoutKind extends NetObject  {
     /**

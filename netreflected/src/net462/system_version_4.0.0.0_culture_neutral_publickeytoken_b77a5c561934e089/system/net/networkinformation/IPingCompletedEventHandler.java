@@ -43,7 +43,10 @@ import system.net.networkinformation.PingCompletedEventArgs;
  * The Java interface to be implemented to receive events from the CLR using {@link PingCompletedEventHandler}.
  * <p>
  * 
- * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Net.NetworkInformation.PingCompletedEventHandler" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Net.NetworkInformation.PingCompletedEventHandler</a>
+ * .NET documentation at <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Net.NetworkInformation.PingCompletedEventHandler" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Net.NetworkInformation.PingCompletedEventHandler</a>
+ * <p>
+ *
+ * Powered by JCOBridge: more info at <a href="https://www.jcobridge.com" target="_top">https://www.jcobridge.com</a>
  */
 public interface IPingCompletedEventHandler {
     public void Invoke(NetObject sender, PingCompletedEventArgs e);

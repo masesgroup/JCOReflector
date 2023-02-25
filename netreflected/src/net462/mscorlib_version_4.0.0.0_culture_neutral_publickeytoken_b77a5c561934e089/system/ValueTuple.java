@@ -56,7 +56,10 @@ import system.IComparableImplementation;
  * The base .NET class managing System.ValueTuple, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089.
  * <p>
  * 
- * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.ValueTuple" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.ValueTuple</a>
+ * .NET documentation at <a href="https://docs.microsoft.com/en-us/dotnet/api/System.ValueTuple" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.ValueTuple</a>
+ * <p>
+ *
+ * Powered by JCOBridge: more info at <a href="https://www.jcobridge.com" target="_top">https://www.jcobridge.com</a>
  */
 public class ValueTuple extends ValueType implements system.collections.IStructuralEquatable, system.collections.IStructuralComparable, system.IComparable {
     /**

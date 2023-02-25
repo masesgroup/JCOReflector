@@ -45,7 +45,10 @@ import system.xml.linq.XDeclaration;
  * The base .NET class managing System.Xml.Linq.XDeclaration, System.Private.Xml.Linq, Version=6.0.0.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51.
  * <p>
  * 
- * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Xml.Linq.XDeclaration" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Xml.Linq.XDeclaration</a>
+ * .NET documentation at <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Xml.Linq.XDeclaration" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Xml.Linq.XDeclaration</a>
+ * <p>
+ *
+ * Powered by JCOBridge: more info at <a href="https://www.jcobridge.com" target="_top">https://www.jcobridge.com</a>
  */
 public class XDeclaration extends NetObject  {
     /**

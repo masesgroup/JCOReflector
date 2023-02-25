@@ -44,7 +44,10 @@ import system.reflection.ITypeFilter;
  * The base .NET class managing System.Reflection.TypeFilter, System.Private.CoreLib, Version=6.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e. Extends {@link JCDelegate}.
  * <p>
  * 
- * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Reflection.TypeFilter" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Reflection.TypeFilter</a>
+ * .NET documentation at <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Reflection.TypeFilter" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Reflection.TypeFilter</a>
+ * <p>
+ *
+ * Powered by JCOBridge: more info at <a href="https://www.jcobridge.com" target="_top">https://www.jcobridge.com</a>
  */
 public class TypeFilter extends JCDelegate implements IJCEventEmit, IJCOBridgeReflected {
     /**

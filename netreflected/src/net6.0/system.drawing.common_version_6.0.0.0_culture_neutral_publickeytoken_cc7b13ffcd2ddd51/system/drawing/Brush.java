@@ -45,7 +45,10 @@ import system.MarshalByRefObject;
  * The base .NET class managing System.Drawing.Brush, System.Drawing.Common, Version=6.0.0.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51.
  * <p>
  * 
- * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Drawing.Brush" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Drawing.Brush</a>
+ * .NET documentation at <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Drawing.Brush" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Drawing.Brush</a>
+ * <p>
+ *
+ * Powered by JCOBridge: more info at <a href="https://www.jcobridge.com" target="_top">https://www.jcobridge.com</a>
  */
 public class Brush extends MarshalByRefObject implements AutoCloseable {
     /**

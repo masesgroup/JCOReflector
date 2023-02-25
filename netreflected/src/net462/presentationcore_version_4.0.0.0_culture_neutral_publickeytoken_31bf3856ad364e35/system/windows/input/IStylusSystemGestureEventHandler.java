@@ -43,7 +43,10 @@ import system.windows.input.StylusSystemGestureEventArgs;
  * The Java interface to be implemented to receive events from the CLR using {@link StylusSystemGestureEventHandler}.
  * <p>
  * 
- * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Windows.Input.StylusSystemGestureEventHandler" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Windows.Input.StylusSystemGestureEventHandler</a>
+ * .NET documentation at <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Windows.Input.StylusSystemGestureEventHandler" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Windows.Input.StylusSystemGestureEventHandler</a>
+ * <p>
+ *
+ * Powered by JCOBridge: more info at <a href="https://www.jcobridge.com" target="_top">https://www.jcobridge.com</a>
  */
 public interface IStylusSystemGestureEventHandler {
     public void Invoke(NetObject sender, StylusSystemGestureEventArgs e);

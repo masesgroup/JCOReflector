@@ -46,7 +46,10 @@ import system.activities.statements.FlowNode;
  * The base .NET class managing System.Activities.Statements.Flowchart, System.Activities, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35.
  * <p>
  * 
- * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Activities.Statements.Flowchart" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Activities.Statements.Flowchart</a>
+ * .NET documentation at <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Activities.Statements.Flowchart" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Activities.Statements.Flowchart</a>
+ * <p>
+ *
+ * Powered by JCOBridge: more info at <a href="https://www.jcobridge.com" target="_top">https://www.jcobridge.com</a>
  */
 public class Flowchart extends NativeActivity  {
     /**

@@ -45,7 +45,10 @@ import system.componentmodel.AsyncCompletedEventArgs;
  * The base .NET class managing System.Net.DownloadStringCompletedEventArgs, System.Net.WebClient, Version=7.0.0.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51.
  * <p>
  * 
- * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Net.DownloadStringCompletedEventArgs" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Net.DownloadStringCompletedEventArgs</a>
+ * .NET documentation at <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Net.DownloadStringCompletedEventArgs" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Net.DownloadStringCompletedEventArgs</a>
+ * <p>
+ *
+ * Powered by JCOBridge: more info at <a href="https://www.jcobridge.com" target="_top">https://www.jcobridge.com</a>
  */
 public class DownloadStringCompletedEventArgs extends AsyncCompletedEventArgs  {
     /**

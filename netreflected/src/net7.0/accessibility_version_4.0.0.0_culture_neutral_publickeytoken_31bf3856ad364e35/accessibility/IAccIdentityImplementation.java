@@ -45,7 +45,10 @@ import system.UInt32;
  * The base .NET class managing Accessibility.IAccIdentity, Accessibility, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35.
  * <p>
  * 
- * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/Accessibility.IAccIdentity" target="_top">https://docs.microsoft.com/en-us/dotnet/api/Accessibility.IAccIdentity</a>
+ * .NET documentation at <a href="https://docs.microsoft.com/en-us/dotnet/api/Accessibility.IAccIdentity" target="_top">https://docs.microsoft.com/en-us/dotnet/api/Accessibility.IAccIdentity</a>
+ * <p>
+ *
+ * Powered by JCOBridge: more info at <a href="https://www.jcobridge.com" target="_top">https://www.jcobridge.com</a>
  */
 public class IAccIdentityImplementation extends NetObject implements IAccIdentity {
     /**

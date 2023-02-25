@@ -43,7 +43,10 @@ import system.windows.forms.NavigateEventArgs;
  * The Java interface to be implemented to receive events from the CLR using {@link NavigateEventHandler}.
  * <p>
  * 
- * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Windows.Forms.NavigateEventHandler" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Windows.Forms.NavigateEventHandler</a>
+ * .NET documentation at <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Windows.Forms.NavigateEventHandler" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Windows.Forms.NavigateEventHandler</a>
+ * <p>
+ *
+ * Powered by JCOBridge: more info at <a href="https://www.jcobridge.com" target="_top">https://www.jcobridge.com</a>
  */
 public interface INavigateEventHandler {
     public void Invoke(NetObject sender, NavigateEventArgs ne);

@@ -49,7 +49,10 @@ import system.servicemodel.configuration.NamedPipeSettingsElement;
  * The base .NET class managing System.ServiceModel.Configuration.NamedPipeTransportElement, System.ServiceModel, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089.
  * <p>
  * 
- * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.ServiceModel.Configuration.NamedPipeTransportElement" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.ServiceModel.Configuration.NamedPipeTransportElement</a>
+ * .NET documentation at <a href="https://docs.microsoft.com/en-us/dotnet/api/System.ServiceModel.Configuration.NamedPipeTransportElement" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.ServiceModel.Configuration.NamedPipeTransportElement</a>
+ * <p>
+ *
+ * Powered by JCOBridge: more info at <a href="https://www.jcobridge.com" target="_top">https://www.jcobridge.com</a>
  */
 public class NamedPipeTransportElement extends ConnectionOrientedTransportElement  {
     /**

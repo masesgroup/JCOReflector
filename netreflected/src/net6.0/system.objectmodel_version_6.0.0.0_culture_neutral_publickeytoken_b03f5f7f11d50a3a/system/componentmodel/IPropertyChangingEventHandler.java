@@ -43,7 +43,10 @@ import system.componentmodel.PropertyChangingEventArgs;
  * The Java interface to be implemented to receive events from the CLR using {@link PropertyChangingEventHandler}.
  * <p>
  * 
- * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.ComponentModel.PropertyChangingEventHandler" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.ComponentModel.PropertyChangingEventHandler</a>
+ * .NET documentation at <a href="https://docs.microsoft.com/en-us/dotnet/api/System.ComponentModel.PropertyChangingEventHandler" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.ComponentModel.PropertyChangingEventHandler</a>
+ * <p>
+ *
+ * Powered by JCOBridge: more info at <a href="https://www.jcobridge.com" target="_top">https://www.jcobridge.com</a>
  */
 public interface IPropertyChangingEventHandler {
     public void Invoke(NetObject sender, PropertyChangingEventArgs e);

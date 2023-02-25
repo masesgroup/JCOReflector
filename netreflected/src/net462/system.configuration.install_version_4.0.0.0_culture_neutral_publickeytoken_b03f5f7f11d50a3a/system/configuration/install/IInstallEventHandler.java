@@ -43,7 +43,10 @@ import system.configuration.install.InstallEventArgs;
  * The Java interface to be implemented to receive events from the CLR using {@link InstallEventHandler}.
  * <p>
  * 
- * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Configuration.Install.InstallEventHandler" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Configuration.Install.InstallEventHandler</a>
+ * .NET documentation at <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Configuration.Install.InstallEventHandler" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Configuration.Install.InstallEventHandler</a>
+ * <p>
+ *
+ * Powered by JCOBridge: more info at <a href="https://www.jcobridge.com" target="_top">https://www.jcobridge.com</a>
  */
 public interface IInstallEventHandler {
     public void Invoke(NetObject sender, InstallEventArgs e);

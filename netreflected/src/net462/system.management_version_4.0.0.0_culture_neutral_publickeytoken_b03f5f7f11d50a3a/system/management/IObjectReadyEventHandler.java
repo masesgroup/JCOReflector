@@ -43,7 +43,10 @@ import system.management.ObjectReadyEventArgs;
  * The Java interface to be implemented to receive events from the CLR using {@link ObjectReadyEventHandler}.
  * <p>
  * 
- * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Management.ObjectReadyEventHandler" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Management.ObjectReadyEventHandler</a>
+ * .NET documentation at <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Management.ObjectReadyEventHandler" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Management.ObjectReadyEventHandler</a>
+ * <p>
+ *
+ * Powered by JCOBridge: more info at <a href="https://www.jcobridge.com" target="_top">https://www.jcobridge.com</a>
  */
 public interface IObjectReadyEventHandler {
     public void Invoke(NetObject sender, ObjectReadyEventArgs e);

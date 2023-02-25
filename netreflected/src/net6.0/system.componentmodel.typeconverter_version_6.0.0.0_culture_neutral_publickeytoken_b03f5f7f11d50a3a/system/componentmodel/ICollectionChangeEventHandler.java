@@ -43,7 +43,10 @@ import system.componentmodel.CollectionChangeEventArgs;
  * The Java interface to be implemented to receive events from the CLR using {@link CollectionChangeEventHandler}.
  * <p>
  * 
- * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.ComponentModel.CollectionChangeEventHandler" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.ComponentModel.CollectionChangeEventHandler</a>
+ * .NET documentation at <a href="https://docs.microsoft.com/en-us/dotnet/api/System.ComponentModel.CollectionChangeEventHandler" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.ComponentModel.CollectionChangeEventHandler</a>
+ * <p>
+ *
+ * Powered by JCOBridge: more info at <a href="https://www.jcobridge.com" target="_top">https://www.jcobridge.com</a>
  */
 public interface ICollectionChangeEventHandler {
     public void Invoke(NetObject sender, CollectionChangeEventArgs e);

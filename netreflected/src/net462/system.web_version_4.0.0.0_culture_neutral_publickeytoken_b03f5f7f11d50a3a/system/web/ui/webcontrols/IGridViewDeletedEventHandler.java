@@ -43,7 +43,10 @@ import system.web.ui.webcontrols.GridViewDeletedEventArgs;
  * The Java interface to be implemented to receive events from the CLR using {@link GridViewDeletedEventHandler}.
  * <p>
  * 
- * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Web.UI.WebControls.GridViewDeletedEventHandler" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Web.UI.WebControls.GridViewDeletedEventHandler</a>
+ * .NET documentation at <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Web.UI.WebControls.GridViewDeletedEventHandler" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Web.UI.WebControls.GridViewDeletedEventHandler</a>
+ * <p>
+ *
+ * Powered by JCOBridge: more info at <a href="https://www.jcobridge.com" target="_top">https://www.jcobridge.com</a>
  */
 public interface IGridViewDeletedEventHandler {
     public void Invoke(NetObject sender, GridViewDeletedEventArgs e);

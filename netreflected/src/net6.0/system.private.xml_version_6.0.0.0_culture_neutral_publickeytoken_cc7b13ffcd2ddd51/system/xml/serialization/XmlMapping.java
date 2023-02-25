@@ -44,7 +44,10 @@ import java.util.ArrayList;
  * The base .NET class managing System.Xml.Serialization.XmlMapping, System.Private.Xml, Version=6.0.0.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51.
  * <p>
  * 
- * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Xml.Serialization.XmlMapping" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Xml.Serialization.XmlMapping</a>
+ * .NET documentation at <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Xml.Serialization.XmlMapping" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Xml.Serialization.XmlMapping</a>
+ * <p>
+ *
+ * Powered by JCOBridge: more info at <a href="https://www.jcobridge.com" target="_top">https://www.jcobridge.com</a>
  */
 public class XmlMapping extends NetObject  {
     /**

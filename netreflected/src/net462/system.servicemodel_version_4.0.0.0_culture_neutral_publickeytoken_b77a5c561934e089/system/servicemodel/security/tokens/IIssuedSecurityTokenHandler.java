@@ -44,7 +44,10 @@ import system.servicemodel.EndpointAddress;
  * The Java interface to be implemented to receive events from the CLR using {@link IssuedSecurityTokenHandler}.
  * <p>
  * 
- * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.ServiceModel.Security.Tokens.IssuedSecurityTokenHandler" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.ServiceModel.Security.Tokens.IssuedSecurityTokenHandler</a>
+ * .NET documentation at <a href="https://docs.microsoft.com/en-us/dotnet/api/System.ServiceModel.Security.Tokens.IssuedSecurityTokenHandler" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.ServiceModel.Security.Tokens.IssuedSecurityTokenHandler</a>
+ * <p>
+ *
+ * Powered by JCOBridge: more info at <a href="https://www.jcobridge.com" target="_top">https://www.jcobridge.com</a>
  */
 public interface IIssuedSecurityTokenHandler {
     public void Invoke(SecurityToken issuedToken, EndpointAddress tokenRequestor);

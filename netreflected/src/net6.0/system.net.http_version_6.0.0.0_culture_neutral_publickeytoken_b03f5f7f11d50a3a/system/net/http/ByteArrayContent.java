@@ -45,7 +45,10 @@ import system.net.http.HttpContent;
  * The base .NET class managing System.Net.Http.ByteArrayContent, System.Net.Http, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a.
  * <p>
  * 
- * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Net.Http.ByteArrayContent" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Net.Http.ByteArrayContent</a>
+ * .NET documentation at <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Net.Http.ByteArrayContent" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Net.Http.ByteArrayContent</a>
+ * <p>
+ *
+ * Powered by JCOBridge: more info at <a href="https://www.jcobridge.com" target="_top">https://www.jcobridge.com</a>
  */
 public class ByteArrayContent extends HttpContent  {
     /**

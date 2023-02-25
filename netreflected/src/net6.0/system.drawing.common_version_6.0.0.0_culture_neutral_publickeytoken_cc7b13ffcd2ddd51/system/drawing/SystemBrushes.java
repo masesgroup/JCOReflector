@@ -46,7 +46,10 @@ import system.drawing.Color;
  * The base .NET class managing System.Drawing.SystemBrushes, System.Drawing.Common, Version=6.0.0.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51.
  * <p>
  * 
- * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Drawing.SystemBrushes" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Drawing.SystemBrushes</a>
+ * .NET documentation at <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Drawing.SystemBrushes" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Drawing.SystemBrushes</a>
+ * <p>
+ *
+ * Powered by JCOBridge: more info at <a href="https://www.jcobridge.com" target="_top">https://www.jcobridge.com</a>
  */
 public class SystemBrushes extends NetObject  {
     /**

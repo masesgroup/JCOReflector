@@ -44,7 +44,10 @@ import system.directoryservices.protocols.IDereferenceConnectionCallback;
  * The base .NET class managing System.DirectoryServices.Protocols.DereferenceConnectionCallback, System.DirectoryServices.Protocols, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a.
  * <p>
  * 
- * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.DirectoryServices.Protocols.DereferenceConnectionCallback" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.DirectoryServices.Protocols.DereferenceConnectionCallback</a>
+ * .NET documentation at <a href="https://docs.microsoft.com/en-us/dotnet/api/System.DirectoryServices.Protocols.DereferenceConnectionCallback" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.DirectoryServices.Protocols.DereferenceConnectionCallback</a>
+ * <p>
+ *
+ * Powered by JCOBridge: more info at <a href="https://www.jcobridge.com" target="_top">https://www.jcobridge.com</a>
  */
 public class DereferenceConnectionCallback extends JCVoidDelegate implements IJCVoidEventEmit, IJCOBridgeReflected {
     /**

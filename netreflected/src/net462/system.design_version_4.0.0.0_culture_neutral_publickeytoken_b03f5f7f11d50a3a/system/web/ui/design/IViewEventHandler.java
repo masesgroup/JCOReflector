@@ -43,7 +43,10 @@ import system.web.ui.design.ViewEventArgs;
  * The Java interface to be implemented to receive events from the CLR using {@link ViewEventHandler}.
  * <p>
  * 
- * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Web.UI.Design.ViewEventHandler" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Web.UI.Design.ViewEventHandler</a>
+ * .NET documentation at <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Web.UI.Design.ViewEventHandler" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Web.UI.Design.ViewEventHandler</a>
+ * <p>
+ *
+ * Powered by JCOBridge: more info at <a href="https://www.jcobridge.com" target="_top">https://www.jcobridge.com</a>
  */
 public interface IViewEventHandler {
     public void Invoke(NetObject sender, ViewEventArgs e);

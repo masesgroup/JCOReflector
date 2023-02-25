@@ -52,7 +52,10 @@ import system.xml.linq.XNodeEqualityComparer;
  * The base .NET class managing System.Xml.Linq.XNode, System.Xml.Linq, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089.
  * <p>
  * 
- * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Xml.Linq.XNode" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Xml.Linq.XNode</a>
+ * .NET documentation at <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Xml.Linq.XNode" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Xml.Linq.XNode</a>
+ * <p>
+ *
+ * Powered by JCOBridge: more info at <a href="https://www.jcobridge.com" target="_top">https://www.jcobridge.com</a>
  */
 public class XNode extends XObject  {
     /**

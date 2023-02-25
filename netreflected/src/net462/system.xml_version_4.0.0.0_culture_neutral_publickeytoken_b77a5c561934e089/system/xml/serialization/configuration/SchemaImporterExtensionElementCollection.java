@@ -46,7 +46,10 @@ import system.xml.serialization.configuration.SchemaImporterExtensionElement;
  * The base .NET class managing System.Xml.Serialization.Configuration.SchemaImporterExtensionElementCollection, System.Xml, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089.
  * <p>
  * 
- * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Xml.Serialization.Configuration.SchemaImporterExtensionElementCollection" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Xml.Serialization.Configuration.SchemaImporterExtensionElementCollection</a>
+ * .NET documentation at <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Xml.Serialization.Configuration.SchemaImporterExtensionElementCollection" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Xml.Serialization.Configuration.SchemaImporterExtensionElementCollection</a>
+ * <p>
+ *
+ * Powered by JCOBridge: more info at <a href="https://www.jcobridge.com" target="_top">https://www.jcobridge.com</a>
  */
 public class SchemaImporterExtensionElementCollection extends ConfigurationElementCollection  {
     /**

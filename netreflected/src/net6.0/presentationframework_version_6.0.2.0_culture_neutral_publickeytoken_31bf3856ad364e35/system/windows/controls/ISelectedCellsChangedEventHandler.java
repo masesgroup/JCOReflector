@@ -43,7 +43,10 @@ import system.windows.controls.SelectedCellsChangedEventArgs;
  * The Java interface to be implemented to receive events from the CLR using {@link SelectedCellsChangedEventHandler}.
  * <p>
  * 
- * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Windows.Controls.SelectedCellsChangedEventHandler" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Windows.Controls.SelectedCellsChangedEventHandler</a>
+ * .NET documentation at <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Windows.Controls.SelectedCellsChangedEventHandler" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Windows.Controls.SelectedCellsChangedEventHandler</a>
+ * <p>
+ *
+ * Powered by JCOBridge: more info at <a href="https://www.jcobridge.com" target="_top">https://www.jcobridge.com</a>
  */
 public interface ISelectedCellsChangedEventHandler {
     public void Invoke(NetObject sender, SelectedCellsChangedEventArgs e);

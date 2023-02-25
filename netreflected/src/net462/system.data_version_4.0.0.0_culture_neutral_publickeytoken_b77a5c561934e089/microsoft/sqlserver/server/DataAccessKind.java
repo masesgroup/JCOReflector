@@ -43,7 +43,10 @@ import org.mases.jcobridge.netreflection.*;
  * The base .NET class managing Microsoft.SqlServer.Server.DataAccessKind, System.Data, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089.
  * <p>
  * 
- * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/Microsoft.SqlServer.Server.DataAccessKind" target="_top">https://docs.microsoft.com/en-us/dotnet/api/Microsoft.SqlServer.Server.DataAccessKind</a>
+ * .NET documentation at <a href="https://docs.microsoft.com/en-us/dotnet/api/Microsoft.SqlServer.Server.DataAccessKind" target="_top">https://docs.microsoft.com/en-us/dotnet/api/Microsoft.SqlServer.Server.DataAccessKind</a>
+ * <p>
+ *
+ * Powered by JCOBridge: more info at <a href="https://www.jcobridge.com" target="_top">https://www.jcobridge.com</a>
  */
 public class DataAccessKind extends NetObject  {
     /**

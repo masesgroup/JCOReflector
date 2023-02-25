@@ -45,7 +45,10 @@ import system.web.modelbinding.BindingBehaviorAttribute;
  * The base .NET class managing System.Web.ModelBinding.BindNeverAttribute, System.Web, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a.
  * <p>
  * 
- * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Web.ModelBinding.BindNeverAttribute" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Web.ModelBinding.BindNeverAttribute</a>
+ * .NET documentation at <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Web.ModelBinding.BindNeverAttribute" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Web.ModelBinding.BindNeverAttribute</a>
+ * <p>
+ *
+ * Powered by JCOBridge: more info at <a href="https://www.jcobridge.com" target="_top">https://www.jcobridge.com</a>
  */
 public class BindNeverAttribute extends BindingBehaviorAttribute  {
     /**

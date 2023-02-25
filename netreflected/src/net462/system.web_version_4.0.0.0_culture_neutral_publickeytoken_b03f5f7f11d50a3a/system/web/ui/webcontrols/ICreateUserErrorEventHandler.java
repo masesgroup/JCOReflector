@@ -43,7 +43,10 @@ import system.web.ui.webcontrols.CreateUserErrorEventArgs;
  * The Java interface to be implemented to receive events from the CLR using {@link CreateUserErrorEventHandler}.
  * <p>
  * 
- * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Web.UI.WebControls.CreateUserErrorEventHandler" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Web.UI.WebControls.CreateUserErrorEventHandler</a>
+ * .NET documentation at <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Web.UI.WebControls.CreateUserErrorEventHandler" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Web.UI.WebControls.CreateUserErrorEventHandler</a>
+ * <p>
+ *
+ * Powered by JCOBridge: more info at <a href="https://www.jcobridge.com" target="_top">https://www.jcobridge.com</a>
  */
 public interface ICreateUserErrorEventHandler {
     public void Invoke(NetObject sender, CreateUserErrorEventArgs e);

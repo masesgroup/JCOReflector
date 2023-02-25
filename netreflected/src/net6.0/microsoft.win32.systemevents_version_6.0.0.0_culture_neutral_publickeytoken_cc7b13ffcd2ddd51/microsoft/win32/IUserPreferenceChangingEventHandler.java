@@ -43,7 +43,10 @@ import microsoft.win32.UserPreferenceChangingEventArgs;
  * The Java interface to be implemented to receive events from the CLR using {@link UserPreferenceChangingEventHandler}.
  * <p>
  * 
- * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/Microsoft.Win32.UserPreferenceChangingEventHandler" target="_top">https://docs.microsoft.com/en-us/dotnet/api/Microsoft.Win32.UserPreferenceChangingEventHandler</a>
+ * .NET documentation at <a href="https://docs.microsoft.com/en-us/dotnet/api/Microsoft.Win32.UserPreferenceChangingEventHandler" target="_top">https://docs.microsoft.com/en-us/dotnet/api/Microsoft.Win32.UserPreferenceChangingEventHandler</a>
+ * <p>
+ *
+ * Powered by JCOBridge: more info at <a href="https://www.jcobridge.com" target="_top">https://www.jcobridge.com</a>
  */
 public interface IUserPreferenceChangingEventHandler {
     public void Invoke(NetObject sender, UserPreferenceChangingEventArgs e);

@@ -46,7 +46,10 @@ import system.Guid;
  * The base .NET class managing System.Diagnostics.CorrelationManager, System.Diagnostics.TraceSource, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a.
  * <p>
  * 
- * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Diagnostics.CorrelationManager" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Diagnostics.CorrelationManager</a>
+ * .NET documentation at <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Diagnostics.CorrelationManager" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Diagnostics.CorrelationManager</a>
+ * <p>
+ *
+ * Powered by JCOBridge: more info at <a href="https://www.jcobridge.com" target="_top">https://www.jcobridge.com</a>
  */
 public class CorrelationManager extends NetObject  {
     /**

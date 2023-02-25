@@ -53,7 +53,10 @@ import system.security.accesscontrol.AccessControlSections;
  * The base .NET class managing System.Security.AccessControl.ObjectSecurity, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089.
  * <p>
  * 
- * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Security.AccessControl.ObjectSecurity" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Security.AccessControl.ObjectSecurity</a>
+ * .NET documentation at <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Security.AccessControl.ObjectSecurity" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Security.AccessControl.ObjectSecurity</a>
+ * <p>
+ *
+ * Powered by JCOBridge: more info at <a href="https://www.jcobridge.com" target="_top">https://www.jcobridge.com</a>
  */
 public class ObjectSecurity extends NetObject  {
     /**

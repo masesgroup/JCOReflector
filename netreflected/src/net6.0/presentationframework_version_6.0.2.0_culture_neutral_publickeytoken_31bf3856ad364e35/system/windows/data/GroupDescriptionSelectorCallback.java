@@ -45,7 +45,10 @@ import system.windows.data.IGroupDescriptionSelectorCallback;
  * The base .NET class managing System.Windows.Data.GroupDescriptionSelectorCallback, PresentationFramework, Version=6.0.2.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35. Extends {@link JCDelegate}.
  * <p>
  * 
- * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Windows.Data.GroupDescriptionSelectorCallback" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Windows.Data.GroupDescriptionSelectorCallback</a>
+ * .NET documentation at <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Windows.Data.GroupDescriptionSelectorCallback" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Windows.Data.GroupDescriptionSelectorCallback</a>
+ * <p>
+ *
+ * Powered by JCOBridge: more info at <a href="https://www.jcobridge.com" target="_top">https://www.jcobridge.com</a>
  */
 public class GroupDescriptionSelectorCallback extends JCDelegate implements IJCEventEmit, IJCOBridgeReflected {
     /**

@@ -53,7 +53,10 @@ import system.security.policy.IMembershipConditionImplementation;
  * The base .NET class managing System.Security.Policy.CodeGroup, System.Security.Permissions, Version=6.0.0.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51.
  * <p>
  * 
- * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Security.Policy.CodeGroup" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Security.Policy.CodeGroup</a>
+ * .NET documentation at <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Security.Policy.CodeGroup" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Security.Policy.CodeGroup</a>
+ * <p>
+ *
+ * Powered by JCOBridge: more info at <a href="https://www.jcobridge.com" target="_top">https://www.jcobridge.com</a>
  */
 public class CodeGroup extends NetObject  {
     /**

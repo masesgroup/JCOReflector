@@ -44,7 +44,10 @@ import system.data.DataException;
  * The base .NET class managing System.Data.MissingPrimaryKeyException, System.Data.Common, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a.
  * <p>
  * 
- * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Data.MissingPrimaryKeyException" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Data.MissingPrimaryKeyException</a>
+ * .NET documentation at <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Data.MissingPrimaryKeyException" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Data.MissingPrimaryKeyException</a>
+ * <p>
+ *
+ * Powered by JCOBridge: more info at <a href="https://www.jcobridge.com" target="_top">https://www.jcobridge.com</a>
  */
 public class MissingPrimaryKeyException extends DataException {
     /**

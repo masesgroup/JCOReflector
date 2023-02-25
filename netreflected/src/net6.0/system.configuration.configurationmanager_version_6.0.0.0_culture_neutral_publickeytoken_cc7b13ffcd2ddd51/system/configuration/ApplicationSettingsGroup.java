@@ -45,7 +45,10 @@ import system.configuration.ConfigurationSectionGroup;
  * The base .NET class managing System.Configuration.ApplicationSettingsGroup, System.Configuration.ConfigurationManager, Version=6.0.0.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51.
  * <p>
  * 
- * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Configuration.ApplicationSettingsGroup" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Configuration.ApplicationSettingsGroup</a>
+ * .NET documentation at <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Configuration.ApplicationSettingsGroup" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Configuration.ApplicationSettingsGroup</a>
+ * <p>
+ *
+ * Powered by JCOBridge: more info at <a href="https://www.jcobridge.com" target="_top">https://www.jcobridge.com</a>
  */
 public class ApplicationSettingsGroup extends ConfigurationSectionGroup  {
     /**

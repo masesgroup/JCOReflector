@@ -48,7 +48,10 @@ import system.servicemodel.msmqintegration.MsmqMessageSerializationFormat;
  * The base .NET class managing System.ServiceModel.Configuration.MsmqIntegrationElement, System.ServiceModel, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089.
  * <p>
  * 
- * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.ServiceModel.Configuration.MsmqIntegrationElement" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.ServiceModel.Configuration.MsmqIntegrationElement</a>
+ * .NET documentation at <a href="https://docs.microsoft.com/en-us/dotnet/api/System.ServiceModel.Configuration.MsmqIntegrationElement" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.ServiceModel.Configuration.MsmqIntegrationElement</a>
+ * <p>
+ *
+ * Powered by JCOBridge: more info at <a href="https://www.jcobridge.com" target="_top">https://www.jcobridge.com</a>
  */
 public class MsmqIntegrationElement extends MsmqElementBase  {
     /**

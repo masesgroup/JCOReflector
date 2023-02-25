@@ -44,7 +44,10 @@ import java.util.ArrayList;
  * The base .NET class managing System.Windows.Diagnostics.ResourceDictionaryDiagnostics, PresentationFramework, Version=6.0.2.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35.
  * <p>
  * 
- * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Windows.Diagnostics.ResourceDictionaryDiagnostics" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Windows.Diagnostics.ResourceDictionaryDiagnostics</a>
+ * .NET documentation at <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Windows.Diagnostics.ResourceDictionaryDiagnostics" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Windows.Diagnostics.ResourceDictionaryDiagnostics</a>
+ * <p>
+ *
+ * Powered by JCOBridge: more info at <a href="https://www.jcobridge.com" target="_top">https://www.jcobridge.com</a>
  */
 public class ResourceDictionaryDiagnostics extends NetObject  {
     /**

@@ -43,7 +43,10 @@ import system.windows.forms.PropertyTabChangedEventArgs;
  * The Java interface to be implemented to receive events from the CLR using {@link PropertyTabChangedEventHandler}.
  * <p>
  * 
- * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Windows.Forms.PropertyTabChangedEventHandler" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Windows.Forms.PropertyTabChangedEventHandler</a>
+ * .NET documentation at <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Windows.Forms.PropertyTabChangedEventHandler" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Windows.Forms.PropertyTabChangedEventHandler</a>
+ * <p>
+ *
+ * Powered by JCOBridge: more info at <a href="https://www.jcobridge.com" target="_top">https://www.jcobridge.com</a>
  */
 public interface IPropertyTabChangedEventHandler {
     public void Invoke(NetObject s, PropertyTabChangedEventArgs e);

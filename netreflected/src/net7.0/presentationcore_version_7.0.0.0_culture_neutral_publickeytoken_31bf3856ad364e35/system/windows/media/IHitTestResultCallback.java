@@ -44,7 +44,10 @@ import system.windows.media.HitTestResult;
  * The Java interface to be implemented to receive events from the CLR using {@link HitTestResultCallback}.
  * <p>
  * 
- * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Windows.Media.HitTestResultCallback" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Windows.Media.HitTestResultCallback</a>
+ * .NET documentation at <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Windows.Media.HitTestResultCallback" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Windows.Media.HitTestResultCallback</a>
+ * <p>
+ *
+ * Powered by JCOBridge: more info at <a href="https://www.jcobridge.com" target="_top">https://www.jcobridge.com</a>
  */
 public interface IHitTestResultCallback {
     public HitTestResultBehavior Invoke(HitTestResult result);

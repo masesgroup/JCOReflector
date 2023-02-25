@@ -47,7 +47,10 @@ import system.net.mime.TransferEncoding;
  * The base .NET class managing System.Net.Mail.AttachmentBase, System.Net.Mail, Version=6.0.0.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51.
  * <p>
  * 
- * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Net.Mail.AttachmentBase" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Net.Mail.AttachmentBase</a>
+ * .NET documentation at <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Net.Mail.AttachmentBase" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Net.Mail.AttachmentBase</a>
+ * <p>
+ *
+ * Powered by JCOBridge: more info at <a href="https://www.jcobridge.com" target="_top">https://www.jcobridge.com</a>
  */
 public class AttachmentBase extends NetObject implements AutoCloseable {
     /**

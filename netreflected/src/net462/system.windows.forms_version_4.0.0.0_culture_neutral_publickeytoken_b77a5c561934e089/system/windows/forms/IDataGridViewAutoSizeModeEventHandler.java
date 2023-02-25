@@ -43,7 +43,10 @@ import system.windows.forms.DataGridViewAutoSizeModeEventArgs;
  * The Java interface to be implemented to receive events from the CLR using {@link DataGridViewAutoSizeModeEventHandler}.
  * <p>
  * 
- * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Windows.Forms.DataGridViewAutoSizeModeEventHandler" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Windows.Forms.DataGridViewAutoSizeModeEventHandler</a>
+ * .NET documentation at <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Windows.Forms.DataGridViewAutoSizeModeEventHandler" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Windows.Forms.DataGridViewAutoSizeModeEventHandler</a>
+ * <p>
+ *
+ * Powered by JCOBridge: more info at <a href="https://www.jcobridge.com" target="_top">https://www.jcobridge.com</a>
  */
 public interface IDataGridViewAutoSizeModeEventHandler {
     public void Invoke(NetObject sender, DataGridViewAutoSizeModeEventArgs e);

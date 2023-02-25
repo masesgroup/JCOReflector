@@ -46,7 +46,10 @@ import system.data.common.commandtrees.DbExpressionVisitor;
  * The base .NET class managing System.Data.Common.CommandTrees.DbCrossJoinExpression, System.Data.Entity, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089.
  * <p>
  * 
- * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Data.Common.CommandTrees.DbCrossJoinExpression" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Data.Common.CommandTrees.DbCrossJoinExpression</a>
+ * .NET documentation at <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Data.Common.CommandTrees.DbCrossJoinExpression" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Data.Common.CommandTrees.DbCrossJoinExpression</a>
+ * <p>
+ *
+ * Powered by JCOBridge: more info at <a href="https://www.jcobridge.com" target="_top">https://www.jcobridge.com</a>
  */
 public class DbCrossJoinExpression extends DbExpression  {
     /**

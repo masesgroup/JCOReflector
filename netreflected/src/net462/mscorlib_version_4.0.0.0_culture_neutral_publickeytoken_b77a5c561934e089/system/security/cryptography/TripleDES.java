@@ -46,7 +46,10 @@ import system.security.cryptography.TripleDES;
  * The base .NET class managing System.Security.Cryptography.TripleDES, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089.
  * <p>
  * 
- * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Security.Cryptography.TripleDES" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Security.Cryptography.TripleDES</a>
+ * .NET documentation at <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Security.Cryptography.TripleDES" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Security.Cryptography.TripleDES</a>
+ * <p>
+ *
+ * Powered by JCOBridge: more info at <a href="https://www.jcobridge.com" target="_top">https://www.jcobridge.com</a>
  */
 public class TripleDES extends SymmetricAlgorithm  {
     /**

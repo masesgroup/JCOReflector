@@ -45,7 +45,10 @@ import system.ValueType;
  * The base .NET class managing System.Reflection.Metadata.DeclarativeSecurityAttributeHandleCollection, System.Reflection.Metadata, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a.
  * <p>
  * 
- * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Reflection.Metadata.DeclarativeSecurityAttributeHandleCollection" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Reflection.Metadata.DeclarativeSecurityAttributeHandleCollection</a>
+ * .NET documentation at <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Reflection.Metadata.DeclarativeSecurityAttributeHandleCollection" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Reflection.Metadata.DeclarativeSecurityAttributeHandleCollection</a>
+ * <p>
+ *
+ * Powered by JCOBridge: more info at <a href="https://www.jcobridge.com" target="_top">https://www.jcobridge.com</a>
  */
 public class DeclarativeSecurityAttributeHandleCollection extends ValueType  {
     /**

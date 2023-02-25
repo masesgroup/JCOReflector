@@ -46,7 +46,10 @@ import system.windows.media.PixelFormatChannelMask;
  * The base .NET class managing System.Windows.Media.PixelFormatChannelMask, PresentationCore, Version=6.0.2.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35.
  * <p>
  * 
- * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Windows.Media.PixelFormatChannelMask" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Windows.Media.PixelFormatChannelMask</a>
+ * .NET documentation at <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Windows.Media.PixelFormatChannelMask" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Windows.Media.PixelFormatChannelMask</a>
+ * <p>
+ *
+ * Powered by JCOBridge: more info at <a href="https://www.jcobridge.com" target="_top">https://www.jcobridge.com</a>
  */
 public class PixelFormatChannelMask extends ValueType  {
     /**

@@ -44,7 +44,10 @@ import system.xml.schema.IValidationEventHandler;
  * The base .NET class managing System.Xml.Schema.ValidationEventHandler, System.Xml, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089.
  * <p>
  * 
- * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Xml.Schema.ValidationEventHandler" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Xml.Schema.ValidationEventHandler</a>
+ * .NET documentation at <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Xml.Schema.ValidationEventHandler" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Xml.Schema.ValidationEventHandler</a>
+ * <p>
+ *
+ * Powered by JCOBridge: more info at <a href="https://www.jcobridge.com" target="_top">https://www.jcobridge.com</a>
  */
 public class ValidationEventHandler extends JCVoidDelegate implements IJCVoidEventEmit, IJCOBridgeReflected {
     /**

@@ -43,7 +43,10 @@ import system.componentmodel.HandledEventArgs;
  * The Java interface to be implemented to receive events from the CLR using {@link HandledEventHandler}.
  * <p>
  * 
- * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.ComponentModel.HandledEventHandler" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.ComponentModel.HandledEventHandler</a>
+ * .NET documentation at <a href="https://docs.microsoft.com/en-us/dotnet/api/System.ComponentModel.HandledEventHandler" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.ComponentModel.HandledEventHandler</a>
+ * <p>
+ *
+ * Powered by JCOBridge: more info at <a href="https://www.jcobridge.com" target="_top">https://www.jcobridge.com</a>
  */
 public interface IHandledEventHandler {
     public void Invoke(NetObject sender, HandledEventArgs e);

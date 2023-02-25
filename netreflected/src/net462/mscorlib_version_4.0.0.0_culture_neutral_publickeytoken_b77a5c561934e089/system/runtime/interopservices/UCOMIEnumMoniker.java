@@ -47,7 +47,10 @@ import system.runtime.interopservices.UCOMIEnumMonikerImplementation;
  * The base .NET class managing System.Runtime.InteropServices.UCOMIEnumMoniker, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089.
  * <p>
  * 
- * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Runtime.InteropServices.UCOMIEnumMoniker" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Runtime.InteropServices.UCOMIEnumMoniker</a>
+ * .NET documentation at <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Runtime.InteropServices.UCOMIEnumMoniker" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Runtime.InteropServices.UCOMIEnumMoniker</a>
+ * <p>
+ *
+ * Powered by JCOBridge: more info at <a href="https://www.jcobridge.com" target="_top">https://www.jcobridge.com</a>
  */
 public interface UCOMIEnumMoniker extends IJCOBridgeReflected {
     /**

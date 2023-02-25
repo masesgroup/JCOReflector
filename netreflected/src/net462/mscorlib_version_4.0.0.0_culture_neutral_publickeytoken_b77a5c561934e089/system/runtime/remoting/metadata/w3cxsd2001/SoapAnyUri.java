@@ -45,7 +45,10 @@ import system.runtime.remoting.metadata.w3cxsd2001.SoapAnyUri;
  * The base .NET class managing System.Runtime.Remoting.Metadata.W3cXsd2001.SoapAnyUri, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089.
  * <p>
  * 
- * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Runtime.Remoting.Metadata.W3cXsd2001.SoapAnyUri" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Runtime.Remoting.Metadata.W3cXsd2001.SoapAnyUri</a>
+ * .NET documentation at <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Runtime.Remoting.Metadata.W3cXsd2001.SoapAnyUri" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Runtime.Remoting.Metadata.W3cXsd2001.SoapAnyUri</a>
+ * <p>
+ *
+ * Powered by JCOBridge: more info at <a href="https://www.jcobridge.com" target="_top">https://www.jcobridge.com</a>
  */
 public class SoapAnyUri extends NetObject  {
     /**

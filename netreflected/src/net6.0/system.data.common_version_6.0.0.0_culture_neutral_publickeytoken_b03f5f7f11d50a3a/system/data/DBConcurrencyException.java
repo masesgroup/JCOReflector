@@ -47,7 +47,10 @@ import system.runtime.serialization.StreamingContext;
  * The base .NET class managing System.Data.DBConcurrencyException, System.Data.Common, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a.
  * <p>
  * 
- * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Data.DBConcurrencyException" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Data.DBConcurrencyException</a>
+ * .NET documentation at <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Data.DBConcurrencyException" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Data.DBConcurrencyException</a>
+ * <p>
+ *
+ * Powered by JCOBridge: more info at <a href="https://www.jcobridge.com" target="_top">https://www.jcobridge.com</a>
  */
 public class DBConcurrencyException extends SystemException {
     /**

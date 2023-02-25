@@ -43,7 +43,10 @@ import system.windows.input.InputEventArgs;
  * The Java interface to be implemented to receive events from the CLR using {@link InputEventHandler}.
  * <p>
  * 
- * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Windows.Input.InputEventHandler" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Windows.Input.InputEventHandler</a>
+ * .NET documentation at <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Windows.Input.InputEventHandler" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Windows.Input.InputEventHandler</a>
+ * <p>
+ *
+ * Powered by JCOBridge: more info at <a href="https://www.jcobridge.com" target="_top">https://www.jcobridge.com</a>
  */
 public interface IInputEventHandler {
     public void Invoke(NetObject sender, InputEventArgs e);

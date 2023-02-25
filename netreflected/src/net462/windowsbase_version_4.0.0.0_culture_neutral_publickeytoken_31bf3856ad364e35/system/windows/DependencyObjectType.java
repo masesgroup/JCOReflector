@@ -46,7 +46,10 @@ import system.windows.DependencyObjectType;
  * The base .NET class managing System.Windows.DependencyObjectType, WindowsBase, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35.
  * <p>
  * 
- * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Windows.DependencyObjectType" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Windows.DependencyObjectType</a>
+ * .NET documentation at <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Windows.DependencyObjectType" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Windows.DependencyObjectType</a>
+ * <p>
+ *
+ * Powered by JCOBridge: more info at <a href="https://www.jcobridge.com" target="_top">https://www.jcobridge.com</a>
  */
 public class DependencyObjectType extends NetObject  {
     /**

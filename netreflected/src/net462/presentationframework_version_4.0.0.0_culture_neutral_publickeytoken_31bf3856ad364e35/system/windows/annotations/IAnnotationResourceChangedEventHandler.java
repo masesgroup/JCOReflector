@@ -43,7 +43,10 @@ import system.windows.annotations.AnnotationResourceChangedEventArgs;
  * The Java interface to be implemented to receive events from the CLR using {@link AnnotationResourceChangedEventHandler}.
  * <p>
  * 
- * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Windows.Annotations.AnnotationResourceChangedEventHandler" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Windows.Annotations.AnnotationResourceChangedEventHandler</a>
+ * .NET documentation at <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Windows.Annotations.AnnotationResourceChangedEventHandler" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Windows.Annotations.AnnotationResourceChangedEventHandler</a>
+ * <p>
+ *
+ * Powered by JCOBridge: more info at <a href="https://www.jcobridge.com" target="_top">https://www.jcobridge.com</a>
  */
 public interface IAnnotationResourceChangedEventHandler {
     public void Invoke(NetObject sender, AnnotationResourceChangedEventArgs e);

@@ -45,7 +45,10 @@ import system.xaml.XamlReaderSettings;
  * The base .NET class managing System.Xaml.XamlObjectReaderSettings, System.Xaml, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089.
  * <p>
  * 
- * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Xaml.XamlObjectReaderSettings" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Xaml.XamlObjectReaderSettings</a>
+ * .NET documentation at <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Xaml.XamlObjectReaderSettings" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Xaml.XamlObjectReaderSettings</a>
+ * <p>
+ *
+ * Powered by JCOBridge: more info at <a href="https://www.jcobridge.com" target="_top">https://www.jcobridge.com</a>
  */
 public class XamlObjectReaderSettings extends XamlReaderSettings  {
     /**

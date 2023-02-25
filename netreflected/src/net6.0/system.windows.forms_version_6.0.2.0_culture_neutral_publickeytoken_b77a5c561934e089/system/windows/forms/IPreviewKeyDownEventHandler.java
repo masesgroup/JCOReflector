@@ -43,7 +43,10 @@ import system.windows.forms.PreviewKeyDownEventArgs;
  * The Java interface to be implemented to receive events from the CLR using {@link PreviewKeyDownEventHandler}.
  * <p>
  * 
- * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Windows.Forms.PreviewKeyDownEventHandler" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Windows.Forms.PreviewKeyDownEventHandler</a>
+ * .NET documentation at <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Windows.Forms.PreviewKeyDownEventHandler" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Windows.Forms.PreviewKeyDownEventHandler</a>
+ * <p>
+ *
+ * Powered by JCOBridge: more info at <a href="https://www.jcobridge.com" target="_top">https://www.jcobridge.com</a>
  */
 public interface IPreviewKeyDownEventHandler {
     public void Invoke(NetObject sender, PreviewKeyDownEventArgs e);

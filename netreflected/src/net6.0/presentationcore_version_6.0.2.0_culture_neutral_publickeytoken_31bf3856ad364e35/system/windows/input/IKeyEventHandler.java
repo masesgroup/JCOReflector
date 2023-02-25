@@ -43,7 +43,10 @@ import system.windows.input.KeyEventArgs;
  * The Java interface to be implemented to receive events from the CLR using {@link KeyEventHandler}.
  * <p>
  * 
- * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Windows.Input.KeyEventHandler" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Windows.Input.KeyEventHandler</a>
+ * .NET documentation at <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Windows.Input.KeyEventHandler" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Windows.Input.KeyEventHandler</a>
+ * <p>
+ *
+ * Powered by JCOBridge: more info at <a href="https://www.jcobridge.com" target="_top">https://www.jcobridge.com</a>
  */
 public interface IKeyEventHandler {
     public void Invoke(NetObject sender, KeyEventArgs e);

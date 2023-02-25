@@ -45,7 +45,10 @@ import system.runtime.interopservices.javascript.JSObject;
  * The base .NET class managing System.Runtime.InteropServices.JavaScript.JSHost, System.Runtime.InteropServices.JavaScript, Version=7.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a.
  * <p>
  * 
- * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Runtime.InteropServices.JavaScript.JSHost" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Runtime.InteropServices.JavaScript.JSHost</a>
+ * .NET documentation at <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Runtime.InteropServices.JavaScript.JSHost" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Runtime.InteropServices.JavaScript.JSHost</a>
+ * <p>
+ *
+ * Powered by JCOBridge: more info at <a href="https://www.jcobridge.com" target="_top">https://www.jcobridge.com</a>
  */
 public class JSHost extends NetObject  {
     /**

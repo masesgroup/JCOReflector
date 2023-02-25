@@ -45,7 +45,10 @@ import system.runtime.serialization.StreamingContext;
  * The base .NET class managing System.Activities.DynamicUpdate.InstanceUpdateException, System.Activities, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35.
  * <p>
  * 
- * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Activities.DynamicUpdate.InstanceUpdateException" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Activities.DynamicUpdate.InstanceUpdateException</a>
+ * .NET documentation at <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Activities.DynamicUpdate.InstanceUpdateException" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Activities.DynamicUpdate.InstanceUpdateException</a>
+ * <p>
+ *
+ * Powered by JCOBridge: more info at <a href="https://www.jcobridge.com" target="_top">https://www.jcobridge.com</a>
  */
 public class InstanceUpdateException extends NetException {
     /**

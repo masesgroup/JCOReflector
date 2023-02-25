@@ -44,7 +44,10 @@ import system.web.ui.IBuildMethod;
  * The base .NET class managing System.Web.UI.BuildMethod, System.Web, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a. Extends {@link JCDelegate}.
  * <p>
  * 
- * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Web.UI.BuildMethod" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Web.UI.BuildMethod</a>
+ * .NET documentation at <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Web.UI.BuildMethod" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Web.UI.BuildMethod</a>
+ * <p>
+ *
+ * Powered by JCOBridge: more info at <a href="https://www.jcobridge.com" target="_top">https://www.jcobridge.com</a>
  */
 public class BuildMethod extends JCDelegate implements IJCEventEmit, IJCOBridgeReflected {
     /**

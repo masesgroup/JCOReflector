@@ -45,7 +45,10 @@ import system.drawing.text.FontCollection;
  * The base .NET class managing System.Drawing.Text.InstalledFontCollection, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a.
  * <p>
  * 
- * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Drawing.Text.InstalledFontCollection" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Drawing.Text.InstalledFontCollection</a>
+ * .NET documentation at <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Drawing.Text.InstalledFontCollection" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Drawing.Text.InstalledFontCollection</a>
+ * <p>
+ *
+ * Powered by JCOBridge: more info at <a href="https://www.jcobridge.com" target="_top">https://www.jcobridge.com</a>
  */
 public class InstalledFontCollection extends FontCollection  {
     /**

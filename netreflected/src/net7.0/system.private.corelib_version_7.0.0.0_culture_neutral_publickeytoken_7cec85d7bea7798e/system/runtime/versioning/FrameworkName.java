@@ -46,7 +46,10 @@ import system.runtime.versioning.FrameworkName;
  * The base .NET class managing System.Runtime.Versioning.FrameworkName, System.Private.CoreLib, Version=7.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e.
  * <p>
  * 
- * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Runtime.Versioning.FrameworkName" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Runtime.Versioning.FrameworkName</a>
+ * .NET documentation at <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Runtime.Versioning.FrameworkName" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Runtime.Versioning.FrameworkName</a>
+ * <p>
+ *
+ * Powered by JCOBridge: more info at <a href="https://www.jcobridge.com" target="_top">https://www.jcobridge.com</a>
  */
 public class FrameworkName extends NetObject  {
     /**

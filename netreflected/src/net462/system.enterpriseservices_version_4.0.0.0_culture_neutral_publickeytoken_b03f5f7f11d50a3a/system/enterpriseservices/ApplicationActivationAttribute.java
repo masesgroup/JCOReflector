@@ -46,7 +46,10 @@ import system.enterpriseservices.ActivationOption;
  * The base .NET class managing System.EnterpriseServices.ApplicationActivationAttribute, System.EnterpriseServices, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a.
  * <p>
  * 
- * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.EnterpriseServices.ApplicationActivationAttribute" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.EnterpriseServices.ApplicationActivationAttribute</a>
+ * .NET documentation at <a href="https://docs.microsoft.com/en-us/dotnet/api/System.EnterpriseServices.ApplicationActivationAttribute" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.EnterpriseServices.ApplicationActivationAttribute</a>
+ * <p>
+ *
+ * Powered by JCOBridge: more info at <a href="https://www.jcobridge.com" target="_top">https://www.jcobridge.com</a>
  */
 public class ApplicationActivationAttribute extends Attribute  {
     /**

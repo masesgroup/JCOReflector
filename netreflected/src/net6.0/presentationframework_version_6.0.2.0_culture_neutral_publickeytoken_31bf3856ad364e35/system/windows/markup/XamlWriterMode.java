@@ -43,7 +43,10 @@ import org.mases.jcobridge.netreflection.*;
  * The base .NET class managing System.Windows.Markup.XamlWriterMode, PresentationFramework, Version=6.0.2.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35.
  * <p>
  * 
- * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Windows.Markup.XamlWriterMode" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Windows.Markup.XamlWriterMode</a>
+ * .NET documentation at <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Windows.Markup.XamlWriterMode" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Windows.Markup.XamlWriterMode</a>
+ * <p>
+ *
+ * Powered by JCOBridge: more info at <a href="https://www.jcobridge.com" target="_top">https://www.jcobridge.com</a>
  */
 public class XamlWriterMode extends NetObject  {
     /**

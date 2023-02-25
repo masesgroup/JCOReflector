@@ -52,7 +52,10 @@ import system.diagnostics.PerformanceCounterCategoryType;
  * The base .NET class managing System.Diagnostics.PerformanceCounterInstaller, System.Configuration.Install, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a.
  * <p>
  * 
- * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Diagnostics.PerformanceCounterInstaller" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Diagnostics.PerformanceCounterInstaller</a>
+ * .NET documentation at <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Diagnostics.PerformanceCounterInstaller" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Diagnostics.PerformanceCounterInstaller</a>
+ * <p>
+ *
+ * Powered by JCOBridge: more info at <a href="https://www.jcobridge.com" target="_top">https://www.jcobridge.com</a>
  */
 public class PerformanceCounterInstaller extends ComponentInstaller  {
     /**

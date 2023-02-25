@@ -47,7 +47,10 @@ import system.xml.xsl.runtime.XmlNavigatorFilter;
  * The base .NET class managing System.Xml.Xsl.Runtime.PrecedingSiblingDocOrderIterator, System.Data.SqlXml, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089.
  * <p>
  * 
- * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Xml.Xsl.Runtime.PrecedingSiblingDocOrderIterator" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Xml.Xsl.Runtime.PrecedingSiblingDocOrderIterator</a>
+ * .NET documentation at <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Xml.Xsl.Runtime.PrecedingSiblingDocOrderIterator" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Xml.Xsl.Runtime.PrecedingSiblingDocOrderIterator</a>
+ * <p>
+ *
+ * Powered by JCOBridge: more info at <a href="https://www.jcobridge.com" target="_top">https://www.jcobridge.com</a>
  */
 public class PrecedingSiblingDocOrderIterator extends ValueType  {
     /**

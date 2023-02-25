@@ -44,7 +44,10 @@ import system.windows.input.IQueryCursorEventHandler;
  * The base .NET class managing System.Windows.Input.QueryCursorEventHandler, PresentationCore, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35.
  * <p>
  * 
- * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Windows.Input.QueryCursorEventHandler" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Windows.Input.QueryCursorEventHandler</a>
+ * .NET documentation at <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Windows.Input.QueryCursorEventHandler" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Windows.Input.QueryCursorEventHandler</a>
+ * <p>
+ *
+ * Powered by JCOBridge: more info at <a href="https://www.jcobridge.com" target="_top">https://www.jcobridge.com</a>
  */
 public class QueryCursorEventHandler extends JCVoidDelegate implements IJCVoidEventEmit, IJCOBridgeReflected {
     /**

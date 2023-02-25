@@ -44,7 +44,10 @@ import system.Array;
  * The base .NET class managing System.Collections.ICollection, System.Private.CoreLib, Version=6.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e.
  * <p>
  * 
- * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Collections.ICollection" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Collections.ICollection</a>
+ * .NET documentation at <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Collections.ICollection" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Collections.ICollection</a>
+ * <p>
+ *
+ * Powered by JCOBridge: more info at <a href="https://www.jcobridge.com" target="_top">https://www.jcobridge.com</a>
  */
 public interface ICollection extends IJCOBridgeReflected, IEnumerable {
     /**

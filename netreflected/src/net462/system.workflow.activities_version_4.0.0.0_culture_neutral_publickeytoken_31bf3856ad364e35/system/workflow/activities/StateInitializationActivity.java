@@ -45,7 +45,10 @@ import system.workflow.activities.SequenceActivity;
  * The base .NET class managing System.Workflow.Activities.StateInitializationActivity, System.Workflow.Activities, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35.
  * <p>
  * 
- * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Workflow.Activities.StateInitializationActivity" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Workflow.Activities.StateInitializationActivity</a>
+ * .NET documentation at <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Workflow.Activities.StateInitializationActivity" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Workflow.Activities.StateInitializationActivity</a>
+ * <p>
+ *
+ * Powered by JCOBridge: more info at <a href="https://www.jcobridge.com" target="_top">https://www.jcobridge.com</a>
  */
 public class StateInitializationActivity extends SequenceActivity  {
     /**

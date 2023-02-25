@@ -55,7 +55,10 @@ import system.TypeCode;
  * The base .NET class managing System.Convert, System.Private.CoreLib, Version=7.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e.
  * <p>
  * 
- * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Convert" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Convert</a>
+ * .NET documentation at <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Convert" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Convert</a>
+ * <p>
+ *
+ * Powered by JCOBridge: more info at <a href="https://www.jcobridge.com" target="_top">https://www.jcobridge.com</a>
  */
 public class Convert extends NetObject  {
     /**

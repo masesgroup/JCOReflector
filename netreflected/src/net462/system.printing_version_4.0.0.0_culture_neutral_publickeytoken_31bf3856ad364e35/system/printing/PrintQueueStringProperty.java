@@ -45,7 +45,10 @@ import system.printing.PrintQueueStringPropertyType;
  * The base .NET class managing System.Printing.PrintQueueStringProperty, System.Printing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35.
  * <p>
  * 
- * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Printing.PrintQueueStringProperty" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Printing.PrintQueueStringProperty</a>
+ * .NET documentation at <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Printing.PrintQueueStringProperty" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Printing.PrintQueueStringProperty</a>
+ * <p>
+ *
+ * Powered by JCOBridge: more info at <a href="https://www.jcobridge.com" target="_top">https://www.jcobridge.com</a>
  */
 public class PrintQueueStringProperty extends NetObject  {
     /**

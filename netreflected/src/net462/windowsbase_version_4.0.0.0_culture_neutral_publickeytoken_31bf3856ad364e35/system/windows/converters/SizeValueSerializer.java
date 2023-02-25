@@ -47,7 +47,10 @@ import system.windows.markup.IValueSerializerContextImplementation;
  * The base .NET class managing System.Windows.Converters.SizeValueSerializer, WindowsBase, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35.
  * <p>
  * 
- * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Windows.Converters.SizeValueSerializer" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Windows.Converters.SizeValueSerializer</a>
+ * .NET documentation at <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Windows.Converters.SizeValueSerializer" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Windows.Converters.SizeValueSerializer</a>
+ * <p>
+ *
+ * Powered by JCOBridge: more info at <a href="https://www.jcobridge.com" target="_top">https://www.jcobridge.com</a>
  */
 public class SizeValueSerializer extends ValueSerializer  {
     /**

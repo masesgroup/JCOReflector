@@ -45,7 +45,10 @@ import system.IResolveEventHandler;
  * The base .NET class managing System.ResolveEventHandler, System.Private.CoreLib, Version=7.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e. Extends {@link JCDelegate}.
  * <p>
  * 
- * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.ResolveEventHandler" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.ResolveEventHandler</a>
+ * .NET documentation at <a href="https://docs.microsoft.com/en-us/dotnet/api/System.ResolveEventHandler" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.ResolveEventHandler</a>
+ * <p>
+ *
+ * Powered by JCOBridge: more info at <a href="https://www.jcobridge.com" target="_top">https://www.jcobridge.com</a>
  */
 public class ResolveEventHandler extends JCDelegate implements IJCEventEmit, IJCOBridgeReflected {
     /**

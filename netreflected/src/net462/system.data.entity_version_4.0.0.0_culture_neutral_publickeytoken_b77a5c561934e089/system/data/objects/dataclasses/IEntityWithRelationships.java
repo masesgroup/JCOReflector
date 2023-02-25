@@ -44,7 +44,10 @@ import system.data.objects.dataclasses.RelationshipManager;
  * The base .NET class managing System.Data.Objects.DataClasses.IEntityWithRelationships, System.Data.Entity, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089.
  * <p>
  * 
- * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Data.Objects.DataClasses.IEntityWithRelationships" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Data.Objects.DataClasses.IEntityWithRelationships</a>
+ * .NET documentation at <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Data.Objects.DataClasses.IEntityWithRelationships" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Data.Objects.DataClasses.IEntityWithRelationships</a>
+ * <p>
+ *
+ * Powered by JCOBridge: more info at <a href="https://www.jcobridge.com" target="_top">https://www.jcobridge.com</a>
  */
 public interface IEntityWithRelationships extends IJCOBridgeReflected {
     /**

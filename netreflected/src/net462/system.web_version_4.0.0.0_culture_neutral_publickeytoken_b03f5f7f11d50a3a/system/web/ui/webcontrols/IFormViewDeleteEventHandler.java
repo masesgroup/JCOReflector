@@ -43,7 +43,10 @@ import system.web.ui.webcontrols.FormViewDeleteEventArgs;
  * The Java interface to be implemented to receive events from the CLR using {@link FormViewDeleteEventHandler}.
  * <p>
  * 
- * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Web.UI.WebControls.FormViewDeleteEventHandler" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Web.UI.WebControls.FormViewDeleteEventHandler</a>
+ * .NET documentation at <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Web.UI.WebControls.FormViewDeleteEventHandler" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Web.UI.WebControls.FormViewDeleteEventHandler</a>
+ * <p>
+ *
+ * Powered by JCOBridge: more info at <a href="https://www.jcobridge.com" target="_top">https://www.jcobridge.com</a>
  */
 public interface IFormViewDeleteEventHandler {
     public void Invoke(NetObject sender, FormViewDeleteEventArgs e);

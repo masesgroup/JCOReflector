@@ -44,7 +44,10 @@ import system.io.IOException;
  * The base .NET class managing System.IO.Compression.ZLibException, System.IO.Compression, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089.
  * <p>
  * 
- * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.IO.Compression.ZLibException" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.IO.Compression.ZLibException</a>
+ * .NET documentation at <a href="https://docs.microsoft.com/en-us/dotnet/api/System.IO.Compression.ZLibException" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.IO.Compression.ZLibException</a>
+ * <p>
+ *
+ * Powered by JCOBridge: more info at <a href="https://www.jcobridge.com" target="_top">https://www.jcobridge.com</a>
  */
 public class ZLibException extends IOException {
     /**

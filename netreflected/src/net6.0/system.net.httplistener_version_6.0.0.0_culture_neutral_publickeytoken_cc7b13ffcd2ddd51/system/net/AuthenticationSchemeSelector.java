@@ -45,7 +45,10 @@ import system.net.IAuthenticationSchemeSelector;
  * The base .NET class managing System.Net.AuthenticationSchemeSelector, System.Net.HttpListener, Version=6.0.0.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51. Extends {@link JCDelegate}.
  * <p>
  * 
- * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Net.AuthenticationSchemeSelector" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Net.AuthenticationSchemeSelector</a>
+ * .NET documentation at <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Net.AuthenticationSchemeSelector" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Net.AuthenticationSchemeSelector</a>
+ * <p>
+ *
+ * Powered by JCOBridge: more info at <a href="https://www.jcobridge.com" target="_top">https://www.jcobridge.com</a>
  */
 public class AuthenticationSchemeSelector extends JCDelegate implements IJCEventEmit, IJCOBridgeReflected {
     /**

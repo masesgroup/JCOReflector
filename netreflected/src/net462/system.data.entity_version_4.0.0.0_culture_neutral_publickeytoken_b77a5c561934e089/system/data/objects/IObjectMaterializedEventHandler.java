@@ -43,7 +43,10 @@ import system.data.objects.ObjectMaterializedEventArgs;
  * The Java interface to be implemented to receive events from the CLR using {@link ObjectMaterializedEventHandler}.
  * <p>
  * 
- * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Data.Objects.ObjectMaterializedEventHandler" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Data.Objects.ObjectMaterializedEventHandler</a>
+ * .NET documentation at <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Data.Objects.ObjectMaterializedEventHandler" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Data.Objects.ObjectMaterializedEventHandler</a>
+ * <p>
+ *
+ * Powered by JCOBridge: more info at <a href="https://www.jcobridge.com" target="_top">https://www.jcobridge.com</a>
  */
 public interface IObjectMaterializedEventHandler {
     public void Invoke(NetObject sender, ObjectMaterializedEventArgs e);

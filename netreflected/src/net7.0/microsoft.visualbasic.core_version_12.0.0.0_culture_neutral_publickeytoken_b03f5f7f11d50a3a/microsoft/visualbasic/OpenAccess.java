@@ -43,7 +43,10 @@ import org.mases.jcobridge.netreflection.*;
  * The base .NET class managing Microsoft.VisualBasic.OpenAccess, Microsoft.VisualBasic.Core, Version=12.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a.
  * <p>
  * 
- * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/Microsoft.VisualBasic.OpenAccess" target="_top">https://docs.microsoft.com/en-us/dotnet/api/Microsoft.VisualBasic.OpenAccess</a>
+ * .NET documentation at <a href="https://docs.microsoft.com/en-us/dotnet/api/Microsoft.VisualBasic.OpenAccess" target="_top">https://docs.microsoft.com/en-us/dotnet/api/Microsoft.VisualBasic.OpenAccess</a>
+ * <p>
+ *
+ * Powered by JCOBridge: more info at <a href="https://www.jcobridge.com" target="_top">https://www.jcobridge.com</a>
  */
 public class OpenAccess extends NetObject  {
     /**

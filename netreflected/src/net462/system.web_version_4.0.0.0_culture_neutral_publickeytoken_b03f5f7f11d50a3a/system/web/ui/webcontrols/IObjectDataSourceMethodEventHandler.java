@@ -43,7 +43,10 @@ import system.web.ui.webcontrols.ObjectDataSourceMethodEventArgs;
  * The Java interface to be implemented to receive events from the CLR using {@link ObjectDataSourceMethodEventHandler}.
  * <p>
  * 
- * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Web.UI.WebControls.ObjectDataSourceMethodEventHandler" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Web.UI.WebControls.ObjectDataSourceMethodEventHandler</a>
+ * .NET documentation at <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Web.UI.WebControls.ObjectDataSourceMethodEventHandler" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Web.UI.WebControls.ObjectDataSourceMethodEventHandler</a>
+ * <p>
+ *
+ * Powered by JCOBridge: more info at <a href="https://www.jcobridge.com" target="_top">https://www.jcobridge.com</a>
  */
 public interface IObjectDataSourceMethodEventHandler {
     public void Invoke(NetObject sender, ObjectDataSourceMethodEventArgs e);

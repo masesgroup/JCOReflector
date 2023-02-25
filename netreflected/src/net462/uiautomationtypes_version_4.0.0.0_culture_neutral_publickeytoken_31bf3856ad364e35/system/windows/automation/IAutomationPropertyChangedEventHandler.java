@@ -43,7 +43,10 @@ import system.windows.automation.AutomationPropertyChangedEventArgs;
  * The Java interface to be implemented to receive events from the CLR using {@link AutomationPropertyChangedEventHandler}.
  * <p>
  * 
- * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Windows.Automation.AutomationPropertyChangedEventHandler" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Windows.Automation.AutomationPropertyChangedEventHandler</a>
+ * .NET documentation at <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Windows.Automation.AutomationPropertyChangedEventHandler" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Windows.Automation.AutomationPropertyChangedEventHandler</a>
+ * <p>
+ *
+ * Powered by JCOBridge: more info at <a href="https://www.jcobridge.com" target="_top">https://www.jcobridge.com</a>
  */
 public interface IAutomationPropertyChangedEventHandler {
     public void Invoke(NetObject sender, AutomationPropertyChangedEventArgs e);

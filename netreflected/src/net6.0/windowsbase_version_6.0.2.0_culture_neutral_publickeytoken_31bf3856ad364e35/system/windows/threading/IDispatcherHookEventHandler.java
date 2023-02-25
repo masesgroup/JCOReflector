@@ -43,7 +43,10 @@ import system.windows.threading.DispatcherHookEventArgs;
  * The Java interface to be implemented to receive events from the CLR using {@link DispatcherHookEventHandler}.
  * <p>
  * 
- * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Windows.Threading.DispatcherHookEventHandler" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Windows.Threading.DispatcherHookEventHandler</a>
+ * .NET documentation at <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Windows.Threading.DispatcherHookEventHandler" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Windows.Threading.DispatcherHookEventHandler</a>
+ * <p>
+ *
+ * Powered by JCOBridge: more info at <a href="https://www.jcobridge.com" target="_top">https://www.jcobridge.com</a>
  */
 public interface IDispatcherHookEventHandler {
     public void Invoke(NetObject sender, DispatcherHookEventArgs e);

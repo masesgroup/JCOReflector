@@ -44,7 +44,10 @@ import system.net.IDownloadStringCompletedEventHandler;
  * The base .NET class managing System.Net.DownloadStringCompletedEventHandler, System, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089.
  * <p>
  * 
- * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Net.DownloadStringCompletedEventHandler" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Net.DownloadStringCompletedEventHandler</a>
+ * .NET documentation at <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Net.DownloadStringCompletedEventHandler" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Net.DownloadStringCompletedEventHandler</a>
+ * <p>
+ *
+ * Powered by JCOBridge: more info at <a href="https://www.jcobridge.com" target="_top">https://www.jcobridge.com</a>
  */
 public class DownloadStringCompletedEventHandler extends JCVoidDelegate implements IJCVoidEventEmit, IJCOBridgeReflected {
     /**

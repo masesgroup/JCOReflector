@@ -54,7 +54,10 @@ import system.componentmodel.design.IEventBindingServiceImplementation;
  * The base .NET class managing System.ComponentModel.Design.EventBindingService, System.Windows.Forms.Design, Version=7.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089.
  * <p>
  * 
- * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.ComponentModel.Design.EventBindingService" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.ComponentModel.Design.EventBindingService</a>
+ * .NET documentation at <a href="https://docs.microsoft.com/en-us/dotnet/api/System.ComponentModel.Design.EventBindingService" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.ComponentModel.Design.EventBindingService</a>
+ * <p>
+ *
+ * Powered by JCOBridge: more info at <a href="https://www.jcobridge.com" target="_top">https://www.jcobridge.com</a>
  */
 public class EventBindingService extends NetObject implements system.componentmodel.design.IEventBindingService {
     /**

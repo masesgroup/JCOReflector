@@ -43,7 +43,10 @@ import system.drawing.printing.PrintEventArgs;
  * The Java interface to be implemented to receive events from the CLR using {@link PrintEventHandler}.
  * <p>
  * 
- * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Drawing.Printing.PrintEventHandler" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Drawing.Printing.PrintEventHandler</a>
+ * .NET documentation at <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Drawing.Printing.PrintEventHandler" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Drawing.Printing.PrintEventHandler</a>
+ * <p>
+ *
+ * Powered by JCOBridge: more info at <a href="https://www.jcobridge.com" target="_top">https://www.jcobridge.com</a>
  */
 public interface IPrintEventHandler {
     public void Invoke(NetObject sender, PrintEventArgs e);

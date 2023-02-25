@@ -47,7 +47,10 @@ import system.threading.CancellationToken;
  * The base .NET class managing System.Threading.CancellationTokenSource, System.Private.CoreLib, Version=6.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e.
  * <p>
  * 
- * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Threading.CancellationTokenSource" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Threading.CancellationTokenSource</a>
+ * .NET documentation at <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Threading.CancellationTokenSource" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Threading.CancellationTokenSource</a>
+ * <p>
+ *
+ * Powered by JCOBridge: more info at <a href="https://www.jcobridge.com" target="_top">https://www.jcobridge.com</a>
  */
 public class CancellationTokenSource extends NetObject implements AutoCloseable {
     /**

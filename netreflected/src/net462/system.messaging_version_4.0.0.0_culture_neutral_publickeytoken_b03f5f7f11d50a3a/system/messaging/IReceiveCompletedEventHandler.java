@@ -43,7 +43,10 @@ import system.messaging.ReceiveCompletedEventArgs;
  * The Java interface to be implemented to receive events from the CLR using {@link ReceiveCompletedEventHandler}.
  * <p>
  * 
- * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Messaging.ReceiveCompletedEventHandler" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Messaging.ReceiveCompletedEventHandler</a>
+ * .NET documentation at <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Messaging.ReceiveCompletedEventHandler" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Messaging.ReceiveCompletedEventHandler</a>
+ * <p>
+ *
+ * Powered by JCOBridge: more info at <a href="https://www.jcobridge.com" target="_top">https://www.jcobridge.com</a>
  */
 public interface IReceiveCompletedEventHandler {
     public void Invoke(NetObject sender, ReceiveCompletedEventArgs e);

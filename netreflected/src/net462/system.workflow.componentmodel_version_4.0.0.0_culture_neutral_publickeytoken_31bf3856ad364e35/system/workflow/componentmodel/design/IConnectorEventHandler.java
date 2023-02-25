@@ -43,7 +43,10 @@ import system.workflow.componentmodel.design.ConnectorEventArgs;
  * The Java interface to be implemented to receive events from the CLR using {@link ConnectorEventHandler}.
  * <p>
  * 
- * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Workflow.ComponentModel.Design.ConnectorEventHandler" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Workflow.ComponentModel.Design.ConnectorEventHandler</a>
+ * .NET documentation at <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Workflow.ComponentModel.Design.ConnectorEventHandler" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Workflow.ComponentModel.Design.ConnectorEventHandler</a>
+ * <p>
+ *
+ * Powered by JCOBridge: more info at <a href="https://www.jcobridge.com" target="_top">https://www.jcobridge.com</a>
  */
 public interface IConnectorEventHandler {
     public void Invoke(NetObject sender, ConnectorEventArgs e);

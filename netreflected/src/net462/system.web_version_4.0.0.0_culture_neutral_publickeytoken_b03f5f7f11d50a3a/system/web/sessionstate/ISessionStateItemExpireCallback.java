@@ -43,7 +43,10 @@ import system.web.sessionstate.SessionStateStoreData;
  * The Java interface to be implemented to receive events from the CLR using {@link SessionStateItemExpireCallback}.
  * <p>
  * 
- * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Web.SessionState.SessionStateItemExpireCallback" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Web.SessionState.SessionStateItemExpireCallback</a>
+ * .NET documentation at <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Web.SessionState.SessionStateItemExpireCallback" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Web.SessionState.SessionStateItemExpireCallback</a>
+ * <p>
+ *
+ * Powered by JCOBridge: more info at <a href="https://www.jcobridge.com" target="_top">https://www.jcobridge.com</a>
  */
 public interface ISessionStateItemExpireCallback {
     public void Invoke(java.lang.String id, SessionStateStoreData item);

@@ -45,7 +45,10 @@ import system.xml.xsl.XsltSettings;
  * The base .NET class managing System.Xml.Xsl.XsltSettings, System.Private.Xml, Version=7.0.0.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51.
  * <p>
  * 
- * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Xml.Xsl.XsltSettings" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Xml.Xsl.XsltSettings</a>
+ * .NET documentation at <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Xml.Xsl.XsltSettings" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Xml.Xsl.XsltSettings</a>
+ * <p>
+ *
+ * Powered by JCOBridge: more info at <a href="https://www.jcobridge.com" target="_top">https://www.jcobridge.com</a>
  */
 public class XsltSettings extends NetObject  {
     /**

@@ -45,7 +45,10 @@ import system.net.security.SslPolicyErrors;
  * The Java interface to be implemented to receive events from the CLR using {@link RemoteCertificateValidationCallback}.
  * <p>
  * 
- * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Net.Security.RemoteCertificateValidationCallback" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Net.Security.RemoteCertificateValidationCallback</a>
+ * .NET documentation at <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Net.Security.RemoteCertificateValidationCallback" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Net.Security.RemoteCertificateValidationCallback</a>
+ * <p>
+ *
+ * Powered by JCOBridge: more info at <a href="https://www.jcobridge.com" target="_top">https://www.jcobridge.com</a>
  */
 public interface IRemoteCertificateValidationCallback {
     public boolean Invoke(NetObject sender, X509Certificate certificate, X509Chain chain, SslPolicyErrors sslPolicyErrors);

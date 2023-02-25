@@ -47,7 +47,10 @@ import system.reflection.PropertyInfo;
  * The base .NET class managing System.Reflection.Emit.CustomAttributeBuilder, System.Private.CoreLib, Version=7.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e.
  * <p>
  * 
- * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Reflection.Emit.CustomAttributeBuilder" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Reflection.Emit.CustomAttributeBuilder</a>
+ * .NET documentation at <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Reflection.Emit.CustomAttributeBuilder" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Reflection.Emit.CustomAttributeBuilder</a>
+ * <p>
+ *
+ * Powered by JCOBridge: more info at <a href="https://www.jcobridge.com" target="_top">https://www.jcobridge.com</a>
  */
 public class CustomAttributeBuilder extends NetObject  {
     /**

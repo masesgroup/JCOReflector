@@ -43,7 +43,10 @@ import system.web.ui.Control;
  * The Java interface to be implemented to receive events from the CLR using {@link BuildTemplateMethod}.
  * <p>
  * 
- * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Web.UI.BuildTemplateMethod" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Web.UI.BuildTemplateMethod</a>
+ * .NET documentation at <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Web.UI.BuildTemplateMethod" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Web.UI.BuildTemplateMethod</a>
+ * <p>
+ *
+ * Powered by JCOBridge: more info at <a href="https://www.jcobridge.com" target="_top">https://www.jcobridge.com</a>
  */
 public interface IBuildTemplateMethod {
     public void Invoke(Control control);

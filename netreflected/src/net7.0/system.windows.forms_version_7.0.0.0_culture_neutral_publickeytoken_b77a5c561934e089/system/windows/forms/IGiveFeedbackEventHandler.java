@@ -43,7 +43,10 @@ import system.windows.forms.GiveFeedbackEventArgs;
  * The Java interface to be implemented to receive events from the CLR using {@link GiveFeedbackEventHandler}.
  * <p>
  * 
- * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Windows.Forms.GiveFeedbackEventHandler" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Windows.Forms.GiveFeedbackEventHandler</a>
+ * .NET documentation at <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Windows.Forms.GiveFeedbackEventHandler" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Windows.Forms.GiveFeedbackEventHandler</a>
+ * <p>
+ *
+ * Powered by JCOBridge: more info at <a href="https://www.jcobridge.com" target="_top">https://www.jcobridge.com</a>
  */
 public interface IGiveFeedbackEventHandler {
     public void Invoke(NetObject sender, GiveFeedbackEventArgs e);

@@ -45,7 +45,10 @@ import system.collections.IComparerImplementation;
  * The base .NET class managing System.Collections.IStructuralComparable, System.Private.CoreLib, Version=7.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e.
  * <p>
  * 
- * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Collections.IStructuralComparable" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Collections.IStructuralComparable</a>
+ * .NET documentation at <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Collections.IStructuralComparable" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Collections.IStructuralComparable</a>
+ * <p>
+ *
+ * Powered by JCOBridge: more info at <a href="https://www.jcobridge.com" target="_top">https://www.jcobridge.com</a>
  */
 public interface IStructuralComparable extends IJCOBridgeReflected {
     /**

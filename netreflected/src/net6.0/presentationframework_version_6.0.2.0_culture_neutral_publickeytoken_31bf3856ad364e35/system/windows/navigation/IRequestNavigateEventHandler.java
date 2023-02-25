@@ -43,7 +43,10 @@ import system.windows.navigation.RequestNavigateEventArgs;
  * The Java interface to be implemented to receive events from the CLR using {@link RequestNavigateEventHandler}.
  * <p>
  * 
- * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Windows.Navigation.RequestNavigateEventHandler" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Windows.Navigation.RequestNavigateEventHandler</a>
+ * .NET documentation at <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Windows.Navigation.RequestNavigateEventHandler" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Windows.Navigation.RequestNavigateEventHandler</a>
+ * <p>
+ *
+ * Powered by JCOBridge: more info at <a href="https://www.jcobridge.com" target="_top">https://www.jcobridge.com</a>
  */
 public interface IRequestNavigateEventHandler {
     public void Invoke(NetObject sender, RequestNavigateEventArgs e);

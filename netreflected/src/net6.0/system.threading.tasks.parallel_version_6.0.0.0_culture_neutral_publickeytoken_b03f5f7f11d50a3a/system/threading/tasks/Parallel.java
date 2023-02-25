@@ -47,7 +47,10 @@ import system.Action;
  * The base .NET class managing System.Threading.Tasks.Parallel, System.Threading.Tasks.Parallel, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a.
  * <p>
  * 
- * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Threading.Tasks.Parallel" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Threading.Tasks.Parallel</a>
+ * .NET documentation at <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Threading.Tasks.Parallel" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Threading.Tasks.Parallel</a>
+ * <p>
+ *
+ * Powered by JCOBridge: more info at <a href="https://www.jcobridge.com" target="_top">https://www.jcobridge.com</a>
  */
 public class Parallel extends NetObject  {
     /**

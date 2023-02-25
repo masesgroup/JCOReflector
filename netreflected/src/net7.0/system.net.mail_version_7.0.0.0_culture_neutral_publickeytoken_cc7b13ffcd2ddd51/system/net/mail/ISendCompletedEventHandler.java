@@ -43,7 +43,10 @@ import system.componentmodel.AsyncCompletedEventArgs;
  * The Java interface to be implemented to receive events from the CLR using {@link SendCompletedEventHandler}.
  * <p>
  * 
- * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Net.Mail.SendCompletedEventHandler" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Net.Mail.SendCompletedEventHandler</a>
+ * .NET documentation at <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Net.Mail.SendCompletedEventHandler" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Net.Mail.SendCompletedEventHandler</a>
+ * <p>
+ *
+ * Powered by JCOBridge: more info at <a href="https://www.jcobridge.com" target="_top">https://www.jcobridge.com</a>
  */
 public interface ISendCompletedEventHandler {
     public void Invoke(NetObject sender, AsyncCompletedEventArgs e);

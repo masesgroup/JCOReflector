@@ -63,7 +63,10 @@ import system.windows.forms.SplitterEventHandler;
  * The base .NET class managing System.Windows.Forms.SplitContainer, System.Windows.Forms, Version=6.0.2.0, Culture=neutral, PublicKeyToken=b77a5c561934e089.
  * <p>
  * 
- * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Windows.Forms.SplitContainer" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Windows.Forms.SplitContainer</a>
+ * .NET documentation at <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Windows.Forms.SplitContainer" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Windows.Forms.SplitContainer</a>
+ * <p>
+ *
+ * Powered by JCOBridge: more info at <a href="https://www.jcobridge.com" target="_top">https://www.jcobridge.com</a>
  */
 public class SplitContainer extends ContainerControl  {
     /**

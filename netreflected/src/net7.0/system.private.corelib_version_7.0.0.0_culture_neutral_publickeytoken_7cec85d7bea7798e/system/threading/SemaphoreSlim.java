@@ -48,7 +48,10 @@ import system.threading.WaitHandle;
  * The base .NET class managing System.Threading.SemaphoreSlim, System.Private.CoreLib, Version=7.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e.
  * <p>
  * 
- * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Threading.SemaphoreSlim" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Threading.SemaphoreSlim</a>
+ * .NET documentation at <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Threading.SemaphoreSlim" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Threading.SemaphoreSlim</a>
+ * <p>
+ *
+ * Powered by JCOBridge: more info at <a href="https://www.jcobridge.com" target="_top">https://www.jcobridge.com</a>
  */
 public class SemaphoreSlim extends NetObject implements AutoCloseable {
     /**

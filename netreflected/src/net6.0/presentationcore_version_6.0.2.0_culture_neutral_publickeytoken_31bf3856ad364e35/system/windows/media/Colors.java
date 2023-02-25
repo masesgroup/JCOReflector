@@ -45,7 +45,10 @@ import system.windows.media.Color;
  * The base .NET class managing System.Windows.Media.Colors, PresentationCore, Version=6.0.2.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35.
  * <p>
  * 
- * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Windows.Media.Colors" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Windows.Media.Colors</a>
+ * .NET documentation at <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Windows.Media.Colors" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Windows.Media.Colors</a>
+ * <p>
+ *
+ * Powered by JCOBridge: more info at <a href="https://www.jcobridge.com" target="_top">https://www.jcobridge.com</a>
  */
 public class Colors extends NetObject  {
     /**

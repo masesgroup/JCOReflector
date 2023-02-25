@@ -45,7 +45,10 @@ import system.configuration.ConfigurationElementCollectionType;
  * The base .NET class managing System.ServiceModel.Activities.Tracking.Configuration.ProfileElementCollection, System.ServiceModel.Activities, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35.
  * <p>
  * 
- * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.ServiceModel.Activities.Tracking.Configuration.ProfileElementCollection" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.ServiceModel.Activities.Tracking.Configuration.ProfileElementCollection</a>
+ * .NET documentation at <a href="https://docs.microsoft.com/en-us/dotnet/api/System.ServiceModel.Activities.Tracking.Configuration.ProfileElementCollection" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.ServiceModel.Activities.Tracking.Configuration.ProfileElementCollection</a>
+ * <p>
+ *
+ * Powered by JCOBridge: more info at <a href="https://www.jcobridge.com" target="_top">https://www.jcobridge.com</a>
  */
 public class ProfileElementCollection extends NetObjectEnumerable  {
     /**

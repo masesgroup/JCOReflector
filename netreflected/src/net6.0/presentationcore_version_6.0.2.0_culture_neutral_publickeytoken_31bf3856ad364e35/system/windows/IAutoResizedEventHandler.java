@@ -43,7 +43,10 @@ import system.windows.AutoResizedEventArgs;
  * The Java interface to be implemented to receive events from the CLR using {@link AutoResizedEventHandler}.
  * <p>
  * 
- * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Windows.AutoResizedEventHandler" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Windows.AutoResizedEventHandler</a>
+ * .NET documentation at <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Windows.AutoResizedEventHandler" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Windows.AutoResizedEventHandler</a>
+ * <p>
+ *
+ * Powered by JCOBridge: more info at <a href="https://www.jcobridge.com" target="_top">https://www.jcobridge.com</a>
  */
 public interface IAutoResizedEventHandler {
     public void Invoke(NetObject sender, AutoResizedEventArgs e);

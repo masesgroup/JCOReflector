@@ -50,7 +50,10 @@ import system.web.ui.IAttributeAccessorImplementation;
  * The base .NET class managing System.Web.UI.WebControls.ListItem, System.Web, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a.
  * <p>
  * 
- * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Web.UI.WebControls.ListItem" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Web.UI.WebControls.ListItem</a>
+ * .NET documentation at <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Web.UI.WebControls.ListItem" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Web.UI.WebControls.ListItem</a>
+ * <p>
+ *
+ * Powered by JCOBridge: more info at <a href="https://www.jcobridge.com" target="_top">https://www.jcobridge.com</a>
  */
 public class ListItem extends NetObject implements system.web.ui.IParserAccessor, system.web.ui.IAttributeAccessor {
     /**

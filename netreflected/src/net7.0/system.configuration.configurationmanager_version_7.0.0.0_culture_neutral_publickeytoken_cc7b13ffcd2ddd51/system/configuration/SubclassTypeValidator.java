@@ -45,7 +45,10 @@ import system.configuration.ConfigurationValidatorBase;
  * The base .NET class managing System.Configuration.SubclassTypeValidator, System.Configuration.ConfigurationManager, Version=7.0.0.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51.
  * <p>
  * 
- * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Configuration.SubclassTypeValidator" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Configuration.SubclassTypeValidator</a>
+ * .NET documentation at <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Configuration.SubclassTypeValidator" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Configuration.SubclassTypeValidator</a>
+ * <p>
+ *
+ * Powered by JCOBridge: more info at <a href="https://www.jcobridge.com" target="_top">https://www.jcobridge.com</a>
  */
 public class SubclassTypeValidator extends ConfigurationValidatorBase  {
     /**

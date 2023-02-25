@@ -49,7 +49,10 @@ import system.windows.markup.IAddChildImplementation;
  * The base .NET class managing System.Windows.Media.Animation.VectorAnimationUsingKeyFrames, PresentationCore, Version=6.0.2.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35.
  * <p>
  * 
- * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Windows.Media.Animation.VectorAnimationUsingKeyFrames" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Windows.Media.Animation.VectorAnimationUsingKeyFrames</a>
+ * .NET documentation at <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Windows.Media.Animation.VectorAnimationUsingKeyFrames" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Windows.Media.Animation.VectorAnimationUsingKeyFrames</a>
+ * <p>
+ *
+ * Powered by JCOBridge: more info at <a href="https://www.jcobridge.com" target="_top">https://www.jcobridge.com</a>
  */
 public class VectorAnimationUsingKeyFrames extends VectorAnimationBase implements system.windows.markup.IAddChild {
     /**

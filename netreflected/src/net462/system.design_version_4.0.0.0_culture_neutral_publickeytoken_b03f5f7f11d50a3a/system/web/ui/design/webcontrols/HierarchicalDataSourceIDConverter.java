@@ -45,7 +45,10 @@ import system.web.ui.design.webcontrols.DataSourceIDConverter;
  * The base .NET class managing System.Web.UI.Design.WebControls.HierarchicalDataSourceIDConverter, System.Design, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a.
  * <p>
  * 
- * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Web.UI.Design.WebControls.HierarchicalDataSourceIDConverter" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Web.UI.Design.WebControls.HierarchicalDataSourceIDConverter</a>
+ * .NET documentation at <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Web.UI.Design.WebControls.HierarchicalDataSourceIDConverter" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Web.UI.Design.WebControls.HierarchicalDataSourceIDConverter</a>
+ * <p>
+ *
+ * Powered by JCOBridge: more info at <a href="https://www.jcobridge.com" target="_top">https://www.jcobridge.com</a>
  */
 public class HierarchicalDataSourceIDConverter extends DataSourceIDConverter  {
     /**

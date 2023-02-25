@@ -44,7 +44,10 @@ import system.Guid;
  * The base .NET class managing System.Windows.Forms.ComponentModel.Com2Interop.ICom2PropertyPageDisplayService, System.Windows.Forms, Version=6.0.2.0, Culture=neutral, PublicKeyToken=b77a5c561934e089.
  * <p>
  * 
- * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Windows.Forms.ComponentModel.Com2Interop.ICom2PropertyPageDisplayService" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Windows.Forms.ComponentModel.Com2Interop.ICom2PropertyPageDisplayService</a>
+ * .NET documentation at <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Windows.Forms.ComponentModel.Com2Interop.ICom2PropertyPageDisplayService" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Windows.Forms.ComponentModel.Com2Interop.ICom2PropertyPageDisplayService</a>
+ * <p>
+ *
+ * Powered by JCOBridge: more info at <a href="https://www.jcobridge.com" target="_top">https://www.jcobridge.com</a>
  */
 public interface ICom2PropertyPageDisplayService extends IJCOBridgeReflected {
     /**

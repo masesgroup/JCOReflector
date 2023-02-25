@@ -44,7 +44,10 @@ import system.security.cryptography.x509certificates.X509Certificate;
  * The Java interface to be implemented to receive events from the CLR using {@link VerifyServerCertificateCallback}.
  * <p>
  * 
- * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.DirectoryServices.Protocols.VerifyServerCertificateCallback" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.DirectoryServices.Protocols.VerifyServerCertificateCallback</a>
+ * .NET documentation at <a href="https://docs.microsoft.com/en-us/dotnet/api/System.DirectoryServices.Protocols.VerifyServerCertificateCallback" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.DirectoryServices.Protocols.VerifyServerCertificateCallback</a>
+ * <p>
+ *
+ * Powered by JCOBridge: more info at <a href="https://www.jcobridge.com" target="_top">https://www.jcobridge.com</a>
  */
 public interface IVerifyServerCertificateCallback {
     public boolean Invoke(LdapConnection connection, X509Certificate certificate);

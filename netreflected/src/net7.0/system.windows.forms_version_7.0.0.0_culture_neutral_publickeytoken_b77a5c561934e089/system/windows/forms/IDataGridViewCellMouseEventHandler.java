@@ -43,7 +43,10 @@ import system.windows.forms.DataGridViewCellMouseEventArgs;
  * The Java interface to be implemented to receive events from the CLR using {@link DataGridViewCellMouseEventHandler}.
  * <p>
  * 
- * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Windows.Forms.DataGridViewCellMouseEventHandler" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Windows.Forms.DataGridViewCellMouseEventHandler</a>
+ * .NET documentation at <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Windows.Forms.DataGridViewCellMouseEventHandler" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Windows.Forms.DataGridViewCellMouseEventHandler</a>
+ * <p>
+ *
+ * Powered by JCOBridge: more info at <a href="https://www.jcobridge.com" target="_top">https://www.jcobridge.com</a>
  */
 public interface IDataGridViewCellMouseEventHandler {
     public void Invoke(NetObject sender, DataGridViewCellMouseEventArgs e);

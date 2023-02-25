@@ -45,7 +45,10 @@ import system.data.objects.dataclasses.IEntityChangeTrackerImplementation;
  * The base .NET class managing System.Data.Objects.DataClasses.IEntityWithChangeTracker, System.Data.Entity, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089.
  * <p>
  * 
- * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Data.Objects.DataClasses.IEntityWithChangeTracker" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Data.Objects.DataClasses.IEntityWithChangeTracker</a>
+ * .NET documentation at <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Data.Objects.DataClasses.IEntityWithChangeTracker" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Data.Objects.DataClasses.IEntityWithChangeTracker</a>
+ * <p>
+ *
+ * Powered by JCOBridge: more info at <a href="https://www.jcobridge.com" target="_top">https://www.jcobridge.com</a>
  */
 public interface IEntityWithChangeTracker extends IJCOBridgeReflected {
     /**

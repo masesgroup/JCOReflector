@@ -45,7 +45,10 @@ import system.drawing.printing.PrinterResolutionKind;
  * The base .NET class managing System.Drawing.Printing.PrinterResolution, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a.
  * <p>
  * 
- * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Drawing.Printing.PrinterResolution" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Drawing.Printing.PrinterResolution</a>
+ * .NET documentation at <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Drawing.Printing.PrinterResolution" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Drawing.Printing.PrinterResolution</a>
+ * <p>
+ *
+ * Powered by JCOBridge: more info at <a href="https://www.jcobridge.com" target="_top">https://www.jcobridge.com</a>
  */
 public class PrinterResolution extends NetObject  {
     /**

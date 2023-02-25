@@ -43,7 +43,10 @@ import system.directoryservices.protocols.LdapConnection;
  * The Java interface to be implemented to receive events from the CLR using {@link DereferenceConnectionCallback}.
  * <p>
  * 
- * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.DirectoryServices.Protocols.DereferenceConnectionCallback" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.DirectoryServices.Protocols.DereferenceConnectionCallback</a>
+ * .NET documentation at <a href="https://docs.microsoft.com/en-us/dotnet/api/System.DirectoryServices.Protocols.DereferenceConnectionCallback" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.DirectoryServices.Protocols.DereferenceConnectionCallback</a>
+ * <p>
+ *
+ * Powered by JCOBridge: more info at <a href="https://www.jcobridge.com" target="_top">https://www.jcobridge.com</a>
  */
 public interface IDereferenceConnectionCallback {
     public void Invoke(LdapConnection primaryConnection, LdapConnection connectionToDereference);

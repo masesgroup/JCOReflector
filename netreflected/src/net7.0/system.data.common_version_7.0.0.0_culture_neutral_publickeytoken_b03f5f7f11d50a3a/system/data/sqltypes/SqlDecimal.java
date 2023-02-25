@@ -63,7 +63,10 @@ import system.xml.serialization.IXmlSerializableImplementation;
  * The base .NET class managing System.Data.SqlTypes.SqlDecimal, System.Data.Common, Version=7.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a.
  * <p>
  * 
- * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Data.SqlTypes.SqlDecimal" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Data.SqlTypes.SqlDecimal</a>
+ * .NET documentation at <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Data.SqlTypes.SqlDecimal" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Data.SqlTypes.SqlDecimal</a>
+ * <p>
+ *
+ * Powered by JCOBridge: more info at <a href="https://www.jcobridge.com" target="_top">https://www.jcobridge.com</a>
  */
 public class SqlDecimal extends ValueType implements system.xml.serialization.IXmlSerializable {
     /**

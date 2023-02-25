@@ -48,7 +48,10 @@ import system.security.permissions.SecurityAction;
  * The base .NET class managing System.Security.Permissions.SecurityAttribute, System.Private.CoreLib, Version=7.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e.
  * <p>
  * 
- * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Security.Permissions.SecurityAttribute" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Security.Permissions.SecurityAttribute</a>
+ * .NET documentation at <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Security.Permissions.SecurityAttribute" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Security.Permissions.SecurityAttribute</a>
+ * <p>
+ *
+ * Powered by JCOBridge: more info at <a href="https://www.jcobridge.com" target="_top">https://www.jcobridge.com</a>
  */
 public class SecurityAttribute extends Attribute  {
     /**

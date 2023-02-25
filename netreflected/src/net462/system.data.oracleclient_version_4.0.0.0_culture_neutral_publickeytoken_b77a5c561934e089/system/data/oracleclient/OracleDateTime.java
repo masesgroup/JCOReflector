@@ -49,7 +49,10 @@ import system.data.oracleclient.OracleBoolean;
  * The base .NET class managing System.Data.OracleClient.OracleDateTime, System.Data.OracleClient, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089.
  * <p>
  * 
- * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Data.OracleClient.OracleDateTime" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Data.OracleClient.OracleDateTime</a>
+ * .NET documentation at <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Data.OracleClient.OracleDateTime" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Data.OracleClient.OracleDateTime</a>
+ * <p>
+ *
+ * Powered by JCOBridge: more info at <a href="https://www.jcobridge.com" target="_top">https://www.jcobridge.com</a>
  */
 public class OracleDateTime extends ValueType  {
     /**

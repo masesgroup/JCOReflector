@@ -43,7 +43,10 @@ import org.mases.jcobridge.netreflection.*;
  * The base .NET class managing System.Xml.IXmlLineInfo, System.Private.Xml, Version=6.0.0.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51.
  * <p>
  * 
- * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Xml.IXmlLineInfo" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Xml.IXmlLineInfo</a>
+ * .NET documentation at <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Xml.IXmlLineInfo" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Xml.IXmlLineInfo</a>
+ * <p>
+ *
+ * Powered by JCOBridge: more info at <a href="https://www.jcobridge.com" target="_top">https://www.jcobridge.com</a>
  */
 public interface IXmlLineInfo extends IJCOBridgeReflected {
     /**

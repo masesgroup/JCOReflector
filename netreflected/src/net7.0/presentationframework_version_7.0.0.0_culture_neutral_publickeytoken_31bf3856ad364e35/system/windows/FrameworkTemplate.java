@@ -53,7 +53,10 @@ import system.windows.markup.IQueryAmbientImplementation;
  * The base .NET class managing System.Windows.FrameworkTemplate, PresentationFramework, Version=7.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35.
  * <p>
  * 
- * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Windows.FrameworkTemplate" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Windows.FrameworkTemplate</a>
+ * .NET documentation at <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Windows.FrameworkTemplate" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Windows.FrameworkTemplate</a>
+ * <p>
+ *
+ * Powered by JCOBridge: more info at <a href="https://www.jcobridge.com" target="_top">https://www.jcobridge.com</a>
  */
 public class FrameworkTemplate extends DispatcherObject implements system.windows.markup.IQueryAmbient {
     /**

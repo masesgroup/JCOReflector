@@ -48,7 +48,10 @@ import system.servicemodel.channels.MessageVersion;
  * The base .NET class managing System.ServiceModel.Channels.FaultConverter, System.ServiceModel, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089.
  * <p>
  * 
- * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.ServiceModel.Channels.FaultConverter" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.ServiceModel.Channels.FaultConverter</a>
+ * .NET documentation at <a href="https://docs.microsoft.com/en-us/dotnet/api/System.ServiceModel.Channels.FaultConverter" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.ServiceModel.Channels.FaultConverter</a>
+ * <p>
+ *
+ * Powered by JCOBridge: more info at <a href="https://www.jcobridge.com" target="_top">https://www.jcobridge.com</a>
  */
 public class FaultConverter extends NetObject  {
     /**

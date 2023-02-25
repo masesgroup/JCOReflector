@@ -45,7 +45,10 @@ import system.Attribute;
  * The base .NET class managing System.Runtime.Serialization.OnDeserializedAttribute, System.Private.CoreLib, Version=7.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e.
  * <p>
  * 
- * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Runtime.Serialization.OnDeserializedAttribute" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Runtime.Serialization.OnDeserializedAttribute</a>
+ * .NET documentation at <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Runtime.Serialization.OnDeserializedAttribute" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Runtime.Serialization.OnDeserializedAttribute</a>
+ * <p>
+ *
+ * Powered by JCOBridge: more info at <a href="https://www.jcobridge.com" target="_top">https://www.jcobridge.com</a>
  */
 public class OnDeserializedAttribute extends Attribute  {
     /**

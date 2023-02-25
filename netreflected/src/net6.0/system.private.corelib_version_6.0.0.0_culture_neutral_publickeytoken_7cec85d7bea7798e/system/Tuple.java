@@ -44,7 +44,10 @@ import java.util.ArrayList;
  * The base .NET class managing System.Tuple, System.Private.CoreLib, Version=6.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e.
  * <p>
  * 
- * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Tuple" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Tuple</a>
+ * .NET documentation at <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Tuple" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Tuple</a>
+ * <p>
+ *
+ * Powered by JCOBridge: more info at <a href="https://www.jcobridge.com" target="_top">https://www.jcobridge.com</a>
  */
 public class Tuple extends NetObject  {
     /**

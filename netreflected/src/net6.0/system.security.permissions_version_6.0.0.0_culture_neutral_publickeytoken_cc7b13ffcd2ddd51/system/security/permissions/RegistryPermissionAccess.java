@@ -43,7 +43,10 @@ import org.mases.jcobridge.netreflection.*;
  * The base .NET class managing System.Security.Permissions.RegistryPermissionAccess, System.Security.Permissions, Version=6.0.0.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51.
  * <p>
  * 
- * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Security.Permissions.RegistryPermissionAccess" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Security.Permissions.RegistryPermissionAccess</a>
+ * .NET documentation at <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Security.Permissions.RegistryPermissionAccess" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Security.Permissions.RegistryPermissionAccess</a>
+ * <p>
+ *
+ * Powered by JCOBridge: more info at <a href="https://www.jcobridge.com" target="_top">https://www.jcobridge.com</a>
  */
 public class RegistryPermissionAccess extends NetObject  {
     /**

@@ -48,7 +48,10 @@ import system.servicemodel.InstanceContext;
  * The base .NET class managing System.ServiceModel.Dispatcher.IDispatchMessageInspector, System.ServiceModel, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089.
  * <p>
  * 
- * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.ServiceModel.Dispatcher.IDispatchMessageInspector" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.ServiceModel.Dispatcher.IDispatchMessageInspector</a>
+ * .NET documentation at <a href="https://docs.microsoft.com/en-us/dotnet/api/System.ServiceModel.Dispatcher.IDispatchMessageInspector" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.ServiceModel.Dispatcher.IDispatchMessageInspector</a>
+ * <p>
+ *
+ * Powered by JCOBridge: more info at <a href="https://www.jcobridge.com" target="_top">https://www.jcobridge.com</a>
  */
 public class IDispatchMessageInspectorImplementation extends NetObject implements IDispatchMessageInspector {
     /**

@@ -43,7 +43,10 @@ import system.windows.automation.AutomationEventArgs;
  * The Java interface to be implemented to receive events from the CLR using {@link AutomationEventHandler}.
  * <p>
  * 
- * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Windows.Automation.AutomationEventHandler" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Windows.Automation.AutomationEventHandler</a>
+ * .NET documentation at <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Windows.Automation.AutomationEventHandler" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Windows.Automation.AutomationEventHandler</a>
+ * <p>
+ *
+ * Powered by JCOBridge: more info at <a href="https://www.jcobridge.com" target="_top">https://www.jcobridge.com</a>
  */
 public interface IAutomationEventHandler {
     public void Invoke(NetObject sender, AutomationEventArgs e);

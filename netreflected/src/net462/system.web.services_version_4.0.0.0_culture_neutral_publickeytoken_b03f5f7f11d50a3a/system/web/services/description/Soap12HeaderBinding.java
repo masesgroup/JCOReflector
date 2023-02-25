@@ -45,7 +45,10 @@ import system.web.services.description.SoapHeaderBinding;
  * The base .NET class managing System.Web.Services.Description.Soap12HeaderBinding, System.Web.Services, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a.
  * <p>
  * 
- * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Web.Services.Description.Soap12HeaderBinding" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Web.Services.Description.Soap12HeaderBinding</a>
+ * .NET documentation at <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Web.Services.Description.Soap12HeaderBinding" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Web.Services.Description.Soap12HeaderBinding</a>
+ * <p>
+ *
+ * Powered by JCOBridge: more info at <a href="https://www.jcobridge.com" target="_top">https://www.jcobridge.com</a>
  */
 public class Soap12HeaderBinding extends SoapHeaderBinding  {
     /**

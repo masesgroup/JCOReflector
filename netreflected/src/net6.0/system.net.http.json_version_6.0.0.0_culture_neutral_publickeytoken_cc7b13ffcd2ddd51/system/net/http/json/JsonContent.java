@@ -48,7 +48,10 @@ import system.text.json.JsonSerializerOptions;
  * The base .NET class managing System.Net.Http.Json.JsonContent, System.Net.Http.Json, Version=6.0.0.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51.
  * <p>
  * 
- * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Net.Http.Json.JsonContent" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Net.Http.Json.JsonContent</a>
+ * .NET documentation at <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Net.Http.Json.JsonContent" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Net.Http.Json.JsonContent</a>
+ * <p>
+ *
+ * Powered by JCOBridge: more info at <a href="https://www.jcobridge.com" target="_top">https://www.jcobridge.com</a>
  */
 public class JsonContent extends HttpContent  {
     /**

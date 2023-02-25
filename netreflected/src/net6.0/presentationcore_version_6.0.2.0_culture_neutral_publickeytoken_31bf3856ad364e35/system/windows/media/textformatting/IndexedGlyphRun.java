@@ -45,7 +45,10 @@ import system.windows.media.GlyphRun;
  * The base .NET class managing System.Windows.Media.TextFormatting.IndexedGlyphRun, PresentationCore, Version=6.0.2.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35.
  * <p>
  * 
- * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Windows.Media.TextFormatting.IndexedGlyphRun" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Windows.Media.TextFormatting.IndexedGlyphRun</a>
+ * .NET documentation at <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Windows.Media.TextFormatting.IndexedGlyphRun" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Windows.Media.TextFormatting.IndexedGlyphRun</a>
+ * <p>
+ *
+ * Powered by JCOBridge: more info at <a href="https://www.jcobridge.com" target="_top">https://www.jcobridge.com</a>
  */
 public class IndexedGlyphRun extends NetObject  {
     /**

@@ -43,7 +43,10 @@ import org.mases.jcobridge.netreflection.*;
  * The base .NET class managing System.Drawing.Text.HotkeyPrefix, System.Drawing.Common, Version=7.0.0.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51.
  * <p>
  * 
- * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Drawing.Text.HotkeyPrefix" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Drawing.Text.HotkeyPrefix</a>
+ * .NET documentation at <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Drawing.Text.HotkeyPrefix" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Drawing.Text.HotkeyPrefix</a>
+ * <p>
+ *
+ * Powered by JCOBridge: more info at <a href="https://www.jcobridge.com" target="_top">https://www.jcobridge.com</a>
  */
 public class HotkeyPrefix extends NetObject  {
     /**

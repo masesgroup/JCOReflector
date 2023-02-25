@@ -48,7 +48,10 @@ import system.activities.WorkflowIdentity;
  * The base .NET class managing System.Activities.Tracking.WorkflowInstanceUnhandledExceptionRecord, System.Activities, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35.
  * <p>
  * 
- * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Activities.Tracking.WorkflowInstanceUnhandledExceptionRecord" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Activities.Tracking.WorkflowInstanceUnhandledExceptionRecord</a>
+ * .NET documentation at <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Activities.Tracking.WorkflowInstanceUnhandledExceptionRecord" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Activities.Tracking.WorkflowInstanceUnhandledExceptionRecord</a>
+ * <p>
+ *
+ * Powered by JCOBridge: more info at <a href="https://www.jcobridge.com" target="_top">https://www.jcobridge.com</a>
  */
 public class WorkflowInstanceUnhandledExceptionRecord extends WorkflowInstanceRecord  {
     /**

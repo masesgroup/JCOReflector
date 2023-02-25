@@ -47,7 +47,10 @@ import system.windows.media.DrawingBrush;
  * The base .NET class managing System.Windows.Media.DrawingBrush, PresentationCore, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35.
  * <p>
  * 
- * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Windows.Media.DrawingBrush" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Windows.Media.DrawingBrush</a>
+ * .NET documentation at <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Windows.Media.DrawingBrush" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Windows.Media.DrawingBrush</a>
+ * <p>
+ *
+ * Powered by JCOBridge: more info at <a href="https://www.jcobridge.com" target="_top">https://www.jcobridge.com</a>
  */
 public class DrawingBrush extends TileBrush  {
     /**

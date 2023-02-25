@@ -46,7 +46,10 @@ import system.componentmodel.design.DisplayMode;
  * The base .NET class managing System.ComponentModel.Design.ByteViewer, System.Windows.Forms.Design, Version=6.0.2.0, Culture=neutral, PublicKeyToken=b77a5c561934e089.
  * <p>
  * 
- * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.ComponentModel.Design.ByteViewer" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.ComponentModel.Design.ByteViewer</a>
+ * .NET documentation at <a href="https://docs.microsoft.com/en-us/dotnet/api/System.ComponentModel.Design.ByteViewer" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.ComponentModel.Design.ByteViewer</a>
+ * <p>
+ *
+ * Powered by JCOBridge: more info at <a href="https://www.jcobridge.com" target="_top">https://www.jcobridge.com</a>
  */
 public class ByteViewer extends TableLayoutPanel  {
     /**

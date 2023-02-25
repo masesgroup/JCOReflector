@@ -46,7 +46,10 @@ import system.activities.OutArgument;
  * The base .NET class managing System.Activities.ActivityWithResult, System.Activities, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35.
  * <p>
  * 
- * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Activities.ActivityWithResult" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Activities.ActivityWithResult</a>
+ * .NET documentation at <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Activities.ActivityWithResult" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Activities.ActivityWithResult</a>
+ * <p>
+ *
+ * Powered by JCOBridge: more info at <a href="https://www.jcobridge.com" target="_top">https://www.jcobridge.com</a>
  */
 public class ActivityWithResult extends Activity  {
     /**

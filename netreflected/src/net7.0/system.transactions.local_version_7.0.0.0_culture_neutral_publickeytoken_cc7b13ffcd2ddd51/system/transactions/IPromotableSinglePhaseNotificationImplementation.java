@@ -47,7 +47,10 @@ import system.transactions.SinglePhaseEnlistment;
  * The base .NET class managing System.Transactions.IPromotableSinglePhaseNotification, System.Transactions.Local, Version=7.0.0.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51.
  * <p>
  * 
- * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Transactions.IPromotableSinglePhaseNotification" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Transactions.IPromotableSinglePhaseNotification</a>
+ * .NET documentation at <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Transactions.IPromotableSinglePhaseNotification" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Transactions.IPromotableSinglePhaseNotification</a>
+ * <p>
+ *
+ * Powered by JCOBridge: more info at <a href="https://www.jcobridge.com" target="_top">https://www.jcobridge.com</a>
  */
 public class IPromotableSinglePhaseNotificationImplementation extends NetObject implements IPromotableSinglePhaseNotification {
     /**

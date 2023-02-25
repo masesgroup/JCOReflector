@@ -71,7 +71,10 @@ import system.workflow.componentmodel.design.IPersistUIStateImplementation;
  * The base .NET class managing System.Workflow.ComponentModel.Design.ActivityDesigner, System.Workflow.ComponentModel, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35.
  * <p>
  * 
- * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Workflow.ComponentModel.Design.ActivityDesigner" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Workflow.ComponentModel.Design.ActivityDesigner</a>
+ * .NET documentation at <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Workflow.ComponentModel.Design.ActivityDesigner" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Workflow.ComponentModel.Design.ActivityDesigner</a>
+ * <p>
+ *
+ * Powered by JCOBridge: more info at <a href="https://www.jcobridge.com" target="_top">https://www.jcobridge.com</a>
  */
 public class ActivityDesigner extends NetObject implements system.componentmodel.design.IDesignerFilter, system.drawing.design.IToolboxUser, system.workflow.componentmodel.design.IPersistUIState, AutoCloseable {
     /**

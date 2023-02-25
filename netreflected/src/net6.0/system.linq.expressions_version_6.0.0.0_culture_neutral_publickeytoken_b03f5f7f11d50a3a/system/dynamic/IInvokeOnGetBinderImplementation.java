@@ -44,7 +44,10 @@ import java.util.ArrayList;
  * The base .NET class managing System.Dynamic.IInvokeOnGetBinder, System.Linq.Expressions, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a.
  * <p>
  * 
- * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Dynamic.IInvokeOnGetBinder" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Dynamic.IInvokeOnGetBinder</a>
+ * .NET documentation at <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Dynamic.IInvokeOnGetBinder" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Dynamic.IInvokeOnGetBinder</a>
+ * <p>
+ *
+ * Powered by JCOBridge: more info at <a href="https://www.jcobridge.com" target="_top">https://www.jcobridge.com</a>
  */
 public class IInvokeOnGetBinderImplementation extends NetObject implements IInvokeOnGetBinder {
     /**

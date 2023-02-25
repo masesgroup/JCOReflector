@@ -43,7 +43,10 @@ import system.windows.forms.DataGridViewEditingControlShowingEventArgs;
  * The Java interface to be implemented to receive events from the CLR using {@link DataGridViewEditingControlShowingEventHandler}.
  * <p>
  * 
- * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Windows.Forms.DataGridViewEditingControlShowingEventHandler" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Windows.Forms.DataGridViewEditingControlShowingEventHandler</a>
+ * .NET documentation at <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Windows.Forms.DataGridViewEditingControlShowingEventHandler" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Windows.Forms.DataGridViewEditingControlShowingEventHandler</a>
+ * <p>
+ *
+ * Powered by JCOBridge: more info at <a href="https://www.jcobridge.com" target="_top">https://www.jcobridge.com</a>
  */
 public interface IDataGridViewEditingControlShowingEventHandler {
     public void Invoke(NetObject sender, DataGridViewEditingControlShowingEventArgs e);

@@ -44,7 +44,10 @@ import system.windows.DependencyObject;
  * The Java interface to be implemented to receive events from the CLR using {@link HitTestFilterCallback}.
  * <p>
  * 
- * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Windows.Media.HitTestFilterCallback" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Windows.Media.HitTestFilterCallback</a>
+ * .NET documentation at <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Windows.Media.HitTestFilterCallback" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Windows.Media.HitTestFilterCallback</a>
+ * <p>
+ *
+ * Powered by JCOBridge: more info at <a href="https://www.jcobridge.com" target="_top">https://www.jcobridge.com</a>
  */
 public interface IHitTestFilterCallback {
     public HitTestFilterBehavior Invoke(DependencyObject potentialHitTestTarget);

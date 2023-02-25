@@ -43,7 +43,10 @@ import system.io.packaging.SignatureVerificationEventArgs;
  * The Java interface to be implemented to receive events from the CLR using {@link InvalidSignatureEventHandler}.
  * <p>
  * 
- * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.IO.Packaging.InvalidSignatureEventHandler" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.IO.Packaging.InvalidSignatureEventHandler</a>
+ * .NET documentation at <a href="https://docs.microsoft.com/en-us/dotnet/api/System.IO.Packaging.InvalidSignatureEventHandler" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.IO.Packaging.InvalidSignatureEventHandler</a>
+ * <p>
+ *
+ * Powered by JCOBridge: more info at <a href="https://www.jcobridge.com" target="_top">https://www.jcobridge.com</a>
  */
 public interface IInvalidSignatureEventHandler {
     public void Invoke(NetObject sender, SignatureVerificationEventArgs e);

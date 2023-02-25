@@ -43,7 +43,10 @@ import system.windows.forms.DataGridViewRowHeightInfoNeededEventArgs;
  * The Java interface to be implemented to receive events from the CLR using {@link DataGridViewRowHeightInfoNeededEventHandler}.
  * <p>
  * 
- * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Windows.Forms.DataGridViewRowHeightInfoNeededEventHandler" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Windows.Forms.DataGridViewRowHeightInfoNeededEventHandler</a>
+ * .NET documentation at <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Windows.Forms.DataGridViewRowHeightInfoNeededEventHandler" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Windows.Forms.DataGridViewRowHeightInfoNeededEventHandler</a>
+ * <p>
+ *
+ * Powered by JCOBridge: more info at <a href="https://www.jcobridge.com" target="_top">https://www.jcobridge.com</a>
  */
 public interface IDataGridViewRowHeightInfoNeededEventHandler {
     public void Invoke(NetObject sender, DataGridViewRowHeightInfoNeededEventArgs e);

@@ -44,7 +44,10 @@ import system.MemberAccessException;
  * The base .NET class managing System.FieldAccessException, System.Private.CoreLib, Version=7.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e.
  * <p>
  * 
- * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.FieldAccessException" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.FieldAccessException</a>
+ * .NET documentation at <a href="https://docs.microsoft.com/en-us/dotnet/api/System.FieldAccessException" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.FieldAccessException</a>
+ * <p>
+ *
+ * Powered by JCOBridge: more info at <a href="https://www.jcobridge.com" target="_top">https://www.jcobridge.com</a>
  */
 public class FieldAccessException extends MemberAccessException {
     /**

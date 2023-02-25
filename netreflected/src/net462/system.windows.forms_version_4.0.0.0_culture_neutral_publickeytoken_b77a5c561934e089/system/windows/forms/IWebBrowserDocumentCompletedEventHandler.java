@@ -43,7 +43,10 @@ import system.windows.forms.WebBrowserDocumentCompletedEventArgs;
  * The Java interface to be implemented to receive events from the CLR using {@link WebBrowserDocumentCompletedEventHandler}.
  * <p>
  * 
- * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Windows.Forms.WebBrowserDocumentCompletedEventHandler" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Windows.Forms.WebBrowserDocumentCompletedEventHandler</a>
+ * .NET documentation at <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Windows.Forms.WebBrowserDocumentCompletedEventHandler" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Windows.Forms.WebBrowserDocumentCompletedEventHandler</a>
+ * <p>
+ *
+ * Powered by JCOBridge: more info at <a href="https://www.jcobridge.com" target="_top">https://www.jcobridge.com</a>
  */
 public interface IWebBrowserDocumentCompletedEventHandler {
     public void Invoke(NetObject sender, WebBrowserDocumentCompletedEventArgs e);

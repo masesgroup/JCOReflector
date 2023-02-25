@@ -43,7 +43,10 @@ import system.windows.documents.serialization.WritingPrintTicketRequiredEventArg
  * The Java interface to be implemented to receive events from the CLR using {@link WritingPrintTicketRequiredEventHandler}.
  * <p>
  * 
- * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Windows.Documents.Serialization.WritingPrintTicketRequiredEventHandler" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Windows.Documents.Serialization.WritingPrintTicketRequiredEventHandler</a>
+ * .NET documentation at <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Windows.Documents.Serialization.WritingPrintTicketRequiredEventHandler" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Windows.Documents.Serialization.WritingPrintTicketRequiredEventHandler</a>
+ * <p>
+ *
+ * Powered by JCOBridge: more info at <a href="https://www.jcobridge.com" target="_top">https://www.jcobridge.com</a>
  */
 public interface IWritingPrintTicketRequiredEventHandler {
     public void Invoke(NetObject sender, WritingPrintTicketRequiredEventArgs e);

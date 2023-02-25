@@ -43,7 +43,10 @@ import system.windows.forms.ListViewItemSelectionChangedEventArgs;
  * The Java interface to be implemented to receive events from the CLR using {@link ListViewItemSelectionChangedEventHandler}.
  * <p>
  * 
- * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Windows.Forms.ListViewItemSelectionChangedEventHandler" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Windows.Forms.ListViewItemSelectionChangedEventHandler</a>
+ * .NET documentation at <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Windows.Forms.ListViewItemSelectionChangedEventHandler" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Windows.Forms.ListViewItemSelectionChangedEventHandler</a>
+ * <p>
+ *
+ * Powered by JCOBridge: more info at <a href="https://www.jcobridge.com" target="_top">https://www.jcobridge.com</a>
  */
 public interface IListViewItemSelectionChangedEventHandler {
     public void Invoke(NetObject sender, ListViewItemSelectionChangedEventArgs e);

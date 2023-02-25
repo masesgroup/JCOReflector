@@ -45,7 +45,10 @@ import system.Attribute;
  * The base .NET class managing System.Diagnostics.CodeAnalysis.DoesNotReturnAttribute, System.Private.CoreLib, Version=6.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e.
  * <p>
  * 
- * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Diagnostics.CodeAnalysis.DoesNotReturnAttribute" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Diagnostics.CodeAnalysis.DoesNotReturnAttribute</a>
+ * .NET documentation at <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Diagnostics.CodeAnalysis.DoesNotReturnAttribute" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Diagnostics.CodeAnalysis.DoesNotReturnAttribute</a>
+ * <p>
+ *
+ * Powered by JCOBridge: more info at <a href="https://www.jcobridge.com" target="_top">https://www.jcobridge.com</a>
  */
 public class DoesNotReturnAttribute extends Attribute  {
     /**

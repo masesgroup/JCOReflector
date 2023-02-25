@@ -43,7 +43,10 @@ import system.io.ports.SerialErrorReceivedEventArgs;
  * The Java interface to be implemented to receive events from the CLR using {@link SerialErrorReceivedEventHandler}.
  * <p>
  * 
- * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.IO.Ports.SerialErrorReceivedEventHandler" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.IO.Ports.SerialErrorReceivedEventHandler</a>
+ * .NET documentation at <a href="https://docs.microsoft.com/en-us/dotnet/api/System.IO.Ports.SerialErrorReceivedEventHandler" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.IO.Ports.SerialErrorReceivedEventHandler</a>
+ * <p>
+ *
+ * Powered by JCOBridge: more info at <a href="https://www.jcobridge.com" target="_top">https://www.jcobridge.com</a>
  */
 public interface ISerialErrorReceivedEventHandler {
     public void Invoke(NetObject sender, SerialErrorReceivedEventArgs e);

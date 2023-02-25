@@ -43,7 +43,10 @@ import system.data.DataTableNewRowEventArgs;
  * The Java interface to be implemented to receive events from the CLR using {@link DataTableNewRowEventHandler}.
  * <p>
  * 
- * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Data.DataTableNewRowEventHandler" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Data.DataTableNewRowEventHandler</a>
+ * .NET documentation at <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Data.DataTableNewRowEventHandler" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Data.DataTableNewRowEventHandler</a>
+ * <p>
+ *
+ * Powered by JCOBridge: more info at <a href="https://www.jcobridge.com" target="_top">https://www.jcobridge.com</a>
  */
 public interface IDataTableNewRowEventHandler {
     public void Invoke(NetObject sender, DataTableNewRowEventArgs e);

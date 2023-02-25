@@ -43,7 +43,10 @@ import system.windows.forms.QueryContinueDragEventArgs;
  * The Java interface to be implemented to receive events from the CLR using {@link QueryContinueDragEventHandler}.
  * <p>
  * 
- * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Windows.Forms.QueryContinueDragEventHandler" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Windows.Forms.QueryContinueDragEventHandler</a>
+ * .NET documentation at <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Windows.Forms.QueryContinueDragEventHandler" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Windows.Forms.QueryContinueDragEventHandler</a>
+ * <p>
+ *
+ * Powered by JCOBridge: more info at <a href="https://www.jcobridge.com" target="_top">https://www.jcobridge.com</a>
  */
 public interface IQueryContinueDragEventHandler {
     public void Invoke(NetObject sender, QueryContinueDragEventArgs e);

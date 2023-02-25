@@ -43,7 +43,10 @@ import system.threading.ThreadExceptionEventArgs;
  * The Java interface to be implemented to receive events from the CLR using {@link ThreadExceptionEventHandler}.
  * <p>
  * 
- * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Threading.ThreadExceptionEventHandler" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Threading.ThreadExceptionEventHandler</a>
+ * .NET documentation at <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Threading.ThreadExceptionEventHandler" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Threading.ThreadExceptionEventHandler</a>
+ * <p>
+ *
+ * Powered by JCOBridge: more info at <a href="https://www.jcobridge.com" target="_top">https://www.jcobridge.com</a>
  */
 public interface IThreadExceptionEventHandler {
     public void Invoke(NetObject sender, ThreadExceptionEventArgs e);

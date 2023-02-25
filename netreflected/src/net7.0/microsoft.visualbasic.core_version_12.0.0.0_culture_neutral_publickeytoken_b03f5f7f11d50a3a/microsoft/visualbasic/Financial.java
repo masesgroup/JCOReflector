@@ -45,7 +45,10 @@ import microsoft.visualbasic.DueDate;
  * The base .NET class managing Microsoft.VisualBasic.Financial, Microsoft.VisualBasic.Core, Version=12.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a.
  * <p>
  * 
- * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/Microsoft.VisualBasic.Financial" target="_top">https://docs.microsoft.com/en-us/dotnet/api/Microsoft.VisualBasic.Financial</a>
+ * .NET documentation at <a href="https://docs.microsoft.com/en-us/dotnet/api/Microsoft.VisualBasic.Financial" target="_top">https://docs.microsoft.com/en-us/dotnet/api/Microsoft.VisualBasic.Financial</a>
+ * <p>
+ *
+ * Powered by JCOBridge: more info at <a href="https://www.jcobridge.com" target="_top">https://www.jcobridge.com</a>
  */
 public class Financial extends NetObject  {
     /**

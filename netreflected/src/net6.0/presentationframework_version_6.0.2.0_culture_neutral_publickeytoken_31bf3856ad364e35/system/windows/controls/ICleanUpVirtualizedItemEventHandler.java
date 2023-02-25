@@ -43,7 +43,10 @@ import system.windows.controls.CleanUpVirtualizedItemEventArgs;
  * The Java interface to be implemented to receive events from the CLR using {@link CleanUpVirtualizedItemEventHandler}.
  * <p>
  * 
- * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Windows.Controls.CleanUpVirtualizedItemEventHandler" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Windows.Controls.CleanUpVirtualizedItemEventHandler</a>
+ * .NET documentation at <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Windows.Controls.CleanUpVirtualizedItemEventHandler" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Windows.Controls.CleanUpVirtualizedItemEventHandler</a>
+ * <p>
+ *
+ * Powered by JCOBridge: more info at <a href="https://www.jcobridge.com" target="_top">https://www.jcobridge.com</a>
  */
 public interface ICleanUpVirtualizedItemEventHandler {
     public void Invoke(NetObject sender, CleanUpVirtualizedItemEventArgs e);

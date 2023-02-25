@@ -51,7 +51,10 @@ import system.threading.tasks.ValueTask;
  * The base .NET class managing System.IO.UnmanagedMemoryStream, System.Private.CoreLib, Version=7.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e.
  * <p>
  * 
- * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.IO.UnmanagedMemoryStream" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.IO.UnmanagedMemoryStream</a>
+ * .NET documentation at <a href="https://docs.microsoft.com/en-us/dotnet/api/System.IO.UnmanagedMemoryStream" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.IO.UnmanagedMemoryStream</a>
+ * <p>
+ *
+ * Powered by JCOBridge: more info at <a href="https://www.jcobridge.com" target="_top">https://www.jcobridge.com</a>
  */
 public class UnmanagedMemoryStream extends Stream  {
     /**

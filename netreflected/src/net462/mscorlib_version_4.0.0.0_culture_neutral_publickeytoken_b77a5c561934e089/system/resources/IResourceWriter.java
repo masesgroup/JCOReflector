@@ -45,7 +45,10 @@ import system.IDisposableImplementation;
  * The base .NET class managing System.Resources.IResourceWriter, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089.
  * <p>
  * 
- * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Resources.IResourceWriter" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Resources.IResourceWriter</a>
+ * .NET documentation at <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Resources.IResourceWriter" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Resources.IResourceWriter</a>
+ * <p>
+ *
+ * Powered by JCOBridge: more info at <a href="https://www.jcobridge.com" target="_top">https://www.jcobridge.com</a>
  */
 public interface IResourceWriter extends IJCOBridgeReflected, IDisposable {
     /**

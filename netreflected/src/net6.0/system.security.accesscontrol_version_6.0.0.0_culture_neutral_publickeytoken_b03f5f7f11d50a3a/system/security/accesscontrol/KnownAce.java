@@ -46,7 +46,10 @@ import system.security.principal.SecurityIdentifier;
  * The base .NET class managing System.Security.AccessControl.KnownAce, System.Security.AccessControl, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a.
  * <p>
  * 
- * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Security.AccessControl.KnownAce" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Security.AccessControl.KnownAce</a>
+ * .NET documentation at <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Security.AccessControl.KnownAce" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Security.AccessControl.KnownAce</a>
+ * <p>
+ *
+ * Powered by JCOBridge: more info at <a href="https://www.jcobridge.com" target="_top">https://www.jcobridge.com</a>
  */
 public class KnownAce extends GenericAce  {
     /**

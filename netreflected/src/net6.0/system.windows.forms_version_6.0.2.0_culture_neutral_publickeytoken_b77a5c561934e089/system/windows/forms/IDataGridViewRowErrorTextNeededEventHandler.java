@@ -43,7 +43,10 @@ import system.windows.forms.DataGridViewRowErrorTextNeededEventArgs;
  * The Java interface to be implemented to receive events from the CLR using {@link DataGridViewRowErrorTextNeededEventHandler}.
  * <p>
  * 
- * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Windows.Forms.DataGridViewRowErrorTextNeededEventHandler" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Windows.Forms.DataGridViewRowErrorTextNeededEventHandler</a>
+ * .NET documentation at <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Windows.Forms.DataGridViewRowErrorTextNeededEventHandler" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Windows.Forms.DataGridViewRowErrorTextNeededEventHandler</a>
+ * <p>
+ *
+ * Powered by JCOBridge: more info at <a href="https://www.jcobridge.com" target="_top">https://www.jcobridge.com</a>
  */
 public interface IDataGridViewRowErrorTextNeededEventHandler {
     public void Invoke(NetObject sender, DataGridViewRowErrorTextNeededEventArgs e);

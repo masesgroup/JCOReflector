@@ -44,7 +44,10 @@ import system.windows.automation.IAutomationEventHandler;
  * The base .NET class managing System.Windows.Automation.AutomationEventHandler, UIAutomationTypes, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35.
  * <p>
  * 
- * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Windows.Automation.AutomationEventHandler" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Windows.Automation.AutomationEventHandler</a>
+ * .NET documentation at <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Windows.Automation.AutomationEventHandler" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Windows.Automation.AutomationEventHandler</a>
+ * <p>
+ *
+ * Powered by JCOBridge: more info at <a href="https://www.jcobridge.com" target="_top">https://www.jcobridge.com</a>
  */
 public class AutomationEventHandler extends JCVoidDelegate implements IJCVoidEventEmit, IJCOBridgeReflected {
     /**

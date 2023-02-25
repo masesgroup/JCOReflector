@@ -43,7 +43,10 @@ import system.data.DataTableClearEventArgs;
  * The Java interface to be implemented to receive events from the CLR using {@link DataTableClearEventHandler}.
  * <p>
  * 
- * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Data.DataTableClearEventHandler" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Data.DataTableClearEventHandler</a>
+ * .NET documentation at <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Data.DataTableClearEventHandler" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Data.DataTableClearEventHandler</a>
+ * <p>
+ *
+ * Powered by JCOBridge: more info at <a href="https://www.jcobridge.com" target="_top">https://www.jcobridge.com</a>
  */
 public interface IDataTableClearEventHandler {
     public void Invoke(NetObject sender, DataTableClearEventArgs e);

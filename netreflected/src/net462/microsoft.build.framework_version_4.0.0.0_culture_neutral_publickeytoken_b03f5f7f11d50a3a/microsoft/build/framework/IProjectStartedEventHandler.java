@@ -43,7 +43,10 @@ import microsoft.build.framework.ProjectStartedEventArgs;
  * The Java interface to be implemented to receive events from the CLR using {@link ProjectStartedEventHandler}.
  * <p>
  * 
- * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/Microsoft.Build.Framework.ProjectStartedEventHandler" target="_top">https://docs.microsoft.com/en-us/dotnet/api/Microsoft.Build.Framework.ProjectStartedEventHandler</a>
+ * .NET documentation at <a href="https://docs.microsoft.com/en-us/dotnet/api/Microsoft.Build.Framework.ProjectStartedEventHandler" target="_top">https://docs.microsoft.com/en-us/dotnet/api/Microsoft.Build.Framework.ProjectStartedEventHandler</a>
+ * <p>
+ *
+ * Powered by JCOBridge: more info at <a href="https://www.jcobridge.com" target="_top">https://www.jcobridge.com</a>
  */
 public interface IProjectStartedEventHandler {
     public void Invoke(NetObject sender, ProjectStartedEventArgs e);

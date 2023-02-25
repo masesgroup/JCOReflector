@@ -43,7 +43,10 @@ import system.windows.DependencyObject;
  * The Java interface to be implemented to receive events from the CLR using {@link CoerceValueCallback}.
  * <p>
  * 
- * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Windows.CoerceValueCallback" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Windows.CoerceValueCallback</a>
+ * .NET documentation at <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Windows.CoerceValueCallback" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Windows.CoerceValueCallback</a>
+ * <p>
+ *
+ * Powered by JCOBridge: more info at <a href="https://www.jcobridge.com" target="_top">https://www.jcobridge.com</a>
  */
 public interface ICoerceValueCallback {
     public NetObject Invoke(DependencyObject d, NetObject baseValue);

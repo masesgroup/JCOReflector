@@ -47,7 +47,10 @@ import system.windows.controls.UndoAction;
  * The base .NET class managing System.Windows.Controls.TextChangedEventArgs, PresentationFramework, Version=7.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35.
  * <p>
  * 
- * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Windows.Controls.TextChangedEventArgs" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Windows.Controls.TextChangedEventArgs</a>
+ * .NET documentation at <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Windows.Controls.TextChangedEventArgs" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Windows.Controls.TextChangedEventArgs</a>
+ * <p>
+ *
+ * Powered by JCOBridge: more info at <a href="https://www.jcobridge.com" target="_top">https://www.jcobridge.com</a>
  */
 public class TextChangedEventArgs extends RoutedEventArgs  {
     /**

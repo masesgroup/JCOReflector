@@ -46,7 +46,10 @@ import system.threading.SendOrPostCallback;
  * The base .NET class managing System.Windows.Forms.WindowsFormsSynchronizationContext, System.Windows.Forms, Version=6.0.2.0, Culture=neutral, PublicKeyToken=b77a5c561934e089.
  * <p>
  * 
- * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Windows.Forms.WindowsFormsSynchronizationContext" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Windows.Forms.WindowsFormsSynchronizationContext</a>
+ * .NET documentation at <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Windows.Forms.WindowsFormsSynchronizationContext" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Windows.Forms.WindowsFormsSynchronizationContext</a>
+ * <p>
+ *
+ * Powered by JCOBridge: more info at <a href="https://www.jcobridge.com" target="_top">https://www.jcobridge.com</a>
  */
 public class WindowsFormsSynchronizationContext extends SynchronizationContext implements AutoCloseable {
     /**

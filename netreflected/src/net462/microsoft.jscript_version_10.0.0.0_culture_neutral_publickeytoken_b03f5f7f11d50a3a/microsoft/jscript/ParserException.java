@@ -43,7 +43,10 @@ import java.util.ArrayList;
  * The base .NET class managing Microsoft.JScript.ParserException, Microsoft.JScript, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a.
  * <p>
  * 
- * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/Microsoft.JScript.ParserException" target="_top">https://docs.microsoft.com/en-us/dotnet/api/Microsoft.JScript.ParserException</a>
+ * .NET documentation at <a href="https://docs.microsoft.com/en-us/dotnet/api/Microsoft.JScript.ParserException" target="_top">https://docs.microsoft.com/en-us/dotnet/api/Microsoft.JScript.ParserException</a>
+ * <p>
+ *
+ * Powered by JCOBridge: more info at <a href="https://www.jcobridge.com" target="_top">https://www.jcobridge.com</a>
  */
 public class ParserException extends NetException {
     /**

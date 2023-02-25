@@ -48,7 +48,10 @@ import system.io.FileStreamOptions;
  * The base .NET class managing System.IO.StreamReader, System.Private.CoreLib, Version=6.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e.
  * <p>
  * 
- * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.IO.StreamReader" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.IO.StreamReader</a>
+ * .NET documentation at <a href="https://docs.microsoft.com/en-us/dotnet/api/System.IO.StreamReader" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.IO.StreamReader</a>
+ * <p>
+ *
+ * Powered by JCOBridge: more info at <a href="https://www.jcobridge.com" target="_top">https://www.jcobridge.com</a>
  */
 public class StreamReader extends TextReader  {
     /**

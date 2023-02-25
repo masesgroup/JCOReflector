@@ -44,7 +44,10 @@ import system.net.IHttpContinueDelegate;
  * The base .NET class managing System.Net.HttpContinueDelegate, System.Net.Requests, Version=7.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a.
  * <p>
  * 
- * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Net.HttpContinueDelegate" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Net.HttpContinueDelegate</a>
+ * .NET documentation at <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Net.HttpContinueDelegate" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Net.HttpContinueDelegate</a>
+ * <p>
+ *
+ * Powered by JCOBridge: more info at <a href="https://www.jcobridge.com" target="_top">https://www.jcobridge.com</a>
  */
 public class HttpContinueDelegate extends JCVoidDelegate implements IJCVoidEventEmit, IJCOBridgeReflected {
     /**

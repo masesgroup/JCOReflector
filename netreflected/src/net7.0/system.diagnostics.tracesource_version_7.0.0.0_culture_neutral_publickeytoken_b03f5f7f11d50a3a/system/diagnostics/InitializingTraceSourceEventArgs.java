@@ -46,7 +46,10 @@ import system.diagnostics.TraceSource;
  * The base .NET class managing System.Diagnostics.InitializingTraceSourceEventArgs, System.Diagnostics.TraceSource, Version=7.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a.
  * <p>
  * 
- * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Diagnostics.InitializingTraceSourceEventArgs" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Diagnostics.InitializingTraceSourceEventArgs</a>
+ * .NET documentation at <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Diagnostics.InitializingTraceSourceEventArgs" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Diagnostics.InitializingTraceSourceEventArgs</a>
+ * <p>
+ *
+ * Powered by JCOBridge: more info at <a href="https://www.jcobridge.com" target="_top">https://www.jcobridge.com</a>
  */
 public class InitializingTraceSourceEventArgs extends EventArgs  {
     /**

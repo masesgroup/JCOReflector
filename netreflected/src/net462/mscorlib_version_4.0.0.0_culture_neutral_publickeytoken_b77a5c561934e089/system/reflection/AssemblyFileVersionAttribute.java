@@ -45,7 +45,10 @@ import system.Attribute;
  * The base .NET class managing System.Reflection.AssemblyFileVersionAttribute, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089.
  * <p>
  * 
- * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Reflection.AssemblyFileVersionAttribute" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Reflection.AssemblyFileVersionAttribute</a>
+ * .NET documentation at <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Reflection.AssemblyFileVersionAttribute" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Reflection.AssemblyFileVersionAttribute</a>
+ * <p>
+ *
+ * Powered by JCOBridge: more info at <a href="https://www.jcobridge.com" target="_top">https://www.jcobridge.com</a>
  */
 public class AssemblyFileVersionAttribute extends Attribute  {
     /**

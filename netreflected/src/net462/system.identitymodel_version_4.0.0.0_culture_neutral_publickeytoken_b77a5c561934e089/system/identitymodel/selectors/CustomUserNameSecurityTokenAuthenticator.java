@@ -46,7 +46,10 @@ import system.identitymodel.selectors.UserNamePasswordValidator;
  * The base .NET class managing System.IdentityModel.Selectors.CustomUserNameSecurityTokenAuthenticator, System.IdentityModel, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089.
  * <p>
  * 
- * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.IdentityModel.Selectors.CustomUserNameSecurityTokenAuthenticator" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.IdentityModel.Selectors.CustomUserNameSecurityTokenAuthenticator</a>
+ * .NET documentation at <a href="https://docs.microsoft.com/en-us/dotnet/api/System.IdentityModel.Selectors.CustomUserNameSecurityTokenAuthenticator" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.IdentityModel.Selectors.CustomUserNameSecurityTokenAuthenticator</a>
+ * <p>
+ *
+ * Powered by JCOBridge: more info at <a href="https://www.jcobridge.com" target="_top">https://www.jcobridge.com</a>
  */
 public class CustomUserNameSecurityTokenAuthenticator extends UserNameSecurityTokenAuthenticator  {
     /**

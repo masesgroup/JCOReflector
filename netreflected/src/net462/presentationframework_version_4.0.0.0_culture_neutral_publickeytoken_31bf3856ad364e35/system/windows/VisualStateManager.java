@@ -49,7 +49,10 @@ import system.windows.VisualStateManager;
  * The base .NET class managing System.Windows.VisualStateManager, PresentationFramework, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35.
  * <p>
  * 
- * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Windows.VisualStateManager" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Windows.VisualStateManager</a>
+ * .NET documentation at <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Windows.VisualStateManager" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Windows.VisualStateManager</a>
+ * <p>
+ *
+ * Powered by JCOBridge: more info at <a href="https://www.jcobridge.com" target="_top">https://www.jcobridge.com</a>
  */
 public class VisualStateManager extends DependencyObject  {
     /**

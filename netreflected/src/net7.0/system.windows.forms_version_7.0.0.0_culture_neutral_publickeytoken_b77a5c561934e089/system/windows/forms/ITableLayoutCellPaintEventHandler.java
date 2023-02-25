@@ -43,7 +43,10 @@ import system.windows.forms.TableLayoutCellPaintEventArgs;
  * The Java interface to be implemented to receive events from the CLR using {@link TableLayoutCellPaintEventHandler}.
  * <p>
  * 
- * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Windows.Forms.TableLayoutCellPaintEventHandler" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Windows.Forms.TableLayoutCellPaintEventHandler</a>
+ * .NET documentation at <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Windows.Forms.TableLayoutCellPaintEventHandler" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Windows.Forms.TableLayoutCellPaintEventHandler</a>
+ * <p>
+ *
+ * Powered by JCOBridge: more info at <a href="https://www.jcobridge.com" target="_top">https://www.jcobridge.com</a>
  */
 public interface ITableLayoutCellPaintEventHandler {
     public void Invoke(NetObject sender, TableLayoutCellPaintEventArgs e);

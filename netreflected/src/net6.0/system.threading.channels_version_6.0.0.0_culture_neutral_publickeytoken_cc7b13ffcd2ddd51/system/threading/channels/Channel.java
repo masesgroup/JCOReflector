@@ -44,7 +44,10 @@ import java.util.ArrayList;
  * The base .NET class managing System.Threading.Channels.Channel, System.Threading.Channels, Version=6.0.0.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51.
  * <p>
  * 
- * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Threading.Channels.Channel" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Threading.Channels.Channel</a>
+ * .NET documentation at <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Threading.Channels.Channel" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Threading.Channels.Channel</a>
+ * <p>
+ *
+ * Powered by JCOBridge: more info at <a href="https://www.jcobridge.com" target="_top">https://www.jcobridge.com</a>
  */
 public class Channel extends NetObject  {
     /**

@@ -46,7 +46,10 @@ import system.xml.XmlDocument;
  * The base .NET class managing System.Xml.XmlImplementation, System.Private.Xml, Version=7.0.0.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51.
  * <p>
  * 
- * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Xml.XmlImplementation" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Xml.XmlImplementation</a>
+ * .NET documentation at <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Xml.XmlImplementation" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Xml.XmlImplementation</a>
+ * <p>
+ *
+ * Powered by JCOBridge: more info at <a href="https://www.jcobridge.com" target="_top">https://www.jcobridge.com</a>
  */
 public class XmlImplementation extends NetObject  {
     /**

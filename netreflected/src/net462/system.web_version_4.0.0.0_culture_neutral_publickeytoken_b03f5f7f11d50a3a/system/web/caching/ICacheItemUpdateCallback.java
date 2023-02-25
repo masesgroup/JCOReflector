@@ -46,7 +46,10 @@ import system.TimeSpan;
  * The Java interface to be implemented to receive events from the CLR using {@link CacheItemUpdateCallback}.
  * <p>
  * 
- * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Web.Caching.CacheItemUpdateCallback" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Web.Caching.CacheItemUpdateCallback</a>
+ * .NET documentation at <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Web.Caching.CacheItemUpdateCallback" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Web.Caching.CacheItemUpdateCallback</a>
+ * <p>
+ *
+ * Powered by JCOBridge: more info at <a href="https://www.jcobridge.com" target="_top">https://www.jcobridge.com</a>
  */
 public interface ICacheItemUpdateCallback {
     public void Invoke(java.lang.String key, CacheItemUpdateReason reason, NetObject expensiveObject, CacheDependency dependency, DateTime absoluteExpiration, TimeSpan slidingExpiration);

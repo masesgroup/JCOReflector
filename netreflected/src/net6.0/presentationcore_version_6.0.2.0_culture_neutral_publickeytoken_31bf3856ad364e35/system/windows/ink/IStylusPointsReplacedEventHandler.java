@@ -43,7 +43,10 @@ import system.windows.ink.StylusPointsReplacedEventArgs;
  * The Java interface to be implemented to receive events from the CLR using {@link StylusPointsReplacedEventHandler}.
  * <p>
  * 
- * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Windows.Ink.StylusPointsReplacedEventHandler" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Windows.Ink.StylusPointsReplacedEventHandler</a>
+ * .NET documentation at <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Windows.Ink.StylusPointsReplacedEventHandler" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Windows.Ink.StylusPointsReplacedEventHandler</a>
+ * <p>
+ *
+ * Powered by JCOBridge: more info at <a href="https://www.jcobridge.com" target="_top">https://www.jcobridge.com</a>
  */
 public interface IStylusPointsReplacedEventHandler {
     public void Invoke(NetObject sender, StylusPointsReplacedEventArgs e);

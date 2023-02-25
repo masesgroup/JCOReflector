@@ -47,7 +47,10 @@ import system.activities.WorkflowIdentity;
  * The base .NET class managing System.Activities.Tracking.WorkflowInstanceAbortedRecord, System.Activities, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35.
  * <p>
  * 
- * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Activities.Tracking.WorkflowInstanceAbortedRecord" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Activities.Tracking.WorkflowInstanceAbortedRecord</a>
+ * .NET documentation at <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Activities.Tracking.WorkflowInstanceAbortedRecord" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Activities.Tracking.WorkflowInstanceAbortedRecord</a>
+ * <p>
+ *
+ * Powered by JCOBridge: more info at <a href="https://www.jcobridge.com" target="_top">https://www.jcobridge.com</a>
  */
 public class WorkflowInstanceAbortedRecord extends WorkflowInstanceRecord  {
     /**

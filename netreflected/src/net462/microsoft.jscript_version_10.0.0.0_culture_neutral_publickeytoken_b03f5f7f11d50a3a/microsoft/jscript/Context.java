@@ -45,7 +45,10 @@ import microsoft.jscript.JSToken;
  * The base .NET class managing Microsoft.JScript.Context, Microsoft.JScript, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a.
  * <p>
  * 
- * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/Microsoft.JScript.Context" target="_top">https://docs.microsoft.com/en-us/dotnet/api/Microsoft.JScript.Context</a>
+ * .NET documentation at <a href="https://docs.microsoft.com/en-us/dotnet/api/Microsoft.JScript.Context" target="_top">https://docs.microsoft.com/en-us/dotnet/api/Microsoft.JScript.Context</a>
+ * <p>
+ *
+ * Powered by JCOBridge: more info at <a href="https://www.jcobridge.com" target="_top">https://www.jcobridge.com</a>
  */
 public class Context extends NetObject  {
     /**

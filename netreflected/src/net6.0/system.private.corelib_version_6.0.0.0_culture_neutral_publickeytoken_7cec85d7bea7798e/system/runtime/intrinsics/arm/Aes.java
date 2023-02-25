@@ -45,7 +45,10 @@ import system.runtime.intrinsics.arm.ArmBase;
  * The base .NET class managing System.Runtime.Intrinsics.Arm.Aes, System.Private.CoreLib, Version=6.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e.
  * <p>
  * 
- * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Runtime.Intrinsics.Arm.Aes" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Runtime.Intrinsics.Arm.Aes</a>
+ * .NET documentation at <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Runtime.Intrinsics.Arm.Aes" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Runtime.Intrinsics.Arm.Aes</a>
+ * <p>
+ *
+ * Powered by JCOBridge: more info at <a href="https://www.jcobridge.com" target="_top">https://www.jcobridge.com</a>
  */
 public class Aes extends ArmBase  {
     /**

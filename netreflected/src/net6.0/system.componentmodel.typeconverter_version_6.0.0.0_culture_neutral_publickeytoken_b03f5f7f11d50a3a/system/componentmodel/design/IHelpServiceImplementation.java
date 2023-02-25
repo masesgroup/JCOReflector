@@ -48,7 +48,10 @@ import system.componentmodel.design.HelpKeywordType;
  * The base .NET class managing System.ComponentModel.Design.IHelpService, System.ComponentModel.TypeConverter, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a.
  * <p>
  * 
- * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.ComponentModel.Design.IHelpService" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.ComponentModel.Design.IHelpService</a>
+ * .NET documentation at <a href="https://docs.microsoft.com/en-us/dotnet/api/System.ComponentModel.Design.IHelpService" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.ComponentModel.Design.IHelpService</a>
+ * <p>
+ *
+ * Powered by JCOBridge: more info at <a href="https://www.jcobridge.com" target="_top">https://www.jcobridge.com</a>
  */
 public class IHelpServiceImplementation extends NetObject implements IHelpService {
     /**

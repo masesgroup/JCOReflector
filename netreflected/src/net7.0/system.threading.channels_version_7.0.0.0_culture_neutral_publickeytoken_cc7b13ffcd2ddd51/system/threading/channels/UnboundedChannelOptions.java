@@ -45,7 +45,10 @@ import system.threading.channels.ChannelOptions;
  * The base .NET class managing System.Threading.Channels.UnboundedChannelOptions, System.Threading.Channels, Version=7.0.0.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51.
  * <p>
  * 
- * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Threading.Channels.UnboundedChannelOptions" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Threading.Channels.UnboundedChannelOptions</a>
+ * .NET documentation at <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Threading.Channels.UnboundedChannelOptions" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Threading.Channels.UnboundedChannelOptions</a>
+ * <p>
+ *
+ * Powered by JCOBridge: more info at <a href="https://www.jcobridge.com" target="_top">https://www.jcobridge.com</a>
  */
 public class UnboundedChannelOptions extends ChannelOptions  {
     /**

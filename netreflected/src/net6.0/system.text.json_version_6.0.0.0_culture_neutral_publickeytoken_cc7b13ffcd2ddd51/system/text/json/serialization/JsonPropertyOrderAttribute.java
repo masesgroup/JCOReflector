@@ -45,7 +45,10 @@ import system.text.json.serialization.JsonAttribute;
  * The base .NET class managing System.Text.Json.Serialization.JsonPropertyOrderAttribute, System.Text.Json, Version=6.0.0.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51.
  * <p>
  * 
- * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Text.Json.Serialization.JsonPropertyOrderAttribute" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Text.Json.Serialization.JsonPropertyOrderAttribute</a>
+ * .NET documentation at <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Text.Json.Serialization.JsonPropertyOrderAttribute" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Text.Json.Serialization.JsonPropertyOrderAttribute</a>
+ * <p>
+ *
+ * Powered by JCOBridge: more info at <a href="https://www.jcobridge.com" target="_top">https://www.jcobridge.com</a>
  */
 public class JsonPropertyOrderAttribute extends JsonAttribute  {
     /**

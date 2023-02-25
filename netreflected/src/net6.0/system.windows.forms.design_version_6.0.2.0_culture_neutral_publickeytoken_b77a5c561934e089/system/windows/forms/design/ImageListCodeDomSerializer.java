@@ -47,7 +47,10 @@ import system.componentmodel.design.serialization.IDesignerSerializationManagerI
  * The base .NET class managing System.Windows.Forms.Design.ImageListCodeDomSerializer, System.Windows.Forms.Design, Version=6.0.2.0, Culture=neutral, PublicKeyToken=b77a5c561934e089.
  * <p>
  * 
- * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Windows.Forms.Design.ImageListCodeDomSerializer" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Windows.Forms.Design.ImageListCodeDomSerializer</a>
+ * .NET documentation at <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Windows.Forms.Design.ImageListCodeDomSerializer" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Windows.Forms.Design.ImageListCodeDomSerializer</a>
+ * <p>
+ *
+ * Powered by JCOBridge: more info at <a href="https://www.jcobridge.com" target="_top">https://www.jcobridge.com</a>
  */
 public class ImageListCodeDomSerializer extends CodeDomSerializer  {
     /**

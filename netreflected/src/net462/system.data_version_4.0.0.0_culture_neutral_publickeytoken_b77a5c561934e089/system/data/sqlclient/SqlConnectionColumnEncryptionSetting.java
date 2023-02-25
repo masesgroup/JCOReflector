@@ -43,7 +43,10 @@ import org.mases.jcobridge.netreflection.*;
  * The base .NET class managing System.Data.SqlClient.SqlConnectionColumnEncryptionSetting, System.Data, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089.
  * <p>
  * 
- * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Data.SqlClient.SqlConnectionColumnEncryptionSetting" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Data.SqlClient.SqlConnectionColumnEncryptionSetting</a>
+ * .NET documentation at <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Data.SqlClient.SqlConnectionColumnEncryptionSetting" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Data.SqlClient.SqlConnectionColumnEncryptionSetting</a>
+ * <p>
+ *
+ * Powered by JCOBridge: more info at <a href="https://www.jcobridge.com" target="_top">https://www.jcobridge.com</a>
  */
 public class SqlConnectionColumnEncryptionSetting extends NetObject  {
     /**

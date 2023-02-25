@@ -43,7 +43,10 @@ import system.net.UploadFileCompletedEventArgs;
  * The Java interface to be implemented to receive events from the CLR using {@link UploadFileCompletedEventHandler}.
  * <p>
  * 
- * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Net.UploadFileCompletedEventHandler" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Net.UploadFileCompletedEventHandler</a>
+ * .NET documentation at <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Net.UploadFileCompletedEventHandler" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Net.UploadFileCompletedEventHandler</a>
+ * <p>
+ *
+ * Powered by JCOBridge: more info at <a href="https://www.jcobridge.com" target="_top">https://www.jcobridge.com</a>
  */
 public interface IUploadFileCompletedEventHandler {
     public void Invoke(NetObject sender, UploadFileCompletedEventArgs e);

@@ -45,7 +45,10 @@ import system.diagnostics.performancedata.CounterData;
  * The base .NET class managing System.Diagnostics.PerformanceData.CounterSetInstanceCounterDataSet, System.Diagnostics.PerformanceCounter, Version=7.0.0.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51.
  * <p>
  * 
- * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Diagnostics.PerformanceData.CounterSetInstanceCounterDataSet" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Diagnostics.PerformanceData.CounterSetInstanceCounterDataSet</a>
+ * .NET documentation at <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Diagnostics.PerformanceData.CounterSetInstanceCounterDataSet" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Diagnostics.PerformanceData.CounterSetInstanceCounterDataSet</a>
+ * <p>
+ *
+ * Powered by JCOBridge: more info at <a href="https://www.jcobridge.com" target="_top">https://www.jcobridge.com</a>
  */
 public class CounterSetInstanceCounterDataSet extends NetObject implements AutoCloseable {
     /**

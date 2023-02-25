@@ -45,7 +45,10 @@ import system.messaging.MessageQueueTransactionStatus;
  * The base .NET class managing System.Messaging.MessageQueueTransaction, System.Messaging, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a.
  * <p>
  * 
- * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Messaging.MessageQueueTransaction" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Messaging.MessageQueueTransaction</a>
+ * .NET documentation at <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Messaging.MessageQueueTransaction" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Messaging.MessageQueueTransaction</a>
+ * <p>
+ *
+ * Powered by JCOBridge: more info at <a href="https://www.jcobridge.com" target="_top">https://www.jcobridge.com</a>
  */
 public class MessageQueueTransaction extends NetObject implements AutoCloseable {
     /**

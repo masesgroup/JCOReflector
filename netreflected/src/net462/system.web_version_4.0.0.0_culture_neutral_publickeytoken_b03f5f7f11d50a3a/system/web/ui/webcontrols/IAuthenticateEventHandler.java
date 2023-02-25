@@ -43,7 +43,10 @@ import system.web.ui.webcontrols.AuthenticateEventArgs;
  * The Java interface to be implemented to receive events from the CLR using {@link AuthenticateEventHandler}.
  * <p>
  * 
- * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Web.UI.WebControls.AuthenticateEventHandler" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Web.UI.WebControls.AuthenticateEventHandler</a>
+ * .NET documentation at <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Web.UI.WebControls.AuthenticateEventHandler" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Web.UI.WebControls.AuthenticateEventHandler</a>
+ * <p>
+ *
+ * Powered by JCOBridge: more info at <a href="https://www.jcobridge.com" target="_top">https://www.jcobridge.com</a>
  */
 public interface IAuthenticateEventHandler {
     public void Invoke(NetObject sender, AuthenticateEventArgs e);

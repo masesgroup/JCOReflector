@@ -47,7 +47,10 @@ import system.codedom.CodeParameterDeclarationExpressionCollection;
  * The base .NET class managing System.CodeDom.CodeParameterDeclarationExpressionCollection, System, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089.
  * <p>
  * 
- * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.CodeDom.CodeParameterDeclarationExpressionCollection" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.CodeDom.CodeParameterDeclarationExpressionCollection</a>
+ * .NET documentation at <a href="https://docs.microsoft.com/en-us/dotnet/api/System.CodeDom.CodeParameterDeclarationExpressionCollection" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.CodeDom.CodeParameterDeclarationExpressionCollection</a>
+ * <p>
+ *
+ * Powered by JCOBridge: more info at <a href="https://www.jcobridge.com" target="_top">https://www.jcobridge.com</a>
  */
 public class CodeParameterDeclarationExpressionCollection extends CollectionBase  {
     /**

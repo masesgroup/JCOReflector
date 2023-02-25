@@ -43,7 +43,10 @@ import microsoft.build.framework.TaskStartedEventArgs;
  * The Java interface to be implemented to receive events from the CLR using {@link TaskStartedEventHandler}.
  * <p>
  * 
- * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/Microsoft.Build.Framework.TaskStartedEventHandler" target="_top">https://docs.microsoft.com/en-us/dotnet/api/Microsoft.Build.Framework.TaskStartedEventHandler</a>
+ * .NET documentation at <a href="https://docs.microsoft.com/en-us/dotnet/api/Microsoft.Build.Framework.TaskStartedEventHandler" target="_top">https://docs.microsoft.com/en-us/dotnet/api/Microsoft.Build.Framework.TaskStartedEventHandler</a>
+ * <p>
+ *
+ * Powered by JCOBridge: more info at <a href="https://www.jcobridge.com" target="_top">https://www.jcobridge.com</a>
  */
 public interface ITaskStartedEventHandler {
     public void Invoke(NetObject sender, TaskStartedEventArgs e);

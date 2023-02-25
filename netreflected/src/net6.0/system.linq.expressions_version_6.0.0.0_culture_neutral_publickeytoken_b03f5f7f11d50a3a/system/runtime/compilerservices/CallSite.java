@@ -46,7 +46,10 @@ import system.runtime.compilerservices.CallSiteBinder;
  * The base .NET class managing System.Runtime.CompilerServices.CallSite, System.Linq.Expressions, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a.
  * <p>
  * 
- * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Runtime.CompilerServices.CallSite" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Runtime.CompilerServices.CallSite</a>
+ * .NET documentation at <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Runtime.CompilerServices.CallSite" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Runtime.CompilerServices.CallSite</a>
+ * <p>
+ *
+ * Powered by JCOBridge: more info at <a href="https://www.jcobridge.com" target="_top">https://www.jcobridge.com</a>
  */
 public class CallSite extends NetObject  {
     /**

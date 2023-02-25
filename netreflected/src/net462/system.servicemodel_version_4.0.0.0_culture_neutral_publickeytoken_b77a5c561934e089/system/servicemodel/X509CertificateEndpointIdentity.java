@@ -47,7 +47,10 @@ import system.security.cryptography.x509certificates.X509Certificate2Collection;
  * The base .NET class managing System.ServiceModel.X509CertificateEndpointIdentity, System.ServiceModel, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089.
  * <p>
  * 
- * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.ServiceModel.X509CertificateEndpointIdentity" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.ServiceModel.X509CertificateEndpointIdentity</a>
+ * .NET documentation at <a href="https://docs.microsoft.com/en-us/dotnet/api/System.ServiceModel.X509CertificateEndpointIdentity" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.ServiceModel.X509CertificateEndpointIdentity</a>
+ * <p>
+ *
+ * Powered by JCOBridge: more info at <a href="https://www.jcobridge.com" target="_top">https://www.jcobridge.com</a>
  */
 public class X509CertificateEndpointIdentity extends EndpointIdentity  {
     /**

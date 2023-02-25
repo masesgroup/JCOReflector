@@ -43,7 +43,10 @@ import system.data.sqlclient.SqlInfoMessageEventArgs;
  * The Java interface to be implemented to receive events from the CLR using {@link SqlInfoMessageEventHandler}.
  * <p>
  * 
- * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Data.SqlClient.SqlInfoMessageEventHandler" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Data.SqlClient.SqlInfoMessageEventHandler</a>
+ * .NET documentation at <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Data.SqlClient.SqlInfoMessageEventHandler" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Data.SqlClient.SqlInfoMessageEventHandler</a>
+ * <p>
+ *
+ * Powered by JCOBridge: more info at <a href="https://www.jcobridge.com" target="_top">https://www.jcobridge.com</a>
  */
 public interface ISqlInfoMessageEventHandler {
     public void Invoke(NetObject sender, SqlInfoMessageEventArgs e);

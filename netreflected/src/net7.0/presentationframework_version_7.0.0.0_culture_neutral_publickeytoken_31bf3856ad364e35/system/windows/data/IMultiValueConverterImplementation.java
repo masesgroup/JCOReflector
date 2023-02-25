@@ -45,7 +45,10 @@ import system.globalization.CultureInfo;
  * The base .NET class managing System.Windows.Data.IMultiValueConverter, PresentationFramework, Version=7.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35.
  * <p>
  * 
- * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Windows.Data.IMultiValueConverter" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Windows.Data.IMultiValueConverter</a>
+ * .NET documentation at <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Windows.Data.IMultiValueConverter" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Windows.Data.IMultiValueConverter</a>
+ * <p>
+ *
+ * Powered by JCOBridge: more info at <a href="https://www.jcobridge.com" target="_top">https://www.jcobridge.com</a>
  */
 public class IMultiValueConverterImplementation extends NetObject implements IMultiValueConverter {
     /**

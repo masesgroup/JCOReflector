@@ -45,7 +45,10 @@ import system.security.cryptography.pkcs.Pkcs12SafeBag;
  * The base .NET class managing System.Security.Cryptography.Pkcs.Pkcs12ShroudedKeyBag, System.Security.Cryptography.Pkcs, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a.
  * <p>
  * 
- * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Security.Cryptography.Pkcs.Pkcs12ShroudedKeyBag" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Security.Cryptography.Pkcs.Pkcs12ShroudedKeyBag</a>
+ * .NET documentation at <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Security.Cryptography.Pkcs.Pkcs12ShroudedKeyBag" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Security.Cryptography.Pkcs.Pkcs12ShroudedKeyBag</a>
+ * <p>
+ *
+ * Powered by JCOBridge: more info at <a href="https://www.jcobridge.com" target="_top">https://www.jcobridge.com</a>
  */
 public class Pkcs12ShroudedKeyBag extends Pkcs12SafeBag  {
     /**

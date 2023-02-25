@@ -43,7 +43,10 @@ import system.windows.controls.ToolTipEventArgs;
  * The Java interface to be implemented to receive events from the CLR using {@link ToolTipEventHandler}.
  * <p>
  * 
- * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Windows.Controls.ToolTipEventHandler" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Windows.Controls.ToolTipEventHandler</a>
+ * .NET documentation at <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Windows.Controls.ToolTipEventHandler" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Windows.Controls.ToolTipEventHandler</a>
+ * <p>
+ *
+ * Powered by JCOBridge: more info at <a href="https://www.jcobridge.com" target="_top">https://www.jcobridge.com</a>
  */
 public interface IToolTipEventHandler {
     public void Invoke(NetObject sender, ToolTipEventArgs e);

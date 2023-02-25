@@ -43,7 +43,10 @@ import org.mases.jcobridge.netreflection.*;
  * The base .NET class managing System.Xml.Linq.LoadOptions, System.Private.Xml.Linq, Version=7.0.0.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51.
  * <p>
  * 
- * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Xml.Linq.LoadOptions" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Xml.Linq.LoadOptions</a>
+ * .NET documentation at <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Xml.Linq.LoadOptions" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Xml.Linq.LoadOptions</a>
+ * <p>
+ *
+ * Powered by JCOBridge: more info at <a href="https://www.jcobridge.com" target="_top">https://www.jcobridge.com</a>
  */
 public class LoadOptions extends NetObject  {
     /**

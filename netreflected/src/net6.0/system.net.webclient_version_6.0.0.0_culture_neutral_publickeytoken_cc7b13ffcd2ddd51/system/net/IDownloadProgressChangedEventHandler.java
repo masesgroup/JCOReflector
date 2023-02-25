@@ -43,7 +43,10 @@ import system.net.DownloadProgressChangedEventArgs;
  * The Java interface to be implemented to receive events from the CLR using {@link DownloadProgressChangedEventHandler}.
  * <p>
  * 
- * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Net.DownloadProgressChangedEventHandler" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Net.DownloadProgressChangedEventHandler</a>
+ * .NET documentation at <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Net.DownloadProgressChangedEventHandler" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Net.DownloadProgressChangedEventHandler</a>
+ * <p>
+ *
+ * Powered by JCOBridge: more info at <a href="https://www.jcobridge.com" target="_top">https://www.jcobridge.com</a>
  */
 public interface IDownloadProgressChangedEventHandler {
     public void Invoke(NetObject sender, DownloadProgressChangedEventArgs e);

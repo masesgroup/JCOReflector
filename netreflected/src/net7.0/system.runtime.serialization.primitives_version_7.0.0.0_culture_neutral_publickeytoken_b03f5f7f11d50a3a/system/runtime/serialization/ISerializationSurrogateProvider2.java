@@ -46,7 +46,10 @@ import system.reflection.MemberInfo;
  * The base .NET class managing System.Runtime.Serialization.ISerializationSurrogateProvider2, System.Runtime.Serialization.Primitives, Version=7.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a.
  * <p>
  * 
- * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Runtime.Serialization.ISerializationSurrogateProvider2" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Runtime.Serialization.ISerializationSurrogateProvider2</a>
+ * .NET documentation at <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Runtime.Serialization.ISerializationSurrogateProvider2" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Runtime.Serialization.ISerializationSurrogateProvider2</a>
+ * <p>
+ *
+ * Powered by JCOBridge: more info at <a href="https://www.jcobridge.com" target="_top">https://www.jcobridge.com</a>
  */
 public interface ISerializationSurrogateProvider2 extends IJCOBridgeReflected, ISerializationSurrogateProvider {
     /**

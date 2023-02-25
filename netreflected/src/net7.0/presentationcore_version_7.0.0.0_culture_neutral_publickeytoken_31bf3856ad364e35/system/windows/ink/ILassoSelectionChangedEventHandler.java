@@ -43,7 +43,10 @@ import system.windows.ink.LassoSelectionChangedEventArgs;
  * The Java interface to be implemented to receive events from the CLR using {@link LassoSelectionChangedEventHandler}.
  * <p>
  * 
- * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Windows.Ink.LassoSelectionChangedEventHandler" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Windows.Ink.LassoSelectionChangedEventHandler</a>
+ * .NET documentation at <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Windows.Ink.LassoSelectionChangedEventHandler" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Windows.Ink.LassoSelectionChangedEventHandler</a>
+ * <p>
+ *
+ * Powered by JCOBridge: more info at <a href="https://www.jcobridge.com" target="_top">https://www.jcobridge.com</a>
  */
 public interface ILassoSelectionChangedEventHandler {
     public void Invoke(NetObject sender, LassoSelectionChangedEventArgs e);

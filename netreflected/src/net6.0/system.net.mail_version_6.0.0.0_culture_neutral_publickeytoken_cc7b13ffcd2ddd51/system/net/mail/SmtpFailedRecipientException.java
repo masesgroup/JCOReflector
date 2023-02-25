@@ -47,7 +47,10 @@ import system.runtime.serialization.StreamingContext;
  * The base .NET class managing System.Net.Mail.SmtpFailedRecipientException, System.Net.Mail, Version=6.0.0.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51.
  * <p>
  * 
- * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Net.Mail.SmtpFailedRecipientException" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Net.Mail.SmtpFailedRecipientException</a>
+ * .NET documentation at <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Net.Mail.SmtpFailedRecipientException" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Net.Mail.SmtpFailedRecipientException</a>
+ * <p>
+ *
+ * Powered by JCOBridge: more info at <a href="https://www.jcobridge.com" target="_top">https://www.jcobridge.com</a>
  */
 public class SmtpFailedRecipientException extends SmtpException {
     /**

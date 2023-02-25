@@ -56,7 +56,10 @@ import system.xml.XmlResolver;
  * The base .NET class managing System.Security.Cryptography.Xml.EncryptedXml, System.Security.Cryptography.Xml, Version=6.0.0.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51.
  * <p>
  * 
- * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Security.Cryptography.Xml.EncryptedXml" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Security.Cryptography.Xml.EncryptedXml</a>
+ * .NET documentation at <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Security.Cryptography.Xml.EncryptedXml" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Security.Cryptography.Xml.EncryptedXml</a>
+ * <p>
+ *
+ * Powered by JCOBridge: more info at <a href="https://www.jcobridge.com" target="_top">https://www.jcobridge.com</a>
  */
 public class EncryptedXml extends NetObject  {
     /**

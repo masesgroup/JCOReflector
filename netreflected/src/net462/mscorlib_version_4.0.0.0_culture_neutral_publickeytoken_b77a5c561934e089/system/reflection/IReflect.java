@@ -51,7 +51,10 @@ import system.reflection.PropertyInfo;
  * The base .NET class managing System.Reflection.IReflect, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089.
  * <p>
  * 
- * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Reflection.IReflect" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Reflection.IReflect</a>
+ * .NET documentation at <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Reflection.IReflect" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Reflection.IReflect</a>
+ * <p>
+ *
+ * Powered by JCOBridge: more info at <a href="https://www.jcobridge.com" target="_top">https://www.jcobridge.com</a>
  */
 public interface IReflect extends IJCOBridgeReflected {
     /**

@@ -43,7 +43,10 @@ import org.mases.jcobridge.netreflection.*;
  * The base .NET class managing System.Net.Configuration.UnicodeDecodingConformance, System, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089.
  * <p>
  * 
- * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Net.Configuration.UnicodeDecodingConformance" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Net.Configuration.UnicodeDecodingConformance</a>
+ * .NET documentation at <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Net.Configuration.UnicodeDecodingConformance" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Net.Configuration.UnicodeDecodingConformance</a>
+ * <p>
+ *
+ * Powered by JCOBridge: more info at <a href="https://www.jcobridge.com" target="_top">https://www.jcobridge.com</a>
  */
 public class UnicodeDecodingConformance extends NetObject  {
     /**

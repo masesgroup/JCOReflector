@@ -46,7 +46,10 @@ import system.drawing.CharacterRange;
  * The base .NET class managing System.Drawing.CharacterRange, System.Drawing.Common, Version=7.0.0.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51.
  * <p>
  * 
- * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Drawing.CharacterRange" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Drawing.CharacterRange</a>
+ * .NET documentation at <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Drawing.CharacterRange" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Drawing.CharacterRange</a>
+ * <p>
+ *
+ * Powered by JCOBridge: more info at <a href="https://www.jcobridge.com" target="_top">https://www.jcobridge.com</a>
  */
 public class CharacterRange extends ValueType  {
     /**

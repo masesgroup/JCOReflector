@@ -45,7 +45,10 @@ import system.security.policy.CodeConnectAccess;
  * The base .NET class managing System.Security.Policy.CodeConnectAccess, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089.
  * <p>
  * 
- * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Security.Policy.CodeConnectAccess" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Security.Policy.CodeConnectAccess</a>
+ * .NET documentation at <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Security.Policy.CodeConnectAccess" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Security.Policy.CodeConnectAccess</a>
+ * <p>
+ *
+ * Powered by JCOBridge: more info at <a href="https://www.jcobridge.com" target="_top">https://www.jcobridge.com</a>
  */
 public class CodeConnectAccess extends NetObject  {
     /**

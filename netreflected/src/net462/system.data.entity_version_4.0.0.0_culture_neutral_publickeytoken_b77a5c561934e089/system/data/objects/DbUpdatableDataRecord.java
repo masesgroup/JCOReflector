@@ -53,7 +53,10 @@ import system.data.common.DataRecordInfo;
  * The base .NET class managing System.Data.Objects.DbUpdatableDataRecord, System.Data.Entity, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089.
  * <p>
  * 
- * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Data.Objects.DbUpdatableDataRecord" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Data.Objects.DbUpdatableDataRecord</a>
+ * .NET documentation at <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Data.Objects.DbUpdatableDataRecord" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Data.Objects.DbUpdatableDataRecord</a>
+ * <p>
+ *
+ * Powered by JCOBridge: more info at <a href="https://www.jcobridge.com" target="_top">https://www.jcobridge.com</a>
  */
 public class DbUpdatableDataRecord extends DbDataRecord  {
     /**

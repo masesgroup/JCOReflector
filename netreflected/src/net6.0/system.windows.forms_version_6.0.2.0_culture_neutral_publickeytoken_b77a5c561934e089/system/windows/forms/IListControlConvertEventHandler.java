@@ -43,7 +43,10 @@ import system.windows.forms.ListControlConvertEventArgs;
  * The Java interface to be implemented to receive events from the CLR using {@link ListControlConvertEventHandler}.
  * <p>
  * 
- * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Windows.Forms.ListControlConvertEventHandler" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Windows.Forms.ListControlConvertEventHandler</a>
+ * .NET documentation at <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Windows.Forms.ListControlConvertEventHandler" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Windows.Forms.ListControlConvertEventHandler</a>
+ * <p>
+ *
+ * Powered by JCOBridge: more info at <a href="https://www.jcobridge.com" target="_top">https://www.jcobridge.com</a>
  */
 public interface IListControlConvertEventHandler {
     public void Invoke(NetObject sender, ListControlConvertEventArgs e);

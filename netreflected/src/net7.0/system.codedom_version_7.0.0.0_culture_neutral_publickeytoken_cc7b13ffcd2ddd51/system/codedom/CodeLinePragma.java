@@ -44,7 +44,10 @@ import java.util.ArrayList;
  * The base .NET class managing System.CodeDom.CodeLinePragma, System.CodeDom, Version=7.0.0.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51.
  * <p>
  * 
- * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.CodeDom.CodeLinePragma" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.CodeDom.CodeLinePragma</a>
+ * .NET documentation at <a href="https://docs.microsoft.com/en-us/dotnet/api/System.CodeDom.CodeLinePragma" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.CodeDom.CodeLinePragma</a>
+ * <p>
+ *
+ * Powered by JCOBridge: more info at <a href="https://www.jcobridge.com" target="_top">https://www.jcobridge.com</a>
  */
 public class CodeLinePragma extends NetObject  {
     /**

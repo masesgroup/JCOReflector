@@ -56,7 +56,10 @@ import system.TimeSpan;
  * The base .NET class managing System.Diagnostics.Activity, System.Diagnostics.DiagnosticSource, Version=7.0.0.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51.
  * <p>
  * 
- * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Diagnostics.Activity" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Diagnostics.Activity</a>
+ * .NET documentation at <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Diagnostics.Activity" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Diagnostics.Activity</a>
+ * <p>
+ *
+ * Powered by JCOBridge: more info at <a href="https://www.jcobridge.com" target="_top">https://www.jcobridge.com</a>
  */
 public class Activity extends NetObject implements AutoCloseable {
     /**

@@ -46,7 +46,10 @@ import system.windows.DependencyObject;
  * The base .NET class managing System.Windows.Controls.DataTemplateSelector, PresentationFramework, Version=7.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35.
  * <p>
  * 
- * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Windows.Controls.DataTemplateSelector" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Windows.Controls.DataTemplateSelector</a>
+ * .NET documentation at <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Windows.Controls.DataTemplateSelector" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Windows.Controls.DataTemplateSelector</a>
+ * <p>
+ *
+ * Powered by JCOBridge: more info at <a href="https://www.jcobridge.com" target="_top">https://www.jcobridge.com</a>
  */
 public class DataTemplateSelector extends NetObject  {
     /**

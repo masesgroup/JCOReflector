@@ -43,7 +43,10 @@ import system.windows.forms.UICuesEventArgs;
  * The Java interface to be implemented to receive events from the CLR using {@link UICuesEventHandler}.
  * <p>
  * 
- * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Windows.Forms.UICuesEventHandler" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Windows.Forms.UICuesEventHandler</a>
+ * .NET documentation at <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Windows.Forms.UICuesEventHandler" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Windows.Forms.UICuesEventHandler</a>
+ * <p>
+ *
+ * Powered by JCOBridge: more info at <a href="https://www.jcobridge.com" target="_top">https://www.jcobridge.com</a>
  */
 public interface IUICuesEventHandler {
     public void Invoke(NetObject sender, UICuesEventArgs e);

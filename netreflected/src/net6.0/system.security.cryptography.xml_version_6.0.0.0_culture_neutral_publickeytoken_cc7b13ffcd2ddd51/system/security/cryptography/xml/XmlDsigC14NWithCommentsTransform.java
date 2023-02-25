@@ -45,7 +45,10 @@ import system.security.cryptography.xml.XmlDsigC14NTransform;
  * The base .NET class managing System.Security.Cryptography.Xml.XmlDsigC14NWithCommentsTransform, System.Security.Cryptography.Xml, Version=6.0.0.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51.
  * <p>
  * 
- * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Security.Cryptography.Xml.XmlDsigC14NWithCommentsTransform" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Security.Cryptography.Xml.XmlDsigC14NWithCommentsTransform</a>
+ * .NET documentation at <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Security.Cryptography.Xml.XmlDsigC14NWithCommentsTransform" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Security.Cryptography.Xml.XmlDsigC14NWithCommentsTransform</a>
+ * <p>
+ *
+ * Powered by JCOBridge: more info at <a href="https://www.jcobridge.com" target="_top">https://www.jcobridge.com</a>
  */
 public class XmlDsigC14NWithCommentsTransform extends XmlDsigC14NTransform  {
     /**

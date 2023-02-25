@@ -45,7 +45,10 @@ import system.componentmodel.design.ComponentDesigner;
  * The base .NET class managing System.Messaging.Design.MessageDesigner, System.Design, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a.
  * <p>
  * 
- * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Messaging.Design.MessageDesigner" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Messaging.Design.MessageDesigner</a>
+ * .NET documentation at <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Messaging.Design.MessageDesigner" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Messaging.Design.MessageDesigner</a>
+ * <p>
+ *
+ * Powered by JCOBridge: more info at <a href="https://www.jcobridge.com" target="_top">https://www.jcobridge.com</a>
  */
 public class MessageDesigner extends ComponentDesigner  {
     /**

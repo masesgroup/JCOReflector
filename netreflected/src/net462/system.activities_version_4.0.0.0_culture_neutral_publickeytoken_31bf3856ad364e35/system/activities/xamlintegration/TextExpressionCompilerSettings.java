@@ -45,7 +45,10 @@ import system.activities.Activity;
  * The base .NET class managing System.Activities.XamlIntegration.TextExpressionCompilerSettings, System.Activities, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35.
  * <p>
  * 
- * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Activities.XamlIntegration.TextExpressionCompilerSettings" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Activities.XamlIntegration.TextExpressionCompilerSettings</a>
+ * .NET documentation at <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Activities.XamlIntegration.TextExpressionCompilerSettings" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Activities.XamlIntegration.TextExpressionCompilerSettings</a>
+ * <p>
+ *
+ * Powered by JCOBridge: more info at <a href="https://www.jcobridge.com" target="_top">https://www.jcobridge.com</a>
  */
 public class TextExpressionCompilerSettings extends NetObject  {
     /**

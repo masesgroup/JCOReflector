@@ -47,7 +47,10 @@ import system.windows.automation.provider.ITextRangeProviderImplementation;
  * The base .NET class managing System.Windows.Automation.ActiveTextPositionChangedEventArgs, UIAutomationTypes, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35.
  * <p>
  * 
- * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Windows.Automation.ActiveTextPositionChangedEventArgs" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Windows.Automation.ActiveTextPositionChangedEventArgs</a>
+ * .NET documentation at <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Windows.Automation.ActiveTextPositionChangedEventArgs" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Windows.Automation.ActiveTextPositionChangedEventArgs</a>
+ * <p>
+ *
+ * Powered by JCOBridge: more info at <a href="https://www.jcobridge.com" target="_top">https://www.jcobridge.com</a>
  */
 public class ActiveTextPositionChangedEventArgs extends AutomationEventArgs  {
     /**

@@ -46,7 +46,10 @@ import system.DateTime;
  * The base .NET class managing System.Net.Mime.ContentDisposition, System.Net.Mail, Version=6.0.0.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51.
  * <p>
  * 
- * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Net.Mime.ContentDisposition" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Net.Mime.ContentDisposition</a>
+ * .NET documentation at <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Net.Mime.ContentDisposition" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Net.Mime.ContentDisposition</a>
+ * <p>
+ *
+ * Powered by JCOBridge: more info at <a href="https://www.jcobridge.com" target="_top">https://www.jcobridge.com</a>
  */
 public class ContentDisposition extends NetObject  {
     /**

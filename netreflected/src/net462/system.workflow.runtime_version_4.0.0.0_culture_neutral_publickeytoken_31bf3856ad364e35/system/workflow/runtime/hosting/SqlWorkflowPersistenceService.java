@@ -53,7 +53,10 @@ import system.workflow.runtime.IPendingWorkImplementation;
  * The base .NET class managing System.Workflow.Runtime.Hosting.SqlWorkflowPersistenceService, System.Workflow.Runtime, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35.
  * <p>
  * 
- * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Workflow.Runtime.Hosting.SqlWorkflowPersistenceService" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Workflow.Runtime.Hosting.SqlWorkflowPersistenceService</a>
+ * .NET documentation at <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Workflow.Runtime.Hosting.SqlWorkflowPersistenceService" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Workflow.Runtime.Hosting.SqlWorkflowPersistenceService</a>
+ * <p>
+ *
+ * Powered by JCOBridge: more info at <a href="https://www.jcobridge.com" target="_top">https://www.jcobridge.com</a>
  */
 public class SqlWorkflowPersistenceService extends WorkflowPersistenceService implements system.workflow.runtime.IPendingWork {
     /**

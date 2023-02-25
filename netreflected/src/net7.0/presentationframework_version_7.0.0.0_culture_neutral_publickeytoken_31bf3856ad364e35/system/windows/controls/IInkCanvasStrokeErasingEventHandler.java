@@ -43,7 +43,10 @@ import system.windows.controls.InkCanvasStrokeErasingEventArgs;
  * The Java interface to be implemented to receive events from the CLR using {@link InkCanvasStrokeErasingEventHandler}.
  * <p>
  * 
- * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Windows.Controls.InkCanvasStrokeErasingEventHandler" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Windows.Controls.InkCanvasStrokeErasingEventHandler</a>
+ * .NET documentation at <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Windows.Controls.InkCanvasStrokeErasingEventHandler" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Windows.Controls.InkCanvasStrokeErasingEventHandler</a>
+ * <p>
+ *
+ * Powered by JCOBridge: more info at <a href="https://www.jcobridge.com" target="_top">https://www.jcobridge.com</a>
  */
 public interface IInkCanvasStrokeErasingEventHandler {
     public void Invoke(NetObject sender, InkCanvasStrokeErasingEventArgs e);

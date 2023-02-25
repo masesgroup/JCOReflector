@@ -49,7 +49,10 @@ import system.EventHandler;
  * The base .NET class managing System.ComponentModel.MarshalByValueComponent, System.ComponentModel.TypeConverter, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a.
  * <p>
  * 
- * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.ComponentModel.MarshalByValueComponent" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.ComponentModel.MarshalByValueComponent</a>
+ * .NET documentation at <a href="https://docs.microsoft.com/en-us/dotnet/api/System.ComponentModel.MarshalByValueComponent" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.ComponentModel.MarshalByValueComponent</a>
+ * <p>
+ *
+ * Powered by JCOBridge: more info at <a href="https://www.jcobridge.com" target="_top">https://www.jcobridge.com</a>
  */
 public class MarshalByValueComponent extends NetObject implements AutoCloseable {
     /**

@@ -50,7 +50,10 @@ import system.security.cryptography.xml.KeyInfo;
  * The base .NET class managing System.Security.Cryptography.Xml.EncryptedType, System.Security.Cryptography.Xml, Version=6.0.0.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51.
  * <p>
  * 
- * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Security.Cryptography.Xml.EncryptedType" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Security.Cryptography.Xml.EncryptedType</a>
+ * .NET documentation at <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Security.Cryptography.Xml.EncryptedType" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Security.Cryptography.Xml.EncryptedType</a>
+ * <p>
+ *
+ * Powered by JCOBridge: more info at <a href="https://www.jcobridge.com" target="_top">https://www.jcobridge.com</a>
  */
 public class EncryptedType extends NetObject  {
     /**

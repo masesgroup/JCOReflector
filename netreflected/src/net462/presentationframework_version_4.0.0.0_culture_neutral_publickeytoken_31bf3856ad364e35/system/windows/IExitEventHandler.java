@@ -43,7 +43,10 @@ import system.windows.ExitEventArgs;
  * The Java interface to be implemented to receive events from the CLR using {@link ExitEventHandler}.
  * <p>
  * 
- * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Windows.ExitEventHandler" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Windows.ExitEventHandler</a>
+ * .NET documentation at <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Windows.ExitEventHandler" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Windows.ExitEventHandler</a>
+ * <p>
+ *
+ * Powered by JCOBridge: more info at <a href="https://www.jcobridge.com" target="_top">https://www.jcobridge.com</a>
  */
 public interface IExitEventHandler {
     public void Invoke(NetObject sender, ExitEventArgs e);

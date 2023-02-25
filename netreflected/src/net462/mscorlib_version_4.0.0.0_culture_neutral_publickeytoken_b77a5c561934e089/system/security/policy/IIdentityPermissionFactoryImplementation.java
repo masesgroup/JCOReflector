@@ -47,7 +47,10 @@ import system.security.policy.Evidence;
  * The base .NET class managing System.Security.Policy.IIdentityPermissionFactory, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089.
  * <p>
  * 
- * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Security.Policy.IIdentityPermissionFactory" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Security.Policy.IIdentityPermissionFactory</a>
+ * .NET documentation at <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Security.Policy.IIdentityPermissionFactory" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Security.Policy.IIdentityPermissionFactory</a>
+ * <p>
+ *
+ * Powered by JCOBridge: more info at <a href="https://www.jcobridge.com" target="_top">https://www.jcobridge.com</a>
  */
 public class IIdentityPermissionFactoryImplementation extends NetObject implements IIdentityPermissionFactory {
     /**

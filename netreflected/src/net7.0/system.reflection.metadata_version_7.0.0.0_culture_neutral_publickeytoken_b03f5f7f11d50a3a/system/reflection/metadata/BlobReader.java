@@ -59,7 +59,10 @@ import system.UInt64;
  * The base .NET class managing System.Reflection.Metadata.BlobReader, System.Reflection.Metadata, Version=7.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a.
  * <p>
  * 
- * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Reflection.Metadata.BlobReader" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Reflection.Metadata.BlobReader</a>
+ * .NET documentation at <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Reflection.Metadata.BlobReader" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Reflection.Metadata.BlobReader</a>
+ * <p>
+ *
+ * Powered by JCOBridge: more info at <a href="https://www.jcobridge.com" target="_top">https://www.jcobridge.com</a>
  */
 public class BlobReader extends ValueType  {
     /**

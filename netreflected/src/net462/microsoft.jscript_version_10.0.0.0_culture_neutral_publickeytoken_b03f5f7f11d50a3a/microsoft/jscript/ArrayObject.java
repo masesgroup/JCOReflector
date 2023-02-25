@@ -45,7 +45,10 @@ import microsoft.jscript.JSObject;
  * The base .NET class managing Microsoft.JScript.ArrayObject, Microsoft.JScript, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a.
  * <p>
  * 
- * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/Microsoft.JScript.ArrayObject" target="_top">https://docs.microsoft.com/en-us/dotnet/api/Microsoft.JScript.ArrayObject</a>
+ * .NET documentation at <a href="https://docs.microsoft.com/en-us/dotnet/api/Microsoft.JScript.ArrayObject" target="_top">https://docs.microsoft.com/en-us/dotnet/api/Microsoft.JScript.ArrayObject</a>
+ * <p>
+ *
+ * Powered by JCOBridge: more info at <a href="https://www.jcobridge.com" target="_top">https://www.jcobridge.com</a>
  */
 public class ArrayObject extends JSObject  {
     /**

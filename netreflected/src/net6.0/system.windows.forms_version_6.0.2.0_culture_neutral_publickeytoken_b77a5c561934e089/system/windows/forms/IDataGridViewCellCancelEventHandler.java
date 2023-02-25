@@ -43,7 +43,10 @@ import system.windows.forms.DataGridViewCellCancelEventArgs;
  * The Java interface to be implemented to receive events from the CLR using {@link DataGridViewCellCancelEventHandler}.
  * <p>
  * 
- * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Windows.Forms.DataGridViewCellCancelEventHandler" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Windows.Forms.DataGridViewCellCancelEventHandler</a>
+ * .NET documentation at <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Windows.Forms.DataGridViewCellCancelEventHandler" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Windows.Forms.DataGridViewCellCancelEventHandler</a>
+ * <p>
+ *
+ * Powered by JCOBridge: more info at <a href="https://www.jcobridge.com" target="_top">https://www.jcobridge.com</a>
  */
 public interface IDataGridViewCellCancelEventHandler {
     public void Invoke(NetObject sender, DataGridViewCellCancelEventArgs e);

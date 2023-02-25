@@ -45,7 +45,10 @@ import system.transactions.PreparingEnlistment;
  * The base .NET class managing System.Transactions.IEnlistmentNotification, System.Transactions, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089.
  * <p>
  * 
- * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Transactions.IEnlistmentNotification" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Transactions.IEnlistmentNotification</a>
+ * .NET documentation at <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Transactions.IEnlistmentNotification" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Transactions.IEnlistmentNotification</a>
+ * <p>
+ *
+ * Powered by JCOBridge: more info at <a href="https://www.jcobridge.com" target="_top">https://www.jcobridge.com</a>
  */
 public interface IEnlistmentNotification extends IJCOBridgeReflected {
     /**

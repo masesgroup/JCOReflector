@@ -44,7 +44,10 @@ import system.Uri;
  * The base .NET class managing System.Net.IWebProxyScript, System, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089.
  * <p>
  * 
- * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Net.IWebProxyScript" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Net.IWebProxyScript</a>
+ * .NET documentation at <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Net.IWebProxyScript" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Net.IWebProxyScript</a>
+ * <p>
+ *
+ * Powered by JCOBridge: more info at <a href="https://www.jcobridge.com" target="_top">https://www.jcobridge.com</a>
  */
 public interface IWebProxyScript extends IJCOBridgeReflected {
     /**

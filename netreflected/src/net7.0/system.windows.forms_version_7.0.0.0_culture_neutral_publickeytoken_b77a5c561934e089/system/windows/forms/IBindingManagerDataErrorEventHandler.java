@@ -43,7 +43,10 @@ import system.windows.forms.BindingManagerDataErrorEventArgs;
  * The Java interface to be implemented to receive events from the CLR using {@link BindingManagerDataErrorEventHandler}.
  * <p>
  * 
- * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Windows.Forms.BindingManagerDataErrorEventHandler" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Windows.Forms.BindingManagerDataErrorEventHandler</a>
+ * .NET documentation at <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Windows.Forms.BindingManagerDataErrorEventHandler" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Windows.Forms.BindingManagerDataErrorEventHandler</a>
+ * <p>
+ *
+ * Powered by JCOBridge: more info at <a href="https://www.jcobridge.com" target="_top">https://www.jcobridge.com</a>
  */
 public interface IBindingManagerDataErrorEventHandler {
     public void Invoke(NetObject sender, BindingManagerDataErrorEventArgs e);

@@ -43,7 +43,10 @@ import system.windows.forms.TypeValidationEventArgs;
  * The Java interface to be implemented to receive events from the CLR using {@link TypeValidationEventHandler}.
  * <p>
  * 
- * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Windows.Forms.TypeValidationEventHandler" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Windows.Forms.TypeValidationEventHandler</a>
+ * .NET documentation at <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Windows.Forms.TypeValidationEventHandler" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Windows.Forms.TypeValidationEventHandler</a>
+ * <p>
+ *
+ * Powered by JCOBridge: more info at <a href="https://www.jcobridge.com" target="_top">https://www.jcobridge.com</a>
  */
 public interface ITypeValidationEventHandler {
     public void Invoke(NetObject sender, TypeValidationEventArgs e);

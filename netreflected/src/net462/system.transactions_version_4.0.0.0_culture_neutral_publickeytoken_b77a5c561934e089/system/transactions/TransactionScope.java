@@ -50,7 +50,10 @@ import system.transactions.TransactionOptions;
  * The base .NET class managing System.Transactions.TransactionScope, System.Transactions, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089.
  * <p>
  * 
- * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Transactions.TransactionScope" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Transactions.TransactionScope</a>
+ * .NET documentation at <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Transactions.TransactionScope" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Transactions.TransactionScope</a>
+ * <p>
+ *
+ * Powered by JCOBridge: more info at <a href="https://www.jcobridge.com" target="_top">https://www.jcobridge.com</a>
  */
 public class TransactionScope extends NetObject implements AutoCloseable {
     /**

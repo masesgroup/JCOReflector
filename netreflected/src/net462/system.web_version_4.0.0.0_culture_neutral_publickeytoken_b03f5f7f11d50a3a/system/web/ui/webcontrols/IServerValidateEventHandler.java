@@ -43,7 +43,10 @@ import system.web.ui.webcontrols.ServerValidateEventArgs;
  * The Java interface to be implemented to receive events from the CLR using {@link ServerValidateEventHandler}.
  * <p>
  * 
- * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Web.UI.WebControls.ServerValidateEventHandler" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Web.UI.WebControls.ServerValidateEventHandler</a>
+ * .NET documentation at <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Web.UI.WebControls.ServerValidateEventHandler" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Web.UI.WebControls.ServerValidateEventHandler</a>
+ * <p>
+ *
+ * Powered by JCOBridge: more info at <a href="https://www.jcobridge.com" target="_top">https://www.jcobridge.com</a>
  */
 public interface IServerValidateEventHandler {
     public void Invoke(NetObject source, ServerValidateEventArgs args);

@@ -42,7 +42,10 @@ import org.mases.jcobridge.netreflection.*;
  * The Java interface to be implemented to receive events from the CLR using {@link ParameterizedThreadStart}.
  * <p>
  * 
- * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Threading.ParameterizedThreadStart" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Threading.ParameterizedThreadStart</a>
+ * .NET documentation at <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Threading.ParameterizedThreadStart" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Threading.ParameterizedThreadStart</a>
+ * <p>
+ *
+ * Powered by JCOBridge: more info at <a href="https://www.jcobridge.com" target="_top">https://www.jcobridge.com</a>
  */
 public interface IParameterizedThreadStart {
     public void Invoke(NetObject obj);

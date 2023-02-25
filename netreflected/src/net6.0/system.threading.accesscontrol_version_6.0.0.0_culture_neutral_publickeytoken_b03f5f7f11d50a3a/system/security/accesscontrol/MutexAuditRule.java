@@ -48,7 +48,10 @@ import system.security.accesscontrol.AuditFlags;
  * The base .NET class managing System.Security.AccessControl.MutexAuditRule, System.Threading.AccessControl, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a.
  * <p>
  * 
- * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Security.AccessControl.MutexAuditRule" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Security.AccessControl.MutexAuditRule</a>
+ * .NET documentation at <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Security.AccessControl.MutexAuditRule" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Security.AccessControl.MutexAuditRule</a>
+ * <p>
+ *
+ * Powered by JCOBridge: more info at <a href="https://www.jcobridge.com" target="_top">https://www.jcobridge.com</a>
  */
 public class MutexAuditRule extends AuditRule  {
     /**

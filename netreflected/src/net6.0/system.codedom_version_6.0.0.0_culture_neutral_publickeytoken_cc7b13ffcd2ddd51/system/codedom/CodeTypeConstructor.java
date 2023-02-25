@@ -45,7 +45,10 @@ import system.codedom.CodeMemberMethod;
  * The base .NET class managing System.CodeDom.CodeTypeConstructor, System.CodeDom, Version=6.0.0.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51.
  * <p>
  * 
- * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.CodeDom.CodeTypeConstructor" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.CodeDom.CodeTypeConstructor</a>
+ * .NET documentation at <a href="https://docs.microsoft.com/en-us/dotnet/api/System.CodeDom.CodeTypeConstructor" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.CodeDom.CodeTypeConstructor</a>
+ * <p>
+ *
+ * Powered by JCOBridge: more info at <a href="https://www.jcobridge.com" target="_top">https://www.jcobridge.com</a>
  */
 public class CodeTypeConstructor extends CodeMemberMethod  {
     /**

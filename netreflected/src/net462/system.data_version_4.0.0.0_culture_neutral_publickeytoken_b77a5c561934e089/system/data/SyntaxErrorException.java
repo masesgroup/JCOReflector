@@ -44,7 +44,10 @@ import system.data.InvalidExpressionException;
  * The base .NET class managing System.Data.SyntaxErrorException, System.Data, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089.
  * <p>
  * 
- * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Data.SyntaxErrorException" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Data.SyntaxErrorException</a>
+ * .NET documentation at <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Data.SyntaxErrorException" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Data.SyntaxErrorException</a>
+ * <p>
+ *
+ * Powered by JCOBridge: more info at <a href="https://www.jcobridge.com" target="_top">https://www.jcobridge.com</a>
  */
 public class SyntaxErrorException extends InvalidExpressionException {
     /**

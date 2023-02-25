@@ -55,7 +55,10 @@ import system.RuntimeMethodHandle;
  * The base .NET class managing Microsoft.JScript.JSMethodInfo, Microsoft.JScript, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a.
  * <p>
  * 
- * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/Microsoft.JScript.JSMethodInfo" target="_top">https://docs.microsoft.com/en-us/dotnet/api/Microsoft.JScript.JSMethodInfo</a>
+ * .NET documentation at <a href="https://docs.microsoft.com/en-us/dotnet/api/Microsoft.JScript.JSMethodInfo" target="_top">https://docs.microsoft.com/en-us/dotnet/api/Microsoft.JScript.JSMethodInfo</a>
+ * <p>
+ *
+ * Powered by JCOBridge: more info at <a href="https://www.jcobridge.com" target="_top">https://www.jcobridge.com</a>
  */
 public class JSMethodInfo extends MethodInfo  {
     /**

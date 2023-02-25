@@ -44,7 +44,10 @@ import system.SystemException;
  * The base .NET class managing System.Threading.ThreadStateException, System.Private.CoreLib, Version=6.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e.
  * <p>
  * 
- * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Threading.ThreadStateException" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Threading.ThreadStateException</a>
+ * .NET documentation at <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Threading.ThreadStateException" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Threading.ThreadStateException</a>
+ * <p>
+ *
+ * Powered by JCOBridge: more info at <a href="https://www.jcobridge.com" target="_top">https://www.jcobridge.com</a>
  */
 public class ThreadStateException extends SystemException {
     /**

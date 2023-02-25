@@ -46,7 +46,10 @@ import system.linq.expressions.MemberMemberBinding;
  * The base .NET class managing System.Linq.Expressions.MemberMemberBinding, System.Linq.Expressions, Version=7.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a.
  * <p>
  * 
- * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Linq.Expressions.MemberMemberBinding" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Linq.Expressions.MemberMemberBinding</a>
+ * .NET documentation at <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Linq.Expressions.MemberMemberBinding" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Linq.Expressions.MemberMemberBinding</a>
+ * <p>
+ *
+ * Powered by JCOBridge: more info at <a href="https://www.jcobridge.com" target="_top">https://www.jcobridge.com</a>
  */
 public class MemberMemberBinding extends MemberBinding  {
     /**

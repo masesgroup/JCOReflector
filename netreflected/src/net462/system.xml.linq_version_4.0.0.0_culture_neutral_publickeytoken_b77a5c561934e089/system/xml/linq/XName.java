@@ -50,7 +50,10 @@ import system.runtime.serialization.ISerializableImplementation;
  * The base .NET class managing System.Xml.Linq.XName, System.Xml.Linq, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089.
  * <p>
  * 
- * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Xml.Linq.XName" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Xml.Linq.XName</a>
+ * .NET documentation at <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Xml.Linq.XName" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Xml.Linq.XName</a>
+ * <p>
+ *
+ * Powered by JCOBridge: more info at <a href="https://www.jcobridge.com" target="_top">https://www.jcobridge.com</a>
  */
 public class XName extends NetObject implements system.runtime.serialization.ISerializable {
     /**

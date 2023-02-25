@@ -46,7 +46,10 @@ import system.configuration.install.IManagedInstallerImplementation;
  * The base .NET class managing System.Configuration.Install.ManagedInstallerClass, System.Configuration.Install, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a.
  * <p>
  * 
- * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Configuration.Install.ManagedInstallerClass" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Configuration.Install.ManagedInstallerClass</a>
+ * .NET documentation at <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Configuration.Install.ManagedInstallerClass" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Configuration.Install.ManagedInstallerClass</a>
+ * <p>
+ *
+ * Powered by JCOBridge: more info at <a href="https://www.jcobridge.com" target="_top">https://www.jcobridge.com</a>
  */
 public class ManagedInstallerClass extends NetObject implements system.configuration.install.IManagedInstaller {
     /**

@@ -46,7 +46,10 @@ import system.configuration.ConfigurationPropertyOptions;
  * The base .NET class managing System.Configuration.ConfigurationPropertyAttribute, System.Configuration.ConfigurationManager, Version=7.0.0.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51.
  * <p>
  * 
- * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Configuration.ConfigurationPropertyAttribute" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Configuration.ConfigurationPropertyAttribute</a>
+ * .NET documentation at <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Configuration.ConfigurationPropertyAttribute" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Configuration.ConfigurationPropertyAttribute</a>
+ * <p>
+ *
+ * Powered by JCOBridge: more info at <a href="https://www.jcobridge.com" target="_top">https://www.jcobridge.com</a>
  */
 public class ConfigurationPropertyAttribute extends Attribute  {
     /**

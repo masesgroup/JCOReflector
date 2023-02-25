@@ -46,7 +46,10 @@ import system.servicemodel.WSDualHttpSecurityMode;
  * The base .NET class managing System.ServiceModel.WSDualHttpSecurity, System.ServiceModel, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089.
  * <p>
  * 
- * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.ServiceModel.WSDualHttpSecurity" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.ServiceModel.WSDualHttpSecurity</a>
+ * .NET documentation at <a href="https://docs.microsoft.com/en-us/dotnet/api/System.ServiceModel.WSDualHttpSecurity" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.ServiceModel.WSDualHttpSecurity</a>
+ * <p>
+ *
+ * Powered by JCOBridge: more info at <a href="https://www.jcobridge.com" target="_top">https://www.jcobridge.com</a>
  */
 public class WSDualHttpSecurity extends NetObject  {
     /**

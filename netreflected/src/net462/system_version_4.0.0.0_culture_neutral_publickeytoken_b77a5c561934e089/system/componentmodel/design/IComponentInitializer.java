@@ -45,7 +45,10 @@ import system.collections.IDictionaryImplementation;
  * The base .NET class managing System.ComponentModel.Design.IComponentInitializer, System, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089.
  * <p>
  * 
- * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.ComponentModel.Design.IComponentInitializer" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.ComponentModel.Design.IComponentInitializer</a>
+ * .NET documentation at <a href="https://docs.microsoft.com/en-us/dotnet/api/System.ComponentModel.Design.IComponentInitializer" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.ComponentModel.Design.IComponentInitializer</a>
+ * <p>
+ *
+ * Powered by JCOBridge: more info at <a href="https://www.jcobridge.com" target="_top">https://www.jcobridge.com</a>
  */
 public interface IComponentInitializer extends IJCOBridgeReflected {
     /**

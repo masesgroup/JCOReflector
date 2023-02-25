@@ -48,7 +48,10 @@ import system.windows.Point;
  * The base .NET class managing System.Windows.Media.Animation.PointAnimationBase, PresentationCore, Version=7.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35.
  * <p>
  * 
- * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Windows.Media.Animation.PointAnimationBase" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Windows.Media.Animation.PointAnimationBase</a>
+ * .NET documentation at <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Windows.Media.Animation.PointAnimationBase" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Windows.Media.Animation.PointAnimationBase</a>
+ * <p>
+ *
+ * Powered by JCOBridge: more info at <a href="https://www.jcobridge.com" target="_top">https://www.jcobridge.com</a>
  */
 public class PointAnimationBase extends AnimationTimeline  {
     /**

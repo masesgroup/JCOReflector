@@ -49,7 +49,10 @@ import system.data.KeyRestrictionBehavior;
  * The base .NET class managing System.Data.Odbc.OdbcPermission, System.Security.Permissions, Version=6.0.0.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51.
  * <p>
  * 
- * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Data.Odbc.OdbcPermission" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Data.Odbc.OdbcPermission</a>
+ * .NET documentation at <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Data.Odbc.OdbcPermission" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Data.Odbc.OdbcPermission</a>
+ * <p>
+ *
+ * Powered by JCOBridge: more info at <a href="https://www.jcobridge.com" target="_top">https://www.jcobridge.com</a>
  */
 public class OdbcPermission extends DBDataPermission  {
     /**

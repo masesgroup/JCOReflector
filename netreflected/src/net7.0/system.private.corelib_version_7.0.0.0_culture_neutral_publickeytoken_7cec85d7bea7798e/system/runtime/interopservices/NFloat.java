@@ -51,7 +51,10 @@ import system.MidpointRounding;
  * The base .NET class managing System.Runtime.InteropServices.NFloat, System.Private.CoreLib, Version=7.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e.
  * <p>
  * 
- * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Runtime.InteropServices.NFloat" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Runtime.InteropServices.NFloat</a>
+ * .NET documentation at <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Runtime.InteropServices.NFloat" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Runtime.InteropServices.NFloat</a>
+ * <p>
+ *
+ * Powered by JCOBridge: more info at <a href="https://www.jcobridge.com" target="_top">https://www.jcobridge.com</a>
  */
 public class NFloat extends ValueType  {
     /**

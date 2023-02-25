@@ -43,7 +43,10 @@ import system.xml.serialization.IXmlSerializationCollectionFixupCallback;
  * The base .NET class managing System.Xml.Serialization.XmlSerializationCollectionFixupCallback, System.Private.Xml, Version=6.0.0.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51.
  * <p>
  * 
- * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Xml.Serialization.XmlSerializationCollectionFixupCallback" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Xml.Serialization.XmlSerializationCollectionFixupCallback</a>
+ * .NET documentation at <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Xml.Serialization.XmlSerializationCollectionFixupCallback" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Xml.Serialization.XmlSerializationCollectionFixupCallback</a>
+ * <p>
+ *
+ * Powered by JCOBridge: more info at <a href="https://www.jcobridge.com" target="_top">https://www.jcobridge.com</a>
  */
 public class XmlSerializationCollectionFixupCallback extends JCVoidDelegate implements IJCVoidEventEmit, IJCOBridgeReflected {
     /**

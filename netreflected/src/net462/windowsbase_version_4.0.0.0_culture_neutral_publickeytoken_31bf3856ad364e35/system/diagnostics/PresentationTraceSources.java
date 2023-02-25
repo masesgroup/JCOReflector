@@ -46,7 +46,10 @@ import system.diagnostics.TraceSource;
  * The base .NET class managing System.Diagnostics.PresentationTraceSources, WindowsBase, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35.
  * <p>
  * 
- * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Diagnostics.PresentationTraceSources" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Diagnostics.PresentationTraceSources</a>
+ * .NET documentation at <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Diagnostics.PresentationTraceSources" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Diagnostics.PresentationTraceSources</a>
+ * <p>
+ *
+ * Powered by JCOBridge: more info at <a href="https://www.jcobridge.com" target="_top">https://www.jcobridge.com</a>
  */
 public class PresentationTraceSources extends NetObject  {
     /**

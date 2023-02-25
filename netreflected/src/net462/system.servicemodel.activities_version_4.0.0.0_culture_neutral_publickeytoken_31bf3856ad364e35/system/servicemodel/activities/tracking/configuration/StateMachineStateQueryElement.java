@@ -45,7 +45,10 @@ import system.servicemodel.activities.tracking.configuration.TrackingQueryElemen
  * The base .NET class managing System.ServiceModel.Activities.Tracking.Configuration.StateMachineStateQueryElement, System.ServiceModel.Activities, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35.
  * <p>
  * 
- * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.ServiceModel.Activities.Tracking.Configuration.StateMachineStateQueryElement" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.ServiceModel.Activities.Tracking.Configuration.StateMachineStateQueryElement</a>
+ * .NET documentation at <a href="https://docs.microsoft.com/en-us/dotnet/api/System.ServiceModel.Activities.Tracking.Configuration.StateMachineStateQueryElement" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.ServiceModel.Activities.Tracking.Configuration.StateMachineStateQueryElement</a>
+ * <p>
+ *
+ * Powered by JCOBridge: more info at <a href="https://www.jcobridge.com" target="_top">https://www.jcobridge.com</a>
  */
 public class StateMachineStateQueryElement extends TrackingQueryElement  {
     /**

@@ -46,7 +46,10 @@ import system.threading.tasks.dataflow.DataflowMessageHeader;
  * The base .NET class managing System.Threading.Tasks.Dataflow.DataflowMessageHeader, System.Threading.Tasks.Dataflow, Version=7.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a.
  * <p>
  * 
- * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Threading.Tasks.Dataflow.DataflowMessageHeader" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Threading.Tasks.Dataflow.DataflowMessageHeader</a>
+ * .NET documentation at <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Threading.Tasks.Dataflow.DataflowMessageHeader" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Threading.Tasks.Dataflow.DataflowMessageHeader</a>
+ * <p>
+ *
+ * Powered by JCOBridge: more info at <a href="https://www.jcobridge.com" target="_top">https://www.jcobridge.com</a>
  */
 public class DataflowMessageHeader extends ValueType  {
     /**

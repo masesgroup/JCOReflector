@@ -45,7 +45,10 @@ import system.activities.tracking.TrackingQuery;
  * The base .NET class managing System.Activities.Tracking.ActivityStateQuery, System.Activities, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35.
  * <p>
  * 
- * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Activities.Tracking.ActivityStateQuery" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Activities.Tracking.ActivityStateQuery</a>
+ * .NET documentation at <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Activities.Tracking.ActivityStateQuery" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Activities.Tracking.ActivityStateQuery</a>
+ * <p>
+ *
+ * Powered by JCOBridge: more info at <a href="https://www.jcobridge.com" target="_top">https://www.jcobridge.com</a>
  */
 public class ActivityStateQuery extends TrackingQuery  {
     /**

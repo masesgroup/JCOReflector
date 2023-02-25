@@ -47,7 +47,10 @@ import system.windows.media.PointCollection;
  * The base .NET class managing System.Windows.Media.PolyBezierSegment, PresentationCore, Version=7.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35.
  * <p>
  * 
- * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Windows.Media.PolyBezierSegment" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Windows.Media.PolyBezierSegment</a>
+ * .NET documentation at <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Windows.Media.PolyBezierSegment" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Windows.Media.PolyBezierSegment</a>
+ * <p>
+ *
+ * Powered by JCOBridge: more info at <a href="https://www.jcobridge.com" target="_top">https://www.jcobridge.com</a>
  */
 public class PolyBezierSegment extends PathSegment  {
     /**

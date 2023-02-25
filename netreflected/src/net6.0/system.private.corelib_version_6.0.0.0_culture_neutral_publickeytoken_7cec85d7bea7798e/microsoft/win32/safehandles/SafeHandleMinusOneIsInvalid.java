@@ -45,7 +45,10 @@ import system.runtime.interopservices.SafeHandle;
  * The base .NET class managing Microsoft.Win32.SafeHandles.SafeHandleMinusOneIsInvalid, System.Private.CoreLib, Version=6.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e.
  * <p>
  * 
- * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/Microsoft.Win32.SafeHandles.SafeHandleMinusOneIsInvalid" target="_top">https://docs.microsoft.com/en-us/dotnet/api/Microsoft.Win32.SafeHandles.SafeHandleMinusOneIsInvalid</a>
+ * .NET documentation at <a href="https://docs.microsoft.com/en-us/dotnet/api/Microsoft.Win32.SafeHandles.SafeHandleMinusOneIsInvalid" target="_top">https://docs.microsoft.com/en-us/dotnet/api/Microsoft.Win32.SafeHandles.SafeHandleMinusOneIsInvalid</a>
+ * <p>
+ *
+ * Powered by JCOBridge: more info at <a href="https://www.jcobridge.com" target="_top">https://www.jcobridge.com</a>
  */
 public class SafeHandleMinusOneIsInvalid extends SafeHandle  {
     /**

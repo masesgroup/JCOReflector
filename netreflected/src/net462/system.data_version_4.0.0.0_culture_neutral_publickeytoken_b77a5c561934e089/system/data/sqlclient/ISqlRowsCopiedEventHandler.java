@@ -43,7 +43,10 @@ import system.data.sqlclient.SqlRowsCopiedEventArgs;
  * The Java interface to be implemented to receive events from the CLR using {@link SqlRowsCopiedEventHandler}.
  * <p>
  * 
- * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Data.SqlClient.SqlRowsCopiedEventHandler" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Data.SqlClient.SqlRowsCopiedEventHandler</a>
+ * .NET documentation at <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Data.SqlClient.SqlRowsCopiedEventHandler" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Data.SqlClient.SqlRowsCopiedEventHandler</a>
+ * <p>
+ *
+ * Powered by JCOBridge: more info at <a href="https://www.jcobridge.com" target="_top">https://www.jcobridge.com</a>
  */
 public interface ISqlRowsCopiedEventHandler {
     public void Invoke(NetObject sender, SqlRowsCopiedEventArgs e);

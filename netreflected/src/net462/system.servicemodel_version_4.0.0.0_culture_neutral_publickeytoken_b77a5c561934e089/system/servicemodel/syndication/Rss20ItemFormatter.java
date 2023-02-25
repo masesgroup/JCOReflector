@@ -51,7 +51,10 @@ import system.xml.serialization.IXmlSerializableImplementation;
  * The base .NET class managing System.ServiceModel.Syndication.Rss20ItemFormatter, System.ServiceModel, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089.
  * <p>
  * 
- * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.ServiceModel.Syndication.Rss20ItemFormatter" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.ServiceModel.Syndication.Rss20ItemFormatter</a>
+ * .NET documentation at <a href="https://docs.microsoft.com/en-us/dotnet/api/System.ServiceModel.Syndication.Rss20ItemFormatter" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.ServiceModel.Syndication.Rss20ItemFormatter</a>
+ * <p>
+ *
+ * Powered by JCOBridge: more info at <a href="https://www.jcobridge.com" target="_top">https://www.jcobridge.com</a>
  */
 public class Rss20ItemFormatter extends SyndicationItemFormatter implements system.xml.serialization.IXmlSerializable {
     /**

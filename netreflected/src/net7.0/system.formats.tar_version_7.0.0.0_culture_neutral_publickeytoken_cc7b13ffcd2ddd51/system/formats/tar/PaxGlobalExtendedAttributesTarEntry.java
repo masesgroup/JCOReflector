@@ -45,7 +45,10 @@ import system.formats.tar.PosixTarEntry;
  * The base .NET class managing System.Formats.Tar.PaxGlobalExtendedAttributesTarEntry, System.Formats.Tar, Version=7.0.0.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51.
  * <p>
  * 
- * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Formats.Tar.PaxGlobalExtendedAttributesTarEntry" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Formats.Tar.PaxGlobalExtendedAttributesTarEntry</a>
+ * .NET documentation at <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Formats.Tar.PaxGlobalExtendedAttributesTarEntry" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Formats.Tar.PaxGlobalExtendedAttributesTarEntry</a>
+ * <p>
+ *
+ * Powered by JCOBridge: more info at <a href="https://www.jcobridge.com" target="_top">https://www.jcobridge.com</a>
  */
 public class PaxGlobalExtendedAttributesTarEntry extends PosixTarEntry  {
     /**

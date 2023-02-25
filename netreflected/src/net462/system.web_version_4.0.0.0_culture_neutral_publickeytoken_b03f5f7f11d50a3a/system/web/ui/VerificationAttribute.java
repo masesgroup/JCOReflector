@@ -48,7 +48,10 @@ import system.web.ui.VerificationConditionalOperator;
  * The base .NET class managing System.Web.UI.VerificationAttribute, System.Web, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a.
  * <p>
  * 
- * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Web.UI.VerificationAttribute" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Web.UI.VerificationAttribute</a>
+ * .NET documentation at <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Web.UI.VerificationAttribute" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Web.UI.VerificationAttribute</a>
+ * <p>
+ *
+ * Powered by JCOBridge: more info at <a href="https://www.jcobridge.com" target="_top">https://www.jcobridge.com</a>
  */
 public class VerificationAttribute extends Attribute  {
     /**

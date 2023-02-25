@@ -50,7 +50,10 @@ import system.IDisposableImplementation;
  * The base .NET class managing System.Xaml.XamlWriter, System.Xaml, Version=6.0.2.0, Culture=neutral, PublicKeyToken=b77a5c561934e089.
  * <p>
  * 
- * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Xaml.XamlWriter" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Xaml.XamlWriter</a>
+ * .NET documentation at <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Xaml.XamlWriter" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Xaml.XamlWriter</a>
+ * <p>
+ *
+ * Powered by JCOBridge: more info at <a href="https://www.jcobridge.com" target="_top">https://www.jcobridge.com</a>
  */
 public class XamlWriter extends NetObject implements system.IDisposable, AutoCloseable {
     /**

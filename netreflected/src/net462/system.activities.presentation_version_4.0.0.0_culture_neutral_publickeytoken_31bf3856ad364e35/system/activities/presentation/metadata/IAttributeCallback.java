@@ -43,7 +43,10 @@ import system.activities.presentation.metadata.AttributeCallbackBuilder;
  * The Java interface to be implemented to receive events from the CLR using {@link AttributeCallback}.
  * <p>
  * 
- * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Activities.Presentation.Metadata.AttributeCallback" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Activities.Presentation.Metadata.AttributeCallback</a>
+ * .NET documentation at <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Activities.Presentation.Metadata.AttributeCallback" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Activities.Presentation.Metadata.AttributeCallback</a>
+ * <p>
+ *
+ * Powered by JCOBridge: more info at <a href="https://www.jcobridge.com" target="_top">https://www.jcobridge.com</a>
  */
 public interface IAttributeCallback {
     public void Invoke(AttributeCallbackBuilder builder);

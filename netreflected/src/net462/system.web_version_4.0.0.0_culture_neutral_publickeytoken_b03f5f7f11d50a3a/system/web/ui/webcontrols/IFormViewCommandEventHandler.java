@@ -43,7 +43,10 @@ import system.web.ui.webcontrols.FormViewCommandEventArgs;
  * The Java interface to be implemented to receive events from the CLR using {@link FormViewCommandEventHandler}.
  * <p>
  * 
- * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Web.UI.WebControls.FormViewCommandEventHandler" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Web.UI.WebControls.FormViewCommandEventHandler</a>
+ * .NET documentation at <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Web.UI.WebControls.FormViewCommandEventHandler" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Web.UI.WebControls.FormViewCommandEventHandler</a>
+ * <p>
+ *
+ * Powered by JCOBridge: more info at <a href="https://www.jcobridge.com" target="_top">https://www.jcobridge.com</a>
  */
 public interface IFormViewCommandEventHandler {
     public void Invoke(NetObject sender, FormViewCommandEventArgs e);

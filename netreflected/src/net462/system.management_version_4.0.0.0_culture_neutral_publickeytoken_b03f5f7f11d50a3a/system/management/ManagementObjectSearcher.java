@@ -50,7 +50,10 @@ import system.management.ManagementOperationObserver;
  * The base .NET class managing System.Management.ManagementObjectSearcher, System.Management, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a.
  * <p>
  * 
- * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Management.ManagementObjectSearcher" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Management.ManagementObjectSearcher</a>
+ * .NET documentation at <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Management.ManagementObjectSearcher" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Management.ManagementObjectSearcher</a>
+ * <p>
+ *
+ * Powered by JCOBridge: more info at <a href="https://www.jcobridge.com" target="_top">https://www.jcobridge.com</a>
  */
 public class ManagementObjectSearcher extends Component  {
     /**

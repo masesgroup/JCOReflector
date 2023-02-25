@@ -43,7 +43,10 @@ import system.web.ui.webcontrols.ObjectDataSourceFilteringEventArgs;
  * The Java interface to be implemented to receive events from the CLR using {@link ObjectDataSourceFilteringEventHandler}.
  * <p>
  * 
- * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Web.UI.WebControls.ObjectDataSourceFilteringEventHandler" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Web.UI.WebControls.ObjectDataSourceFilteringEventHandler</a>
+ * .NET documentation at <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Web.UI.WebControls.ObjectDataSourceFilteringEventHandler" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Web.UI.WebControls.ObjectDataSourceFilteringEventHandler</a>
+ * <p>
+ *
+ * Powered by JCOBridge: more info at <a href="https://www.jcobridge.com" target="_top">https://www.jcobridge.com</a>
  */
 public interface IObjectDataSourceFilteringEventHandler {
     public void Invoke(NetObject sender, ObjectDataSourceFilteringEventArgs e);

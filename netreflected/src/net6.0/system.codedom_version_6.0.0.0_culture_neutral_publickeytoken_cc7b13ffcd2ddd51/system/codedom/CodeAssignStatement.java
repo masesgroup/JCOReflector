@@ -46,7 +46,10 @@ import system.codedom.CodeExpression;
  * The base .NET class managing System.CodeDom.CodeAssignStatement, System.CodeDom, Version=6.0.0.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51.
  * <p>
  * 
- * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.CodeDom.CodeAssignStatement" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.CodeDom.CodeAssignStatement</a>
+ * .NET documentation at <a href="https://docs.microsoft.com/en-us/dotnet/api/System.CodeDom.CodeAssignStatement" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.CodeDom.CodeAssignStatement</a>
+ * <p>
+ *
+ * Powered by JCOBridge: more info at <a href="https://www.jcobridge.com" target="_top">https://www.jcobridge.com</a>
  */
 public class CodeAssignStatement extends CodeStatement  {
     /**

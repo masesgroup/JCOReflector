@@ -43,7 +43,10 @@ import system.windows.controls.DataGridSortingEventArgs;
  * The Java interface to be implemented to receive events from the CLR using {@link DataGridSortingEventHandler}.
  * <p>
  * 
- * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Windows.Controls.DataGridSortingEventHandler" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Windows.Controls.DataGridSortingEventHandler</a>
+ * .NET documentation at <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Windows.Controls.DataGridSortingEventHandler" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Windows.Controls.DataGridSortingEventHandler</a>
+ * <p>
+ *
+ * Powered by JCOBridge: more info at <a href="https://www.jcobridge.com" target="_top">https://www.jcobridge.com</a>
  */
 public interface IDataGridSortingEventHandler {
     public void Invoke(NetObject sender, DataGridSortingEventArgs e);

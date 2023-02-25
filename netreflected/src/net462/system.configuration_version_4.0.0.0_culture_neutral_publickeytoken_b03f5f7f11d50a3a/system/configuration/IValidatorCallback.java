@@ -42,7 +42,10 @@ import org.mases.jcobridge.netreflection.*;
  * The Java interface to be implemented to receive events from the CLR using {@link ValidatorCallback}.
  * <p>
  * 
- * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Configuration.ValidatorCallback" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Configuration.ValidatorCallback</a>
+ * .NET documentation at <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Configuration.ValidatorCallback" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Configuration.ValidatorCallback</a>
+ * <p>
+ *
+ * Powered by JCOBridge: more info at <a href="https://www.jcobridge.com" target="_top">https://www.jcobridge.com</a>
  */
 public interface IValidatorCallback {
     public void Invoke(NetObject value);

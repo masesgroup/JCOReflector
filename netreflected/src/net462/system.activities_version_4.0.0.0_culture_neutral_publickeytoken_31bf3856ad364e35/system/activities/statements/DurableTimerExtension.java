@@ -46,7 +46,10 @@ import system.activities.hosting.WorkflowInstanceProxy;
  * The base .NET class managing System.Activities.Statements.DurableTimerExtension, System.Activities, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35.
  * <p>
  * 
- * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Activities.Statements.DurableTimerExtension" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Activities.Statements.DurableTimerExtension</a>
+ * .NET documentation at <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Activities.Statements.DurableTimerExtension" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Activities.Statements.DurableTimerExtension</a>
+ * <p>
+ *
+ * Powered by JCOBridge: more info at <a href="https://www.jcobridge.com" target="_top">https://www.jcobridge.com</a>
  */
 public class DurableTimerExtension extends TimerExtension implements AutoCloseable {
     /**

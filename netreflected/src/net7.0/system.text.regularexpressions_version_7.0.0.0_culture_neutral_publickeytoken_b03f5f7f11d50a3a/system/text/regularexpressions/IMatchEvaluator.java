@@ -43,7 +43,10 @@ import system.text.regularexpressions.Match;
  * The Java interface to be implemented to receive events from the CLR using {@link MatchEvaluator}.
  * <p>
  * 
- * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Text.RegularExpressions.MatchEvaluator" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Text.RegularExpressions.MatchEvaluator</a>
+ * .NET documentation at <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Text.RegularExpressions.MatchEvaluator" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Text.RegularExpressions.MatchEvaluator</a>
+ * <p>
+ *
+ * Powered by JCOBridge: more info at <a href="https://www.jcobridge.com" target="_top">https://www.jcobridge.com</a>
  */
 public interface IMatchEvaluator {
     public java.lang.String Invoke(Match match);

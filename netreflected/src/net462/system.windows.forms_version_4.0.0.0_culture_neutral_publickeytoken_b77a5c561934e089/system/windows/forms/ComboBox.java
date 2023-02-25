@@ -60,7 +60,10 @@ import system.windows.forms.PaintEventHandler;
  * The base .NET class managing System.Windows.Forms.ComboBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089.
  * <p>
  * 
- * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Windows.Forms.ComboBox" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Windows.Forms.ComboBox</a>
+ * .NET documentation at <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Windows.Forms.ComboBox" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Windows.Forms.ComboBox</a>
+ * <p>
+ *
+ * Powered by JCOBridge: more info at <a href="https://www.jcobridge.com" target="_top">https://www.jcobridge.com</a>
  */
 public class ComboBox extends ListControl  {
     /**

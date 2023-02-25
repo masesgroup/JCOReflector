@@ -45,7 +45,10 @@ import microsoft.build.utilities.Task;
  * The base .NET class managing Microsoft.Build.Utilities.ToolTask, Microsoft.Build.Utilities.v4.0, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a.
  * <p>
  * 
- * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/Microsoft.Build.Utilities.ToolTask" target="_top">https://docs.microsoft.com/en-us/dotnet/api/Microsoft.Build.Utilities.ToolTask</a>
+ * .NET documentation at <a href="https://docs.microsoft.com/en-us/dotnet/api/Microsoft.Build.Utilities.ToolTask" target="_top">https://docs.microsoft.com/en-us/dotnet/api/Microsoft.Build.Utilities.ToolTask</a>
+ * <p>
+ *
+ * Powered by JCOBridge: more info at <a href="https://www.jcobridge.com" target="_top">https://www.jcobridge.com</a>
  */
 public class ToolTask extends Task  {
     /**

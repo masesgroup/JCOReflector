@@ -43,7 +43,10 @@ import system.web.ui.webcontrols.DataGridItemEventArgs;
  * The Java interface to be implemented to receive events from the CLR using {@link DataGridItemEventHandler}.
  * <p>
  * 
- * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Web.UI.WebControls.DataGridItemEventHandler" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Web.UI.WebControls.DataGridItemEventHandler</a>
+ * .NET documentation at <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Web.UI.WebControls.DataGridItemEventHandler" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Web.UI.WebControls.DataGridItemEventHandler</a>
+ * <p>
+ *
+ * Powered by JCOBridge: more info at <a href="https://www.jcobridge.com" target="_top">https://www.jcobridge.com</a>
  */
 public interface IDataGridItemEventHandler {
     public void Invoke(NetObject sender, DataGridItemEventArgs e);

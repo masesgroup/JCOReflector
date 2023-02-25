@@ -43,7 +43,10 @@ import system.data.StatementCompletedEventArgs;
  * The Java interface to be implemented to receive events from the CLR using {@link StatementCompletedEventHandler}.
  * <p>
  * 
- * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Data.StatementCompletedEventHandler" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Data.StatementCompletedEventHandler</a>
+ * .NET documentation at <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Data.StatementCompletedEventHandler" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Data.StatementCompletedEventHandler</a>
+ * <p>
+ *
+ * Powered by JCOBridge: more info at <a href="https://www.jcobridge.com" target="_top">https://www.jcobridge.com</a>
  */
 public interface IStatementCompletedEventHandler {
     public void Invoke(NetObject sender, StatementCompletedEventArgs e);

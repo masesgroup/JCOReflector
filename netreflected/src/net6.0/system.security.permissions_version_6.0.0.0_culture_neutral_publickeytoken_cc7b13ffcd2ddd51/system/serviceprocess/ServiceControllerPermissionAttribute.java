@@ -49,7 +49,10 @@ import system.serviceprocess.ServiceControllerPermissionAccess;
  * The base .NET class managing System.ServiceProcess.ServiceControllerPermissionAttribute, System.Security.Permissions, Version=6.0.0.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51.
  * <p>
  * 
- * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.ServiceProcess.ServiceControllerPermissionAttribute" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.ServiceProcess.ServiceControllerPermissionAttribute</a>
+ * .NET documentation at <a href="https://docs.microsoft.com/en-us/dotnet/api/System.ServiceProcess.ServiceControllerPermissionAttribute" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.ServiceProcess.ServiceControllerPermissionAttribute</a>
+ * <p>
+ *
+ * Powered by JCOBridge: more info at <a href="https://www.jcobridge.com" target="_top">https://www.jcobridge.com</a>
  */
 public class ServiceControllerPermissionAttribute extends CodeAccessSecurityAttribute  {
     /**

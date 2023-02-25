@@ -45,7 +45,10 @@ import system.runtime.caching.MemoryCache;
  * The base .NET class managing System.Runtime.Caching.Hosting.IMemoryCacheManager, System.Runtime.Caching, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a.
  * <p>
  * 
- * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Runtime.Caching.Hosting.IMemoryCacheManager" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Runtime.Caching.Hosting.IMemoryCacheManager</a>
+ * .NET documentation at <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Runtime.Caching.Hosting.IMemoryCacheManager" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Runtime.Caching.Hosting.IMemoryCacheManager</a>
+ * <p>
+ *
+ * Powered by JCOBridge: more info at <a href="https://www.jcobridge.com" target="_top">https://www.jcobridge.com</a>
  */
 public class IMemoryCacheManagerImplementation extends NetObject implements IMemoryCacheManager {
     /**

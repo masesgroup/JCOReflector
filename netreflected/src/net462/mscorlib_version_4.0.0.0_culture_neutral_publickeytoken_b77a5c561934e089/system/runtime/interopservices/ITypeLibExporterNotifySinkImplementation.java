@@ -46,7 +46,10 @@ import system.runtime.interopservices.ExporterEventKind;
  * The base .NET class managing System.Runtime.InteropServices.ITypeLibExporterNotifySink, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089.
  * <p>
  * 
- * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Runtime.InteropServices.ITypeLibExporterNotifySink" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Runtime.InteropServices.ITypeLibExporterNotifySink</a>
+ * .NET documentation at <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Runtime.InteropServices.ITypeLibExporterNotifySink" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Runtime.InteropServices.ITypeLibExporterNotifySink</a>
+ * <p>
+ *
+ * Powered by JCOBridge: more info at <a href="https://www.jcobridge.com" target="_top">https://www.jcobridge.com</a>
  */
 public class ITypeLibExporterNotifySinkImplementation extends NetObject implements ITypeLibExporterNotifySink {
     /**

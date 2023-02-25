@@ -52,7 +52,10 @@ import system.net.networkinformation.OperationalStatus;
  * The base .NET class managing System.Net.NetworkInformation.NetworkInterface, System, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089.
  * <p>
  * 
- * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Net.NetworkInformation.NetworkInterface" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Net.NetworkInformation.NetworkInterface</a>
+ * .NET documentation at <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Net.NetworkInformation.NetworkInterface" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Net.NetworkInformation.NetworkInterface</a>
+ * <p>
+ *
+ * Powered by JCOBridge: more info at <a href="https://www.jcobridge.com" target="_top">https://www.jcobridge.com</a>
  */
 public class NetworkInterface extends NetObject  {
     /**

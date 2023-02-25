@@ -45,7 +45,10 @@ import system.security.SecurityElement;
  * The base .NET class managing System.Security.ISecurityEncodable, System.Private.CoreLib, Version=6.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e.
  * <p>
  * 
- * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Security.ISecurityEncodable" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Security.ISecurityEncodable</a>
+ * .NET documentation at <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Security.ISecurityEncodable" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Security.ISecurityEncodable</a>
+ * <p>
+ *
+ * Powered by JCOBridge: more info at <a href="https://www.jcobridge.com" target="_top">https://www.jcobridge.com</a>
  */
 public class ISecurityEncodableImplementation extends NetObject implements ISecurityEncodable {
     /**

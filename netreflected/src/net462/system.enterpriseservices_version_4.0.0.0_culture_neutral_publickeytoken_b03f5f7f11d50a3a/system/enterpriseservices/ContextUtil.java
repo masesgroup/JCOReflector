@@ -47,7 +47,10 @@ import system.transactions.Transaction;
  * The base .NET class managing System.EnterpriseServices.ContextUtil, System.EnterpriseServices, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a.
  * <p>
  * 
- * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.EnterpriseServices.ContextUtil" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.EnterpriseServices.ContextUtil</a>
+ * .NET documentation at <a href="https://docs.microsoft.com/en-us/dotnet/api/System.EnterpriseServices.ContextUtil" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.EnterpriseServices.ContextUtil</a>
+ * <p>
+ *
+ * Powered by JCOBridge: more info at <a href="https://www.jcobridge.com" target="_top">https://www.jcobridge.com</a>
  */
 public class ContextUtil extends NetObject  {
     /**

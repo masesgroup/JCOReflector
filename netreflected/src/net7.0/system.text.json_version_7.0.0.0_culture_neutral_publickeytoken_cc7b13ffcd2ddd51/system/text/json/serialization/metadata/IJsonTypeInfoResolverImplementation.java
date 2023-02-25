@@ -46,7 +46,10 @@ import system.text.json.JsonSerializerOptions;
  * The base .NET class managing System.Text.Json.Serialization.Metadata.IJsonTypeInfoResolver, System.Text.Json, Version=7.0.0.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51.
  * <p>
  * 
- * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Text.Json.Serialization.Metadata.IJsonTypeInfoResolver" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Text.Json.Serialization.Metadata.IJsonTypeInfoResolver</a>
+ * .NET documentation at <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Text.Json.Serialization.Metadata.IJsonTypeInfoResolver" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Text.Json.Serialization.Metadata.IJsonTypeInfoResolver</a>
+ * <p>
+ *
+ * Powered by JCOBridge: more info at <a href="https://www.jcobridge.com" target="_top">https://www.jcobridge.com</a>
  */
 public class IJsonTypeInfoResolverImplementation extends NetObject implements IJsonTypeInfoResolver {
     /**

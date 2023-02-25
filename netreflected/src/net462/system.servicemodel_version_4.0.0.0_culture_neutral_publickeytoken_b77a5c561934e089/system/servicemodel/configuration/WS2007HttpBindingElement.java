@@ -45,7 +45,10 @@ import system.servicemodel.configuration.WSHttpBindingElement;
  * The base .NET class managing System.ServiceModel.Configuration.WS2007HttpBindingElement, System.ServiceModel, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089.
  * <p>
  * 
- * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.ServiceModel.Configuration.WS2007HttpBindingElement" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.ServiceModel.Configuration.WS2007HttpBindingElement</a>
+ * .NET documentation at <a href="https://docs.microsoft.com/en-us/dotnet/api/System.ServiceModel.Configuration.WS2007HttpBindingElement" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.ServiceModel.Configuration.WS2007HttpBindingElement</a>
+ * <p>
+ *
+ * Powered by JCOBridge: more info at <a href="https://www.jcobridge.com" target="_top">https://www.jcobridge.com</a>
  */
 public class WS2007HttpBindingElement extends WSHttpBindingElement  {
     /**

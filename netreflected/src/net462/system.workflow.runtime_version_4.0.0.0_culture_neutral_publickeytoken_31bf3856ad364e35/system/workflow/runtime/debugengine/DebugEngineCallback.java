@@ -43,7 +43,10 @@ import system.workflow.runtime.debugengine.IDebugEngineCallback;
  * The base .NET class managing System.Workflow.Runtime.DebugEngine.DebugEngineCallback, System.Workflow.Runtime, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35.
  * <p>
  * 
- * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Workflow.Runtime.DebugEngine.DebugEngineCallback" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Workflow.Runtime.DebugEngine.DebugEngineCallback</a>
+ * .NET documentation at <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Workflow.Runtime.DebugEngine.DebugEngineCallback" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Workflow.Runtime.DebugEngine.DebugEngineCallback</a>
+ * <p>
+ *
+ * Powered by JCOBridge: more info at <a href="https://www.jcobridge.com" target="_top">https://www.jcobridge.com</a>
  */
 public class DebugEngineCallback extends JCVoidDelegate implements IJCVoidEventEmit, IJCOBridgeReflected {
     /**

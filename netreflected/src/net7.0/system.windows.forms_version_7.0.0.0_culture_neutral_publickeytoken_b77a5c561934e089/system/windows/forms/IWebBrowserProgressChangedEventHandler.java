@@ -43,7 +43,10 @@ import system.windows.forms.WebBrowserProgressChangedEventArgs;
  * The Java interface to be implemented to receive events from the CLR using {@link WebBrowserProgressChangedEventHandler}.
  * <p>
  * 
- * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Windows.Forms.WebBrowserProgressChangedEventHandler" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Windows.Forms.WebBrowserProgressChangedEventHandler</a>
+ * .NET documentation at <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Windows.Forms.WebBrowserProgressChangedEventHandler" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Windows.Forms.WebBrowserProgressChangedEventHandler</a>
+ * <p>
+ *
+ * Powered by JCOBridge: more info at <a href="https://www.jcobridge.com" target="_top">https://www.jcobridge.com</a>
  */
 public interface IWebBrowserProgressChangedEventHandler {
     public void Invoke(NetObject sender, WebBrowserProgressChangedEventArgs e);

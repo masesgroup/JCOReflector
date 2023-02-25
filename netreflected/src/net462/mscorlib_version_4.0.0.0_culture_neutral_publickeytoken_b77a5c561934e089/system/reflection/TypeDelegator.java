@@ -61,7 +61,10 @@ import system.RuntimeTypeHandle;
  * The base .NET class managing System.Reflection.TypeDelegator, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089.
  * <p>
  * 
- * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Reflection.TypeDelegator" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Reflection.TypeDelegator</a>
+ * .NET documentation at <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Reflection.TypeDelegator" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Reflection.TypeDelegator</a>
+ * <p>
+ *
+ * Powered by JCOBridge: more info at <a href="https://www.jcobridge.com" target="_top">https://www.jcobridge.com</a>
  */
 public class TypeDelegator extends TypeInfo  {
     /**

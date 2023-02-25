@@ -45,7 +45,10 @@ import system.codedom.CodeObject;
  * The base .NET class managing System.CodeDom.CodeComment, System, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089.
  * <p>
  * 
- * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.CodeDom.CodeComment" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.CodeDom.CodeComment</a>
+ * .NET documentation at <a href="https://docs.microsoft.com/en-us/dotnet/api/System.CodeDom.CodeComment" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.CodeDom.CodeComment</a>
+ * <p>
+ *
+ * Powered by JCOBridge: more info at <a href="https://www.jcobridge.com" target="_top">https://www.jcobridge.com</a>
  */
 public class CodeComment extends CodeObject  {
     /**

@@ -43,7 +43,10 @@ import system.windows.forms.StatusBarPanelClickEventArgs;
  * The Java interface to be implemented to receive events from the CLR using {@link StatusBarPanelClickEventHandler}.
  * <p>
  * 
- * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Windows.Forms.StatusBarPanelClickEventHandler" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Windows.Forms.StatusBarPanelClickEventHandler</a>
+ * .NET documentation at <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Windows.Forms.StatusBarPanelClickEventHandler" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Windows.Forms.StatusBarPanelClickEventHandler</a>
+ * <p>
+ *
+ * Powered by JCOBridge: more info at <a href="https://www.jcobridge.com" target="_top">https://www.jcobridge.com</a>
  */
 public interface IStatusBarPanelClickEventHandler {
     public void Invoke(NetObject sender, StatusBarPanelClickEventArgs e);

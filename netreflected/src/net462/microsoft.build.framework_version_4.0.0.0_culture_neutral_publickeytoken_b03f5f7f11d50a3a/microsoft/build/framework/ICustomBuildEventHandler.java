@@ -43,7 +43,10 @@ import microsoft.build.framework.CustomBuildEventArgs;
  * The Java interface to be implemented to receive events from the CLR using {@link CustomBuildEventHandler}.
  * <p>
  * 
- * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/Microsoft.Build.Framework.CustomBuildEventHandler" target="_top">https://docs.microsoft.com/en-us/dotnet/api/Microsoft.Build.Framework.CustomBuildEventHandler</a>
+ * .NET documentation at <a href="https://docs.microsoft.com/en-us/dotnet/api/Microsoft.Build.Framework.CustomBuildEventHandler" target="_top">https://docs.microsoft.com/en-us/dotnet/api/Microsoft.Build.Framework.CustomBuildEventHandler</a>
+ * <p>
+ *
+ * Powered by JCOBridge: more info at <a href="https://www.jcobridge.com" target="_top">https://www.jcobridge.com</a>
  */
 public interface ICustomBuildEventHandler {
     public void Invoke(NetObject sender, CustomBuildEventArgs e);

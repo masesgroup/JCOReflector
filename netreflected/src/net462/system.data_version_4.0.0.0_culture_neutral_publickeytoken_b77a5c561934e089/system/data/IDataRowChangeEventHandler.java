@@ -43,7 +43,10 @@ import system.data.DataRowChangeEventArgs;
  * The Java interface to be implemented to receive events from the CLR using {@link DataRowChangeEventHandler}.
  * <p>
  * 
- * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Data.DataRowChangeEventHandler" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Data.DataRowChangeEventHandler</a>
+ * .NET documentation at <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Data.DataRowChangeEventHandler" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Data.DataRowChangeEventHandler</a>
+ * <p>
+ *
+ * Powered by JCOBridge: more info at <a href="https://www.jcobridge.com" target="_top">https://www.jcobridge.com</a>
  */
 public interface IDataRowChangeEventHandler {
     public void Invoke(NetObject sender, DataRowChangeEventArgs e);

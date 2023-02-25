@@ -46,7 +46,10 @@ import system.workflow.componentmodel.compiler.AccessTypes;
  * The base .NET class managing System.Workflow.ComponentModel.IDynamicPropertyTypeProvider, System.Workflow.ComponentModel, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35.
  * <p>
  * 
- * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Workflow.ComponentModel.IDynamicPropertyTypeProvider" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Workflow.ComponentModel.IDynamicPropertyTypeProvider</a>
+ * .NET documentation at <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Workflow.ComponentModel.IDynamicPropertyTypeProvider" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Workflow.ComponentModel.IDynamicPropertyTypeProvider</a>
+ * <p>
+ *
+ * Powered by JCOBridge: more info at <a href="https://www.jcobridge.com" target="_top">https://www.jcobridge.com</a>
  */
 public interface IDynamicPropertyTypeProvider extends IJCOBridgeReflected {
     /**

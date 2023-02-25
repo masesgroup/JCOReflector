@@ -43,7 +43,10 @@ import system.windows.documents.PagesChangedEventArgs;
  * The Java interface to be implemented to receive events from the CLR using {@link PagesChangedEventHandler}.
  * <p>
  * 
- * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Windows.Documents.PagesChangedEventHandler" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Windows.Documents.PagesChangedEventHandler</a>
+ * .NET documentation at <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Windows.Documents.PagesChangedEventHandler" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Windows.Documents.PagesChangedEventHandler</a>
+ * <p>
+ *
+ * Powered by JCOBridge: more info at <a href="https://www.jcobridge.com" target="_top">https://www.jcobridge.com</a>
  */
 public interface IPagesChangedEventHandler {
     public void Invoke(NetObject sender, PagesChangedEventArgs e);

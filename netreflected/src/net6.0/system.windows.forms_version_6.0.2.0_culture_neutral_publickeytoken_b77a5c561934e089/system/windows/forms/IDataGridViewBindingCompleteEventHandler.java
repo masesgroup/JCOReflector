@@ -43,7 +43,10 @@ import system.windows.forms.DataGridViewBindingCompleteEventArgs;
  * The Java interface to be implemented to receive events from the CLR using {@link DataGridViewBindingCompleteEventHandler}.
  * <p>
  * 
- * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Windows.Forms.DataGridViewBindingCompleteEventHandler" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Windows.Forms.DataGridViewBindingCompleteEventHandler</a>
+ * .NET documentation at <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Windows.Forms.DataGridViewBindingCompleteEventHandler" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Windows.Forms.DataGridViewBindingCompleteEventHandler</a>
+ * <p>
+ *
+ * Powered by JCOBridge: more info at <a href="https://www.jcobridge.com" target="_top">https://www.jcobridge.com</a>
  */
 public interface IDataGridViewBindingCompleteEventHandler {
     public void Invoke(NetObject sender, DataGridViewBindingCompleteEventArgs e);

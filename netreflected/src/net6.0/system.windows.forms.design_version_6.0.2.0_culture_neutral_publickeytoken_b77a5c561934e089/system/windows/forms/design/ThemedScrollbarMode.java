@@ -43,7 +43,10 @@ import org.mases.jcobridge.netreflection.*;
  * The base .NET class managing System.Windows.Forms.Design.ThemedScrollbarMode, System.Windows.Forms.Design, Version=6.0.2.0, Culture=neutral, PublicKeyToken=b77a5c561934e089.
  * <p>
  * 
- * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Windows.Forms.Design.ThemedScrollbarMode" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Windows.Forms.Design.ThemedScrollbarMode</a>
+ * .NET documentation at <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Windows.Forms.Design.ThemedScrollbarMode" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Windows.Forms.Design.ThemedScrollbarMode</a>
+ * <p>
+ *
+ * Powered by JCOBridge: more info at <a href="https://www.jcobridge.com" target="_top">https://www.jcobridge.com</a>
  */
 public class ThemedScrollbarMode extends NetObject  {
     /**

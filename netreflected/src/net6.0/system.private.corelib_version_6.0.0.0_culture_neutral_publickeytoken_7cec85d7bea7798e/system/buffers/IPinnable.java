@@ -44,7 +44,10 @@ import system.buffers.MemoryHandle;
  * The base .NET class managing System.Buffers.IPinnable, System.Private.CoreLib, Version=6.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e.
  * <p>
  * 
- * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Buffers.IPinnable" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Buffers.IPinnable</a>
+ * .NET documentation at <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Buffers.IPinnable" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Buffers.IPinnable</a>
+ * <p>
+ *
+ * Powered by JCOBridge: more info at <a href="https://www.jcobridge.com" target="_top">https://www.jcobridge.com</a>
  */
 public interface IPinnable extends IJCOBridgeReflected {
     /**

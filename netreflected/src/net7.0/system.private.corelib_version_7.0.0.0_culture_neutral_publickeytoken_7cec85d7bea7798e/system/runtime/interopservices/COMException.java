@@ -44,7 +44,10 @@ import system.runtime.interopservices.ExternalException;
  * The base .NET class managing System.Runtime.InteropServices.COMException, System.Private.CoreLib, Version=7.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e.
  * <p>
  * 
- * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Runtime.InteropServices.COMException" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Runtime.InteropServices.COMException</a>
+ * .NET documentation at <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Runtime.InteropServices.COMException" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Runtime.InteropServices.COMException</a>
+ * <p>
+ *
+ * Powered by JCOBridge: more info at <a href="https://www.jcobridge.com" target="_top">https://www.jcobridge.com</a>
  */
 public class COMException extends ExternalException {
     /**

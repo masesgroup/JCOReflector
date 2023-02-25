@@ -43,7 +43,10 @@ import system.windows.forms.ToolStripItemImageRenderEventArgs;
  * The Java interface to be implemented to receive events from the CLR using {@link ToolStripItemImageRenderEventHandler}.
  * <p>
  * 
- * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Windows.Forms.ToolStripItemImageRenderEventHandler" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Windows.Forms.ToolStripItemImageRenderEventHandler</a>
+ * .NET documentation at <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Windows.Forms.ToolStripItemImageRenderEventHandler" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Windows.Forms.ToolStripItemImageRenderEventHandler</a>
+ * <p>
+ *
+ * Powered by JCOBridge: more info at <a href="https://www.jcobridge.com" target="_top">https://www.jcobridge.com</a>
  */
 public interface IToolStripItemImageRenderEventHandler {
     public void Invoke(NetObject sender, ToolStripItemImageRenderEventArgs e);

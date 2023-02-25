@@ -43,7 +43,10 @@ import system.windows.ink.PropertyDataChangedEventArgs;
  * The Java interface to be implemented to receive events from the CLR using {@link PropertyDataChangedEventHandler}.
  * <p>
  * 
- * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Windows.Ink.PropertyDataChangedEventHandler" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Windows.Ink.PropertyDataChangedEventHandler</a>
+ * .NET documentation at <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Windows.Ink.PropertyDataChangedEventHandler" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Windows.Ink.PropertyDataChangedEventHandler</a>
+ * <p>
+ *
+ * Powered by JCOBridge: more info at <a href="https://www.jcobridge.com" target="_top">https://www.jcobridge.com</a>
  */
 public interface IPropertyDataChangedEventHandler {
     public void Invoke(NetObject sender, PropertyDataChangedEventArgs e);

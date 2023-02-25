@@ -44,7 +44,10 @@ import java.util.ArrayList;
  * The base .NET class managing System.Activities.Debugger.SourceLocation, System.Activities, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35.
  * <p>
  * 
- * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Activities.Debugger.SourceLocation" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Activities.Debugger.SourceLocation</a>
+ * .NET documentation at <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Activities.Debugger.SourceLocation" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Activities.Debugger.SourceLocation</a>
+ * <p>
+ *
+ * Powered by JCOBridge: more info at <a href="https://www.jcobridge.com" target="_top">https://www.jcobridge.com</a>
  */
 public class SourceLocation extends NetObject  {
     /**

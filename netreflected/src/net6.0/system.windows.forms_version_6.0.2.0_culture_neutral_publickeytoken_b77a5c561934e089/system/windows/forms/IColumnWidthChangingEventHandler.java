@@ -43,7 +43,10 @@ import system.windows.forms.ColumnWidthChangingEventArgs;
  * The Java interface to be implemented to receive events from the CLR using {@link ColumnWidthChangingEventHandler}.
  * <p>
  * 
- * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Windows.Forms.ColumnWidthChangingEventHandler" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Windows.Forms.ColumnWidthChangingEventHandler</a>
+ * .NET documentation at <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Windows.Forms.ColumnWidthChangingEventHandler" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Windows.Forms.ColumnWidthChangingEventHandler</a>
+ * <p>
+ *
+ * Powered by JCOBridge: more info at <a href="https://www.jcobridge.com" target="_top">https://www.jcobridge.com</a>
  */
 public interface IColumnWidthChangingEventHandler {
     public void Invoke(NetObject sender, ColumnWidthChangingEventArgs e);

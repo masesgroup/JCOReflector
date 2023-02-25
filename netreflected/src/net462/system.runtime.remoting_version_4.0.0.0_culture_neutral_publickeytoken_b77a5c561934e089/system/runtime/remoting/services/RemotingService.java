@@ -51,7 +51,10 @@ import system.web.sessionstate.HttpSessionState;
  * The base .NET class managing System.Runtime.Remoting.Services.RemotingService, System.Runtime.Remoting, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089.
  * <p>
  * 
- * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Runtime.Remoting.Services.RemotingService" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Runtime.Remoting.Services.RemotingService</a>
+ * .NET documentation at <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Runtime.Remoting.Services.RemotingService" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Runtime.Remoting.Services.RemotingService</a>
+ * <p>
+ *
+ * Powered by JCOBridge: more info at <a href="https://www.jcobridge.com" target="_top">https://www.jcobridge.com</a>
  */
 public class RemotingService extends Component  {
     /**

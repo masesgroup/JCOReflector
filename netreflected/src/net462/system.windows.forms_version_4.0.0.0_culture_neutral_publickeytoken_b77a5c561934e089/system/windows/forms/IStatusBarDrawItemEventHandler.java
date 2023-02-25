@@ -43,7 +43,10 @@ import system.windows.forms.StatusBarDrawItemEventArgs;
  * The Java interface to be implemented to receive events from the CLR using {@link StatusBarDrawItemEventHandler}.
  * <p>
  * 
- * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Windows.Forms.StatusBarDrawItemEventHandler" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Windows.Forms.StatusBarDrawItemEventHandler</a>
+ * .NET documentation at <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Windows.Forms.StatusBarDrawItemEventHandler" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Windows.Forms.StatusBarDrawItemEventHandler</a>
+ * <p>
+ *
+ * Powered by JCOBridge: more info at <a href="https://www.jcobridge.com" target="_top">https://www.jcobridge.com</a>
  */
 public interface IStatusBarDrawItemEventHandler {
     public void Invoke(NetObject sender, StatusBarDrawItemEventArgs sbdevent);

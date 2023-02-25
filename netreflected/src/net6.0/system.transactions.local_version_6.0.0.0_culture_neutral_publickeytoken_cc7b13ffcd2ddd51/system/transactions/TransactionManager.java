@@ -50,7 +50,10 @@ import system.transactions.HostCurrentTransactionCallback;
  * The base .NET class managing System.Transactions.TransactionManager, System.Transactions.Local, Version=6.0.0.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51.
  * <p>
  * 
- * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Transactions.TransactionManager" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Transactions.TransactionManager</a>
+ * .NET documentation at <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Transactions.TransactionManager" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Transactions.TransactionManager</a>
+ * <p>
+ *
+ * Powered by JCOBridge: more info at <a href="https://www.jcobridge.com" target="_top">https://www.jcobridge.com</a>
  */
 public class TransactionManager extends NetObject  {
     /**

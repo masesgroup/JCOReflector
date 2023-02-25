@@ -43,7 +43,10 @@ import system.windows.input.TextCompositionEventArgs;
  * The Java interface to be implemented to receive events from the CLR using {@link TextCompositionEventHandler}.
  * <p>
  * 
- * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Windows.Input.TextCompositionEventHandler" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Windows.Input.TextCompositionEventHandler</a>
+ * .NET documentation at <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Windows.Input.TextCompositionEventHandler" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Windows.Input.TextCompositionEventHandler</a>
+ * <p>
+ *
+ * Powered by JCOBridge: more info at <a href="https://www.jcobridge.com" target="_top">https://www.jcobridge.com</a>
  */
 public interface ITextCompositionEventHandler {
     public void Invoke(NetObject sender, TextCompositionEventArgs e);

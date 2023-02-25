@@ -43,7 +43,10 @@ import system.web.ui.webcontrols.SqlDataSourceFilteringEventArgs;
  * The Java interface to be implemented to receive events from the CLR using {@link SqlDataSourceFilteringEventHandler}.
  * <p>
  * 
- * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Web.UI.WebControls.SqlDataSourceFilteringEventHandler" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Web.UI.WebControls.SqlDataSourceFilteringEventHandler</a>
+ * .NET documentation at <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Web.UI.WebControls.SqlDataSourceFilteringEventHandler" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Web.UI.WebControls.SqlDataSourceFilteringEventHandler</a>
+ * <p>
+ *
+ * Powered by JCOBridge: more info at <a href="https://www.jcobridge.com" target="_top">https://www.jcobridge.com</a>
  */
 public interface ISqlDataSourceFilteringEventHandler {
     public void Invoke(NetObject sender, SqlDataSourceFilteringEventArgs e);

@@ -43,7 +43,10 @@ import system.windows.SourceChangedEventArgs;
  * The Java interface to be implemented to receive events from the CLR using {@link SourceChangedEventHandler}.
  * <p>
  * 
- * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Windows.SourceChangedEventHandler" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Windows.SourceChangedEventHandler</a>
+ * .NET documentation at <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Windows.SourceChangedEventHandler" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Windows.SourceChangedEventHandler</a>
+ * <p>
+ *
+ * Powered by JCOBridge: more info at <a href="https://www.jcobridge.com" target="_top">https://www.jcobridge.com</a>
  */
 public interface ISourceChangedEventHandler {
     public void Invoke(NetObject sender, SourceChangedEventArgs e);

@@ -45,7 +45,10 @@ import system.globalization.UnicodeCategory;
  * The base .NET class managing System.Globalization.CharUnicodeInfo, System.Private.CoreLib, Version=6.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e.
  * <p>
  * 
- * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Globalization.CharUnicodeInfo" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Globalization.CharUnicodeInfo</a>
+ * .NET documentation at <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Globalization.CharUnicodeInfo" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Globalization.CharUnicodeInfo</a>
+ * <p>
+ *
+ * Powered by JCOBridge: more info at <a href="https://www.jcobridge.com" target="_top">https://www.jcobridge.com</a>
  */
 public class CharUnicodeInfo extends NetObject  {
     /**

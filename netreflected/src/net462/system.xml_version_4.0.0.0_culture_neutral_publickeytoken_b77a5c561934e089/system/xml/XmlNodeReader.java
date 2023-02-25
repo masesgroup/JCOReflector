@@ -52,7 +52,10 @@ import system.xml.XmlSpace;
  * The base .NET class managing System.Xml.XmlNodeReader, System.Xml, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089.
  * <p>
  * 
- * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Xml.XmlNodeReader" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Xml.XmlNodeReader</a>
+ * .NET documentation at <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Xml.XmlNodeReader" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Xml.XmlNodeReader</a>
+ * <p>
+ *
+ * Powered by JCOBridge: more info at <a href="https://www.jcobridge.com" target="_top">https://www.jcobridge.com</a>
  */
 public class XmlNodeReader extends XmlReader  {
     /**

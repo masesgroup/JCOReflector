@@ -45,7 +45,10 @@ import system.runtime.interopservices.javascript.JSMarshalerType;
  * The base .NET class managing System.Runtime.InteropServices.JavaScript.JSMarshalerType, System.Runtime.InteropServices.JavaScript, Version=7.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a.
  * <p>
  * 
- * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Runtime.InteropServices.JavaScript.JSMarshalerType" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Runtime.InteropServices.JavaScript.JSMarshalerType</a>
+ * .NET documentation at <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Runtime.InteropServices.JavaScript.JSMarshalerType" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Runtime.InteropServices.JavaScript.JSMarshalerType</a>
+ * <p>
+ *
+ * Powered by JCOBridge: more info at <a href="https://www.jcobridge.com" target="_top">https://www.jcobridge.com</a>
  */
 public class JSMarshalerType extends NetObject  {
     /**

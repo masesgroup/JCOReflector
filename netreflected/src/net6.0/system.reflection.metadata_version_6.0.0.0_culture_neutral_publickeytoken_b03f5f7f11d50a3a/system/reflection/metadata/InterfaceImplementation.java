@@ -47,7 +47,10 @@ import system.reflection.metadata.EntityHandle;
  * The base .NET class managing System.Reflection.Metadata.InterfaceImplementation, System.Reflection.Metadata, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a.
  * <p>
  * 
- * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Reflection.Metadata.InterfaceImplementation" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Reflection.Metadata.InterfaceImplementation</a>
+ * .NET documentation at <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Reflection.Metadata.InterfaceImplementation" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Reflection.Metadata.InterfaceImplementation</a>
+ * <p>
+ *
+ * Powered by JCOBridge: more info at <a href="https://www.jcobridge.com" target="_top">https://www.jcobridge.com</a>
  */
 public class InterfaceImplementation extends ValueType  {
     /**

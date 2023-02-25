@@ -43,7 +43,10 @@ import org.mases.jcobridge.netreflection.*;
  * The base .NET class managing System.Configuration.ConfigurationPropertyOptions, System.Configuration, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a.
  * <p>
  * 
- * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Configuration.ConfigurationPropertyOptions" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Configuration.ConfigurationPropertyOptions</a>
+ * .NET documentation at <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Configuration.ConfigurationPropertyOptions" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Configuration.ConfigurationPropertyOptions</a>
+ * <p>
+ *
+ * Powered by JCOBridge: more info at <a href="https://www.jcobridge.com" target="_top">https://www.jcobridge.com</a>
  */
 public class ConfigurationPropertyOptions extends NetObject  {
     /**

@@ -43,7 +43,10 @@ import system.windows.input.PreProcessInputEventArgs;
  * The Java interface to be implemented to receive events from the CLR using {@link PreProcessInputEventHandler}.
  * <p>
  * 
- * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Windows.Input.PreProcessInputEventHandler" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Windows.Input.PreProcessInputEventHandler</a>
+ * .NET documentation at <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Windows.Input.PreProcessInputEventHandler" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Windows.Input.PreProcessInputEventHandler</a>
+ * <p>
+ *
+ * Powered by JCOBridge: more info at <a href="https://www.jcobridge.com" target="_top">https://www.jcobridge.com</a>
  */
 public interface IPreProcessInputEventHandler {
     public void Invoke(NetObject sender, PreProcessInputEventArgs e);

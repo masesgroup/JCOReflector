@@ -53,7 +53,10 @@ import system.windows.input.StylusDevice;
  * The base .NET class managing System.Windows.Input.Stylus, PresentationCore, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35.
  * <p>
  * 
- * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Windows.Input.Stylus" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Windows.Input.Stylus</a>
+ * .NET documentation at <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Windows.Input.Stylus" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Windows.Input.Stylus</a>
+ * <p>
+ *
+ * Powered by JCOBridge: more info at <a href="https://www.jcobridge.com" target="_top">https://www.jcobridge.com</a>
  */
 public class Stylus extends NetObject  {
     /**

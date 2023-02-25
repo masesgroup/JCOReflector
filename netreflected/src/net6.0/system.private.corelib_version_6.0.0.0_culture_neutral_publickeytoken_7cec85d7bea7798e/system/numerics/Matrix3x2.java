@@ -48,7 +48,10 @@ import system.numerics.Vector2;
  * The base .NET class managing System.Numerics.Matrix3x2, System.Private.CoreLib, Version=6.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e.
  * <p>
  * 
- * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Numerics.Matrix3x2" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Numerics.Matrix3x2</a>
+ * .NET documentation at <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Numerics.Matrix3x2" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Numerics.Matrix3x2</a>
+ * <p>
+ *
+ * Powered by JCOBridge: more info at <a href="https://www.jcobridge.com" target="_top">https://www.jcobridge.com</a>
  */
 public class Matrix3x2 extends ValueType  {
     /**

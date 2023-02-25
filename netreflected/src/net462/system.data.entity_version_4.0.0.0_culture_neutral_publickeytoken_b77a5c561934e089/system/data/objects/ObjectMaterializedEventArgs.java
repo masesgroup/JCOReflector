@@ -45,7 +45,10 @@ import system.EventArgs;
  * The base .NET class managing System.Data.Objects.ObjectMaterializedEventArgs, System.Data.Entity, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089.
  * <p>
  * 
- * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Data.Objects.ObjectMaterializedEventArgs" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Data.Objects.ObjectMaterializedEventArgs</a>
+ * .NET documentation at <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Data.Objects.ObjectMaterializedEventArgs" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Data.Objects.ObjectMaterializedEventArgs</a>
+ * <p>
+ *
+ * Powered by JCOBridge: more info at <a href="https://www.jcobridge.com" target="_top">https://www.jcobridge.com</a>
  */
 public class ObjectMaterializedEventArgs extends EventArgs  {
     /**

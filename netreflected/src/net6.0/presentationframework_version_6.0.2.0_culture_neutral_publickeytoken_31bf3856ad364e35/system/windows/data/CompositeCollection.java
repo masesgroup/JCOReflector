@@ -52,7 +52,10 @@ import system.windows.IWeakEventListenerImplementation;
  * The base .NET class managing System.Windows.Data.CompositeCollection, PresentationFramework, Version=6.0.2.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35.
  * <p>
  * 
- * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Windows.Data.CompositeCollection" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Windows.Data.CompositeCollection</a>
+ * .NET documentation at <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Windows.Data.CompositeCollection" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Windows.Data.CompositeCollection</a>
+ * <p>
+ *
+ * Powered by JCOBridge: more info at <a href="https://www.jcobridge.com" target="_top">https://www.jcobridge.com</a>
  */
 public class CompositeCollection extends NetObjectEnumerable implements system.componentmodel.ICollectionViewFactory, system.windows.IWeakEventListener {
     /**

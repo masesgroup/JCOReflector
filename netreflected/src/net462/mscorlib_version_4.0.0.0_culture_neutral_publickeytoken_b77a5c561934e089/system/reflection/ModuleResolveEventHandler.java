@@ -45,7 +45,10 @@ import system.reflection.IModuleResolveEventHandler;
  * The base .NET class managing System.Reflection.ModuleResolveEventHandler, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089. Extends {@link JCDelegate}.
  * <p>
  * 
- * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Reflection.ModuleResolveEventHandler" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Reflection.ModuleResolveEventHandler</a>
+ * .NET documentation at <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Reflection.ModuleResolveEventHandler" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Reflection.ModuleResolveEventHandler</a>
+ * <p>
+ *
+ * Powered by JCOBridge: more info at <a href="https://www.jcobridge.com" target="_top">https://www.jcobridge.com</a>
  */
 public class ModuleResolveEventHandler extends JCDelegate implements IJCEventEmit, IJCOBridgeReflected {
     /**

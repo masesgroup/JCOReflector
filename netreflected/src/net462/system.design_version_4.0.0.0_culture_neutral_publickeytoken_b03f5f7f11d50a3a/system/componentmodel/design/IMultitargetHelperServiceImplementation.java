@@ -44,7 +44,10 @@ import java.util.ArrayList;
  * The base .NET class managing System.ComponentModel.Design.IMultitargetHelperService, System.Design, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a.
  * <p>
  * 
- * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.ComponentModel.Design.IMultitargetHelperService" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.ComponentModel.Design.IMultitargetHelperService</a>
+ * .NET documentation at <a href="https://docs.microsoft.com/en-us/dotnet/api/System.ComponentModel.Design.IMultitargetHelperService" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.ComponentModel.Design.IMultitargetHelperService</a>
+ * <p>
+ *
+ * Powered by JCOBridge: more info at <a href="https://www.jcobridge.com" target="_top">https://www.jcobridge.com</a>
  */
 public class IMultitargetHelperServiceImplementation extends NetObject implements IMultitargetHelperService {
     /**

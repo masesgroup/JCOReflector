@@ -46,7 +46,10 @@ import system.UriIdnScope;
  * The base .NET class managing System.Configuration.IdnElement, System, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089.
  * <p>
  * 
- * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Configuration.IdnElement" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Configuration.IdnElement</a>
+ * .NET documentation at <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Configuration.IdnElement" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Configuration.IdnElement</a>
+ * <p>
+ *
+ * Powered by JCOBridge: more info at <a href="https://www.jcobridge.com" target="_top">https://www.jcobridge.com</a>
  */
 public class IdnElement extends ConfigurationElement  {
     /**

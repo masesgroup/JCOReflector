@@ -53,7 +53,10 @@ import system.workflow.runtime.WorkflowInstance;
  * The base .NET class managing System.Workflow.Activities.StateMachineWorkflowInstance, System.Workflow.Activities, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35.
  * <p>
  * 
- * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Workflow.Activities.StateMachineWorkflowInstance" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Workflow.Activities.StateMachineWorkflowInstance</a>
+ * .NET documentation at <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Workflow.Activities.StateMachineWorkflowInstance" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Workflow.Activities.StateMachineWorkflowInstance</a>
+ * <p>
+ *
+ * Powered by JCOBridge: more info at <a href="https://www.jcobridge.com" target="_top">https://www.jcobridge.com</a>
  */
 public class StateMachineWorkflowInstance extends NetObject  {
     /**

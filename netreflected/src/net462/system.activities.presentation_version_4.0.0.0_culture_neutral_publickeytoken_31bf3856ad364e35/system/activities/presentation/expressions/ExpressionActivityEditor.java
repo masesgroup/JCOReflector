@@ -47,7 +47,10 @@ import system.windows.controls.ScrollBarVisibility;
  * The base .NET class managing System.Activities.Presentation.Expressions.ExpressionActivityEditor, System.Activities.Presentation, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35.
  * <p>
  * 
- * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Activities.Presentation.Expressions.ExpressionActivityEditor" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Activities.Presentation.Expressions.ExpressionActivityEditor</a>
+ * .NET documentation at <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Activities.Presentation.Expressions.ExpressionActivityEditor" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Activities.Presentation.Expressions.ExpressionActivityEditor</a>
+ * <p>
+ *
+ * Powered by JCOBridge: more info at <a href="https://www.jcobridge.com" target="_top">https://www.jcobridge.com</a>
  */
 public class ExpressionActivityEditor extends UserControl  {
     /**

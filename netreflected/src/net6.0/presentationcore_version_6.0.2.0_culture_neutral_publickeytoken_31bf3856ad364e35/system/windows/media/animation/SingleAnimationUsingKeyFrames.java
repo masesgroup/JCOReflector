@@ -49,7 +49,10 @@ import system.windows.markup.IAddChildImplementation;
  * The base .NET class managing System.Windows.Media.Animation.SingleAnimationUsingKeyFrames, PresentationCore, Version=6.0.2.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35.
  * <p>
  * 
- * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Windows.Media.Animation.SingleAnimationUsingKeyFrames" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Windows.Media.Animation.SingleAnimationUsingKeyFrames</a>
+ * .NET documentation at <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Windows.Media.Animation.SingleAnimationUsingKeyFrames" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Windows.Media.Animation.SingleAnimationUsingKeyFrames</a>
+ * <p>
+ *
+ * Powered by JCOBridge: more info at <a href="https://www.jcobridge.com" target="_top">https://www.jcobridge.com</a>
  */
 public class SingleAnimationUsingKeyFrames extends SingleAnimationBase implements system.windows.markup.IAddChild {
     /**

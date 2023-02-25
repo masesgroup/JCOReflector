@@ -45,7 +45,10 @@ import system.printing.indexedproperties.PrintProperty;
  * The base .NET class managing System.Printing.IndexedProperties.PrintDriverProperty, System.Printing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35.
  * <p>
  * 
- * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Printing.IndexedProperties.PrintDriverProperty" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Printing.IndexedProperties.PrintDriverProperty</a>
+ * .NET documentation at <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Printing.IndexedProperties.PrintDriverProperty" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Printing.IndexedProperties.PrintDriverProperty</a>
+ * <p>
+ *
+ * Powered by JCOBridge: more info at <a href="https://www.jcobridge.com" target="_top">https://www.jcobridge.com</a>
  */
 public class PrintDriverProperty extends PrintProperty  {
     /**

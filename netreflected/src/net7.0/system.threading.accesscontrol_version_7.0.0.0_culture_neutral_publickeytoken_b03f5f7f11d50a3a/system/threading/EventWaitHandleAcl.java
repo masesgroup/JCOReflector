@@ -48,7 +48,10 @@ import system.security.accesscontrol.EventWaitHandleSecurity;
  * The base .NET class managing System.Threading.EventWaitHandleAcl, System.Threading.AccessControl, Version=7.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a.
  * <p>
  * 
- * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Threading.EventWaitHandleAcl" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Threading.EventWaitHandleAcl</a>
+ * .NET documentation at <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Threading.EventWaitHandleAcl" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Threading.EventWaitHandleAcl</a>
+ * <p>
+ *
+ * Powered by JCOBridge: more info at <a href="https://www.jcobridge.com" target="_top">https://www.jcobridge.com</a>
  */
 public class EventWaitHandleAcl extends NetObject  {
     /**

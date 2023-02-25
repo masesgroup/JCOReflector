@@ -45,7 +45,10 @@ import system.collections.IDictionaryImplementation;
  * The base .NET class managing System.ComponentModel.Design.IDesignerFilter, System.ComponentModel.TypeConverter, Version=7.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a.
  * <p>
  * 
- * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.ComponentModel.Design.IDesignerFilter" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.ComponentModel.Design.IDesignerFilter</a>
+ * .NET documentation at <a href="https://docs.microsoft.com/en-us/dotnet/api/System.ComponentModel.Design.IDesignerFilter" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.ComponentModel.Design.IDesignerFilter</a>
+ * <p>
+ *
+ * Powered by JCOBridge: more info at <a href="https://www.jcobridge.com" target="_top">https://www.jcobridge.com</a>
  */
 public interface IDesignerFilter extends IJCOBridgeReflected {
     /**

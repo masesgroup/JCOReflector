@@ -46,7 +46,10 @@ import system.security.cryptography.SHA256;
  * The base .NET class managing System.Security.Cryptography.SHA256, System.Security.Cryptography.Algorithms, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a.
  * <p>
  * 
- * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Security.Cryptography.SHA256" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Security.Cryptography.SHA256</a>
+ * .NET documentation at <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Security.Cryptography.SHA256" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Security.Cryptography.SHA256</a>
+ * <p>
+ *
+ * Powered by JCOBridge: more info at <a href="https://www.jcobridge.com" target="_top">https://www.jcobridge.com</a>
  */
 public class SHA256 extends HashAlgorithm  {
     /**

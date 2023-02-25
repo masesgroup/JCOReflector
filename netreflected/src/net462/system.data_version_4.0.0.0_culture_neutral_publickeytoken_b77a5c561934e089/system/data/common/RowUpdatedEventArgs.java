@@ -51,7 +51,10 @@ import system.data.UpdateStatus;
  * The base .NET class managing System.Data.Common.RowUpdatedEventArgs, System.Data, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089.
  * <p>
  * 
- * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Data.Common.RowUpdatedEventArgs" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Data.Common.RowUpdatedEventArgs</a>
+ * .NET documentation at <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Data.Common.RowUpdatedEventArgs" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Data.Common.RowUpdatedEventArgs</a>
+ * <p>
+ *
+ * Powered by JCOBridge: more info at <a href="https://www.jcobridge.com" target="_top">https://www.jcobridge.com</a>
  */
 public class RowUpdatedEventArgs extends EventArgs  {
     /**

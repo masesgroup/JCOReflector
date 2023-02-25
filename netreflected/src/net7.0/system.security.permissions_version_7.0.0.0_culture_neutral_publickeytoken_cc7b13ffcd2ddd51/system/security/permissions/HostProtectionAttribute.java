@@ -49,7 +49,10 @@ import system.security.permissions.HostProtectionResource;
  * The base .NET class managing System.Security.Permissions.HostProtectionAttribute, System.Security.Permissions, Version=7.0.0.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51.
  * <p>
  * 
- * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Security.Permissions.HostProtectionAttribute" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Security.Permissions.HostProtectionAttribute</a>
+ * .NET documentation at <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Security.Permissions.HostProtectionAttribute" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Security.Permissions.HostProtectionAttribute</a>
+ * <p>
+ *
+ * Powered by JCOBridge: more info at <a href="https://www.jcobridge.com" target="_top">https://www.jcobridge.com</a>
  */
 public class HostProtectionAttribute extends CodeAccessSecurityAttribute  {
     /**

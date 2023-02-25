@@ -46,7 +46,10 @@ import system.UInt32;
  * The base .NET class managing System.Runtime.InteropServices._TypeBuilder, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089.
  * <p>
  * 
- * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Runtime.InteropServices._TypeBuilder" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Runtime.InteropServices._TypeBuilder</a>
+ * .NET documentation at <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Runtime.InteropServices._TypeBuilder" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Runtime.InteropServices._TypeBuilder</a>
+ * <p>
+ *
+ * Powered by JCOBridge: more info at <a href="https://www.jcobridge.com" target="_top">https://www.jcobridge.com</a>
  */
 public class _TypeBuilderImplementation extends NetObject implements _TypeBuilder {
     /**

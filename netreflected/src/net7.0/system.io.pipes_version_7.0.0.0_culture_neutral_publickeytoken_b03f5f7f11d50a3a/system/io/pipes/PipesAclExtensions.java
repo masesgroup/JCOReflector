@@ -46,7 +46,10 @@ import system.io.pipes.PipeStream;
  * The base .NET class managing System.IO.Pipes.PipesAclExtensions, System.IO.Pipes, Version=7.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a.
  * <p>
  * 
- * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.IO.Pipes.PipesAclExtensions" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.IO.Pipes.PipesAclExtensions</a>
+ * .NET documentation at <a href="https://docs.microsoft.com/en-us/dotnet/api/System.IO.Pipes.PipesAclExtensions" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.IO.Pipes.PipesAclExtensions</a>
+ * <p>
+ *
+ * Powered by JCOBridge: more info at <a href="https://www.jcobridge.com" target="_top">https://www.jcobridge.com</a>
  */
 public class PipesAclExtensions extends NetObject  {
     /**

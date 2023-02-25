@@ -44,7 +44,10 @@ import java.util.ArrayList;
  * The base .NET class managing System.Drawing.Imaging.PropertyItem, System.Drawing.Common, Version=7.0.0.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51.
  * <p>
  * 
- * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Drawing.Imaging.PropertyItem" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Drawing.Imaging.PropertyItem</a>
+ * .NET documentation at <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Drawing.Imaging.PropertyItem" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Drawing.Imaging.PropertyItem</a>
+ * <p>
+ *
+ * Powered by JCOBridge: more info at <a href="https://www.jcobridge.com" target="_top">https://www.jcobridge.com</a>
  */
 public class PropertyItem extends NetObject  {
     /**

@@ -44,7 +44,10 @@ import system.SystemException;
  * The base .NET class managing System.Threading.SynchronizationLockException, System.Private.CoreLib, Version=6.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e.
  * <p>
  * 
- * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Threading.SynchronizationLockException" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Threading.SynchronizationLockException</a>
+ * .NET documentation at <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Threading.SynchronizationLockException" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Threading.SynchronizationLockException</a>
+ * <p>
+ *
+ * Powered by JCOBridge: more info at <a href="https://www.jcobridge.com" target="_top">https://www.jcobridge.com</a>
  */
 public class SynchronizationLockException extends SystemException {
     /**

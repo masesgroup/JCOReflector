@@ -54,7 +54,10 @@ import system.runtime.serialization.IDeserializationCallbackImplementation;
  * The base .NET class managing System.TimeZoneInfo, System.Private.CoreLib, Version=7.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e.
  * <p>
  * 
- * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.TimeZoneInfo" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.TimeZoneInfo</a>
+ * .NET documentation at <a href="https://docs.microsoft.com/en-us/dotnet/api/System.TimeZoneInfo" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.TimeZoneInfo</a>
+ * <p>
+ *
+ * Powered by JCOBridge: more info at <a href="https://www.jcobridge.com" target="_top">https://www.jcobridge.com</a>
  */
 public class TimeZoneInfo extends NetObject implements system.runtime.serialization.ISerializable, system.runtime.serialization.IDeserializationCallback {
     /**

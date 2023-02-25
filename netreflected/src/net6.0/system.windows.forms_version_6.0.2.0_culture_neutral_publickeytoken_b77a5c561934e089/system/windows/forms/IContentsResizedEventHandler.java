@@ -43,7 +43,10 @@ import system.windows.forms.ContentsResizedEventArgs;
  * The Java interface to be implemented to receive events from the CLR using {@link ContentsResizedEventHandler}.
  * <p>
  * 
- * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Windows.Forms.ContentsResizedEventHandler" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Windows.Forms.ContentsResizedEventHandler</a>
+ * .NET documentation at <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Windows.Forms.ContentsResizedEventHandler" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Windows.Forms.ContentsResizedEventHandler</a>
+ * <p>
+ *
+ * Powered by JCOBridge: more info at <a href="https://www.jcobridge.com" target="_top">https://www.jcobridge.com</a>
  */
 public interface IContentsResizedEventHandler {
     public void Invoke(NetObject sender, ContentsResizedEventArgs e);

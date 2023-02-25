@@ -63,7 +63,10 @@ import system.xml.serialization.IXmlSerializableImplementation;
  * The base .NET class managing System.Xml.Linq.XElement, System.Private.Xml.Linq, Version=6.0.0.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51.
  * <p>
  * 
- * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Xml.Linq.XElement" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Xml.Linq.XElement</a>
+ * .NET documentation at <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Xml.Linq.XElement" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Xml.Linq.XElement</a>
+ * <p>
+ *
+ * Powered by JCOBridge: more info at <a href="https://www.jcobridge.com" target="_top">https://www.jcobridge.com</a>
  */
 public class XElement extends XContainer implements system.xml.serialization.IXmlSerializable {
     /**

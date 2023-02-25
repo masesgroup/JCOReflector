@@ -48,7 +48,10 @@ import system.data.common.commandtrees.DbParameterReferenceExpression;
  * The base .NET class managing System.Data.Common.EntitySql.EntitySqlParser, System.Data.Entity, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089.
  * <p>
  * 
- * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Data.Common.EntitySql.EntitySqlParser" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Data.Common.EntitySql.EntitySqlParser</a>
+ * .NET documentation at <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Data.Common.EntitySql.EntitySqlParser" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Data.Common.EntitySql.EntitySqlParser</a>
+ * <p>
+ *
+ * Powered by JCOBridge: more info at <a href="https://www.jcobridge.com" target="_top">https://www.jcobridge.com</a>
  */
 public class EntitySqlParser extends NetObject  {
     /**

@@ -46,7 +46,10 @@ import system.configuration.ProviderSettings;
  * The base .NET class managing System.Configuration.ProviderSettingsCollection, System.Configuration.ConfigurationManager, Version=7.0.0.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51.
  * <p>
  * 
- * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Configuration.ProviderSettingsCollection" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Configuration.ProviderSettingsCollection</a>
+ * .NET documentation at <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Configuration.ProviderSettingsCollection" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Configuration.ProviderSettingsCollection</a>
+ * <p>
+ *
+ * Powered by JCOBridge: more info at <a href="https://www.jcobridge.com" target="_top">https://www.jcobridge.com</a>
  */
 public class ProviderSettingsCollection extends ConfigurationElementCollection  {
     /**

@@ -47,7 +47,10 @@ import system.web.modelbinding.ModelBindingExecutionContext;
  * The base .NET class managing System.Web.ModelBinding.ModelValidationNode, System.Web, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a.
  * <p>
  * 
- * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Web.ModelBinding.ModelValidationNode" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Web.ModelBinding.ModelValidationNode</a>
+ * .NET documentation at <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Web.ModelBinding.ModelValidationNode" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Web.ModelBinding.ModelValidationNode</a>
+ * <p>
+ *
+ * Powered by JCOBridge: more info at <a href="https://www.jcobridge.com" target="_top">https://www.jcobridge.com</a>
  */
 public class ModelValidationNode extends NetObject  {
     /**

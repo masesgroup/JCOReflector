@@ -43,7 +43,10 @@ import system.web.ui.Control;
  * The Java interface to be implemented to receive events from the CLR using {@link BuildMethod}.
  * <p>
  * 
- * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Web.UI.BuildMethod" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Web.UI.BuildMethod</a>
+ * .NET documentation at <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Web.UI.BuildMethod" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Web.UI.BuildMethod</a>
+ * <p>
+ *
+ * Powered by JCOBridge: more info at <a href="https://www.jcobridge.com" target="_top">https://www.jcobridge.com</a>
  */
 public interface IBuildMethod {
     public Control Invoke();

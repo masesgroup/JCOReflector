@@ -43,7 +43,10 @@ import system.web.ui.webcontrols.DataGridSortCommandEventArgs;
  * The Java interface to be implemented to receive events from the CLR using {@link DataGridSortCommandEventHandler}.
  * <p>
  * 
- * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Web.UI.WebControls.DataGridSortCommandEventHandler" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Web.UI.WebControls.DataGridSortCommandEventHandler</a>
+ * .NET documentation at <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Web.UI.WebControls.DataGridSortCommandEventHandler" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Web.UI.WebControls.DataGridSortCommandEventHandler</a>
+ * <p>
+ *
+ * Powered by JCOBridge: more info at <a href="https://www.jcobridge.com" target="_top">https://www.jcobridge.com</a>
  */
 public interface IDataGridSortCommandEventHandler {
     public void Invoke(NetObject source, DataGridSortCommandEventArgs e);

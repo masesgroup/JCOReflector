@@ -43,7 +43,10 @@ import system.windows.forms.DataGridViewCellContextMenuStripNeededEventArgs;
  * The Java interface to be implemented to receive events from the CLR using {@link DataGridViewCellContextMenuStripNeededEventHandler}.
  * <p>
  * 
- * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Windows.Forms.DataGridViewCellContextMenuStripNeededEventHandler" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Windows.Forms.DataGridViewCellContextMenuStripNeededEventHandler</a>
+ * .NET documentation at <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Windows.Forms.DataGridViewCellContextMenuStripNeededEventHandler" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Windows.Forms.DataGridViewCellContextMenuStripNeededEventHandler</a>
+ * <p>
+ *
+ * Powered by JCOBridge: more info at <a href="https://www.jcobridge.com" target="_top">https://www.jcobridge.com</a>
  */
 public interface IDataGridViewCellContextMenuStripNeededEventHandler {
     public void Invoke(NetObject sender, DataGridViewCellContextMenuStripNeededEventArgs e);

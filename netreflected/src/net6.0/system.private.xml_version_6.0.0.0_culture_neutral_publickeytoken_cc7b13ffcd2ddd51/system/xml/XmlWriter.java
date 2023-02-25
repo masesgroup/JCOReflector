@@ -59,7 +59,10 @@ import system.xml.XmlSpace;
  * The base .NET class managing System.Xml.XmlWriter, System.Private.Xml, Version=6.0.0.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51.
  * <p>
  * 
- * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Xml.XmlWriter" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Xml.XmlWriter</a>
+ * .NET documentation at <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Xml.XmlWriter" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Xml.XmlWriter</a>
+ * <p>
+ *
+ * Powered by JCOBridge: more info at <a href="https://www.jcobridge.com" target="_top">https://www.jcobridge.com</a>
  */
 public class XmlWriter extends NetObject implements AutoCloseable {
     /**

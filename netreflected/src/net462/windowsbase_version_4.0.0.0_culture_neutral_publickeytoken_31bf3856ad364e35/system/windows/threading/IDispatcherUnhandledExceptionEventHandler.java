@@ -43,7 +43,10 @@ import system.windows.threading.DispatcherUnhandledExceptionEventArgs;
  * The Java interface to be implemented to receive events from the CLR using {@link DispatcherUnhandledExceptionEventHandler}.
  * <p>
  * 
- * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Windows.Threading.DispatcherUnhandledExceptionEventHandler" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Windows.Threading.DispatcherUnhandledExceptionEventHandler</a>
+ * .NET documentation at <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Windows.Threading.DispatcherUnhandledExceptionEventHandler" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Windows.Threading.DispatcherUnhandledExceptionEventHandler</a>
+ * <p>
+ *
+ * Powered by JCOBridge: more info at <a href="https://www.jcobridge.com" target="_top">https://www.jcobridge.com</a>
  */
 public interface IDispatcherUnhandledExceptionEventHandler {
     public void Invoke(NetObject sender, DispatcherUnhandledExceptionEventArgs e);

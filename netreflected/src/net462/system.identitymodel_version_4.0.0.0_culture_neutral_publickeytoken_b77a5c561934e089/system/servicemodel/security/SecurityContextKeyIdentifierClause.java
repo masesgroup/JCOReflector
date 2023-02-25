@@ -46,7 +46,10 @@ import system.xml.UniqueId;
  * The base .NET class managing System.ServiceModel.Security.SecurityContextKeyIdentifierClause, System.IdentityModel, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089.
  * <p>
  * 
- * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.ServiceModel.Security.SecurityContextKeyIdentifierClause" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.ServiceModel.Security.SecurityContextKeyIdentifierClause</a>
+ * .NET documentation at <a href="https://docs.microsoft.com/en-us/dotnet/api/System.ServiceModel.Security.SecurityContextKeyIdentifierClause" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.ServiceModel.Security.SecurityContextKeyIdentifierClause</a>
+ * <p>
+ *
+ * Powered by JCOBridge: more info at <a href="https://www.jcobridge.com" target="_top">https://www.jcobridge.com</a>
  */
 public class SecurityContextKeyIdentifierClause extends SecurityKeyIdentifierClause  {
     /**

@@ -46,7 +46,10 @@ import system.net.configuration.SmtpSection;
  * The base .NET class managing System.Net.Configuration.MailSettingsSectionGroup, System, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089.
  * <p>
  * 
- * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Net.Configuration.MailSettingsSectionGroup" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Net.Configuration.MailSettingsSectionGroup</a>
+ * .NET documentation at <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Net.Configuration.MailSettingsSectionGroup" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Net.Configuration.MailSettingsSectionGroup</a>
+ * <p>
+ *
+ * Powered by JCOBridge: more info at <a href="https://www.jcobridge.com" target="_top">https://www.jcobridge.com</a>
  */
 public class MailSettingsSectionGroup extends ConfigurationSectionGroup  {
     /**

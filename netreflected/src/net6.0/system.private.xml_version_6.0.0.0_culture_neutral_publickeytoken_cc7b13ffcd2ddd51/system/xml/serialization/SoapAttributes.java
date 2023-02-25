@@ -50,7 +50,10 @@ import system.xml.serialization.SoapTypeAttribute;
  * The base .NET class managing System.Xml.Serialization.SoapAttributes, System.Private.Xml, Version=6.0.0.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51.
  * <p>
  * 
- * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Xml.Serialization.SoapAttributes" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Xml.Serialization.SoapAttributes</a>
+ * .NET documentation at <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Xml.Serialization.SoapAttributes" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Xml.Serialization.SoapAttributes</a>
+ * <p>
+ *
+ * Powered by JCOBridge: more info at <a href="https://www.jcobridge.com" target="_top">https://www.jcobridge.com</a>
  */
 public class SoapAttributes extends NetObject  {
     /**

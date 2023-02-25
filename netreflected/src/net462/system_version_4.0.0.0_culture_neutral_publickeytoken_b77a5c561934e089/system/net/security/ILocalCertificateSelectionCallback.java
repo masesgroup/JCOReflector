@@ -44,7 +44,10 @@ import system.security.cryptography.x509certificates.X509CertificateCollection;
  * The Java interface to be implemented to receive events from the CLR using {@link LocalCertificateSelectionCallback}.
  * <p>
  * 
- * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Net.Security.LocalCertificateSelectionCallback" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Net.Security.LocalCertificateSelectionCallback</a>
+ * .NET documentation at <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Net.Security.LocalCertificateSelectionCallback" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Net.Security.LocalCertificateSelectionCallback</a>
+ * <p>
+ *
+ * Powered by JCOBridge: more info at <a href="https://www.jcobridge.com" target="_top">https://www.jcobridge.com</a>
  */
 public interface ILocalCertificateSelectionCallback {
     public X509Certificate Invoke(NetObject sender, java.lang.String targetHost, X509CertificateCollection localCertificates, X509Certificate remoteCertificate, java.lang.String[] acceptableIssuers);

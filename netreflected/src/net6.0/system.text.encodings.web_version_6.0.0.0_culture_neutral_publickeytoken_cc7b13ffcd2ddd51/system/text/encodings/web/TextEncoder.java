@@ -46,7 +46,10 @@ import system.io.TextWriter;
  * The base .NET class managing System.Text.Encodings.Web.TextEncoder, System.Text.Encodings.Web, Version=6.0.0.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51.
  * <p>
  * 
- * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Text.Encodings.Web.TextEncoder" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Text.Encodings.Web.TextEncoder</a>
+ * .NET documentation at <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Text.Encodings.Web.TextEncoder" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Text.Encodings.Web.TextEncoder</a>
+ * <p>
+ *
+ * Powered by JCOBridge: more info at <a href="https://www.jcobridge.com" target="_top">https://www.jcobridge.com</a>
  */
 public class TextEncoder extends NetObject  {
     /**

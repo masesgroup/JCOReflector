@@ -44,7 +44,10 @@ import system.xml.IXmlNodeChangedEventHandler;
  * The base .NET class managing System.Xml.XmlNodeChangedEventHandler, System.Private.Xml, Version=6.0.0.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51.
  * <p>
  * 
- * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Xml.XmlNodeChangedEventHandler" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Xml.XmlNodeChangedEventHandler</a>
+ * .NET documentation at <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Xml.XmlNodeChangedEventHandler" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Xml.XmlNodeChangedEventHandler</a>
+ * <p>
+ *
+ * Powered by JCOBridge: more info at <a href="https://www.jcobridge.com" target="_top">https://www.jcobridge.com</a>
  */
 public class XmlNodeChangedEventHandler extends JCVoidDelegate implements IJCVoidEventEmit, IJCOBridgeReflected {
     /**

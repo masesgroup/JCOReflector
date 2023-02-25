@@ -43,7 +43,10 @@ import microsoft.win32.PowerModeChangedEventArgs;
  * The Java interface to be implemented to receive events from the CLR using {@link PowerModeChangedEventHandler}.
  * <p>
  * 
- * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/Microsoft.Win32.PowerModeChangedEventHandler" target="_top">https://docs.microsoft.com/en-us/dotnet/api/Microsoft.Win32.PowerModeChangedEventHandler</a>
+ * .NET documentation at <a href="https://docs.microsoft.com/en-us/dotnet/api/Microsoft.Win32.PowerModeChangedEventHandler" target="_top">https://docs.microsoft.com/en-us/dotnet/api/Microsoft.Win32.PowerModeChangedEventHandler</a>
+ * <p>
+ *
+ * Powered by JCOBridge: more info at <a href="https://www.jcobridge.com" target="_top">https://www.jcobridge.com</a>
  */
 public interface IPowerModeChangedEventHandler {
     public void Invoke(NetObject sender, PowerModeChangedEventArgs e);

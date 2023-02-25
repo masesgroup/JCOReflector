@@ -45,7 +45,10 @@ import system.xml.XmlNode;
  * The base .NET class managing System.Xml.XmlNamedNodeMap, System.Private.Xml, Version=7.0.0.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51.
  * <p>
  * 
- * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Xml.XmlNamedNodeMap" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Xml.XmlNamedNodeMap</a>
+ * .NET documentation at <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Xml.XmlNamedNodeMap" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Xml.XmlNamedNodeMap</a>
+ * <p>
+ *
+ * Powered by JCOBridge: more info at <a href="https://www.jcobridge.com" target="_top">https://www.jcobridge.com</a>
  */
 public class XmlNamedNodeMap extends NetObjectEnumerable  {
     /**

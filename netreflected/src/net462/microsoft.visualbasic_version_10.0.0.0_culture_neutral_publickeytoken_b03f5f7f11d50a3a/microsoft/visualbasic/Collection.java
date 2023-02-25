@@ -51,7 +51,10 @@ import system.runtime.serialization.IDeserializationCallbackImplementation;
  * The base .NET class managing Microsoft.VisualBasic.Collection, Microsoft.VisualBasic, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a.
  * <p>
  * 
- * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/Microsoft.VisualBasic.Collection" target="_top">https://docs.microsoft.com/en-us/dotnet/api/Microsoft.VisualBasic.Collection</a>
+ * .NET documentation at <a href="https://docs.microsoft.com/en-us/dotnet/api/Microsoft.VisualBasic.Collection" target="_top">https://docs.microsoft.com/en-us/dotnet/api/Microsoft.VisualBasic.Collection</a>
+ * <p>
+ *
+ * Powered by JCOBridge: more info at <a href="https://www.jcobridge.com" target="_top">https://www.jcobridge.com</a>
  */
 public class Collection extends NetObjectEnumerable implements system.runtime.serialization.ISerializable, system.runtime.serialization.IDeserializationCallback {
     /**

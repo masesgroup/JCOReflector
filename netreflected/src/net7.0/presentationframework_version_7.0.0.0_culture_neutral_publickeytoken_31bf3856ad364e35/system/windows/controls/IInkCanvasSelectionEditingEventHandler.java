@@ -43,7 +43,10 @@ import system.windows.controls.InkCanvasSelectionEditingEventArgs;
  * The Java interface to be implemented to receive events from the CLR using {@link InkCanvasSelectionEditingEventHandler}.
  * <p>
  * 
- * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Windows.Controls.InkCanvasSelectionEditingEventHandler" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Windows.Controls.InkCanvasSelectionEditingEventHandler</a>
+ * .NET documentation at <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Windows.Controls.InkCanvasSelectionEditingEventHandler" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Windows.Controls.InkCanvasSelectionEditingEventHandler</a>
+ * <p>
+ *
+ * Powered by JCOBridge: more info at <a href="https://www.jcobridge.com" target="_top">https://www.jcobridge.com</a>
  */
 public interface IInkCanvasSelectionEditingEventHandler {
     public void Invoke(NetObject sender, InkCanvasSelectionEditingEventArgs e);

@@ -45,7 +45,10 @@ import system.ContextBoundObject;
  * The base .NET class managing System.ServiceModel.ComIntegration.ServiceMoniker, System.ServiceModel, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089.
  * <p>
  * 
- * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.ServiceModel.ComIntegration.ServiceMoniker" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.ServiceModel.ComIntegration.ServiceMoniker</a>
+ * .NET documentation at <a href="https://docs.microsoft.com/en-us/dotnet/api/System.ServiceModel.ComIntegration.ServiceMoniker" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.ServiceModel.ComIntegration.ServiceMoniker</a>
+ * <p>
+ *
+ * Powered by JCOBridge: more info at <a href="https://www.jcobridge.com" target="_top">https://www.jcobridge.com</a>
  */
 public class ServiceMoniker extends ContextBoundObject  {
     /**

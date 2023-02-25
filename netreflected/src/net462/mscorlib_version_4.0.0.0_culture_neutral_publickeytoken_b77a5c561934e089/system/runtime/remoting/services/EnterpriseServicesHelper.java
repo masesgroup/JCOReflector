@@ -50,7 +50,10 @@ import system.runtime.remoting.proxies.RealProxy;
  * The base .NET class managing System.Runtime.Remoting.Services.EnterpriseServicesHelper, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089.
  * <p>
  * 
- * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Runtime.Remoting.Services.EnterpriseServicesHelper" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Runtime.Remoting.Services.EnterpriseServicesHelper</a>
+ * .NET documentation at <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Runtime.Remoting.Services.EnterpriseServicesHelper" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Runtime.Remoting.Services.EnterpriseServicesHelper</a>
+ * <p>
+ *
+ * Powered by JCOBridge: more info at <a href="https://www.jcobridge.com" target="_top">https://www.jcobridge.com</a>
  */
 public class EnterpriseServicesHelper extends NetObject  {
     /**

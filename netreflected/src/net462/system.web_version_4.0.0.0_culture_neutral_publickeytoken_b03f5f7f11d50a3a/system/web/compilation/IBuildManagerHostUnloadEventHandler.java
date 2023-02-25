@@ -43,7 +43,10 @@ import system.web.compilation.BuildManagerHostUnloadEventArgs;
  * The Java interface to be implemented to receive events from the CLR using {@link BuildManagerHostUnloadEventHandler}.
  * <p>
  * 
- * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Web.Compilation.BuildManagerHostUnloadEventHandler" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Web.Compilation.BuildManagerHostUnloadEventHandler</a>
+ * .NET documentation at <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Web.Compilation.BuildManagerHostUnloadEventHandler" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Web.Compilation.BuildManagerHostUnloadEventHandler</a>
+ * <p>
+ *
+ * Powered by JCOBridge: more info at <a href="https://www.jcobridge.com" target="_top">https://www.jcobridge.com</a>
  */
 public interface IBuildManagerHostUnloadEventHandler {
     public void Invoke(NetObject sender, BuildManagerHostUnloadEventArgs e);

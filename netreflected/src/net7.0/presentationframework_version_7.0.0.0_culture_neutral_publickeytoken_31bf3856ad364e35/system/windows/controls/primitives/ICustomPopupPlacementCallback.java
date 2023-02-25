@@ -45,7 +45,10 @@ import system.windows.Point;
  * The Java interface to be implemented to receive events from the CLR using {@link CustomPopupPlacementCallback}.
  * <p>
  * 
- * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Windows.Controls.Primitives.CustomPopupPlacementCallback" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Windows.Controls.Primitives.CustomPopupPlacementCallback</a>
+ * .NET documentation at <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Windows.Controls.Primitives.CustomPopupPlacementCallback" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Windows.Controls.Primitives.CustomPopupPlacementCallback</a>
+ * <p>
+ *
+ * Powered by JCOBridge: more info at <a href="https://www.jcobridge.com" target="_top">https://www.jcobridge.com</a>
  */
 public interface ICustomPopupPlacementCallback {
     public CustomPopupPlacement[] Invoke(Size popupSize, Size targetSize, Point offset);

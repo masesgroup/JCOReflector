@@ -73,7 +73,10 @@ import system.windows.controls.SelectedCellsChangedEventHandler;
  * The base .NET class managing System.Windows.Controls.DataGrid, PresentationFramework, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35.
  * <p>
  * 
- * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Windows.Controls.DataGrid" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Windows.Controls.DataGrid</a>
+ * .NET documentation at <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Windows.Controls.DataGrid" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Windows.Controls.DataGrid</a>
+ * <p>
+ *
+ * Powered by JCOBridge: more info at <a href="https://www.jcobridge.com" target="_top">https://www.jcobridge.com</a>
  */
 public class DataGrid extends MultiSelector  {
     /**

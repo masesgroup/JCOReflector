@@ -43,7 +43,10 @@ import system.web.security.FormsAuthenticationEventArgs;
  * The Java interface to be implemented to receive events from the CLR using {@link FormsAuthenticationEventHandler}.
  * <p>
  * 
- * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Web.Security.FormsAuthenticationEventHandler" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Web.Security.FormsAuthenticationEventHandler</a>
+ * .NET documentation at <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Web.Security.FormsAuthenticationEventHandler" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Web.Security.FormsAuthenticationEventHandler</a>
+ * <p>
+ *
+ * Powered by JCOBridge: more info at <a href="https://www.jcobridge.com" target="_top">https://www.jcobridge.com</a>
  */
 public interface IFormsAuthenticationEventHandler {
     public void Invoke(NetObject sender, FormsAuthenticationEventArgs e);

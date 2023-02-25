@@ -96,7 +96,7 @@ Parsed assemblies are:
 > * Microsoft.Workflow.Compiler, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35
 > * System.Workflow.Activities, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35
 
-> * Analyzed Types = 43308
+> * Analyzed Types = 43313
 >   * Enumerators = 26
 >   * Delegates = 557
 >   * Classes
@@ -117,8 +117,8 @@ Parsed assemblies are:
 >       * Duplicated Methods = 999
 >     * Properties = 29775
 >     * Events = 2185
-> * Discarded Types = 30991
->   * Non Public = 30537
+> * Discarded Types = 30996
+>   * Non Public = 30542
 >   * Generic = 354
 >   * Internals = 50
 
@@ -422,12 +422,12 @@ Parsed assemblies are:
 > * PresentationUI, Version=6.0.2.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35
 > * System.DirectoryServices, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a
 
-> * Analyzed Types = 25850
+> * Analyzed Types = 25851
 >   * Enumerators = 24
 >   * Delegates = 364
 >   * Classes
 >     * Constructors = 6628
->     * Methods = 29155
+>     * Methods = 29156
 >     * Properties = 18253
 >     * Events = 1734
 > * Implemented Types = 7180
@@ -443,8 +443,8 @@ Parsed assemblies are:
 >       * Duplicated Methods = 800
 >     * Properties = 17040
 >     * Events = 1627
-> * Discarded Types = 18669
->   * Non Public = 18329
+> * Discarded Types = 18670
+>   * Non Public = 18330
 >   * Generic = 277
 >   * Internals = 27
 
@@ -745,12 +745,12 @@ Parsed assemblies are:
 > * PresentationUI, Version=7.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35
 > * System.DirectoryServices, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a
 
-> * Analyzed Types = 26418
+> * Analyzed Types = 26421
 >   * Enumerators = 24
 >   * Delegates = 364
 >   * Classes
 >     * Constructors = 6718
->     * Methods = 30550
+>     * Methods = 30551
 >     * Properties = 18543
 >     * Events = 1742
 > * Implemented Types = 7273
@@ -766,8 +766,8 @@ Parsed assemblies are:
 >       * Duplicated Methods = 813
 >     * Properties = 17287
 >     * Events = 1635
-> * Discarded Types = 19144
->   * Non Public = 18791
+> * Discarded Types = 19147
+>   * Non Public = 18794
 >   * Generic = 293
 >   * Internals = 24
 

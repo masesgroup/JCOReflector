@@ -1,6 +1,6 @@
 # JCOReflector (a .NET Java wrapper)
 
-![CI_WINDOWS](https://github.com/masesgroup/JCOReflector/workflows/CI_WINDOWS/badge.svg)  ![CI_LINUX](https://github.com/masesgroup/JCOReflector/workflows/CI_LINUX/badge.svg)  [![CI_DOCS](https://github.com/masesgroup/JCOReflector/actions/workflows/docs.yaml/badge.svg)](https://github.com/masesgroup/JCOReflector/actions/workflows/docs.yaml)  [![CI_MAVEN](https://github.com/masesgroup/JCOReflector/actions/workflows/maven.yaml/badge.svg)](https://github.com/masesgroup/JCOReflector/actions/workflows/maven.yaml)  ![CI_RELEASE](https://github.com/masesgroup/JCOReflector/workflows/CI_RELEASE/badge.svg)
+### Libraries and Tools
 
 |.NET Framework | .NET 6 | .NET 7 |
 |---	|---	|---	|
@@ -9,6 +9,27 @@
 |JCOReflectorEngine | JCOReflectorCLI |
 |---	|---	|
 |[![latest version](https://img.shields.io/nuget/v/MASES.JCOReflectorEngine)](https://www.nuget.org/packages/MASES.JCOReflectorEngine) [![downloads](https://img.shields.io/nuget/dt/MASES.JCOReflectorEngine)](https://www.nuget.org/packages/MASES.JCOReflectorEngine)|[![latest version](https://img.shields.io/nuget/v/MASES.JCOReflectorCLI)](https://www.nuget.org/packages/MASES.JCOReflectorCLI) [![downloads](https://img.shields.io/nuget/dt/MASES.JCOReflectorCLI)](https://www.nuget.org/packages/MASES.JCOReflectorCLI)|
+
+### Pipelines
+
+![CI_WINDOWS](https://github.com/masesgroup/JCOReflector/workflows/CI_WINDOWS/badge.svg)  ![CI_LINUX](https://github.com/masesgroup/JCOReflector/workflows/CI_LINUX/badge.svg)  [![CI_DOCS](https://github.com/masesgroup/JCOReflector/actions/workflows/docs.yaml/badge.svg)](https://github.com/masesgroup/JCOReflector/actions/workflows/docs.yaml)  [![CI_MAVEN](https://github.com/masesgroup/JCOReflector/actions/workflows/maven.yaml/badge.svg)](https://github.com/masesgroup/JCOReflector/actions/workflows/maven.yaml)  ![CI_RELEASE](https://github.com/masesgroup/JCOReflector/workflows/CI_RELEASE/badge.svg)
+
+### Disclaimer
+
+<em>
+ <p>
+JCOReflector is a project, curated by MASES Group, can be supported by the open-source community.
+Its primary scope is to support other, public or internal, MASES Group projects: Open-source community can use and support this project, moreover there is a dedicated community subscription plan.
+</p>
+<p>
+The release cycle depends from critical discovered issues and/or enhancement requested from this or other projects.
+</p>
+<p>
+Looking for the help of experts? MASES Group can help you design, build, deploy, and manage applications mixing .NET and JVM enabled languages.
+</p>
+</em>
+
+---
 
 ## The project
 
@@ -36,8 +57,6 @@ JCOReflector uses [JCOBridge](https://www.jcobridge.com), and its [features](htt
 
 Have a look at the following resources:
 - [Release notes](https://www.jcobridge.com/release-notes/)
-- ~~[Non Profit or University](https://www.jcobridge.com/pricing/)~~
-- ~~[Commercial info: Professional or Enterprise](https://www.jcobridge.com/pricing/)~~
 - [Community Edition](https://www.jcobridge.com/pricing-25/)
 - [Commercial Edition](https://www.jcobridge.com/pricing-25/)
 - [![JCOBridge nuget](https://img.shields.io/nuget/v/MASES.JCOBridge)](https://www.nuget.org/packages/MASES.JCOBridge)

@@ -1,17 +1,14 @@
 # Assembly Reflected 
 
 The available reflected classes are generated starting from root assemblies, generation is done using up to 10 recursions to explore for exportable Exceptions.
-There are two main folders:
-* **_net462_** contains the reflected classes generated from .NET Framework, divided by the containing assembly
-* **_net6.0_** contains the reflected classes generated from .NET 6, divided by the containing assembly
-* **_net7.0_** contains the reflected classes generated from .NET 7, divided by the containing assembly
+There are three main folders:
+* [**_net462_**](#net-framework) contains the reflected classes generated from .NET Framework, divided by the containing assembly
+* [**_net6.0_**](#net-6) contains the reflected classes generated from .NET 6, divided by the containing assembly
+* [**_net7.0_**](#net-7) contains the reflected classes generated from .NET 7, divided by the containing assembly
 
 **JCOReflector** is the folder of common classes for both **.NET** **Framework**, **6** and **7**
 
 ## .NET Framework
-![FrameworkStatistic](https://docs.google.com/spreadsheets/d/e/2PACX-1vRKe-7bBH40JmQmq4I194xz9g2YsoU7L9fHwzY0fqZyWepyjqnOC0B7lgO9CjAuTrBkOA8qbTiScLpS/pubchart?oid=1238429091&format=image)
-
-![FrameworkStatisticPercent](https://docs.google.com/spreadsheets/d/e/2PACX-1vRKe-7bBH40JmQmq4I194xz9g2YsoU7L9fHwzY0fqZyWepyjqnOC0B7lgO9CjAuTrBkOA8qbTiScLpS/pubchart?oid=485555819&format=image)
 
 [//]: # "BeginReport net462"
 Parsed assemblies are:
@@ -123,7 +120,12 @@ Parsed assemblies are:
 >   * Internals = 50
 
 [//]: # "EndReport net462"
-## .NET 6 (reference is .NET v6.0.* of the GitHub runner image)
+
+![FrameworkStatistic](https://docs.google.com/spreadsheets/d/e/2PACX-1vTe94B4KWTddOWDnIHGRkHHPq23g_oPzZUfmVU3ls1lEUwNQmG_T4Zi7xCCNkb0RMqkT8LblRNW7aT9/pubchart?oid=845891829&format=image)
+
+## .NET 6
+
+> NOTE: reference is .NET v6.0.* of the GitHub runner image
 
 [//]: # "BeginReport net6.0"
 Parsed assemblies are:
@@ -449,7 +451,12 @@ Parsed assemblies are:
 >   * Internals = 27
 
 [//]: # "EndReport net6.0"
-## .NET 7 (reference is .NET v7.0.* of the GitHub runner image)
+
+![Net6Statistic](https://docs.google.com/spreadsheets/d/e/2PACX-1vTe94B4KWTddOWDnIHGRkHHPq23g_oPzZUfmVU3ls1lEUwNQmG_T4Zi7xCCNkb0RMqkT8LblRNW7aT9/pubchart?oid=1200391981&format=image)
+
+## .NET 7
+
+> NOTE: reference is .NET v7.0.* of the GitHub runner image
 
 [//]: # "BeginReport net7.0"
 Parsed assemblies are:
@@ -772,3 +779,5 @@ Parsed assemblies are:
 >   * Internals = 24
 
 [//]: # "EndReport net7.0"
+
+![Net7Statistic](https://docs.google.com/spreadsheets/d/e/2PACX-1vTe94B4KWTddOWDnIHGRkHHPq23g_oPzZUfmVU3ls1lEUwNQmG_T4Zi7xCCNkb0RMqkT8LblRNW7aT9/pubchart?oid=1527441532&format=image)

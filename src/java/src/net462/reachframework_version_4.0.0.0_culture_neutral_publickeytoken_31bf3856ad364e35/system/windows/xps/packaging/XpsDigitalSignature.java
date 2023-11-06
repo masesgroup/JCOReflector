@@ -168,7 +168,7 @@ public class XpsDigitalSignature extends NetObject  {
     
     // Methods section
     
-    public VerifyResult Verify() throws Throwable, system.ArgumentNullException, system.FormatException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ArgumentException, system.ObjectDisposedException, system.InvalidOperationException, system.io.IOException, system.io.FileFormatException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.NotSupportedException, system.OutOfMemoryException, system.AccessViolationException, system.xml.XmlException, system.NullReferenceException, system.security.cryptography.CryptographicException, system.xml.xpath.XPathException, system.security.SecurityException, system.MissingMethodException, system.reflection.TargetInvocationException, system.configuration.ConfigurationErrorsException {
+    public VerifyResult Verify() throws Throwable, system.ArgumentNullException, system.FormatException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ArgumentException, system.ObjectDisposedException, system.InvalidOperationException, system.io.IOException, system.io.FileFormatException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.NotSupportedException, system.security.cryptography.CryptographicException, system.OutOfMemoryException, system.AccessViolationException, system.xml.XmlException, system.NullReferenceException, system.xml.xpath.XPathException, system.security.SecurityException, system.MissingMethodException, system.reflection.TargetInvocationException, system.configuration.ConfigurationErrorsException {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
@@ -190,7 +190,7 @@ public class XpsDigitalSignature extends NetObject  {
         }
     }
 
-    public X509ChainStatusFlags VerifyCertificate() throws Throwable, system.ArgumentNullException, system.FormatException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ArgumentException, system.ObjectDisposedException, system.InvalidOperationException, system.io.IOException, system.io.FileFormatException, system.xml.XmlException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.OutOfMemoryException, system.AccessViolationException, system.xml.schema.XmlSchemaException, system.NullReferenceException, system.security.cryptography.CryptographicException, system.xml.xpath.XPathException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotSupportedException {
+    public X509ChainStatusFlags VerifyCertificate() throws Throwable, system.ArgumentNullException, system.FormatException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ArgumentException, system.ObjectDisposedException, system.InvalidOperationException, system.io.IOException, system.io.FileFormatException, system.xml.XmlException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.OutOfMemoryException, system.security.cryptography.CryptographicException, system.AccessViolationException, system.xml.schema.XmlSchemaException, system.NullReferenceException, system.xml.xpath.XPathException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotSupportedException {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
@@ -226,7 +226,7 @@ public class XpsDigitalSignature extends NetObject  {
         }
     }
 
-    public boolean getIsCertificateAvailable() throws Throwable, system.ArgumentNullException, system.FormatException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ArgumentException, system.ObjectDisposedException, system.InvalidOperationException, system.io.IOException, system.ArgumentOutOfRangeException, system.io.FileFormatException, system.xml.XmlException, system.UriFormatException, system.IndexOutOfRangeException, system.OutOfMemoryException, system.AccessViolationException, system.NullReferenceException, system.security.cryptography.CryptographicException, system.xml.xpath.XPathException {
+    public boolean getIsCertificateAvailable() throws Throwable, system.ArgumentNullException, system.FormatException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ArgumentException, system.ObjectDisposedException, system.InvalidOperationException, system.io.IOException, system.ArgumentOutOfRangeException, system.io.FileFormatException, system.xml.XmlException, system.UriFormatException, system.IndexOutOfRangeException, system.OutOfMemoryException, system.security.cryptography.CryptographicException, system.AccessViolationException, system.NullReferenceException, system.xml.xpath.XPathException {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
@@ -276,7 +276,7 @@ public class XpsDigitalSignature extends NetObject  {
         }
     }
 
-    public X509Certificate getSignerCertificate() throws Throwable, system.ArgumentNullException, system.FormatException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ArgumentException, system.ObjectDisposedException, system.InvalidOperationException, system.io.IOException, system.io.FileFormatException, system.xml.XmlException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.OutOfMemoryException, system.AccessViolationException, system.xml.schema.XmlSchemaException, system.NullReferenceException, system.security.cryptography.CryptographicException, system.xml.xpath.XPathException {
+    public X509Certificate getSignerCertificate() throws Throwable, system.ArgumentNullException, system.FormatException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ArgumentException, system.ObjectDisposedException, system.InvalidOperationException, system.io.IOException, system.io.FileFormatException, system.xml.XmlException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.OutOfMemoryException, system.security.cryptography.CryptographicException, system.AccessViolationException, system.xml.schema.XmlSchemaException, system.NullReferenceException, system.xml.xpath.XPathException {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {

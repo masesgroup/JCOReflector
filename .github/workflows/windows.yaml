@@ -18,7 +18,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - id: get_changed_files
-        uses: masesgroup/retrieve-changed-files@v2
+        uses: masesgroup/retrieve-changed-files@v3
         with:
           format: 'csv'
 
@@ -67,7 +67,7 @@ jobs:
         run: git config --system core.longpaths true
       
       # Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it
-      - uses: actions/checkout@v3
+      - uses: actions/checkout@v4
         with: 
           fetch-depth: '1'
 
@@ -78,7 +78,7 @@ jobs:
       - name: Build JCOReflectorCLI
         run: dotnet build --no-incremental --configuration Release /p:Platform="Any CPU" src\net\JCOReflectorCLI.sln
 
-      - uses: nuget/setup-nuget@v1.1.1
+      - uses: nuget/setup-nuget@v1.2.0
         with:
           nuget-version: '5.x'
           

@@ -1,5 +1,5 @@
 main:
-  - title: "Home"
+  - title: "MASES Group main site"
     url: https://masesgroup.github.io/
   - title: "Sinapse Platform"
     url: https://masesgroup.github.io/sinapse/
@@ -7,14 +7,23 @@ main:
     url: https://masesgroup.github.io/JCOBridge/
   - title: "JNet"
     url: https://masesgroup.github.io/JNet/
+  - title: "KNet"
+    url: https://masesgroup.github.io/KNet/
+  - title: "KEFCore"
+    url: https://masesgroup.github.io/KEFCore/
+  - title: "KNetOPC"
+    url: https://masesgroup.github.io/KNetOPC/
   - title: "JCOReflector"
     url: https://masesgroup.github.io/JCOReflector/
+  - title: "NuReflector"
+    url: https://masesgroup.github.io/NuReflector/
   - title: "Data Distribution Manager"
     url: https://masesgroup.github.io/DataDistributionManager/
+  - title: "CLIParser"
+    url: https://masesgroup.github.io/CLIParser/
   - title: "JCO SWT Bridge"
     url: https://masesgroup.github.io/JCOSWTBridge/
 
-    
 sidebar_elements:
   - title: Source code
     children:

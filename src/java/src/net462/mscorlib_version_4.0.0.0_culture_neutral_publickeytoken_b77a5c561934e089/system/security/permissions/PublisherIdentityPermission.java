@@ -230,7 +230,7 @@ public class PublisherIdentityPermission extends CodeAccessPermission  {
         }
     }
 
-    public void FromXml(SecurityElement esd) throws Throwable, system.ArgumentNullException, system.NullReferenceException, system.ArgumentException, system.ArgumentOutOfRangeException, system.OutOfMemoryException, system.globalization.CultureNotFoundException, system.NotSupportedException, system.ObjectDisposedException, system.security.cryptography.CryptographicException, system.InvalidOperationException {
+    public void FromXml(SecurityElement esd) throws Throwable, system.ArgumentNullException, system.NullReferenceException, system.ArgumentException, system.ArgumentOutOfRangeException, system.OutOfMemoryException, system.globalization.CultureNotFoundException, system.NotSupportedException, system.security.cryptography.CryptographicException, system.InvalidOperationException, system.ObjectDisposedException {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {

@@ -42,6 +42,7 @@ import system.WeakReference;
 import system.GCMemoryInfo;
 import system.GCKind;
 import system.GCNotificationStatus;
+import system.TimeSpan;
 import system.GCCollectionMode;
 
 
@@ -314,6 +315,17 @@ public class GC extends NetObject  {
         try {
             JCObject objWaitForFullGCComplete = (JCObject)classType.Invoke("WaitForFullGCComplete", millisecondsTimeout);
             return new GCNotificationStatus(objWaitForFullGCComplete);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public static TimeSpan GetTotalPauseDuration() throws Throwable {
+        if (classType == null)
+            throw new UnsupportedOperationException("classType is null.");
+        try {
+            JCObject objGetTotalPauseDuration = (JCObject)classType.Invoke("GetTotalPauseDuration");
+            return new TimeSpan(objGetTotalPauseDuration);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

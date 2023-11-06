@@ -560,7 +560,7 @@ public class CompareInfo extends NetObject implements system.runtime.serializati
         }
     }
 
-    public static CompareInfo GetCompareInfo(java.lang.String name, Assembly assembly) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.ArgumentNullException, system.globalization.CultureNotFoundException {
+    public static CompareInfo GetCompareInfo(java.lang.String name, Assembly assembly) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.ArgumentNullException, system.globalization.CultureNotFoundException, system.OutOfMemoryException, system.runtime.interopservices.ExternalException {
         if (classType == null)
             throw new UnsupportedOperationException("classType is null.");
         try {

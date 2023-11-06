@@ -156,7 +156,7 @@ public class KeyInfoX509Data extends KeyInfoClause  {
         }
     }
 
-    public KeyInfoX509Data(byte[] rgbCert) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.FormatException, system.ArgumentOutOfRangeException, system.InvalidOperationException, system.OutOfMemoryException, system.ObjectDisposedException, system.security.cryptography.CryptographicException, system.AccessViolationException {
+    public KeyInfoX509Data(byte[] rgbCert) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.FormatException, system.security.cryptography.CryptographicException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.OutOfMemoryException, system.ObjectDisposedException, system.AccessViolationException {
         try {
             // add reference to assemblyName.dll file
             addReference(JCOReflector.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);

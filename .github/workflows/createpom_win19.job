@@ -2,7 +2,7 @@
 <POMBuilderEventArgs xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
   <CancellationToken />
   <LogLevel>Error</LogLevel>
-  <SourceFolder>src\java</SourceFolder>
+  <SourceFolder>src\jvm</SourceFolder>
   <SplitFolderByAssembly>true</SplitFolderByAssembly>
   <JDKTarget>Version8</JDKTarget>
 </POMBuilderEventArgs>

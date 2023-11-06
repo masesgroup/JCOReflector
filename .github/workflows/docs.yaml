@@ -47,8 +47,8 @@ jobs:
             echo "run_job=true" >> $GITHUB_OUTPUT
             break
           fi
-          if [[ $file == "src/java/src/"* ]]; then
-            echo "This file is under the directory 'src/java/src/'."
+          if [[ $file == "src/jvm/src/"* ]]; then
+            echo "This file is under the directory 'src/jvm/src/'."
             echo "run_job=true" >> $GITHUB_OUTPUT
             break
           fi
@@ -188,7 +188,7 @@ jobs:
  
       - name: Commit changes to JCOReflector repo
         run: |
-          cd .\src\java\
+          cd .\src\jvm\
           %GITHUB_WORKSPACE%\.github\workflows\commit.cmd github-actions 41898282+github-actions[bot]@users.noreply.github.com "Update help submodule after commit ${{ env.GITHUB_COMMIT_MESSAGE }}"
           cd ..
         shell: cmd

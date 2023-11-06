@@ -4,7 +4,7 @@
   <AssemblyNames>
     <string>PresentationFramework, Version=6.0.0.0, PublicKeyToken=31bf3856ad364e35</string>
   </AssemblyNames>
-  <SourceFolder>src/java</SourceFolder>
+  <SourceFolder>src/jvm</SourceFolder>
   <SplitFolderByAssembly>true</SplitFolderByAssembly>
   <ForceRebuild>true</ForceRebuild>
   <UseParallelBuild>true</UseParallelBuild>

@@ -31,8 +31,8 @@ jobs:
                 echo "run_job=true" >> $GITHUB_OUTPUT
                 break
               fi
-              if [[ $added_modified_file == "src/java/src/JCOReflector/"* ]]; then
-                echo "$added_modified_file is under the directory 'src/java/src/JCOReflector'."
+              if [[ $added_modified_file == "src/jvm/src/JCOReflector/"* ]]; then
+                echo "$added_modified_file is under the directory 'src/jvm/src/JCOReflector'."
                 echo "run_job=true" >> $GITHUB_OUTPUT
                 break
               fi
@@ -92,9 +92,9 @@ jobs:
           
       - name: Remove Java files
         run: |
-          Remove-Item .\src\java\src\net6.0 -Recurse -Force
-          Remove-Item .\src\java\src\net7.0 -Recurse -Force
-          Remove-Item .\src\java\src\net462 -Recurse -Force
+          Remove-Item .\src\jvm\src\net6.0 -Recurse -Force
+          Remove-Item .\src\jvm\src\net7.0 -Recurse -Force
+          Remove-Item .\src\jvm\src\net462 -Recurse -Force
 
       - name: Reflect .NET 6.0 Java files
         run: .\bin\net6.0\MASES.JCOReflectorCLI -JobType Reflect -JobFile .github\workflows\reflect_net6.0.job
@@ -353,7 +353,7 @@ jobs:
         with:
           author_name: github-actions
           author_email: 41898282+github-actions[bot]@users.noreply.github.com
-          add: '.\src\java\statistics\*.*'
+          add: '.\src\jvm\statistics\*.*'
           message: Update statistics after commit ${{ env.GITHUB_COMMIT_MESSAGE }}
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
@@ -364,7 +364,7 @@ jobs:
         with:
           author_name: github-actions
           author_email: 41898282+github-actions[bot]@users.noreply.github.com
-          add: '.\src\java\README.md'
+          add: '.\src\jvm\README.md'
           message: Update README.md after commit ${{ env.GITHUB_COMMIT_MESSAGE }}
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
@@ -375,7 +375,7 @@ jobs:
         with:
           author_name: github-actions
           author_email: 41898282+github-actions[bot]@users.noreply.github.com
-          add: '.\src\java\src\*.list'
+          add: '.\src\jvm\src\*.list'
           message: Update assembly list after commit ${{ env.GITHUB_COMMIT_MESSAGE }}
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
@@ -386,7 +386,7 @@ jobs:
         with:
           author_name: github-actions
           author_email: 41898282+github-actions[bot]@users.noreply.github.com
-          add: '.\src\java\src\*.java'
+          add: '.\src\jvm\src\*.java'
           message: Update sources after commit ${{ env.GITHUB_COMMIT_MESSAGE }}
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}

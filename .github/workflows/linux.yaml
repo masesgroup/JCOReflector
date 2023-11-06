@@ -42,8 +42,8 @@ jobs:
             echo "run_job=true" >> $GITHUB_OUTPUT
             break
           fi
-          if [[ $file == "src/java/src/"* ]]; then
-            echo "This file is under the directory 'src/java/src'."
+          if [[ $file == "src/jvm/src/"* ]]; then
+            echo "This file is under the directory 'src/jvm/src'."
             echo "run_job=true" >> $GITHUB_OUTPUT
             break
           fi

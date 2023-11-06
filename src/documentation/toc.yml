@@ -1,47 +1,10 @@
-- name: Home
-  href: /
-- name: Servizi
-  dropdown: true
-  items:
-  - name: Introduzione
-    href: services_it/index.md
-  - name: Progettazione e sviluppo software
-    href: services_it/software.md
-  - name: Progettazione e sviluppo sistemi complessi
-    href: services_it/complex_systems.md
-  - name: Analisi di robustezza e sicurezza dei sistemi
-    href: services_it/security_safe.md
-  - name: Configuration management
-    href: services_it/configuration_management.md
-- name: Prodotti
-  dropdown: true
-  items:
-  - name: Introduzione
-    href: products_it/index.md
-  - name: Sinapse
-    href: products_it/sinapse.md
-  - name: JCOBridge
-    href: products_it/jcobridge.md
-  - name: KNet for OPC
-    href: products_it/knetopc.md
-- name: Tecnologie
-  dropdown: true
-  items:
-  - name: Introduzione
-    href: technologies_it/index.md
-  - name: Microsoft .NET
-    href: technologies_it/dotnet.md
-  - name: JVM e linguaggi abilitati
-    href: technologies_it/java_jvm.md
-  - name: Apache Kafka
-    href: technologies_it/apachekafka.md
-  - name: OPC Classic e OPC-UA
-    href: technologies_it/opc_opcua.md
-- name: Metodo di lavoro
-  href: working_method_it/
+- name: Articles
+  href: articles/
+- name: Java API Documentation
+  href: api/
+  homepage: api/index.md
 - name: Open source projects
   dropdown: true
-  href: https://masesgroup.github.io/
   items:
   - name: JNet
     href: https://masesgroup.github.io/JNet/
@@ -59,10 +22,21 @@
     href: https://masesgroup.github.io/CLIParser/
   - name: JCO SWT Bridge
     href: https://masesgroup.github.io/JCOSWTBridge/
-- name: Contatti
+- name: Other products
   dropdown: true
   items:
-  - name: Contatti
-    href: contacts_it/index.md
-  - name: Lavora con noi
-    href: contacts_it/workwithus_it.md
+  - name: Sinapse Platform
+    href: https://masesgroup.github.io/sinapse/
+  - name: JCOBridge
+    href: https://masesgroup.github.io/JCOBridge/
+  - name: KNetOPC
+    href: https://masesgroup.github.io/KNetOPC/
+- name: External links
+  dropdown: true
+  items:
+  - name: Sinapse Platform Official site
+    href: https://www.sinapsesystem.com
+  - name: JCOBridge Official site
+    href: https://www.jcobridge.com
+- name: MASES Group global and contacts
+  href: https://masesgroup.com

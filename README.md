@@ -220,12 +220,12 @@ in each subfolder will be available two executables:
 - **JCOReflectorCLI** the CLI tool;
 - **JCOReflectorGUI** the GUI tool, below some screenshot:
 
-![JCOReflector](/assets/images/jcoreflector.png?raw=true "JCOReflector screenshot")
-![JCOReflector](/assets/images/jcoreflector2.png?raw=true "JCOReflector screenshot")
+![JCOReflector](/src/documentation/images/jcoreflector.png?raw=true "JCOReflector screenshot")
+![JCOReflector](/src/documentation/images/jcoreflector2.png?raw=true "JCOReflector screenshot")
 
 ## Reflected Assemblies
 
-The folder [netreflected](/netreflected/src) contains all reflected classes generated for **.NET** **Framework** (_net462_), **6** (_net6.0_) and **7** (_net7.0_). Below the coverage [statistics](#statistics):
+The folder [src/jvm/src](/src/jvm/src) contains all reflected classes generated for **.NET** **Framework** (_net462_), **6** (_net6.0_) and **7** (_net7.0_). Below the coverage [statistics](#statistics):
 
 ### Statistics
 

@@ -1579,6 +1579,8 @@ namespace MASES.JCOReflectorEngine
         {
         }
 
+        public string BaseDocsFolder { get; set; }
+
         public string CommitVersion { get; set; }
     }
 

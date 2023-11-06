@@ -115,8 +115,17 @@ namespace MASES.JCOReflectorEngine
                     args.JDKFolder = Path.Combine(args.RootFolder, args.JDKFolder);
                 }
 
+                if (args.BaseDocsFolder == null)
+                {
+                    args.BaseDocsFolder = args.SourceFolder;
+                }
+                else if (!Path.IsPathRooted(args.BaseDocsFolder))
+                {
+                    args.BaseDocsFolder = Path.Combine(args.RootFolder, args.BaseDocsFolder);
+                }
+
                 var srcRootFolder = args.SplitFolderByAssembly ? Path.Combine(args.SourceFolder, Const.FileNameAndDirectory.SourceDirectory) : args.SourceFolder;
-                string destinationFolder = Path.Combine(args.SourceFolder, Const.FileNameAndDirectory.DocsDirectory);
+                string destinationFolder = Path.Combine(args.BaseDocsFolder, Const.FileNameAndDirectory.DocsDirectory);
                 var classes = await CreateSourceListAndGenerateDocs(args.JDKFolder, args.JDKTarget, args.JDKToolExtraOptions, args.RootFolder, srcRootFolder, destinationFolder, args.CommitVersion, (args.AssembliesToUse == null) ? JobManager.CreateFolderList(srcRootFolder) : args.AssembliesToUse, Timeout.Infinite);
                 reportStr = string.Format("Javadoc of {0} classes done in {1}.", classes, DateTime.Now - dtStart);
             }

@@ -165,7 +165,7 @@ namespace MASES.JCOReflectorEngine
                 var folder = Path.Combine(originFolder, assembly);
                 if (assembly == Const.FileNameAndDirectory.CommonDirectory)
                 {
-                    folder = Path.Combine(rootFolder, Const.FileNameAndDirectory.RootDirectory, Const.FileNameAndDirectory.SourceDirectory, Const.FileNameAndDirectory.CommonDirectory);
+                    folder = Path.Combine(originFolder, Const.FileNameAndDirectory.CommonDirectory);
                 }
 
                 foreach (var item in Directory.EnumerateFiles(folder, "*.java", SearchOption.AllDirectories))
@@ -202,7 +202,7 @@ namespace MASES.JCOReflectorEngine
                 var folder = Path.Combine(originFolder, assembly);
                 if (assembly == Const.FileNameAndDirectory.CommonDirectory)
                 {
-                    folder = Path.Combine(rootFolder, Const.FileNameAndDirectory.RootDirectory, Const.FileNameAndDirectory.SourceDirectory, Const.FileNameAndDirectory.CommonDirectory);
+                    folder = Path.Combine(originFolder, Const.FileNameAndDirectory.CommonDirectory);
                 }
 
                 foreach (var item in Directory.EnumerateFiles(folder, "*.java", SearchOption.AllDirectories))

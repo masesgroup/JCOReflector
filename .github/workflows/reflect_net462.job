@@ -9,6 +9,7 @@
     <string>System.Net, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</string>
     <string>System.Workflow.Runtime, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35</string>
   </AssemblyNames>
+  <SourceFolder>src/java</SourceFolder>
   <SplitFolderByAssembly>true</SplitFolderByAssembly>
   <ForceRebuild>true</ForceRebuild>
   <UseParallelBuild>true</UseParallelBuild>

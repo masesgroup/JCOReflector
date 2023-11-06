@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <JavaBuilderEventArgs xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
   <LogLevel>Info</LogLevel>
-  <SourceFolder>netreflected</SourceFolder>
+  <SourceFolder>src/java</SourceFolder>
   <SplitFolderByAssembly>true</SplitFolderByAssembly>
   <JDKFolder>jdk</JDKFolder>
   <JDKTarget>Version8</JDKTarget>

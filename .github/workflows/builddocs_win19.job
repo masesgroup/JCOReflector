@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <DocsBuilderEventArgs xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
   <LogLevel>Info</LogLevel>
-  <SourceFolder>netreflected</SourceFolder>
+  <SourceFolder>src\java</SourceFolder>
   <BaseDocsFolder>.</BaseDocsFolder>
   <SplitFolderByAssembly>true</SplitFolderByAssembly>
   <JDKFolder>C:\hostedtoolcache\windows\Java_Adopt_jdk\13.0.2-8.1\x64</JDKFolder>

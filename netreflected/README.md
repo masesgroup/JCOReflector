@@ -93,7 +93,7 @@ Parsed assemblies are:
 > * Microsoft.Workflow.Compiler, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35
 > * System.Workflow.Activities, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35
 
-> * Analyzed Types = 43313
+> * Analyzed Types = 43371
 >   * Enumerators = 26
 >   * Delegates = 557
 >   * Classes
@@ -114,8 +114,8 @@ Parsed assemblies are:
 >       * Duplicated Methods = 999
 >     * Properties = 29775
 >     * Events = 2185
-> * Discarded Types = 30996
->   * Non Public = 30542
+> * Discarded Types = 31054
+>   * Non Public = 30600
 >   * Generic = 354
 >   * Internals = 50
 
@@ -424,12 +424,12 @@ Parsed assemblies are:
 > * PresentationUI, Version=6.0.2.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35
 > * System.DirectoryServices, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a
 
-> * Analyzed Types = 25851
+> * Analyzed Types = 25879
 >   * Enumerators = 24
 >   * Delegates = 364
 >   * Classes
 >     * Constructors = 6628
->     * Methods = 29156
+>     * Methods = 29157
 >     * Properties = 18253
 >     * Events = 1734
 > * Implemented Types = 7180
@@ -441,12 +441,12 @@ Parsed assemblies are:
 >   * Classes = 5196
 >     * Exceptions = 237
 >     * Constructors = 5718
->     * Methods = 20598
+>     * Methods = 20599
 >       * Duplicated Methods = 800
 >     * Properties = 17040
 >     * Events = 1627
-> * Discarded Types = 18670
->   * Non Public = 18330
+> * Discarded Types = 18698
+>   * Non Public = 18358
 >   * Generic = 277
 >   * Internals = 27
 
@@ -556,6 +556,7 @@ Parsed assemblies are:
 > * Microsoft.Win32.Registry, Version=0.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a
 > * System.Security.Principal.Windows, Version=0.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a
 > * System.Security.Permissions, Version=0.0.0.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51
+> * System.Memory, Version=0.0.0.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51
 > * System.Collections, Version=0.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a
 > * System.Collections.NonGeneric, Version=0.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a
 > * System.Collections.Concurrent, Version=0.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a
@@ -568,6 +569,7 @@ Parsed assemblies are:
 > * System.IO.FileSystem.DriveInfo, Version=0.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a
 > * System.IO.IsolatedStorage, Version=0.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a
 > * System.ComponentModel, Version=0.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a
+> * System.Reflection.TypeExtensions, Version=0.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a
 > * System.Resources.Writer, Version=0.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a
 > * System.Runtime.CompilerServices.VisualC, Version=0.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a
 > * System.Runtime.InteropServices, Version=0.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a
@@ -752,7 +754,7 @@ Parsed assemblies are:
 > * PresentationUI, Version=7.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35
 > * System.DirectoryServices, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a
 
-> * Analyzed Types = 26421
+> * Analyzed Types = 26436
 >   * Enumerators = 24
 >   * Delegates = 364
 >   * Classes
@@ -773,8 +775,8 @@ Parsed assemblies are:
 >       * Duplicated Methods = 813
 >     * Properties = 17287
 >     * Events = 1635
-> * Discarded Types = 19147
->   * Non Public = 18794
+> * Discarded Types = 19162
+>   * Non Public = 18809
 >   * Generic = 293
 >   * Internals = 24
 

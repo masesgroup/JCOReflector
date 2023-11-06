@@ -80,7 +80,7 @@ jobs:
 
       # Runs a set of commands using the runners shell
       - name: Build JCOReflectorCLI
-        run: dotnet build --no-incremental --framework net6.0 src\JCOReflectorCLI.sln
+        run: dotnet build --no-incremental --framework net6.0 src\net\JCOReflectorCLI.sln
 
       # Runs a set of commands using the runners shell
       - name: Copy configuration file
@@ -103,7 +103,7 @@ jobs:
 
       - name: Install local file to be used within Javadoc section of generated POM 
         shell: bash
-        run: mvn install:install-file --no-transfer-progress -Dfile=../../bin/net6.0/JCOBridge.jar -DgroupId=JCOBridge -DartifactId=JCOBridge -Dversion=2.5.3 -Dpackaging=jar -f ./netreflected/src/net6.0.xml
+        run: mvn install:install-file --no-transfer-progress -Dfile=../../bin/net6.0/JCOBridge.jar -DgroupId=JCOBridge -DartifactId=JCOBridge -Dversion=2.5.8 -Dpackaging=jar -f ./netreflected/src/net6.0.xml
 
       - name: Publish net6.0 to Apache Maven Central
         shell: bash
@@ -137,7 +137,7 @@ jobs:
 
       # Runs a set of commands using the runners shell
       - name: Build JCOReflectorCLI
-        run: dotnet build --no-incremental --framework net7.0 src\JCOReflectorCLI.sln 
+        run: dotnet build --no-incremental --framework net7.0 src\net\JCOReflectorCLI.sln 
 
       # Runs a set of commands using the runners shell
       - name: Copy configuration file
@@ -160,7 +160,7 @@ jobs:
 
       - name: Install local file to be used within Javadoc section of generated POM 
         shell: bash
-        run: mvn install:install-file --no-transfer-progress -Dfile=../../bin/net7.0/JCOBridge.jar -DgroupId=JCOBridge -DartifactId=JCOBridge -Dversion=2.5.3 -Dpackaging=jar -f ./netreflected/src/net7.0.xml
+        run: mvn install:install-file --no-transfer-progress -Dfile=../../bin/net7.0/JCOBridge.jar -DgroupId=JCOBridge -DartifactId=JCOBridge -Dversion=2.5.8 -Dpackaging=jar -f ./netreflected/src/net7.0.xml
 
       - name: Publish net7.0 to Apache Maven Central
         shell: bash
@@ -194,7 +194,7 @@ jobs:
 
       # Runs a set of commands using the runners shell
       - name: Build JCOReflectorCLI
-        run: dotnet build --no-incremental --framework net462 src\JCOReflectorCLI.sln  
+        run: dotnet build --no-incremental --framework net462 src\net\JCOReflectorCLI.sln  
 
       - name: Build net462 Maven POM files
         run: .\bin\net462\MASES.JCOReflectorCLI -JobType CreatePOM -JobFile .github\workflows\createpom_win19.job
@@ -213,7 +213,7 @@ jobs:
 
       - name: Install local file to be used within Javadoc section of generated POM 
         shell: bash
-        run: mvn install:install-file --no-transfer-progress -Dfile=../../bin/net462/JCOBridge.jar -DgroupId=JCOBridge -DartifactId=JCOBridge -Dversion=2.5.3 -Dpackaging=jar -f ./netreflected/src/net462.xml
+        run: mvn install:install-file --no-transfer-progress -Dfile=../../bin/net462/JCOBridge.jar -DgroupId=JCOBridge -DartifactId=JCOBridge -Dversion=2.5.8 -Dpackaging=jar -f ./netreflected/src/net462.xml
 
       - name: Publish net462 to Apache Maven Central
         shell: bash

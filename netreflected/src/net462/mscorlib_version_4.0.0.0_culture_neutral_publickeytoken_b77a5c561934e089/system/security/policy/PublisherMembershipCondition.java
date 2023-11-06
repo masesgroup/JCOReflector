@@ -176,7 +176,7 @@ public class PublisherMembershipCondition extends NetObject  {
         }
     }
 
-    public IMembershipCondition Copy() throws Throwable, system.ArgumentException, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.OutOfMemoryException, system.globalization.CultureNotFoundException, system.ObjectDisposedException, system.security.cryptography.CryptographicException, system.InvalidOperationException, system.AccessViolationException {
+    public IMembershipCondition Copy() throws Throwable, system.ArgumentException, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.OutOfMemoryException, system.globalization.CultureNotFoundException, system.security.cryptography.CryptographicException, system.InvalidOperationException, system.ObjectDisposedException, system.AccessViolationException {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
@@ -187,7 +187,7 @@ public class PublisherMembershipCondition extends NetObject  {
         }
     }
 
-    public SecurityElement ToXml() throws Throwable, system.ArgumentException, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.OutOfMemoryException, system.globalization.CultureNotFoundException, system.ObjectDisposedException, system.security.cryptography.CryptographicException, system.InvalidOperationException, system.FormatException, system.NotImplementedException {
+    public SecurityElement ToXml() throws Throwable, system.ArgumentException, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.OutOfMemoryException, system.globalization.CultureNotFoundException, system.security.cryptography.CryptographicException, system.ObjectDisposedException, system.InvalidOperationException, system.FormatException, system.NotImplementedException {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
@@ -198,7 +198,7 @@ public class PublisherMembershipCondition extends NetObject  {
         }
     }
 
-    public SecurityElement ToXml(PolicyLevel level) throws Throwable, system.ArgumentException, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.OutOfMemoryException, system.globalization.CultureNotFoundException, system.ObjectDisposedException, system.security.cryptography.CryptographicException, system.InvalidOperationException, system.NotImplementedException {
+    public SecurityElement ToXml(PolicyLevel level) throws Throwable, system.ArgumentException, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.OutOfMemoryException, system.globalization.CultureNotFoundException, system.security.cryptography.CryptographicException, system.InvalidOperationException, system.ObjectDisposedException, system.NotImplementedException {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
@@ -233,7 +233,7 @@ public class PublisherMembershipCondition extends NetObject  {
     
     // Properties section
     
-    public X509Certificate getCertificate() throws Throwable, system.ArgumentException, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.OutOfMemoryException, system.globalization.CultureNotFoundException, system.ObjectDisposedException, system.security.cryptography.CryptographicException, system.InvalidOperationException, system.AccessViolationException {
+    public X509Certificate getCertificate() throws Throwable, system.ArgumentException, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.OutOfMemoryException, system.globalization.CultureNotFoundException, system.security.cryptography.CryptographicException, system.InvalidOperationException, system.ObjectDisposedException, system.AccessViolationException {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {

@@ -156,7 +156,7 @@ public class PackageDigitalSignature extends NetObject  {
     
     // Methods section
     
-    public VerifyResult Verify() throws Throwable, system.ArgumentNullException, system.ArgumentException, system.FormatException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.io.IOException, system.io.FileFormatException, system.xml.XmlException, system.IndexOutOfRangeException, system.OutOfMemoryException, system.AccessViolationException, system.xml.schema.XmlSchemaException, system.NullReferenceException, system.security.cryptography.CryptographicException, system.xml.xpath.XPathException, system.OverflowException, system.security.SecurityException, system.threading.ThreadAbortException, system.NotSupportedException, system.MissingMethodException {
+    public VerifyResult Verify() throws Throwable, system.ArgumentNullException, system.ArgumentException, system.FormatException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.io.IOException, system.io.FileFormatException, system.xml.XmlException, system.IndexOutOfRangeException, system.OutOfMemoryException, system.security.cryptography.CryptographicException, system.AccessViolationException, system.xml.schema.XmlSchemaException, system.NullReferenceException, system.xml.xpath.XPathException, system.OverflowException, system.security.SecurityException, system.threading.ThreadAbortException, system.NotSupportedException, system.MissingMethodException {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
@@ -212,7 +212,7 @@ public class PackageDigitalSignature extends NetObject  {
         }
     }
 
-    public CertificateEmbeddingOption getCertificateEmbeddingOption() throws Throwable, system.ArgumentNullException, system.ArgumentException, system.FormatException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.io.IOException, system.io.FileFormatException, system.xml.XmlException, system.UriFormatException, system.OutOfMemoryException, system.NotSupportedException, system.AccessViolationException, system.xml.schema.XmlSchemaException, system.NullReferenceException, system.security.cryptography.CryptographicException, system.xml.xpath.XPathException {
+    public CertificateEmbeddingOption getCertificateEmbeddingOption() throws Throwable, system.ArgumentNullException, system.ArgumentException, system.FormatException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.io.IOException, system.io.FileFormatException, system.xml.XmlException, system.UriFormatException, system.OutOfMemoryException, system.NotSupportedException, system.security.cryptography.CryptographicException, system.AccessViolationException, system.xml.schema.XmlSchemaException, system.NullReferenceException, system.xml.xpath.XPathException {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {

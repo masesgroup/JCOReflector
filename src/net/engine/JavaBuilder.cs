@@ -154,18 +154,18 @@ namespace MASES.JCOReflectorEngine
             }
         }
 
-        async static Task<int> CreateSourceListAndCompile(string jdkFolder, JDKVersion jdkTarget, string toolExtraOptions, string rootFolder, string originFolder, IEnumerable<string> assemblies, int timeout)
+        async static Task<int> CreateSourceListAndCompile(string jdkFolder, JDKVersion jdkTarget, string toolExtraOptions, string rootFolder, string sourceFolder, IEnumerable<string> assemblies, int timeout)
         {
             int counter = 0;
-            var tmpFile = Path.Combine(originFolder, Const.FileNameAndDirectory.SourceFile);
+            var tmpFile = Path.Combine(sourceFolder, Const.FileNameAndDirectory.SourceFile);
 
             StringBuilder sb = new StringBuilder();
             foreach (var assembly in assemblies)
             {
-                var folder = Path.Combine(originFolder, assembly);
+                var folder = Path.Combine(sourceFolder, assembly);
                 if (assembly == Const.FileNameAndDirectory.CommonDirectory)
                 {
-                    folder = Path.Combine(originFolder, Const.FileNameAndDirectory.CommonDirectory);
+                    folder = Path.Combine(sourceFolder, Const.FileNameAndDirectory.CommonDirectory);
                 }
 
                 foreach (var item in Directory.EnumerateFiles(folder, "*.java", SearchOption.AllDirectories))
@@ -181,28 +181,28 @@ namespace MASES.JCOReflectorEngine
             var extraOptions = string.IsNullOrEmpty(toolExtraOptions) ? string.Empty : string.Format(" {0} ", toolExtraOptions);
             if (jdkTarget == JDKVersion.NotSet)
             {
-                await LaunchProcess(originFolder, Path.Combine(jdkFolder, JavaCompiler), "-cp " + jcoBridgeCp + extraOptions + " @" + Const.FileNameAndDirectory.SourceFile, timeout);
+                await LaunchProcess(sourceFolder, Path.Combine(jdkFolder, JavaCompiler), "-cp " + jcoBridgeCp + extraOptions + " @" + Const.FileNameAndDirectory.SourceFile, timeout);
             }
             else
             {
                 string compatibility = string.Format(" -source {0} -target {0}", (int)jdkTarget); // -bootclasspath rt{0}.jar
-                await LaunchProcess(originFolder, Path.Combine(jdkFolder, JavaCompiler), "-cp " + jcoBridgeCp + compatibility + extraOptions + " @" + Const.FileNameAndDirectory.SourceFile, timeout);
+                await LaunchProcess(sourceFolder, Path.Combine(jdkFolder, JavaCompiler), "-cp " + jcoBridgeCp + compatibility + extraOptions + " @" + Const.FileNameAndDirectory.SourceFile, timeout);
             }
             return counter;
         }
 
-        static async Task<int> CreateSourceListAndGenerateDocs(string jdkFolder, JDKVersion jdkTarget, string toolExtraOptions, string rootFolder, string originFolder, string destinationFolder, string commitVersion, IEnumerable<string> assemblies, int timeout)
+        static async Task<int> CreateSourceListAndGenerateDocs(string jdkFolder, JDKVersion jdkTarget, string toolExtraOptions, string rootFolder, string sourceFolder, string destinationFolder, string commitVersion, IEnumerable<string> assemblies, int timeout)
         {
             int counter = 0;
-            var tmpFile = Path.Combine(originFolder, Const.FileNameAndDirectory.SourceFile);
+            var tmpFile = Path.Combine(sourceFolder, Const.FileNameAndDirectory.SourceFile);
 
             StringBuilder sb = new StringBuilder();
             foreach (var assembly in assemblies)
             {
-                var folder = Path.Combine(originFolder, assembly);
+                var folder = Path.Combine(sourceFolder, assembly);
                 if (assembly == Const.FileNameAndDirectory.CommonDirectory)
                 {
-                    folder = Path.Combine(originFolder, Const.FileNameAndDirectory.CommonDirectory);
+                    folder = Path.Combine(sourceFolder, Const.FileNameAndDirectory.CommonDirectory);
                 }
 
                 foreach (var item in Directory.EnumerateFiles(folder, "*.java", SearchOption.AllDirectories))
@@ -220,7 +220,7 @@ namespace MASES.JCOReflectorEngine
             destinationFolder = destinationFolder.Replace('\\', '/');
             var extraOptions = string.IsNullOrEmpty(toolExtraOptions) ? string.Empty : string.Format(" {0} ", toolExtraOptions);
             var header = Const.Documentation.DOCS_HEADER.Replace(Const.Documentation.DOCS_VERSION_JCOREFLECTOR_PLACEHOLDER, string.Format("v{0}-{1}", Const.ReflectorVersion, commitVersion));
-            await LaunchProcess(originFolder, Path.Combine(jdkFolder, JavaDoc), "-header \"" + header + "\" -quiet -author -noindex -nodeprecated -nodeprecatedlist -notimestamp -nohelp -notree -public -cp " + jcoBridgeCp + " -d " + destinationFolder + extraOptions + " -link https://www.jcobridge.com/api-java @" + Const.FileNameAndDirectory.SourceFile, timeout);
+            await LaunchProcess(sourceFolder, Path.Combine(jdkFolder, JavaDoc), "-header \"" + header + "\" -quiet -author -noindex -nodeprecated -nodeprecatedlist -notimestamp -nohelp -notree -public -cp " + jcoBridgeCp + " -d " + destinationFolder + extraOptions + " -link https://www.jcobridge.com/api-java @" + Const.FileNameAndDirectory.SourceFile, timeout);
 
             return counter;
         }
@@ -396,7 +396,7 @@ namespace MASES.JCOReflectorEngine
             }
         }
 
-        public static async Task<int> CreateJars(string jdkFolder, string rootFolder, string originFolder, string destFolder, IEnumerable<string> assemblies, bool withSource, bool withEmbedding, int timeout = Timeout.Infinite)
+        public static async Task<int> CreateJars(string jdkFolder, string rootFolder, string sourceFolder, string destFolder, IEnumerable<string> assemblies, bool withSource, bool withEmbedding, int timeout = Timeout.Infinite)
         {
             var counter = 0;
             var manifestTemplate = Const.Templates.GetTemplate(Const.Templates.ManifestTemplate);
@@ -405,7 +405,7 @@ namespace MASES.JCOReflectorEngine
             {
                 if (item.Contains(Const.FileNameAndDirectory.CommonDirectory)) continue; // bypass for class-path build
 
-                var resName = await CreateSingleJar(jdkFolder, rootFolder, originFolder, item, JarType.Compiled, destFolder, timeout, withEmbedding);
+                var resName = await CreateSingleJar(jdkFolder, rootFolder, sourceFolder, item, JarType.Compiled, destFolder, timeout, withEmbedding);
                 if (!string.IsNullOrEmpty(resName))
                 {
                     var str = string.Format(" {0} ", string.Format(Const.FileNameAndDirectory.CompiledPattern, resName));
@@ -414,29 +414,27 @@ namespace MASES.JCOReflectorEngine
                 }
                 if (withSource)
                 {
-                    await CreateSingleJar(jdkFolder, rootFolder, originFolder, item, JarType.Source, destFolder, timeout, false);
+                    await CreateSingleJar(jdkFolder, rootFolder, sourceFolder, item, JarType.Source, destFolder, timeout, false);
                     counter++;
                 }
             }
             sb.AppendLine();
             var manifestStr = sb.ToString();
             manifestStr = manifestStr.Replace(Const.Class.JCOREFLECTOR_VERSION, Const.ReflectorVersion);
-            var manifestFileName = Path.Combine(originFolder, Const.FileNameAndDirectory.ManifestFile);
+            var manifestFileName = Path.Combine(sourceFolder, Const.FileNameAndDirectory.ManifestFile);
             File.WriteAllText(manifestFileName, manifestStr);
 
-            var reflectorPath = Path.Combine(rootFolder, Const.FileNameAndDirectory.RootDirectory, Const.FileNameAndDirectory.SourceDirectory);
-
-            await CreateSingleJar(jdkFolder, rootFolder, reflectorPath, Const.FileNameAndDirectory.CommonDirectory, JarType.Compiled, destFolder, timeout, withEmbedding, manifestFileName);
+            await CreateSingleJar(jdkFolder, rootFolder, sourceFolder, Const.FileNameAndDirectory.CommonDirectory, JarType.Compiled, destFolder, timeout, withEmbedding, manifestFileName);
             counter++;
             if (withSource)
             {
-                await CreateSingleJar(jdkFolder, rootFolder, reflectorPath, Const.FileNameAndDirectory.CommonDirectory, JarType.Source, destFolder, timeout, withEmbedding);
+                await CreateSingleJar(jdkFolder, rootFolder, sourceFolder, Const.FileNameAndDirectory.CommonDirectory, JarType.Source, destFolder, timeout, withEmbedding);
                 counter++;
             }
             return counter;
         }
 
-        async static Task<string> CreateSingleJar(string jdkFolder, string rootFolder, string originFolder, string pathName, JarType type, string destinationFolder, int timeout, bool withEmbedding, string manifestFile = null)
+        async static Task<string> CreateSingleJar(string jdkFolder, string rootFolder, string sourceFolder, string pathName, JarType type, string destinationFolder, int timeout, bool withEmbedding, string manifestFile = null)
         {
             string patternName;
             string filter;
@@ -461,7 +459,7 @@ namespace MASES.JCOReflectorEngine
             assemblyName = assemblyName.Replace("/", string.Empty);
             var destinationJar = string.Format(patternName, assemblyName);
             destinationJar = Path.Combine(destinationFolder, destinationJar);
-            var searchPath = Path.Combine(originFolder, pathName);
+            var searchPath = Path.Combine(sourceFolder, pathName);
             searchPath = Path.GetFullPath(searchPath);
             StringBuilder sb = new StringBuilder();
             foreach (var item in Directory.EnumerateFiles(searchPath, filter, SearchOption.AllDirectories))

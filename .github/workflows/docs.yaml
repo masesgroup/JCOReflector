@@ -37,7 +37,7 @@ jobs:
         while IFS= read -r file
         do
           echo $file
-          if [[ $file == "netreflected/docs/README.md"* ]]; then
+          if [[ $file == "docs/README.md"* ]]; then
             echo "Recreate docs was requested"
             echo "run_job=true" >> $GITHUB_OUTPUT
             break
@@ -47,8 +47,8 @@ jobs:
             echo "run_job=true" >> $GITHUB_OUTPUT
             break
           fi
-          if [[ $file == "netreflected/src/"* ]]; then
-            echo "This file is under the directory 'netreflected/src/'."
+          if [[ $file == "src/java/src/"* ]]; then
+            echo "This file is under the directory 'src/java/src/'."
             echo "run_job=true" >> $GITHUB_OUTPUT
             break
           fi
@@ -188,7 +188,7 @@ jobs:
  
       - name: Commit changes to JCOReflector repo
         run: |
-          cd .\netreflected\
+          cd .\src\java\
           %GITHUB_WORKSPACE%\.github\workflows\commit.cmd github-actions 41898282+github-actions[bot]@users.noreply.github.com "Update help submodule after commit ${{ env.GITHUB_COMMIT_MESSAGE }}"
           cd ..
         shell: cmd

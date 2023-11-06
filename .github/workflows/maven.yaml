@@ -47,8 +47,8 @@ jobs:
             echo "run_job=true" >> $GITHUB_OUTPUT
             break
           fi
-          if [[ $file == "netreflected/src/"* ]]; then
-            echo "This file is under the directory 'netreflected/src/'."
+          if [[ $file == "src/java/src/"* ]]; then
+            echo "This file is under the directory 'src/java/src/'."
             echo "run_job=true" >> $GITHUB_OUTPUT
             break
           fi
@@ -103,11 +103,11 @@ jobs:
 
       - name: Install local file to be used within Javadoc section of generated POM 
         shell: bash
-        run: mvn install:install-file --no-transfer-progress -Dfile=../../bin/net6.0/JCOBridge.jar -DgroupId=JCOBridge -DartifactId=JCOBridge -Dversion=2.5.8 -Dpackaging=jar -f ./netreflected/src/net6.0.xml
+        run: mvn install:install-file --no-transfer-progress -Dfile=../../bin/net6.0/JCOBridge.jar -DgroupId=JCOBridge -DartifactId=JCOBridge -Dversion=2.5.8 -Dpackaging=jar -f ./src/java/src/net6.0.xml
 
       - name: Publish net6.0 to Apache Maven Central
         shell: bash
-        run: mvn --file ./netreflected/src/net6.0.xml --no-transfer-progress --batch-mode -Dgpg.passphrase=${{ secrets.MAVEN_GPG_PASSPHRASE }} deploy
+        run: mvn --file ./src/java/src/net6.0.xml --no-transfer-progress --batch-mode -Dgpg.passphrase=${{ secrets.MAVEN_GPG_PASSPHRASE }} deploy
         env:
           MAVEN_USERNAME: ${{ secrets.MAVEN_USERNAME }}
           MAVEN_CENTRAL_TOKEN: ${{ secrets.MAVEN_CENTRAL_TOKEN }}
@@ -160,11 +160,11 @@ jobs:
 
       - name: Install local file to be used within Javadoc section of generated POM 
         shell: bash
-        run: mvn install:install-file --no-transfer-progress -Dfile=../../bin/net7.0/JCOBridge.jar -DgroupId=JCOBridge -DartifactId=JCOBridge -Dversion=2.5.8 -Dpackaging=jar -f ./netreflected/src/net7.0.xml
+        run: mvn install:install-file --no-transfer-progress -Dfile=../../bin/net7.0/JCOBridge.jar -DgroupId=JCOBridge -DartifactId=JCOBridge -Dversion=2.5.8 -Dpackaging=jar -f ./src/java/src/net7.0.xml
 
       - name: Publish net7.0 to Apache Maven Central
         shell: bash
-        run: mvn --file ./netreflected/src/net7.0.xml --no-transfer-progress --batch-mode -Dgpg.passphrase=${{ secrets.MAVEN_GPG_PASSPHRASE }} deploy
+        run: mvn --file ./src/java/src/net7.0.xml --no-transfer-progress --batch-mode -Dgpg.passphrase=${{ secrets.MAVEN_GPG_PASSPHRASE }} deploy
         env:
           MAVEN_USERNAME: ${{ secrets.MAVEN_USERNAME }}
           MAVEN_CENTRAL_TOKEN: ${{ secrets.MAVEN_CENTRAL_TOKEN }}
@@ -213,11 +213,11 @@ jobs:
 
       - name: Install local file to be used within Javadoc section of generated POM 
         shell: bash
-        run: mvn install:install-file --no-transfer-progress -Dfile=../../bin/net462/JCOBridge.jar -DgroupId=JCOBridge -DartifactId=JCOBridge -Dversion=2.5.8 -Dpackaging=jar -f ./netreflected/src/net462.xml
+        run: mvn install:install-file --no-transfer-progress -Dfile=../../bin/net462/JCOBridge.jar -DgroupId=JCOBridge -DartifactId=JCOBridge -Dversion=2.5.8 -Dpackaging=jar -f ./src/java/src/net462.xml
 
       - name: Publish net462 to Apache Maven Central
         shell: bash
-        run: mvn --file ./netreflected/src/net462.xml --no-transfer-progress --batch-mode -Dgpg.passphrase=${{ secrets.MAVEN_GPG_PASSPHRASE }} deploy
+        run: mvn --file ./src/java/src/net462.xml --no-transfer-progress --batch-mode -Dgpg.passphrase=${{ secrets.MAVEN_GPG_PASSPHRASE }} deploy
         env:
           MAVEN_USERNAME: ${{ secrets.MAVEN_USERNAME }}
           MAVEN_CENTRAL_TOKEN: ${{ secrets.MAVEN_CENTRAL_TOKEN }}

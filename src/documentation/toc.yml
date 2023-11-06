@@ -3,6 +3,12 @@
 - name: Java API Documentation
   href: api/
   homepage: api/index.md
+- name: Browse repository
+  href: https://github.com/masesgroup/JCOReflector
+- name: Releases
+  href: https://github.com/masesgroup/JCOReflector/releases/
+- name: Issues
+  href: https://github.com/masesgroup/JCOReflector/issues/
 - name: Open source projects
   dropdown: true
   items:

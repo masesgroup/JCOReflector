@@ -21,10 +21,10 @@
     <readme>README.md</readme>
   </metadata>
     <files>
-        <file src="..\..\LICENSE" target="LICENSE" />
+        <file src="..\..\..\LICENSE" target="LICENSE" />
         <file src="..\Common\JCOB128x128.png" target="" />
-        <file src="..\..\README.md" target="" />
-        <file src="..\..\bin\net6.0\" target="tools\net6.0\any" />
-		<file src="..\..\bin\net7.0\" target="tools\net7.0\any" />
+        <file src="..\..\..\README.md" target="" />
+        <file src="..\..\..\bin\net6.0\" target="tools\net6.0\any" />
+		<file src="..\..\..\bin\net7.0\" target="tools\net7.0\any" />
     </files>
 </package>

@@ -102,9 +102,9 @@
     <EmbeddedResource Include="JCOReflectorOptions.template" />
   </ItemGroup>
   <ItemGroup>
-    <EmbeddedResource Condition="$(TargetFramework) == 'net462'" Include="..\..\java\src\net462\assemblies.list" />
-    <EmbeddedResource Condition="$(TargetFramework) == 'net6.0'" Include="..\..\java\src\net6.0\assemblies.list" />
-	<EmbeddedResource Condition="$(TargetFramework) == 'net7.0'" Include="..\..\java\src\net7.0\assemblies.list" />
+    <EmbeddedResource Condition="$(TargetFramework) == 'net462'" Include="..\..\jvm\src\net462\assemblies.list" />
+    <EmbeddedResource Condition="$(TargetFramework) == 'net6.0'" Include="..\..\jvm\src\net6.0\assemblies.list" />
+	<EmbeddedResource Condition="$(TargetFramework) == 'net7.0'" Include="..\..\jvm\src\net7.0\assemblies.list" />
   </ItemGroup>
   <ItemGroup>
     <None Include="..\..\..\LICENSE" Pack="true" PackagePath="" />

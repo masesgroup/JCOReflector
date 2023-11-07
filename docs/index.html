@@ -1,0 +1,333 @@
+﻿<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+      <title>JCOReflector (a .NET Java wrapper) | Sinapse System website </title>
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <meta name="title" content="JCOReflector (a .NET Java wrapper) | Sinapse System website ">
+      
+      <link rel="icon" href="images/favicon.png">
+      <link rel="stylesheet" href="public/docfx.min.css">
+      <link rel="stylesheet" href="public/main.css">
+      <meta name="docfx:navrel" content="toc.html">
+      <meta name="docfx:tocrel" content="toc.html">
+      
+      <meta name="docfx:rel" content="">
+      
+      <meta name="docfx:disabletocfilter" content="true">
+      
+      <meta name="loc:inThisArticle" content="In this article">
+      <meta name="loc:searchResultsCount" content="{count} results for &quot;{query}&quot;">
+      <meta name="loc:searchNoResults" content="No results for &quot;{query}&quot;">
+      <meta name="loc:tocFilter" content="Filter by title">
+      <meta name="loc:nextArticle" content="Next">
+      <meta name="loc:prevArticle" content="Previous">
+      <meta name="loc:themeLight" content="Light">
+      <meta name="loc:themeDark" content="Dark">
+      <meta name="loc:themeAuto" content="Auto">
+      <meta name="loc:changeTheme" content="Change theme">
+      <meta name="loc:copy" content="Copy">
+      <meta name="loc:downloadPdf" content="Download PDF">
+  </head>
+
+  <script type="module" src="./public/docfx.min.js"></script>
+
+  <script>
+    const theme = localStorage.getItem('theme') || 'auto'
+    document.documentElement.setAttribute('data-bs-theme', theme === 'auto' ? (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light') : theme)
+  </script>
+
+
+  <body class="tex2jax_ignore" data-layout="" data-yaml-mime="">
+    <header class="bg-body border-bottom">
+      <nav id="autocollapse" class="navbar navbar-expand-md" role="navigation">
+        <div class="container-xxl flex-nowrap">
+          <a class="navbar-brand" href="index.html">
+            <img id="logo" class="svg" src="images/sinapse_logo.png" alt="">
+            
+          </a>
+          <button class="btn btn-lg d-md-none border-0" type="button" data-bs-toggle="collapse" data-bs-target="#navpanel" aria-controls="navpanel" aria-expanded="false" aria-label="Toggle navigation">
+            <i class="bi bi-three-dots"></i>
+          </button>
+          <div class="collapse navbar-collapse" id="navpanel">
+            <div id="navbar">
+              <form class="search" role="search" id="search">
+                <i class="bi bi-search"></i>
+                <input class="form-control" id="search-query" type="search" disabled="" placeholder="Search" autocomplete="off" aria-label="Search">
+              </form>
+            </div>
+          </div>
+        </div>
+      </nav>
+    </header>
+
+    <main class="container-xxl">
+      <div class="toc-offcanvas">
+        <div class="offcanvas-md offcanvas-start" tabindex="-1" id="tocOffcanvas" aria-labelledby="tocOffcanvasLabel">
+          <div class="offcanvas-header">
+            <h5 class="offcanvas-title" id="tocOffcanvasLabel">Table of Contents</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="offcanvas" data-bs-target="#tocOffcanvas" aria-label="Close"></button>
+          </div>
+          <div class="offcanvas-body">
+            <nav class="toc" id="toc"></nav>
+          </div>
+        </div>
+      </div>
+
+      <div class="content">
+        <div class="actionbar">
+          <button class="btn btn-lg border-0 d-md-none" style="margin-top: -.65em; margin-left: -.8em" type="button" data-bs-toggle="offcanvas" data-bs-target="#tocOffcanvas" aria-controls="tocOffcanvas" aria-expanded="false" aria-label="Show table of contents">
+            <i class="bi bi-list"></i>
+          </button>
+
+          <nav id="breadcrumb"></nav>
+        </div>
+
+        <article data-uid="">
+<h1 id="jcoreflector-a-net-java-wrapper">JCOReflector (a .NET Java wrapper)</h1>
+
+<p>JCOReflector is a comprehensive suite of libraries and tools to use Java/JVM APIs (Java, Scala, Kotlin, ...) and .NET side-by-side.</p>
+<h3 id="libraries-and-tools">Libraries and Tools</h3>
+<table>
+<thead>
+<tr>
+<th>.NET Framework</th>
+<th>.NET 6</th>
+<th>.NET 7</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><a href="https://search.maven.org/search?q=g:%22com.masesgroup%22%20AND%20a:%22jcoreflector_net462%22"><img src="https://img.shields.io/maven-central/v/com.masesgroup/jcoreflector_net462.svg?label=Maven%20Central" alt="Maven Central"></a></td>
+<td><a href="https://search.maven.org/search?q=g:%22com.masesgroup%22%20AND%20a:%22jcoreflector_net6.0%22"><img src="https://img.shields.io/maven-central/v/com.masesgroup/jcoreflector_net6.0.svg?label=Maven%20Central" alt="Maven Central"></a></td>
+<td><a href="https://search.maven.org/search?q=g:%22com.masesgroup%22%20AND%20a:%22jcoreflector_net7.0%22"><img src="https://img.shields.io/maven-central/v/com.masesgroup/jcoreflector_net7.0.svg?label=Maven%20Central" alt="Maven Central"></a></td>
+</tr>
+</tbody>
+</table>
+<table>
+<thead>
+<tr>
+<th>JCOReflectorEngine</th>
+<th>JCOReflectorCLI</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><a href="https://www.nuget.org/packages/MASES.JCOReflectorEngine"><img src="https://img.shields.io/nuget/v/MASES.JCOReflectorEngine" alt="latest version"></a> <a href="https://www.nuget.org/packages/MASES.JCOReflectorEngine"><img src="https://img.shields.io/nuget/dt/MASES.JCOReflectorEngine" alt="downloads"></a></td>
+<td><a href="https://www.nuget.org/packages/MASES.JCOReflectorCLI"><img src="https://img.shields.io/nuget/v/MASES.JCOReflectorCLI" alt="latest version"></a> <a href="https://www.nuget.org/packages/MASES.JCOReflectorCLI"><img src="https://img.shields.io/nuget/dt/MASES.JCOReflectorCLI" alt="downloads"></a></td>
+</tr>
+</tbody>
+</table>
+<h3 id="project-disclaimer">Project disclaimer</h3>
+<p>JCOReflector is a project, curated by MASES Group, can be supported by the open-source community.</p>
+<p>Its primary scope is to support other, public or internal, MASES Group projects: open-source community and commercial entities can use it for their needs and support this project, moreover there are dedicated community and commercial subscription plans.</p>
+<p>The repository code and releases may contain bugs, the release cycle depends from critical discovered issues and/or enhancement requested from this or other projects.</p>
+<p>Looking for the help of experts? MASES Group can help you design, build, deploy, and manage applications mixing .NET and JVM enabled languages.</p>
+<hr>
+<h2 id="the-project">The project</h2>
+<p>JCOReflectorEngine produces a set of <strong>.NET wrapper for Java</strong> as JARs that are available for download. It's simple to use: you only need to reference JCOReflector.jar in the class-path and use the .NET API within your Java projects like exposed in the example section.</p>
+<p>The core of the project is the innovative JCOReflector, a reflection engine which automatically writes Java classes using .NET class reflection.
+JCOReflector can be used to reflects any .NET assembly (even assembly outside the Microsoft ones) into JARs.
+The generated wrapper classes are based on the powerful <a href="https://www.jcobridge.com">JCOBridge</a> engine and extends its use to simplify the use of .NET from Java(JVM).
+It was created internally from us to support our customers, now we made it available for everyone.</p>
+<p>This project adheres to the Contributor <a href="CODE_OF_CONDUCT.md">Covenant code of conduct</a>. By participating, you are expected to uphold this code. Please report unacceptable behavior to coc_reporting@masesgroup.com.</p>
+<h2 id="runtime-engine">Runtime engine</h2>
+<p>JCOReflector uses <a href="https://www.jcobridge.com">JCOBridge</a>, and its <a href="https://www.jcobridge.com/features/">features</a>, to obtain many benefits:</p>
+<ul>
+<li><strong>Cyber-security</strong>:
+<ul>
+<li><a href="https://en.wikipedia.org/wiki/Java_virtual_machine">JVM</a> and <a href="https://en.wikipedia.org/wiki/Common_Language_Runtime">CLR, or CoreCLR,</a> runs in the same process, but are insulated from each other;</li>
+<li>JCOBridge does not make any code injection into CLR or JVM;</li>
+<li>JCOBridge does not use any other communication mechanism than JNI;</li>
+<li>JVM inherently inherits the cyber-security levels of running .NET (CLR);</li>
+</ul>
+</li>
+<li><strong>Direct access the CLR from any JVM application</strong>:
+<ul>
+<li>No need to learn new APIs: we try to expose the same .NET APIs in Java style;</li>
+<li>No extra validation cycle: bug fix, improvements, new features are immediately available;</li>
+<li>Documentation is shared.</li>
+</ul>
+</li>
+</ul>
+<p>Have a look at the following resources:</p>
+<ul>
+<li><a href="https://www.jcobridge.com/release-notes/">Release notes</a></li>
+<li><a href="https://www.jcobridge.com/pricing-25/">Community Edition</a></li>
+<li><a href="https://www.jcobridge.com/pricing-25/">Commercial Edition</a></li>
+<li><a href="https://www.nuget.org/packages/MASES.JCOBridge"><img src="https://img.shields.io/nuget/v/MASES.JCOBridge" alt="JCOBridge nuget"></a></li>
+</ul>
+<h2 id="history-of-the-project">History of the project</h2>
+<p>This project started in 2019 with the aims to create a set of Java (JVM) classes which mimic .NET (Framework/6/7) conterparts, in May 2020 the first commit in GitHub.
+Using this project it is possible to use .NET API in Java and all JVM enabled languages (Scala, Kotlin, and so on).
+The final output of JCOReflector are JARs.
+At its first stages no JARs was available: only the JCOBridge engine, the graphical UI that helps to manages reflection and the operations needed to finally build JARs was relased.
+Starting from recent relases automated continous integration and verification process are in places, so the produced JARs are directly available for download and is no more needed to manually rebuils JARs before use it.
+Anyway still possible to use JCOReflector to reflects any .NET assembly (even assembly outside the Microsoft ones) into JARs, and because JCOReflector uses templates it is not necessary to manually manages the output, special needs can be addressed dirctly inside the templates.</p>
+<h2 id="simple-example">Simple example</h2>
+<pre><code class="lang-java">
+package mscorlib;
+
+import system.*;
+import system.io.*;
+
+public class HelloNET {
+    public static void main(String[] args) {
+        try {
+            String filename = &quot;test.txt&quot;;
+            String result = &quot;&quot;;
+            if (File.Exists(filename)) {
+                result = File.ReadAllText(filename);
+				Console.WriteLine(result);
+                result = result + &quot;Java Execution &quot;;
+                File.WriteAllText(filename, result);
+            }
+            Console.WriteLine(result);
+            Console.WriteLine(&quot;Exiting&quot;);
+        } catch (FileNotFoundException fnfe) {
+            fnfe.printStackTrace();
+        } catch (Throwable tre) {
+            tre.printStackTrace();
+        }
+        return;
+    }
+}
+
+</code></pre>
+<p>This is the result:</p>
+<pre><code>prompt&gt; This is a text file for read/write operation
+prompt&gt; This is a text file for read/write operation Java Execution
+prompt&gt; Exiting
+</code></pre>
+<p>To run it runs a command like the following one:</p>
+<blockquote>
+<p>java -cp JCOReflector.jar;. HelloNET</p>
+</blockquote>
+<p>The full example code, and other ones, are in the project test folder.</p>
+<p>A basic Scala examples is the following one:</p>
+<pre><code class="lang-scala">package mscorlib
+
+import system.Console
+import system.Environment
+
+object HelloIterator {
+  def main(args: scala.Array[String]): Unit = {
+    try {
+      Environment.GetLogicalDrives.foreach(Console.WriteLine(_))
+      Environment.Exit(0)
+    } catch {
+      case tre: Throwable =&gt;
+        tre.printStackTrace()
+    }
+  }
+}
+</code></pre>
+<p>the same example written in Kotlin is the following one:</p>
+<pre><code class="lang-kotlin">package mscorlib
+
+import system.Console
+import system.Environment
+
+object HelloIterator {
+    @JvmStatic
+    fun main(args: Array&lt;String&gt;) {
+        try {
+            for (drive in Environment.GetLogicalDrives()) {
+                Console.WriteLine(drive)
+            }
+            Environment.Exit(0)
+        } catch (tre: Throwable) {
+            tre.printStackTrace()
+        }
+    }
+}
+</code></pre>
+<h3 id="whats-in-net-for-java">Whats in .NET for Java?</h3>
+<p>From the point of view of .NET it is very simple to use Java classes and it is not necessary to have some kind of reflection classes:</p>
+<ol>
+<li><a href="https://www.jcobridge.com">JCOBridge</a> is able to access and execute directly within a JVM using C# code, from C# it is possible to execute directly Java code with a similar syntax: look at the examples in <a href="https://github.com/masesgroup/JCOBridge-Examples">JCOBridge-Examples</a>.</li>
+<li>The project <a href="https://github.com/masesgroup/JNet">JNet</a> uses <a href="https://www.jcobridge.com">JCOBridge</a>: a developer has some ready made Java classes to be used from .NET.</li>
+</ol>
+<h2 id="actual-state">Actual state</h2>
+<p>The JCOBridge is a mature platform for .NET assembly reflection, the .NET wrapper JARs are available and cover most of the .NET framework functionality.<br>
+The reflector executables, available for both Framework and CoreCLR, is limited in the following features:</p>
+<h3 id="implemented-in-the-reflector">Implemented in the reflector</h3>
+<ul>
+<li>Only public Types are available</li>
+<li>Classes and public accessible methods</li>
+<li>Interface</li>
+<li>Enum: enumeration and flags are available</li>
+<li>.NET exception are translated and thrown in code</li>
+<li>Static classes are managed</li>
+<li>Events</li>
+<li>Arrays: partial support</li>
+<li>Inheritance</li>
+<li>Out/Ref parameters</li>
+<li>Native types managed from JCOBridge are directly mapped to native Java type</li>
+<li>Base types (System.Object, System.Type, System.Enum, System.Exception, System.Collections.ArrayList) are mapped to specific type into a support library (<strong>JCOReflector.jar</strong>)</li>
+<li>Management of thrown declaration as expected in Java: a generic Throwable is used with all exceptions found in code (used the algorithm in <a href="https://stackoverflow.com/questions/986180/how-can-i-determine-which-exceptions-can-be-thrown-by-a-given-method">https://stackoverflow.com/questions/986180/how-can-i-determine-which-exceptions-can-be-thrown-by-a-given-method</a> and code from <a href="https://docs.microsoft.com/en-us/archive/blogs/haibo_luo/">https://docs.microsoft.com/en-us/archive/blogs/haibo_luo/</a>)</li>
+<li>Documentation</li>
+</ul>
+<h3 id="not-implemented-in-reflector">Not implemented in reflector:</h3>
+<ul>
+<li>Generic types</li>
+<li>Method decoration (Attributes)</li>
+<li>Unsafe methods</li>
+<li>Fields</li>
+</ul>
+<h3 id="limitations">Limitations</h3>
+<p>C# and Java are different languages. The reflection process cannot reflects into Java some features available on C#: an example are properties where get/set is automatically choosed from C# compiler
+Other limitations comes from some differences between the two engines (CLR and JVM).
+In all cases <a href="https://www.jcobridge.com">JCOBridge</a> superside these limitations, but manual operations shall be made: do not change the reflected classes, override them in your code.</p>
+<h2 id="how-to-use-the-generator-tool-jcoreflector">How to use the generator tool (JCOReflector)</h2>
+<p>In the root folder execute:</p>
+<blockquote>
+<p>dotnet build JCOReflector\JCOReflector.sln</p>
+</blockquote>
+<p>or</p>
+<blockquote>
+<p>dotnet build JCOReflector\JCOReflectorCLI.sln</p>
+</blockquote>
+<p>Within the folder bin you will find three subfolders:</p>
+<ul>
+<li><strong>net462</strong> (available only on Windows platform)</li>
+<li><strong>net6.0</strong> (available on .NET 6 supported platforms)</li>
+<li><strong>net7.0</strong> (available on .NET 7 supported platforms)</li>
+</ul>
+<p>in each subfolder will be available two executables:</p>
+<ul>
+<li><strong>JCOReflectorCLI</strong> the CLI tool;</li>
+<li><strong>JCOReflectorGUI</strong> the GUI tool, below some screenshot:</li>
+</ul>
+<p><img src="images/jcoreflector.png" alt="JCOReflector" title="JCOReflector screenshot">
+<img src="images/jcoreflector2.png" alt="JCOReflector" title="JCOReflector screenshot"></p>
+<h2 id="reflected-assemblies">Reflected Assemblies</h2>
+<p>The folder <a href="/src/jvm/src">src/jvm/src</a> contains all reflected classes generated for <strong>.NET</strong> <strong>Framework</strong> (<em>net462</em>), <strong>6</strong> (<em>net6.0</em>) and <strong>7</strong> (<em>net7.0</em>). Below the coverage <a href="#statistics">statistics</a>:</p>
+<h3 id="statistics">Statistics</h3>
+<p><img src="https://docs.google.com/spreadsheets/d/e/2PACX-1vTe94B4KWTddOWDnIHGRkHHPq23g_oPzZUfmVU3ls1lEUwNQmG_T4Zi7xCCNkb0RMqkT8LblRNW7aT9/pubchart?oid=845891829&amp;format=image" alt="FrameworkStatistic"></p>
+<p><img src="https://docs.google.com/spreadsheets/d/e/2PACX-1vTe94B4KWTddOWDnIHGRkHHPq23g_oPzZUfmVU3ls1lEUwNQmG_T4Zi7xCCNkb0RMqkT8LblRNW7aT9/pubchart?oid=1200391981&amp;format=image" alt="Net6Statistic"></p>
+<p><img src="https://docs.google.com/spreadsheets/d/e/2PACX-1vTe94B4KWTddOWDnIHGRkHHPq23g_oPzZUfmVU3ls1lEUwNQmG_T4Zi7xCCNkb0RMqkT8LblRNW7aT9/pubchart?oid=1527441532&amp;format=image" alt="Net7Statistic"></p>
+
+</article>
+
+
+        <div class="next-article d-print-none border-top" id="nextArticle"></div>
+
+      </div>
+
+      <div class="affix">
+        <nav id="affix"></nav>
+      </div>
+    </main>
+
+    <div class="container-xxl search-results" id="search-results"></div>
+
+    <footer class="border-top text-secondary">
+      <div class="container-xxl">
+        <div class="flex-fill">
+          <span>Copyright © 2023 MASES s.r.l.. | Via San Cesidio 16 - San Valentino in A.C. - PE | P.I. 01932310681</span>
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>

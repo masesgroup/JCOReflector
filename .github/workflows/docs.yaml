@@ -37,11 +37,6 @@ jobs:
         while IFS= read -r file
         do
           echo $file
-          if [[ $file == "docs/README.md"* ]]; then
-            echo "Recreate docs was requested"
-            echo "run_job=true" >> $GITHUB_OUTPUT
-            break
-          fi
           if [[ $file == ".github/workflows/docs.yaml"* ]]; then
             echo "Recreate docs was requested"
             echo "run_job=true" >> $GITHUB_OUTPUT

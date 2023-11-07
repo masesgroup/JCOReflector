@@ -37,7 +37,7 @@ jobs:
         while IFS= read -r file
         do
           echo $file
-          if [[ $file == "netreflected/docs/README.md"* ]]; then
+          if [[ $file == "docs/README.md"* ]]; then
             echo "Recreate docs was requested"
             echo "run_job=true" >> $GITHUB_OUTPUT
             break
@@ -47,8 +47,8 @@ jobs:
             echo "run_job=true" >> $GITHUB_OUTPUT
             break
           fi
-          if [[ $file == "netreflected/src/"* ]]; then
-            echo "This file is under the directory 'netreflected/src/'."
+          if [[ $file == "src/jvm/src/"* ]]; then
+            echo "This file is under the directory 'src/jvm/src/'."
             echo "run_job=true" >> $GITHUB_OUTPUT
             break
           fi
@@ -77,7 +77,7 @@ jobs:
 
       # Runs a set of commands using the runners shell
       - name: Build JCOReflectorCLI
-        run: dotnet build --no-incremental --configuration Release /p:Platform="Any CPU" src\JCOReflectorCLI.sln
+        run: dotnet build --no-incremental --configuration Release /p:Platform="Any CPU" src\net\JCOReflectorCLI.sln
 
       # Runs a set of commands using the runners shell
       - name: Copy configuration file
@@ -87,52 +87,41 @@ jobs:
 
       - name: Switch to master net6.0 help file
         run: |
-          cd .\netreflected\docs\net6.0
+          cd .\docs\net6.0
           git checkout master
-          cd ..\..\..
+          cd ..\..
 
       - name: Switch to master net7.0 help file
         run: |
-          cd .\netreflected\docs\net7.0
+          cd .\docs\net7.0
           git checkout master
-          cd ..\..\..
+          cd ..\..
 
       - name: Switch to master net462 help file
         run: |
-          cd .\netreflected\docs\net462
+          cd .\docs\net462
           git checkout master
-          cd ..\..\..
+          cd ..\..
+
+      - name: Clear documentation folder 
+        run: Get-ChildItem -Path .\docs -Exclude net6.0,net7.0,net462,_config.yml,CNAME,README.md | Remove-Item -Recurse -Force
 
       # Runs a set of commands using the runners shell
       - name: Clean net6.0 help file folders
-        run: |
-          Copy-Item .\netreflected\docs\net6.0\.git -Destination .\_data\.git -Force
-          Copy-Item .\netreflected\docs\net6.0\LICENSE -Destination .\_data\LICENSE -Force
-          Copy-Item .\netreflected\docs\net6.0\README.md -Destination .\_data\README.md -Force
-          Remove-Item .\netreflected\docs\net6.0\* -Recurse -Force
-          Copy-Item .\_data\.git -Destination .\netreflected\docs\net6.0\.git -Force
-          Copy-Item .\_data\LICENSE -Destination .\netreflected\docs\net6.0\LICENSE -Force
-          Copy-Item .\_data\README.md -Destination .\netreflected\docs\net6.0\README.md -Force
+        run: Get-ChildItem -Path .\docs\net6.0 -Exclude .git,LICENSE,README.md | Remove-Item -Recurse -Force
 
       - name: Clean net7.0 help file folders
-        run: |
-          Copy-Item .\netreflected\docs\net7.0\.git -Destination .\_data\.git -Force
-          Copy-Item .\netreflected\docs\net7.0\LICENSE -Destination .\_data\LICENSE -Force
-          Copy-Item .\netreflected\docs\net7.0\README.md -Destination .\_data\README.md -Force
-          Remove-Item .\netreflected\docs\net7.0\* -Recurse -Force
-          Copy-Item .\_data\.git -Destination .\netreflected\docs\net7.0\.git -Force
-          Copy-Item .\_data\LICENSE -Destination .\netreflected\docs\net7.0\LICENSE -Force
-          Copy-Item .\_data\README.md -Destination .\netreflected\docs\net7.0\README.md -Force
+        run: Get-ChildItem -Path .\docs\net7.0 -Exclude .git,LICENSE,README.md | Remove-Item -Recurse -Force
           
       - name: Clean net462 help file folders
+        run: Get-ChildItem -Path .\docs\net462 -Exclude .git,LICENSE,README.md | Remove-Item -Recurse -Force
+
+      - run: dotnet tool update -g docfx
+
+      - name: Build documentation
         run: |
-          Copy-Item .\netreflected\docs\net462\.git -Destination .\_data\.git -Force
-          Copy-Item .\netreflected\docs\net462\LICENSE -Destination .\_data\LICENSE -Force
-          Copy-Item .\netreflected\docs\net462\README.md -Destination .\_data\README.md -Force
-          Remove-Item .\netreflected\docs\net462\* -Recurse -Force
-          Copy-Item .\_data\.git -Destination .\netreflected\docs\net462\.git -Force
-          Copy-Item .\_data\LICENSE -Destination .\netreflected\docs\net462\LICENSE -Force
-          Copy-Item .\_data\README.md -Destination .\netreflected\docs\net462\README.md -Force
+          cd src\documentation
+          docfx
 
       - name: Extract commit SHA
         run: |
@@ -154,14 +143,12 @@ jobs:
       - name: Clean temporary files
         run: |
           Remove-Item .\bin\* -Recurse -Force
-          Remove-Item .\src\CLI\obj\* -Recurse -Force
-          Remove-Item .\src\engine\obj\* -Recurse -Force
-          Remove-Item .\_data\LICENSE -Force
-          Remove-Item .\_data\README.md -Force
+          Remove-Item .\src\net\CLI\obj\* -Recurse -Force
+          Remove-Item .\src\net\engine\obj\* -Recurse -Force
        
       - name: Commit changes to net6.0 help file
         run: |
-          cd .\netreflected\docs\net6.0
+          cd .\docs\net6.0
           %GITHUB_WORKSPACE%\.github\workflows\commit.cmd github-actions 41898282+github-actions[bot]@users.noreply.github.com "Update help file to commit masesgroup/JCOReflector@${{ env.GITHUB_COMMIT_MESSAGE }}"
           cd ..\..\..
         shell: cmd
@@ -170,7 +157,7 @@ jobs:
 
       - name: Commit changes to net7.0 help file
         run: |
-          cd .\netreflected\docs\net7.0
+          cd .\docs\net7.0
           %GITHUB_WORKSPACE%\.github\workflows\commit.cmd github-actions 41898282+github-actions[bot]@users.noreply.github.com "Update help file to commit masesgroup/JCOReflector@${{ env.GITHUB_COMMIT_MESSAGE }}"
           cd ..\..\..
         shell: cmd
@@ -179,7 +166,7 @@ jobs:
         
       - name: Commit changes to net462 help file
         run: |
-          cd .\netreflected\docs\net462
+          cd .\docs\net462
           %GITHUB_WORKSPACE%\.github\workflows\commit.cmd github-actions 41898282+github-actions[bot]@users.noreply.github.com "Update help file to commit masesgroup/JCOReflector@${{ env.GITHUB_COMMIT_MESSAGE }}"
           cd ..\..\..
         shell: cmd
@@ -188,19 +175,18 @@ jobs:
  
       - name: Commit changes to JCOReflector repo
         run: |
-          cd .\netreflected\
+          cd .\docs\
           %GITHUB_WORKSPACE%\.github\workflows\commit.cmd github-actions 41898282+github-actions[bot]@users.noreply.github.com "Update help submodule after commit ${{ env.GITHUB_COMMIT_MESSAGE }}"
           cd ..
         shell: cmd
         env:
           GITHUB_WORKSPACE: $GITHUB_WORKSPACE
 
-
       - name: Push changes to net6.0 help file
         run: |
-          cd .\netreflected\docs\net6.0
+          cd .\docs\net6.0
           %GITHUB_WORKSPACE%\.github\workflows\push.cmd %REPO%
-          cd ..\..\..
+          cd ..\..
         shell: cmd
         env:
           GITHUB_WORKSPACE: $GITHUB_WORKSPACE
@@ -209,9 +195,9 @@ jobs:
 
       - name: Push changes to net7.0 help file
         run: |
-          cd .\netreflected\docs\net7.0
+          cd .\docs\net7.0
           %GITHUB_WORKSPACE%\.github\workflows\push.cmd %REPO%
-          cd ..\..\..
+          cd ..\..
         shell: cmd
         env:
           GITHUB_WORKSPACE: $GITHUB_WORKSPACE
@@ -220,9 +206,9 @@ jobs:
 
       - name: Push changes to net462 help file
         run: |
-          cd .\netreflected\docs\net462
+          cd .\docs\net462
           %GITHUB_WORKSPACE%\.github\workflows\push.cmd %REPO%
-          cd ..\..\..
+          cd ..\..
         shell: cmd
         env:
           GITHUB_WORKSPACE: $GITHUB_WORKSPACE

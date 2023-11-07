@@ -235,6 +235,7 @@ namespace MASES.JCOReflectorEngine
             public const string JDKToolExtraOptions = "JDKToolExtraOptions";
 
             // DocsBuilderEventArgs
+            public const string BaseDocsFolder = "BaseDocsFolder";
             public const string CommitVersion = "CommitVersion";
 
             // JARBuilderEventArgs
@@ -426,6 +427,12 @@ namespace MASES.JCOReflectorEngine
                     Name = CmdParam.JDKToolExtraOptions,
                     Default = string.Empty,
                     Help = "Extra options to be passed to the JDK tools (used from any JobType expect JobType.Reflect).",
+                },
+                new ArgumentMetadata<string>()
+                {
+                    Name = CmdParam.BaseDocsFolder,
+                    Default = null,
+                    Help = "The relative folder for docs (used from JobType.BuildDocs).",
                 },
                 new ArgumentMetadata<string>()
                 {
@@ -759,6 +766,10 @@ namespace MASES.JCOReflectorEngine
                             newArg.JDKToolExtraOptions = Parser.Get<string>(args, CmdParam.JDKToolExtraOptions);
                         }
 
+                        if (Parser.Exist(args, CmdParam.BaseDocsFolder))
+                        {
+                            newArg.BaseDocsFolder = Parser.Get<string>(args, CmdParam.BaseDocsFolder);
+                        }
                         if (Parser.Exist(args, CmdParam.CommitVersion))
                         {
                             newArg.CommitVersion = Parser.Get<string>(args, CmdParam.CommitVersion);
@@ -1578,6 +1589,8 @@ namespace MASES.JCOReflectorEngine
             : base(logLevel)
         {
         }
+
+        public string BaseDocsFolder { get; set; }
 
         public string CommitVersion { get; set; }
     }

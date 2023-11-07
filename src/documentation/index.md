@@ -12,10 +12,6 @@ JCOReflector is a comprehensive suite of libraries and tools to use Java/JVM API
 |---	|---	|
 |[![latest version](https://img.shields.io/nuget/v/MASES.JCOReflectorEngine)](https://www.nuget.org/packages/MASES.JCOReflectorEngine) [![downloads](https://img.shields.io/nuget/dt/MASES.JCOReflectorEngine)](https://www.nuget.org/packages/MASES.JCOReflectorEngine)|[![latest version](https://img.shields.io/nuget/v/MASES.JCOReflectorCLI)](https://www.nuget.org/packages/MASES.JCOReflectorCLI) [![downloads](https://img.shields.io/nuget/dt/MASES.JCOReflectorCLI)](https://www.nuget.org/packages/MASES.JCOReflectorCLI)|
 
-### Pipelines
-
-![CI_WINDOWS](https://github.com/masesgroup/JCOReflector/workflows/CI_WINDOWS/badge.svg)  ![CI_LINUX](https://github.com/masesgroup/JCOReflector/workflows/CI_LINUX/badge.svg)  [![CI_DOCS](https://github.com/masesgroup/JCOReflector/actions/workflows/docs.yaml/badge.svg)](https://github.com/masesgroup/JCOReflector/actions/workflows/docs.yaml)  [![CI_MAVEN](https://github.com/masesgroup/JCOReflector/actions/workflows/maven.yaml/badge.svg)](https://github.com/masesgroup/JCOReflector/actions/workflows/maven.yaml)  ![CI_RELEASE](https://github.com/masesgroup/JCOReflector/workflows/CI_RELEASE/badge.svg)
-
 ### Project disclaimer
 
 JCOReflector is a project, curated by MASES Group, can be supported by the open-source community.
@@ -220,8 +216,8 @@ in each subfolder will be available two executables:
 - **JCOReflectorCLI** the CLI tool;
 - **JCOReflectorGUI** the GUI tool, below some screenshot:
 
-![JCOReflector](/src/documentation/images/jcoreflector.png?raw=true "JCOReflector screenshot")
-![JCOReflector](/src/documentation/images/jcoreflector2.png?raw=true "JCOReflector screenshot")
+![JCOReflector](images/jcoreflector.png?raw=true "JCOReflector screenshot")
+![JCOReflector](images/jcoreflector2.png?raw=true "JCOReflector screenshot")
 
 ## Reflected Assemblies
 

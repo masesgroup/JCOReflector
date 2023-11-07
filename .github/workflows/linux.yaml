@@ -42,13 +42,13 @@ jobs:
             echo "run_job=true" >> $GITHUB_OUTPUT
             break
           fi
-          if [[ $file == "netreflected/src/"* ]]; then
-            echo "This file is under the directory 'netreflected/src'."
+          if [[ $file == "src/jvm/src/"* ]]; then
+            echo "This file is under the directory 'src/jvm/src'."
             echo "run_job=true" >> $GITHUB_OUTPUT
             break
           fi
-          if [[ $file == "netreflected-tests/"* ]]; then
-            echo "This file is under the directory 'netreflected-tests/'."
+          if [[ $file == "tests/jvm/"* ]]; then
+            echo "This file is under the directory 'tests/jvm/'."
             echo "run_job=true" >> $GITHUB_OUTPUT
             break
           fi
@@ -70,7 +70,7 @@ jobs:
             fetch-depth: '1'
 
         - name: Extract file
-          run: .github/workflows/GetLicense.ps1 ${{ secrets.JCOBRIDGE_2_5_3 }} $env:GITHUB_WORKSPACE/JCOBridge.lic
+          run: .github/workflows/GetLicense.ps1 ${{ secrets.JCOBRIDGE_2_5_8 }} $env:GITHUB_WORKSPACE/JCOBridge.lic
           shell: pwsh
 
         # Install .NET SDKs
@@ -87,8 +87,8 @@ jobs:
         # Runs a set of commands using the runners shell
         - name: Build JCOReflectorCLI
           run: |
-            dotnet build --no-incremental --framework net6.0 --configuration Release src/JCOReflectorCLI.sln
-            dotnet build --no-incremental --framework net7.0 --configuration Release src/JCOReflectorCLI.sln   
+            dotnet build --no-incremental --framework net6.0 --configuration Release src/net/JCOReflectorCLI.sln
+            dotnet build --no-incremental --framework net7.0 --configuration Release src/net/JCOReflectorCLI.sln   
 
         - name: Build Java files
           run: |
@@ -107,50 +107,50 @@ jobs:
             cache: 'maven'
 
         - name: Build Java test source file .NET 6.0
-          run: javac -cp ./bin/net6.0/JCOReflector.jar ./netreflected-tests/java/src/hierarchy/*.java ./netreflected-tests/java/src/mscorlib/*.java ./netreflected-tests/java/src/nettest/*.java ./netreflected-tests/java/src/refout/*.java
+          run: javac -cp ./bin/net6.0/JCOReflector.jar ./tests/jvm/java/src/hierarchy/*.java ./tests/jvm/java/src/mscorlib/*.java ./tests/jvm/java/src/nettest/*.java ./tests/jvm/java/src/refout/*.java
 
-        - run: java -cp "./bin/net6.0/JCOReflector.jar:./netreflected-tests/java/src/" mscorlib.HelloLock --LicensePath:$GITHUB_WORKSPACE
+        - run: java -cp "./bin/net6.0/JCOReflector.jar:./tests/jvm/java/src/" mscorlib.HelloLock --LicensePath:$GITHUB_WORKSPACE
           continue-on-error: true 
-        - run: java -cp "./bin/net6.0/JCOReflector.jar:./netreflected-tests/java/src/" mscorlib.HelloNET --LicensePath:$GITHUB_WORKSPACE
+        - run: java -cp "./bin/net6.0/JCOReflector.jar:./tests/jvm/java/src/" mscorlib.HelloNET --LicensePath:$GITHUB_WORKSPACE
           continue-on-error: true 
-        - run: java -cp "./bin/net6.0/JCOReflector.jar:./netreflected-tests/java/src/" mscorlib.HelloNETEvent --LicensePath:$GITHUB_WORKSPACE
+        - run: java -cp "./bin/net6.0/JCOReflector.jar:./tests/jvm/java/src/" mscorlib.HelloNETEvent --LicensePath:$GITHUB_WORKSPACE
           continue-on-error: true 
-        - run: java -cp "./bin/net6.0/JCOReflector.jar:./netreflected-tests/java/src/" mscorlib.HelloIterator --LicensePath:$GITHUB_WORKSPACE
+        - run: java -cp "./bin/net6.0/JCOReflector.jar:./tests/jvm/java/src/" mscorlib.HelloIterator --LicensePath:$GITHUB_WORKSPACE
           continue-on-error: true 
-        - run: java -cp "./bin/net6.0/JCOReflector.jar:./netreflected-tests/java/src/" hierarchy.HelloHierarchy --LicensePath:$GITHUB_WORKSPACE
+        - run: java -cp "./bin/net6.0/JCOReflector.jar:./tests/jvm/java/src/" hierarchy.HelloHierarchy --LicensePath:$GITHUB_WORKSPACE
           continue-on-error: true 
-        - run: java -cp "./bin/net6.0/JCOReflector.jar:./netreflected-tests/java/src/" hierarchy.HelloInterfaces --LicensePath:$GITHUB_WORKSPACE
+        - run: java -cp "./bin/net6.0/JCOReflector.jar:./tests/jvm/java/src/" hierarchy.HelloInterfaces --LicensePath:$GITHUB_WORKSPACE
           continue-on-error: true 
-        - run: java -cp "./bin/net6.0/JCOReflector.jar:./netreflected-tests/java/src/" nettest.HelloNETSocket -server 127.0.0.1 --LicensePath:$GITHUB_WORKSPACE
+        - run: java -cp "./bin/net6.0/JCOReflector.jar:./tests/jvm/java/src/" nettest.HelloNETSocket -server 127.0.0.1 --LicensePath:$GITHUB_WORKSPACE
           continue-on-error: true 
-        - run: java -cp "./bin/net6.0/JCOReflector.jar:./netreflected-tests/java/src/" nettest.HelloNETSocket -async -server 127.0.0.1 --LicensePath:$GITHUB_WORKSPACE
+        - run: java -cp "./bin/net6.0/JCOReflector.jar:./tests/jvm/java/src/" nettest.HelloNETSocket -async -server 127.0.0.1 --LicensePath:$GITHUB_WORKSPACE
           continue-on-error: true 
           
-            #java -cp "./bin/net6.0/JCOReflector.jar;./netreflected-tests/java/src/" refout.HelloRefOutBase
-            #java -cp "./bin/net6.0/JCOReflector.jar;./netreflected-tests/java/src/" refout.HelloRefOut
+            #java -cp "./bin/net6.0/JCOReflector.jar;./tests/jvm/java/src/" refout.HelloRefOutBase
+            #java -cp "./bin/net6.0/JCOReflector.jar;./tests/jvm/java/src/" refout.HelloRefOut
 
         - name: Build Java test source file .NET 7.0
-          run: javac -cp ./bin/net7.0/JCOReflector.jar ./netreflected-tests/java/src/hierarchy/*.java ./netreflected-tests/java/src/mscorlib/*.java ./netreflected-tests/java/src/nettest/*.java ./netreflected-tests/java/src/refout/*.java
+          run: javac -cp ./bin/net7.0/JCOReflector.jar ./tests/jvm/java/src/hierarchy/*.java ./tests/jvm/java/src/mscorlib/*.java ./tests/jvm/java/src/nettest/*.java ./tests/jvm/java/src/refout/*.java
 
-        - run: java -cp "./bin/net7.0/JCOReflector.jar:./netreflected-tests/java/src/" mscorlib.HelloLock --LicensePath:$GITHUB_WORKSPACE --CoreCLRApp:Microsoft.NET7.App
+        - run: java -cp "./bin/net7.0/JCOReflector.jar:./tests/jvm/java/src/" mscorlib.HelloLock --LicensePath:$GITHUB_WORKSPACE --CoreCLRApp:Microsoft.NET7.App
           continue-on-error: true 
-        - run: java -cp "./bin/net7.0/JCOReflector.jar:./netreflected-tests/java/src/" mscorlib.HelloNET --LicensePath:$GITHUB_WORKSPACE --CoreCLRApp:Microsoft.NET7.App
+        - run: java -cp "./bin/net7.0/JCOReflector.jar:./tests/jvm/java/src/" mscorlib.HelloNET --LicensePath:$GITHUB_WORKSPACE --CoreCLRApp:Microsoft.NET7.App
           continue-on-error: true 
-        - run: java -cp "./bin/net7.0/JCOReflector.jar:./netreflected-tests/java/src/" mscorlib.HelloNETEvent --LicensePath:$GITHUB_WORKSPACE --CoreCLRApp:Microsoft.NET7.App
+        - run: java -cp "./bin/net7.0/JCOReflector.jar:./tests/jvm/java/src/" mscorlib.HelloNETEvent --LicensePath:$GITHUB_WORKSPACE --CoreCLRApp:Microsoft.NET7.App
           continue-on-error: true 
-        - run: java -cp "./bin/net7.0/JCOReflector.jar:./netreflected-tests/java/src/" mscorlib.HelloIterator --LicensePath:$GITHUB_WORKSPACE --CoreCLRApp:Microsoft.NET7.App
+        - run: java -cp "./bin/net7.0/JCOReflector.jar:./tests/jvm/java/src/" mscorlib.HelloIterator --LicensePath:$GITHUB_WORKSPACE --CoreCLRApp:Microsoft.NET7.App
           continue-on-error: true 
-        - run: java -cp "./bin/net7.0/JCOReflector.jar:./netreflected-tests/java/src/" hierarchy.HelloHierarchy --LicensePath:$GITHUB_WORKSPACE --CoreCLRApp:Microsoft.NET7.App
+        - run: java -cp "./bin/net7.0/JCOReflector.jar:./tests/jvm/java/src/" hierarchy.HelloHierarchy --LicensePath:$GITHUB_WORKSPACE --CoreCLRApp:Microsoft.NET7.App
           continue-on-error: true 
-        - run: java -cp "./bin/net7.0/JCOReflector.jar:./netreflected-tests/java/src/" hierarchy.HelloInterfaces --LicensePath:$GITHUB_WORKSPACE --CoreCLRApp:Microsoft.NET7.App
+        - run: java -cp "./bin/net7.0/JCOReflector.jar:./tests/jvm/java/src/" hierarchy.HelloInterfaces --LicensePath:$GITHUB_WORKSPACE --CoreCLRApp:Microsoft.NET7.App
           continue-on-error: true 
-        - run: java -cp "./bin/net7.0/JCOReflector.jar:./netreflected-tests/java/src/" nettest.HelloNETSocket -server 127.0.0.1 --LicensePath:$GITHUB_WORKSPACE --CoreCLRApp:Microsoft.NET7.App
+        - run: java -cp "./bin/net7.0/JCOReflector.jar:./tests/jvm/java/src/" nettest.HelloNETSocket -server 127.0.0.1 --LicensePath:$GITHUB_WORKSPACE --CoreCLRApp:Microsoft.NET7.App
           continue-on-error: true 
-        - run: java -cp "./bin/net7.0/JCOReflector.jar:./netreflected-tests/java/src/" nettest.HelloNETSocket -async -server 127.0.0.1 --LicensePath:$GITHUB_WORKSPACE --CoreCLRApp:Microsoft.NET7.App
+        - run: java -cp "./bin/net7.0/JCOReflector.jar:./tests/jvm/java/src/" nettest.HelloNETSocket -async -server 127.0.0.1 --LicensePath:$GITHUB_WORKSPACE --CoreCLRApp:Microsoft.NET7.App
           continue-on-error: true 
           
-            #java -cp "./bin/net7.0/JCOReflector.jar;./netreflected-tests/java/src/" refout.HelloRefOutBase
-            #java -cp "./bin/net7.0/JCOReflector.jar;./netreflected-tests/java/src/" refout.HelloRefOut
+            #java -cp "./bin/net7.0/JCOReflector.jar;./tests/jvm/java/src/" refout.HelloRefOutBase
+            #java -cp "./bin/net7.0/JCOReflector.jar;./tests/jvm/java/src/" refout.HelloRefOut
 
         - name: Download and install Scala package
           run: |
@@ -164,56 +164,56 @@ jobs:
         - name: Build Scala test source file .NET 6.0
           run: |
             source "$HOME/.sdkman/bin/sdkman-init.sh"
-            mkdir ./netreflected-tests/scala/output
-            scalac -cp "./bin/net6.0/*" -d ./netreflected-tests/scala/output ./netreflected-tests/scala/src/main/scala/hierarchy/* ./netreflected-tests/scala/src/main/scala/mscorlib/* ./netreflected-tests/scala/src/main/scala/nettest/* ./netreflected-tests/scala/src/main/scala/refout/*
+            mkdir ./tests/jvm/scala/output
+            scalac -cp "./bin/net6.0/*" -d ./tests/jvm/scala/output ./tests/jvm/scala/src/main/scala/hierarchy/* ./tests/jvm/scala/src/main/scala/mscorlib/* ./tests/jvm/scala/src/main/scala/nettest/* ./tests/jvm/scala/src/main/scala/refout/*
 
-        - run: source "$HOME/.sdkman/bin/sdkman-init.sh" && scala -nobootcp -toolcp "./bin/net6.0/*:./netreflected-tests/scala/output" mscorlib.HelloLock --LicensePath:$GITHUB_WORKSPACE
+        - run: source "$HOME/.sdkman/bin/sdkman-init.sh" && scala -nobootcp -toolcp "./bin/net6.0/*:./tests/jvm/scala/output" mscorlib.HelloLock --LicensePath:$GITHUB_WORKSPACE
           continue-on-error: true 
-        - run: source "$HOME/.sdkman/bin/sdkman-init.sh" && scala -nobootcp -toolcp "./bin/net6.0/*:./netreflected-tests/scala/output" mscorlib.HelloNet --LicensePath:$GITHUB_WORKSPACE
+        - run: source "$HOME/.sdkman/bin/sdkman-init.sh" && scala -nobootcp -toolcp "./bin/net6.0/*:./tests/jvm/scala/output" mscorlib.HelloNet --LicensePath:$GITHUB_WORKSPACE
           continue-on-error: true 
-        - run: source "$HOME/.sdkman/bin/sdkman-init.sh" && scala -nobootcp -toolcp "./bin/net6.0/*:./netreflected-tests/scala/output" mscorlib.HelloNETEvent --LicensePath:$GITHUB_WORKSPACE
+        - run: source "$HOME/.sdkman/bin/sdkman-init.sh" && scala -nobootcp -toolcp "./bin/net6.0/*:./tests/jvm/scala/output" mscorlib.HelloNETEvent --LicensePath:$GITHUB_WORKSPACE
           continue-on-error: true 
-        - run: source "$HOME/.sdkman/bin/sdkman-init.sh" && scala -nobootcp -toolcp "./bin/net6.0/*:./netreflected-tests/scala/output" mscorlib.HelloIterator --LicensePath:$GITHUB_WORKSPACE
+        - run: source "$HOME/.sdkman/bin/sdkman-init.sh" && scala -nobootcp -toolcp "./bin/net6.0/*:./tests/jvm/scala/output" mscorlib.HelloIterator --LicensePath:$GITHUB_WORKSPACE
           continue-on-error: true 
-        - run: source "$HOME/.sdkman/bin/sdkman-init.sh" && scala -nobootcp -toolcp "./bin/net6.0/*:./netreflected-tests/scala/output" hierarchy.HelloHierarchy --LicensePath:$GITHUB_WORKSPACE
+        - run: source "$HOME/.sdkman/bin/sdkman-init.sh" && scala -nobootcp -toolcp "./bin/net6.0/*:./tests/jvm/scala/output" hierarchy.HelloHierarchy --LicensePath:$GITHUB_WORKSPACE
           continue-on-error: true 
-        - run: source "$HOME/.sdkman/bin/sdkman-init.sh" && scala -nobootcp -toolcp "./bin/net6.0/*:./netreflected-tests/scala/output" hierarchy.HelloInterfaces --LicensePath:$GITHUB_WORKSPACE
+        - run: source "$HOME/.sdkman/bin/sdkman-init.sh" && scala -nobootcp -toolcp "./bin/net6.0/*:./tests/jvm/scala/output" hierarchy.HelloInterfaces --LicensePath:$GITHUB_WORKSPACE
           continue-on-error: true 
-        - run: source "$HOME/.sdkman/bin/sdkman-init.sh" && scala -nobootcp -toolcp "./bin/net6.0/*:./netreflected-tests/scala/output" nettest.HelloNETSocket --LicensePath:$GITHUB_WORKSPACE
+        - run: source "$HOME/.sdkman/bin/sdkman-init.sh" && scala -nobootcp -toolcp "./bin/net6.0/*:./tests/jvm/scala/output" nettest.HelloNETSocket --LicensePath:$GITHUB_WORKSPACE
           continue-on-error: true 
-        - run: source "$HOME/.sdkman/bin/sdkman-init.sh" && scala -nobootcp -toolcp "./bin/net6.0/*:./netreflected-tests/scala/output" nettest.HelloNETSocket -async --LicensePath:$GITHUB_WORKSPACE
+        - run: source "$HOME/.sdkman/bin/sdkman-init.sh" && scala -nobootcp -toolcp "./bin/net6.0/*:./tests/jvm/scala/output" nettest.HelloNETSocket -async --LicensePath:$GITHUB_WORKSPACE
           continue-on-error: true 
-        - run: source "$HOME/.sdkman/bin/sdkman-init.sh" && scala -nobootcp -toolcp "./bin/net6.0/*:./netreflected-tests/scala/output" refout.HelloRefOutBase --LicensePath:$GITHUB_WORKSPACE
+        - run: source "$HOME/.sdkman/bin/sdkman-init.sh" && scala -nobootcp -toolcp "./bin/net6.0/*:./tests/jvm/scala/output" refout.HelloRefOutBase --LicensePath:$GITHUB_WORKSPACE
           continue-on-error: true 
-        - run: source "$HOME/.sdkman/bin/sdkman-init.sh" && scala -nobootcp -toolcp "./bin/net6.0/*:./netreflected-tests/scala/output" refout.HelloRefOut --LicensePath:$GITHUB_WORKSPACE
+        - run: source "$HOME/.sdkman/bin/sdkman-init.sh" && scala -nobootcp -toolcp "./bin/net6.0/*:./tests/jvm/scala/output" refout.HelloRefOut --LicensePath:$GITHUB_WORKSPACE
           continue-on-error: true 
-        - run: rm -rf ./netreflected-tests/scala/output
+        - run: rm -rf ./tests/jvm/scala/output
 
         - name: Build Scala test source file .NET 7.0
           run: |
             source "$HOME/.sdkman/bin/sdkman-init.sh"
-            mkdir ./netreflected-tests/scala/output
-            scalac -cp "./bin/net7.0/*" -d ./netreflected-tests/scala/output ./netreflected-tests/scala/src/main/scala/hierarchy/* ./netreflected-tests/scala/src/main/scala/mscorlib/* ./netreflected-tests/scala/src/main/scala/nettest/* ./netreflected-tests/scala/src/main/scala/refout/*
+            mkdir ./tests/jvm/scala/output
+            scalac -cp "./bin/net7.0/*" -d ./tests/jvm/scala/output ./tests/jvm/scala/src/main/scala/hierarchy/* ./tests/jvm/scala/src/main/scala/mscorlib/* ./tests/jvm/scala/src/main/scala/nettest/* ./tests/jvm/scala/src/main/scala/refout/*
 
-        - run: source "$HOME/.sdkman/bin/sdkman-init.sh" && scala -nobootcp -toolcp "./bin/net7.0/*:./netreflected-tests/scala/output" mscorlib.HelloLock --LicensePath:$GITHUB_WORKSPACE --CoreCLRApp:Microsoft.NET7.App
+        - run: source "$HOME/.sdkman/bin/sdkman-init.sh" && scala -nobootcp -toolcp "./bin/net7.0/*:./tests/jvm/scala/output" mscorlib.HelloLock --LicensePath:$GITHUB_WORKSPACE --CoreCLRApp:Microsoft.NET7.App
           continue-on-error: true 
-        - run: source "$HOME/.sdkman/bin/sdkman-init.sh" && scala -nobootcp -toolcp "./bin/net7.0/*:./netreflected-tests/scala/output" mscorlib.HelloNet --LicensePath:$GITHUB_WORKSPACE --CoreCLRApp:Microsoft.NET7.App
+        - run: source "$HOME/.sdkman/bin/sdkman-init.sh" && scala -nobootcp -toolcp "./bin/net7.0/*:./tests/jvm/scala/output" mscorlib.HelloNet --LicensePath:$GITHUB_WORKSPACE --CoreCLRApp:Microsoft.NET7.App
           continue-on-error: true 
-        - run: source "$HOME/.sdkman/bin/sdkman-init.sh" && scala -nobootcp -toolcp "./bin/net7.0/*:./netreflected-tests/scala/output" mscorlib.HelloNETEvent --LicensePath:$GITHUB_WORKSPACE --CoreCLRApp:Microsoft.NET7.App
+        - run: source "$HOME/.sdkman/bin/sdkman-init.sh" && scala -nobootcp -toolcp "./bin/net7.0/*:./tests/jvm/scala/output" mscorlib.HelloNETEvent --LicensePath:$GITHUB_WORKSPACE --CoreCLRApp:Microsoft.NET7.App
           continue-on-error: true 
-        - run: source "$HOME/.sdkman/bin/sdkman-init.sh" && scala -nobootcp -toolcp "./bin/net7.0/*:./netreflected-tests/scala/output" mscorlib.HelloIterator --LicensePath:$GITHUB_WORKSPACE --CoreCLRApp:Microsoft.NET7.App
+        - run: source "$HOME/.sdkman/bin/sdkman-init.sh" && scala -nobootcp -toolcp "./bin/net7.0/*:./tests/jvm/scala/output" mscorlib.HelloIterator --LicensePath:$GITHUB_WORKSPACE --CoreCLRApp:Microsoft.NET7.App
           continue-on-error: true 
-        - run: source "$HOME/.sdkman/bin/sdkman-init.sh" && scala -nobootcp -toolcp "./bin/net7.0/*:./netreflected-tests/scala/output" hierarchy.HelloHierarchy --LicensePath:$GITHUB_WORKSPACE --CoreCLRApp:Microsoft.NET7.App
+        - run: source "$HOME/.sdkman/bin/sdkman-init.sh" && scala -nobootcp -toolcp "./bin/net7.0/*:./tests/jvm/scala/output" hierarchy.HelloHierarchy --LicensePath:$GITHUB_WORKSPACE --CoreCLRApp:Microsoft.NET7.App
           continue-on-error: true 
-        - run: source "$HOME/.sdkman/bin/sdkman-init.sh" && scala -nobootcp -toolcp "./bin/net7.0/*:./netreflected-tests/scala/output" hierarchy.HelloInterfaces --LicensePath:$GITHUB_WORKSPACE --CoreCLRApp:Microsoft.NET7.App
+        - run: source "$HOME/.sdkman/bin/sdkman-init.sh" && scala -nobootcp -toolcp "./bin/net7.0/*:./tests/jvm/scala/output" hierarchy.HelloInterfaces --LicensePath:$GITHUB_WORKSPACE --CoreCLRApp:Microsoft.NET7.App
           continue-on-error: true 
-        - run: source "$HOME/.sdkman/bin/sdkman-init.sh" && scala -nobootcp -toolcp "./bin/net7.0/*:./netreflected-tests/scala/output" nettest.HelloNETSocket --LicensePath:$GITHUB_WORKSPACE --CoreCLRApp:Microsoft.NET7.App
+        - run: source "$HOME/.sdkman/bin/sdkman-init.sh" && scala -nobootcp -toolcp "./bin/net7.0/*:./tests/jvm/scala/output" nettest.HelloNETSocket --LicensePath:$GITHUB_WORKSPACE --CoreCLRApp:Microsoft.NET7.App
           continue-on-error: true 
-        - run: source "$HOME/.sdkman/bin/sdkman-init.sh" && scala -nobootcp -toolcp "./bin/net7.0/*:./netreflected-tests/scala/output" nettest.HelloNETSocket -async --LicensePath:$GITHUB_WORKSPACE --CoreCLRApp:Microsoft.NET7.App
+        - run: source "$HOME/.sdkman/bin/sdkman-init.sh" && scala -nobootcp -toolcp "./bin/net7.0/*:./tests/jvm/scala/output" nettest.HelloNETSocket -async --LicensePath:$GITHUB_WORKSPACE --CoreCLRApp:Microsoft.NET7.App
           continue-on-error: true 
-        - run: source "$HOME/.sdkman/bin/sdkman-init.sh" && scala -nobootcp -toolcp "./bin/net7.0/*:./netreflected-tests/scala/output" refout.HelloRefOutBase --LicensePath:$GITHUB_WORKSPACE --CoreCLRApp:Microsoft.NET7.App
+        - run: source "$HOME/.sdkman/bin/sdkman-init.sh" && scala -nobootcp -toolcp "./bin/net7.0/*:./tests/jvm/scala/output" refout.HelloRefOutBase --LicensePath:$GITHUB_WORKSPACE --CoreCLRApp:Microsoft.NET7.App
           continue-on-error: true 
-        - run: source "$HOME/.sdkman/bin/sdkman-init.sh" && scala -nobootcp -toolcp "./bin/net7.0/*:./netreflected-tests/scala/output" refout.HelloRefOut --LicensePath:$GITHUB_WORKSPACE --CoreCLRApp:Microsoft.NET7.App
+        - run: source "$HOME/.sdkman/bin/sdkman-init.sh" && scala -nobootcp -toolcp "./bin/net7.0/*:./tests/jvm/scala/output" refout.HelloRefOut --LicensePath:$GITHUB_WORKSPACE --CoreCLRApp:Microsoft.NET7.App
           continue-on-error: true 
-        - run: rm -rf ./netreflected-tests/scala/output
+        - run: rm -rf ./tests/jvm/scala/output
         

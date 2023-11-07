@@ -1,0 +1,748 @@
+﻿<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+      <title>Class ReflectorEventArgs
+ | MASES Group website - JCOReflector </title>
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <meta name="title" content="Class ReflectorEventArgs
+ | MASES Group website - JCOReflector ">
+      
+      <link rel="icon" href="../images/favicon.png">
+      <link rel="stylesheet" href="../public/docfx.min.css">
+      <link rel="stylesheet" href="../public/main.css">
+      <meta name="docfx:navrel" content="../toc.html">
+      <meta name="docfx:tocrel" content="toc.html">
+      
+      <meta name="docfx:rel" content="../">
+      
+      
+      <meta name="docfx:docurl" content="https://github.com/masesgroup/JCOReflector/new/master/apiSpec/new?filename=MASES_JCOReflectorEngine_ReflectorEventArgs.md&amp;value=---%0Auid%3A%20MASES.JCOReflectorEngine.ReflectorEventArgs%0Asummary%3A%20&#39;*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax&#39;%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">
+      <meta name="loc:inThisArticle" content="In this article">
+      <meta name="loc:searchResultsCount" content="{count} results for &quot;{query}&quot;">
+      <meta name="loc:searchNoResults" content="No results for &quot;{query}&quot;">
+      <meta name="loc:tocFilter" content="Filter by title">
+      <meta name="loc:nextArticle" content="Next">
+      <meta name="loc:prevArticle" content="Previous">
+      <meta name="loc:themeLight" content="Light">
+      <meta name="loc:themeDark" content="Dark">
+      <meta name="loc:themeAuto" content="Auto">
+      <meta name="loc:changeTheme" content="Change theme">
+      <meta name="loc:copy" content="Copy">
+      <meta name="loc:downloadPdf" content="Download PDF">
+  </head>
+
+  <script type="module" src="./../public/docfx.min.js"></script>
+
+  <script>
+    const theme = localStorage.getItem('theme') || 'auto'
+    document.documentElement.setAttribute('data-bs-theme', theme === 'auto' ? (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light') : theme)
+  </script>
+
+
+  <body class="tex2jax_ignore" data-layout="" data-yaml-mime="ManagedReference">
+    <header class="bg-body border-bottom">
+      <nav id="autocollapse" class="navbar navbar-expand-md" role="navigation">
+        <div class="container-xxl flex-nowrap">
+          <a class="navbar-brand" href="../index.html">
+            <img id="logo" class="svg" src="../images/logo.png" alt="">
+            
+          </a>
+          <button class="btn btn-lg d-md-none border-0" type="button" data-bs-toggle="collapse" data-bs-target="#navpanel" aria-controls="navpanel" aria-expanded="false" aria-label="Toggle navigation">
+            <i class="bi bi-three-dots"></i>
+          </button>
+          <div class="collapse navbar-collapse" id="navpanel">
+            <div id="navbar">
+              <form class="search" role="search" id="search">
+                <i class="bi bi-search"></i>
+                <input class="form-control" id="search-query" type="search" disabled="" placeholder="Search" autocomplete="off" aria-label="Search">
+              </form>
+            </div>
+          </div>
+        </div>
+      </nav>
+    </header>
+
+    <main class="container-xxl">
+      <div class="toc-offcanvas">
+        <div class="offcanvas-md offcanvas-start" tabindex="-1" id="tocOffcanvas" aria-labelledby="tocOffcanvasLabel">
+          <div class="offcanvas-header">
+            <h5 class="offcanvas-title" id="tocOffcanvasLabel">Table of Contents</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="offcanvas" data-bs-target="#tocOffcanvas" aria-label="Close"></button>
+          </div>
+          <div class="offcanvas-body">
+            <nav class="toc" id="toc"></nav>
+          </div>
+        </div>
+      </div>
+
+      <div class="content">
+        <div class="actionbar">
+          <button class="btn btn-lg border-0 d-md-none" style="margin-top: -.65em; margin-left: -.8em" type="button" data-bs-toggle="offcanvas" data-bs-target="#tocOffcanvas" aria-controls="tocOffcanvas" aria-expanded="false" aria-label="Show table of contents">
+            <i class="bi bi-list"></i>
+          </button>
+
+          <nav id="breadcrumb"></nav>
+        </div>
+
+        <article data-uid="MASES.JCOReflectorEngine.ReflectorEventArgs">
+
+
+
+  <h1 id="MASES_JCOReflectorEngine_ReflectorEventArgs" data-uid="MASES.JCOReflectorEngine.ReflectorEventArgs" class="text-break">
+    Class ReflectorEventArgs
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/JCOReflector/blob/master/src\net\engine\SharedClasses.cs/#L1661"><i class="bi bi-code-slash"></i></a>
+  </h1>
+
+  <div class="facts text-secondary">
+    <dl><dt>Namespace</dt><dd><a class="xref" href="MASES.html">MASES</a>.<a class="xref" href="MASES.JCOReflectorEngine.html">JCOReflectorEngine</a></dd></dl>
+  <dl><dt>Assembly</dt><dd>MASES.JCOReflectorEngine.dll</dd></dl>
+  </div>
+
+  <div class="markdown summary"></div>
+  <div class="markdown conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">[Serializable]
+public class ReflectorEventArgs : CommonEventArgs</code></pre>
+  </div>
+
+
+
+
+  <dl class="typelist inheritance">
+    <dt>Inheritance</dt>
+    <dd>
+      <div><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object">object</a></div>
+      <div><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.eventargs">EventArgs</a></div>
+      <div><a class="xref" href="MASES.JCOReflectorEngine.CommonEventArgs.html">CommonEventArgs</a></div>
+      <div><span class="xref">ReflectorEventArgs</span></div>
+    </dd>
+  </dl>
+
+
+
+  <dl class="typelist derived">
+    <dt>Inherited Members</dt>
+    <dd>
+    <div>
+      <a class="xref" href="MASES.JCOReflectorEngine.CommonEventArgs.html#MASES_JCOReflectorEngine_CommonEventArgs_JobType">CommonEventArgs.JobType</a>
+    </div>
+    <div>
+      <a class="xref" href="MASES.JCOReflectorEngine.CommonEventArgs.html#MASES_JCOReflectorEngine_CommonEventArgs_LogLevel">CommonEventArgs.LogLevel</a>
+    </div>
+    <div>
+      <a class="xref" href="MASES.JCOReflectorEngine.CommonEventArgs.html#MASES_JCOReflectorEngine_CommonEventArgs_RootFolder">CommonEventArgs.RootFolder</a>
+    </div>
+    <div>
+      <a class="xref" href="MASES.JCOReflectorEngine.CommonEventArgs.html#MASES_JCOReflectorEngine_CommonEventArgs_SourceFolder">CommonEventArgs.SourceFolder</a>
+    </div>
+    <div>
+      <a class="xref" href="MASES.JCOReflectorEngine.CommonEventArgs.html#MASES_JCOReflectorEngine_CommonEventArgs_SplitFolderByAssembly">CommonEventArgs.SplitFolderByAssembly</a>
+    </div>
+    <div>
+      <a class="xref" href="MASES.JCOReflectorEngine.CommonEventArgs.html#MASES_JCOReflectorEngine_CommonEventArgs_AvoidJCOReflectorFolder">CommonEventArgs.AvoidJCOReflectorFolder</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.eventargs.empty">EventArgs.Empty</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.tostring">object.ToString()</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)">object.Equals(object)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)">object.Equals(object, object)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.referenceequals">object.ReferenceEquals(object, object)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.gethashcode">object.GetHashCode()</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.gettype">object.GetType()</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone">object.MemberwiseClone()</a>
+    </div>
+  </dd></dl>
+
+  <dl class="typelist extensionMethods">
+    <dt>Extension Methods</dt>
+    <dd>
+  <div>
+      <a class="xref" href="MASES.JCOReflectorEngine.JobManager.html#MASES_JCOReflectorEngine_JobManager_UpdateFromArgs_MASES_JCOReflectorEngine_CommonEventArgs_System_Collections_Generic_IEnumerable_MASES_CLIParser_IArgumentMetadataParsed__">JobManager.UpdateFromArgs(CommonEventArgs, IEnumerable&lt;IArgumentMetadataParsed&gt;)</a>
+  </div>
+  <div>
+      <a class="xref" href="MASES.JCOReflectorEngine.JobManager.html#MASES_JCOReflectorEngine_JobManager_UpdateFromArgs_MASES_JCOReflectorEngine_CommonEventArgs_System_String___">JobManager.UpdateFromArgs(CommonEventArgs, string[])</a>
+  </div>
+  <div>
+      <a class="xref" href="MASES.JCOReflectorEngine.JobManager.html#MASES_JCOReflectorEngine_JobManager_UpdateFromArgs__1___0_System_Collections_Generic_IEnumerable_MASES_CLIParser_IArgumentMetadataParsed__">JobManager.UpdateFromArgs&lt;T&gt;(T, IEnumerable&lt;IArgumentMetadataParsed&gt;)</a>
+  </div>
+  <div>
+      <a class="xref" href="MASES.JCOReflectorEngine.JobManager.html#MASES_JCOReflectorEngine_JobManager_UpdateFromArgs__1___0_System_String___">JobManager.UpdateFromArgs&lt;T&gt;(T, string[])</a>
+  </div>
+  </dd></dl>
+
+
+
+
+
+  <h2 class="section" id="constructors">Constructors
+</h2>
+
+
+  <a id="MASES_JCOReflectorEngine_ReflectorEventArgs__ctor_" data-uid="MASES.JCOReflectorEngine.ReflectorEventArgs.#ctor*"></a>
+
+  <h3 id="MASES_JCOReflectorEngine_ReflectorEventArgs__ctor" data-uid="MASES.JCOReflectorEngine.ReflectorEventArgs.#ctor">
+  ReflectorEventArgs()
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/JCOReflector/blob/master/src\net\engine\SharedClasses.cs/#L1665"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public ReflectorEventArgs()</code></pre>
+  </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+  <a id="MASES_JCOReflectorEngine_ReflectorEventArgs__ctor_" data-uid="MASES.JCOReflectorEngine.ReflectorEventArgs.#ctor*"></a>
+
+  <h3 id="MASES_JCOReflectorEngine_ReflectorEventArgs__ctor_MASES_JCOReflectorEngine_LogLevel_" data-uid="MASES.JCOReflectorEngine.ReflectorEventArgs.#ctor(MASES.JCOReflectorEngine.LogLevel)">
+  ReflectorEventArgs(LogLevel)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/JCOReflector/blob/master/src\net\engine\SharedClasses.cs/#L1669"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public ReflectorEventArgs(LogLevel logLevel)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>logLevel</code> <a class="xref" href="MASES.JCOReflectorEngine.LogLevel.html">LogLevel</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+
+  <h2 class="section" id="properties">Properties
+</h2>
+
+
+  <a id="MASES_JCOReflectorEngine_ReflectorEventArgs_AssemblyNames_" data-uid="MASES.JCOReflectorEngine.ReflectorEventArgs.AssemblyNames*"></a>
+
+  <h3 id="MASES_JCOReflectorEngine_ReflectorEventArgs_AssemblyNames" data-uid="MASES.JCOReflectorEngine.ReflectorEventArgs.AssemblyNames">
+  AssemblyNames
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/JCOReflector/blob/master/src\net\engine\SharedClasses.cs/#L1674"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public string[] AssemblyNames { get; set; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a>[]</dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="MASES_JCOReflectorEngine_ReflectorEventArgs_AvoidDisableInternalNamespace_" data-uid="MASES.JCOReflectorEngine.ReflectorEventArgs.AvoidDisableInternalNamespace*"></a>
+
+  <h3 id="MASES_JCOReflectorEngine_ReflectorEventArgs_AvoidDisableInternalNamespace" data-uid="MASES.JCOReflectorEngine.ReflectorEventArgs.AvoidDisableInternalNamespace">
+  AvoidDisableInternalNamespace
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/JCOReflector/blob/master/src\net\engine\SharedClasses.cs/#L1688"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public bool AvoidDisableInternalNamespace { get; set; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="MASES_JCOReflectorEngine_ReflectorEventArgs_AvoidHierarchyTraversing_" data-uid="MASES.JCOReflectorEngine.ReflectorEventArgs.AvoidHierarchyTraversing*"></a>
+
+  <h3 id="MASES_JCOReflectorEngine_ReflectorEventArgs_AvoidHierarchyTraversing" data-uid="MASES.JCOReflectorEngine.ReflectorEventArgs.AvoidHierarchyTraversing">
+  AvoidHierarchyTraversing
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/JCOReflector/blob/master/src\net\engine\SharedClasses.cs/#L1677"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public bool AvoidHierarchyTraversing { get; set; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="MASES_JCOReflectorEngine_ReflectorEventArgs_AvoidReportAndStatistics_" data-uid="MASES.JCOReflectorEngine.ReflectorEventArgs.AvoidReportAndStatistics*"></a>
+
+  <h3 id="MASES_JCOReflectorEngine_ReflectorEventArgs_AvoidReportAndStatistics" data-uid="MASES.JCOReflectorEngine.ReflectorEventArgs.AvoidReportAndStatistics">
+  AvoidReportAndStatistics
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/JCOReflector/blob/master/src\net\engine\SharedClasses.cs/#L1687"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public bool AvoidReportAndStatistics { get; set; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="MASES_JCOReflectorEngine_ReflectorEventArgs_CreateExceptionThrownClause_" data-uid="MASES.JCOReflectorEngine.ReflectorEventArgs.CreateExceptionThrownClause*"></a>
+
+  <h3 id="MASES_JCOReflectorEngine_ReflectorEventArgs_CreateExceptionThrownClause" data-uid="MASES.JCOReflectorEngine.ReflectorEventArgs.CreateExceptionThrownClause">
+  CreateExceptionThrownClause
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/JCOReflector/blob/master/src\net\engine\SharedClasses.cs/#L1678"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public bool CreateExceptionThrownClause { get; set; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="MASES_JCOReflectorEngine_ReflectorEventArgs_DryRun_" data-uid="MASES.JCOReflectorEngine.ReflectorEventArgs.DryRun*"></a>
+
+  <h3 id="MASES_JCOReflectorEngine_ReflectorEventArgs_DryRun" data-uid="MASES.JCOReflectorEngine.ReflectorEventArgs.DryRun">
+  DryRun
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/JCOReflector/blob/master/src\net\engine\SharedClasses.cs/#L1686"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public bool DryRun { get; set; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="MASES_JCOReflectorEngine_ReflectorEventArgs_EnableAbstract_" data-uid="MASES.JCOReflectorEngine.ReflectorEventArgs.EnableAbstract*"></a>
+
+  <h3 id="MASES_JCOReflectorEngine_ReflectorEventArgs_EnableAbstract" data-uid="MASES.JCOReflectorEngine.ReflectorEventArgs.EnableAbstract">
+  EnableAbstract
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/JCOReflector/blob/master/src\net\engine\SharedClasses.cs/#L1680"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public bool EnableAbstract { get; set; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="MASES_JCOReflectorEngine_ReflectorEventArgs_EnableArray_" data-uid="MASES.JCOReflectorEngine.ReflectorEventArgs.EnableArray*"></a>
+
+  <h3 id="MASES_JCOReflectorEngine_ReflectorEventArgs_EnableArray" data-uid="MASES.JCOReflectorEngine.ReflectorEventArgs.EnableArray">
+  EnableArray
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/JCOReflector/blob/master/src\net\engine\SharedClasses.cs/#L1681"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public bool EnableArray { get; set; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="MASES_JCOReflectorEngine_ReflectorEventArgs_EnableDuplicateMethodNativeArrayWithJCRefOut_" data-uid="MASES.JCOReflectorEngine.ReflectorEventArgs.EnableDuplicateMethodNativeArrayWithJCRefOut*"></a>
+
+  <h3 id="MASES_JCOReflectorEngine_ReflectorEventArgs_EnableDuplicateMethodNativeArrayWithJCRefOut" data-uid="MASES.JCOReflectorEngine.ReflectorEventArgs.EnableDuplicateMethodNativeArrayWithJCRefOut">
+  EnableDuplicateMethodNativeArrayWithJCRefOut
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/JCOReflector/blob/master/src\net\engine\SharedClasses.cs/#L1682"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public bool EnableDuplicateMethodNativeArrayWithJCRefOut { get; set; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="MASES_JCOReflectorEngine_ReflectorEventArgs_EnableInheritance_" data-uid="MASES.JCOReflectorEngine.ReflectorEventArgs.EnableInheritance*"></a>
+
+  <h3 id="MASES_JCOReflectorEngine_ReflectorEventArgs_EnableInheritance" data-uid="MASES.JCOReflectorEngine.ReflectorEventArgs.EnableInheritance">
+  EnableInheritance
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/JCOReflector/blob/master/src\net\engine\SharedClasses.cs/#L1683"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public bool EnableInheritance { get; set; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="MASES_JCOReflectorEngine_ReflectorEventArgs_EnableInterfaceInheritance_" data-uid="MASES.JCOReflectorEngine.ReflectorEventArgs.EnableInterfaceInheritance*"></a>
+
+  <h3 id="MASES_JCOReflectorEngine_ReflectorEventArgs_EnableInterfaceInheritance" data-uid="MASES.JCOReflectorEngine.ReflectorEventArgs.EnableInterfaceInheritance">
+  EnableInterfaceInheritance
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/JCOReflector/blob/master/src\net\engine\SharedClasses.cs/#L1684"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public bool EnableInterfaceInheritance { get; set; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="MASES_JCOReflectorEngine_ReflectorEventArgs_EnableRefOutParameters_" data-uid="MASES.JCOReflectorEngine.ReflectorEventArgs.EnableRefOutParameters*"></a>
+
+  <h3 id="MASES_JCOReflectorEngine_ReflectorEventArgs_EnableRefOutParameters" data-uid="MASES.JCOReflectorEngine.ReflectorEventArgs.EnableRefOutParameters">
+  EnableRefOutParameters
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/JCOReflector/blob/master/src\net\engine\SharedClasses.cs/#L1685"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public bool EnableRefOutParameters { get; set; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="MASES_JCOReflectorEngine_ReflectorEventArgs_ExceptionThrownClauseDepth_" data-uid="MASES.JCOReflectorEngine.ReflectorEventArgs.ExceptionThrownClauseDepth*"></a>
+
+  <h3 id="MASES_JCOReflectorEngine_ReflectorEventArgs_ExceptionThrownClauseDepth" data-uid="MASES.JCOReflectorEngine.ReflectorEventArgs.ExceptionThrownClauseDepth">
+  ExceptionThrownClauseDepth
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/JCOReflector/blob/master/src\net\engine\SharedClasses.cs/#L1679"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public int ExceptionThrownClauseDepth { get; set; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="MASES_JCOReflectorEngine_ReflectorEventArgs_ForceRebuild_" data-uid="MASES.JCOReflectorEngine.ReflectorEventArgs.ForceRebuild*"></a>
+
+  <h3 id="MASES_JCOReflectorEngine_ReflectorEventArgs_ForceRebuild" data-uid="MASES.JCOReflectorEngine.ReflectorEventArgs.ForceRebuild">
+  ForceRebuild
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/JCOReflector/blob/master/src\net\engine\SharedClasses.cs/#L1675"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public bool ForceRebuild { get; set; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="MASES_JCOReflectorEngine_ReflectorEventArgs_UseParallelBuild_" data-uid="MASES.JCOReflectorEngine.ReflectorEventArgs.UseParallelBuild*"></a>
+
+  <h3 id="MASES_JCOReflectorEngine_ReflectorEventArgs_UseParallelBuild" data-uid="MASES.JCOReflectorEngine.ReflectorEventArgs.UseParallelBuild">
+  UseParallelBuild
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/JCOReflector/blob/master/src\net\engine\SharedClasses.cs/#L1676"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public bool UseParallelBuild { get; set; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+</article>
+
+        <div class="contribution d-print-none">
+          <a href="https://github.com/masesgroup/JCOReflector/blob/master/src\net\engine\SharedClasses.cs/#L1661" class="edit-link">Edit this page</a>
+        </div>
+
+
+      </div>
+
+      <div class="affix">
+        <nav id="affix"></nav>
+      </div>
+    </main>
+
+    <div class="container-xxl search-results" id="search-results"></div>
+
+    <footer class="border-top text-secondary">
+      <div class="container-xxl">
+        <div class="flex-fill">
+          <span>Copyright © 2023 MASES s.r.l.. | Via San Cesidio 16 - San Valentino in A.C. - PE | P.I. 01932310681</span>
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>

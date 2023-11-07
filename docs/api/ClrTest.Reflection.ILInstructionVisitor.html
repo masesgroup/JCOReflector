@@ -1,0 +1,715 @@
+﻿<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+      <title>Class ILInstructionVisitor
+ | MASES Group website - JCOReflector </title>
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <meta name="title" content="Class ILInstructionVisitor
+ | MASES Group website - JCOReflector ">
+      
+      <link rel="icon" href="../images/favicon.png">
+      <link rel="stylesheet" href="../public/docfx.min.css">
+      <link rel="stylesheet" href="../public/main.css">
+      <meta name="docfx:navrel" content="../toc.html">
+      <meta name="docfx:tocrel" content="toc.html">
+      
+      <meta name="docfx:rel" content="../">
+      
+      
+      <meta name="docfx:docurl" content="https://github.com/masesgroup/JCOReflector/new/master/apiSpec/new?filename=ClrTest_Reflection_ILInstructionVisitor.md&amp;value=---%0Auid%3A%20ClrTest.Reflection.ILInstructionVisitor%0Asummary%3A%20&#39;*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax&#39;%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">
+      <meta name="loc:inThisArticle" content="In this article">
+      <meta name="loc:searchResultsCount" content="{count} results for &quot;{query}&quot;">
+      <meta name="loc:searchNoResults" content="No results for &quot;{query}&quot;">
+      <meta name="loc:tocFilter" content="Filter by title">
+      <meta name="loc:nextArticle" content="Next">
+      <meta name="loc:prevArticle" content="Previous">
+      <meta name="loc:themeLight" content="Light">
+      <meta name="loc:themeDark" content="Dark">
+      <meta name="loc:themeAuto" content="Auto">
+      <meta name="loc:changeTheme" content="Change theme">
+      <meta name="loc:copy" content="Copy">
+      <meta name="loc:downloadPdf" content="Download PDF">
+  </head>
+
+  <script type="module" src="./../public/docfx.min.js"></script>
+
+  <script>
+    const theme = localStorage.getItem('theme') || 'auto'
+    document.documentElement.setAttribute('data-bs-theme', theme === 'auto' ? (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light') : theme)
+  </script>
+
+
+  <body class="tex2jax_ignore" data-layout="" data-yaml-mime="ManagedReference">
+    <header class="bg-body border-bottom">
+      <nav id="autocollapse" class="navbar navbar-expand-md" role="navigation">
+        <div class="container-xxl flex-nowrap">
+          <a class="navbar-brand" href="../index.html">
+            <img id="logo" class="svg" src="../images/logo.png" alt="">
+            
+          </a>
+          <button class="btn btn-lg d-md-none border-0" type="button" data-bs-toggle="collapse" data-bs-target="#navpanel" aria-controls="navpanel" aria-expanded="false" aria-label="Toggle navigation">
+            <i class="bi bi-three-dots"></i>
+          </button>
+          <div class="collapse navbar-collapse" id="navpanel">
+            <div id="navbar">
+              <form class="search" role="search" id="search">
+                <i class="bi bi-search"></i>
+                <input class="form-control" id="search-query" type="search" disabled="" placeholder="Search" autocomplete="off" aria-label="Search">
+              </form>
+            </div>
+          </div>
+        </div>
+      </nav>
+    </header>
+
+    <main class="container-xxl">
+      <div class="toc-offcanvas">
+        <div class="offcanvas-md offcanvas-start" tabindex="-1" id="tocOffcanvas" aria-labelledby="tocOffcanvasLabel">
+          <div class="offcanvas-header">
+            <h5 class="offcanvas-title" id="tocOffcanvasLabel">Table of Contents</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="offcanvas" data-bs-target="#tocOffcanvas" aria-label="Close"></button>
+          </div>
+          <div class="offcanvas-body">
+            <nav class="toc" id="toc"></nav>
+          </div>
+        </div>
+      </div>
+
+      <div class="content">
+        <div class="actionbar">
+          <button class="btn btn-lg border-0 d-md-none" style="margin-top: -.65em; margin-left: -.8em" type="button" data-bs-toggle="offcanvas" data-bs-target="#tocOffcanvas" aria-controls="tocOffcanvas" aria-expanded="false" aria-label="Show table of contents">
+            <i class="bi bi-list"></i>
+          </button>
+
+          <nav id="breadcrumb"></nav>
+        </div>
+
+        <article data-uid="ClrTest.Reflection.ILInstructionVisitor">
+
+
+
+  <h1 id="ClrTest_Reflection_ILInstructionVisitor" data-uid="ClrTest.Reflection.ILInstructionVisitor" class="text-break">
+    Class ILInstructionVisitor
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/JCOReflector/blob/master/src\net\engine\ILReader\ReadableILStringVisitor.cs/#L37"><i class="bi bi-code-slash"></i></a>
+  </h1>
+
+  <div class="facts text-secondary">
+    <dl><dt>Namespace</dt><dd><a class="xref" href="ClrTest.html">ClrTest</a>.<a class="xref" href="ClrTest.Reflection.html">Reflection</a></dd></dl>
+  <dl><dt>Assembly</dt><dd>MASES.JCOReflectorEngine.dll</dd></dl>
+  </div>
+
+  <div class="markdown summary"></div>
+  <div class="markdown conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public abstract class ILInstructionVisitor</code></pre>
+  </div>
+
+
+
+
+  <dl class="typelist inheritance">
+    <dt>Inheritance</dt>
+    <dd>
+      <div><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object">object</a></div>
+      <div><span class="xref">ILInstructionVisitor</span></div>
+    </dd>
+  </dl>
+
+
+  <dl class="typelist derived">
+    <dt>Derived</dt>
+    <dd>
+      <div><a class="xref" href="ClrTest.Reflection.ReadableILStringVisitor.html">ReadableILStringVisitor</a></div>
+    </dd>
+  </dl>
+
+  <dl class="typelist derived">
+    <dt>Inherited Members</dt>
+    <dd>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.tostring">object.ToString()</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)">object.Equals(object)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)">object.Equals(object, object)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.referenceequals">object.ReferenceEquals(object, object)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.gethashcode">object.GetHashCode()</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.gettype">object.GetType()</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone">object.MemberwiseClone()</a>
+    </div>
+  </dd></dl>
+
+
+
+
+
+
+  <h2 class="section" id="methods">Methods
+</h2>
+
+
+  <a id="ClrTest_Reflection_ILInstructionVisitor_VisitInlineBrTargetInstruction_" data-uid="ClrTest.Reflection.ILInstructionVisitor.VisitInlineBrTargetInstruction*"></a>
+
+  <h3 id="ClrTest_Reflection_ILInstructionVisitor_VisitInlineBrTargetInstruction_ClrTest_Reflection_InlineBrTargetInstruction_" data-uid="ClrTest.Reflection.ILInstructionVisitor.VisitInlineBrTargetInstruction(ClrTest.Reflection.InlineBrTargetInstruction)">
+  VisitInlineBrTargetInstruction(InlineBrTargetInstruction)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/JCOReflector/blob/master/src\net\engine\ILReader\ReadableILStringVisitor.cs/#L38"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public virtual void VisitInlineBrTargetInstruction(InlineBrTargetInstruction inlineBrTargetInstruction)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>inlineBrTargetInstruction</code> <a class="xref" href="ClrTest.Reflection.InlineBrTargetInstruction.html">InlineBrTargetInstruction</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+
+  <a id="ClrTest_Reflection_ILInstructionVisitor_VisitInlineFieldInstruction_" data-uid="ClrTest.Reflection.ILInstructionVisitor.VisitInlineFieldInstruction*"></a>
+
+  <h3 id="ClrTest_Reflection_ILInstructionVisitor_VisitInlineFieldInstruction_ClrTest_Reflection_InlineFieldInstruction_" data-uid="ClrTest.Reflection.ILInstructionVisitor.VisitInlineFieldInstruction(ClrTest.Reflection.InlineFieldInstruction)">
+  VisitInlineFieldInstruction(InlineFieldInstruction)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/JCOReflector/blob/master/src\net\engine\ILReader\ReadableILStringVisitor.cs/#L39"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public virtual void VisitInlineFieldInstruction(InlineFieldInstruction inlineFieldInstruction)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>inlineFieldInstruction</code> <a class="xref" href="ClrTest.Reflection.InlineFieldInstruction.html">InlineFieldInstruction</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+
+  <a id="ClrTest_Reflection_ILInstructionVisitor_VisitInlineI8Instruction_" data-uid="ClrTest.Reflection.ILInstructionVisitor.VisitInlineI8Instruction*"></a>
+
+  <h3 id="ClrTest_Reflection_ILInstructionVisitor_VisitInlineI8Instruction_ClrTest_Reflection_InlineI8Instruction_" data-uid="ClrTest.Reflection.ILInstructionVisitor.VisitInlineI8Instruction(ClrTest.Reflection.InlineI8Instruction)">
+  VisitInlineI8Instruction(InlineI8Instruction)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/JCOReflector/blob/master/src\net\engine\ILReader\ReadableILStringVisitor.cs/#L41"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public virtual void VisitInlineI8Instruction(InlineI8Instruction inlineI8Instruction)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>inlineI8Instruction</code> <a class="xref" href="ClrTest.Reflection.InlineI8Instruction.html">InlineI8Instruction</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+
+  <a id="ClrTest_Reflection_ILInstructionVisitor_VisitInlineIInstruction_" data-uid="ClrTest.Reflection.ILInstructionVisitor.VisitInlineIInstruction*"></a>
+
+  <h3 id="ClrTest_Reflection_ILInstructionVisitor_VisitInlineIInstruction_ClrTest_Reflection_InlineIInstruction_" data-uid="ClrTest.Reflection.ILInstructionVisitor.VisitInlineIInstruction(ClrTest.Reflection.InlineIInstruction)">
+  VisitInlineIInstruction(InlineIInstruction)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/JCOReflector/blob/master/src\net\engine\ILReader\ReadableILStringVisitor.cs/#L40"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public virtual void VisitInlineIInstruction(InlineIInstruction inlineIInstruction)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>inlineIInstruction</code> <a class="xref" href="ClrTest.Reflection.InlineIInstruction.html">InlineIInstruction</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+
+  <a id="ClrTest_Reflection_ILInstructionVisitor_VisitInlineMethodInstruction_" data-uid="ClrTest.Reflection.ILInstructionVisitor.VisitInlineMethodInstruction*"></a>
+
+  <h3 id="ClrTest_Reflection_ILInstructionVisitor_VisitInlineMethodInstruction_ClrTest_Reflection_InlineMethodInstruction_" data-uid="ClrTest.Reflection.ILInstructionVisitor.VisitInlineMethodInstruction(ClrTest.Reflection.InlineMethodInstruction)">
+  VisitInlineMethodInstruction(InlineMethodInstruction)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/JCOReflector/blob/master/src\net\engine\ILReader\ReadableILStringVisitor.cs/#L42"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public virtual void VisitInlineMethodInstruction(InlineMethodInstruction inlineMethodInstruction)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>inlineMethodInstruction</code> <a class="xref" href="ClrTest.Reflection.InlineMethodInstruction.html">InlineMethodInstruction</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+
+  <a id="ClrTest_Reflection_ILInstructionVisitor_VisitInlineNoneInstruction_" data-uid="ClrTest.Reflection.ILInstructionVisitor.VisitInlineNoneInstruction*"></a>
+
+  <h3 id="ClrTest_Reflection_ILInstructionVisitor_VisitInlineNoneInstruction_ClrTest_Reflection_InlineNoneInstruction_" data-uid="ClrTest.Reflection.ILInstructionVisitor.VisitInlineNoneInstruction(ClrTest.Reflection.InlineNoneInstruction)">
+  VisitInlineNoneInstruction(InlineNoneInstruction)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/JCOReflector/blob/master/src\net\engine\ILReader\ReadableILStringVisitor.cs/#L43"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public virtual void VisitInlineNoneInstruction(InlineNoneInstruction inlineNoneInstruction)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>inlineNoneInstruction</code> <a class="xref" href="ClrTest.Reflection.InlineNoneInstruction.html">InlineNoneInstruction</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+
+  <a id="ClrTest_Reflection_ILInstructionVisitor_VisitInlineRInstruction_" data-uid="ClrTest.Reflection.ILInstructionVisitor.VisitInlineRInstruction*"></a>
+
+  <h3 id="ClrTest_Reflection_ILInstructionVisitor_VisitInlineRInstruction_ClrTest_Reflection_InlineRInstruction_" data-uid="ClrTest.Reflection.ILInstructionVisitor.VisitInlineRInstruction(ClrTest.Reflection.InlineRInstruction)">
+  VisitInlineRInstruction(InlineRInstruction)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/JCOReflector/blob/master/src\net\engine\ILReader\ReadableILStringVisitor.cs/#L44"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public virtual void VisitInlineRInstruction(InlineRInstruction inlineRInstruction)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>inlineRInstruction</code> <a class="xref" href="ClrTest.Reflection.InlineRInstruction.html">InlineRInstruction</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+
+  <a id="ClrTest_Reflection_ILInstructionVisitor_VisitInlineSigInstruction_" data-uid="ClrTest.Reflection.ILInstructionVisitor.VisitInlineSigInstruction*"></a>
+
+  <h3 id="ClrTest_Reflection_ILInstructionVisitor_VisitInlineSigInstruction_ClrTest_Reflection_InlineSigInstruction_" data-uid="ClrTest.Reflection.ILInstructionVisitor.VisitInlineSigInstruction(ClrTest.Reflection.InlineSigInstruction)">
+  VisitInlineSigInstruction(InlineSigInstruction)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/JCOReflector/blob/master/src\net\engine\ILReader\ReadableILStringVisitor.cs/#L45"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public virtual void VisitInlineSigInstruction(InlineSigInstruction inlineSigInstruction)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>inlineSigInstruction</code> <a class="xref" href="ClrTest.Reflection.InlineSigInstruction.html">InlineSigInstruction</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+
+  <a id="ClrTest_Reflection_ILInstructionVisitor_VisitInlineStringInstruction_" data-uid="ClrTest.Reflection.ILInstructionVisitor.VisitInlineStringInstruction*"></a>
+
+  <h3 id="ClrTest_Reflection_ILInstructionVisitor_VisitInlineStringInstruction_ClrTest_Reflection_InlineStringInstruction_" data-uid="ClrTest.Reflection.ILInstructionVisitor.VisitInlineStringInstruction(ClrTest.Reflection.InlineStringInstruction)">
+  VisitInlineStringInstruction(InlineStringInstruction)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/JCOReflector/blob/master/src\net\engine\ILReader\ReadableILStringVisitor.cs/#L46"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public virtual void VisitInlineStringInstruction(InlineStringInstruction inlineStringInstruction)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>inlineStringInstruction</code> <a class="xref" href="ClrTest.Reflection.InlineStringInstruction.html">InlineStringInstruction</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+
+  <a id="ClrTest_Reflection_ILInstructionVisitor_VisitInlineSwitchInstruction_" data-uid="ClrTest.Reflection.ILInstructionVisitor.VisitInlineSwitchInstruction*"></a>
+
+  <h3 id="ClrTest_Reflection_ILInstructionVisitor_VisitInlineSwitchInstruction_ClrTest_Reflection_InlineSwitchInstruction_" data-uid="ClrTest.Reflection.ILInstructionVisitor.VisitInlineSwitchInstruction(ClrTest.Reflection.InlineSwitchInstruction)">
+  VisitInlineSwitchInstruction(InlineSwitchInstruction)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/JCOReflector/blob/master/src\net\engine\ILReader\ReadableILStringVisitor.cs/#L47"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public virtual void VisitInlineSwitchInstruction(InlineSwitchInstruction inlineSwitchInstruction)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>inlineSwitchInstruction</code> <a class="xref" href="ClrTest.Reflection.InlineSwitchInstruction.html">InlineSwitchInstruction</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+
+  <a id="ClrTest_Reflection_ILInstructionVisitor_VisitInlineTokInstruction_" data-uid="ClrTest.Reflection.ILInstructionVisitor.VisitInlineTokInstruction*"></a>
+
+  <h3 id="ClrTest_Reflection_ILInstructionVisitor_VisitInlineTokInstruction_ClrTest_Reflection_InlineTokInstruction_" data-uid="ClrTest.Reflection.ILInstructionVisitor.VisitInlineTokInstruction(ClrTest.Reflection.InlineTokInstruction)">
+  VisitInlineTokInstruction(InlineTokInstruction)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/JCOReflector/blob/master/src\net\engine\ILReader\ReadableILStringVisitor.cs/#L48"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public virtual void VisitInlineTokInstruction(InlineTokInstruction inlineTokInstruction)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>inlineTokInstruction</code> <a class="xref" href="ClrTest.Reflection.InlineTokInstruction.html">InlineTokInstruction</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+
+  <a id="ClrTest_Reflection_ILInstructionVisitor_VisitInlineTypeInstruction_" data-uid="ClrTest.Reflection.ILInstructionVisitor.VisitInlineTypeInstruction*"></a>
+
+  <h3 id="ClrTest_Reflection_ILInstructionVisitor_VisitInlineTypeInstruction_ClrTest_Reflection_InlineTypeInstruction_" data-uid="ClrTest.Reflection.ILInstructionVisitor.VisitInlineTypeInstruction(ClrTest.Reflection.InlineTypeInstruction)">
+  VisitInlineTypeInstruction(InlineTypeInstruction)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/JCOReflector/blob/master/src\net\engine\ILReader\ReadableILStringVisitor.cs/#L49"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public virtual void VisitInlineTypeInstruction(InlineTypeInstruction inlineTypeInstruction)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>inlineTypeInstruction</code> <a class="xref" href="ClrTest.Reflection.InlineTypeInstruction.html">InlineTypeInstruction</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+
+  <a id="ClrTest_Reflection_ILInstructionVisitor_VisitInlineVarInstruction_" data-uid="ClrTest.Reflection.ILInstructionVisitor.VisitInlineVarInstruction*"></a>
+
+  <h3 id="ClrTest_Reflection_ILInstructionVisitor_VisitInlineVarInstruction_ClrTest_Reflection_InlineVarInstruction_" data-uid="ClrTest.Reflection.ILInstructionVisitor.VisitInlineVarInstruction(ClrTest.Reflection.InlineVarInstruction)">
+  VisitInlineVarInstruction(InlineVarInstruction)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/JCOReflector/blob/master/src\net\engine\ILReader\ReadableILStringVisitor.cs/#L50"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public virtual void VisitInlineVarInstruction(InlineVarInstruction inlineVarInstruction)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>inlineVarInstruction</code> <a class="xref" href="ClrTest.Reflection.InlineVarInstruction.html">InlineVarInstruction</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+
+  <a id="ClrTest_Reflection_ILInstructionVisitor_VisitShortInlineBrTargetInstruction_" data-uid="ClrTest.Reflection.ILInstructionVisitor.VisitShortInlineBrTargetInstruction*"></a>
+
+  <h3 id="ClrTest_Reflection_ILInstructionVisitor_VisitShortInlineBrTargetInstruction_ClrTest_Reflection_ShortInlineBrTargetInstruction_" data-uid="ClrTest.Reflection.ILInstructionVisitor.VisitShortInlineBrTargetInstruction(ClrTest.Reflection.ShortInlineBrTargetInstruction)">
+  VisitShortInlineBrTargetInstruction(ShortInlineBrTargetInstruction)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/JCOReflector/blob/master/src\net\engine\ILReader\ReadableILStringVisitor.cs/#L51"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public virtual void VisitShortInlineBrTargetInstruction(ShortInlineBrTargetInstruction shortInlineBrTargetInstruction)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>shortInlineBrTargetInstruction</code> <a class="xref" href="ClrTest.Reflection.ShortInlineBrTargetInstruction.html">ShortInlineBrTargetInstruction</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+
+  <a id="ClrTest_Reflection_ILInstructionVisitor_VisitShortInlineIInstruction_" data-uid="ClrTest.Reflection.ILInstructionVisitor.VisitShortInlineIInstruction*"></a>
+
+  <h3 id="ClrTest_Reflection_ILInstructionVisitor_VisitShortInlineIInstruction_ClrTest_Reflection_ShortInlineIInstruction_" data-uid="ClrTest.Reflection.ILInstructionVisitor.VisitShortInlineIInstruction(ClrTest.Reflection.ShortInlineIInstruction)">
+  VisitShortInlineIInstruction(ShortInlineIInstruction)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/JCOReflector/blob/master/src\net\engine\ILReader\ReadableILStringVisitor.cs/#L52"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public virtual void VisitShortInlineIInstruction(ShortInlineIInstruction shortInlineIInstruction)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>shortInlineIInstruction</code> <a class="xref" href="ClrTest.Reflection.ShortInlineIInstruction.html">ShortInlineIInstruction</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+
+  <a id="ClrTest_Reflection_ILInstructionVisitor_VisitShortInlineRInstruction_" data-uid="ClrTest.Reflection.ILInstructionVisitor.VisitShortInlineRInstruction*"></a>
+
+  <h3 id="ClrTest_Reflection_ILInstructionVisitor_VisitShortInlineRInstruction_ClrTest_Reflection_ShortInlineRInstruction_" data-uid="ClrTest.Reflection.ILInstructionVisitor.VisitShortInlineRInstruction(ClrTest.Reflection.ShortInlineRInstruction)">
+  VisitShortInlineRInstruction(ShortInlineRInstruction)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/JCOReflector/blob/master/src\net\engine\ILReader\ReadableILStringVisitor.cs/#L53"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public virtual void VisitShortInlineRInstruction(ShortInlineRInstruction shortInlineRInstruction)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>shortInlineRInstruction</code> <a class="xref" href="ClrTest.Reflection.ShortInlineRInstruction.html">ShortInlineRInstruction</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+
+  <a id="ClrTest_Reflection_ILInstructionVisitor_VisitShortInlineVarInstruction_" data-uid="ClrTest.Reflection.ILInstructionVisitor.VisitShortInlineVarInstruction*"></a>
+
+  <h3 id="ClrTest_Reflection_ILInstructionVisitor_VisitShortInlineVarInstruction_ClrTest_Reflection_ShortInlineVarInstruction_" data-uid="ClrTest.Reflection.ILInstructionVisitor.VisitShortInlineVarInstruction(ClrTest.Reflection.ShortInlineVarInstruction)">
+  VisitShortInlineVarInstruction(ShortInlineVarInstruction)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/JCOReflector/blob/master/src\net\engine\ILReader\ReadableILStringVisitor.cs/#L54"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public virtual void VisitShortInlineVarInstruction(ShortInlineVarInstruction shortInlineVarInstruction)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>shortInlineVarInstruction</code> <a class="xref" href="ClrTest.Reflection.ShortInlineVarInstruction.html">ShortInlineVarInstruction</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+
+
+</article>
+
+        <div class="contribution d-print-none">
+          <a href="https://github.com/masesgroup/JCOReflector/blob/master/src\net\engine\ILReader\ReadableILStringVisitor.cs/#L37" class="edit-link">Edit this page</a>
+        </div>
+
+
+      </div>
+
+      <div class="affix">
+        <nav id="affix"></nav>
+      </div>
+    </main>
+
+    <div class="container-xxl search-results" id="search-results"></div>
+
+    <footer class="border-top text-secondary">
+      <div class="container-xxl">
+        <div class="flex-fill">
+          <span>Copyright © 2023 MASES s.r.l.. | Via San Cesidio 16 - San Valentino in A.C. - PE | P.I. 01932310681</span>
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>

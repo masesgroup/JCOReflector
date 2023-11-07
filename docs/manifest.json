@@ -11,6 +11,622 @@
       }
     },
     {
+      "type": "ManagedReference",
+      "source_relative_path": "api/ClrTest.Reflection.DefaultFormatProvider.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/ClrTest.Reflection.DefaultFormatProvider.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/ClrTest.Reflection.IFormatProvider.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/ClrTest.Reflection.IFormatProvider.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/ClrTest.Reflection.IILProvider.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/ClrTest.Reflection.IILProvider.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/ClrTest.Reflection.IILStringCollector.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/ClrTest.Reflection.IILStringCollector.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/ClrTest.Reflection.ILInstruction.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/ClrTest.Reflection.ILInstruction.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/ClrTest.Reflection.ILInstructionVisitor.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/ClrTest.Reflection.ILInstructionVisitor.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/ClrTest.Reflection.ILReader.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/ClrTest.Reflection.ILReader.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/ClrTest.Reflection.ITokenResolver.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/ClrTest.Reflection.ITokenResolver.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/ClrTest.Reflection.InlineBrTargetInstruction.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/ClrTest.Reflection.InlineBrTargetInstruction.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/ClrTest.Reflection.InlineFieldInstruction.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/ClrTest.Reflection.InlineFieldInstruction.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/ClrTest.Reflection.InlineI8Instruction.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/ClrTest.Reflection.InlineI8Instruction.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/ClrTest.Reflection.InlineIInstruction.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/ClrTest.Reflection.InlineIInstruction.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/ClrTest.Reflection.InlineMethodInstruction.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/ClrTest.Reflection.InlineMethodInstruction.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/ClrTest.Reflection.InlineNoneInstruction.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/ClrTest.Reflection.InlineNoneInstruction.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/ClrTest.Reflection.InlineRInstruction.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/ClrTest.Reflection.InlineRInstruction.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/ClrTest.Reflection.InlineSigInstruction.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/ClrTest.Reflection.InlineSigInstruction.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/ClrTest.Reflection.InlineStringInstruction.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/ClrTest.Reflection.InlineStringInstruction.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/ClrTest.Reflection.InlineSwitchInstruction.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/ClrTest.Reflection.InlineSwitchInstruction.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/ClrTest.Reflection.InlineTokInstruction.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/ClrTest.Reflection.InlineTokInstruction.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/ClrTest.Reflection.InlineTypeInstruction.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/ClrTest.Reflection.InlineTypeInstruction.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/ClrTest.Reflection.InlineVarInstruction.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/ClrTest.Reflection.InlineVarInstruction.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/ClrTest.Reflection.MethodBaseILProvider.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/ClrTest.Reflection.MethodBaseILProvider.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/ClrTest.Reflection.ModuleScopeTokenResolver.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/ClrTest.Reflection.ModuleScopeTokenResolver.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/ClrTest.Reflection.RawILStringToTextWriter.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/ClrTest.Reflection.RawILStringToTextWriter.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/ClrTest.Reflection.RawILStringVisitor.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/ClrTest.Reflection.RawILStringVisitor.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/ClrTest.Reflection.ReadableILStringToTextWriter.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/ClrTest.Reflection.ReadableILStringToTextWriter.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/ClrTest.Reflection.ReadableILStringVisitor.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/ClrTest.Reflection.ReadableILStringVisitor.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/ClrTest.Reflection.ShortInlineBrTargetInstruction.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/ClrTest.Reflection.ShortInlineBrTargetInstruction.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/ClrTest.Reflection.ShortInlineIInstruction.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/ClrTest.Reflection.ShortInlineIInstruction.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/ClrTest.Reflection.ShortInlineRInstruction.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/ClrTest.Reflection.ShortInlineRInstruction.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/ClrTest.Reflection.ShortInlineVarInstruction.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/ClrTest.Reflection.ShortInlineVarInstruction.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/ClrTest.Reflection.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/ClrTest.Reflection.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/MASES.JCOReflectorEngine.AssemblyData.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/MASES.JCOReflectorEngine.AssemblyData.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/MASES.JCOReflectorEngine.AssemblyDataCollection.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/MASES.JCOReflectorEngine.AssemblyDataCollection.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/MASES.JCOReflectorEngine.CommonEventArgs.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/MASES.JCOReflectorEngine.CommonEventArgs.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/MASES.JCOReflectorEngine.DocsBuilderEventArgs.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/MASES.JCOReflectorEngine.DocsBuilderEventArgs.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/MASES.JCOReflectorEngine.EndOperationEventArgs.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/MASES.JCOReflectorEngine.EndOperationEventArgs.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/MASES.JCOReflectorEngine.ErrorReportingType.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/MASES.JCOReflectorEngine.ErrorReportingType.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/MASES.JCOReflectorEngine.FolderBuilderEventArgs.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/MASES.JCOReflectorEngine.FolderBuilderEventArgs.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/MASES.JCOReflectorEngine.JARBuilderEventArgs.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/MASES.JCOReflectorEngine.JARBuilderEventArgs.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/MASES.JCOReflectorEngine.JDKVersion.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/MASES.JCOReflectorEngine.JDKVersion.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/MASES.JCOReflectorEngine.JavaBuilderEventArgs.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/MASES.JCOReflectorEngine.JavaBuilderEventArgs.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/MASES.JCOReflectorEngine.JobManager.CmdParam.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/MASES.JCOReflectorEngine.JobManager.CmdParam.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/MASES.JCOReflectorEngine.JobManager.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/MASES.JCOReflectorEngine.JobManager.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/MASES.JCOReflectorEngine.JobTypes.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/MASES.JCOReflectorEngine.JobTypes.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/MASES.JCOReflectorEngine.LogLevel.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/MASES.JCOReflectorEngine.LogLevel.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/MASES.JCOReflectorEngine.POMBuilderEventArgs.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/MASES.JCOReflectorEngine.POMBuilderEventArgs.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/MASES.JCOReflectorEngine.POMStagingType.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/MASES.JCOReflectorEngine.POMStagingType.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/MASES.JCOReflectorEngine.POMType.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/MASES.JCOReflectorEngine.POMType.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/MASES.JCOReflectorEngine.ReflectorEventArgs.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/MASES.JCOReflectorEngine.ReflectorEventArgs.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/MASES.JCOReflectorEngine.appendToConsoleHandler.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/MASES.JCOReflectorEngine.appendToConsoleHandler.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/MASES.JCOReflectorEngine.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/MASES.JCOReflectorEngine.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/MASES.JCOReflectorGUI.App.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/MASES.JCOReflectorGUI.App.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/MASES.JCOReflectorGUI.AssemblyCollectionControl.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/MASES.JCOReflectorGUI.AssemblyCollectionControl.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/MASES.JCOReflectorGUI.MainWindow.appendToConsoleDelegate.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/MASES.JCOReflectorGUI.MainWindow.appendToConsoleDelegate.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/MASES.JCOReflectorGUI.MainWindow.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/MASES.JCOReflectorGUI.MainWindow.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/MASES.JCOReflectorGUI.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/MASES.JCOReflectorGUI.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "api/index.md",
+      "output": {
+        ".html": {
+          "relative_path": "api/index.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Toc",
+      "source_relative_path": "api/toc.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/toc.html"
+        },
+        ".json": {
+          "relative_path": "api/toc.json"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "articles/intro.md",
+      "output": {
+        ".html": {
+          "relative_path": "articles/intro.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Toc",
+      "source_relative_path": "articles/toc.yml",
+      "output": {
+        ".html": {
+          "relative_path": "articles/toc.html"
+        },
+        ".json": {
+          "relative_path": "articles/toc.json"
+        }
+      },
+      "version": ""
+    },
+    {
       "type": "Resource",
       "source_relative_path": "images/favicon.ico",
       "output": {
@@ -42,6 +658,16 @@
     },
     {
       "type": "Resource",
+      "source_relative_path": "images/logo.png",
+      "output": {
+        "resource": {
+          "relative_path": "images/logo.png"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Resource",
       "source_relative_path": "images/under_construction.png",
       "output": {
         "resource": {
@@ -64,9 +690,16 @@
       "version": ""
     },
     {
-      "log_codes": [
-        "InvalidFileLink"
-      ],
+      "type": "Conceptual",
+      "source_relative_path": "javadoc/index.md",
+      "output": {
+        ".html": {
+          "relative_path": "javadoc/index.html"
+        }
+      },
+      "version": ""
+    },
+    {
       "type": "Toc",
       "source_relative_path": "toc.yml",
       "output": {

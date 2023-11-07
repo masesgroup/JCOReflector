@@ -1,0 +1,1205 @@
+﻿<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+      <title>Class JobManager
+ | MASES Group website - JCOReflector </title>
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <meta name="title" content="Class JobManager
+ | MASES Group website - JCOReflector ">
+      
+      <link rel="icon" href="../images/favicon.png">
+      <link rel="stylesheet" href="../public/docfx.min.css">
+      <link rel="stylesheet" href="../public/main.css">
+      <meta name="docfx:navrel" content="../toc.html">
+      <meta name="docfx:tocrel" content="toc.html">
+      
+      <meta name="docfx:rel" content="../">
+      
+      
+      <meta name="docfx:docurl" content="https://github.com/masesgroup/JCOReflector/new/master/apiSpec/new?filename=MASES_JCOReflectorEngine_JobManager.md&amp;value=---%0Auid%3A%20MASES.JCOReflectorEngine.JobManager%0Asummary%3A%20&#39;*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax&#39;%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">
+      <meta name="loc:inThisArticle" content="In this article">
+      <meta name="loc:searchResultsCount" content="{count} results for &quot;{query}&quot;">
+      <meta name="loc:searchNoResults" content="No results for &quot;{query}&quot;">
+      <meta name="loc:tocFilter" content="Filter by title">
+      <meta name="loc:nextArticle" content="Next">
+      <meta name="loc:prevArticle" content="Previous">
+      <meta name="loc:themeLight" content="Light">
+      <meta name="loc:themeDark" content="Dark">
+      <meta name="loc:themeAuto" content="Auto">
+      <meta name="loc:changeTheme" content="Change theme">
+      <meta name="loc:copy" content="Copy">
+      <meta name="loc:downloadPdf" content="Download PDF">
+  </head>
+
+  <script type="module" src="./../public/docfx.min.js"></script>
+
+  <script>
+    const theme = localStorage.getItem('theme') || 'auto'
+    document.documentElement.setAttribute('data-bs-theme', theme === 'auto' ? (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light') : theme)
+  </script>
+
+
+  <body class="tex2jax_ignore" data-layout="" data-yaml-mime="ManagedReference">
+    <header class="bg-body border-bottom">
+      <nav id="autocollapse" class="navbar navbar-expand-md" role="navigation">
+        <div class="container-xxl flex-nowrap">
+          <a class="navbar-brand" href="../index.html">
+            <img id="logo" class="svg" src="../images/logo.png" alt="">
+            
+          </a>
+          <button class="btn btn-lg d-md-none border-0" type="button" data-bs-toggle="collapse" data-bs-target="#navpanel" aria-controls="navpanel" aria-expanded="false" aria-label="Toggle navigation">
+            <i class="bi bi-three-dots"></i>
+          </button>
+          <div class="collapse navbar-collapse" id="navpanel">
+            <div id="navbar">
+              <form class="search" role="search" id="search">
+                <i class="bi bi-search"></i>
+                <input class="form-control" id="search-query" type="search" disabled="" placeholder="Search" autocomplete="off" aria-label="Search">
+              </form>
+            </div>
+          </div>
+        </div>
+      </nav>
+    </header>
+
+    <main class="container-xxl">
+      <div class="toc-offcanvas">
+        <div class="offcanvas-md offcanvas-start" tabindex="-1" id="tocOffcanvas" aria-labelledby="tocOffcanvasLabel">
+          <div class="offcanvas-header">
+            <h5 class="offcanvas-title" id="tocOffcanvasLabel">Table of Contents</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="offcanvas" data-bs-target="#tocOffcanvas" aria-label="Close"></button>
+          </div>
+          <div class="offcanvas-body">
+            <nav class="toc" id="toc"></nav>
+          </div>
+        </div>
+      </div>
+
+      <div class="content">
+        <div class="actionbar">
+          <button class="btn btn-lg border-0 d-md-none" style="margin-top: -.65em; margin-left: -.8em" type="button" data-bs-toggle="offcanvas" data-bs-target="#tocOffcanvas" aria-controls="tocOffcanvas" aria-expanded="false" aria-label="Show table of contents">
+            <i class="bi bi-list"></i>
+          </button>
+
+          <nav id="breadcrumb"></nav>
+        </div>
+
+        <article data-uid="MASES.JCOReflectorEngine.JobManager">
+
+
+
+  <h1 id="MASES_JCOReflectorEngine_JobManager" data-uid="MASES.JCOReflectorEngine.JobManager" class="text-break">
+    Class JobManager
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/JCOReflector/blob/master/src\net\engine\SharedClasses.cs/#L119"><i class="bi bi-code-slash"></i></a>
+  </h1>
+
+  <div class="facts text-secondary">
+    <dl><dt>Namespace</dt><dd><a class="xref" href="MASES.html">MASES</a>.<a class="xref" href="MASES.JCOReflectorEngine.html">JCOReflectorEngine</a></dd></dl>
+  <dl><dt>Assembly</dt><dd>MASES.JCOReflectorEngine.dll</dd></dl>
+  </div>
+
+  <div class="markdown summary"><p>The main entry point</p>
+</div>
+  <div class="markdown conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static class JobManager</code></pre>
+  </div>
+
+
+
+
+  <dl class="typelist inheritance">
+    <dt>Inheritance</dt>
+    <dd>
+      <div><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object">object</a></div>
+      <div><span class="xref">JobManager</span></div>
+    </dd>
+  </dl>
+
+
+
+  <dl class="typelist derived">
+    <dt>Inherited Members</dt>
+    <dd>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.tostring">object.ToString()</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)">object.Equals(object)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)">object.Equals(object, object)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.referenceequals">object.ReferenceEquals(object, object)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.gethashcode">object.GetHashCode()</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.gettype">object.GetType()</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone">object.MemberwiseClone()</a>
+    </div>
+  </dd></dl>
+
+
+
+
+
+
+  <h2 class="section" id="fields">Fields
+</h2>
+
+
+
+  <h3 id="MASES_JCOReflectorEngine_JobManager_DefaultRootFolder" data-uid="MASES.JCOReflectorEngine.JobManager.DefaultRootFolder">
+  DefaultRootFolder
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/JCOReflector/blob/master/src\net\engine\SharedClasses.cs/#L135"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Default root which use the JCOReflector repository rules</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static readonly string DefaultRootFolder</code></pre>
+  </div>
+
+
+
+
+  <h4 class="section">Field Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+  <h3 id="MASES_JCOReflectorEngine_JobManager_EngineVersion" data-uid="MASES.JCOReflectorEngine.JobManager.EngineVersion">
+  EngineVersion
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/JCOReflector/blob/master/src\net\engine\SharedClasses.cs/#L166"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>The <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.version">Version</a> of the engine</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static readonly Version EngineVersion</code></pre>
+  </div>
+
+
+
+
+  <h4 class="section">Field Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.version">Version</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+  <h3 id="MASES_JCOReflectorEngine_JobManager_Parser" data-uid="MASES.JCOReflectorEngine.JobManager.Parser">
+  Parser
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/JCOReflector/blob/master/src\net\engine\SharedClasses.cs/#L258"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p><a class="xref" href="MASES.JCOReflectorEngine.JobManager.html#MASES_JCOReflectorEngine_JobManager_Parser">Parser</a> associated to <a class="xref" href="MASES.JCOReflectorEngine.JobManager.html">JobManager</a></p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static readonly Parser Parser</code></pre>
+  </div>
+
+
+
+
+  <h4 class="section">Field Value</h4>
+  <dl class="parameters">
+    <dt><span class="xref">Parser</span></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+  <h3 id="MASES_JCOReflectorEngine_JobManager_RuntimeFolder" data-uid="MASES.JCOReflectorEngine.JobManager.RuntimeFolder">
+  RuntimeFolder
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/JCOReflector/blob/master/src\net\engine\SharedClasses.cs/#L178"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>The runtime folder name used from the engine</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public const string RuntimeFolder = &quot;net462&quot;</code></pre>
+  </div>
+
+
+
+
+  <h4 class="section">Field Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+  <h3 id="MASES_JCOReflectorEngine_JobManager_RuntimeName" data-uid="MASES.JCOReflectorEngine.JobManager.RuntimeName">
+  RuntimeName
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/JCOReflector/blob/master/src\net\engine\SharedClasses.cs/#L174"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>The official runtime name</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public const string RuntimeName = &quot;.NETFramework&quot;</code></pre>
+  </div>
+
+
+
+
+  <h4 class="section">Field Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+  <h3 id="MASES_JCOReflectorEngine_JobManager_SourceFolderName" data-uid="MASES.JCOReflectorEngine.JobManager.SourceFolderName">
+  SourceFolderName
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/JCOReflector/blob/master/src\net\engine\SharedClasses.cs/#L170"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>The folder name used to write the reflected classes</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public const string SourceFolderName = &quot;src&quot;</code></pre>
+  </div>
+
+
+
+
+  <h4 class="section">Field Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+  <h3 id="MASES_JCOReflectorEngine_JobManager_StartupLocation" data-uid="MASES.JCOReflectorEngine.JobManager.StartupLocation">
+  StartupLocation
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/JCOReflector/blob/master/src\net\engine\SharedClasses.cs/#L131"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Running location identified on startup</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static readonly string StartupLocation</code></pre>
+  </div>
+
+
+
+
+  <h4 class="section">Field Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+  <h2 class="section" id="properties">Properties
+</h2>
+
+
+  <a id="MASES_JCOReflectorEngine_JobManager_JarDestinationFolder_" data-uid="MASES.JCOReflectorEngine.JobManager.JarDestinationFolder*"></a>
+
+  <h3 id="MASES_JCOReflectorEngine_JobManager_JarDestinationFolder" data-uid="MASES.JCOReflectorEngine.JobManager.JarDestinationFolder">
+  JarDestinationFolder
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/JCOReflector/blob/master/src\net\engine\SharedClasses.cs/#L158"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Destination of JARs relative to <a class="xref" href="MASES.JCOReflectorEngine.JobManager.html#MASES_JCOReflectorEngine_JobManager_RootFolder">RootFolder</a></p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static string JarDestinationFolder { get; set; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="MASES_JCOReflectorEngine_JobManager_ReportException_" data-uid="MASES.JCOReflectorEngine.JobManager.ReportException*"></a>
+
+  <h3 id="MASES_JCOReflectorEngine_JobManager_ReportException" data-uid="MASES.JCOReflectorEngine.JobManager.ReportException">
+  ReportException
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/JCOReflector/blob/master/src\net\engine\SharedClasses.cs/#L162"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Set to <a href="https://learn.microsoft.com/dotnet/csharp/language-reference/builtin-types/bool">true</a> to report the internal exception outside execution of <a class="xref" href="MASES.JCOReflectorEngine.JobManager.html#MASES_JCOReflectorEngine_JobManager_RunJob__1___0_System_Boolean_">RunJob&lt;T&gt;(T, bool)</a>. Default is <a href="https://learn.microsoft.com/dotnet/csharp/language-reference/builtin-types/bool">false</a> for backward compatibility.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static bool ReportException { get; set; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="MASES_JCOReflectorEngine_JobManager_RootFolder_" data-uid="MASES.JCOReflectorEngine.JobManager.RootFolder*"></a>
+
+  <h3 id="MASES_JCOReflectorEngine_JobManager_RootFolder" data-uid="MASES.JCOReflectorEngine.JobManager.RootFolder">
+  RootFolder
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/JCOReflector/blob/master/src\net\engine\SharedClasses.cs/#L141"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Root used for all operations</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static string RootFolder { get; set; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="MASES_JCOReflectorEngine_JobManager_SourceFolder_" data-uid="MASES.JCOReflectorEngine.JobManager.SourceFolder*"></a>
+
+  <h3 id="MASES_JCOReflectorEngine_JobManager_SourceFolder" data-uid="MASES.JCOReflectorEngine.JobManager.SourceFolder">
+  SourceFolder
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/JCOReflector/blob/master/src\net\engine\SharedClasses.cs/#L154"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Destination of produced sources</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static string SourceFolder { get; set; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <h2 class="section" id="methods">Methods
+</h2>
+
+
+  <a id="MASES_JCOReflectorEngine_JobManager_CancelJob_" data-uid="MASES.JCOReflectorEngine.JobManager.CancelJob*"></a>
+
+  <h3 id="MASES_JCOReflectorEngine_JobManager_CancelJob" data-uid="MASES.JCOReflectorEngine.JobManager.CancelJob">
+  CancelJob()
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/JCOReflector/blob/master/src\net\engine\SharedClasses.cs/#L1282"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Cancel a running job</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static void CancelJob()</code></pre>
+  </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+  <a id="MASES_JCOReflectorEngine_JobManager_ConvertFile_" data-uid="MASES.JCOReflectorEngine.JobManager.ConvertFile*"></a>
+
+  <h3 id="MASES_JCOReflectorEngine_JobManager_ConvertFile_MASES_JCOReflectorEngine_JobTypes_System_String_" data-uid="MASES.JCOReflectorEngine.JobManager.ConvertFile(MASES.JCOReflectorEngine.JobTypes,System.String)">
+  ConvertFile(JobTypes, string)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/JCOReflector/blob/master/src\net\engine\SharedClasses.cs/#L1094"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Convert a file into a Job</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static CommonEventArgs ConvertFile(JobTypes type, string file)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>type</code> <a class="xref" href="MASES.JCOReflectorEngine.JobTypes.html">JobTypes</a></dt>
+    <dd><p>The <a class="xref" href="MASES.JCOReflectorEngine.JobTypes.html">JobTypes</a> to use</p>
+</dd>
+    <dt><code>file</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd><p>The file containing argument to use</p>
+</dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="MASES.JCOReflectorEngine.CommonEventArgs.html">CommonEventArgs</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="MASES_JCOReflectorEngine_JobManager_CreateFolderList_" data-uid="MASES.JCOReflectorEngine.JobManager.CreateFolderList*"></a>
+
+  <h3 id="MASES_JCOReflectorEngine_JobManager_CreateFolderList_MASES_JCOReflectorEngine_FolderBuilderEventArgs_System_Boolean_" data-uid="MASES.JCOReflectorEngine.JobManager.CreateFolderList(MASES.JCOReflectorEngine.FolderBuilderEventArgs,System.Boolean)">
+  CreateFolderList(FolderBuilderEventArgs, bool)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/JCOReflector/blob/master/src\net\engine\SharedClasses.cs/#L990"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Gets the list of generated folder from reflection</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static AssemblyDataCollection CreateFolderList(FolderBuilderEventArgs args, bool avoidJCOReflector = false)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>args</code> <a class="xref" href="MASES.JCOReflectorEngine.FolderBuilderEventArgs.html">FolderBuilderEventArgs</a></dt>
+    <dd><p>A <a class="xref" href="MASES.JCOReflectorEngine.FolderBuilderEventArgs.html">FolderBuilderEventArgs</a> with instructions</p>
+</dd>
+    <dt><code>avoidJCOReflector</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
+    <dd><p>Avoid to add JCOReflector in the list of returned <a class="xref" href="MASES.JCOReflectorEngine.AssemblyData.html">AssemblyData</a></p>
+</dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="MASES.JCOReflectorEngine.AssemblyDataCollection.html">AssemblyDataCollection</a></dt>
+    <dd><p>An <a class="xref" href="MASES.JCOReflectorEngine.AssemblyDataCollection.html">AssemblyDataCollection</a> with the data</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="MASES_JCOReflectorEngine_JobManager_CreateList_" data-uid="MASES.JCOReflectorEngine.JobManager.CreateList*"></a>
+
+  <h3 id="MASES_JCOReflectorEngine_JobManager_CreateList_MASES_JCOReflectorEngine_FolderBuilderEventArgs_System_Boolean_" data-uid="MASES.JCOReflectorEngine.JobManager.CreateList(MASES.JCOReflectorEngine.FolderBuilderEventArgs,System.Boolean)">
+  CreateList(FolderBuilderEventArgs, bool)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/JCOReflector/blob/master/src\net\engine\SharedClasses.cs/#L1076"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static string[] CreateList(this FolderBuilderEventArgs args, bool avoidJCOReflector)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>args</code> <a class="xref" href="MASES.JCOReflectorEngine.FolderBuilderEventArgs.html">FolderBuilderEventArgs</a></dt>
+    <dd></dd>
+    <dt><code>avoidJCOReflector</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
+    <dd></dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a>[]</dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="MASES_JCOReflectorEngine_JobManager_Export_" data-uid="MASES.JCOReflectorEngine.JobManager.Export*"></a>
+
+  <h3 id="MASES_JCOReflectorEngine_JobManager_Export__1___0_System_String_" data-uid="MASES.JCOReflectorEngine.JobManager.Export``1(``0,System.String)">
+  Export&lt;T&gt;(T, string)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/JCOReflector/blob/master/src\net\engine\SharedClasses.cs/#L971"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Exports a configuration to a file</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static void Export&lt;T&gt;(T type, string fileName) where T : class</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>type</code> <span class="xref">T</span></dt>
+    <dd><p>The operation object</p>
+</dd>
+    <dt><code>fileName</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd><p>The file path where operation will be written</p>
+</dd>
+  </dl>
+
+
+  <h4 class="section">Type Parameters</h4>
+  <dl class="parameters">
+    <dt><code>T</code></dt>
+    <dd><p>The operation type</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+  <a id="MASES_JCOReflectorEngine_JobManager_FromArgs_" data-uid="MASES.JCOReflectorEngine.JobManager.FromArgs*"></a>
+
+  <h3 id="MASES_JCOReflectorEngine_JobManager_FromArgs_System_String___" data-uid="MASES.JCOReflectorEngine.JobManager.FromArgs(System.String[])">
+  FromArgs(string[])
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/JCOReflector/blob/master/src\net\engine\SharedClasses.cs/#L516"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Convert arguments into an instance of <a class="xref" href="MASES.JCOReflectorEngine.CommonEventArgs.html">CommonEventArgs</a></p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static CommonEventArgs FromArgs(this string[] args)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>args</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a>[]</dt>
+    <dd><p>Arguments from command line</p>
+</dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="MASES.JCOReflectorEngine.CommonEventArgs.html">CommonEventArgs</a></dt>
+    <dd><p>An instance of <a class="xref" href="MASES.JCOReflectorEngine.CommonEventArgs.html">CommonEventArgs</a></p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="MASES_JCOReflectorEngine_JobManager_GetArgumentHelp_" data-uid="MASES.JCOReflectorEngine.JobManager.GetArgumentHelp*"></a>
+
+  <h3 id="MASES_JCOReflectorEngine_JobManager_GetArgumentHelp" data-uid="MASES.JCOReflectorEngine.JobManager.GetArgumentHelp">
+  GetArgumentHelp()
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/JCOReflector/blob/master/src\net\engine\SharedClasses.cs/#L505"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Returns the help info for parameters</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static string GetArgumentHelp()</code></pre>
+  </div>
+
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="MASES_JCOReflectorEngine_JobManager_Import_" data-uid="MASES.JCOReflectorEngine.JobManager.Import*"></a>
+
+  <h3 id="MASES_JCOReflectorEngine_JobManager_Import__1_System_String_" data-uid="MASES.JCOReflectorEngine.JobManager.Import``1(System.String)">
+  Import&lt;T&gt;(string)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/JCOReflector/blob/master/src\net\engine\SharedClasses.cs/#L956"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Imports a configuration written on a file</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static T Import&lt;T&gt;(string path) where T : class</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>path</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd><p>The full file path containing the serialized operation</p>
+</dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><span class="xref">T</span></dt>
+    <dd><p>The T object</p>
+</dd>
+  </dl>
+
+  <h4 class="section">Type Parameters</h4>
+  <dl class="parameters">
+    <dt><code>T</code></dt>
+    <dd><p>The operation type</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+  <a id="MASES_JCOReflectorEngine_JobManager_IsReflected_" data-uid="MASES.JCOReflectorEngine.JobManager.IsReflected*"></a>
+
+  <h3 id="MASES_JCOReflectorEngine_JobManager_IsReflected_System_Reflection_AssemblyName_" data-uid="MASES.JCOReflectorEngine.JobManager.IsReflected(System.Reflection.AssemblyName)">
+  IsReflected(AssemblyName)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/JCOReflector/blob/master/src\net\engine\SharedClasses.cs/#L1314"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Check if <code class="paramref">assemblyName</code> was available in the refelected assemblies of JCOReflector</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static bool IsReflected(AssemblyName assemblyName)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>assemblyName</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.reflection.assemblyname">AssemblyName</a></dt>
+    <dd><p>The <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.reflection.assemblyname">AssemblyName</a> to be checked</p>
+</dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
+    <dd><p><a href="https://learn.microsoft.com/dotnet/csharp/language-reference/builtin-types/bool">true</a> if it is available</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="MASES_JCOReflectorEngine_JobManager_IsReflected_" data-uid="MASES.JCOReflectorEngine.JobManager.IsReflected*"></a>
+
+  <h3 id="MASES_JCOReflectorEngine_JobManager_IsReflected_System_String_" data-uid="MASES.JCOReflectorEngine.JobManager.IsReflected(System.String)">
+  IsReflected(string)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/JCOReflector/blob/master/src\net\engine\SharedClasses.cs/#L1324"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Check if <code class="paramref">assemblyName</code> was available in the refelected assemblies of JCOReflector</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static bool IsReflected(string assemblyName)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>assemblyName</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd><p>The assembly name to be checked</p>
+</dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
+    <dd><p><a href="https://learn.microsoft.com/dotnet/csharp/language-reference/builtin-types/bool">true</a> if it is available</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="MASES_JCOReflectorEngine_JobManager_Reset_" data-uid="MASES.JCOReflectorEngine.JobManager.Reset*"></a>
+
+  <h3 id="MASES_JCOReflectorEngine_JobManager_Reset" data-uid="MASES.JCOReflectorEngine.JobManager.Reset">
+  Reset()
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/JCOReflector/blob/master/src\net\engine\SharedClasses.cs/#L1297"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Reset <a class="xref" href="MASES.JCOReflectorEngine.JobManager.html">JobManager</a> state</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static void Reset()</code></pre>
+  </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+  <a id="MASES_JCOReflectorEngine_JobManager_RunJob_" data-uid="MASES.JCOReflectorEngine.JobManager.RunJob*"></a>
+
+  <h3 id="MASES_JCOReflectorEngine_JobManager_RunJob__1___0_System_Boolean_" data-uid="MASES.JCOReflectorEngine.JobManager.RunJob``1(``0,System.Boolean)">
+  RunJob&lt;T&gt;(T, bool)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/JCOReflector/blob/master/src\net\engine\SharedClasses.cs/#L1122"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Executes a Job</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static void RunJob&lt;T&gt;(T arg, bool waitEnd = false) where T : CommonEventArgs</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>arg</code> <span class="xref">T</span></dt>
+    <dd><p>The argument to use</p>
+</dd>
+    <dt><code>waitEnd</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
+    <dd><p>True to wait the end of operation</p>
+</dd>
+  </dl>
+
+
+  <h4 class="section">Type Parameters</h4>
+  <dl class="parameters">
+    <dt><code>T</code></dt>
+    <dd><p>The argument type inherited from <a class="xref" href="MASES.JCOReflectorEngine.CommonEventArgs.html">CommonEventArgs</a></p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+  <a id="MASES_JCOReflectorEngine_JobManager_SetHandler_" data-uid="MASES.JCOReflectorEngine.JobManager.SetHandler*"></a>
+
+  <h3 id="MASES_JCOReflectorEngine_JobManager_SetHandler_MASES_JCOReflectorEngine_appendToConsoleHandler_System_EventHandler_MASES_JCOReflectorEngine_EndOperationEventArgs__" data-uid="MASES.JCOReflectorEngine.JobManager.SetHandler(MASES.JCOReflectorEngine.appendToConsoleHandler,System.EventHandler{MASES.JCOReflectorEngine.EndOperationEventArgs})">
+  SetHandler(appendToConsoleHandler, EventHandler&lt;EndOperationEventArgs&gt;)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/JCOReflector/blob/master/src\net\engine\SharedClasses.cs/#L193"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Sets the operations handler</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static void SetHandler(appendToConsoleHandler appendToConsoleHandler, EventHandler&lt;EndOperationEventArgs&gt; endOperationHandler)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>appendToConsoleHandler</code> <a class="xref" href="MASES.JCOReflectorEngine.appendToConsoleHandler.html">appendToConsoleHandler</a></dt>
+    <dd><p>Handler for logging purpose</p>
+</dd>
+    <dt><code>endOperationHandler</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.eventhandler-1">EventHandler</a>&lt;<a class="xref" href="MASES.JCOReflectorEngine.EndOperationEventArgs.html">EndOperationEventArgs</a>&gt;</dt>
+    <dd><p>Handler for completed operations</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+
+  <a id="MASES_JCOReflectorEngine_JobManager_UpdateFromArgs_" data-uid="MASES.JCOReflectorEngine.JobManager.UpdateFromArgs*"></a>
+
+  <h3 id="MASES_JCOReflectorEngine_JobManager_UpdateFromArgs_MASES_JCOReflectorEngine_CommonEventArgs_System_Collections_Generic_IEnumerable_MASES_CLIParser_IArgumentMetadataParsed__" data-uid="MASES.JCOReflectorEngine.JobManager.UpdateFromArgs(MASES.JCOReflectorEngine.CommonEventArgs,System.Collections.Generic.IEnumerable{MASES.CLIParser.IArgumentMetadataParsed})">
+  UpdateFromArgs(CommonEventArgs, IEnumerable&lt;IArgumentMetadataParsed&gt;)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/JCOReflector/blob/master/src\net\engine\SharedClasses.cs/#L574"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Convert arguments into an instance of <a class="xref" href="MASES.JCOReflectorEngine.CommonEventArgs.html">CommonEventArgs</a></p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static CommonEventArgs UpdateFromArgs(this CommonEventArgs arg, IEnumerable&lt;IArgumentMetadataParsed&gt; args)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>arg</code> <a class="xref" href="MASES.JCOReflectorEngine.CommonEventArgs.html">CommonEventArgs</a></dt>
+    <dd><p>The <a class="xref" href="MASES.JCOReflectorEngine.CommonEventArgs.html">CommonEventArgs</a> to be updated</p>
+</dd>
+    <dt><code>args</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.collections.generic.ienumerable-1">IEnumerable</a>&lt;<span class="xref">IArgumentMetadataParsed</span>&gt;</dt>
+    <dd><p>Arguments parsed from command line</p>
+</dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="MASES.JCOReflectorEngine.CommonEventArgs.html">CommonEventArgs</a></dt>
+    <dd><p>An instance of <a class="xref" href="MASES.JCOReflectorEngine.CommonEventArgs.html">CommonEventArgs</a></p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="MASES_JCOReflectorEngine_JobManager_UpdateFromArgs_" data-uid="MASES.JCOReflectorEngine.JobManager.UpdateFromArgs*"></a>
+
+  <h3 id="MASES_JCOReflectorEngine_JobManager_UpdateFromArgs_MASES_JCOReflectorEngine_CommonEventArgs_System_String___" data-uid="MASES.JCOReflectorEngine.JobManager.UpdateFromArgs(MASES.JCOReflectorEngine.CommonEventArgs,System.String[])">
+  UpdateFromArgs(CommonEventArgs, string[])
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/JCOReflector/blob/master/src\net\engine\SharedClasses.cs/#L549"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Convert arguments into an instance of <a class="xref" href="MASES.JCOReflectorEngine.CommonEventArgs.html">CommonEventArgs</a></p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static CommonEventArgs UpdateFromArgs(this CommonEventArgs arg, string[] args)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>arg</code> <a class="xref" href="MASES.JCOReflectorEngine.CommonEventArgs.html">CommonEventArgs</a></dt>
+    <dd><p>The <a class="xref" href="MASES.JCOReflectorEngine.CommonEventArgs.html">CommonEventArgs</a> to be updated</p>
+</dd>
+    <dt><code>args</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a>[]</dt>
+    <dd><p>Arguments from command line</p>
+</dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="MASES.JCOReflectorEngine.CommonEventArgs.html">CommonEventArgs</a></dt>
+    <dd><p>An instance of <a class="xref" href="MASES.JCOReflectorEngine.CommonEventArgs.html">CommonEventArgs</a></p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="MASES_JCOReflectorEngine_JobManager_UpdateFromArgs_" data-uid="MASES.JCOReflectorEngine.JobManager.UpdateFromArgs*"></a>
+
+  <h3 id="MASES_JCOReflectorEngine_JobManager_UpdateFromArgs__1___0_System_Collections_Generic_IEnumerable_MASES_CLIParser_IArgumentMetadataParsed__" data-uid="MASES.JCOReflectorEngine.JobManager.UpdateFromArgs``1(``0,System.Collections.Generic.IEnumerable{MASES.CLIParser.IArgumentMetadataParsed})">
+  UpdateFromArgs&lt;T&gt;(T, IEnumerable&lt;IArgumentMetadataParsed&gt;)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/JCOReflector/blob/master/src\net\engine\SharedClasses.cs/#L562"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Convert arguments into an instance of T</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static T UpdateFromArgs&lt;T&gt;(this T arg, IEnumerable&lt;IArgumentMetadataParsed&gt; args) where T : CommonEventArgs</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>arg</code> <span class="xref">T</span></dt>
+    <dd><p>The instance to be updated</p>
+</dd>
+    <dt><code>args</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.collections.generic.ienumerable-1">IEnumerable</a>&lt;<span class="xref">IArgumentMetadataParsed</span>&gt;</dt>
+    <dd><p>Arguments parsed from command line</p>
+</dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><span class="xref">T</span></dt>
+    <dd><p>An instance of <a class="xref" href="MASES.JCOReflectorEngine.CommonEventArgs.html">CommonEventArgs</a></p>
+</dd>
+  </dl>
+
+  <h4 class="section">Type Parameters</h4>
+  <dl class="parameters">
+    <dt><code>T</code></dt>
+    <dd><p>A concrete instance of <a class="xref" href="MASES.JCOReflectorEngine.CommonEventArgs.html">CommonEventArgs</a></p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+  <a id="MASES_JCOReflectorEngine_JobManager_UpdateFromArgs_" data-uid="MASES.JCOReflectorEngine.JobManager.UpdateFromArgs*"></a>
+
+  <h3 id="MASES_JCOReflectorEngine_JobManager_UpdateFromArgs__1___0_System_String___" data-uid="MASES.JCOReflectorEngine.JobManager.UpdateFromArgs``1(``0,System.String[])">
+  UpdateFromArgs&lt;T&gt;(T, string[])
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/JCOReflector/blob/master/src\net\engine\SharedClasses.cs/#L537"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Convert arguments into an instance of <a class="xref" href="MASES.JCOReflectorEngine.CommonEventArgs.html">CommonEventArgs</a></p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static T UpdateFromArgs&lt;T&gt;(this T arg, string[] args) where T : CommonEventArgs</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>arg</code> <span class="xref">T</span></dt>
+    <dd><p>The instance to be updated</p>
+</dd>
+    <dt><code>args</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a>[]</dt>
+    <dd><p>Arguments from command line</p>
+</dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><span class="xref">T</span></dt>
+    <dd><p>An instance of <a class="xref" href="MASES.JCOReflectorEngine.CommonEventArgs.html">CommonEventArgs</a></p>
+</dd>
+  </dl>
+
+  <h4 class="section">Type Parameters</h4>
+  <dl class="parameters">
+    <dt><code>T</code></dt>
+    <dd><p>A concrete instance of <a class="xref" href="MASES.JCOReflectorEngine.CommonEventArgs.html">CommonEventArgs</a></p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+</article>
+
+        <div class="contribution d-print-none">
+          <a href="https://github.com/masesgroup/JCOReflector/blob/master/src\net\engine\SharedClasses.cs/#L119" class="edit-link">Edit this page</a>
+        </div>
+
+
+      </div>
+
+      <div class="affix">
+        <nav id="affix"></nav>
+      </div>
+    </main>
+
+    <div class="container-xxl search-results" id="search-results"></div>
+
+    <footer class="border-top text-secondary">
+      <div class="container-xxl">
+        <div class="flex-fill">
+          <span>Copyright © 2023 MASES s.r.l.. | Via San Cesidio 16 - San Valentino in A.C. - PE | P.I. 01932310681</span>
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>

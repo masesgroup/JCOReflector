@@ -42,6 +42,11 @@ jobs:
             echo "run_job=true" >> $GITHUB_OUTPUT
             break
           fi
+          if [[ $file == "src/documentation/"* ]]; then
+            echo "This file is under the directory 'src/documentation/'."
+            echo "run_job=true" >> $GITHUB_OUTPUT
+            break
+          fi
           if [[ $file == "src/jvm/src/"* ]]; then
             echo "This file is under the directory 'src/jvm/src/'."
             echo "run_job=true" >> $GITHUB_OUTPUT

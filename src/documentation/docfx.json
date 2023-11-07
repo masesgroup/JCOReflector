@@ -5,7 +5,7 @@
         {
           "files": [ "**.csproj" ],
           "exclude": [ "**/bin/**", "**/obj/**" ],
-          "src": "../"
+          "src": "../net/"
         }
       ],
       "dest": "api",
@@ -17,40 +17,20 @@
     "content": [
       {
         "files": [
-          "contacts_it/**.md",
-          "contacts_it/**/toc.yml",
-          "toc.yml",
-          "*.md"
+          "api/**.yml",
+          "api/index.md",
         ]
       },
       {
         "files": [
-          "products_it/**.md",
-          "products_it/**/toc.yml",
-          "toc.yml",
-          "*.md"
+          "javadoc/**.yml",
+          "javadoc/index.md",
         ]
       },
       {
         "files": [
-          "services_it/**.md",
-          "services_it/**/toc.yml",
-          "toc.yml",
-          "*.md"
-        ]
-      },
-      {
-        "files": [
-          "technologies_it/**.md",
-          "technologies_it/**/toc.yml",
-          "toc.yml",
-          "*.md"
-        ]
-      },
-      {
-        "files": [
-          "working_method_it/**.md",
-          "working_method_it/**/toc.yml",
+          "articles/**.md",
+          "articles/**/toc.yml",
           "toc.yml",
           "*.md"
         ]
@@ -79,14 +59,10 @@
     ],
     "postProcessors": [ "ExtractSearchIndex" ],
     "globalMetadata": {
-	    "_appLogoPath": "images/sinapse_logo.png",
+	  "_appLogoPath": "images/logo.png",
       "_appFaviconPath": "images/favicon.png",
-      "_appTitle": "Sinapse System website",
+      "_appTitle": "MASES Group website - JCOReflector",
       "_appFooter": "<span>Copyright © 2023 MASES s.r.l.. | Via San Cesidio 16 - San Valentino in A.C. - PE | P.I. 01932310681</span>",
-      "_disableContribution": true,
-      "_disableTocFilter": true,
-      "_disableToc": false,
-      "_disableAffix": true,
       "_gitContribute": {
 
       }
@@ -102,6 +78,6 @@
     "noLangKeyword": false,
     "keepFileLink": false,
     "cleanupCacheHistory": false,
-    "disableGitFeatures": true
+    "disableGitFeatures": false
   }
 }

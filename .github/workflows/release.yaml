@@ -51,7 +51,7 @@ jobs:
 
       - name: Install local file to be used within Javadoc section of generated POM 
         shell: bash
-        run: mvn install:install-file --no-transfer-progress -Dfile=../../bin/net6.0/JCOBridge.jar -DgroupId=JCOBridge -DartifactId=JCOBridge -Dversion=2.5.8 -Dpackaging=jar -f ./src/jvm/src/net6.0.xml
+        run: mvn install:install-file --no-transfer-progress -Dfile=../../../bin/net6.0/JCOBridge.jar -DgroupId=JCOBridge -DartifactId=JCOBridge -Dversion=2.5.8 -Dpackaging=jar -f ./src/jvm/src/net6.0.xml
 
       - name: Publish net6.0 to Apache Maven Central
         shell: bash
@@ -99,7 +99,7 @@ jobs:
 
       - name: Install local file to be used within Javadoc section of generated POM 
         shell: bash
-        run: mvn install:install-file --no-transfer-progress -Dfile=../../bin/net7.0/JCOBridge.jar -DgroupId=JCOBridge -DartifactId=JCOBridge -Dversion=2.5.8 -Dpackaging=jar -f ./src/jvm/src/net7.0.xml
+        run: mvn install:install-file --no-transfer-progress -Dfile=../../../bin/net7.0/JCOBridge.jar -DgroupId=JCOBridge -DartifactId=JCOBridge -Dversion=2.5.8 -Dpackaging=jar -f ./src/jvm/src/net7.0.xml
 
       - name: Publish net7.0 to Apache Maven Central
         shell: bash
@@ -143,7 +143,7 @@ jobs:
 
       - name: Install local file to be used within Javadoc section of generated POM 
         shell: bash
-        run: mvn install:install-file --no-transfer-progress -Dfile=../../bin/net462/JCOBridge.jar -DgroupId=JCOBridge -DartifactId=JCOBridge -Dversion=2.5.8 -Dpackaging=jar -f ./src/jvm/src/net462.xml
+        run: mvn install:install-file --no-transfer-progress -Dfile=../../../bin/net462/JCOBridge.jar -DgroupId=JCOBridge -DartifactId=JCOBridge -Dversion=2.5.8 -Dpackaging=jar -f ./src/jvm/src/net462.xml
 
       - name: Publish net462 to Apache Maven Central
         shell: bash

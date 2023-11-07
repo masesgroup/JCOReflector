@@ -39,6 +39,7 @@
     <maven.compiler.source>POM_JDK_TARGET</maven.compiler.source>
     <maven.compiler.target>POM_JDK_TARGET</maven.compiler.target>
     <classpathfile>${basedir}/classpathfile.classpath</classpathfile>
+	<runtime_relative_dir>${basedir}/../../../bin/POM_RUNTIME_PLACEHOLDER/</runtime_relative_dir>
   </properties>
   <distributionManagement>
     <snapshotRepository>
@@ -98,7 +99,7 @@
         <configuration>
           <compilerArgs>
             <arg>-cp</arg>
-            <arg>${originalClassPath};${basedir}/../../bin/POM_RUNTIME_PLACEHOLDER/JCOBridge.jar</arg>
+            <arg>${originalClassPath};${runtime_relative_dir}JCOBridge.jar</arg>
           </compilerArgs>
         </configuration>
       </plugin>
@@ -146,7 +147,7 @@
         <version>2.9.1</version>
         <configuration>
           <links>
-            <link>https://www.jcobridge.com/api-java</link>
+            <link>https://www.jcobridge.com/api-java_POM_JCOBRIDGE_VERSION_PLACEHOLDER</link>
           </links>
           <quiet>true</quiet>
           <source>POM_JDK_TARGET</source>

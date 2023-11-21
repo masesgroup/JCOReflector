@@ -93,7 +93,7 @@ Parsed assemblies are:
 > * Microsoft.Workflow.Compiler, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35
 > * System.Workflow.Activities, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35
 
-> * Analyzed Types = 43371
+> * Analyzed Types = 43375
 >   * Enumerators = 26
 >   * Delegates = 557
 >   * Classes
@@ -114,8 +114,8 @@ Parsed assemblies are:
 >       * Duplicated Methods = 999
 >     * Properties = 29775
 >     * Events = 2185
-> * Discarded Types = 31054
->   * Non Public = 30600
+> * Discarded Types = 31058
+>   * Non Public = 30604
 >   * Generic = 354
 >   * Internals = 50
 

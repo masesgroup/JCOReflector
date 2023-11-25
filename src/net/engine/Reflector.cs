@@ -1338,7 +1338,7 @@ namespace MASES.JCOReflectorEngine
             var fullname = type.FullName;
             var methodName = method.Name;
             string[] methodNamesToCheck;
-            if (Const.SpecialNames.ExportingMethodsAvoidanceMap.TryGetValue(fullname, out methodNamesToCheck))
+            if (Const.SpecialNames.ExportingAvoidanceMap.TryGetValue(fullname, out methodNamesToCheck))
             {
                 return methodNamesToCheck == null || methodNamesToCheck.Contains(methodName);
             }
@@ -2088,6 +2088,20 @@ namespace MASES.JCOReflectorEngine
             }
         }
 
+        static bool AvoidExportProperties(this Type type, PropertyInfo method)
+        {
+            if (!EnableRefOutParameters) return false;
+            var fullname = type.FullName;
+            var propertyName = method.Name;
+            string[] propertyNamesToCheck;
+            if (Const.SpecialNames.ExportingAvoidanceMap.TryGetValue(fullname, out propertyNamesToCheck))
+            {
+                return propertyNamesToCheck == null || propertyNamesToCheck.Contains(propertyName);
+            }
+
+            return false;
+        }
+
         static string ExportProperties(this Type type, IList<Type> imports, IList<Type> implementableInterfaces, bool withInheritance, bool isException, string destFolder, string assemblyname, out string returnInterfaceSection)
         {
             bool isInterface = false;
@@ -2148,6 +2162,8 @@ namespace MASES.JCOReflectorEngine
                     }
 
                     var propertyName = item.Name;
+
+                    if (type.AvoidExportProperties(item)) continue;
 
                     isPrimitive = true;
                     defaultPrimitiveValue = string.Empty;

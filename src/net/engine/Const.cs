@@ -100,27 +100,27 @@ namespace MASES.JCOReflectorEngine
 
             public const string OBJECT_CASTER_NAME = "(java.lang.Object)";
 
-            public static Dictionary<string, string[]> ExportingMethodsAvoidanceMap = new Dictionary<string, string[]>();
+            public static Dictionary<string, string[]> ExportingAvoidanceMap = new Dictionary<string, string[]>();
             public static Dictionary<string, string> DirectMappablePrimitives = new Dictionary<string, string>();
 
             static SpecialNames()
             {
-                ExportingMethodsAvoidanceMap.Add("System.Net.Http.Headers.MediaTypeWithQualityHeaderValue", new string[] { "TryParse" });
-                ExportingMethodsAvoidanceMap.Add("System.Net.Http.Headers.NameValueWithParametersHeaderValue", new string[] { "TryParse" });
-                ExportingMethodsAvoidanceMap.Add("System.Net.Http.Headers.TransferCodingWithQualityHeaderValue", new string[] { "TryParse" });
-                ExportingMethodsAvoidanceMap.Add("Microsoft.VisualBasic.FileSystem", new string[] { "FileGet", "Input" });
-                ExportingMethodsAvoidanceMap.Add("System.Threading.Thread", new string[] { "VolatileRead" });
-                ExportingMethodsAvoidanceMap.Add("System.Threading.Volatile", new string[] { "Read" });
-                ExportingMethodsAvoidanceMap.Add("System.Threading.Interlocked", new string[] { "Decrement", "Increment"
+                ExportingAvoidanceMap.Add("System.Net.Http.Headers.MediaTypeWithQualityHeaderValue", new string[] { "TryParse" });
+                ExportingAvoidanceMap.Add("System.Net.Http.Headers.NameValueWithParametersHeaderValue", new string[] { "TryParse" });
+                ExportingAvoidanceMap.Add("System.Net.Http.Headers.TransferCodingWithQualityHeaderValue", new string[] { "TryParse" });
+                ExportingAvoidanceMap.Add("Microsoft.VisualBasic.FileSystem", new string[] { "FileGet", "Input" });
+                ExportingAvoidanceMap.Add("System.Threading.Thread", new string[] { "VolatileRead" });
+                ExportingAvoidanceMap.Add("System.Threading.Volatile", new string[] { "Read" });
+                ExportingAvoidanceMap.Add("System.Threading.Interlocked", new string[] { "Decrement", "Increment"
 #if NET6_0 || NET7_0 || NET8_0
-                                                                                                , "Read"
+                                                                                         , "Read"
 #endif
                 });
 #if NET7_0 || NET8_0
-                ExportingMethodsAvoidanceMap.Add("System.Runtime.InteropServices.JavaScript.JSMarshalerArgument", new string[] { "ToManaged" });
+                ExportingAvoidanceMap.Add("System.Runtime.InteropServices.JavaScript.JSMarshalerArgument", new string[] { "ToManaged" });
 #endif
 #if NET8_0
-                ExportingMethodsAvoidanceMap.Add("System.Runtime.InteropServices.Marshalling.IIUnknownInterfaceType", null);
+                ExportingAvoidanceMap.Add("System.Runtime.InteropServices.Marshalling.IIUnknownInterfaceType", null);
 #endif
                 DirectMappablePrimitives.Add("boolean", "java.util.concurrent.atomic.AtomicBoolean");
                 DirectMappablePrimitives.Add("byte", "java.util.concurrent.atomic.AtomicReference<java.lang.Byte>");

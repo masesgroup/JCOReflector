@@ -1340,7 +1340,7 @@ namespace MASES.JCOReflectorEngine
             string[] methodNamesToCheck;
             if (Const.SpecialNames.ExportingMethodsAvoidanceMap.TryGetValue(fullname, out methodNamesToCheck))
             {
-                return methodNamesToCheck.Contains(methodName);
+                return methodNamesToCheck != null && methodNamesToCheck.Contains(methodName);
             }
 
             return false;

@@ -2532,7 +2532,7 @@ namespace MASES.JCOReflectorEngine
             var fileName = Path.Combine(pathToSaveTo, string.Format("I{0}.java", delegateName));
             writeFile(fileName, interfaceStr);
 
-            importsStr = importsStr + string.Format(Const.Imports.IMPORT, packageName, string.Format("I{0}", delegateName));
+            importsStr += string.Format(Const.Imports.IMPORT, packageName, string.Format("I{0}", delegateName));
 
             string dynamicInvokeExecParamStr = dynamicInvokeExecParams.ToString();
             var dynamicInvokeStr = dynamicInvokeTemplateToUse.Replace(Const.Methods.METHOD_JAVA_NAME, Const.SpecialNames.METHOD_DYNAMICINVOKE_NAME)
@@ -2771,6 +2771,7 @@ namespace MASES.JCOReflectorEngine
                     subItem = item.GetElementType();
                 }
                 var name = subItem.Name;
+                if (string.IsNullOrWhiteSpace(name)) continue; // bypass empty name which leads to error in some cases
                 if (subItem.IsInterface)
                 {
                     if (subItem.IsManagedType(0, 1) && subItem != typeof(IEnumerator) && subItem != typeof(IEnumerable))

@@ -38,7 +38,6 @@ import org.mases.jcobridge.netreflection.*;
 import java.util.ArrayList;
 
 // Import section
-import system.Guid;
 
 
 /**
@@ -142,17 +141,6 @@ public class IIUnknownInterfaceTypeImplementation extends NetObject implements I
     
     // Properties section
     
-    public static Guid getIid() throws Throwable {
-        if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
-        try {
-            JCObject val = (JCObject)classType.Get("Iid");
-            return new Guid(val);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
 
 
     // Instance Events section

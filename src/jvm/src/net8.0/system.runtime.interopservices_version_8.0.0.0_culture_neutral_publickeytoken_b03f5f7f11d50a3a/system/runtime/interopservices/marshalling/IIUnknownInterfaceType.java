@@ -37,7 +37,6 @@ import org.mases.jcobridge.*;
 import org.mases.jcobridge.netreflection.*;
 
 // Import section
-import system.Guid;
 
 
 /**
@@ -117,8 +116,6 @@ public interface IIUnknownInterfaceType extends IJCOBridgeReflected {
     
     // Properties section
     
-    public Guid getIid() throws Throwable;
-
 
 
     // Instance Events section

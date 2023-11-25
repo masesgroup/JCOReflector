@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ReflectorEventArgs xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <LogLevel>Error</LogLevel>
+  <AssemblyNames>
+    <string>PresentationFramework, Version=7.0.0.0, PublicKeyToken=31bf3856ad364e35</string>
+  </AssemblyNames>
+  <SourceFolder>src/jvm</SourceFolder>
+  <SplitFolderByAssembly>true</SplitFolderByAssembly>
+  <ForceRebuild>true</ForceRebuild>
+  <UseParallelBuild>true</UseParallelBuild>
+  <CreateExceptionThrownClause>true</CreateExceptionThrownClause>
+  <ExceptionThrownClauseDepth>10</ExceptionThrownClauseDepth>
+  <EnableAbstract>true</EnableAbstract>
+  <EnableArray>true</EnableArray>
+  <EnableDuplicateMethodNativeArrayWithJCRefOut>true</EnableDuplicateMethodNativeArrayWithJCRefOut>
+  <EnableInheritance>true</EnableInheritance>
+  <EnableInterfaceInheritance>true</EnableInterfaceInheritance>
+  <EnableRefOutParameters>true</EnableRefOutParameters>
+  <DryRun>false</DryRun>
+</ReflectorEventArgs>

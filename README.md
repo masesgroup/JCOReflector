@@ -4,9 +4,9 @@ JCOReflector is a comprehensive suite of libraries and tools to use Java/JVM API
 
 ### Libraries and Tools
 
-|.NET Framework | .NET 6 | .NET 7 |
-|---	|---	|---	|
-|[![Maven Central](https://img.shields.io/maven-central/v/com.masesgroup/jcoreflector_net462.svg?label=Maven%20Central)](https://search.maven.org/search?q=g:%22com.masesgroup%22%20AND%20a:%22jcoreflector_net462%22) | [![Maven Central](https://img.shields.io/maven-central/v/com.masesgroup/jcoreflector_net6.0.svg?label=Maven%20Central)](https://search.maven.org/search?q=g:%22com.masesgroup%22%20AND%20a:%22jcoreflector_net6.0%22)| [![Maven Central](https://img.shields.io/maven-central/v/com.masesgroup/jcoreflector_net7.0.svg?label=Maven%20Central)](https://search.maven.org/search?q=g:%22com.masesgroup%22%20AND%20a:%22jcoreflector_net7.0%22)|
+|.NET Framework | .NET 6 | .NET 7 | .NET 8 |
+|---	|---	|---	|---	|
+|[![Maven Central](https://img.shields.io/maven-central/v/com.masesgroup/jcoreflector_net462.svg?label=Maven%20Central)](https://search.maven.org/search?q=g:%22com.masesgroup%22%20AND%20a:%22jcoreflector_net462%22) | [![Maven Central](https://img.shields.io/maven-central/v/com.masesgroup/jcoreflector_net6.0.svg?label=Maven%20Central)](https://search.maven.org/search?q=g:%22com.masesgroup%22%20AND%20a:%22jcoreflector_net6.0%22)| [![Maven Central](https://img.shields.io/maven-central/v/com.masesgroup/jcoreflector_net7.0.svg?label=Maven%20Central)](https://search.maven.org/search?q=g:%22com.masesgroup%22%20AND%20a:%22jcoreflector_net7.0%22)| [![Maven Central](https://img.shields.io/maven-central/v/com.masesgroup/jcoreflector_net8.0.svg?label=Maven%20Central)](https://search.maven.org/search?q=g:%22com.masesgroup%22%20AND%20a:%22jcoreflector_net8.0%22)|
 
 |JCOReflectorEngine | JCOReflectorCLI |
 |---	|---	|
@@ -214,7 +214,8 @@ Within the folder bin you will find three subfolders:
 - **net462** (available only on Windows platform)
 - **net6.0** (available on .NET 6 supported platforms)
 - **net7.0** (available on .NET 7 supported platforms)
-
+- **net8.0** (available on .NET 8 supported platforms)
+- 
 in each subfolder will be available two executables:
 
 - **JCOReflectorCLI** the CLI tool;
@@ -225,7 +226,7 @@ in each subfolder will be available two executables:
 
 ## Reflected Assemblies
 
-The folder [src/jvm/src](/src/jvm/src) contains all reflected classes generated for **.NET** **Framework** (_net462_), **6** (_net6.0_) and **7** (_net7.0_). Below the coverage [statistics](#statistics):
+The folder [src/jvm/src](/src/jvm/src) contains all reflected classes generated for **.NET** **Framework** (_net462_), **6** (_net6.0_), **7** (_net7.0_) and **8** (_net8.0_). Below the coverage [statistics](#statistics):
 
 ### Statistics
 

@@ -84,6 +84,7 @@ jobs:
         run: |
           Copy-Item .github\workflows\JCOReflectorCLI6.0.runtimeconfig.json -Destination bin\net6.0\MASES.JCOReflectorCLI.runtimeconfig.json -Force
           Copy-Item .github\workflows\JCOReflectorCLI7.0.runtimeconfig.json -Destination bin\net7.0\MASES.JCOReflectorCLI.runtimeconfig.json -Force
+          Copy-Item .github\workflows\JCOReflectorCLI8.0.runtimeconfig.json -Destination bin\net8.0\MASES.JCOReflectorCLI.runtimeconfig.json -Force
 
       - name: Switch to master net6.0 help file
         run: |
@@ -94,6 +95,12 @@ jobs:
       - name: Switch to master net7.0 help file
         run: |
           cd .\docs\net7.0
+          git checkout master
+          cd ..\..
+          
+      - name: Switch to master net8.0 help file
+        run: |
+          cd .\docs\net8.0
           git checkout master
           cd ..\..
 
@@ -112,7 +119,10 @@ jobs:
 
       - name: Clean net7.0 help file folders
         run: Get-ChildItem -Path .\docs\net7.0 -Exclude .git,LICENSE,README.md | Remove-Item -Recurse -Force
-          
+
+      - name: Clean net8.0 help file folders
+        run: Get-ChildItem -Path .\docs\net8.0 -Exclude .git,LICENSE,README.md | Remove-Item -Recurse -Force
+
       - name: Clean net462 help file folders
         run: Get-ChildItem -Path .\docs\net462 -Exclude .git,LICENSE,README.md | Remove-Item -Recurse -Force
 
@@ -135,7 +145,11 @@ jobs:
       - name: Build net7.0 Java Help files
         run: dotnet bin\net7.0\MASES.JCOReflectorCLI.dll -JobType BuildDocs -JobFile .github\workflows\builddocs_win19.job -CommitVersion ${{ env.GITHUB_COMMIT_MESSAGE }} -JDKFolder %JAVA_HOME_11_X64%
         shell: cmd
-        
+
+      - name: Build net8.0 Java Help files
+        run: dotnet bin\net8.0\MASES.JCOReflectorCLI.dll -JobType BuildDocs -JobFile .github\workflows\builddocs_win19.job -CommitVersion ${{ env.GITHUB_COMMIT_MESSAGE }} -JDKFolder %JAVA_HOME_11_X64%
+        shell: cmd
+
       - name: Build net462 Java Help files
         run: .\bin\net462\MASES.JCOReflectorCLI -JobType BuildDocs -JobFile .github\workflows\builddocs_win19.job -CommitVersion ${{ env.GITHUB_COMMIT_MESSAGE }} -JDKFolder %JAVA_HOME_11_X64%
         shell: cmd
@@ -163,7 +177,16 @@ jobs:
         shell: cmd
         env:
           GITHUB_WORKSPACE: $GITHUB_WORKSPACE
-        
+
+      - name: Commit changes to net8.0 help file
+        run: |
+          cd .\docs\net8.0
+          %GITHUB_WORKSPACE%\.github\workflows\commit.cmd github-actions 41898282+github-actions[bot]@users.noreply.github.com "Update help file to commit masesgroup/JCOReflector@${{ env.GITHUB_COMMIT_MESSAGE }}"
+          cd ..\..\..
+        shell: cmd
+        env:
+          GITHUB_WORKSPACE: $GITHUB_WORKSPACE
+
       - name: Commit changes to net462 help file
         run: |
           cd .\docs\net462
@@ -203,6 +226,17 @@ jobs:
           GITHUB_WORKSPACE: $GITHUB_WORKSPACE
           SUPER_SECRET: ${{ secrets.DOCS_API_TOKEN_GITHUB }}
           REPO: masesgroup/NET7Docs
+
+      - name: Push changes to net8.0 help file
+        run: |
+          cd .\docs\net8.0
+          %GITHUB_WORKSPACE%\.github\workflows\push.cmd %REPO%
+          cd ..\..
+        shell: cmd
+        env:
+          GITHUB_WORKSPACE: $GITHUB_WORKSPACE
+          SUPER_SECRET: ${{ secrets.DOCS_API_TOKEN_GITHUB }}
+          REPO: masesgroup/NET8Docs
 
       - name: Push changes to net462 help file
         run: |

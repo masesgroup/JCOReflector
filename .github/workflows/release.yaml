@@ -51,7 +51,7 @@ jobs:
 
       - name: Install local file to be used within Javadoc section of generated POM 
         shell: bash
-        run: mvn install:install-file --no-transfer-progress -Dfile=../../../bin/net6.0/JCOBridge.jar -DgroupId=JCOBridge -DartifactId=JCOBridge -Dversion=2.5.8 -Dpackaging=jar -f ./src/jvm/src/net6.0.xml
+        run: mvn install:install-file --no-transfer-progress -Dfile=../../../bin/net6.0/JCOBridge.jar -DgroupId=JCOBridge -DartifactId=JCOBridge -Dversion=2.5.9 -Dpackaging=jar -f ./src/jvm/src/net6.0.xml
 
       - name: Publish net6.0 to Apache Maven Central
         shell: bash
@@ -99,11 +99,59 @@ jobs:
 
       - name: Install local file to be used within Javadoc section of generated POM 
         shell: bash
-        run: mvn install:install-file --no-transfer-progress -Dfile=../../../bin/net7.0/JCOBridge.jar -DgroupId=JCOBridge -DartifactId=JCOBridge -Dversion=2.5.8 -Dpackaging=jar -f ./src/jvm/src/net7.0.xml
+        run: mvn install:install-file --no-transfer-progress -Dfile=../../../bin/net7.0/JCOBridge.jar -DgroupId=JCOBridge -DartifactId=JCOBridge -Dversion=2.5.9 -Dpackaging=jar -f ./src/jvm/src/net7.0.xml
 
       - name: Publish net7.0 to Apache Maven Central
         shell: bash
         run: mvn --file ./src/jvm/src/net7.0.xml --no-transfer-progress --batch-mode -Dgpg.passphrase=${{ secrets.MAVEN_GPG_PASSPHRASE }} deploy
+        env:
+          MAVEN_USERNAME: ${{ secrets.MAVEN_USERNAME }}
+          MAVEN_CENTRAL_TOKEN: ${{ secrets.MAVEN_CENTRAL_TOKEN }}
+          MAVEN_GPG_PASSPHRASE: ${{ secrets.MAVEN_GPG_PASSPHRASE }}
+
+  build_maven_net8:
+    # The type of runner that the job will run on
+    runs-on: windows-2022
+
+    # Steps represent a sequence of tasks that will be executed as part of the job
+    steps:
+      # Runs a set of commands using the runners shell
+      # Support longpaths
+      - name: Support long paths
+        run: git config --system core.longpaths true
+
+      # Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it
+      - uses: actions/checkout@v4
+
+      - name: Build JCOReflectorCLI
+        run: dotnet build --no-incremental --framework net8.0 --configuration Release /p:Platform="Any CPU" src\JCOReflectorCLI.sln
+
+      # Runs a set of commands using the runners shell
+      - name: Copy configuration file
+        run: Copy-Item .github\workflows\JCOReflectorCLI8.0.runtimeconfig.json -Destination bin\net8.0\MASES.JCOReflectorCLI.runtimeconfig.json -Force
+
+      - name: Build net8.0 Maven POM files
+        run: dotnet bin\net8.0\MASES.JCOReflectorCLI.dll -JobType CreatePOM -POMStagingType Release -JobFile .github\workflows\createpom_win19.job
+
+      - name: Set up Apache Maven Central
+        uses: actions/setup-java@v3
+        with: # running setup-java again overwrites the settings.xml
+          distribution: temurin
+          java-version: 11
+          cache: 'maven'
+          server-id: ossrh # Value of the distributionManagement/repository/id field of the pom.xml
+          server-username: MAVEN_USERNAME # env variable for username in deploy
+          server-password: MAVEN_CENTRAL_TOKEN # env variable for token in deploy
+          gpg-private-key: ${{ secrets.MAVEN_GPG_PRIVATE_KEY }} # Value of the GPG private key to import
+          gpg-passphrase: MAVEN_GPG_PASSPHRASE # env variable for GPG private key passphrase
+
+      - name: Install local file to be used within Javadoc section of generated POM 
+        shell: bash
+        run: mvn install:install-file --no-transfer-progress -Dfile=../../../bin/net8.0/JCOBridge.jar -DgroupId=JCOBridge -DartifactId=JCOBridge -Dversion=2.5.9 -Dpackaging=jar -f ./src/jvm/src/net8.0.xml
+
+      - name: Publish net8.0 to Apache Maven Central
+        shell: bash
+        run: mvn --file ./src/jvm/src/net8.0.xml --no-transfer-progress --batch-mode -Dgpg.passphrase=${{ secrets.MAVEN_GPG_PASSPHRASE }} deploy
         env:
           MAVEN_USERNAME: ${{ secrets.MAVEN_USERNAME }}
           MAVEN_CENTRAL_TOKEN: ${{ secrets.MAVEN_CENTRAL_TOKEN }}
@@ -143,7 +191,7 @@ jobs:
 
       - name: Install local file to be used within Javadoc section of generated POM 
         shell: bash
-        run: mvn install:install-file --no-transfer-progress -Dfile=../../../bin/net462/JCOBridge.jar -DgroupId=JCOBridge -DartifactId=JCOBridge -Dversion=2.5.8 -Dpackaging=jar -f ./src/jvm/src/net462.xml
+        run: mvn install:install-file --no-transfer-progress -Dfile=../../../bin/net462/JCOBridge.jar -DgroupId=JCOBridge -DartifactId=JCOBridge -Dversion=2.5.9 -Dpackaging=jar -f ./src/jvm/src/net462.xml
 
       - name: Publish net462 to Apache Maven Central
         shell: bash
@@ -154,7 +202,7 @@ jobs:
           MAVEN_GPG_PASSPHRASE: ${{ secrets.MAVEN_GPG_PASSPHRASE }}
 
   build_release:
-    needs: [build_maven_net6, build_maven_net7, build_maven_net462]
+    needs: [build_maven_net6, build_maven_net7, build_maven_net8, build_maven_net462]
     # The type of runner that the job will run on
     runs-on: windows-2022
   
@@ -185,6 +233,7 @@ jobs:
         run: |
           Copy-Item .github\workflows\JCOReflectorCLI6.0.runtimeconfig.json -Destination bin\net6.0\MASES.JCOReflectorCLI.runtimeconfig.json -Force
           Copy-Item .github\workflows\JCOReflectorCLI7.0.runtimeconfig.json -Destination bin\net7.0\MASES.JCOReflectorCLI.runtimeconfig.json -Force
+          Copy-Item .github\workflows\JCOReflectorCLI8.0.runtimeconfig.json -Destination bin\net8.0\MASES.JCOReflectorCLI.runtimeconfig.json -Force
 
       - name: Build Java files
       
@@ -198,6 +247,7 @@ jobs:
         run: |
           dotnet .\bin\net6.0\MASES.JCOReflectorCLI.dll -JobType CreateJars -JobFile .github\workflows\createjars_core6.0_win19.job -JDKFolder %JAVA_HOME_11_X64%
           dotnet .\bin\net7.0\MASES.JCOReflectorCLI.dll -JobType CreateJars -JobFile .github\workflows\createjars_core7.0_win19.job -JDKFolder %JAVA_HOME_11_X64%
+          dotnet .\bin\net8.0\MASES.JCOReflectorCLI.dll -JobType CreateJars -JobFile .github\workflows\createjars_core8.0_win19.job -JDKFolder %JAVA_HOME_11_X64%
           .\bin\net462\MASES.JCOReflectorCLI -JobType CreateJars -JobFile .github\workflows\createjars_framework_win19.job -JDKFolder %JAVA_HOME_11_X64%
         shell: cmd
 
@@ -205,12 +255,14 @@ jobs:
         run: | 
           Compress-Archive -Path .\bin\net6.0\* -DestinationPath .\bin\net6.0.zip
           Compress-Archive -Path .\bin\net7.0\* -DestinationPath .\bin\net7.0.zip
+          Compress-Archive -Path .\bin\net8.0\* -DestinationPath .\bin\net8.0.zip
           Compress-Archive -Path .\bin\net462\* -DestinationPath .\bin\net462.zip
           
       - name: Compress documentation files
         run: | 
           Compress-Archive -Path .\docs\net6.0\* -DestinationPath .\net6.0.docs.zip
           Compress-Archive -Path .\docs\net7.0\* -DestinationPath .\net7.0.docs.zip
+          Compress-Archive -Path .\docs\net8.0\* -DestinationPath .\net8.0.docs.zip
           Compress-Archive -Path .\docs\net462\* -DestinationPath .\net462.docs.zip
 
       - name: Upload net6.0 binaries to release
@@ -228,6 +280,15 @@ jobs:
           repo_token: ${{ secrets.GITHUB_TOKEN }}
           file: .\bin\net7.0.zip
           asset_name: net7.0.zip
+          tag: ${{ github.ref }}
+          overwrite: true
+
+      - name: Upload net8.0 binaries to release
+        uses: svenstaro/upload-release-action@v2
+        with:
+          repo_token: ${{ secrets.GITHUB_TOKEN }}
+          file: .\bin\net8.0.zip
+          asset_name: net8.0.zip
           tag: ${{ github.ref }}
           overwrite: true
 
@@ -255,6 +316,15 @@ jobs:
           repo_token: ${{ secrets.GITHUB_TOKEN }}
           file: .\net7.0.docs.zip
           asset_name: net7.0.docs.zip
+          tag: ${{ github.ref }}
+          overwrite: true
+
+      - name: Upload net8.0 documentation to release
+        uses: svenstaro/upload-release-action@v2
+        with:
+          repo_token: ${{ secrets.GITHUB_TOKEN }}
+          file: .\net8.0.docs.zip
+          asset_name: net8.0.docs.zip
           tag: ${{ github.ref }}
           overwrite: true
 

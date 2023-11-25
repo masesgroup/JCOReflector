@@ -1104,7 +1104,7 @@ Parsed assemblies are:
 >     * Constructors = 5839
 >     * Methods = 21284
 >       * Duplicated Methods = 826
->     * Properties = 17286
+>     * Properties = 17285
 >     * Events = 1636
 > * Discarded Types = 19460
 >   * Non Public = 19094

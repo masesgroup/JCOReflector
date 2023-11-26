@@ -5,8 +5,9 @@ There are three main folders:
 * [**_net462_**](#net-framework) contains the reflected classes generated from .NET Framework, divided by the containing assembly
 * [**_net6.0_**](#net-6) contains the reflected classes generated from .NET 6, divided by the containing assembly
 * [**_net7.0_**](#net-7) contains the reflected classes generated from .NET 7, divided by the containing assembly
+* [**_net8.0_**](#net-8) contains the reflected classes generated from .NET 8, divided by the containing assembly
 
-**JCOReflector** is the folder of common classes for both **.NET** **Framework**, **6** and **7**
+**JCOReflector** is the folder of common classes for both **.NET** **Framework**, **6**, **7** and **8**
 
 ## .NET Framework
 
@@ -1113,4 +1114,4 @@ Parsed assemblies are:
 
 [//]: # "EndReport net8.0"
 
-![Net8Statistic](https://docs.google.com/spreadsheets/d/e/2PACX-1vTe94B4KWTddOWDnIHGRkHHPq23g_oPzZUfmVU3ls1lEUwNQmG_T4Zi7xCCNkb0RMqkT8LblRNW7aT9/pubchart?oid=1527441532&format=image)
+![Net8Statistic](https://docs.google.com/spreadsheets/d/e/2PACX-1vTe94B4KWTddOWDnIHGRkHHPq23g_oPzZUfmVU3ls1lEUwNQmG_T4Zi7xCCNkb0RMqkT8LblRNW7aT9/pubchart?oid=1753386013&format=image)

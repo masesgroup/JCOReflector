@@ -87,6 +87,9 @@ import system.web.ui.ICallbackEventHandlerImplementation;
  * <p>
  *
  * Powered by JCOBridge: more info at <a href="https://www.jcobridge.com" target="_top">https://www.jcobridge.com</a>
+ *
+ * @author  MASES s.r.l https://masesgroup.com
+ * @version 1.14.0.0
  */
 public class GridView extends CompositeDataBoundControl implements system.web.ui.webcontrols.IPostBackContainer, system.web.ui.IPostBackEventHandler, system.web.ui.webcontrols.ICallbackContainer, system.web.ui.ICallbackEventHandler {
     /**

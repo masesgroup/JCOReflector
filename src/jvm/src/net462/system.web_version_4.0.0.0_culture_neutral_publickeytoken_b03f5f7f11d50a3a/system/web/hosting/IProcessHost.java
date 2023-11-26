@@ -49,6 +49,9 @@ import system.web.hosting.IAppDomainInfoEnumImplementation;
  * <p>
  *
  * Powered by JCOBridge: more info at <a href="https://www.jcobridge.com" target="_top">https://www.jcobridge.com</a>
+ *
+ * @author  MASES s.r.l https://masesgroup.com
+ * @version 1.14.0.0
  */
 public interface IProcessHost extends IJCOBridgeReflected {
     /**

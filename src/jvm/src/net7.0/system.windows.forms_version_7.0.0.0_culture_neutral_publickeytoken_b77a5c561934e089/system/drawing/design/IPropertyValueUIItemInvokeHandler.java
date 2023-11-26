@@ -50,6 +50,9 @@ import system.drawing.design.PropertyValueUIItem;
  * <p>
  *
  * Powered by JCOBridge: more info at <a href="https://www.jcobridge.com" target="_top">https://www.jcobridge.com</a>
+ *
+ * @author  MASES s.r.l https://masesgroup.com
+ * @version 1.14.0.0
  */
 public interface IPropertyValueUIItemInvokeHandler {
     public void Invoke(ITypeDescriptorContext context, PropertyDescriptor descriptor, PropertyValueUIItem invokedItem);

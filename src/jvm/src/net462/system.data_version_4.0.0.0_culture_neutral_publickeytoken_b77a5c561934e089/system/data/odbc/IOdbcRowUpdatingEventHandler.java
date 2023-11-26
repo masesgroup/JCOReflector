@@ -47,6 +47,9 @@ import system.data.odbc.OdbcRowUpdatingEventArgs;
  * <p>
  *
  * Powered by JCOBridge: more info at <a href="https://www.jcobridge.com" target="_top">https://www.jcobridge.com</a>
+ *
+ * @author  MASES s.r.l https://masesgroup.com
+ * @version 1.14.0.0
  */
 public interface IOdbcRowUpdatingEventHandler {
     public void Invoke(NetObject sender, OdbcRowUpdatingEventArgs e);

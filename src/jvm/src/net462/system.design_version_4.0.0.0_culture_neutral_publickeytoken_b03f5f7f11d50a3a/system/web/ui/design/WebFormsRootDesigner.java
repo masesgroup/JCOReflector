@@ -64,6 +64,9 @@ import system.componentmodel.design.IDesignerFilterImplementation;
  * <p>
  *
  * Powered by JCOBridge: more info at <a href="https://www.jcobridge.com" target="_top">https://www.jcobridge.com</a>
+ *
+ * @author  MASES s.r.l https://masesgroup.com
+ * @version 1.14.0.0
  */
 public class WebFormsRootDesigner extends NetObject implements system.IDisposable, system.componentmodel.design.IDesignerFilter, AutoCloseable {
     /**

@@ -48,6 +48,9 @@ import system.security.cryptography.x509certificates.X509CertificateCollection;
  * <p>
  *
  * Powered by JCOBridge: more info at <a href="https://www.jcobridge.com" target="_top">https://www.jcobridge.com</a>
+ *
+ * @author  MASES s.r.l https://masesgroup.com
+ * @version 1.14.0.0
  */
 public interface ILocalCertificateSelectionCallback {
     public X509Certificate Invoke(NetObject sender, java.lang.String targetHost, X509CertificateCollection localCertificates, X509Certificate remoteCertificate, java.lang.String[] acceptableIssuers);

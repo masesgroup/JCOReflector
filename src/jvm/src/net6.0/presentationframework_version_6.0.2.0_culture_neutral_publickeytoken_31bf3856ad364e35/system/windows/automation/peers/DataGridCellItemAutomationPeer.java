@@ -59,6 +59,9 @@ import system.windows.automation.provider.IVirtualizedItemProviderImplementation
  * <p>
  *
  * Powered by JCOBridge: more info at <a href="https://www.jcobridge.com" target="_top">https://www.jcobridge.com</a>
+ *
+ * @author  MASES s.r.l https://masesgroup.com
+ * @version 1.14.0.0
  */
 public class DataGridCellItemAutomationPeer extends AutomationPeer implements system.windows.automation.provider.IInvokeProvider, system.windows.automation.provider.IScrollItemProvider, system.windows.automation.provider.IVirtualizedItemProvider {
     /**

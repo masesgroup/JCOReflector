@@ -49,6 +49,9 @@ import system.web.ui.design.DesignTimeResourceProviderFactory;
  * <p>
  *
  * Powered by JCOBridge: more info at <a href="https://www.jcobridge.com" target="_top">https://www.jcobridge.com</a>
+ *
+ * @author  MASES s.r.l https://masesgroup.com
+ * @version 1.14.0.0
  */
 public class IDesignTimeResourceProviderFactoryServiceImplementation extends NetObject implements IDesignTimeResourceProviderFactoryService {
     /**

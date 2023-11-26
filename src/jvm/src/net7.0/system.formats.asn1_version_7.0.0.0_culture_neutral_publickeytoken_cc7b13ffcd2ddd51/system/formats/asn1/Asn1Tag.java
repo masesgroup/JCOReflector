@@ -52,6 +52,9 @@ import system.formats.asn1.Asn1Tag;
  * <p>
  *
  * Powered by JCOBridge: more info at <a href="https://www.jcobridge.com" target="_top">https://www.jcobridge.com</a>
+ *
+ * @author  MASES s.r.l https://masesgroup.com
+ * @version 1.14.0.0
  */
 public class Asn1Tag extends ValueType  {
     /**

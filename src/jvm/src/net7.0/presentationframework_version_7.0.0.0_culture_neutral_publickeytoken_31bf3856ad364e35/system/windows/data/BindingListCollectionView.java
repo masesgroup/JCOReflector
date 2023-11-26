@@ -56,6 +56,9 @@ import system.collections.IComparerImplementation;
  * <p>
  *
  * Powered by JCOBridge: more info at <a href="https://www.jcobridge.com" target="_top">https://www.jcobridge.com</a>
+ *
+ * @author  MASES s.r.l https://masesgroup.com
+ * @version 1.14.0.0
  */
 public class BindingListCollectionView extends CollectionView implements system.collections.IComparer {
     /**

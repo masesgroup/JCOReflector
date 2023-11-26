@@ -75,6 +75,9 @@ import system.workflow.componentmodel.design.IPersistUIStateImplementation;
  * <p>
  *
  * Powered by JCOBridge: more info at <a href="https://www.jcobridge.com" target="_top">https://www.jcobridge.com</a>
+ *
+ * @author  MASES s.r.l https://masesgroup.com
+ * @version 1.14.0.0
  */
 public class ActivityDesigner extends NetObject implements system.componentmodel.design.IDesignerFilter, system.drawing.design.IToolboxUser, system.workflow.componentmodel.design.IPersistUIState, AutoCloseable {
     /**

@@ -6,7 +6,7 @@
     <RootNamespace>MASES.JCOReflectorCLI</RootNamespace>
     <Title>JCOReflector CLI - CLI interface for JCOReflector Engine</Title>
     <Description>JCOReflector CLI - CLI interface for JCOReflector Engine</Description>
-    <Copyright>Copyright ©  MASES s.r.l. 2022</Copyright>
+    <Copyright>Copyright ©  MASES s.r.l. 2023</Copyright>
     <Authors>MASES s.r.l.</Authors>
     <Company>MASES s.r.l.</Company>
     <Version>1.14.0.0</Version>

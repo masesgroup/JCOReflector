@@ -13,6 +13,11 @@
    target="myiframe"
    rel="noopener noreferrer"
    style="font-size:30px">.NET 7</a>
+&nbsp;&nbsp;&nbsp;
+<a href="https://jcoreflector.masesgroup.com/net8.0/"
+   target="myiframe"
+   rel="noopener noreferrer"
+   style="font-size:30px">.NET 8</a>
 <figure>
 	<iframe name="myiframe"
 	        width="100%"

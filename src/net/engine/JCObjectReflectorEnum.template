@@ -47,6 +47,9 @@ import org.mases.jcobridge.netreflection.*;
  * <p>
  *
  * Powered by JCOBridge: more info at <a href="https://www.jcobridge.com" target="_top">https://www.jcobridge.com</a>
+ *
+ * @author  MASES s.r.l https://masesgroup.com
+ * @version JCOREFLECTOR_VERSION
  */
 public class PACKAGE_CLASS_NAME extends NetObject  {
     /**

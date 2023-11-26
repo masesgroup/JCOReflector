@@ -6,7 +6,7 @@ There are three main folders:
 * [**_net6.0_**](#net-6) contains the reflected classes generated from .NET 6, divided by the containing assembly
 * [**_net7.0_**](#net-7) contains the reflected classes generated from .NET 7, divided by the containing assembly
 * [**_net8.0_**](#net-8) contains the reflected classes generated from .NET 8, divided by the containing assembly
-* 
+
 **JCOReflector** is the folder of common classes for both **.NET** **Framework**, **6**, **7** and **8**
 
 ## .NET Framework

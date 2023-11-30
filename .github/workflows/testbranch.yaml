@@ -75,7 +75,7 @@ jobs:
           set JCOBRIDGE_SCOPEDONVERSION=1.0.0
           set JCOBRIDGE_LICENSEPATH=%LICENSE%
         shell: cmd
-        with:
+        env:
           LICENSE: secrets.JCOBRIDGE_ONLINE
 
       - name: Export environment variables

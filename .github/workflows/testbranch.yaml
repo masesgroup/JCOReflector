@@ -140,7 +140,7 @@ jobs:
       - uses: actions/upload-artifact@v3
         with:
           name: LatestSource_${{ matrix.framework }}
-          path: .\src\jvm\src\${{ matrix.framework }}\*.*
+          path: .\source_${{ matrix.framework }}.zip
           retention-days: 1
 
       - name: Build Java files

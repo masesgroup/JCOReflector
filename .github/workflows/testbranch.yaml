@@ -135,12 +135,12 @@ jobs:
         run: .\bin\${{ matrix.framework }}\MASES.JCOReflectorCLI -JobType Reflect -JobFile .github\workflows\reflect_${{ matrix.framework }}.job
 
       - name: Compress source files
-        run: Compress-Archive -Path .\src\jvm\src\jvm\${{ matrix.framework }}\* -DestinationPath .\source_${{ matrix.framework }}.zip
+        run: Compress-Archive -Path .\src\jvm\src\jvm\src\${{ matrix.framework }}\* -DestinationPath .\source_${{ matrix.framework }}.zip
 
       - uses: actions/upload-artifact@v3
         with:
           name: LatestSource_${{ matrix.framework }}
-          path: .\src\jvm\src\jvm\${{ matrix.framework }}\*.*
+          path: .\src\jvm\src\jvm\src\${{ matrix.framework }}\*.*
           retention-days: 1
 
       - name: Build Java files

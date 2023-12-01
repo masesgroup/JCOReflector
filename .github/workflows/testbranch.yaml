@@ -90,20 +90,20 @@ jobs:
       - name: Build Java test source file .NET Core 6.0
         run: javac -cp ./bin/net6.0/JCOReflector.jar ./tests/jvm/java/src/hierarchy/*.java ./tests/jvm/java/src/mscorlib/*.java ./tests/jvm/java/src/nettest/*.java ./tests/jvm/java/src/refout/*.java
         env:
-          JAVA_HOME: ${{ JAVA_HOME_11_X64 }}
+          JAVA_HOME: ${{ env.JAVA_HOME_11_X64 }}
           
       - name: Export environment variables
         run: set
         shell: cmd
         env:
-          JAVA_HOME: ${{ JAVA_HOME_11_X64 }}
+          JAVA_HOME: ${{ env.JAVA_HOME_11_X64 }}
           JCOBRIDGE_SCOPEDON: JCOReflector|1.0.0
           JCOBRIDGE_LicensePath: ${{ secrets.JCOBRIDGE_ONLINE }}
 
       - run: java -cp "./bin/net6.0/JCOReflector.jar;./tests/jvm/java/src/" mscorlib.HelloLock --CoreCLRApp:Microsoft.NET6.App --LicensePath:${{ secrets.JCOBRIDGE_ONLINE }}
         continue-on-error: true
         env:
-          JAVA_HOME: ${{ JAVA_HOME_11_X64 }}
+          JAVA_HOME: ${{ env.JAVA_HOME_11_X64 }}
           JCOBRIDGE_SCOPEDON: JCOReflector|1.0.0
 
 

@@ -72,7 +72,8 @@ jobs:
 ################################ repid test #############################
 
       - name: Export environment variables
-        run: [System.Environment]::GetEnvironmentVariables()
+        shell: cmd
+        run: set
         env:
           JCOBRIDGE_SCOPEDON: JCOReflector|1.0.0
           JCOBRIDGE_LicensePath: ${{ secrets.JCOBRIDGE_ONLINE }}

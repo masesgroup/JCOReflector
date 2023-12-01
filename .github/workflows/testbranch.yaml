@@ -51,7 +51,7 @@ jobs:
           done
 
   # This workflow contains a single job called "build"
-  build_testbranch:
+  build_and_verify_nuget:
     needs: check
     if: needs.check.outputs.run_job == 'true'
     # The type of runner that the job will run on
@@ -69,51 +69,6 @@ jobs:
         with: 
           fetch-depth: '1'
 
-################################# repid test #############################
-#
-#      - name: Export environment variables
-#        shell: cmd
-#        run: set
-#        env:
-#          JCOBRIDGE_SCOPEDON: JCOReflector|1.0.0
-#          JCOBRIDGE_LicensePath: ${{ secrets.JCOBRIDGE_ONLINE }}
-#
-#      # Runs a set of commands using the runners shell
-#      - name: Build JCOReflectorCLI
-#        run: dotnet build --no-incremental --configuration Release /p:Platform="Any CPU" src\net\JCOReflectorCLI.sln
-#
-#      # Runs a set of commands using the runners shell
-#      - name: Copy configuration file
-#        run: Copy-Item .github\workflows\JCOReflectorCLI6.0.runtimeconfig.json -Destination bin\net6.0\MASES.JCOReflectorCLI.runtimeconfig.json -Force
-#
-#      - name: Build Java files .NET Core 6.0
-#        run: dotnet bin\net6.0\MASES.JCOReflectorCLI.dll -JobType Build -JobFile .github\workflows\build_win19.job -JDKFolder %JAVA_HOME_11_X64%
-#        shell: cmd
-#
-#      - name: Build JAR files .NET Core 6.0
-#        run: dotnet bin\net6.0\MASES.JCOReflectorCLI.dll -JobType CreateJars -JobFile .github\workflows\createjars_core6.0_win19.job -JDKFolder %JAVA_HOME_11_X64%
-#        shell: cmd
-#
-#      - uses: actions/setup-java@v3
-#        with:
-#          distribution: 'temurin'
-#          java-version: '17'
-#          cache: 'maven'
-#
-#      - name: Build Java test source file .NET Core 6.0
-#        run: javac -cp ./bin/net6.0/JCOReflector.jar ./tests/jvm/java/src/hierarchy/*.java ./tests/jvm/java/src/mscorlib/*.java ./tests/jvm/java/src/nettest/*.java ./tests/jvm/java/src/refout/*.java
-#
-#      - run: java -cp "./bin/net6.0/JCOReflector.jar;./tests/jvm/java/src/" mscorlib.HelloLock --CoreCLRApp:Microsoft.NET6.App
-#        continue-on-error: true
-#        env:
-#          JCOBRIDGE_SCOPEDON: JCOReflector|1.0.0
-#          JCOBRIDGE_LicensePath: ${{ secrets.JCOBRIDGE_ONLINE }}
-#
-#
-##############################################################################
-
-
-
       # Runs a set of commands using the runners shell
       - name: Build JCOReflectorCLI
         run: dotnet build --no-incremental --configuration Release /p:Platform="Any CPU" src\net\JCOReflectorCLI.sln
@@ -124,110 +79,84 @@ jobs:
           
       - run: nuget pack src\net\CLI\JCOReflectorCLI.nuspec -OutputDirectory .\bin
 
-      # Runs a set of commands using the runners shell
-      - name: Copy configuration file
-        run: |
-          Copy-Item .github\workflows\JCOReflectorCLI6.0.runtimeconfig.json -Destination bin\net6.0\MASES.JCOReflectorCLI.runtimeconfig.json -Force
-          Copy-Item .github\workflows\JCOReflectorCLI7.0.runtimeconfig.json -Destination bin\net7.0\MASES.JCOReflectorCLI.runtimeconfig.json -Force
-          Copy-Item .github\workflows\JCOReflectorCLI8.0.runtimeconfig.json -Destination bin\net8.0\MASES.JCOReflectorCLI.runtimeconfig.json -Force
-      
-      - name: Remove Java files
-        run: |
-          Remove-Item .\src\jvm\src\net6.0 -Recurse -Force
-          Remove-Item .\src\jvm\src\net7.0 -Recurse -Force
-          Remove-Item .\src\jvm\src\net8.0 -Recurse -Force
-          Remove-Item .\src\jvm\src\net462 -Recurse -Force
-          
-      - name: Reflect .NET 6.0 Java files
-        run: .\bin\net6.0\MASES.JCOReflectorCLI -JobType Reflect -JobFile .github\workflows\reflect_net6.0.job
- 
-      - name: Reflect .NET 7.0 Java files
-        run: .\bin\net7.0\MASES.JCOReflectorCLI -JobType Reflect -JobFile .github\workflows\reflect_net7.0.job
-
-      - name: Reflect .NET 8.0 Java files
-        run: .\bin\net8.0\MASES.JCOReflectorCLI -JobType Reflect -JobFile .github\workflows\reflect_net8.0.job
- 
-      - name: Reflect .NET Framework Java files
-        run: .\bin\net462\MASES.JCOReflectorCLI -JobType Reflect -JobFile .github\workflows\reflect_net462.job
-
-      - name: Compress source files
-        run: Compress-Archive -Path .\src\jvm\src\* -DestinationPath .\source.zip
-
-      - uses: actions/upload-artifact@v3
-        with:
-          name: LatestSource
-          path: .\source.zip
-          retention-days: 1
-
-      - name: Build Java files .NET Core 6.0
-        run: dotnet bin\net6.0\MASES.JCOReflectorCLI.dll -JobType Build -JobFile .github\workflows\build_win19.job -JDKFolder %JAVA_HOME_11_X64%
-        shell: cmd
-
-      - name: Build Java files .NET Core 7.0
-        run: dotnet bin\net7.0\MASES.JCOReflectorCLI.dll -JobType Build -JobFile .github\workflows\build_win19.job -JDKFolder %JAVA_HOME_11_X64%
-        shell: cmd
-
-      - name: Build Java files .NET Core 8.0
-        run: dotnet bin\net8.0\MASES.JCOReflectorCLI.dll -JobType Build -JobFile .github\workflows\build_win19.job -JDKFolder %JAVA_HOME_11_X64%
-        shell: cmd
-
-      - name: Build Java files .NET Framework
-        run: .\bin\net462\MASES.JCOReflectorCLI -JobType Build -JobFile .github\workflows\build_win19.job -JDKFolder %JAVA_HOME_11_X64%
-        shell: cmd
-
-      - name: Build JAR files .NET Core 6.0
-        run: dotnet bin\net6.0\MASES.JCOReflectorCLI.dll -JobType CreateJars -JobFile .github\workflows\createjars_core6.0_win19.job -JDKFolder %JAVA_HOME_11_X64%
-        shell: cmd
-
-      - name: Build JAR files .NET Core 7.0
-        run: dotnet bin\net7.0\MASES.JCOReflectorCLI.dll -JobType CreateJars -JobFile .github\workflows\createjars_core7.0_win19.job -JDKFolder %JAVA_HOME_11_X64%
-        shell: cmd
-
-      - name: Build JAR files .NET Core 8.0
-        run: dotnet bin\net8.0\MASES.JCOReflectorCLI.dll -JobType CreateJars -JobFile .github\workflows\createjars_core8.0_win19.job -JDKFolder %JAVA_HOME_11_X64%
-        shell: cmd
-        
-      - name: Build JAR files .NET Framework
-        run: .\bin\net462\MASES.JCOReflectorCLI -JobType CreateJars -JobFile .github\workflows\createjars_framework_win19.job -JDKFolder %JAVA_HOME_11_X64%
-        shell: cmd
-
-      - name: Compress release files
-        run: |
-          Compress-Archive -Path .\bin\net6.0\* -DestinationPath .\bin\net6.0.zip
-          Compress-Archive -Path .\bin\net7.0\* -DestinationPath .\bin\net7.0.zip
-          Compress-Archive -Path .\bin\net8.0\* -DestinationPath .\bin\net8.0.zip
-          Compress-Archive -Path .\bin\net462\* -DestinationPath .\bin\net462.zip
-          
       - uses: actions/upload-artifact@v3
         with:
           name: NuGet
           path: .\bin\*nupkg
           retention-days: 1
 
-      - uses: actions/upload-artifact@v3
-        with:
-          name: net6.0
-          path: .\bin\net6.0.zip
-          retention-days: 1
+  # This workflow contains a single job called "build"
+  build_testbranch:
+    needs: check
+    if: needs.check.outputs.run_job == 'true'
+    # The type of runner that the job will run on
+    runs-on: windows-2022
+
+    strategy:
+      fail-fast: false
+      matrix:
+        framework: [ 'net462', 'net6.0', 'net7.0', 'net8.0' ]
+
+    # Steps represent a sequence of tasks that will be executed as part of the job
+    steps:
+      # Runs a set of commands using the runners shell
+      # Support longpaths
+      - name: Support long paths
+        run: git config --system core.longpaths true
+      
+      # Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it
+      - uses: actions/checkout@v4
+        with: 
+          fetch-depth: '1'
+
+      # Runs a set of commands using the runners shell
+      - name: Build JCOReflectorCLI
+        run: dotnet build --no-incremental --framework ${{ matrix.framework }} --configuration Release /p:Platform="Any CPU" src\net\JCOReflectorCLI.sln
+
+      # Runs a set of commands using the runners shell
+      - name: Copy configuration file
+        if: matrix.framework == 'net6.0'
+        run: Copy-Item .github\workflows\JCOReflectorCLI6.0.runtimeconfig.json -Destination bin\net6.0\MASES.JCOReflectorCLI.runtimeconfig.json -Force
+      
+      # Runs a set of commands using the runners shell
+      - name: Copy configuration file
+        if: matrix.framework == 'net7.0'
+        run: Copy-Item .github\workflows\JCOReflectorCLI7.0.runtimeconfig.json -Destination bin\net7.0\MASES.JCOReflectorCLI.runtimeconfig.json -Force
+          
+      # Runs a set of commands using the runners shell
+      - name: Copy configuration file
+        if: matrix.framework == 'net8.0'
+        run: Copy-Item .github\workflows\JCOReflectorCLI8.0.runtimeconfig.json -Destination bin\net8.0\MASES.JCOReflectorCLI.runtimeconfig.json -Force
+      
+      - name: Remove Java files
+        run: Remove-Item .\src\jvm\src\${{ matrix.framework }} -Recurse -Force
+          
+      - name: Reflect Java files
+        run: .\bin\${{ matrix.framework }}\MASES.JCOReflectorCLI -JobType Reflect -JobFile .github\workflows\reflect_${{ matrix.framework }}.job
+
+      - name: Compress source files
+        run: Compress-Archive -Path .\src\jvm\src\jvm\${{ matrix.framework }}\* -DestinationPath .\source_${{ matrix.framework }}.zip
 
       - uses: actions/upload-artifact@v3
         with:
-          name: net7.0
-          path: .\bin\net7.0.zip
+          name: LatestSource_${{ matrix.framework }}
+          path: .\src\jvm\src\jvm\${{ matrix.framework }}\*.*
           retention-days: 1
+
+      - name: Build Java files
+        run: .\bin\${{ matrix.framework }}\MASES.JCOReflectorCLI -JobType Build -JobFile .github\workflows\build_win19.job -JDKFolder %JAVA_HOME_11_X64%
+        shell: cmd
+
+      - name: Build JAR files .NET
+        run: .\bin\${{ matrix.framework }}\MASES.JCOReflectorCLI -JobType CreateJars -JobFile .github\workflows\createjars_${{ matrix.framework }}_win19.job -JDKFolder %JAVA_HOME_11_X64%
+        shell: cmd
 
       - uses: actions/upload-artifact@v3
         with:
-          name: net8.0
-          path: .\bin\net8.0.zip
+          name: ${{ matrix.framework }}
+          path: .\bin\${{ matrix.framework }}\*.*
           retention-days: 1
 
-      - uses: actions/upload-artifact@v3
-        with:
-          name: net462
-          path: .\bin\net462.zip
-          retention-days: 1
- 
       - uses: actions/setup-java@v3
         with:
           distribution: 'temurin'
@@ -235,216 +164,297 @@ jobs:
           cache: 'maven'
  
       - name: Build Java test source file .NET Core 6.0
+        if: matrix.framework == 'net6.0'
         run: javac -cp ./bin/net6.0/JCOReflector.jar ./tests/jvm/java/src/hierarchy/*.java ./tests/jvm/java/src/mscorlib/*.java ./tests/jvm/java/src/nettest/*.java ./tests/jvm/java/src/refout/*.java
 
       - run: java -cp "./bin/net6.0/JCOReflector.jar;./tests/jvm/java/src/" mscorlib.HelloLock --CoreCLRApp:Microsoft.NET6.App
+        if: matrix.framework == 'net6.0'
         continue-on-error: true
         env:
           JCOBRIDGE_SCOPEDON: JCOReflector|1.0.0
           JCOBRIDGE_LicensePath: ${{ secrets.JCOBRIDGE_ONLINE }}
+          
       - run: java -cp "./bin/net6.0/JCOReflector.jar;./tests/jvm/java/src/" mscorlib.HelloNET --CoreCLRApp:Microsoft.NET6.App
+        if: matrix.framework == 'net6.0'
         continue-on-error: true
         env:
           JCOBRIDGE_SCOPEDON: JCOReflector|1.0.0
           JCOBRIDGE_LicensePath: ${{ secrets.JCOBRIDGE_ONLINE }}
+          
       - run: java -cp "./bin/net6.0/JCOReflector.jar;./tests/jvm/java/src/" mscorlib.HelloNETEvent --CoreCLRApp:Microsoft.NET6.App
+        if: matrix.framework == 'net6.0'
         continue-on-error: true
         env:
           JCOBRIDGE_SCOPEDON: JCOReflector|1.0.0
           JCOBRIDGE_LicensePath: ${{ secrets.JCOBRIDGE_ONLINE }}
+          
       - run: java -cp "./bin/net6.0/JCOReflector.jar;./tests/jvm/java/src/" mscorlib.HelloIterator --CoreCLRApp:Microsoft.NET6.App
+        if: matrix.framework == 'net6.0'
         continue-on-error: true
         env:
           JCOBRIDGE_SCOPEDON: JCOReflector|1.0.0
           JCOBRIDGE_LicensePath: ${{ secrets.JCOBRIDGE_ONLINE }}
+          
       - run: java -cp "./bin/net6.0/JCOReflector.jar;./tests/jvm/java/src/" hierarchy.HelloHierarchy --CoreCLRApp:Microsoft.NET6.App
+        if: matrix.framework == 'net6.0'
         continue-on-error: true
         env:
           JCOBRIDGE_SCOPEDON: JCOReflector|1.0.0
           JCOBRIDGE_LicensePath: ${{ secrets.JCOBRIDGE_ONLINE }}
+          
       - run: java -cp "./bin/net6.0/JCOReflector.jar;./tests/jvm/java/src/" hierarchy.HelloInterfaces --CoreCLRApp:Microsoft.NET6.App
+        if: matrix.framework == 'net6.0'
         continue-on-error: true
         env:
           JCOBRIDGE_SCOPEDON: JCOReflector|1.0.0
           JCOBRIDGE_LicensePath: ${{ secrets.JCOBRIDGE_ONLINE }}
+          
       - run: java -cp "./bin/net6.0/JCOReflector.jar;./tests/jvm/java/src/" nettest.HelloNETSocket --CoreCLRApp:Microsoft.NET6.App
+        if: matrix.framework == 'net6.0'
         continue-on-error: true
         env:
           JCOBRIDGE_SCOPEDON: JCOReflector|1.0.0
           JCOBRIDGE_LicensePath: ${{ secrets.JCOBRIDGE_ONLINE }}
+          
       - run: java -cp "./bin/net6.0/JCOReflector.jar;./tests/jvm/java/src/" nettest.HelloNETSocket -async --CoreCLRApp:Microsoft.NET6.App
+        if: matrix.framework == 'net6.0'
         continue-on-error: true
         env:
           JCOBRIDGE_SCOPEDON: JCOReflector|1.0.0
           JCOBRIDGE_LicensePath: ${{ secrets.JCOBRIDGE_ONLINE }}
+          
       - run: java -cp "./bin/net6.0/JCOReflector.jar;./tests/jvm/java/src/" refout.HelloRefOutBase --CoreCLRApp:Microsoft.NET6.App
+        if: matrix.framework == 'net6.0'
         continue-on-error: true
         env:
           JCOBRIDGE_SCOPEDON: JCOReflector|1.0.0
           JCOBRIDGE_LicensePath: ${{ secrets.JCOBRIDGE_ONLINE }}
+          
       - run: java -cp "./bin/net6.0/JCOReflector.jar;./tests/jvm/java/src/" refout.HelloRefOut --CoreCLRApp:Microsoft.NET6.App
+        if: matrix.framework == 'net6.0'
         continue-on-error: true
         env:
           JCOBRIDGE_SCOPEDON: JCOReflector|1.0.0
           JCOBRIDGE_LicensePath: ${{ secrets.JCOBRIDGE_ONLINE }}
  
       - name: Build Java test source file .NET Core 7.0
+        if: matrix.framework == 'net7.0'
         run: javac -cp ./bin/net7.0/JCOReflector.jar ./tests/jvm/java/src/hierarchy/*.java ./tests/jvm/java/src/mscorlib/*.java ./tests/jvm/java/src/nettest/*.java ./tests/jvm/java/src/refout/*.java
 
       - run: java -cp "./bin/net7.0/JCOReflector.jar;./tests/jvm/java/src/" mscorlib.HelloLock --CoreCLRApp:Microsoft.NET7.App
+        if: matrix.framework == 'net7.0'
         continue-on-error: true
         env:
           JCOBRIDGE_SCOPEDON: JCOReflector|1.0.0
-          JCOBRIDGE_LicensePath: ${{ secrets.JCOBRIDGE_ONLINE }}   
+          JCOBRIDGE_LicensePath: ${{ secrets.JCOBRIDGE_ONLINE }}
+          
       - run: java -cp "./bin/net7.0/JCOReflector.jar;./tests/jvm/java/src/" mscorlib.HelloNET --CoreCLRApp:Microsoft.NET7.App
+        if: matrix.framework == 'net7.0'
         continue-on-error: true
         env:
           JCOBRIDGE_SCOPEDON: JCOReflector|1.0.0
           JCOBRIDGE_LicensePath: ${{ secrets.JCOBRIDGE_ONLINE }}
+          
       - run: java -cp "./bin/net7.0/JCOReflector.jar;./tests/jvm/java/src/" mscorlib.HelloNETEvent --CoreCLRApp:Microsoft.NET7.App
+        if: matrix.framework == 'net7.0'
         continue-on-error: true
         env:
           JCOBRIDGE_SCOPEDON: JCOReflector|1.0.0
           JCOBRIDGE_LicensePath: ${{ secrets.JCOBRIDGE_ONLINE }}
+          
       - run: java -cp "./bin/net7.0/JCOReflector.jar;./tests/jvm/java/src/" mscorlib.HelloIterator --CoreCLRApp:Microsoft.NET7.App
+        if: matrix.framework == 'net7.0'
         continue-on-error: true
         env:
           JCOBRIDGE_SCOPEDON: JCOReflector|1.0.0
           JCOBRIDGE_LicensePath: ${{ secrets.JCOBRIDGE_ONLINE }}
+          
       - run: java -cp "./bin/net7.0/JCOReflector.jar;./tests/jvm/java/src/" hierarchy.HelloHierarchy --CoreCLRApp:Microsoft.NET7.App
+        if: matrix.framework == 'net7.0'
         continue-on-error: true
         env:
           JCOBRIDGE_SCOPEDON: JCOReflector|1.0.0
           JCOBRIDGE_LicensePath: ${{ secrets.JCOBRIDGE_ONLINE }}
+          
       - run: java -cp "./bin/net7.0/JCOReflector.jar;./tests/jvm/java/src/" hierarchy.HelloInterfaces --CoreCLRApp:Microsoft.NET7.App
+        if: matrix.framework == 'net7.0'
         continue-on-error: true
         env:
           JCOBRIDGE_SCOPEDON: JCOReflector|1.0.0
           JCOBRIDGE_LicensePath: ${{ secrets.JCOBRIDGE_ONLINE }}
+          
       - run: java -cp "./bin/net7.0/JCOReflector.jar;./tests/jvm/java/src/" nettest.HelloNETSocket --CoreCLRApp:Microsoft.NET7.App
+        if: matrix.framework == 'net7.0'
         continue-on-error: true
         env:
           JCOBRIDGE_SCOPEDON: JCOReflector|1.0.0
           JCOBRIDGE_LicensePath: ${{ secrets.JCOBRIDGE_ONLINE }}
+          
       - run: java -cp "./bin/net7.0/JCOReflector.jar;./tests/jvm/java/src/" nettest.HelloNETSocket -async --CoreCLRApp:Microsoft.NET7.App
+        if: matrix.framework == 'net7.0'
         continue-on-error: true
         env:
           JCOBRIDGE_SCOPEDON: JCOReflector|1.0.0
           JCOBRIDGE_LicensePath: ${{ secrets.JCOBRIDGE_ONLINE }}
+          
       - run: java -cp "./bin/net7.0/JCOReflector.jar;./tests/jvm/java/src/" refout.HelloRefOutBase --CoreCLRApp:Microsoft.NET7.App
+        if: matrix.framework == 'net7.0'
         continue-on-error: true
         env:
           JCOBRIDGE_SCOPEDON: JCOReflector|1.0.0
           JCOBRIDGE_LicensePath: ${{ secrets.JCOBRIDGE_ONLINE }}
+          
       - run: java -cp "./bin/net7.0/JCOReflector.jar;./tests/jvm/java/src/" refout.HelloRefOut --CoreCLRApp:Microsoft.NET7.App
+        if: matrix.framework == 'net7.0'
         continue-on-error: true
         env:
           JCOBRIDGE_SCOPEDON: JCOReflector|1.0.0
           JCOBRIDGE_LicensePath: ${{ secrets.JCOBRIDGE_ONLINE }}
  
       - name: Build Java test source file .NET Core 8.0
+        if: matrix.framework == 'net8.0'
         run: javac -cp ./bin/net8.0/JCOReflector.jar ./tests/jvm/java/src/hierarchy/*.java ./tests/jvm/java/src/mscorlib/*.java ./tests/jvm/java/src/nettest/*.java ./tests/jvm/java/src/refout/*.java
 
       - run: java -cp "./bin/net8.0/JCOReflector.jar;./tests/jvm/java/src/" mscorlib.HelloLock
+        if: matrix.framework == 'net8.0'
         continue-on-error: true
         env:
           JCOBRIDGE_SCOPEDON: JCOReflector|1.0.0
-          JCOBRIDGE_LicensePath: ${{ secrets.JCOBRIDGE_ONLINE }}    
+          JCOBRIDGE_LicensePath: ${{ secrets.JCOBRIDGE_ONLINE }}
+          
       - run: java -cp "./bin/net8.0/JCOReflector.jar;./tests/jvm/java/src/" mscorlib.HelloNET
+        if: matrix.framework == 'net8.0'
         continue-on-error: true
         env:
           JCOBRIDGE_SCOPEDON: JCOReflector|1.0.0
           JCOBRIDGE_LicensePath: ${{ secrets.JCOBRIDGE_ONLINE }}
+          
       - run: java -cp "./bin/net8.0/JCOReflector.jar;./tests/jvm/java/src/" mscorlib.HelloNETEvent
+        if: matrix.framework == 'net8.0'
         continue-on-error: true
         env:
           JCOBRIDGE_SCOPEDON: JCOReflector|1.0.0
           JCOBRIDGE_LicensePath: ${{ secrets.JCOBRIDGE_ONLINE }}
+          
       - run: java -cp "./bin/net8.0/JCOReflector.jar;./tests/jvm/java/src/" mscorlib.HelloIterator
+        if: matrix.framework == 'net8.0'
         continue-on-error: true
         env:
           JCOBRIDGE_SCOPEDON: JCOReflector|1.0.0
           JCOBRIDGE_LicensePath: ${{ secrets.JCOBRIDGE_ONLINE }}
+          
       - run: java -cp "./bin/net8.0/JCOReflector.jar;./tests/jvm/java/src/" hierarchy.HelloHierarchy
+        if: matrix.framework == 'net8.0'
         continue-on-error: true
         env:
           JCOBRIDGE_SCOPEDON: JCOReflector|1.0.0
           JCOBRIDGE_LicensePath: ${{ secrets.JCOBRIDGE_ONLINE }}
+          
       - run: java -cp "./bin/net8.0/JCOReflector.jar;./tests/jvm/java/src/" hierarchy.HelloInterfaces
+        if: matrix.framework == 'net8.0'
         continue-on-error: true
         env:
           JCOBRIDGE_SCOPEDON: JCOReflector|1.0.0
           JCOBRIDGE_LicensePath: ${{ secrets.JCOBRIDGE_ONLINE }}
+          
       - run: java -cp "./bin/net8.0/JCOReflector.jar;./tests/jvm/java/src/" nettest.HelloNETSocket
+        if: matrix.framework == 'net8.0'
         continue-on-error: true
         env:
           JCOBRIDGE_SCOPEDON: JCOReflector|1.0.0
           JCOBRIDGE_LicensePath: ${{ secrets.JCOBRIDGE_ONLINE }}
+          
       - run: java -cp "./bin/net8.0/JCOReflector.jar;./tests/jvm/java/src/" nettest.HelloNETSocket -async
+        if: matrix.framework == 'net8.0'
         continue-on-error: true
         env:
           JCOBRIDGE_SCOPEDON: JCOReflector|1.0.0
           JCOBRIDGE_LicensePath: ${{ secrets.JCOBRIDGE_ONLINE }}
+          
       - run: java -cp "./bin/net8.0/JCOReflector.jar;./tests/jvm/java/src/" refout.HelloRefOutBase
+        if: matrix.framework == 'net8.0'
         continue-on-error: true
         env:
           JCOBRIDGE_SCOPEDON: JCOReflector|1.0.0
           JCOBRIDGE_LicensePath: ${{ secrets.JCOBRIDGE_ONLINE }}
+          
       - run: java -cp "./bin/net8.0/JCOReflector.jar;./tests/jvm/java/src/" refout.HelloRefOut
+        if: matrix.framework == 'net8.0'
         continue-on-error: true
         env:
           JCOBRIDGE_SCOPEDON: JCOReflector|1.0.0
           JCOBRIDGE_LicensePath: ${{ secrets.JCOBRIDGE_ONLINE }}
  
-      - name: Build Java test source file .NET Framework
+      - name: Build Java test source file .NET 
+        if: matrix.framework == 'net462'
+        continue-on-error: true
         run: javac -cp ./bin/net462/JCOReflector.jar ./tests/jvm/java/src/hierarchy/*.java ./tests/jvm/java/src/mscorlib/*.java ./tests/jvm/java/src/nettest/*.java ./tests/jvm/java/src/refout/*.java
 
       - run: java -cp "./bin/net462/JCOReflector.jar;./tests/jvm/java/src/" mscorlib.HelloLock
+        if: matrix.framework == 'net462'
         continue-on-error: true
         env:
           JCOBRIDGE_SCOPEDON: JCOReflector|1.0.0
           JCOBRIDGE_LicensePath: ${{ secrets.JCOBRIDGE_ONLINE }}
+          
       - run: java -cp "./bin/net462/JCOReflector.jar;./tests/jvm/java/src/" mscorlib.HelloNET
+        if: matrix.framework == 'net462'
         continue-on-error: true
         env:
           JCOBRIDGE_SCOPEDON: JCOReflector|1.0.0
           JCOBRIDGE_LicensePath: ${{ secrets.JCOBRIDGE_ONLINE }}
+          
       - run: java -cp "./bin/net462/JCOReflector.jar;./tests/jvm/java/src/" mscorlib.HelloNETEvent
+        if: matrix.framework == 'net462'
         continue-on-error: true
         env:
           JCOBRIDGE_SCOPEDON: JCOReflector|1.0.0
           JCOBRIDGE_LicensePath: ${{ secrets.JCOBRIDGE_ONLINE }}
+          
       - run: java -cp "./bin/net462/JCOReflector.jar;./tests/jvm/java/src/" mscorlib.HelloIterator
+        if: matrix.framework == 'net462'
         continue-on-error: true
         env:
           JCOBRIDGE_SCOPEDON: JCOReflector|1.0.0
           JCOBRIDGE_LicensePath: ${{ secrets.JCOBRIDGE_ONLINE }}
+          
       - run: java -cp "./bin/net462/JCOReflector.jar;./tests/jvm/java/src/" hierarchy.HelloHierarchy
+        if: matrix.framework == 'net462'
         continue-on-error: true
         env:
           JCOBRIDGE_SCOPEDON: JCOReflector|1.0.0
           JCOBRIDGE_LicensePath: ${{ secrets.JCOBRIDGE_ONLINE }}
+          
       - run: java -cp "./bin/net462/JCOReflector.jar;./tests/jvm/java/src/" hierarchy.HelloInterfaces
+        if: matrix.framework == 'net462'
         continue-on-error: true
         env:
           JCOBRIDGE_SCOPEDON: JCOReflector|1.0.0
           JCOBRIDGE_LicensePath: ${{ secrets.JCOBRIDGE_ONLINE }}
+          
       - run: java -cp "./bin/net462/JCOReflector.jar;./tests/jvm/java/src/" nettest.HelloNETSocket
+        if: matrix.framework == 'net462'
         continue-on-error: true
         env:
           JCOBRIDGE_SCOPEDON: JCOReflector|1.0.0
           JCOBRIDGE_LicensePath: ${{ secrets.JCOBRIDGE_ONLINE }}
+          
       - run: java -cp "./bin/net462/JCOReflector.jar;./tests/jvm/java/src/" nettest.HelloNETSocket -async
+        if: matrix.framework == 'net462'
         continue-on-error: true
         env:
           JCOBRIDGE_SCOPEDON: JCOReflector|1.0.0
           JCOBRIDGE_LicensePath: ${{ secrets.JCOBRIDGE_ONLINE }}
+          
       - run: java -cp "./bin/net462/JCOReflector.jar;./tests/jvm/java/src/" refout.HelloRefOutBase
+        if: matrix.framework == 'net462'
         continue-on-error: true
         env:
           JCOBRIDGE_SCOPEDON: JCOReflector|1.0.0
           JCOBRIDGE_LicensePath: ${{ secrets.JCOBRIDGE_ONLINE }}
+          
       - run: java -cp "./bin/net462/JCOReflector.jar;./tests/jvm/java/src/" refout.HelloRefOut
+        if: matrix.framework == 'net462'
         continue-on-error: true
         env:
           JCOBRIDGE_SCOPEDON: JCOReflector|1.0.0
@@ -457,6 +467,7 @@ jobs:
         run: Expand-Archive -LiteralPath '.\scala-2.13.5.zip' -DestinationPath .\ -Force
         
       - name: Build Scala test source file .NET Core 6.0
+        if: matrix.framework == 'net6.0'
         shell: cmd
         run: |
           cd ./tests/jvm/scala
@@ -465,69 +476,90 @@ jobs:
               
       - run: .\scala-2.13.5\bin\scala -toolcp "./bin/net6.0/*;./tests/jvm/scala/output" mscorlib.HelloLock --CoreCLRApp:Microsoft.NET6.App
         shell: cmd
+        if: matrix.framework == 'net6.0'
         continue-on-error: true
         env:
           JCOBRIDGE_SCOPEDON: JCOReflector|1.0.0
           JCOBRIDGE_LicensePath: ${{ secrets.JCOBRIDGE_ONLINE }}
+          
       - run: .\scala-2.13.5\bin\scala -toolcp "./bin/net6.0/*;./tests/jvm/scala/output" mscorlib.HelloNet --CoreCLRApp:Microsoft.NET6.App
         shell: cmd
+        if: matrix.framework == 'net6.0'
         continue-on-error: true
         env:
           JCOBRIDGE_SCOPEDON: JCOReflector|1.0.0
           JCOBRIDGE_LicensePath: ${{ secrets.JCOBRIDGE_ONLINE }}
+          
       - run: .\scala-2.13.5\bin\scala -toolcp "./bin/net6.0/*;./tests/jvm/scala/output" mscorlib.HelloNETEvent --CoreCLRApp:Microsoft.NET6.App
         shell: cmd
+        if: matrix.framework == 'net6.0'
         continue-on-error: true
         env:
           JCOBRIDGE_SCOPEDON: JCOReflector|1.0.0
           JCOBRIDGE_LicensePath: ${{ secrets.JCOBRIDGE_ONLINE }}
+          
       - run: .\scala-2.13.5\bin\scala -toolcp "./bin/net6.0/*;./tests/jvm/scala/output" mscorlib.HelloIterator --CoreCLRApp:Microsoft.NET6.App
         shell: cmd
+        if: matrix.framework == 'net6.0'
         continue-on-error: true
         env:
           JCOBRIDGE_SCOPEDON: JCOReflector|1.0.0
           JCOBRIDGE_LicensePath: ${{ secrets.JCOBRIDGE_ONLINE }}
+          
       - run: .\scala-2.13.5\bin\scala -toolcp "./bin/net6.0/*;./tests/jvm/scala/output" hierarchy.HelloHierarchy --CoreCLRApp:Microsoft.NET6.App
         shell: cmd
+        if: matrix.framework == 'net6.0'
         continue-on-error: true
         env:
           JCOBRIDGE_SCOPEDON: JCOReflector|1.0.0
           JCOBRIDGE_LicensePath: ${{ secrets.JCOBRIDGE_ONLINE }}
+          
       - run: .\scala-2.13.5\bin\scala -toolcp "./bin/net6.0/*;./tests/jvm/scala/output" hierarchy.HelloInterfaces --CoreCLRApp:Microsoft.NET6.App
         shell: cmd
+        if: matrix.framework == 'net6.0'
         continue-on-error: true
         env:
           JCOBRIDGE_SCOPEDON: JCOReflector|1.0.0
           JCOBRIDGE_LicensePath: ${{ secrets.JCOBRIDGE_ONLINE }}
+          
       - run: .\scala-2.13.5\bin\scala -toolcp "./bin/net6.0/*;./tests/jvm/scala/output" nettest.HelloNETSocket --CoreCLRApp:Microsoft.NET6.App
         shell: cmd
+        if: matrix.framework == 'net6.0'
         continue-on-error: true
         env:
           JCOBRIDGE_SCOPEDON: JCOReflector|1.0.0
           JCOBRIDGE_LicensePath: ${{ secrets.JCOBRIDGE_ONLINE }}
+          
       - run: .\scala-2.13.5\bin\scala -toolcp "./bin/net6.0/*;./tests/jvm/scala/output" nettest.HelloNETSocket -async --CoreCLRApp:Microsoft.NET6.App
         shell: cmd
+        if: matrix.framework == 'net6.0'
         continue-on-error: true
         env:
           JCOBRIDGE_SCOPEDON: JCOReflector|1.0.0
           JCOBRIDGE_LicensePath: ${{ secrets.JCOBRIDGE_ONLINE }}
+          
       - run: .\scala-2.13.5\bin\scala -toolcp "./bin/net6.0/*;./tests/jvm/scala/output" refout.HelloRefOutBase --CoreCLRApp:Microsoft.NET6.App
         shell: cmd
+        if: matrix.framework == 'net6.0'
         continue-on-error: true
         env:
           JCOBRIDGE_SCOPEDON: JCOReflector|1.0.0
           JCOBRIDGE_LicensePath: ${{ secrets.JCOBRIDGE_ONLINE }}
+          
       - run: .\scala-2.13.5\bin\scala -toolcp "./bin/net6.0/*;./tests/jvm/scala/output" refout.HelloRefOut --CoreCLRApp:Microsoft.NET6.App
         shell: cmd
+        if: matrix.framework == 'net6.0'
         continue-on-error: true
         env:
           JCOBRIDGE_SCOPEDON: JCOReflector|1.0.0
           JCOBRIDGE_LicensePath: ${{ secrets.JCOBRIDGE_ONLINE }}
+          
       - run: cd ./tests/jvm/scala && rmdir output /s /q
         shell: cmd
         continue-on-error: true
 
       - name: Build Scala test source file .NET Core 7.0
+        if: matrix.framework == 'net7.0'
         shell: cmd
         run: |
           cd ./tests/jvm/scala
@@ -540,65 +572,85 @@ jobs:
         env:
           JCOBRIDGE_SCOPEDON: JCOReflector|1.0.0
           JCOBRIDGE_LicensePath: ${{ secrets.JCOBRIDGE_ONLINE }}
+          
       - run: .\scala-2.13.5\bin\scala -toolcp "./bin/net7.0/*;./tests/jvm/scala/output" mscorlib.HelloNet --CoreCLRApp:Microsoft.NET7.App
         shell: cmd
+        if: matrix.framework == 'net7.0'
         continue-on-error: true
         env:
           JCOBRIDGE_SCOPEDON: JCOReflector|1.0.0
           JCOBRIDGE_LicensePath: ${{ secrets.JCOBRIDGE_ONLINE }}
+          
       - run: .\scala-2.13.5\bin\scala -toolcp "./bin/net7.0/*;./tests/jvm/scala/output" mscorlib.HelloNETEvent --CoreCLRApp:Microsoft.NET7.App
         shell: cmd
+        if: matrix.framework == 'net7.0'
         continue-on-error: true
         env:
           JCOBRIDGE_SCOPEDON: JCOReflector|1.0.0
           JCOBRIDGE_LicensePath: ${{ secrets.JCOBRIDGE_ONLINE }}
+          
       - run: .\scala-2.13.5\bin\scala -toolcp "./bin/net7.0/*;./tests/jvm/scala/output" mscorlib.HelloIterator --CoreCLRApp:Microsoft.NET7.App
         shell: cmd
+        if: matrix.framework == 'net7.0'
         continue-on-error: true
         env:
           JCOBRIDGE_SCOPEDON: JCOReflector|1.0.0
           JCOBRIDGE_LicensePath: ${{ secrets.JCOBRIDGE_ONLINE }}
+          
       - run: .\scala-2.13.5\bin\scala -toolcp "./bin/net7.0/*;./tests/jvm/scala/output" hierarchy.HelloHierarchy --CoreCLRApp:Microsoft.NET7.App
         shell: cmd
+        if: matrix.framework == 'net7.0'
         continue-on-error: true
         env:
           JCOBRIDGE_SCOPEDON: JCOReflector|1.0.0
           JCOBRIDGE_LicensePath: ${{ secrets.JCOBRIDGE_ONLINE }}
+          
       - run: .\scala-2.13.5\bin\scala -toolcp "./bin/net7.0/*;./tests/jvm/scala/output" hierarchy.HelloInterfaces --CoreCLRApp:Microsoft.NET7.App
         shell: cmd
+        if: matrix.framework == 'net7.0'
         continue-on-error: true
         env:
           JCOBRIDGE_SCOPEDON: JCOReflector|1.0.0
           JCOBRIDGE_LicensePath: ${{ secrets.JCOBRIDGE_ONLINE }}
+          
       - run: .\scala-2.13.5\bin\scala -toolcp "./bin/net7.0/*;./tests/jvm/scala/output" nettest.HelloNETSocket --CoreCLRApp:Microsoft.NET7.App
         shell: cmd
+        if: matrix.framework == 'net7.0'
         continue-on-error: true
         env:
           JCOBRIDGE_SCOPEDON: JCOReflector|1.0.0
           JCOBRIDGE_LicensePath: ${{ secrets.JCOBRIDGE_ONLINE }}
+          
       - run: .\scala-2.13.5\bin\scala -toolcp "./bin/net7.0/*;./tests/jvm/scala/output" nettest.HelloNETSocket -async --CoreCLRApp:Microsoft.NET7.App
         shell: cmd
+        if: matrix.framework == 'net7.0'
         continue-on-error: true
         env:
           JCOBRIDGE_SCOPEDON: JCOReflector|1.0.0
           JCOBRIDGE_LicensePath: ${{ secrets.JCOBRIDGE_ONLINE }}
+          
       - run: .\scala-2.13.5\bin\scala -toolcp "./bin/net7.0/*;./tests/jvm/scala/output" refout.HelloRefOutBase --CoreCLRApp:Microsoft.NET7.App
         shell: cmd
+        if: matrix.framework == 'net7.0'
         continue-on-error: true
         env:
           JCOBRIDGE_SCOPEDON: JCOReflector|1.0.0
           JCOBRIDGE_LicensePath: ${{ secrets.JCOBRIDGE_ONLINE }}
+          
       - run: .\scala-2.13.5\bin\scala -toolcp "./bin/net7.0/*;./tests/jvm/scala/output" refout.HelloRefOut --CoreCLRApp:Microsoft.NET7.App
         shell: cmd
+        if: matrix.framework == 'net7.0'
         continue-on-error: true
         env:
           JCOBRIDGE_SCOPEDON: JCOReflector|1.0.0
           JCOBRIDGE_LicensePath: ${{ secrets.JCOBRIDGE_ONLINE }}
+          
       - run: cd ./tests/jvm/scala && rmdir output /s /q
         shell: cmd
         continue-on-error: true
 
       - name: Build Scala test source file .NET Core 8.0
+        if: matrix.framework == 'net8.0'
         shell: cmd
         run: |
           cd ./tests/jvm/scala
@@ -607,69 +659,90 @@ jobs:
               
       - run: .\scala-2.13.5\bin\scala -toolcp "./bin/net8.0/*;./tests/jvm/scala/output" mscorlib.HelloLock
         shell: cmd
+        if: matrix.framework == 'net8.0'
         continue-on-error: true
         env:
           JCOBRIDGE_SCOPEDON: JCOReflector|1.0.0
           JCOBRIDGE_LicensePath: ${{ secrets.JCOBRIDGE_ONLINE }}
+          
       - run: .\scala-2.13.5\bin\scala -toolcp "./bin/net8.0/*;./tests/jvm/scala/output" mscorlib.HelloNet
         shell: cmd
+        if: matrix.framework == 'net8.0'
         continue-on-error: true
         env:
           JCOBRIDGE_SCOPEDON: JCOReflector|1.0.0
           JCOBRIDGE_LicensePath: ${{ secrets.JCOBRIDGE_ONLINE }}
+          
       - run: .\scala-2.13.5\bin\scala -toolcp "./bin/net8.0/*;./tests/jvm/scala/output" mscorlib.HelloNETEvent
         shell: cmd
+        if: matrix.framework == 'net8.0'
         continue-on-error: true
         env:
           JCOBRIDGE_SCOPEDON: JCOReflector|1.0.0
           JCOBRIDGE_LicensePath: ${{ secrets.JCOBRIDGE_ONLINE }}
+          
       - run: .\scala-2.13.5\bin\scala -toolcp "./bin/net8.0/*;./tests/jvm/scala/output" mscorlib.HelloIterator
         shell: cmd
+        if: matrix.framework == 'net8.0'
         continue-on-error: true
         env:
           JCOBRIDGE_SCOPEDON: JCOReflector|1.0.0
           JCOBRIDGE_LicensePath: ${{ secrets.JCOBRIDGE_ONLINE }}
+          
       - run: .\scala-2.13.5\bin\scala -toolcp "./bin/net8.0/*;./tests/jvm/scala/output" hierarchy.HelloHierarchy
         shell: cmd
+        if: matrix.framework == 'net8.0'
         continue-on-error: true
         env:
           JCOBRIDGE_SCOPEDON: JCOReflector|1.0.0
           JCOBRIDGE_LicensePath: ${{ secrets.JCOBRIDGE_ONLINE }}
+          
       - run: .\scala-2.13.5\bin\scala -toolcp "./bin/net8.0/*;./tests/jvm/scala/output" hierarchy.HelloInterfaces
         shell: cmd
+        if: matrix.framework == 'net8.0'
         continue-on-error: true
         env:
           JCOBRIDGE_SCOPEDON: JCOReflector|1.0.0
           JCOBRIDGE_LicensePath: ${{ secrets.JCOBRIDGE_ONLINE }}
+          
       - run: .\scala-2.13.5\bin\scala -toolcp "./bin/net8.0/*;./tests/jvm/scala/output" nettest.HelloNETSocket
         shell: cmd
+        if: matrix.framework == 'net8.0'
         continue-on-error: true
         env:
           JCOBRIDGE_SCOPEDON: JCOReflector|1.0.0
           JCOBRIDGE_LicensePath: ${{ secrets.JCOBRIDGE_ONLINE }}
+          
       - run: .\scala-2.13.5\bin\scala -toolcp "./bin/net8.0/*;./tests/jvm/scala/output" nettest.HelloNETSocket -async
         shell: cmd
+        if: matrix.framework == 'net8.0'
         continue-on-error: true
         env:
           JCOBRIDGE_SCOPEDON: JCOReflector|1.0.0
           JCOBRIDGE_LicensePath: ${{ secrets.JCOBRIDGE_ONLINE }}
+          
       - run: .\scala-2.13.5\bin\scala -toolcp "./bin/net8.0/*;./tests/jvm/scala/output" refout.HelloRefOutBase
         shell: cmd
+        if: matrix.framework == 'net8.0'
         continue-on-error: true
         env:
           JCOBRIDGE_SCOPEDON: JCOReflector|1.0.0
           JCOBRIDGE_LicensePath: ${{ secrets.JCOBRIDGE_ONLINE }}
+          
       - run: .\scala-2.13.5\bin\scala -toolcp "./bin/net8.0/*;./tests/jvm/scala/output" refout.HelloRefOut
         shell: cmd
+        if: matrix.framework == 'net8.0'
         continue-on-error: true
         env:
           JCOBRIDGE_SCOPEDON: JCOReflector|1.0.0
           JCOBRIDGE_LicensePath: ${{ secrets.JCOBRIDGE_ONLINE }}
+          
       - run: cd ./tests/jvm/scala && rmdir output /s /q
         shell: cmd
         continue-on-error: true
 
       - name: Build Scala test source file .NET Framework
+        if: matrix.framework == 'net462'
         shell: cmd
         run: |
           cd ./tests/jvm/scala
@@ -678,64 +751,84 @@ jobs:
              
       - run: .\scala-2.13.5\bin\scala -toolcp "./bin/net462/*;./tests/jvm/scala/output" mscorlib.HelloLock
         shell: cmd
+        if: matrix.framework == 'net462'
         continue-on-error: true
         env:
           JCOBRIDGE_SCOPEDON: JCOReflector|1.0.0
           JCOBRIDGE_LicensePath: ${{ secrets.JCOBRIDGE_ONLINE }}
+          
       - run: .\scala-2.13.5\bin\scala -toolcp "./bin/net462/*;./tests/jvm/scala/output" mscorlib.HelloNet
         shell: cmd
+        if: matrix.framework == 'net462'
         continue-on-error: true
         env:
           JCOBRIDGE_SCOPEDON: JCOReflector|1.0.0
           JCOBRIDGE_LicensePath: ${{ secrets.JCOBRIDGE_ONLINE }}
+          
       - run: .\scala-2.13.5\bin\scala -toolcp "./bin/net462/*;./tests/jvm/scala/output" mscorlib.HelloNETEvent
         shell: cmd
+        if: matrix.framework == 'net462'
         continue-on-error: true
         env:
           JCOBRIDGE_SCOPEDON: JCOReflector|1.0.0
           JCOBRIDGE_LicensePath: ${{ secrets.JCOBRIDGE_ONLINE }}
+          
       - run: .\scala-2.13.5\bin\scala -toolcp "./bin/net462/*;./tests/jvm/scala/output" mscorlib.HelloIterator
         shell: cmd
+        if: matrix.framework == 'net462'
         continue-on-error: true
         env:
           JCOBRIDGE_SCOPEDON: JCOReflector|1.0.0
           JCOBRIDGE_LicensePath: ${{ secrets.JCOBRIDGE_ONLINE }}
+          
       - run: .\scala-2.13.5\bin\scala -toolcp "./bin/net462/*;./tests/jvm/scala/output" hierarchy.HelloHierarchy
         shell: cmd
+        if: matrix.framework == 'net462'
         continue-on-error: true
         env:
           JCOBRIDGE_SCOPEDON: JCOReflector|1.0.0
           JCOBRIDGE_LicensePath: ${{ secrets.JCOBRIDGE_ONLINE }}
+          
       - run: .\scala-2.13.5\bin\scala -toolcp "./bin/net462/*;./tests/jvm/scala/output" hierarchy.HelloInterfaces
         shell: cmd
+        if: matrix.framework == 'net462'
         continue-on-error: true
         env:
           JCOBRIDGE_SCOPEDON: JCOReflector|1.0.0
           JCOBRIDGE_LicensePath: ${{ secrets.JCOBRIDGE_ONLINE }}
+          
       - run: .\scala-2.13.5\bin\scala -toolcp "./bin/net462/*;./tests/jvm/scala/output" nettest.HelloNETSocket
         shell: cmd
+        if: matrix.framework == 'net462'
         continue-on-error: true
         env:
           JCOBRIDGE_SCOPEDON: JCOReflector|1.0.0
           JCOBRIDGE_LicensePath: ${{ secrets.JCOBRIDGE_ONLINE }}
+          
       - run: .\scala-2.13.5\bin\scala -toolcp "./bin/net462/*;./tests/jvm/scala/output" nettest.HelloNETSocket -async
         shell: cmd
+        if: matrix.framework == 'net462'
         continue-on-error: true
         env:
           JCOBRIDGE_SCOPEDON: JCOReflector|1.0.0
           JCOBRIDGE_LicensePath: ${{ secrets.JCOBRIDGE_ONLINE }}
+          
       - run: .\scala-2.13.5\bin\scala -toolcp "./bin/net462/*;./tests/jvm/scala/output" refout.HelloRefOutBase
         shell: cmd
+        if: matrix.framework == 'net462'
         continue-on-error: true
         env:
           JCOBRIDGE_SCOPEDON: JCOReflector|1.0.0
           JCOBRIDGE_LicensePath: ${{ secrets.JCOBRIDGE_ONLINE }}
+          
       - run: .\scala-2.13.5\bin\scala -toolcp "./bin/net462/*;./tests/jvm/scala/output" refout.HelloRefOut
         shell: cmd
+        if: matrix.framework == 'net462'
         continue-on-error: true
         env:
           JCOBRIDGE_SCOPEDON: JCOReflector|1.0.0
           JCOBRIDGE_LicensePath: ${{ secrets.JCOBRIDGE_ONLINE }}
+          
       - run: cd ./tests/jvm/scala && rmdir output /s /q
         shell: cmd
         continue-on-error: true

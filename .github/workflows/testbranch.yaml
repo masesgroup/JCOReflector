@@ -165,10 +165,12 @@ jobs:
 
       - name: Prepare extra argument
         if: matrix.framework == 'net6.0'
+        shell: bash
         run: echo "EXTRA_ARGUMENT=--CoreCLRApp:Microsoft.NET6.App" >> $GITHUB_ENV
 
       - name: Prepare extra argument
         if: matrix.framework == 'net7.0'
+        shell: bash
         run: echo "EXTRA_ARGUMENT=--CoreCLRApp:Microsoft.NET7.App" >> $GITHUB_ENV
 
       - name: Build Java test source file

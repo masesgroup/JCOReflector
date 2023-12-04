@@ -84,9 +84,9 @@ jobs:
       # Runs a set of commands using the runners shell
       - name: Copy configuration file
         run: |
-          Copy-Item .github\workflows\JCOReflectorCLI6.0.runtimeconfig.json -Destination bin\net6.0\MASES.JCOReflectorCLI.runtimeconfig.json -Force
-          Copy-Item .github\workflows\JCOReflectorCLI7.0.runtimeconfig.json -Destination bin\net7.0\MASES.JCOReflectorCLI.runtimeconfig.json -Force
-          Copy-Item .github\workflows\JCOReflectorCLI8.0.runtimeconfig.json -Destination bin\net8.0\MASES.JCOReflectorCLI.runtimeconfig.json -Force
+          Copy-Item .github\workflows\JCOReflectorCLI_net6.0.runtimeconfig.json -Destination bin\net6.0\MASES.JCOReflectorCLI.runtimeconfig.json -Force
+          Copy-Item .github\workflows\JCOReflectorCLI_net7.0.runtimeconfig.json -Destination bin\net7.0\MASES.JCOReflectorCLI.runtimeconfig.json -Force
+          Copy-Item .github\workflows\JCOReflectorCLI_net8.0.runtimeconfig.json -Destination bin\net8.0\MASES.JCOReflectorCLI.runtimeconfig.json -Force
           
       - name: Remove Java files
         run: |

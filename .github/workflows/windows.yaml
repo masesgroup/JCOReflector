@@ -71,9 +71,6 @@ jobs:
         with: 
           fetch-depth: '1'
 
-      - name: Extract secret
-        run: .github\workflows\GetLicense.ps1 ${{ secrets.JCOBRIDGE_2_5_9 }} .\JCOBridge.lic
-
       # Runs a set of commands using the runners shell
       - name: Build JCOReflectorCLI
         run: dotnet build --no-incremental --configuration Release /p:Platform="Any CPU" src\net\JCOReflectorCLI.sln

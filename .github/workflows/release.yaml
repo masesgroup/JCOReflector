@@ -38,7 +38,7 @@ jobs:
         run: dotnet bin\net6.0\MASES.JCOReflectorCLI.dll -JobType CreatePOM -POMStagingType Release -JobFile .github\workflows\createpom_win19.job
 
       - name: Set up Apache Maven Central
-        uses: actions/setup-java@v3
+        uses: actions/setup-java@v4
         with: # running setup-java again overwrites the settings.xml
           distribution: temurin
           java-version: 11
@@ -86,7 +86,7 @@ jobs:
         run: dotnet bin\net7.0\MASES.JCOReflectorCLI.dll -JobType CreatePOM -POMStagingType Release -JobFile .github\workflows\createpom_win19.job
 
       - name: Set up Apache Maven Central
-        uses: actions/setup-java@v3
+        uses: actions/setup-java@v4
         with: # running setup-java again overwrites the settings.xml
           distribution: temurin
           java-version: 11
@@ -134,7 +134,7 @@ jobs:
         run: dotnet bin\net8.0\MASES.JCOReflectorCLI.dll -JobType CreatePOM -POMStagingType Release -JobFile .github\workflows\createpom_win19.job
 
       - name: Set up Apache Maven Central
-        uses: actions/setup-java@v3
+        uses: actions/setup-java@v4
         with: # running setup-java again overwrites the settings.xml
           distribution: temurin
           java-version: 11
@@ -178,7 +178,7 @@ jobs:
         run: .\bin\net462\MASES.JCOReflectorCLI -JobType CreatePOM -POMStagingType Release -JobFile .github\workflows\createpom_win19.job
 
       - name: Set up Apache Maven Central
-        uses: actions/setup-java@v3
+        uses: actions/setup-java@v4
         with: # running setup-java again overwrites the settings.xml
           distribution: temurin
           java-version: 11

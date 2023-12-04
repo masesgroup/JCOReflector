@@ -92,7 +92,7 @@ jobs:
             dotnet bin/net7.0/MASES.JCOReflectorCLI.dll -JobType CreateJars -JDKFolder $JAVA_HOME_11_X64 -JobFile .github/workflows/createjars_core7.0_linux.job
             dotnet bin/net8.0/MASES.JCOReflectorCLI.dll -JobType CreateJars -JDKFolder $JAVA_HOME_11_X64 -JobFile .github/workflows/createjars_core8.0_linux.job
 
-        - uses: actions/setup-java@v3
+        - uses: actions/setup-java@v4
           with:
             distribution: 'temurin'
             java-version: '17'

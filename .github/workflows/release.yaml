@@ -69,7 +69,7 @@ jobs:
           MAVEN_GPG_PASSPHRASE: ${{ secrets.MAVEN_GPG_PASSPHRASE }}
 
   build_release:
-    needs: [build_maven_net6, build_maven_net7, build_maven_net8, build_maven_net462]
+    needs: [build_maven_and_deploy]
     # The type of runner that the job will run on
     runs-on: windows-2022
   
@@ -104,18 +104,18 @@ jobs:
 
       - name: Build Java files
         run: |
-          dotnet bin\net6.0\MASES.JCOReflectorCLI.dll -JobType Build -JobFile .github\workflows\build_win19.job -JDKFolder %JAVA_HOME_11_X64%
-          dotnet bin\net7.0\MASES.JCOReflectorCLI.dll -JobType Build -JobFile .github\workflows\build_win19.job -JDKFolder %JAVA_HOME_11_X64%
-          dotnet bin\net8.0\MASES.JCOReflectorCLI.dll -JobType Build -JobFile .github\workflows\build_win19.job -JDKFolder %JAVA_HOME_11_X64%
+          .\bin\net6.0\MASES.JCOReflectorCLI -JobType Build -JobFile .github\workflows\build_win19.job -JDKFolder %JAVA_HOME_11_X64%
+          .\bin\net7.0\MASES.JCOReflectorCLI -JobType Build -JobFile .github\workflows\build_win19.job -JDKFolder %JAVA_HOME_11_X64%
+          .\bin\net8.0\MASES.JCOReflectorCLI -JobType Build -JobFile .github\workflows\build_win19.job -JDKFolder %JAVA_HOME_11_X64%
           .\bin\net462\MASES.JCOReflectorCLI -JobType Build -JobFile .github\workflows\build_win19.job -JDKFolder %JAVA_HOME_11_X64%
         shell: cmd
           
       - name: Build JAR files
         run: |
-          dotnet .\bin\net6.0\MASES.JCOReflectorCLI.dll -JobType CreateJars -JobFile .github\workflows\createjars_core6.0_win19.job -JDKFolder %JAVA_HOME_11_X64%
-          dotnet .\bin\net7.0\MASES.JCOReflectorCLI.dll -JobType CreateJars -JobFile .github\workflows\createjars_core7.0_win19.job -JDKFolder %JAVA_HOME_11_X64%
-          dotnet .\bin\net8.0\MASES.JCOReflectorCLI.dll -JobType CreateJars -JobFile .github\workflows\createjars_core8.0_win19.job -JDKFolder %JAVA_HOME_11_X64%
-          .\bin\net462\MASES.JCOReflectorCLI -JobType CreateJars -JobFile .github\workflows\createjars_framework_win19.job -JDKFolder %JAVA_HOME_11_X64%
+          .\bin\net6.0\MASES.JCOReflectorCLI -JobType CreateJars -JobFile .github\workflows\createjars_net6.0_win19.job -JDKFolder %JAVA_HOME_11_X64%
+          .\bin\net7.0\MASES.JCOReflectorCLI -JobType CreateJars -JobFile .github\workflows\createjars_net7.0_win19.job -JDKFolder %JAVA_HOME_11_X64%
+          .\bin\net8.0\MASES.JCOReflectorCLI -JobType CreateJars -JobFile .github\workflows\createjars_net8.0_win19.job -JDKFolder %JAVA_HOME_11_X64%
+          .\bin\net462\MASES.JCOReflectorCLI -JobType CreateJars -JobFile .github\workflows\createjars_net462_win19.job -JDKFolder %JAVA_HOME_11_X64%
         shell: cmd
 
       - name: Compress release files

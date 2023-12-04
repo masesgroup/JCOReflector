@@ -108,15 +108,15 @@ jobs:
         run: .\bin\net462\MASES.JCOReflectorCLI -JobType Reflect -JobFile .github\workflows\reflect_net462.job
 
       - name: Build Java files .NET Core 6.0
-        run: dotnet bin\net6.0\MASES.JCOReflectorCLI.dll -JobType Build -JobFile .github\workflows\build_win19.job -JDKFolder %JAVA_HOME_11_X64%
+        run: .\bin\net6.0\MASES.JCOReflectorCLI -JobType Build -JobFile .github\workflows\build_win19.job -JDKFolder %JAVA_HOME_11_X64%
         shell: cmd
 
       - name: Build Java files .NET Core 7.0
-        run: dotnet bin\net7.0\MASES.JCOReflectorCLI.dll -JobType Build -JobFile .github\workflows\build_win19.job -JDKFolder %JAVA_HOME_11_X64%
+        run: .\bin\net7.0\MASES.JCOReflectorCLI -JobType Build -JobFile .github\workflows\build_win19.job -JDKFolder %JAVA_HOME_11_X64%
         shell: cmd
 
       - name: Build Java files .NET Core 8.0
-        run: dotnet bin\net8.0\MASES.JCOReflectorCLI.dll -JobType Build -JobFile .github\workflows\build_win19.job -JDKFolder %JAVA_HOME_11_X64%
+        run: .\bin\net8.0\MASES.JCOReflectorCLI -JobType Build -JobFile .github\workflows\build_win19.job -JDKFolder %JAVA_HOME_11_X64%
         shell: cmd
 
       - name: Build Java files .NET Framework
@@ -124,19 +124,19 @@ jobs:
         shell: cmd
         
       - name: Build JAR files .NET Core 6.0
-        run: dotnet bin\net6.0\MASES.JCOReflectorCLI.dll -JobType CreateJars -JobFile .github\workflows\createjars_core6.0_win19.job -JDKFolder %JAVA_HOME_11_X64%
+        run: .\bin\net6.0\MASES.JCOReflectorCLI -JobType CreateJars -JobFile .github\workflows\createjars_net6.0_win19.job -JDKFolder %JAVA_HOME_11_X64%
         shell: cmd
 
       - name: Build JAR files .NET Core 7.0
-        run: dotnet bin\net7.0\MASES.JCOReflectorCLI.dll -JobType CreateJars -JobFile .github\workflows\createjars_core7.0_win19.job -JDKFolder %JAVA_HOME_11_X64%
+        run: .\bin\net7.0\MASES.JCOReflectorCLI -JobType CreateJars -JobFile .github\workflows\createjars_net7.0_win19.job -JDKFolder %JAVA_HOME_11_X64%
         shell: cmd
 
       - name: Build JAR files .NET Core 8.0
-        run: dotnet bin\net8.0\MASES.JCOReflectorCLI.dll -JobType CreateJars -JobFile .github\workflows\createjars_core8.0_win19.job -JDKFolder %JAVA_HOME_11_X64%
+        run: .\bin\net8.0\MASES.JCOReflectorCLI -JobType CreateJars -JobFile .github\workflows\createjars_net8.0_win19.job -JDKFolder %JAVA_HOME_11_X64%
         shell: cmd
 
       - name: Build JAR files .NET Framework
-        run: .\bin\net462\MASES.JCOReflectorCLI -JobType CreateJars -JobFile .github\workflows\createjars_framework_win19.job -JDKFolder %JAVA_HOME_11_X64%
+        run: .\bin\net462\MASES.JCOReflectorCLI -JobType CreateJars -JobFile .github\workflows\createjars_net462_win19.job -JDKFolder %JAVA_HOME_11_X64%
         shell: cmd
 
       - uses: actions/setup-java@v4

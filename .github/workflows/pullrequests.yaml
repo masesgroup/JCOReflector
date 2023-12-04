@@ -78,7 +78,7 @@ jobs:
       - run: nuget pack src\net\CLI\JCOReflectorCLI.nuspec -OutputDirectory .\bin
 
   # This workflow contains a single job called "build"
-  build_testbranch:
+  build_matrix:
     needs: check
     if: needs.check.outputs.run_job == 'true'
     # The type of runner that the job will run on

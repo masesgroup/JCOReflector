@@ -341,7 +341,8 @@ namespace MASES.JCOReflectorEngine
             var assembyStr = assembyStrSb.ToString();
             assembyStr = assembyStr.Substring(0, assembyStr.Length - 2);
 
-            var jcoBridgeOptionsContent = jcoBridgeOptionsTemplate.Replace(Const.Options.Assembly_Names_Value, assembyStr)
+            var jcoBridgeOptionsContent = jcoBridgeOptionsTemplate.Replace(Const.Class.JCOREFLECTOR_VERSION, Const.ReflectorVersion)
+                                                                  .Replace(Const.Options.Assembly_Names_Value, assembyStr)
                                                                   .Replace(Const.Options.Create_Exception_Thrown_Clause_Value, CreateExceptionThrownClause ? "true" : "false")
                                                                   .Replace(Const.Options.Exception_Thrown_Clause_Depth_Value, ExceptionThrownClauseDepth.ToString())
                                                                   .Replace(Const.Options.Enable_Abstract_Value, EnableAbstract ? "true" : "false")

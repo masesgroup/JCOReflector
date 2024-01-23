@@ -42,7 +42,7 @@ jobs:
         run: Copy-Item .github\workflows\JCOReflectorCLI_${{ matrix.framework }}.runtimeconfig.json -Destination bin\${{ matrix.framework }}\MASES.JCOReflectorCLI.runtimeconfig.json -Force
 
       - name: Build Maven POM files
-        run: .\bin\${{ matrix.framework }}\MASES.JCOReflectorCLI -JobType CreatePOM -JobFile .github\workflows\createpom_win19.job
+        run: .\bin\${{ matrix.framework }}\MASES.JCOReflectorCLI -JobType CreatePOM -POMStagingType Release -JobFile .github\workflows\createpom_win19.job
 
       - name: Set up Apache Maven Central
         uses: actions/setup-java@v4

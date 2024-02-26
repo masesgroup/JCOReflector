@@ -831,7 +831,7 @@ public class SslStream extends AuthenticatedStream  {
         }
     }
 
-    public X509Certificate getLocalCertificate() throws Throwable, system.ObjectDisposedException, system.PlatformNotSupportedException, system.ArgumentNullException, system.ArgumentException, system.globalization.CultureNotFoundException, system.InvalidOperationException {
+    public X509Certificate getLocalCertificate() throws Throwable, system.ObjectDisposedException, system.PlatformNotSupportedException, system.ArgumentNullException, system.ArgumentException, system.globalization.CultureNotFoundException, system.InvalidOperationException, system.IndexOutOfRangeException, system.FormatException, system.diagnostics.tracing.EventSourceException {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {

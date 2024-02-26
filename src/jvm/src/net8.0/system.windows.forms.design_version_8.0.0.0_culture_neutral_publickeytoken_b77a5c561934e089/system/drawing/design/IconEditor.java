@@ -198,7 +198,7 @@ public class IconEditor extends UITypeEditor  {
         }
     }
 
-    public void PaintValue(PaintValueEventArgs e) throws Throwable, system.ArgumentException, system.NotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.ObjectDisposedException, system.ArgumentNullException, system.PlatformNotSupportedException, system.ArrayTypeMismatchException, system.IndexOutOfRangeException, system.OverflowException {
+    public void PaintValue(PaintValueEventArgs e) throws Throwable, system.NotSupportedException, system.ArgumentException, system.PlatformNotSupportedException, system.ArgumentNullException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.FormatException, system.ObjectDisposedException, system.ArrayTypeMismatchException, system.OverflowException {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {

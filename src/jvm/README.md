@@ -425,7 +425,7 @@ Parsed assemblies are:
 > * PresentationUI, Version=6.0.2.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35
 > * System.DirectoryServices, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a
 
-> * Analyzed Types = 25879
+> * Analyzed Types = 25882
 >   * Enumerators = 24
 >   * Delegates = 364
 >   * Classes
@@ -446,8 +446,8 @@ Parsed assemblies are:
 >       * Duplicated Methods = 800
 >     * Properties = 17040
 >     * Events = 1627
-> * Discarded Types = 18698
->   * Non Public = 18358
+> * Discarded Types = 18701
+>   * Non Public = 18361
 >   * Generic = 277
 >   * Internals = 27
 
@@ -755,7 +755,7 @@ Parsed assemblies are:
 > * PresentationUI, Version=7.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35
 > * System.DirectoryServices, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a
 
-> * Analyzed Types = 26436
+> * Analyzed Types = 26439
 >   * Enumerators = 24
 >   * Delegates = 364
 >   * Classes
@@ -776,8 +776,8 @@ Parsed assemblies are:
 >       * Duplicated Methods = 813
 >     * Properties = 17287
 >     * Events = 1635
-> * Discarded Types = 19162
->   * Non Public = 18809
+> * Discarded Types = 19165
+>   * Non Public = 18812
 >   * Generic = 293
 >   * Internals = 24
 

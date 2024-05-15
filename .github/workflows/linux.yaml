@@ -62,11 +62,6 @@ jobs:
     # The type of runner that the job will run on
     runs-on: ubuntu-latest
 
-    strategy:
-      fail-fast: false
-      matrix:
-        framework: [ 'net6.0', 'net8.0' ]
-
       # Steps represent a sequence of tasks that will be executed as part of the job
     steps:
       # Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it
@@ -76,18 +71,63 @@ jobs:
 
       # Runs a set of commands using the runners shell
       - name: Build JCOReflectorCLI
-        run: dotnet build --no-incremental --framework ${{ matrix.framework }} --configuration Release src/net/JCOReflectorCLI.sln
+        run: dotnet build --no-incremental --framework net6.0 --configuration Release src/net/JCOReflectorCLI.sln
 
       - name: Build Java files
-        run: dotnet bin/${{ matrix.framework }}/MASES.JCOReflectorCLI.dll -JobType Build -JDKFolder $JAVA_HOME_11_X64 -JobFile .github/workflows/build_linux.job
+        run: dotnet bin/net6.0/MASES.JCOReflectorCLI.dll -JobType Build -JDKFolder $JAVA_HOME_11_X64 -JobFile .github/workflows/build_linux.job
 
       - name: Build JAR files
-        run: dotnet bin/${{ matrix.framework }}/MASES.JCOReflectorCLI.dll -JobType CreateJars -JDKFolder $JAVA_HOME_11_X64 -JobFile .github/workflows/createjars_${{ matrix.framework }}_linux.job
+        run: dotnet bin/net6.0/MASES.JCOReflectorCLI.dll -JobType CreateJars -JDKFolder $JAVA_HOME_11_X64 -JobFile .github/workflows/createjars_net6.0_linux.job
 
-      - uses: actions/setup-java@v4
+      - name: Build JCOReflectorCLI
+        run: dotnet build --no-incremental --framework net8.0 --configuration Release src/net/JCOReflectorCLI.sln
+
+      - name: Build Java files
+        run: dotnet bin/net8.0/MASES.JCOReflectorCLI.dll -JobType Build -JDKFolder $JAVA_HOME_11_X64 -JobFile .github/workflows/build_linux.job
+
+      - name: Build JAR files
+        run: dotnet bin/net8.0/MASES.JCOReflectorCLI.dll -JobType CreateJars -JDKFolder $JAVA_HOME_11_X64 -JobFile .github/workflows/createjars_net8.0_linux.job
+
+      - name: Save JCOReflector bin in cache
+        uses: actions/cache/save@v4
         with:
-          distribution: 'temurin'
-          java-version: '17'
+          enableCrossOsArchive: true
+          path: ./bin/
+          key: JCOReflector_linux_bin_${{ github.run_id }}_${{ github.run_attempt }}
+
+
+  execute_java_tests:
+    needs: build_linux
+    strategy:
+      fail-fast: false
+      matrix:
+        framework: [ 'net6.0', 'net8.0' ]
+        jdk_vendor: [ 'temurin', 'zulu', 'microsoft', 'corretto', 'oracle']
+        jdk_version: [ '11', '17', '21' ] # only LTS versions
+        exclude:
+          - jdk_vendor: oracle
+            jdk_version: 11
+
+    runs-on: ubuntu-latest
+    steps:
+      # Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it
+      - uses: actions/checkout@v4
+        with: 
+          fetch-depth: '1'
+
+      - name: Restore JCOReflector bin from cache
+        uses: actions/cache/restore@v4
+        with:
+          fail-on-cache-miss: true
+          enableCrossOsArchive: true
+          path: ./bin/
+          key: JCOReflector_linux_bin_${{ github.run_id }}_${{ github.run_attempt }}
+
+      - name: Set up JDK distribution
+        uses: actions/setup-java@v4
+        with: # running setup-java again overwrites the settings.xml
+          distribution: ${{ matrix.jdk_vendor }}
+          java-version: ${{ matrix.jdk_version }}
           cache: 'maven'
 
       - name: Prepare extra argument
@@ -141,6 +181,28 @@ jobs:
         
           #java -cp "./bin/net6.0/JCOReflector.jar;./tests/jvm/java/src/" refout.HelloRefOutBase
           #java -cp "./bin/net6.0/JCOReflector.jar;./tests/jvm/java/src/" refout.HelloRefOut
+
+  execute_scala_tests:
+    needs: build_linux
+    strategy:
+      fail-fast: false
+      matrix:
+        framework: [ 'net6.0', 'net8.0' ]
+
+    runs-on: ubuntu-latest
+    steps:
+      # Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it
+      - uses: actions/checkout@v4
+        with: 
+          fetch-depth: '1'
+
+      - name: Restore JCOReflector bin from cache
+        uses: actions/cache/restore@v4
+        with:
+          fail-on-cache-miss: true
+          enableCrossOsArchive: true
+          path: ./bin/
+          key: JCOReflector_linux_bin_${{ github.run_id }}_${{ github.run_attempt }}
 
       - name: Download and install Scala package
         run: |

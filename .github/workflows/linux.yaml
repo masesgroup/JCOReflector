@@ -97,7 +97,7 @@ jobs:
         with:
           enableCrossOsArchive: true
           path: ./bin/
-          key: JCOReflector_linux_bin_${{ env.GITHUB_SHA }}
+          key: JCOReflector_linux_bin_${{ github.sha }}
 
 
   execute_java_tests:
@@ -125,7 +125,7 @@ jobs:
           fail-on-cache-miss: true
           enableCrossOsArchive: true
           path: ./bin/
-          key: JCOReflector_linux_bin_${{ env.GITHUB_SHA }}
+          key: JCOReflector_linux_bin_${{ github.sha }}
 
       - name: Set up JDK distribution
         uses: actions/setup-java@v4
@@ -211,7 +211,7 @@ jobs:
           fail-on-cache-miss: true
           enableCrossOsArchive: true
           path: ./bin/
-          key: JCOReflector_linux_bin_${{ env.GITHUB_SHA }}
+          key: JCOReflector_linux_bin_${{ github.sha }}
 
       - name: Set up JDK distribution
         uses: actions/setup-java@v4

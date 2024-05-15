@@ -4,9 +4,9 @@ JCOReflector is a comprehensive suite of libraries and tools to use Java/JVM API
 
 ### Libraries and Tools
 
-|.NET Framework | .NET 6 | .NET 7 |
-|---	|---	|---	|
-|[![Maven Central](https://img.shields.io/maven-central/v/com.masesgroup/jcoreflector_net462.svg?label=Maven%20Central)](https://search.maven.org/search?q=g:%22com.masesgroup%22%20AND%20a:%22jcoreflector_net462%22) | [![Maven Central](https://img.shields.io/maven-central/v/com.masesgroup/jcoreflector_net6.0.svg?label=Maven%20Central)](https://search.maven.org/search?q=g:%22com.masesgroup%22%20AND%20a:%22jcoreflector_net6.0%22)| [![Maven Central](https://img.shields.io/maven-central/v/com.masesgroup/jcoreflector_net7.0.svg?label=Maven%20Central)](https://search.maven.org/search?q=g:%22com.masesgroup%22%20AND%20a:%22jcoreflector_net7.0%22)|
+|.NET Framework | .NET 6 | .NET 8 |
+|---	|---	|---	|---	|
+|[![Maven Central](https://img.shields.io/maven-central/v/com.masesgroup/jcoreflector_net462.svg?label=Maven%20Central)](https://search.maven.org/search?q=g:%22com.masesgroup%22%20AND%20a:%22jcoreflector_net462%22) | [![Maven Central](https://img.shields.io/maven-central/v/com.masesgroup/jcoreflector_net6.0.svg?label=Maven%20Central)](https://search.maven.org/search?q=g:%22com.masesgroup%22%20AND%20a:%22jcoreflector_net6.0%22)| [![Maven Central](https://img.shields.io/maven-central/v/com.masesgroup/jcoreflector_net8.0.svg?label=Maven%20Central)](https://search.maven.org/search?q=g:%22com.masesgroup%22%20AND%20a:%22jcoreflector_net8.0%22)|
 
 |JCOReflectorEngine | JCOReflectorCLI |
 |---	|---	|
@@ -56,7 +56,7 @@ Have a look at the following resources:
 
 ## History of the project
 
-This project started in 2019 with the aims to create a set of Java (JVM) classes which mimic .NET (Framework/6/7) conterparts, in May 2020 the first commit in GitHub.
+This project started in 2019 with the aims to create a set of Java (JVM) classes which mimic .NET (Framework/6/8) conterparts, in May 2020 the first commit in GitHub.
 Using this project it is possible to use .NET API in Java and all JVM enabled languages (Scala, Kotlin, and so on).
 The final output of JCOReflector are JARs.
 At its first stages no JARs was available: only the JCOBridge engine, the graphical UI that helps to manages reflection and the operations needed to finally build JARs was relased.
@@ -209,7 +209,7 @@ Within the folder bin you will find three subfolders:
 
 - **net462** (available only on Windows platform)
 - **net6.0** (available on .NET 6 supported platforms)
-- **net7.0** (available on .NET 7 supported platforms)
+- **net8.0** (available on .NET 8 supported platforms)
 
 in each subfolder will be available two executables:
 
@@ -221,7 +221,7 @@ in each subfolder will be available two executables:
 
 ## Reflected Assemblies
 
-The folder [src/jvm/src](/src/jvm/src) contains all reflected classes generated for **.NET** **Framework** (_net462_), **6** (_net6.0_) and **7** (_net7.0_). Below the coverage [statistics](#statistics):
+The folder [src/jvm/src](/src/jvm/src) contains all reflected classes generated for **.NET** **Framework** (_net462_), **6** (_net6.0_) and **8** (_net8.0_). Below the coverage [statistics](#statistics):
 
 ### Statistics
 
@@ -229,4 +229,4 @@ The folder [src/jvm/src](/src/jvm/src) contains all reflected classes generated 
 
 ![Net6Statistic](https://docs.google.com/spreadsheets/d/e/2PACX-1vTe94B4KWTddOWDnIHGRkHHPq23g_oPzZUfmVU3ls1lEUwNQmG_T4Zi7xCCNkb0RMqkT8LblRNW7aT9/pubchart?oid=1200391981&format=image)
 
-![Net7Statistic](https://docs.google.com/spreadsheets/d/e/2PACX-1vTe94B4KWTddOWDnIHGRkHHPq23g_oPzZUfmVU3ls1lEUwNQmG_T4Zi7xCCNkb0RMqkT8LblRNW7aT9/pubchart?oid=1527441532&format=image)
+![Net8Statistic](https://docs.google.com/spreadsheets/d/e/2PACX-1vTe94B4KWTddOWDnIHGRkHHPq23g_oPzZUfmVU3ls1lEUwNQmG_T4Zi7xCCNkb0RMqkT8LblRNW7aT9/pubchart?oid=1753386013&format=image)

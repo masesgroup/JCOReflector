@@ -85,21 +85,16 @@ jobs:
       - name: Copy configuration file
         run: |
           Copy-Item .github\workflows\JCOReflectorCLI_net6.0.runtimeconfig.json -Destination bin\net6.0\MASES.JCOReflectorCLI.runtimeconfig.json -Force
-          Copy-Item .github\workflows\JCOReflectorCLI_net7.0.runtimeconfig.json -Destination bin\net7.0\MASES.JCOReflectorCLI.runtimeconfig.json -Force
           Copy-Item .github\workflows\JCOReflectorCLI_net8.0.runtimeconfig.json -Destination bin\net8.0\MASES.JCOReflectorCLI.runtimeconfig.json -Force
           
       - name: Remove Java files
         run: |
           Remove-Item .\src\jvm\src\net6.0 -Recurse -Force
-          Remove-Item .\src\jvm\src\net7.0 -Recurse -Force
           Remove-Item .\src\jvm\src\net8.0 -Recurse -Force
           Remove-Item .\src\jvm\src\net462 -Recurse -Force
 
       - name: Reflect .NET 6.0 Java files
         run: .\bin\net6.0\MASES.JCOReflectorCLI -JobType Reflect -JobFile .github\workflows\reflect_net6.0.job
-
-      - name: Reflect .NET 7.0 Java files
-        run: .\bin\net7.0\MASES.JCOReflectorCLI -JobType Reflect -JobFile .github\workflows\reflect_net7.0.job
 
       - name: Reflect .NET 8.0 Java files
         run: .\bin\net8.0\MASES.JCOReflectorCLI -JobType Reflect -JobFile .github\workflows\reflect_net8.0.job
@@ -109,10 +104,6 @@ jobs:
 
       - name: Build Java files .NET Core 6.0
         run: .\bin\net6.0\MASES.JCOReflectorCLI -JobType Build -JobFile .github\workflows\build_win19.job -JDKFolder %JAVA_HOME_11_X64%
-        shell: cmd
-
-      - name: Build Java files .NET Core 7.0
-        run: .\bin\net7.0\MASES.JCOReflectorCLI -JobType Build -JobFile .github\workflows\build_win19.job -JDKFolder %JAVA_HOME_11_X64%
         shell: cmd
 
       - name: Build Java files .NET Core 8.0
@@ -125,10 +116,6 @@ jobs:
         
       - name: Build JAR files .NET Core 6.0
         run: .\bin\net6.0\MASES.JCOReflectorCLI -JobType CreateJars -JobFile .github\workflows\createjars_net6.0_win19.job -JDKFolder %JAVA_HOME_11_X64%
-        shell: cmd
-
-      - name: Build JAR files .NET Core 7.0
-        run: .\bin\net7.0\MASES.JCOReflectorCLI -JobType CreateJars -JobFile .github\workflows\createjars_net7.0_win19.job -JDKFolder %JAVA_HOME_11_X64%
         shell: cmd
 
       - name: Build JAR files .NET Core 8.0
@@ -194,60 +181,6 @@ jobs:
           JCOBRIDGE_SCOPEDON: JCOReflector|1.0.0
           JCOBRIDGE_LicensePath: ${{ secrets.JCOBRIDGE_ONLINE }}
       - run: java -cp "./bin/net6.0/JCOReflector.jar;./tests/jvm/java/src/" refout.HelloRefOut --CoreCLRApp:Microsoft.NET6.App
-        continue-on-error: true
-        env:
-          JCOBRIDGE_SCOPEDON: JCOReflector|1.0.0
-          JCOBRIDGE_LicensePath: ${{ secrets.JCOBRIDGE_ONLINE }}
-
-      - name: Build Java test source file .NET Core 7.0
-        run: javac -cp ./bin/net7.0/JCOReflector.jar ./tests/jvm/java/src/hierarchy/*.java ./tests/jvm/java/src/mscorlib/*.java ./tests/jvm/java/src/nettest/*.java ./tests/jvm/java/src/refout/*.java
-
-      - run: java -cp "./bin/net7.0/JCOReflector.jar;./tests/jvm/java/src/" mscorlib.HelloLock --CoreCLRApp:Microsoft.NET7.App
-        continue-on-error: true
-        env:
-          JCOBRIDGE_SCOPEDON: JCOReflector|1.0.0
-          JCOBRIDGE_LicensePath: ${{ secrets.JCOBRIDGE_ONLINE }}  
-      - run: java -cp "./bin/net7.0/JCOReflector.jar;./tests/jvm/java/src/" mscorlib.HelloNET --CoreCLRApp:Microsoft.NET7.App
-        continue-on-error: true
-        env:
-          JCOBRIDGE_SCOPEDON: JCOReflector|1.0.0
-          JCOBRIDGE_LicensePath: ${{ secrets.JCOBRIDGE_ONLINE }}
-      - run: java -cp "./bin/net7.0/JCOReflector.jar;./tests/jvm/java/src/" mscorlib.HelloNETEvent --CoreCLRApp:Microsoft.NET7.App
-        continue-on-error: true
-        env:
-          JCOBRIDGE_SCOPEDON: JCOReflector|1.0.0
-          JCOBRIDGE_LicensePath: ${{ secrets.JCOBRIDGE_ONLINE }}
-      - run: java -cp "./bin/net7.0/JCOReflector.jar;./tests/jvm/java/src/" mscorlib.HelloIterator --CoreCLRApp:Microsoft.NET7.App
-        continue-on-error: true
-        env:
-          JCOBRIDGE_SCOPEDON: JCOReflector|1.0.0
-          JCOBRIDGE_LicensePath: ${{ secrets.JCOBRIDGE_ONLINE }}
-      - run: java -cp "./bin/net7.0/JCOReflector.jar;./tests/jvm/java/src/" hierarchy.HelloHierarchy --CoreCLRApp:Microsoft.NET7.App
-        continue-on-error: true
-        env:
-          JCOBRIDGE_SCOPEDON: JCOReflector|1.0.0
-          JCOBRIDGE_LicensePath: ${{ secrets.JCOBRIDGE_ONLINE }}
-      - run: java -cp "./bin/net7.0/JCOReflector.jar;./tests/jvm/java/src/" hierarchy.HelloInterfaces --CoreCLRApp:Microsoft.NET7.App
-        continue-on-error: true
-        env:
-          JCOBRIDGE_SCOPEDON: JCOReflector|1.0.0
-          JCOBRIDGE_LicensePath: ${{ secrets.JCOBRIDGE_ONLINE }}
-      - run: java -cp "./bin/net7.0/JCOReflector.jar;./tests/jvm/java/src/" nettest.HelloNETSocket --CoreCLRApp:Microsoft.NET7.App
-        continue-on-error: true
-        env:
-          JCOBRIDGE_SCOPEDON: JCOReflector|1.0.0
-          JCOBRIDGE_LicensePath: ${{ secrets.JCOBRIDGE_ONLINE }}
-      - run: java -cp "./bin/net7.0/JCOReflector.jar;./tests/jvm/java/src/" nettest.HelloNETSocket -async --CoreCLRApp:Microsoft.NET7.App
-        continue-on-error: true
-        env:
-          JCOBRIDGE_SCOPEDON: JCOReflector|1.0.0
-          JCOBRIDGE_LicensePath: ${{ secrets.JCOBRIDGE_ONLINE }}
-      - run: java -cp "./bin/net7.0/JCOReflector.jar;./tests/jvm/java/src/" refout.HelloRefOutBase --CoreCLRApp:Microsoft.NET7.App
-        continue-on-error: true
-        env:
-          JCOBRIDGE_SCOPEDON: JCOReflector|1.0.0
-          JCOBRIDGE_LicensePath: ${{ secrets.JCOBRIDGE_ONLINE }}
-      - run: java -cp "./bin/net7.0/JCOReflector.jar;./tests/jvm/java/src/" refout.HelloRefOut --CoreCLRApp:Microsoft.NET7.App
         continue-on-error: true
         env:
           JCOBRIDGE_SCOPEDON: JCOReflector|1.0.0
@@ -438,77 +371,6 @@ jobs:
         shell: cmd
         continue-on-error: true
 
-      - name: Build Scala test source file .NET Core 7.0
-        shell: cmd
-        run: |
-          cd ./tests/jvm/scala
-          mkdir output
-          ..\..\..\scala-2.13.5\bin\scalac -toolcp "../../../bin/net7.0/*" -d ./output ./src/main/scala/hierarchy/* ./src/main/scala/mscorlib/* ./src/main/scala/nettest/* ./src/main/scala/refout/*
-              
-      - run: .\scala-2.13.5\bin\scala -toolcp "./bin/net7.0/*;./tests/jvm/scala/output" mscorlib.HelloLock --CoreCLRApp:Microsoft.NET7.App
-        shell: cmd
-        continue-on-error: true
-        env:
-          JCOBRIDGE_SCOPEDON: JCOReflector|1.0.0
-          JCOBRIDGE_LicensePath: ${{ secrets.JCOBRIDGE_ONLINE }}
-      - run: .\scala-2.13.5\bin\scala -toolcp "./bin/net7.0/*;./tests/jvm/scala/output" mscorlib.HelloNet --CoreCLRApp:Microsoft.NET7.App
-        shell: cmd
-        continue-on-error: true
-        env:
-          JCOBRIDGE_SCOPEDON: JCOReflector|1.0.0
-          JCOBRIDGE_LicensePath: ${{ secrets.JCOBRIDGE_ONLINE }}
-      - run: .\scala-2.13.5\bin\scala -toolcp "./bin/net7.0/*;./tests/jvm/scala/output" mscorlib.HelloNETEvent --CoreCLRApp:Microsoft.NET7.App
-        shell: cmd
-        continue-on-error: true
-        env:
-          JCOBRIDGE_SCOPEDON: JCOReflector|1.0.0
-          JCOBRIDGE_LicensePath: ${{ secrets.JCOBRIDGE_ONLINE }}
-      - run: .\scala-2.13.5\bin\scala -toolcp "./bin/net7.0/*;./tests/jvm/scala/output" mscorlib.HelloIterator --CoreCLRApp:Microsoft.NET7.App
-        shell: cmd
-        continue-on-error: true
-        env:
-          JCOBRIDGE_SCOPEDON: JCOReflector|1.0.0
-          JCOBRIDGE_LicensePath: ${{ secrets.JCOBRIDGE_ONLINE }}
-      - run: .\scala-2.13.5\bin\scala -toolcp "./bin/net7.0/*;./tests/jvm/scala/output" hierarchy.HelloHierarchy --CoreCLRApp:Microsoft.NET7.App
-        shell: cmd
-        continue-on-error: true
-        env:
-          JCOBRIDGE_SCOPEDON: JCOReflector|1.0.0
-          JCOBRIDGE_LicensePath: ${{ secrets.JCOBRIDGE_ONLINE }}
-      - run: .\scala-2.13.5\bin\scala -toolcp "./bin/net7.0/*;./tests/jvm/scala/output" hierarchy.HelloInterfaces --CoreCLRApp:Microsoft.NET7.App
-        shell: cmd
-        continue-on-error: true
-        env:
-          JCOBRIDGE_SCOPEDON: JCOReflector|1.0.0
-          JCOBRIDGE_LicensePath: ${{ secrets.JCOBRIDGE_ONLINE }}
-      - run: .\scala-2.13.5\bin\scala -toolcp "./bin/net7.0/*;./tests/jvm/scala/output" nettest.HelloNETSocket --CoreCLRApp:Microsoft.NET7.App
-        shell: cmd
-        continue-on-error: true
-        env:
-          JCOBRIDGE_SCOPEDON: JCOReflector|1.0.0
-          JCOBRIDGE_LicensePath: ${{ secrets.JCOBRIDGE_ONLINE }}
-      - run: .\scala-2.13.5\bin\scala -toolcp "./bin/net7.0/*;./tests/jvm/scala/output" nettest.HelloNETSocket -async --CoreCLRApp:Microsoft.NET7.App
-        shell: cmd
-        continue-on-error: true
-        env:
-          JCOBRIDGE_SCOPEDON: JCOReflector|1.0.0
-          JCOBRIDGE_LicensePath: ${{ secrets.JCOBRIDGE_ONLINE }}
-      - run: .\scala-2.13.5\bin\scala -toolcp "./bin/net7.0/*;./tests/jvm/scala/output" refout.HelloRefOutBase --CoreCLRApp:Microsoft.NET7.App
-        shell: cmd
-        continue-on-error: true
-        env:
-          JCOBRIDGE_SCOPEDON: JCOReflector|1.0.0
-          JCOBRIDGE_LicensePath: ${{ secrets.JCOBRIDGE_ONLINE }}
-      - run: .\scala-2.13.5\bin\scala -toolcp "./bin/net7.0/*;./tests/jvm/scala/output" refout.HelloRefOut --CoreCLRApp:Microsoft.NET7.App
-        shell: cmd
-        continue-on-error: true
-        env:
-          JCOBRIDGE_SCOPEDON: JCOReflector|1.0.0
-          JCOBRIDGE_LicensePath: ${{ secrets.JCOBRIDGE_ONLINE }}
-      - run: cd ./tests/jvm/scala && rmdir output /s /q
-        shell: cmd
-        continue-on-error: true
-
       - name: Build Scala test source file .NET Core 8.0
         shell: cmd
         run: |
@@ -654,7 +516,6 @@ jobs:
       - name: Compress release files
         run: |
           Compress-Archive -Path .\bin\net6.0\* -DestinationPath .\bin\net6.0.zip
-          Compress-Archive -Path .\bin\net7.0\* -DestinationPath .\bin\net7.0.zip
           Compress-Archive -Path .\bin\net8.0\* -DestinationPath .\bin\net8.0.zip
           Compress-Archive -Path .\bin\net462\* -DestinationPath .\bin\net462.zip
 
@@ -716,11 +577,6 @@ jobs:
         with:
           name: net6.0
           path: .\bin\net6.0.zip
-
-      - uses: actions/upload-artifact@v4
-        with:
-          name: net7.0
-          path: .\bin\net7.0.zip
 
       - uses: actions/upload-artifact@v4
         with:

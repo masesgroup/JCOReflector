@@ -65,7 +65,7 @@ jobs:
     strategy:
       fail-fast: false
       matrix:
-        framework: [ 'net6.0', 'net7.0', 'net8.0' ]
+        framework: [ 'net6.0', 'net8.0' ]
 
       # Steps represent a sequence of tasks that will be executed as part of the job
     steps:
@@ -94,11 +94,6 @@ jobs:
         if: matrix.framework == 'net6.0'
         shell: bash
         run: echo "EXTRA_ARGUMENT=--CoreCLRApp:Microsoft.NET6.App" >> $GITHUB_ENV
-
-      - name: Prepare extra argument
-        if: matrix.framework == 'net7.0'
-        shell: bash
-        run: echo "EXTRA_ARGUMENT=--CoreCLRApp:Microsoft.NET7.App" >> $GITHUB_ENV
 
       - name: Build Java test source file
         run: javac -cp ./bin/${{ matrix.framework }}/JCOReflector.jar ./tests/jvm/java/src/hierarchy/*.java ./tests/jvm/java/src/mscorlib/*.java ./tests/jvm/java/src/nettest/*.java ./tests/jvm/java/src/refout/*.java

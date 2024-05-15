@@ -133,14 +133,14 @@ jobs:
         with:
           enableCrossOsArchive: true
           path: ./src/jvm/
-          key: JCOReflector_source_${{ github.run_id }}_${{ github.run_attempt }}
+          key: JCOReflector_source_${{ env.GITHUB_SHA }}
 
       - name: Save JCOReflector bin in cache
         uses: actions/cache/save@v4
         with:
           enableCrossOsArchive: true
           path: ./bin/
-          key: JCOReflector_windows_bin_${{ github.run_id }}_${{ github.run_attempt }}
+          key: JCOReflector_windows_bin_${{ env.GITHUB_SHA }}
 
   execute_java_tests:
     needs: build_windows
@@ -173,7 +173,7 @@ jobs:
           fail-on-cache-miss: true
           enableCrossOsArchive: true
           path: ./bin/
-          key: JCOReflector_windows_bin_${{ github.run_id }}_${{ github.run_attempt }}
+          key: JCOReflector_windows_bin_${{ env.GITHUB_SHA }}
  
       - name: Set up JDK distribution
         uses: actions/setup-java@v4
@@ -272,7 +272,7 @@ jobs:
           fail-on-cache-miss: true
           enableCrossOsArchive: true
           path: ./bin/
-          key: JCOReflector_windows_bin_${{ github.run_id }}_${{ github.run_attempt }}
+          key: JCOReflector_windows_bin_${{ env.GITHUB_SHA }}
  
       - name: Set up JDK distribution
         uses: actions/setup-java@v4
@@ -379,7 +379,7 @@ jobs:
           fail-on-cache-miss: true
           enableCrossOsArchive: true
           path: ./bin/
-          key: JCOReflector_windows_bin_${{ github.run_id }}_${{ github.run_attempt }}
+          key: JCOReflector_windows_bin_${{ env.GITHUB_SHA }}
           
       - name: Restore JCOReflector source from cache
         uses: actions/cache/restore@v4
@@ -387,7 +387,7 @@ jobs:
           fail-on-cache-miss: true
           enableCrossOsArchive: true
           path: ./src/jvm/
-          key: JCOReflector_source_${{ github.run_id }}_${{ github.run_attempt }}
+          key: JCOReflector_source_${{ env.GITHUB_SHA }}
 
       - name: Compress release files
         run: |
@@ -399,7 +399,7 @@ jobs:
         run: |
           echo "GITHUB_COMMIT_MESSAGE=$(echo $GITHUB_SHA | cut -c 1-7)" >> $GITHUB_ENV
         shell: bash
-    
+
       - name: Commit statistics changes
         if: ${{ github.repository_owner == 'masesgroup'}} #do not push any changes outside main repo
         uses: EndBug/add-and-commit@v9

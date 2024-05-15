@@ -188,6 +188,11 @@ jobs:
       fail-fast: false
       matrix:
         framework: [ 'net6.0', 'net8.0' ]
+        jdk_vendor: [ 'temurin', 'zulu', 'microsoft', 'corretto', 'oracle']
+        jdk_version: [ '11', '17', '21' ] # only LTS versions
+        exclude:
+          - jdk_vendor: oracle
+            jdk_version: 11
 
     runs-on: ubuntu-latest
     steps:
@@ -203,6 +208,13 @@ jobs:
           enableCrossOsArchive: true
           path: ./bin/
           key: JCOReflector_linux_bin_${{ github.run_id }}_${{ github.run_attempt }}
+
+      - name: Set up JDK distribution
+        uses: actions/setup-java@v4
+        with: # running setup-java again overwrites the settings.xml
+          distribution: ${{ matrix.jdk_vendor }}
+          java-version: ${{ matrix.jdk_version }}
+          cache: 'maven'
 
       - name: Download and install Scala package
         run: |

@@ -122,6 +122,12 @@ jobs:
         run: .\bin\net462\MASES.JCOReflectorCLI -JobType CreateJars -JobFile .github\workflows\createjars_net462_win19.job -JDKFolder %JAVA_HOME_11_X64%
         shell: cmd
 
+      - name: Download Scala package
+        run: C:\msys64\usr\bin\wget.exe https://downloads.lightbend.com/scala/2.13.5/scala-2.13.5.zip
+
+      - name: Expand Scala package
+        run: Expand-Archive -LiteralPath '.\scala-2.13.5.zip' -DestinationPath .\bin\ -Force
+
       - name: Save JCOReflector source in cache
         uses: actions/cache/save@v4
         with:
@@ -189,47 +195,47 @@ jobs:
         env:
           JCOBRIDGE_SCOPEDON: JCOReflector|1.0.0
           JCOBRIDGE_LicensePath: ${{ secrets.JCOBRIDGE_ONLINE }}
-      - run: java -cp "./bin/${{ matrix.framework }}/JCOReflector.jar;./tests/jvm/java/src/" mscorlib.HelloNET --CoreCLRApp:Microsoft.NET6.App
+      - run: java -cp "./bin/${{ matrix.framework }}/JCOReflector.jar;./tests/jvm/java/src/" mscorlib.HelloNET ${{ env.EXTRA_ARGUMENT }}
         continue-on-error: true
         env:
           JCOBRIDGE_SCOPEDON: JCOReflector|1.0.0
           JCOBRIDGE_LicensePath: ${{ secrets.JCOBRIDGE_ONLINE }}
-      - run: java -cp "./bin/${{ matrix.framework }}/JCOReflector.jar;./tests/jvm/java/src/" mscorlib.HelloNETEvent --CoreCLRApp:Microsoft.NET6.App
+      - run: java -cp "./bin/${{ matrix.framework }}/JCOReflector.jar;./tests/jvm/java/src/" mscorlib.HelloNETEvent ${{ env.EXTRA_ARGUMENT }}
         continue-on-error: true
         env:
           JCOBRIDGE_SCOPEDON: JCOReflector|1.0.0
           JCOBRIDGE_LicensePath: ${{ secrets.JCOBRIDGE_ONLINE }}
-      - run: java -cp "./bin/${{ matrix.framework }}/JCOReflector.jar;./tests/jvm/java/src/" mscorlib.HelloIterator --CoreCLRApp:Microsoft.NET6.App
+      - run: java -cp "./bin/${{ matrix.framework }}/JCOReflector.jar;./tests/jvm/java/src/" mscorlib.HelloIterator ${{ env.EXTRA_ARGUMENT }}
         continue-on-error: true
         env:
           JCOBRIDGE_SCOPEDON: JCOReflector|1.0.0
           JCOBRIDGE_LicensePath: ${{ secrets.JCOBRIDGE_ONLINE }}
-      - run: java -cp "./bin/${{ matrix.framework }}/JCOReflector.jar;./tests/jvm/java/src/" hierarchy.HelloHierarchy --CoreCLRApp:Microsoft.NET6.App
+      - run: java -cp "./bin/${{ matrix.framework }}/JCOReflector.jar;./tests/jvm/java/src/" hierarchy.HelloHierarchy ${{ env.EXTRA_ARGUMENT }}
         continue-on-error: true
         env:
           JCOBRIDGE_SCOPEDON: JCOReflector|1.0.0
           JCOBRIDGE_LicensePath: ${{ secrets.JCOBRIDGE_ONLINE }}
-      - run: java -cp "./bin/${{ matrix.framework }}/JCOReflector.jar;./tests/jvm/java/src/" hierarchy.HelloInterfaces --CoreCLRApp:Microsoft.NET6.App
+      - run: java -cp "./bin/${{ matrix.framework }}/JCOReflector.jar;./tests/jvm/java/src/" hierarchy.HelloInterfaces ${{ env.EXTRA_ARGUMENT }}
         continue-on-error: true
         env:
           JCOBRIDGE_SCOPEDON: JCOReflector|1.0.0
           JCOBRIDGE_LicensePath: ${{ secrets.JCOBRIDGE_ONLINE }}
-      - run: java -cp "./bin/${{ matrix.framework }}/JCOReflector.jar;./tests/jvm/java/src/" nettest.HelloNETSocket --CoreCLRApp:Microsoft.NET6.App
+      - run: java -cp "./bin/${{ matrix.framework }}/JCOReflector.jar;./tests/jvm/java/src/" nettest.HelloNETSocket ${{ env.EXTRA_ARGUMENT }}
         continue-on-error: true
         env:
           JCOBRIDGE_SCOPEDON: JCOReflector|1.0.0
           JCOBRIDGE_LicensePath: ${{ secrets.JCOBRIDGE_ONLINE }}
-      - run: java -cp "./bin/${{ matrix.framework }}/JCOReflector.jar;./tests/jvm/java/src/" nettest.HelloNETSocket -async --CoreCLRApp:Microsoft.NET6.App
+      - run: java -cp "./bin/${{ matrix.framework }}/JCOReflector.jar;./tests/jvm/java/src/" nettest.HelloNETSocket -async ${{ env.EXTRA_ARGUMENT }}
         continue-on-error: true
         env:
           JCOBRIDGE_SCOPEDON: JCOReflector|1.0.0
           JCOBRIDGE_LicensePath: ${{ secrets.JCOBRIDGE_ONLINE }}
-      - run: java -cp "./bin/${{ matrix.framework }}/JCOReflector.jar;./tests/jvm/java/src/" refout.HelloRefOutBase --CoreCLRApp:Microsoft.NET6.App
+      - run: java -cp "./bin/${{ matrix.framework }}/JCOReflector.jar;./tests/jvm/java/src/" refout.HelloRefOutBase ${{ env.EXTRA_ARGUMENT }}
         continue-on-error: true
         env:
           JCOBRIDGE_SCOPEDON: JCOReflector|1.0.0
           JCOBRIDGE_LicensePath: ${{ secrets.JCOBRIDGE_ONLINE }}
-      - run: java -cp "./bin/${{ matrix.framework }}/JCOReflector.jar;./tests/jvm/java/src/" refout.HelloRefOut --CoreCLRApp:Microsoft.NET6.App
+      - run: java -cp "./bin/${{ matrix.framework }}/JCOReflector.jar;./tests/jvm/java/src/" refout.HelloRefOut ${{ env.EXTRA_ARGUMENT }}
         continue-on-error: true
         env:
           JCOBRIDGE_SCOPEDON: JCOReflector|1.0.0
@@ -241,6 +247,11 @@ jobs:
       fail-fast: false
       matrix:
         framework: [ 'net462', 'net6.0', 'net8.0' ]
+        jdk_vendor: [ 'temurin', 'zulu', 'microsoft', 'corretto', 'oracle']
+        jdk_version: [ '11', '17', '21' ] # only LTS versions
+        exclude:
+          - jdk_vendor: oracle
+            jdk_version: 11
 
     runs-on: windows-latest
     steps:
@@ -262,75 +273,76 @@ jobs:
           enableCrossOsArchive: true
           path: ./bin/
           key: JCOReflector_windows_bin_${{ github.run_id }}_${{ github.run_attempt }}
-
-      - name: Download Scala package
-        run: C:\msys64\usr\bin\wget.exe https://downloads.lightbend.com/scala/2.13.5/scala-2.13.5.zip
-
-      - name: Expand Scala package
-        run: Expand-Archive -LiteralPath '.\scala-2.13.5.zip' -DestinationPath .\ -Force
+ 
+      - name: Set up JDK distribution
+        uses: actions/setup-java@v4
+        with: # running setup-java again overwrites the settings.xml
+          distribution: ${{ matrix.jdk_vendor }}
+          java-version: ${{ matrix.jdk_version }}
+          cache: 'maven'
 
       - name: Build Scala test source file for ${{ matrix.framework }}
         shell: cmd
         run: |
           cd ./tests/jvm/scala
           mkdir output
-          ..\..\..\scala-2.13.5\bin\scalac -toolcp "../../../bin/${{ matrix.framework }}/*" -d ./output ./src/main/scala/hierarchy/* ./src/main/scala/mscorlib/* ./src/main/scala/nettest/* ./src/main/scala/refout/*
+          ..\..\..\bin\scala-2.13.5\bin\scalac -toolcp "../../../bin/${{ matrix.framework }}/*" -d ./output ./src/main/scala/hierarchy/* ./src/main/scala/mscorlib/* ./src/main/scala/nettest/* ./src/main/scala/refout/*
               
-      - run: .\scala-2.13.5\bin\scala -toolcp "./bin/${{ matrix.framework }}/*;./tests/jvm/scala/output" mscorlib.HelloLock --CoreCLRApp:Microsoft.NET6.App
+      - run: .\bin\scala-2.13.5\bin\scala -toolcp "./bin/${{ matrix.framework }}/*;./tests/jvm/scala/output" mscorlib.HelloLock ${{ env.EXTRA_ARGUMENT }}
         shell: cmd
         continue-on-error: true
         env:
           JCOBRIDGE_SCOPEDON: JCOReflector|1.0.0
           JCOBRIDGE_LicensePath: ${{ secrets.JCOBRIDGE_ONLINE }}
-      - run: .\scala-2.13.5\bin\scala -toolcp "./bin/${{ matrix.framework }}/*;./tests/jvm/scala/output" mscorlib.HelloNet --CoreCLRApp:Microsoft.NET6.App
+      - run: .\bin\scala-2.13.5\bin\scala -toolcp "./bin/${{ matrix.framework }}/*;./tests/jvm/scala/output" mscorlib.HelloNet ${{ env.EXTRA_ARGUMENT }}
         shell: cmd
         continue-on-error: true
         env:
           JCOBRIDGE_SCOPEDON: JCOReflector|1.0.0
           JCOBRIDGE_LicensePath: ${{ secrets.JCOBRIDGE_ONLINE }}
-      - run: .\scala-2.13.5\bin\scala -toolcp "./bin/${{ matrix.framework }}/*;./tests/jvm/scala/output" mscorlib.HelloNETEvent --CoreCLRApp:Microsoft.NET6.App
+      - run: .\bin\scala-2.13.5\bin\scala -toolcp "./bin/${{ matrix.framework }}/*;./tests/jvm/scala/output" mscorlib.HelloNETEvent ${{ env.EXTRA_ARGUMENT }}
         shell: cmd
         continue-on-error: true
         env:
           JCOBRIDGE_SCOPEDON: JCOReflector|1.0.0
           JCOBRIDGE_LicensePath: ${{ secrets.JCOBRIDGE_ONLINE }}
-      - run: .\scala-2.13.5\bin\scala -toolcp "./bin/${{ matrix.framework }}/*;./tests/jvm/scala/output" mscorlib.HelloIterator --CoreCLRApp:Microsoft.NET6.App
+      - run: .\bin\scala-2.13.5\bin\scala -toolcp "./bin/${{ matrix.framework }}/*;./tests/jvm/scala/output" mscorlib.HelloIterator ${{ env.EXTRA_ARGUMENT }}
         shell: cmd
         continue-on-error: true
         env:
           JCOBRIDGE_SCOPEDON: JCOReflector|1.0.0
           JCOBRIDGE_LicensePath: ${{ secrets.JCOBRIDGE_ONLINE }}
-      - run: .\scala-2.13.5\bin\scala -toolcp "./bin/${{ matrix.framework }}/*;./tests/jvm/scala/output" hierarchy.HelloHierarchy --CoreCLRApp:Microsoft.NET6.App
+      - run: .\bin\scala-2.13.5\bin\scala -toolcp "./bin/${{ matrix.framework }}/*;./tests/jvm/scala/output" hierarchy.HelloHierarchy ${{ env.EXTRA_ARGUMENT }}
         shell: cmd
         continue-on-error: true
         env:
           JCOBRIDGE_SCOPEDON: JCOReflector|1.0.0
           JCOBRIDGE_LicensePath: ${{ secrets.JCOBRIDGE_ONLINE }}
-      - run: .\scala-2.13.5\bin\scala -toolcp "./bin/${{ matrix.framework }}/*;./tests/jvm/scala/output" hierarchy.HelloInterfaces --CoreCLRApp:Microsoft.NET6.App
+      - run: .\bin\scala-2.13.5\bin\scala -toolcp "./bin/${{ matrix.framework }}/*;./tests/jvm/scala/output" hierarchy.HelloInterfaces ${{ env.EXTRA_ARGUMENT }}
         shell: cmd
         continue-on-error: true
         env:
           JCOBRIDGE_SCOPEDON: JCOReflector|1.0.0
           JCOBRIDGE_LicensePath: ${{ secrets.JCOBRIDGE_ONLINE }}
-      - run: .\scala-2.13.5\bin\scala -toolcp "./bin/${{ matrix.framework }}/*;./tests/jvm/scala/output" nettest.HelloNETSocket --CoreCLRApp:Microsoft.NET6.App
+      - run: .\bin\scala-2.13.5\bin\scala -toolcp "./bin/${{ matrix.framework }}/*;./tests/jvm/scala/output" nettest.HelloNETSocket ${{ env.EXTRA_ARGUMENT }}
         shell: cmd
         continue-on-error: true
         env:
           JCOBRIDGE_SCOPEDON: JCOReflector|1.0.0
           JCOBRIDGE_LicensePath: ${{ secrets.JCOBRIDGE_ONLINE }}
-      - run: .\scala-2.13.5\bin\scala -toolcp "./bin/${{ matrix.framework }}/*;./tests/jvm/scala/output" nettest.HelloNETSocket -async --CoreCLRApp:Microsoft.NET6.App
+      - run: .\bin\scala-2.13.5\bin\scala -toolcp "./bin/${{ matrix.framework }}/*;./tests/jvm/scala/output" nettest.HelloNETSocket -async ${{ env.EXTRA_ARGUMENT }}
         shell: cmd
         continue-on-error: true
         env:
           JCOBRIDGE_SCOPEDON: JCOReflector|1.0.0
           JCOBRIDGE_LicensePath: ${{ secrets.JCOBRIDGE_ONLINE }}
-      - run: .\scala-2.13.5\bin\scala -toolcp "./bin/${{ matrix.framework }}/*;./tests/jvm/scala/output" refout.HelloRefOutBase --CoreCLRApp:Microsoft.NET6.App
+      - run: .\bin\scala-2.13.5\bin\scala -toolcp "./bin/${{ matrix.framework }}/*;./tests/jvm/scala/output" refout.HelloRefOutBase ${{ env.EXTRA_ARGUMENT }}
         shell: cmd
         continue-on-error: true
         env:
           JCOBRIDGE_SCOPEDON: JCOReflector|1.0.0
           JCOBRIDGE_LicensePath: ${{ secrets.JCOBRIDGE_ONLINE }}
-      - run: .\scala-2.13.5\bin\scala -toolcp "./bin/${{ matrix.framework }}/*;./tests/jvm/scala/output" refout.HelloRefOut --CoreCLRApp:Microsoft.NET6.App
+      - run: .\bin\scala-2.13.5\bin\scala -toolcp "./bin/${{ matrix.framework }}/*;./tests/jvm/scala/output" refout.HelloRefOut ${{ env.EXTRA_ARGUMENT }}
         shell: cmd
         continue-on-error: true
         env:

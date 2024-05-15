@@ -88,12 +88,16 @@ jobs:
       - name: Build JAR files
         run: dotnet bin/net8.0/MASES.JCOReflectorCLI.dll -JobType CreateJars -JDKFolder $JAVA_HOME_11_X64 -JobFile .github/workflows/createjars_net8.0_linux.job
 
+      - name: Extract commit SHA
+        run: |
+          echo "GITHUB_COMMIT_MESSAGE=$(echo $GITHUB_SHA | cut -c 1-7)" >> $GITHUB_ENV
+
       - name: Save JCOReflector bin in cache
         uses: actions/cache/save@v4
         with:
           enableCrossOsArchive: true
           path: ./bin/
-          key: JCOReflector_linux_bin_${{ github.run_id }}_${{ github.run_attempt }}
+          key: JCOReflector_linux_bin_${{ env.GITHUB_SHA }}
 
 
   execute_java_tests:
@@ -121,7 +125,7 @@ jobs:
           fail-on-cache-miss: true
           enableCrossOsArchive: true
           path: ./bin/
-          key: JCOReflector_linux_bin_${{ github.run_id }}_${{ github.run_attempt }}
+          key: JCOReflector_linux_bin_${{ env.GITHUB_SHA }}
 
       - name: Set up JDK distribution
         uses: actions/setup-java@v4
@@ -207,7 +211,7 @@ jobs:
           fail-on-cache-miss: true
           enableCrossOsArchive: true
           path: ./bin/
-          key: JCOReflector_linux_bin_${{ github.run_id }}_${{ github.run_attempt }}
+          key: JCOReflector_linux_bin_${{ env.GITHUB_SHA }}
 
       - name: Set up JDK distribution
         uses: actions/setup-java@v4

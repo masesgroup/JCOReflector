@@ -133,14 +133,14 @@ jobs:
         with:
           enableCrossOsArchive: true
           path: ./src/jvm/
-          key: JCOReflector_source_${{ env.GITHUB_SHA }}
+          key: JCOReflector_source_${{ github.sha }}
 
       - name: Save JCOReflector bin in cache
         uses: actions/cache/save@v4
         with:
           enableCrossOsArchive: true
           path: ./bin/
-          key: JCOReflector_windows_bin_${{ env.GITHUB_SHA }}
+          key: JCOReflector_windows_bin_${{ github.sha }}
 
   execute_java_tests:
     needs: build_windows
@@ -173,7 +173,7 @@ jobs:
           fail-on-cache-miss: true
           enableCrossOsArchive: true
           path: ./bin/
-          key: JCOReflector_windows_bin_${{ env.GITHUB_SHA }}
+          key: JCOReflector_windows_bin_${{ github.sha }}
  
       - name: Set up JDK distribution
         uses: actions/setup-java@v4
@@ -272,7 +272,7 @@ jobs:
           fail-on-cache-miss: true
           enableCrossOsArchive: true
           path: ./bin/
-          key: JCOReflector_windows_bin_${{ env.GITHUB_SHA }}
+          key: JCOReflector_windows_bin_${{ github.sha }}
  
       - name: Set up JDK distribution
         uses: actions/setup-java@v4
@@ -379,7 +379,7 @@ jobs:
           fail-on-cache-miss: true
           enableCrossOsArchive: true
           path: ./bin/
-          key: JCOReflector_windows_bin_${{ env.GITHUB_SHA }}
+          key: JCOReflector_windows_bin_${{ github.sha }}
           
       - name: Restore JCOReflector source from cache
         uses: actions/cache/restore@v4
@@ -387,7 +387,7 @@ jobs:
           fail-on-cache-miss: true
           enableCrossOsArchive: true
           path: ./src/jvm/
-          key: JCOReflector_source_${{ env.GITHUB_SHA }}
+          key: JCOReflector_source_${{ github.sha }}
 
       - name: Compress release files
         run: |

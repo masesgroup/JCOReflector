@@ -223,7 +223,12 @@ jobs:
           sudo apt-get install zip
           curl -s "https://get.sdkman.io" | bash
           source "$HOME/.sdkman/bin/sdkman-init.sh"
-          sdk install scala 2.13.5
+          sdk install scala 2.13.13
+
+      - name: Prepare extra argument
+        if: matrix.framework == 'net6.0'
+        shell: bash
+        run: echo "EXTRA_ARGUMENT=--CoreCLRApp:Microsoft.NET6.App" >> $GITHUB_ENV
 
       - name: Build Scala test source file
         run: |

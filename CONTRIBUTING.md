@@ -15,22 +15,22 @@ The project is organized in this folder structure:
 * **bin** (The output folder, automatically generated and not in git)
     * net462 (folder for .NET Framework output)
     * net6.0 (folder for .NET 6 output)
-    * net7.0 (folder for .NET 7 output)
+    * net8.0 (folder for .NET 8 output)
 	
 * **netreflected** (container of Java classes)
     * **src** (a standard folder used in any Java IDE)
         * **JCOReflector** (contains the base classes used from JCOReflector to build reflected classes)
         * **net462** (contains, sepearated in folders, the sets of reflected classes of .NET Framework generated from JCOReflector: **no manual action shall be made on this folder and subfolders, an issue or enhancement shall be made in the JCOReflector engine (code or templates)**)
 		* **net6.0** (contains, sepearated in folders, the sets of reflected classes of .NET 6 generated from JCOReflector: **no manual action shall be made on this folder and subfolders, an issue or enhancement shall be made in the JCOReflector engine (code or templates)**)
-		* **net7.0** (contains, sepearated in folders, the sets of reflected classes of .NET 7 generated from JCOReflector: **no manual action shall be made on this folder and subfolders, an issue or enhancement shall be made in the JCOReflector engine (code or templates)**)
+		* **net8.0** (contains, sepearated in folders, the sets of reflected classes of .NET 8 generated from JCOReflector: **no manual action shall be made on this folder and subfolders, an issue or enhancement shall be made in the JCOReflector engine (code or templates)**)
     * **docs**
         * **net462** (contains the generated documentation related to .NET Framework: **no manual action shall be made on this folder and subfolders, an issue or enhancement shall be made in the JCOReflector engine (code or templates)**)
 		* **net6.0** (contains the generated documentation related to .NET 6: **no manual action shall be made on this folder and subfolders, an issue or enhancement shall be made in the JCOReflector engine (code or templates)**)
-		* **net7.0** (contains the generated documentation related to .NET 7: **no manual action shall be made on this folder and subfolders, an issue or enhancement shall be made in the JCOReflector engine (code or templates)**)
+		* **net8.0** (contains the generated documentation related to .NET 8: **no manual action shall be made on this folder and subfolders, an issue or enhancement shall be made in the JCOReflector engine (code or templates)**)
     * **statistics**
         * **net462** (contains the generated statistics related to .NET Framework: **no manual action shall be made on this folder and subfolders, an issue or enhancement shall be made in the JCOReflector engine (code or templates)**)
 		* **net6.0** (contains the generated statistics related to .NET 6: **no manual action shall be made on this folder and subfolders, an issue or enhancement shall be made in the JCOReflector engine (code or templates)**)
-		* **net7.0** (contains the generated statistics related to .NET 7: **no manual action shall be made on this folder and subfolders, an issue or enhancement shall be made in the JCOReflector engine (code or templates)**)
+		* **net8.0** (contains the generated statistics related to .NET 8: **no manual action shall be made on this folder and subfolders, an issue or enhancement shall be made in the JCOReflector engine (code or templates)**)
 		
 * **netreflected-tests** (container test classes)
 	* **java** (container of Java test classes)
@@ -79,7 +79,7 @@ The basic and simple rules for the project are:
 * **Unit test**: contibution can be made in the testing code section under *netreflected-tests* folder
 * **Reflected classes**: the following folders and subsolders are generated code from JCOReflector, to change them a developer shall modify the templates; the code will be updated from mantairners after the validation of JCOReflector engine:
     * *netreflected/src/net6.0*
-    * *netreflected/src/net7.0*
+    * *netreflected/src/net8.0*
     * *netreflected/src/net462*
 
 ## Suggesting Enhancements

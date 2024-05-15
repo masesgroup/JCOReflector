@@ -4,9 +4,6 @@
 [submodule "netreflected/docs/net6.0"]
 	path = docs/net6.0
 	url = https://github.com/masesgroup/NET6Docs.git
-[submodule "netreflected/docs/net7.0"]
-	path = docs/net7.0
-	url = https://github.com/masesgroup/NET7Docs.git
 [submodule "docs/net8.0"]
 	path = docs/net8.0
 	url = https://github.com/masesgroup/NET8Docs.git

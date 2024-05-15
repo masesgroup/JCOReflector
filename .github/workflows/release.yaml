@@ -20,7 +20,7 @@ jobs:
     strategy:
       fail-fast: false
       matrix:
-        framework: [ 'net462', 'net6.0', 'net7.0', 'net8.0' ]
+        framework: [ 'net462', 'net6.0', 'net8.0' ]
   
     # Steps represent a sequence of tasks that will be executed as part of the job
     steps:
@@ -58,7 +58,7 @@ jobs:
 
       - name: Install local file to be used within Javadoc section of generated POM 
         shell: bash
-        run: mvn install:install-file --no-transfer-progress -Dfile=../../../bin/${{ matrix.framework }}/JCOBridge.jar -DgroupId=JCOBridge -DartifactId=JCOBridge -Dversion=2.5.10 -Dpackaging=jar -f ./src/jvm/src/${{ matrix.framework }}.xml
+        run: mvn install:install-file --no-transfer-progress -Dfile=../../../bin/${{ matrix.framework }}/JCOBridge.jar -DgroupId=JCOBridge -DartifactId=JCOBridge -Dversion=2.5.13 -Dpackaging=jar -f ./src/jvm/src/${{ matrix.framework }}.xml
 
       - name: Publish ${{ matrix.framework }} to Apache Maven Central
         shell: bash
@@ -99,13 +99,11 @@ jobs:
       - name: Copy configuration file
         run: |
           Copy-Item .github\workflows\JCOReflectorCLI_net6.0.runtimeconfig.json -Destination bin\net6.0\MASES.JCOReflectorCLI.runtimeconfig.json -Force
-          Copy-Item .github\workflows\JCOReflectorCLI_net7.0.runtimeconfig.json -Destination bin\net7.0\MASES.JCOReflectorCLI.runtimeconfig.json -Force
           Copy-Item .github\workflows\JCOReflectorCLI_net8.0.runtimeconfig.json -Destination bin\net8.0\MASES.JCOReflectorCLI.runtimeconfig.json -Force
 
       - name: Build Java files
         run: |
           .\bin\net6.0\MASES.JCOReflectorCLI -JobType Build -JobFile .github\workflows\build_win19.job -JDKFolder %JAVA_HOME_11_X64%
-          .\bin\net7.0\MASES.JCOReflectorCLI -JobType Build -JobFile .github\workflows\build_win19.job -JDKFolder %JAVA_HOME_11_X64%
           .\bin\net8.0\MASES.JCOReflectorCLI -JobType Build -JobFile .github\workflows\build_win19.job -JDKFolder %JAVA_HOME_11_X64%
           .\bin\net462\MASES.JCOReflectorCLI -JobType Build -JobFile .github\workflows\build_win19.job -JDKFolder %JAVA_HOME_11_X64%
         shell: cmd
@@ -113,7 +111,6 @@ jobs:
       - name: Build JAR files
         run: |
           .\bin\net6.0\MASES.JCOReflectorCLI -JobType CreateJars -JobFile .github\workflows\createjars_net6.0_win19.job -JDKFolder %JAVA_HOME_11_X64%
-          .\bin\net7.0\MASES.JCOReflectorCLI -JobType CreateJars -JobFile .github\workflows\createjars_net7.0_win19.job -JDKFolder %JAVA_HOME_11_X64%
           .\bin\net8.0\MASES.JCOReflectorCLI -JobType CreateJars -JobFile .github\workflows\createjars_net8.0_win19.job -JDKFolder %JAVA_HOME_11_X64%
           .\bin\net462\MASES.JCOReflectorCLI -JobType CreateJars -JobFile .github\workflows\createjars_net462_win19.job -JDKFolder %JAVA_HOME_11_X64%
         shell: cmd
@@ -121,14 +118,12 @@ jobs:
       - name: Compress release files
         run: | 
           Compress-Archive -Path .\bin\net6.0\* -DestinationPath .\bin\net6.0.zip
-          Compress-Archive -Path .\bin\net7.0\* -DestinationPath .\bin\net7.0.zip
           Compress-Archive -Path .\bin\net8.0\* -DestinationPath .\bin\net8.0.zip
           Compress-Archive -Path .\bin\net462\* -DestinationPath .\bin\net462.zip
           
       - name: Compress documentation files
         run: | 
           Compress-Archive -Path .\docs\net6.0\* -DestinationPath .\net6.0.docs.zip
-          Compress-Archive -Path .\docs\net7.0\* -DestinationPath .\net7.0.docs.zip
           Compress-Archive -Path .\docs\net8.0\* -DestinationPath .\net8.0.docs.zip
           Compress-Archive -Path .\docs\net462\* -DestinationPath .\net462.docs.zip
 
@@ -138,15 +133,6 @@ jobs:
           repo_token: ${{ secrets.GITHUB_TOKEN }}
           file: .\bin\net6.0.zip
           asset_name: net6.0.zip
-          tag: ${{ github.ref }}
-          overwrite: true
-
-      - name: Upload net7.0 binaries to release
-        uses: svenstaro/upload-release-action@v2
-        with:
-          repo_token: ${{ secrets.GITHUB_TOKEN }}
-          file: .\bin\net7.0.zip
-          asset_name: net7.0.zip
           tag: ${{ github.ref }}
           overwrite: true
 
@@ -174,15 +160,6 @@ jobs:
           repo_token: ${{ secrets.GITHUB_TOKEN }}
           file: .\net6.0.docs.zip
           asset_name: net6.0.docs.zip
-          tag: ${{ github.ref }}
-          overwrite: true
-
-      - name: Upload net7.0 documentation to release
-        uses: svenstaro/upload-release-action@v2
-        with:
-          repo_token: ${{ secrets.GITHUB_TOKEN }}
-          file: .\net7.0.docs.zip
-          asset_name: net7.0.docs.zip
           tag: ${{ github.ref }}
           overwrite: true
 

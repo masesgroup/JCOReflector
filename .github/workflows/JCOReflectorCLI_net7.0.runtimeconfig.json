@@ -1,9 +1,0 @@
-{
-  "runtimeOptions": {
-    "tfm": "net7.0",
-    "framework": {
-      "name": "Microsoft.WindowsDesktop.App",
-      "version": "7.0.0"
-    }
-  }
-}

@@ -29,15 +29,15 @@
       <meta name="loc:changeTheme" content="Change theme">
       <meta name="loc:copy" content="Copy">
       <meta name="loc:downloadPdf" content="Download PDF">
+
+      <script type="module" src="./public/docfx.min.js"></script>
+
+      <script>
+        const theme = localStorage.getItem('theme') || 'auto'
+        document.documentElement.setAttribute('data-bs-theme', theme === 'auto' ? (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light') : theme)
+      </script>
+
   </head>
-
-  <script type="module" src="./public/docfx.min.js"></script>
-
-  <script>
-    const theme = localStorage.getItem('theme') || 'auto'
-    document.documentElement.setAttribute('data-bs-theme', theme === 'auto' ? (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light') : theme)
-  </script>
-
 
   <body class="tex2jax_ignore" data-layout="" data-yaml-mime="">
     <header class="bg-body border-bottom">
@@ -63,23 +63,9 @@
     </header>
 
     <main class="container-xxl">
-      <div class="toc-offcanvas">
-        <div class="offcanvas-md offcanvas-start" tabindex="-1" id="tocOffcanvas" aria-labelledby="tocOffcanvasLabel">
-          <div class="offcanvas-header">
-            <h5 class="offcanvas-title" id="tocOffcanvasLabel">Table of Contents</h5>
-            <button type="button" class="btn-close" data-bs-dismiss="offcanvas" data-bs-target="#tocOffcanvas" aria-label="Close"></button>
-          </div>
-          <div class="offcanvas-body">
-            <nav class="toc" id="toc"></nav>
-          </div>
-        </div>
-      </div>
 
       <div class="content">
         <div class="actionbar">
-          <button class="btn btn-lg border-0 d-md-none" style="margin-top: -.65em; margin-left: -.8em" type="button" data-bs-toggle="offcanvas" data-bs-target="#tocOffcanvas" aria-controls="tocOffcanvas" aria-expanded="false" aria-label="Show table of contents">
-            <i class="bi bi-list"></i>
-          </button>
 
           <nav id="breadcrumb"></nav>
         </div>
@@ -94,14 +80,14 @@
 <tr>
 <th>.NET Framework</th>
 <th>.NET 6</th>
-<th>.NET 7</th>
+<th>.NET 8</th>
 </tr>
 </thead>
 <tbody>
 <tr>
 <td><a href="https://search.maven.org/search?q=g:%22com.masesgroup%22%20AND%20a:%22jcoreflector_net462%22"><img src="https://img.shields.io/maven-central/v/com.masesgroup/jcoreflector_net462.svg?label=Maven%20Central" alt="Maven Central"></a></td>
 <td><a href="https://search.maven.org/search?q=g:%22com.masesgroup%22%20AND%20a:%22jcoreflector_net6.0%22"><img src="https://img.shields.io/maven-central/v/com.masesgroup/jcoreflector_net6.0.svg?label=Maven%20Central" alt="Maven Central"></a></td>
-<td><a href="https://search.maven.org/search?q=g:%22com.masesgroup%22%20AND%20a:%22jcoreflector_net7.0%22"><img src="https://img.shields.io/maven-central/v/com.masesgroup/jcoreflector_net7.0.svg?label=Maven%20Central" alt="Maven Central"></a></td>
+<td><a href="https://search.maven.org/search?q=g:%22com.masesgroup%22%20AND%20a:%22jcoreflector_net8.0%22"><img src="https://img.shields.io/maven-central/v/com.masesgroup/jcoreflector_net8.0.svg?label=Maven%20Central" alt="Maven Central"></a></td>
 </tr>
 </tbody>
 </table>
@@ -159,7 +145,7 @@ It was created internally from us to support our customers, now we made it avail
 <li><a href="https://www.nuget.org/packages/MASES.JCOBridge"><img src="https://img.shields.io/nuget/v/MASES.JCOBridge" alt="JCOBridge nuget"></a></li>
 </ul>
 <h2 id="history-of-the-project">History of the project</h2>
-<p>This project started in 2019 with the aims to create a set of Java (JVM) classes which mimic .NET (Framework/6/7) conterparts, in May 2020 the first commit in GitHub.
+<p>This project started in 2019 with the aims to create a set of Java (JVM) classes which mimic .NET (Framework/6/8) conterparts, in May 2020 the first commit in GitHub.
 Using this project it is possible to use .NET API in Java and all JVM enabled languages (Scala, Kotlin, and so on).
 The final output of JCOReflector are JARs.
 At its first stages no JARs was available: only the JCOBridge engine, the graphical UI that helps to manages reflection and the operations needed to finally build JARs was relased.
@@ -293,7 +279,7 @@ In all cases <a href="https://www.jcobridge.com">JCOBridge</a> superside these l
 <ul>
 <li><strong>net462</strong> (available only on Windows platform)</li>
 <li><strong>net6.0</strong> (available on .NET 6 supported platforms)</li>
-<li><strong>net7.0</strong> (available on .NET 7 supported platforms)</li>
+<li><strong>net8.0</strong> (available on .NET 8 supported platforms)</li>
 </ul>
 <p>in each subfolder will be available two executables:</p>
 <ul>
@@ -303,11 +289,11 @@ In all cases <a href="https://www.jcobridge.com">JCOBridge</a> superside these l
 <p><img src="images/jcoreflector.png" alt="JCOReflector" title="JCOReflector screenshot">
 <img src="images/jcoreflector2.png" alt="JCOReflector" title="JCOReflector screenshot"></p>
 <h2 id="reflected-assemblies">Reflected Assemblies</h2>
-<p>The folder <a href="/src/jvm/src">src/jvm/src</a> contains all reflected classes generated for <strong>.NET</strong> <strong>Framework</strong> (<em>net462</em>), <strong>6</strong> (<em>net6.0</em>) and <strong>7</strong> (<em>net7.0</em>). Below the coverage <a href="#statistics">statistics</a>:</p>
+<p>The folder <a href="/src/jvm/src">src/jvm/src</a> contains all reflected classes generated for <strong>.NET</strong> <strong>Framework</strong> (<em>net462</em>), <strong>6</strong> (<em>net6.0</em>) and <strong>8</strong> (<em>net8.0</em>). Below the coverage <a href="#statistics">statistics</a>:</p>
 <h3 id="statistics">Statistics</h3>
 <p><img src="https://docs.google.com/spreadsheets/d/e/2PACX-1vTe94B4KWTddOWDnIHGRkHHPq23g_oPzZUfmVU3ls1lEUwNQmG_T4Zi7xCCNkb0RMqkT8LblRNW7aT9/pubchart?oid=845891829&amp;format=image" alt="FrameworkStatistic"></p>
 <p><img src="https://docs.google.com/spreadsheets/d/e/2PACX-1vTe94B4KWTddOWDnIHGRkHHPq23g_oPzZUfmVU3ls1lEUwNQmG_T4Zi7xCCNkb0RMqkT8LblRNW7aT9/pubchart?oid=1200391981&amp;format=image" alt="Net6Statistic"></p>
-<p><img src="https://docs.google.com/spreadsheets/d/e/2PACX-1vTe94B4KWTddOWDnIHGRkHHPq23g_oPzZUfmVU3ls1lEUwNQmG_T4Zi7xCCNkb0RMqkT8LblRNW7aT9/pubchart?oid=1527441532&amp;format=image" alt="Net7Statistic"></p>
+<p><img src="https://docs.google.com/spreadsheets/d/e/2PACX-1vTe94B4KWTddOWDnIHGRkHHPq23g_oPzZUfmVU3ls1lEUwNQmG_T4Zi7xCCNkb0RMqkT8LblRNW7aT9/pubchart?oid=1753386013&amp;format=image" alt="Net8Statistic"></p>
 
 </article>
 
@@ -329,7 +315,7 @@ In all cases <a href="https://www.jcobridge.com">JCOBridge</a> superside these l
     <footer class="border-top text-secondary">
       <div class="container-xxl">
         <div class="flex-fill">
-          <div style="text-align: center;">Copyright © 2023 MASES s.r.l.. | Via San Cesidio 16 - San Valentino in A.C. - PE | P.I. 01932310681</div>
+          <div style="text-align: center;">Copyright © 2024 MASES s.r.l.. | Via San Cesidio 16 - San Valentino in A.C. - PE | P.I. 01932310681</div>
         </div>
       </div>
     </footer>

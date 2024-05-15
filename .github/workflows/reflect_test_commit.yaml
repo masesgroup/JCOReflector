@@ -26,7 +26,7 @@ jobs:
         run: |
           mapfile -d ',' -t added_modified_files < <(printf '%s,' '${{ steps.get_changed_files.outputs.added_modified }}')
           for added_modified_file in "${added_modified_files[@]}"; do
-              if [[ $added_modified_file == ".github/workflows/windows.yaml"* ]]; then
+              if [[ $added_modified_file == ".github/workflows/reflect_test_commit.yaml"* ]]; then
                 echo "$added_modified_file is under the directory '.github/workflows'."
                 echo "run_job=true" >> $GITHUB_OUTPUT
                 break

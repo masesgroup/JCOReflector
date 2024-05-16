@@ -5,7 +5,7 @@ JCOReflector is a comprehensive suite of libraries and tools to use Java/JVM API
 ### Libraries and Tools
 
 |.NET Framework | .NET 6 | .NET 8 |
-|---	|---	|---	|---	|
+|---	|---	|---	|
 |[![Maven Central](https://img.shields.io/maven-central/v/com.masesgroup/jcoreflector_net462.svg?label=Maven%20Central)](https://search.maven.org/search?q=g:%22com.masesgroup%22%20AND%20a:%22jcoreflector_net462%22) | [![Maven Central](https://img.shields.io/maven-central/v/com.masesgroup/jcoreflector_net6.0.svg?label=Maven%20Central)](https://search.maven.org/search?q=g:%22com.masesgroup%22%20AND%20a:%22jcoreflector_net6.0%22)| [![Maven Central](https://img.shields.io/maven-central/v/com.masesgroup/jcoreflector_net8.0.svg?label=Maven%20Central)](https://search.maven.org/search?q=g:%22com.masesgroup%22%20AND%20a:%22jcoreflector_net8.0%22)|
 
 |JCOReflectorEngine | JCOReflectorCLI |

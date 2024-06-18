@@ -180,8 +180,10 @@ namespace MASES.JCOReflectorEngine
                 Path.Combine("linux-arm64", "libnethost.so"),
                 Path.Combine("linux-x64", "J2CBridgeHostActivator.so"),
                 Path.Combine("linux-x64", "libnethost.so"),
+#if !NET8_0
                 Path.Combine("win-arm", "J2CBridgeHostActivator.dll"),
                 Path.Combine("win-arm", "nethost.dll"),
+#endif
                 Path.Combine("win-arm64", "J2CBridgeHostActivator.dll"),
                 Path.Combine("win-arm64", "nethost.dll"),
                 Path.Combine("win-x64", "J2CBridgeHostActivator.dll"),

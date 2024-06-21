@@ -408,11 +408,12 @@ jobs:
         shell: cmd
         continue-on-error: true
 
-  execute_java_tests_linux:
+  execute_java_tests_unix:
     needs: build_linux
     strategy:
       fail-fast: false
       matrix:
+        os: [ 'ubuntu-latest', 'macos-latest', 'macos-latest-large' ]
         framework: [ 'net6.0', 'net8.0' ]
         jdk_vendor: [ 'temurin', 'zulu', 'microsoft', 'corretto', 'oracle']
         jdk_version: [ '11', '17', '21' ] # only LTS versions
@@ -420,7 +421,7 @@ jobs:
           - jdk_vendor: oracle
             jdk_version: 11
 
-    runs-on: ubuntu-latest
+    runs-on: ${{ matrix.os }}
     steps:
       # Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it
       - uses: actions/checkout@v4
@@ -494,11 +495,12 @@ jobs:
           #java -cp "./bin/net6.0/JCOReflector.jar;./tests/jvm/java/src/" refout.HelloRefOutBase
           #java -cp "./bin/net6.0/JCOReflector.jar;./tests/jvm/java/src/" refout.HelloRefOut
 
-  execute_scala_tests_linux:
+  execute_scala_tests_unix:
     needs: build_linux
     strategy:
       fail-fast: false
       matrix:
+        os: [ 'ubuntu-latest', 'macos-latest', 'macos-latest-large' ]
         framework: [ 'net6.0', 'net8.0' ]
         jdk_vendor: [ 'temurin', 'zulu', 'microsoft', 'corretto', 'oracle']
         jdk_version: [ '11', '17', '21' ] # only LTS versions
@@ -506,7 +508,7 @@ jobs:
           - jdk_vendor: oracle
             jdk_version: 11
 
-    runs-on: ubuntu-latest
+    runs-on: ${{ matrix.os }}
     steps:
       # Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it
       - uses: actions/checkout@v4
@@ -601,7 +603,7 @@ jobs:
       - run: rm -rf ./tests/jvm/scala/output
 
   execute_finalize:
-    needs: [execute_java_tests_windows, execute_scala_tests_windows, execute_java_tests_linux, execute_scala_tests_linux]
+    needs: [execute_java_tests_windows, execute_scala_tests_windows, execute_java_tests_unix, execute_scala_tests_unix]
 
     runs-on: windows-latest
     steps:

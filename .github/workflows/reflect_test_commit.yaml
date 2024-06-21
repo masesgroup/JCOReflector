@@ -6,12 +6,14 @@ name: CI_REFLECT_TEST_COMMIT
 # events but only for the master branch
 on:
   push:
-    branches: [ master ]
+    # only trigger on branches, not on tags
+    branches: '**'
 
 # This workflow contains two jobs called "check" and "build_windows"
 jobs:
   # Verify if a build is needed
   check:
+    if: ${{ github.repository_owner == 'masesgroup' || ( github.repository_owner != 'masesgroup' && $GITHUB_REF_NAME != 'master' }} #do not execute on master outside main repo
     name: Check changed files
     outputs:
       run_job: ${{ steps.check_files.outputs.run_job }}
@@ -443,6 +445,9 @@ jobs:
           java-version: ${{ matrix.jdk_version }}
           cache: 'maven'
 
+      - name: Extract secret
+        run: .github/workflows/GetLicense.ps1 ${{ secrets.JCOBRIDGE_ENCODED_2_5_15 }} $GITHUB_WORKSPACE/JCOBridge.lic
+
       - name: Prepare extra argument
         if: matrix.framework == 'net6.0'
         shell: bash
@@ -455,42 +460,42 @@ jobs:
         continue-on-error: true
         env:
           JCOBRIDGE_SCOPEDON: JCOReflector|1.0.0
-          JCOBRIDGE_LicensePath: ${{ secrets.JCOBRIDGE_ONLINE }}
+          JCOBRIDGE_LicensePath: $GITHUB_WORKSPACE/JCOBridge.lic # ${{ secrets.JCOBRIDGE_ONLINE }}
       - run: java -cp "./bin/${{ matrix.framework }}/JCOReflector.jar:./tests/jvm/java/src/" mscorlib.HelloNET ${{ env.EXTRA_ARGUMENT }}
         continue-on-error: true
         env:
           JCOBRIDGE_SCOPEDON: JCOReflector|1.0.0
-          JCOBRIDGE_LicensePath: ${{ secrets.JCOBRIDGE_ONLINE }}
+          JCOBRIDGE_LicensePath: $GITHUB_WORKSPACE/JCOBridge.lic # ${{ secrets.JCOBRIDGE_ONLINE }}
       - run: java -cp "./bin/${{ matrix.framework }}/JCOReflector.jar:./tests/jvm/java/src/" mscorlib.HelloNETEvent ${{ env.EXTRA_ARGUMENT }}
         continue-on-error: true
         env:
           JCOBRIDGE_SCOPEDON: JCOReflector|1.0.0
-          JCOBRIDGE_LicensePath: ${{ secrets.JCOBRIDGE_ONLINE }}
+          JCOBRIDGE_LicensePath: $GITHUB_WORKSPACE/JCOBridge.lic # ${{ secrets.JCOBRIDGE_ONLINE }}
       - run: java -cp "./bin/${{ matrix.framework }}/JCOReflector.jar:./tests/jvm/java/src/" mscorlib.HelloIterator ${{ env.EXTRA_ARGUMENT }}
         continue-on-error: true
         env:
           JCOBRIDGE_SCOPEDON: JCOReflector|1.0.0
-          JCOBRIDGE_LicensePath: ${{ secrets.JCOBRIDGE_ONLINE }}
+          JCOBRIDGE_LicensePath: $GITHUB_WORKSPACE/JCOBridge.lic # ${{ secrets.JCOBRIDGE_ONLINE }}
       - run: java -cp "./bin/${{ matrix.framework }}/JCOReflector.jar:./tests/jvm/java/src/" hierarchy.HelloHierarchy ${{ env.EXTRA_ARGUMENT }}
         continue-on-error: true
         env:
           JCOBRIDGE_SCOPEDON: JCOReflector|1.0.0
-          JCOBRIDGE_LicensePath: ${{ secrets.JCOBRIDGE_ONLINE }}
+          JCOBRIDGE_LicensePath: $GITHUB_WORKSPACE/JCOBridge.lic # ${{ secrets.JCOBRIDGE_ONLINE }}
       - run: java -cp "./bin/${{ matrix.framework }}/JCOReflector.jar:./tests/jvm/java/src/" hierarchy.HelloInterfaces ${{ env.EXTRA_ARGUMENT }}
         continue-on-error: true
         env:
           JCOBRIDGE_SCOPEDON: JCOReflector|1.0.0
-          JCOBRIDGE_LicensePath: ${{ secrets.JCOBRIDGE_ONLINE }}
+          JCOBRIDGE_LicensePath: $GITHUB_WORKSPACE/JCOBridge.lic # ${{ secrets.JCOBRIDGE_ONLINE }}
       - run: java -cp "./bin/${{ matrix.framework }}/JCOReflector.jar:./tests/jvm/java/src/" nettest.HelloNETSocket -server 127.0.0.1 ${{ env.EXTRA_ARGUMENT }}
         continue-on-error: true
         env:
           JCOBRIDGE_SCOPEDON: JCOReflector|1.0.0
-          JCOBRIDGE_LicensePath: ${{ secrets.JCOBRIDGE_ONLINE }}
+          JCOBRIDGE_LicensePath: $GITHUB_WORKSPACE/JCOBridge.lic # ${{ secrets.JCOBRIDGE_ONLINE }}
       - run: java -cp "./bin/${{ matrix.framework }}/JCOReflector.jar:./tests/jvm/java/src/" nettest.HelloNETSocket -async -server 127.0.0.1 ${{ env.EXTRA_ARGUMENT }}
         continue-on-error: true
         env:
           JCOBRIDGE_SCOPEDON: JCOReflector|1.0.0
-          JCOBRIDGE_LicensePath: ${{ secrets.JCOBRIDGE_ONLINE }}
+          JCOBRIDGE_LicensePath: $GITHUB_WORKSPACE/JCOBridge.lic # ${{ secrets.JCOBRIDGE_ONLINE }}
         
           #java -cp "./bin/net6.0/JCOReflector.jar;./tests/jvm/java/src/" refout.HelloRefOutBase
           #java -cp "./bin/net6.0/JCOReflector.jar;./tests/jvm/java/src/" refout.HelloRefOut
@@ -539,6 +544,9 @@ jobs:
           source "$HOME/.sdkman/bin/sdkman-init.sh"
           sdk install scala 2.13.13
 
+      - name: Extract secret
+        run: .github/workflows/GetLicense.ps1 ${{ secrets.JCOBRIDGE_ENCODED_2_5_15 }} $GITHUB_WORKSPACE/JCOBridge.lic
+
       - name: Prepare extra argument
         if: matrix.framework == 'net6.0'
         shell: bash
@@ -554,52 +562,52 @@ jobs:
         continue-on-error: true
         env:
           JCOBRIDGE_SCOPEDON: JCOReflector|1.0.0
-          JCOBRIDGE_LicensePath: ${{ secrets.JCOBRIDGE_ONLINE }}
+          JCOBRIDGE_LicensePath: $GITHUB_WORKSPACE/JCOBridge.lic # ${{ secrets.JCOBRIDGE_ONLINE }}
       - run: source "$HOME/.sdkman/bin/sdkman-init.sh" && scala -nobootcp -toolcp "./bin/${{ matrix.framework }}/*:./tests/jvm/scala/output" mscorlib.HelloNet ${{ env.EXTRA_ARGUMENT }}
         continue-on-error: true
         env:
           JCOBRIDGE_SCOPEDON: JCOReflector|1.0.0
-          JCOBRIDGE_LicensePath: ${{ secrets.JCOBRIDGE_ONLINE }}
+          JCOBRIDGE_LicensePath: $GITHUB_WORKSPACE/JCOBridge.lic # ${{ secrets.JCOBRIDGE_ONLINE }}
       - run: source "$HOME/.sdkman/bin/sdkman-init.sh" && scala -nobootcp -toolcp "./bin/${{ matrix.framework }}/*:./tests/jvm/scala/output" mscorlib.HelloNETEvent ${{ env.EXTRA_ARGUMENT }}
         continue-on-error: true
         env:
           JCOBRIDGE_SCOPEDON: JCOReflector|1.0.0
-          JCOBRIDGE_LicensePath: ${{ secrets.JCOBRIDGE_ONLINE }}
+          JCOBRIDGE_LicensePath: $GITHUB_WORKSPACE/JCOBridge.lic # ${{ secrets.JCOBRIDGE_ONLINE }}
       - run: source "$HOME/.sdkman/bin/sdkman-init.sh" && scala -nobootcp -toolcp "./bin/${{ matrix.framework }}/*:./tests/jvm/scala/output" mscorlib.HelloIterator ${{ env.EXTRA_ARGUMENT }}
         continue-on-error: true
         env:
           JCOBRIDGE_SCOPEDON: JCOReflector|1.0.0
-          JCOBRIDGE_LicensePath: ${{ secrets.JCOBRIDGE_ONLINE }}
+          JCOBRIDGE_LicensePath: $GITHUB_WORKSPACE/JCOBridge.lic # ${{ secrets.JCOBRIDGE_ONLINE }}
       - run: source "$HOME/.sdkman/bin/sdkman-init.sh" && scala -nobootcp -toolcp "./bin/${{ matrix.framework }}/*:./tests/jvm/scala/output" hierarchy.HelloHierarchy ${{ env.EXTRA_ARGUMENT }}
         continue-on-error: true
         env:
           JCOBRIDGE_SCOPEDON: JCOReflector|1.0.0
-          JCOBRIDGE_LicensePath: ${{ secrets.JCOBRIDGE_ONLINE }}
+          JCOBRIDGE_LicensePath: $GITHUB_WORKSPACE/JCOBridge.lic # ${{ secrets.JCOBRIDGE_ONLINE }}
       - run: source "$HOME/.sdkman/bin/sdkman-init.sh" && scala -nobootcp -toolcp "./bin/${{ matrix.framework }}/*:./tests/jvm/scala/output" hierarchy.HelloInterfaces ${{ env.EXTRA_ARGUMENT }}
         continue-on-error: true
         env:
           JCOBRIDGE_SCOPEDON: JCOReflector|1.0.0
-          JCOBRIDGE_LicensePath: ${{ secrets.JCOBRIDGE_ONLINE }}
+          JCOBRIDGE_LicensePath: $GITHUB_WORKSPACE/JCOBridge.lic # ${{ secrets.JCOBRIDGE_ONLINE }}
       - run: source "$HOME/.sdkman/bin/sdkman-init.sh" && scala -nobootcp -toolcp "./bin/${{ matrix.framework }}/*:./tests/jvm/scala/output" nettest.HelloNETSocket ${{ env.EXTRA_ARGUMENT }}
         continue-on-error: true
         env:
           JCOBRIDGE_SCOPEDON: JCOReflector|1.0.0
-          JCOBRIDGE_LicensePath: ${{ secrets.JCOBRIDGE_ONLINE }}
+          JCOBRIDGE_LicensePath: $GITHUB_WORKSPACE/JCOBridge.lic # ${{ secrets.JCOBRIDGE_ONLINE }}
       - run: source "$HOME/.sdkman/bin/sdkman-init.sh" && scala -nobootcp -toolcp "./bin/${{ matrix.framework }}/*:./tests/jvm/scala/output" nettest.HelloNETSocket -async ${{ env.EXTRA_ARGUMENT }}
         continue-on-error: true
         env:
           JCOBRIDGE_SCOPEDON: JCOReflector|1.0.0
-          JCOBRIDGE_LicensePath: ${{ secrets.JCOBRIDGE_ONLINE }}
+          JCOBRIDGE_LicensePath: $GITHUB_WORKSPACE/JCOBridge.lic # ${{ secrets.JCOBRIDGE_ONLINE }}
       - run: source "$HOME/.sdkman/bin/sdkman-init.sh" && scala -nobootcp -toolcp "./bin/${{ matrix.framework }}/*:./tests/jvm/scala/output" refout.HelloRefOutBase ${{ env.EXTRA_ARGUMENT }}
         continue-on-error: true
         env:
           JCOBRIDGE_SCOPEDON: JCOReflector|1.0.0
-          JCOBRIDGE_LicensePath: ${{ secrets.JCOBRIDGE_ONLINE }}
+          JCOBRIDGE_LicensePath: $GITHUB_WORKSPACE/JCOBridge.lic # ${{ secrets.JCOBRIDGE_ONLINE }}
       - run: source "$HOME/.sdkman/bin/sdkman-init.sh" && scala -nobootcp -toolcp "./bin/${{ matrix.framework }}/*:./tests/jvm/scala/output" refout.HelloRefOut ${{ env.EXTRA_ARGUMENT }}
         continue-on-error: true
         env:
           JCOBRIDGE_SCOPEDON: JCOReflector|1.0.0
-          JCOBRIDGE_LicensePath: ${{ secrets.JCOBRIDGE_ONLINE }}
+          JCOBRIDGE_LicensePath: $GITHUB_WORKSPACE/JCOBridge.lic # ${{ secrets.JCOBRIDGE_ONLINE }}
       - run: rm -rf ./tests/jvm/scala/output
 
   execute_finalize:

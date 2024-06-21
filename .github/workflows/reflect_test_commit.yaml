@@ -514,10 +514,6 @@ jobs:
         jdk_vendor: [ 'temurin', 'zulu', 'microsoft', 'corretto', 'oracle']
         jdk_version: [ '11', '17', '21' ] # only LTS versions
         exclude:
-          - os: macos-latest
-            framework: net6.0
-          - os: macos-13
-            framework: net6.0
           - jdk_vendor: oracle
             jdk_version: 11
 

@@ -447,7 +447,7 @@ jobs:
 
       - name: Extract secret
         shell: pwsh
-        run: ${{ github.workspace }}/.github/workflows/GetLicense.ps1 ${{ secrets.JCOBRIDGE_ENCODED_2_5_15 }} ${{ github.workspace }}/JCOBridge.lic
+        run: ${{ github.workspace }}\.github\workflows\GetLicense.ps1 ${{ secrets.JCOBRIDGE_ENCODED_2_5_15 }} ${{ github.workspace }}\JCOBridge.lic
 
       - name: Prepare extra argument
         if: matrix.framework == 'net6.0'
@@ -547,7 +547,7 @@ jobs:
 
       - name: Extract secret
         shell: pwsh
-        run: ${{ github.workspace }}/.github/workflows/GetLicense.ps1 ${{ secrets.JCOBRIDGE_ENCODED_2_5_15 }} ${{ github.workspace }}/JCOBridge.lic
+        run: ${{ github.workspace }}\.github\workflows\GetLicense.ps1 ${{ secrets.JCOBRIDGE_ENCODED_2_5_15 }} ${{ github.workspace }}\JCOBridge.lic
 
       - name: Prepare extra argument
         if: matrix.framework == 'net6.0'

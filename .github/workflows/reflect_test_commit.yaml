@@ -294,6 +294,12 @@ jobs:
           JCOBRIDGE_SCOPEDON: JCOReflector|1.0.0
           JCOBRIDGE_LicensePath: ${{ secrets.JCOBRIDGE_ONLINE }}
 
+      - uses: actions/upload-artifact@v4
+        with:
+          name: Errors_java_tests_windows_${{ matrix.framework }}_${{ matrix.jdk_vendor }}_${{ matrix.jdk_version }}
+          path: .\hs_err_*
+          retention-days: 1
+
   execute_scala_tests_windows:
     needs: build_windows
     strategy:
@@ -410,6 +416,12 @@ jobs:
         shell: cmd
         continue-on-error: true
 
+      - uses: actions/upload-artifact@v4
+        with:
+          name: Errors_scala_tests_windows_${{ matrix.framework }}_${{ matrix.jdk_vendor }}_${{ matrix.jdk_version }}
+          path: .\hs_err_*
+          retention-days: 1
+
   execute_java_tests_unix:
     needs: build_linux
     strategy:
@@ -500,6 +512,12 @@ jobs:
         
           #java -cp "./bin/net6.0/JCOReflector.jar;./tests/jvm/java/src/" refout.HelloRefOutBase
           #java -cp "./bin/net6.0/JCOReflector.jar;./tests/jvm/java/src/" refout.HelloRefOut
+
+      - uses: actions/upload-artifact@v4
+        with:
+          name: Errors_java_tests_${{ matrix.os }}_${{ matrix.framework }}_${{ matrix.jdk_vendor }}_${{ matrix.jdk_version }}
+          path: .\hs_err_*
+          retention-days: 1
 
   execute_scala_tests_linux:
     needs: build_linux
@@ -606,6 +624,12 @@ jobs:
           JCOBRIDGE_SCOPEDON: JCOReflector|1.0.0
           JCOBRIDGE_LicensePath: ${{ secrets.JCOBRIDGE_ONLINE }}
       - run: rm -rf ./tests/jvm/scala/output
+
+      - uses: actions/upload-artifact@v4
+        with:
+          name: Errors_java_tests_linux_${{ matrix.framework }}_${{ matrix.jdk_vendor }}_${{ matrix.jdk_version }}
+          path: .\hs_err_*
+          retention-days: 1
 
   execute_scala_tests_mac:
     needs: build_linux
@@ -722,6 +746,12 @@ jobs:
           JCOBRIDGE_SCOPEDON: JCOReflector|1.0.0
           JCOBRIDGE_LicensePath: ${{ secrets.JCOBRIDGE_ONLINE }}
       - run: rm -rf ./tests/jvm/scala/output
+
+      - uses: actions/upload-artifact@v4
+        with:
+          name: Errors_scala_tests_${{ matrix.os }}_${{ matrix.framework }}_${{ matrix.jdk_vendor }}_${{ matrix.jdk_version }}
+          path: .\hs_err_*
+          retention-days: 1
 
   execute_finalize:
     needs: [execute_java_tests_windows, execute_scala_tests_windows, execute_java_tests_unix, execute_scala_tests_linux, execute_scala_tests_mac]

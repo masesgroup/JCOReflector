@@ -6,12 +6,14 @@ name: CI_REFLECT_TEST_COMMIT
 # events but only for the master branch
 on:
   push:
-    branches: [ master ]
+    # only trigger on branches, not on tags
+    branches: '**'
 
 # This workflow contains two jobs called "check" and "build_windows"
 jobs:
   # Verify if a build is needed
   check:
+    if: ${{ github.repository_owner == 'masesgroup' || (github.repository_owner != 'masesgroup' && github.ref_name != 'master') }} #do not execute on master outside main repo
     name: Check changed files
     outputs:
       run_job: ${{ steps.check_files.outputs.run_job }}
@@ -292,6 +294,12 @@ jobs:
           JCOBRIDGE_SCOPEDON: JCOReflector|1.0.0
           JCOBRIDGE_LicensePath: ${{ secrets.JCOBRIDGE_ONLINE }}
 
+      - uses: actions/upload-artifact@v4
+        with:
+          name: Errors_java_tests_windows_${{ matrix.framework }}_${{ matrix.jdk_vendor }}_${{ matrix.jdk_version }}
+          path: .\hs_err_*
+          retention-days: 1
+
   execute_scala_tests_windows:
     needs: build_windows
     strategy:
@@ -408,19 +416,30 @@ jobs:
         shell: cmd
         continue-on-error: true
 
-  execute_java_tests_linux:
+      - uses: actions/upload-artifact@v4
+        with:
+          name: Errors_scala_tests_windows_${{ matrix.framework }}_${{ matrix.jdk_vendor }}_${{ matrix.jdk_version }}
+          path: .\hs_err_*
+          retention-days: 1
+
+  execute_java_tests_unix:
     needs: build_linux
     strategy:
       fail-fast: false
       matrix:
+        os: [ 'ubuntu-latest', 'macos-latest', 'macos-13' ]
         framework: [ 'net6.0', 'net8.0' ]
         jdk_vendor: [ 'temurin', 'zulu', 'microsoft', 'corretto', 'oracle']
         jdk_version: [ '11', '17', '21' ] # only LTS versions
         exclude:
+          - os: macos-latest
+            framework: net6.0
+          - os: macos-13
+            framework: net6.0
           - jdk_vendor: oracle
             jdk_version: 11
 
-    runs-on: ubuntu-latest
+    runs-on: ${{ matrix.os }}
     steps:
       # Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it
       - uses: actions/checkout@v4
@@ -493,6 +512,12 @@ jobs:
         
           #java -cp "./bin/net6.0/JCOReflector.jar;./tests/jvm/java/src/" refout.HelloRefOutBase
           #java -cp "./bin/net6.0/JCOReflector.jar;./tests/jvm/java/src/" refout.HelloRefOut
+
+      - uses: actions/upload-artifact@v4
+        with:
+          name: Errors_java_tests_${{ matrix.os }}_${{ matrix.framework }}_${{ matrix.jdk_vendor }}_${{ matrix.jdk_version }}
+          path: .\hs_err_*
+          retention-days: 1
 
   execute_scala_tests_linux:
     needs: build_linux
@@ -600,8 +625,136 @@ jobs:
           JCOBRIDGE_LicensePath: ${{ secrets.JCOBRIDGE_ONLINE }}
       - run: rm -rf ./tests/jvm/scala/output
 
+      - uses: actions/upload-artifact@v4
+        with:
+          name: Errors_java_tests_linux_${{ matrix.framework }}_${{ matrix.jdk_vendor }}_${{ matrix.jdk_version }}
+          path: .\hs_err_*
+          retention-days: 1
+
+  execute_scala_tests_mac:
+    needs: build_linux
+    strategy:
+      fail-fast: false
+      matrix:
+        os: [ 'macos-latest', 'macos-13' ]
+        framework: [ 'net8.0' ]
+        jdk_vendor: [ 'temurin', 'zulu', 'microsoft', 'corretto', 'oracle']
+        jdk_version: [ '11', '17', '21' ] # only LTS versions
+        exclude:
+          - os: macos-latest
+            framework: net6.0
+          - os: macos-13
+            framework: net6.0
+          - jdk_vendor: oracle
+            jdk_version: 11
+
+    runs-on: ${{ matrix.os }}
+    steps:
+      # Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it
+      - uses: actions/checkout@v4
+        with: 
+          fetch-depth: '1'
+
+      - name: Restore JCOReflector bin from cache
+        uses: actions/cache/restore@v4
+        with:
+          fail-on-cache-miss: true
+          enableCrossOsArchive: true
+          path: ./bin/
+          key: JCOReflector_linux_bin_${{ github.sha }}
+
+      - name: Set up JDK distribution
+        uses: actions/setup-java@v4
+        with: # running setup-java again overwrites the settings.xml
+          distribution: ${{ matrix.jdk_vendor }}
+          java-version: ${{ matrix.jdk_version }}
+          cache: 'maven'
+
+      - name: Download and install Scala package
+        run: brew install scala@2.13
+
+      - name: Export Scala root
+        if: matrix.os == 'macos-13'
+        run: |
+          echo "SCALA_BIN=/usr/local/opt/scala@2.13/bin" >> $GITHUB_ENV
+        shell: bash
+        
+      - name: Export Scala root
+        if: matrix.os == 'macos-latest'
+        run: |
+          echo "SCALA_BIN=/opt/homebrew/opt/scala@2.13/bin" >> $GITHUB_ENV
+        shell: bash
+
+      - name: Prepare extra argument
+        if: matrix.framework == 'net6.0'
+        shell: bash
+        run: echo "EXTRA_ARGUMENT=--CoreCLRApp:Microsoft.NET6.App" >> $GITHUB_ENV
+
+      - name: Build Scala test source file
+        run: |
+          mkdir ./tests/jvm/scala/output
+          ${{ env.SCALA_BIN }}/scalac -cp "./bin/${{ matrix.framework }}/*" -d ./tests/jvm/scala/output ./tests/jvm/scala/src/main/scala/hierarchy/* ./tests/jvm/scala/src/main/scala/mscorlib/* ./tests/jvm/scala/src/main/scala/nettest/* ./tests/jvm/scala/src/main/scala/refout/*
+
+      - run: ${{ env.SCALA_BIN }}/scala -nobootcp -toolcp "./bin/${{ matrix.framework }}/*:./tests/jvm/scala/output" mscorlib.HelloLock ${{ env.EXTRA_ARGUMENT }}
+        continue-on-error: true
+        env:
+          JCOBRIDGE_SCOPEDON: JCOReflector|1.0.0
+          JCOBRIDGE_LicensePath: ${{ secrets.JCOBRIDGE_ONLINE }}
+      - run: ${{ env.SCALA_BIN }}/scala -nobootcp -toolcp "./bin/${{ matrix.framework }}/*:./tests/jvm/scala/output" mscorlib.HelloNet ${{ env.EXTRA_ARGUMENT }}
+        continue-on-error: true
+        env:
+          JCOBRIDGE_SCOPEDON: JCOReflector|1.0.0
+          JCOBRIDGE_LicensePath: ${{ secrets.JCOBRIDGE_ONLINE }}
+      - run: ${{ env.SCALA_BIN }}/scala -nobootcp -toolcp "./bin/${{ matrix.framework }}/*:./tests/jvm/scala/output" mscorlib.HelloNETEvent ${{ env.EXTRA_ARGUMENT }}
+        continue-on-error: true
+        env:
+          JCOBRIDGE_SCOPEDON: JCOReflector|1.0.0
+          JCOBRIDGE_LicensePath: ${{ secrets.JCOBRIDGE_ONLINE }}
+      - run: ${{ env.SCALA_BIN }}/scala -nobootcp -toolcp "./bin/${{ matrix.framework }}/*:./tests/jvm/scala/output" mscorlib.HelloIterator ${{ env.EXTRA_ARGUMENT }}
+        continue-on-error: true
+        env:
+          JCOBRIDGE_SCOPEDON: JCOReflector|1.0.0
+          JCOBRIDGE_LicensePath: ${{ secrets.JCOBRIDGE_ONLINE }}
+      - run: ${{ env.SCALA_BIN }}/scala -nobootcp -toolcp "./bin/${{ matrix.framework }}/*:./tests/jvm/scala/output" hierarchy.HelloHierarchy ${{ env.EXTRA_ARGUMENT }}
+        continue-on-error: true
+        env:
+          JCOBRIDGE_SCOPEDON: JCOReflector|1.0.0
+          JCOBRIDGE_LicensePath: ${{ secrets.JCOBRIDGE_ONLINE }}
+      - run: ${{ env.SCALA_BIN }}/scala -nobootcp -toolcp "./bin/${{ matrix.framework }}/*:./tests/jvm/scala/output" hierarchy.HelloInterfaces ${{ env.EXTRA_ARGUMENT }}
+        continue-on-error: true
+        env:
+          JCOBRIDGE_SCOPEDON: JCOReflector|1.0.0
+          JCOBRIDGE_LicensePath: ${{ secrets.JCOBRIDGE_ONLINE }}
+      - run: ${{ env.SCALA_BIN }}/scala -nobootcp -toolcp "./bin/${{ matrix.framework }}/*:./tests/jvm/scala/output" nettest.HelloNETSocket ${{ env.EXTRA_ARGUMENT }}
+        continue-on-error: true
+        env:
+          JCOBRIDGE_SCOPEDON: JCOReflector|1.0.0
+          JCOBRIDGE_LicensePath: ${{ secrets.JCOBRIDGE_ONLINE }}
+      - run: ${{ env.SCALA_BIN }}/scala -nobootcp -toolcp "./bin/${{ matrix.framework }}/*:./tests/jvm/scala/output" nettest.HelloNETSocket -async ${{ env.EXTRA_ARGUMENT }}
+        continue-on-error: true
+        env:
+          JCOBRIDGE_SCOPEDON: JCOReflector|1.0.0
+          JCOBRIDGE_LicensePath: ${{ secrets.JCOBRIDGE_ONLINE }}
+      - run: ${{ env.SCALA_BIN }}/scala -nobootcp -toolcp "./bin/${{ matrix.framework }}/*:./tests/jvm/scala/output" refout.HelloRefOutBase ${{ env.EXTRA_ARGUMENT }}
+        continue-on-error: true
+        env:
+          JCOBRIDGE_SCOPEDON: JCOReflector|1.0.0
+          JCOBRIDGE_LicensePath: ${{ secrets.JCOBRIDGE_ONLINE }}
+      - run: ${{ env.SCALA_BIN }}/scala -nobootcp -toolcp "./bin/${{ matrix.framework }}/*:./tests/jvm/scala/output" refout.HelloRefOut ${{ env.EXTRA_ARGUMENT }}
+        continue-on-error: true
+        env:
+          JCOBRIDGE_SCOPEDON: JCOReflector|1.0.0
+          JCOBRIDGE_LicensePath: ${{ secrets.JCOBRIDGE_ONLINE }}
+      - run: rm -rf ./tests/jvm/scala/output
+
+      - uses: actions/upload-artifact@v4
+        with:
+          name: Errors_scala_tests_${{ matrix.os }}_${{ matrix.framework }}_${{ matrix.jdk_vendor }}_${{ matrix.jdk_version }}
+          path: .\hs_err_*
+          retention-days: 1
+
   execute_finalize:
-    needs: [execute_java_tests_windows, execute_scala_tests_windows, execute_java_tests_linux, execute_scala_tests_linux]
+    needs: [execute_java_tests_windows, execute_scala_tests_windows, execute_java_tests_unix, execute_scala_tests_linux, execute_scala_tests_mac]
 
     runs-on: windows-latest
     steps:

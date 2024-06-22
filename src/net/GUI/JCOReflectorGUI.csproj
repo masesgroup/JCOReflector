@@ -8,7 +8,7 @@
     <Copyright>Copyright ©  MASES s.r.l. 2024</Copyright>
     <Authors>MASES s.r.l.</Authors>
     <Company>MASES s.r.l.</Company>
-    <Version>1.14.2.0</Version>
+    <Version>1.14.3.0</Version>
     <Product>JCOReflectorGUI</Product>
     <GenerateAssemblyInfo>true</GenerateAssemblyInfo>
     <TargetFrameworks>net462;net6.0-windows;net8.0-windows</TargetFrameworks>

@@ -657,6 +657,18 @@ jobs:
       - name: Download and install Scala package
         run: brew install scala@2.13
 
+      - name: Export Scala root
+        if: matrix.os == 'macos-13'
+        run: |
+          echo "SCALA_BIN=/usr/local/opt/scala@2.13/bin" >> $GITHUB_ENV
+        shell: bash
+        
+      - name: Export Scala root
+        if: matrix.os == 'macos-latest'
+        run: |
+          echo "SCALA_BIN=/opt/homebrew/opt/scala@2.13/bin" >> $GITHUB_ENV
+        shell: bash
+
       - name: Extract secret
         shell: pwsh
         run: ${{ github.workspace }}\.github\workflows\GetLicense.ps1 ${{ secrets.JCOBRIDGE_ENCODED_2_5_15 }} ${{ github.workspace }}\JCOBridge.lic
@@ -669,54 +681,54 @@ jobs:
       - name: Build Scala test source file
         run: |
           mkdir ./tests/jvm/scala/output
-          /usr/local/opt/scala@2.13/bin/scalac -cp "./bin/${{ matrix.framework }}/*" -d ./tests/jvm/scala/output ./tests/jvm/scala/src/main/scala/hierarchy/* ./tests/jvm/scala/src/main/scala/mscorlib/* ./tests/jvm/scala/src/main/scala/nettest/* ./tests/jvm/scala/src/main/scala/refout/*
+          ${{ env.SCALA_BIN }}/scalac -cp "./bin/${{ matrix.framework }}/*" -d ./tests/jvm/scala/output ./tests/jvm/scala/src/main/scala/hierarchy/* ./tests/jvm/scala/src/main/scala/mscorlib/* ./tests/jvm/scala/src/main/scala/nettest/* ./tests/jvm/scala/src/main/scala/refout/*
 
-      - run: scala -nobootcp -toolcp "./bin/${{ matrix.framework }}/*:./tests/jvm/scala/output" mscorlib.HelloLock ${{ env.EXTRA_ARGUMENT }}
+      - run: ${{ env.SCALA_BIN }}/scala -nobootcp -toolcp "./bin/${{ matrix.framework }}/*:./tests/jvm/scala/output" mscorlib.HelloLock ${{ env.EXTRA_ARGUMENT }}
         continue-on-error: true
         env:
           JCOBRIDGE_SCOPEDON: JCOReflector|1.0.0
           JCOBRIDGE_LicensePath: $GITHUB_WORKSPACE/JCOBridge.lic # ${{ secrets.JCOBRIDGE_ONLINE }}
-      - run: /usr/local/opt/scala@2.13/bin/scala -nobootcp -toolcp "./bin/${{ matrix.framework }}/*:./tests/jvm/scala/output" mscorlib.HelloNet ${{ env.EXTRA_ARGUMENT }}
+      - run: ${{ env.SCALA_BIN }}/scala -nobootcp -toolcp "./bin/${{ matrix.framework }}/*:./tests/jvm/scala/output" mscorlib.HelloNet ${{ env.EXTRA_ARGUMENT }}
         continue-on-error: true
         env:
           JCOBRIDGE_SCOPEDON: JCOReflector|1.0.0
           JCOBRIDGE_LicensePath: $GITHUB_WORKSPACE/JCOBridge.lic # ${{ secrets.JCOBRIDGE_ONLINE }}
-      - run: /usr/local/opt/scala@2.13/bin/scala -nobootcp -toolcp "./bin/${{ matrix.framework }}/*:./tests/jvm/scala/output" mscorlib.HelloNETEvent ${{ env.EXTRA_ARGUMENT }}
+      - run: ${{ env.SCALA_BIN }}/scala -nobootcp -toolcp "./bin/${{ matrix.framework }}/*:./tests/jvm/scala/output" mscorlib.HelloNETEvent ${{ env.EXTRA_ARGUMENT }}
         continue-on-error: true
         env:
           JCOBRIDGE_SCOPEDON: JCOReflector|1.0.0
           JCOBRIDGE_LicensePath: $GITHUB_WORKSPACE/JCOBridge.lic # ${{ secrets.JCOBRIDGE_ONLINE }}
-      - run: /usr/local/opt/scala@2.13/bin/scala -nobootcp -toolcp "./bin/${{ matrix.framework }}/*:./tests/jvm/scala/output" mscorlib.HelloIterator ${{ env.EXTRA_ARGUMENT }}
+      - run: ${{ env.SCALA_BIN }}/scala -nobootcp -toolcp "./bin/${{ matrix.framework }}/*:./tests/jvm/scala/output" mscorlib.HelloIterator ${{ env.EXTRA_ARGUMENT }}
         continue-on-error: true
         env:
           JCOBRIDGE_SCOPEDON: JCOReflector|1.0.0
           JCOBRIDGE_LicensePath: $GITHUB_WORKSPACE/JCOBridge.lic # ${{ secrets.JCOBRIDGE_ONLINE }}
-      - run: /usr/local/opt/scala@2.13/bin/scala -nobootcp -toolcp "./bin/${{ matrix.framework }}/*:./tests/jvm/scala/output" hierarchy.HelloHierarchy ${{ env.EXTRA_ARGUMENT }}
+      - run: ${{ env.SCALA_BIN }}/scala -nobootcp -toolcp "./bin/${{ matrix.framework }}/*:./tests/jvm/scala/output" hierarchy.HelloHierarchy ${{ env.EXTRA_ARGUMENT }}
         continue-on-error: true
         env:
           JCOBRIDGE_SCOPEDON: JCOReflector|1.0.0
           JCOBRIDGE_LicensePath: $GITHUB_WORKSPACE/JCOBridge.lic # ${{ secrets.JCOBRIDGE_ONLINE }}
-      - run: /usr/local/opt/scala@2.13/bin/scala -nobootcp -toolcp "./bin/${{ matrix.framework }}/*:./tests/jvm/scala/output" hierarchy.HelloInterfaces ${{ env.EXTRA_ARGUMENT }}
+      - run: ${{ env.SCALA_BIN }}/scala -nobootcp -toolcp "./bin/${{ matrix.framework }}/*:./tests/jvm/scala/output" hierarchy.HelloInterfaces ${{ env.EXTRA_ARGUMENT }}
         continue-on-error: true
         env:
           JCOBRIDGE_SCOPEDON: JCOReflector|1.0.0
           JCOBRIDGE_LicensePath: $GITHUB_WORKSPACE/JCOBridge.lic # ${{ secrets.JCOBRIDGE_ONLINE }}
-      - run: /usr/local/opt/scala@2.13/bin/scala -nobootcp -toolcp "./bin/${{ matrix.framework }}/*:./tests/jvm/scala/output" nettest.HelloNETSocket ${{ env.EXTRA_ARGUMENT }}
+      - run: ${{ env.SCALA_BIN }}/scala -nobootcp -toolcp "./bin/${{ matrix.framework }}/*:./tests/jvm/scala/output" nettest.HelloNETSocket ${{ env.EXTRA_ARGUMENT }}
         continue-on-error: true
         env:
           JCOBRIDGE_SCOPEDON: JCOReflector|1.0.0
           JCOBRIDGE_LicensePath: $GITHUB_WORKSPACE/JCOBridge.lic # ${{ secrets.JCOBRIDGE_ONLINE }}
-      - run: /usr/local/opt/scala@2.13/bin/scala -nobootcp -toolcp "./bin/${{ matrix.framework }}/*:./tests/jvm/scala/output" nettest.HelloNETSocket -async ${{ env.EXTRA_ARGUMENT }}
+      - run: ${{ env.SCALA_BIN }}/scala -nobootcp -toolcp "./bin/${{ matrix.framework }}/*:./tests/jvm/scala/output" nettest.HelloNETSocket -async ${{ env.EXTRA_ARGUMENT }}
         continue-on-error: true
         env:
           JCOBRIDGE_SCOPEDON: JCOReflector|1.0.0
           JCOBRIDGE_LicensePath: $GITHUB_WORKSPACE/JCOBridge.lic # ${{ secrets.JCOBRIDGE_ONLINE }}
-      - run: /usr/local/opt/scala@2.13/bin/scala -nobootcp -toolcp "./bin/${{ matrix.framework }}/*:./tests/jvm/scala/output" refout.HelloRefOutBase ${{ env.EXTRA_ARGUMENT }}
+      - run: ${{ env.SCALA_BIN }}/scala -nobootcp -toolcp "./bin/${{ matrix.framework }}/*:./tests/jvm/scala/output" refout.HelloRefOutBase ${{ env.EXTRA_ARGUMENT }}
         continue-on-error: true
         env:
           JCOBRIDGE_SCOPEDON: JCOReflector|1.0.0
           JCOBRIDGE_LicensePath: $GITHUB_WORKSPACE/JCOBridge.lic # ${{ secrets.JCOBRIDGE_ONLINE }}
-      - run: /usr/local/opt/scala@2.13/bin/scala -nobootcp -toolcp "./bin/${{ matrix.framework }}/*:./tests/jvm/scala/output" refout.HelloRefOut ${{ env.EXTRA_ARGUMENT }}
+      - run: ${{ env.SCALA_BIN }}/scala -nobootcp -toolcp "./bin/${{ matrix.framework }}/*:./tests/jvm/scala/output" refout.HelloRefOut ${{ env.EXTRA_ARGUMENT }}
         continue-on-error: true
         env:
           JCOBRIDGE_SCOPEDON: JCOReflector|1.0.0

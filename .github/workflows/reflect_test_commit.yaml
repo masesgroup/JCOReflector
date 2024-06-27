@@ -135,14 +135,14 @@ jobs:
         with:
           enableCrossOsArchive: true
           path: ./src/jvm/
-          key: JCOReflector_source_${{ github.sha }}
+          key: JCOReflector_${{ github.run_number }}_${{ github.run_attempt }}_source_${{ github.sha }}
 
       - name: Save JCOReflector bin in cache
         uses: actions/cache/save@v4
         with:
           enableCrossOsArchive: true
           path: ./bin/
-          key: JCOReflector_windows_bin_${{ github.sha }}
+          key: JCOReflector_${{ github.run_number }}_${{ github.run_attempt }}_windows_bin_${{ github.sha }}
 
   # This workflow contains a single job called "build"
   build_linux:
@@ -163,7 +163,7 @@ jobs:
           fail-on-cache-miss: true
           enableCrossOsArchive: true
           path: ./src/jvm/
-          key: JCOReflector_source_${{ github.sha }}
+          key: JCOReflector_${{ github.run_number }}_${{ github.run_attempt }}_source_${{ github.sha }}
 
       # Runs a set of commands using the runners shell
       - name: Build JCOReflectorCLI
@@ -193,7 +193,7 @@ jobs:
         with:
           enableCrossOsArchive: true
           path: ./bin/
-          key: JCOReflector_linux_bin_${{ github.sha }}
+          key: JCOReflector_${{ github.run_number }}_${{ github.run_attempt }}_linux_bin_${{ github.sha }}
 
   execute_java_tests_windows:
     needs: build_windows
@@ -226,7 +226,7 @@ jobs:
           fail-on-cache-miss: true
           enableCrossOsArchive: true
           path: ./bin/
-          key: JCOReflector_windows_bin_${{ github.sha }}
+          key: JCOReflector_${{ github.run_number }}_${{ github.run_attempt }}_windows_bin_${{ github.sha }}
  
       - name: Set up JDK distribution
         uses: actions/setup-java@v4
@@ -331,7 +331,7 @@ jobs:
           fail-on-cache-miss: true
           enableCrossOsArchive: true
           path: ./bin/
-          key: JCOReflector_windows_bin_${{ github.sha }}
+          key: JCOReflector_${{ github.run_number }}_${{ github.run_attempt }}_windows_bin_${{ github.sha }}
  
       - name: Set up JDK distribution
         uses: actions/setup-java@v4
@@ -452,7 +452,7 @@ jobs:
           fail-on-cache-miss: true
           enableCrossOsArchive: true
           path: ./bin/
-          key: JCOReflector_linux_bin_${{ github.sha }}
+          key: JCOReflector_${{ github.run_number }}_${{ github.run_attempt }}_linux_bin_${{ github.sha }}
 
       - name: Set up JDK distribution
         uses: actions/setup-java@v4
@@ -544,7 +544,7 @@ jobs:
           fail-on-cache-miss: true
           enableCrossOsArchive: true
           path: ./bin/
-          key: JCOReflector_linux_bin_${{ github.sha }}
+          key: JCOReflector_${{ github.run_number }}_${{ github.run_attempt }}_linux_bin_${{ github.sha }}
 
       - name: Set up JDK distribution
         uses: actions/setup-java@v4
@@ -661,7 +661,7 @@ jobs:
           fail-on-cache-miss: true
           enableCrossOsArchive: true
           path: ./bin/
-          key: JCOReflector_linux_bin_${{ github.sha }}
+          key: JCOReflector_${{ github.run_number }}_${{ github.run_attempt }}_linux_bin_${{ github.sha }}
 
       - name: Set up JDK distribution
         uses: actions/setup-java@v4
@@ -775,7 +775,7 @@ jobs:
           fail-on-cache-miss: true
           enableCrossOsArchive: true
           path: ./bin/
-          key: JCOReflector_windows_bin_${{ github.sha }}
+          key: JCOReflector_${{ github.run_number }}_${{ github.run_attempt }}_windows_bin_${{ github.sha }}
           
       - name: Restore JCOReflector source from cache
         uses: actions/cache/restore@v4
@@ -783,7 +783,7 @@ jobs:
           fail-on-cache-miss: true
           enableCrossOsArchive: true
           path: ./src/jvm/
-          key: JCOReflector_source_${{ github.sha }}
+          key: JCOReflector_${{ github.run_number }}_${{ github.run_attempt }}_source_${{ github.sha }}
 
       - name: Compress release files
         run: |
@@ -796,49 +796,66 @@ jobs:
           echo "GITHUB_COMMIT_MESSAGE=$(echo $GITHUB_SHA | cut -c 1-7)" >> $GITHUB_ENV
         shell: bash
 
-      - name: Commit statistics changes
-        if: ${{ github.repository_owner == 'masesgroup'}} #do not push any changes outside main repo
-        uses: EndBug/add-and-commit@v9
+      - name: Request a PR to commit changes
+        if: ${{ github.repository_owner == 'masesgroup' }} # do not push any changes outside main repo or GeneratePR is false
+        uses: peter-evans/create-pull-request@v6
         with:
-          author_name: github-actions
-          author_email: 41898282+github-actions[bot]@users.noreply.github.com
-          add: '.\src\jvm\statistics\*.*'
-          message: Update statistics after commit ${{ env.GITHUB_COMMIT_MESSAGE }}
-        env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-          
-      - name: Commit report changes
-        if: ${{ github.repository_owner == 'masesgroup'}} #do not push any changes outside main repo
-        uses: EndBug/add-and-commit@v9
-        with:
-          author_name: github-actions
-          author_email: 41898282+github-actions[bot]@users.noreply.github.com
-          add: '.\src\jvm\README.md'
-          message: Update README.md after commit ${{ env.GITHUB_COMMIT_MESSAGE }}
-        env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          branch-suffix: short-commit-hash
+          add-paths: |
+            .\src\jvm\statistics\*.*
+            .\src\jvm\README.md
+            .\src\jvm\src\*.list
+            .\src\jvm\src\*.java
+          commit-message: Update JVM after commit ${{ env.GITHUB_COMMIT_MESSAGE }}
+          title: Changes by GitHub action
+          body: Automated changes by GitHub action
+          reviewers: masesdevelopers
+          assignees: masesdevelopers
+          labels: java, documentation, enhancement, .NET Framework, .NET 6, .NET 8
 
-      - name: Commit source changes
-        if: ${{ github.repository_owner == 'masesgroup'}} #do not push any changes outside main repo
-        uses: EndBug/add-and-commit@v9
-        with:
-          author_name: github-actions
-          author_email: 41898282+github-actions[bot]@users.noreply.github.com
-          add: '.\src\jvm\src\*.list'
-          message: Update assembly list after commit ${{ env.GITHUB_COMMIT_MESSAGE }}
-        env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-
-      - name: Commit source changes
-        if: ${{ github.repository_owner == 'masesgroup'}} #do not push any changes outside main repo
-        uses: EndBug/add-and-commit@v9
-        with:
-          author_name: github-actions
-          author_email: 41898282+github-actions[bot]@users.noreply.github.com
-          add: '.\src\jvm\src\*.java'
-          message: Update sources after commit ${{ env.GITHUB_COMMIT_MESSAGE }}
-        env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+     # - name: Commit statistics changes
+     #   if: ${{ github.repository_owner == 'masesgroup'}} #do not push any changes outside main repo
+     #   uses: EndBug/add-and-commit@v9
+     #   with:
+     #     author_name: github-actions
+     #     author_email: 41898282+github-actions[bot]@users.noreply.github.com
+     #     add: '.\src\jvm\statistics\*.*'
+     #     message: Update statistics after commit ${{ env.GITHUB_COMMIT_MESSAGE }}
+     #   env:
+     #     GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+     #     
+     # - name: Commit report changes
+     #   if: ${{ github.repository_owner == 'masesgroup'}} #do not push any changes outside main repo
+     #   uses: EndBug/add-and-commit@v9
+     #   with:
+     #     author_name: github-actions
+     #     author_email: 41898282+github-actions[bot]@users.noreply.github.com
+     #     add: '.\src\jvm\README.md'
+     #     message: Update README.md after commit ${{ env.GITHUB_COMMIT_MESSAGE }}
+     #   env:
+     #     GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+     #
+     # - name: Commit source changes
+     #   if: ${{ github.repository_owner == 'masesgroup'}} #do not push any changes outside main repo
+     #   uses: EndBug/add-and-commit@v9
+     #   with:
+     #     author_name: github-actions
+     #     author_email: 41898282+github-actions[bot]@users.noreply.github.com
+     #     add: '.\src\jvm\src\*.list'
+     #     message: Update assembly list after commit ${{ env.GITHUB_COMMIT_MESSAGE }}
+     #   env:
+     #     GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+     #
+     # - name: Commit source changes
+     #   if: ${{ github.repository_owner == 'masesgroup'}} #do not push any changes outside main repo
+     #   uses: EndBug/add-and-commit@v9
+     #   with:
+     #     author_name: github-actions
+     #     author_email: 41898282+github-actions[bot]@users.noreply.github.com
+     #     add: '.\src\jvm\src\*.java'
+     #     message: Update sources after commit ${{ env.GITHUB_COMMIT_MESSAGE }}
+     #   env:
+     #     GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
 
       - uses: actions/upload-artifact@v4
         with:
@@ -859,3 +876,30 @@ jobs:
         with:
           name: net462
           path: .\bin\net462.zip
+
+  final_cleanup:
+    needs: [ execute_finalize ]
+    if: "always()"
+    runs-on: ubuntu-latest
+    # Steps represent a sequence of tasks that will be executed as part of the job
+    steps:
+      # Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: '1'
+
+      - name: Clear caches
+        run: |
+          gh extension install actions/gh-actions-cache
+          echo "Fetching list of cache key"
+          cacheKeysForPR=$(gh actions-cache list --key JCOReflector_${{ github.run_number }}_${{ github.run_attempt }} )
+          ## Setting this to not fail the workflow while deleting cache keys.
+          set +e
+          echo "Deleting caches..."
+          for cacheKey in $cacheKeysForPR
+          do
+              gh actions-cache delete $cacheKey --confirm
+          done
+          echo "Done"
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}

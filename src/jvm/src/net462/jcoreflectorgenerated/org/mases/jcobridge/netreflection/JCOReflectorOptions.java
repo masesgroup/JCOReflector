@@ -36,6 +36,8 @@ package org.mases.jcobridge.netreflection;
 /**
  * The class which lists the options enabled in the class generation.
  *
+ * @author  MASES s.r.l https://masesgroup.com
+ * @version 1.14.3.0
  */
 public class JCOReflectorOptions {
     /**

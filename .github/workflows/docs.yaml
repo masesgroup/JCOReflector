@@ -5,17 +5,15 @@ name: CI_DOCS
 # Controls when the action will run. Triggers the workflow on push or pull request
 # events but only for the master branch
 on:
-  workflow_run:
-    workflows: ["CI_REFLECT_TEST_COMMIT"]
-    branches: [master]
-    types: 
-      - completed
+  push:
+    # only trigger on branches, not on tags
+    branches: 'master'
 
 # A workflow run is made up of one or more jobs that can run sequentially or in parallel
 jobs:
   check:
+    if: ${{ github.repository_owner == 'masesgroup' }} #do not execute outside main repo
     name: Check changed files
-    if: ${{ github.event.workflow_run.conclusion == 'success' }}
     outputs:
       run_job: ${{ steps.check_files.outputs.run_job }}
     runs-on: ubuntu-latest
@@ -207,7 +205,7 @@ jobs:
           REPO: masesgroup/FrameworkDocs
 
       - name: Request a PR to commit changes
-        if: ${{ github.repository_owner == 'masesgroup' }} # do not push any changes outside main repo or GeneratePR is false
+        if: ${{ github.repository_owner == 'masesgroup' }} # do not push any changes outside main repo
         uses: peter-evans/create-pull-request@v6
         with:
           branch-suffix: short-commit-hash

@@ -20,40 +20,31 @@ jobs:
       run_job: ${{ steps.check_files.outputs.run_job }}
     runs-on: ubuntu-latest
     steps:
-    - name: Checkout code
-      uses: actions/checkout@v4
-      with:
-        fetch-depth: 2
+      - id: get_changed_files
+        uses: masesgroup/retrieve-changed-files@v3
+        with:
+          format: 'csv'
 
-    - name: check files
-      id: check_files
-      run: |
-        echo "=============== list changed files ==============="
-        git diff --name-only HEAD^ HEAD
-        
-        echo "run_job=false" >> $GITHUB_OUTPUT
-        echo "========== check paths of changed files =========="
-        git diff --name-only HEAD^ HEAD > files.txt
-        while IFS= read -r file
-        do
-          echo $file
-          if [[ $file == ".github/workflows/docs.yaml"* ]]; then
-            echo "Recreate docs was requested"
-            echo "run_job=true" >> $GITHUB_OUTPUT
-            break
-          fi
-          if [[ $file == "src/documentation/"* ]]; then
-            echo "This file is under the directory 'src/documentation/'."
-            echo "run_job=true" >> $GITHUB_OUTPUT
-            break
-          fi
-          if [[ $file == "src/jvm/src/"* ]]; then
-            echo "This file is under the directory 'src/jvm/src/'."
-            echo "run_job=true" >> $GITHUB_OUTPUT
-            break
-          fi
-        echo "This files are not in a source directory no action required"
-        done < files.txt
+      - id: check_files
+        run: |
+          mapfile -d ',' -t added_modified_files < <(printf '%s,' '${{ steps.get_changed_files.outputs.added_modified }}')
+          for added_modified_file in "${added_modified_files[@]}"; do
+              if [[ $added_modified_file == ".github/workflows/docs.yaml"* ]]; then
+                echo "$added_modified_file is under the directory '.github/workflows'."
+                echo "run_job=true" >> $GITHUB_OUTPUT
+                break
+              fi
+              if [[ $added_modified_file == "src/documentation/"* ]]; then
+                echo "$added_modified_file is under the directory 'src/jvm/src/JCOReflector'."
+                echo "run_job=true" >> $GITHUB_OUTPUT
+                break
+              fi
+              if [[ $added_modified_file == "src/jvm/src/"* ]]; then
+                echo "$added_modified_file is under the directory 'src/'."
+                echo "run_job=true" >> $GITHUB_OUTPUT
+                break
+              fi
+          done
 
   # This workflow contains a single job called "build"
   build_docs:
@@ -173,14 +164,14 @@ jobs:
         env:
           GITHUB_WORKSPACE: $GITHUB_WORKSPACE
  
-      - name: Commit changes to JCOReflector repo
-        run: |
-          cd .\docs\
-          %GITHUB_WORKSPACE%\.github\workflows\commit.cmd github-actions 41898282+github-actions[bot]@users.noreply.github.com "Update help submodule after commit ${{ env.GITHUB_COMMIT_MESSAGE }}"
-          cd ..
-        shell: cmd
-        env:
-          GITHUB_WORKSPACE: $GITHUB_WORKSPACE
+     # - name: Commit changes to JCOReflector repo
+     #   run: |
+     #     cd .\docs\
+     #     %GITHUB_WORKSPACE%\.github\workflows\commit.cmd github-actions 41898282+github-actions[bot]@users.noreply.github.com "Update help submodule after commit ${{ env.GITHUB_COMMIT_MESSAGE }}"
+     #     cd ..
+     #   shell: cmd
+     #   env:
+     #     GITHUB_WORKSPACE: $GITHUB_WORKSPACE
 
       - name: Push changes to net6.0 help file
         run: |
@@ -215,11 +206,24 @@ jobs:
           SUPER_SECRET: ${{ secrets.DOCS_API_TOKEN_GITHUB }}
           REPO: masesgroup/FrameworkDocs
 
-      - name: Commit changes to JCOReflector
-        run: |
-          %GITHUB_WORKSPACE%\.github\workflows\push.cmd %REPO%
-        shell: cmd
-        env:
-          GITHUB_WORKSPACE: $GITHUB_WORKSPACE
-          SUPER_SECRET: ${{ secrets.DOCS_API_TOKEN_GITHUB }}
-          REPO: masesgroup/JCOReflector
+      - name: Request a PR to commit changes
+        if: ${{ github.repository_owner == 'masesgroup' }} # do not push any changes outside main repo or GeneratePR is false
+        uses: peter-evans/create-pull-request@v6
+        with:
+          branch-suffix: short-commit-hash
+          add-paths: .\*.*
+          commit-message: Update documentation after commit ${{ env.GITHUB_COMMIT_MESSAGE }}
+          title: Changes by GitHub action
+          body: Automated changes by GitHub action
+          reviewers: masesdevelopers
+          assignees: masesdevelopers
+          labels: documentation, java, enhancement, .NET Framework, .NET 6, .NET 8
+
+     # - name: Commit changes to JCOReflector
+     #   run: |
+     #     %GITHUB_WORKSPACE%\.github\workflows\push.cmd %REPO%
+     #   shell: cmd
+     #   env:
+     #     GITHUB_WORKSPACE: $GITHUB_WORKSPACE
+     #     SUPER_SECRET: ${{ secrets.DOCS_API_TOKEN_GITHUB }}
+     #     REPO: masesgroup/JCOReflector

@@ -164,14 +164,14 @@ jobs:
         env:
           GITHUB_WORKSPACE: $GITHUB_WORKSPACE
  
-      - name: Commit changes to JCOReflector repo
-        run: |
-          cd .\docs\
-          %GITHUB_WORKSPACE%\.github\workflows\commit.cmd github-actions 41898282+github-actions[bot]@users.noreply.github.com "Update help submodule after commit ${{ env.GITHUB_COMMIT_MESSAGE }}"
-          cd ..
-        shell: cmd
-        env:
-          GITHUB_WORKSPACE: $GITHUB_WORKSPACE
+     # - name: Commit changes to JCOReflector repo
+     #   run: |
+     #     cd .\docs\
+     #     %GITHUB_WORKSPACE%\.github\workflows\commit.cmd github-actions 41898282+github-actions[bot]@users.noreply.github.com "Update help submodule after commit ${{ env.GITHUB_COMMIT_MESSAGE }}"
+     #     cd ..
+     #   shell: cmd
+     #   env:
+     #     GITHUB_WORKSPACE: $GITHUB_WORKSPACE
 
       - name: Push changes to net6.0 help file
         run: |
@@ -206,11 +206,24 @@ jobs:
           SUPER_SECRET: ${{ secrets.DOCS_API_TOKEN_GITHUB }}
           REPO: masesgroup/FrameworkDocs
 
-      - name: Commit changes to JCOReflector
-        run: |
-          %GITHUB_WORKSPACE%\.github\workflows\push.cmd %REPO%
-        shell: cmd
-        env:
-          GITHUB_WORKSPACE: $GITHUB_WORKSPACE
-          SUPER_SECRET: ${{ secrets.DOCS_API_TOKEN_GITHUB }}
-          REPO: masesgroup/JCOReflector
+      - name: Request a PR to commit changes
+        if: ${{ github.repository_owner == 'masesgroup' }} # do not push any changes outside main repo or GeneratePR is false
+        uses: peter-evans/create-pull-request@v6
+        with:
+          branch-suffix: short-commit-hash
+          add-paths: .\*.*
+          commit-message: Update documentation after commit ${{ env.GITHUB_COMMIT_MESSAGE }}
+          title: Changes by GitHub action
+          body: Automated changes by GitHub action
+          reviewers: masesdevelopers
+          assignees: masesdevelopers
+          labels: documentation, java, enhancement, .NET Framework, .NET 6, .NET 8
+
+     # - name: Commit changes to JCOReflector
+     #   run: |
+     #     %GITHUB_WORKSPACE%\.github\workflows\push.cmd %REPO%
+     #   shell: cmd
+     #   env:
+     #     GITHUB_WORKSPACE: $GITHUB_WORKSPACE
+     #     SUPER_SECRET: ${{ secrets.DOCS_API_TOKEN_GITHUB }}
+     #     REPO: masesgroup/JCOReflector

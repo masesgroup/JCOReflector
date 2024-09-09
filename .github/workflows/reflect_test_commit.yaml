@@ -798,7 +798,7 @@ jobs:
 
       - name: Request a PR to commit changes
         if: ${{ github.repository_owner == 'masesgroup' }} # do not push any changes outside main repo or GeneratePR is false
-        uses: peter-evans/create-pull-request@v6
+        uses: peter-evans/create-pull-request@v7
         with:
           branch-suffix: short-commit-hash
           add-paths: |

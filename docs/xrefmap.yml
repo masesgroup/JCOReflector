@@ -3879,6 +3879,32 @@ references:
   commentId: T:MASES.JCOReflectorGUI.App
   fullName: MASES.JCOReflectorGUI.App
   nameWithType: App
+- uid: MASES.JCOReflectorGUI.App.InitializeComponent
+  name: InitializeComponent()
+  href: api/MASES.JCOReflectorGUI.App.html#MASES_JCOReflectorGUI_App_InitializeComponent
+  commentId: M:MASES.JCOReflectorGUI.App.InitializeComponent
+  fullName: MASES.JCOReflectorGUI.App.InitializeComponent()
+  nameWithType: App.InitializeComponent()
+- uid: MASES.JCOReflectorGUI.App.InitializeComponent*
+  name: InitializeComponent
+  href: api/MASES.JCOReflectorGUI.App.html#MASES_JCOReflectorGUI_App_InitializeComponent_
+  commentId: Overload:MASES.JCOReflectorGUI.App.InitializeComponent
+  isSpec: "True"
+  fullName: MASES.JCOReflectorGUI.App.InitializeComponent
+  nameWithType: App.InitializeComponent
+- uid: MASES.JCOReflectorGUI.App.Main
+  name: Main()
+  href: api/MASES.JCOReflectorGUI.App.html#MASES_JCOReflectorGUI_App_Main
+  commentId: M:MASES.JCOReflectorGUI.App.Main
+  fullName: MASES.JCOReflectorGUI.App.Main()
+  nameWithType: App.Main()
+- uid: MASES.JCOReflectorGUI.App.Main*
+  name: Main
+  href: api/MASES.JCOReflectorGUI.App.html#MASES_JCOReflectorGUI_App_Main_
+  commentId: Overload:MASES.JCOReflectorGUI.App.Main
+  isSpec: "True"
+  fullName: MASES.JCOReflectorGUI.App.Main
+  nameWithType: App.Main
 - uid: MASES.JCOReflectorGUI.AssemblyCollectionControl
   name: AssemblyCollectionControl
   href: api/MASES.JCOReflectorGUI.AssemblyCollectionControl.html
@@ -3923,6 +3949,19 @@ references:
   commentId: F:MASES.JCOReflectorGUI.AssemblyCollectionControl.AssemblyCollectionProperty
   fullName: MASES.JCOReflectorGUI.AssemblyCollectionControl.AssemblyCollectionProperty
   nameWithType: AssemblyCollectionControl.AssemblyCollectionProperty
+- uid: MASES.JCOReflectorGUI.AssemblyCollectionControl.InitializeComponent
+  name: InitializeComponent()
+  href: api/MASES.JCOReflectorGUI.AssemblyCollectionControl.html#MASES_JCOReflectorGUI_AssemblyCollectionControl_InitializeComponent
+  commentId: M:MASES.JCOReflectorGUI.AssemblyCollectionControl.InitializeComponent
+  fullName: MASES.JCOReflectorGUI.AssemblyCollectionControl.InitializeComponent()
+  nameWithType: AssemblyCollectionControl.InitializeComponent()
+- uid: MASES.JCOReflectorGUI.AssemblyCollectionControl.InitializeComponent*
+  name: InitializeComponent
+  href: api/MASES.JCOReflectorGUI.AssemblyCollectionControl.html#MASES_JCOReflectorGUI_AssemblyCollectionControl_InitializeComponent_
+  commentId: Overload:MASES.JCOReflectorGUI.AssemblyCollectionControl.InitializeComponent
+  isSpec: "True"
+  fullName: MASES.JCOReflectorGUI.AssemblyCollectionControl.InitializeComponent
+  nameWithType: AssemblyCollectionControl.InitializeComponent
 - uid: MASES.JCOReflectorGUI.AssemblyCollectionControl.TotalFolders
   name: TotalFolders
   href: api/MASES.JCOReflectorGUI.AssemblyCollectionControl.html#MASES_JCOReflectorGUI_AssemblyCollectionControl_TotalFolders
@@ -4043,6 +4082,19 @@ references:
   commentId: F:MASES.JCOReflectorGUI.MainWindow.EnableRefOutParametersProperty
   fullName: MASES.JCOReflectorGUI.MainWindow.EnableRefOutParametersProperty
   nameWithType: MainWindow.EnableRefOutParametersProperty
+- uid: MASES.JCOReflectorGUI.MainWindow.InitializeComponent
+  name: InitializeComponent()
+  href: api/MASES.JCOReflectorGUI.MainWindow.html#MASES_JCOReflectorGUI_MainWindow_InitializeComponent
+  commentId: M:MASES.JCOReflectorGUI.MainWindow.InitializeComponent
+  fullName: MASES.JCOReflectorGUI.MainWindow.InitializeComponent()
+  nameWithType: MainWindow.InitializeComponent()
+- uid: MASES.JCOReflectorGUI.MainWindow.InitializeComponent*
+  name: InitializeComponent
+  href: api/MASES.JCOReflectorGUI.MainWindow.html#MASES_JCOReflectorGUI_MainWindow_InitializeComponent_
+  commentId: Overload:MASES.JCOReflectorGUI.MainWindow.InitializeComponent
+  isSpec: "True"
+  fullName: MASES.JCOReflectorGUI.MainWindow.InitializeComponent
+  nameWithType: MainWindow.InitializeComponent
 - uid: MASES.JCOReflectorGUI.MainWindow.JarDestinationFolder
   name: JarDestinationFolder
   href: api/MASES.JCOReflectorGUI.MainWindow.html#MASES_JCOReflectorGUI_MainWindow_JarDestinationFolder

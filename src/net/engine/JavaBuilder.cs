@@ -219,7 +219,7 @@ namespace MASES.JCOReflectorEngine
             destinationFolder = Path.Combine(destinationFolder, Const.Framework.RuntimeFolder);
             destinationFolder = destinationFolder.Replace('\\', '/');
             var extraOptions = string.IsNullOrEmpty(toolExtraOptions) ? string.Empty : string.Format(" {0} ", toolExtraOptions);
-            var header = Const.Documentation.DOCS_HEADER.Replace(Const.Documentation.DOCS_VERSION_JCOREFLECTOR_PLACEHOLDER, string.Format("v{0}-{1}", Const.ReflectorVersion, commitVersion));
+            var header = Const.Documentation.DOCS_HEADER.Replace(Const.Documentation.DOCS_VERSION_JCOREFLECTOR_PLACEHOLDER, string.Empty); // removed to produce more stable documentation string.Format("v{0}-{1}", Const.ReflectorVersion, commitVersion));
             await LaunchProcess(sourceFolder, Path.Combine(jdkFolder, JavaDoc), "-header \"" + header + "\" -keywords -quiet -author -noindex -nodeprecated -nodeprecatedlist -notimestamp -nohelp -notree -public -cp " + jcoBridgeCp + " -d " + destinationFolder + extraOptions + " -link https://www.jcobridge.com/api-java_" + Const.JCOBridgeVersion + " @" + Const.FileNameAndDirectory.SourceFile, timeout);
 
             return counter;

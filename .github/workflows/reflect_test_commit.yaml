@@ -17,7 +17,7 @@ jobs:
     name: Check changed files
     outputs:
       run_job: ${{ steps.check_files.outputs.run_job }}
-    runs-on: ubuntu-latest
+    runs-on: ubuntu-22.04
     steps:
       - id: get_changed_files
         uses: masesgroup/retrieve-changed-files@v3
@@ -148,7 +148,7 @@ jobs:
   build_linux:
     needs: build_windows
     # The type of runner that the job will run on
-    runs-on: ubuntu-latest
+    runs-on: ubuntu-22.04
 
       # Steps represent a sequence of tasks that will be executed as part of the job
     steps:
@@ -427,7 +427,7 @@ jobs:
     strategy:
       fail-fast: false
       matrix:
-        os: [ 'ubuntu-latest', 'macos-latest', 'macos-13' ]
+        os: [ 'ubuntu-22.04', 'macos-latest', 'macos-13' ]
         framework: [ 'net6.0', 'net8.0' ]
         jdk_vendor: [ 'temurin', 'zulu', 'microsoft', 'corretto', 'oracle']
         jdk_version: [ '11', '17', '21' ] # only LTS versions
@@ -531,7 +531,7 @@ jobs:
           - jdk_vendor: oracle
             jdk_version: 11
 
-    runs-on: ubuntu-latest
+    runs-on: ubuntu-22.04
     steps:
       # Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it
       - uses: actions/checkout@v4
@@ -880,7 +880,7 @@ jobs:
   final_cleanup:
     needs: [ execute_finalize ]
     if: "always()"
-    runs-on: ubuntu-latest
+    runs-on: ubuntu-22.04
     # Steps represent a sequence of tasks that will be executed as part of the job
     steps:
       # Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it

@@ -112,14 +112,14 @@ namespace MASES.JCOReflectorEngine
                 ExportingAvoidanceMap.Add("System.Threading.Thread", new string[] { "VolatileRead" });
                 ExportingAvoidanceMap.Add("System.Threading.Volatile", new string[] { "Read" });
                 ExportingAvoidanceMap.Add("System.Threading.Interlocked", new string[] { "Decrement", "Increment"
-#if NET6_0 || NET7_0 || NET8_0
+#if NET6_0 || NET7_0 || NET8_0 || NET9_0
                                                                                          , "Read"
 #endif
                 });
-#if NET7_0 || NET8_0
+#if NET7_0 || NET8_0 || NET9_0
                 ExportingAvoidanceMap.Add("System.Runtime.InteropServices.JavaScript.JSMarshalerArgument", new string[] { "ToManaged" });
 #endif
-#if NET8_0
+#if NET8_0 || NET9_0
                 ExportingAvoidanceMap.Add("System.Runtime.InteropServices.Marshalling.IIUnknownInterfaceType", null);
 #endif
                 DirectMappablePrimitives.Add("boolean", "java.util.concurrent.atomic.AtomicBoolean");
@@ -171,29 +171,20 @@ namespace MASES.JCOReflectorEngine
             public const string JCOBridgeEmbeddedFile = "JCOBridge.zip";
             public const string JCOReflectorOptionsFile = "JCOReflectorOptions.java";
 
-#if NET6_0 || NET7_0 || NET8_0
+#if NET6_0 || NET7_0 || NET8_0 || NET9_0
             public static string[] JCOBridgeFiles = new string[]
             {
                 Path.Combine("linux-arm", "J2CBridgeHostActivator.so"),
-                Path.Combine("linux-arm", "libnethost.so"),
                 Path.Combine("linux-arm64", "J2CBridgeHostActivator.so"),
-                Path.Combine("linux-arm64", "libnethost.so"),
                 Path.Combine("linux-x64", "J2CBridgeHostActivator.so"),
-                Path.Combine("linux-x64", "libnethost.so"),
                 Path.Combine("osx-arm64", "J2CBridgeHostActivator.dylib"),
-                Path.Combine("osx-arm64", "libnethost.dylib"),
                 Path.Combine("osx-x64", "J2CBridgeHostActivator.dylib"),
-                Path.Combine("osx-x64", "libnethost.dylib"),
-#if !NET8_0
+#if !(NET8_0 || NET9_0)
                 Path.Combine("win-arm", "J2CBridgeHostActivator.dll"),
-                Path.Combine("win-arm", "nethost.dll"),
 #endif
                 Path.Combine("win-arm64", "J2CBridgeHostActivator.dll"),
-                Path.Combine("win-arm64", "nethost.dll"),
                 Path.Combine("win-x64", "J2CBridgeHostActivator.dll"),
-                Path.Combine("win-x64", "nethost.dll"),
                 Path.Combine("win-x86", "J2CBridgeHostActivator.dll"),
-                Path.Combine("win-x86", "nethost.dll"),
                 "C2JBridge.dll",
                 "C2JBridgeDesktop.dll",
                 "IpAddressIdGenerator.dll",
@@ -224,6 +215,9 @@ namespace MASES.JCOReflectorEngine
 #elif NET8_0
                 "Microsoft.NET8.App.runtimeconfig.json",
                 "Microsoft.WindowsDesktop8.App.runtimeconfig.json",
+#elif NET9_0
+                "Microsoft.NET9.App.runtimeconfig.json",
+                "Microsoft.WindowsDesktop9.App.runtimeconfig.json",
 #else
 #error Unable to identify .NET engine
 #endif
@@ -286,6 +280,10 @@ namespace MASES.JCOReflectorEngine
             public const string Runtime = ".NET 8";
             public const string RuntimeName = ".NETCoreApp";
             public const string RuntimeFolder = "net8.0";
+#elif NET9_0
+            public const string Runtime = ".NET 9";
+            public const string RuntimeName = ".NETCoreApp";
+            public const string RuntimeFolder = "net9.0";
 #elif NETFRAMEWORK
             public const string Runtime = ".NET Framework";
             public const string RuntimeName = ".NETFramework";

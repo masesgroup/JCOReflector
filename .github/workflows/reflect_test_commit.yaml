@@ -8,6 +8,15 @@ on:
   push:
     # only trigger on branches, not on tags
     branches: '**'
+    paths-ignore:
+      - 'docs/**'
+  workflow_dispatch:
+    inputs:
+      ForceExecution:
+        description: 'Force execution of workflow'
+        required: false
+        default: true
+        type: boolean
 
 # This workflow contains two jobs called "check" and "build_windows"
 jobs:
@@ -53,7 +62,7 @@ jobs:
   # This workflow contains a single job called "build"
   build_windows:
     needs: check
-    if: needs.check.outputs.run_job == 'true'
+    if: ${{ needs.check.outputs.run_job == 'true' || inputs.ForceExecution == true }}
     # The type of runner that the job will run on
     runs-on: windows-2022
 

@@ -189,7 +189,6 @@ namespace MASES.JCOReflectorEngine
                 "C2JBridgeDesktop.dll",
                 "IpAddressIdGenerator.dll",
                 "IpAddressIdGenerator.runtimeconfig.json",
-                "J2CBridge_Arm.dll",
                 "J2CBridge_Arm.so",
                 "J2CBridge_Arm64.dll",
                 "J2CBridge_Arm64.so",

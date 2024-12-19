@@ -221,7 +221,7 @@ jobs:
       DOTNET_CreateDumpVerboseDiagnostics: 1
       DOTNET_EnableCrashReport: 1
       JCOBRIDGE_SCOPEDON: JCOReflector|1.0.0
-      JCOBRIDGE_LicensePath: ${{ secrets.JCOBRIDGE_ONLINE }}
+      JCOBRIDGE_LicensePath: ${{ secrets.JCOBRIDGE_ENCODED_2_5_21 }}
     
     steps:
       # Runs a set of commands using the runners shell
@@ -314,7 +314,7 @@ jobs:
       DOTNET_CreateDumpVerboseDiagnostics: 1
       DOTNET_EnableCrashReport: 1
       JCOBRIDGE_SCOPEDON: JCOReflector|1.0.0
-      JCOBRIDGE_LicensePath: ${{ secrets.JCOBRIDGE_ONLINE }}
+      JCOBRIDGE_LicensePath: ${{ secrets.JCOBRIDGE_ENCODED_2_5_21 }}
       
     steps:
       # Runs a set of commands using the runners shell
@@ -430,7 +430,7 @@ jobs:
       DOTNET_CreateDumpVerboseDiagnostics: 1
       DOTNET_EnableCrashReport: 1
       JCOBRIDGE_SCOPEDON: JCOReflector|1.0.0
-      JCOBRIDGE_LicensePath: ${{ secrets.JCOBRIDGE_ONLINE }}
+      JCOBRIDGE_LicensePath: ${{ secrets.JCOBRIDGE_ENCODED_2_5_21 }}
 
     steps:
       # Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it
@@ -521,7 +521,7 @@ jobs:
       DOTNET_CreateDumpVerboseDiagnostics: 1
       DOTNET_EnableCrashReport: 1
       JCOBRIDGE_SCOPEDON: JCOReflector|1.0.0
-      JCOBRIDGE_LicensePath: ${{ secrets.JCOBRIDGE_ONLINE }}
+      JCOBRIDGE_LicensePath: ${{ secrets.JCOBRIDGE_ENCODED_2_5_21 }}
 
     steps:
       # Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it
@@ -634,7 +634,7 @@ jobs:
       DOTNET_CreateDumpVerboseDiagnostics: 1
       DOTNET_EnableCrashReport: 1
       JCOBRIDGE_SCOPEDON: JCOReflector|1.0.0
-      JCOBRIDGE_LicensePath: ${{ secrets.JCOBRIDGE_ONLINE }}
+      JCOBRIDGE_LicensePath: ${{ secrets.JCOBRIDGE_ENCODED_2_5_21 }}
 
     steps:
       # Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it

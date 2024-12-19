@@ -87,7 +87,7 @@ jobs:
     strategy:
       fail-fast: false
       matrix:
-        framework: [ 'net462', 'net6.0', 'net8.0' ]
+        framework: [ 'net462', 'net8.0', 'net9.0' ]
 
     # Steps represent a sequence of tasks that will be executed as part of the job
     steps:

@@ -2,7 +2,7 @@
 <ReflectorEventArgs xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
   <LogLevel>Error</LogLevel>
   <AssemblyNames>
-    <string>PresentationFramework, Version=6.0.0.0, PublicKeyToken=31bf3856ad364e35</string>
+    <string>PresentationFramework, Version=9.0.0.0, PublicKeyToken=31bf3856ad364e35</string>
   </AssemblyNames>
   <SourceFolder>src/jvm</SourceFolder>
   <SplitFolderByAssembly>true</SplitFolderByAssembly>

@@ -187,7 +187,7 @@
   "api/MASES.JCOReflectorEngine.ErrorReportingType.html": {
     "href": "api/MASES.JCOReflectorEngine.ErrorReportingType.html",
     "title": "Enum ErrorReportingType | MASES Group website - JCOReflector",
-    "keywords": "Enum ErrorReportingType Namespace MASES.JCOReflectorEngine Assembly MASES.JCOReflectorEngine.dll [Flags] public enum ErrorReportingType Fields Both = Callback | Exception The Callback is executed and the Exception is executed Callback = 1 The EndOperationHandler will be called in case of error Exception = 2 The Exception will be propagated"
+    "keywords": "Enum ErrorReportingType Namespace MASES.JCOReflectorEngine Assembly MASES.JCOReflectorEngine.dll [Flags] public enum ErrorReportingType Fields Both = Callback | Exception The Callback is executed and the Exception is executed Callback = 1 The MASES.JCOReflectorEngine.JobManager.EndOperationHandler will be called in case of error Exception = 2 The Exception will be propagated"
   },
   "api/MASES.JCOReflectorEngine.FolderBuilderEventArgs.html": {
     "href": "api/MASES.JCOReflectorEngine.FolderBuilderEventArgs.html",

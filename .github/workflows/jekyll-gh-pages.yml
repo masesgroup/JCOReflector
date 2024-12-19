@@ -35,8 +35,8 @@ jobs:
       - name: Support
         uses: actions/checkout@v4
         with:
-          repository: masesgroup/WebSitesSupport
-          path: WebSitesSupport
+          repository: masesgroup/CommonTools
+          path: CommonTools
       - name: Setup Pages
         uses: actions/configure-pages@v5
       - name: Setup IndexNow # Generate files dynamically to prevent them from being leaked in public repositories.
@@ -48,7 +48,7 @@ jobs:
           destination: ./_site
       - name: Sitemap lastmod replacer
         shell: pwsh
-        run: ./WebSitesSupport/SitemapLastmodReplacer.ps1 -baseUrl https://jcoreflector.masesgroup.com -baseFolder ${{ github.workspace }}/docs/ -inSitemapFile ${{ github.workspace }}/_site/sitemap.xml -outSitemapFile ${{ github.workspace }}/sitemap.xml
+        run: ./CommonTools/scripts/SitemapLastmodReplacer.ps1 -baseUrl https://jcoreflector.masesgroup.com -baseFolder ${{ github.workspace }}/docs/ -inSitemapFile ${{ github.workspace }}/_site/sitemap.xml -outSitemapFile ${{ github.workspace }}/sitemap.xml
       - run: sudo cp ${{ github.workspace }}/sitemap.xml ${{ github.workspace }}/_site/sitemap.xml
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
@@ -66,16 +66,3 @@ jobs:
       - name: Deploy to GitHub Pages
         id: deployment
         uses: actions/deploy-pages@v4
-
-  # commented since the action does not support more than 10000 files
-  #indexing:
-  #  runs-on: ubuntu-latest
-  #  needs: deploy
-  #  steps:
-  #    - name: IndexNow Action
-  #      uses: bojieyang/indexnow-action@v2
-  #      with:
-  #        sitemap-location: '${{ needs.deploy.outputs.page_url }}sitemap.xml'
-  #        key: ${{ secrets.INDEXNOW_KEY }}
-  #        limit: 10000
-  #        timeout: 600000

@@ -3,9 +3,8 @@
 The available reflected classes are generated starting from root assemblies, generation is done using up to 10 recursions to explore for exportable Exceptions.
 There are three main folders:
 * [**_net462_**](#net-framework) contains the reflected classes generated from .NET Framework, divided by the containing assembly
-* [**_net6.0_**](#net-6) contains the reflected classes generated from .NET 6, divided by the containing assembly
-* [**_net7.0_**](#net-7) contains the reflected classes generated from .NET 7, divided by the containing assembly
 * [**_net8.0_**](#net-8) contains the reflected classes generated from .NET 8, divided by the containing assembly
+* [**_net9.0_**](#net-9) contains the reflected classes generated from .NET 9, divided by the containing assembly
 
 **JCOReflector** is the folder of common classes for both **.NET** **Framework**, **6** and **8**
 
@@ -122,7 +121,7 @@ Parsed assemblies are:
 
 [//]: # "EndReport net462"
 
-![FrameworkStatistic](https://docs.google.com/spreadsheets/d/e/2PACX-1vTe94B4KWTddOWDnIHGRkHHPq23g_oPzZUfmVU3ls1lEUwNQmG_T4Zi7xCCNkb0RMqkT8LblRNW7aT9/pubchart?oid=845891829&format=image)
+![FrameworkStatistic](https://docs.google.com/spreadsheets/d/e/2PACX-1vTe94B4KWTddOWDnIHGRkHHPq23g_oPzZUfmVU3ls1lEUwNQmG_T4Zi7xCCNkb0RMqkT8LblRNW7aT9/pubchart?oid=845891829&format=image ".NET Framework statistics")
 
 ## .NET 8
 
@@ -452,7 +451,8 @@ Parsed assemblies are:
 
 [//]: # "EndReport net8.0"
 
-![Net8Statistic](https://docs.google.com/spreadsheets/d/e/2PACX-1vTe94B4KWTddOWDnIHGRkHHPq23g_oPzZUfmVU3ls1lEUwNQmG_T4Zi7xCCNkb0RMqkT8LblRNW7aT9/pubchart?oid=1753386013&format=image)
+![Net8Statistic](https://docs.google.com/spreadsheets/d/e/2PACX-1vTe94B4KWTddOWDnIHGRkHHPq23g_oPzZUfmVU3ls1lEUwNQmG_T4Zi7xCCNkb0RMqkT8LblRNW7aT9/pubchart?oid=1753386013&format=image ".NET 8 statistics")
+
 
 ## .NET 9
 
@@ -784,4 +784,4 @@ Parsed assemblies are:
 
 [//]: # "EndReport net9.0"
 
-![Net9Statistic](https://docs.google.com/spreadsheets/d/e/2PACX-1vTe94B4KWTddOWDnIHGRkHHPq23g_oPzZUfmVU3ls1lEUwNQmG_T4Zi7xCCNkb0RMqkT8LblRNW7aT9/pubchart?oid=1200391981&format=image)
+![Net9Statistic](https://docs.google.com/spreadsheets/d/e/2PACX-1vTe94B4KWTddOWDnIHGRkHHPq23g_oPzZUfmVU3ls1lEUwNQmG_T4Zi7xCCNkb0RMqkT8LblRNW7aT9/pubchart?oid=1200391981&format=image ".NET 9 statistics")

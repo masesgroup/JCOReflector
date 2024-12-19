@@ -95,7 +95,7 @@ jobs:
         run: .\bin\net8.0\MASES.JCOReflectorCLI -JobType Reflect -JobFile .github\workflows\reflect_net8.0.job
 
       - name: Reflect .NET 9 Java files
-        run: .\bin\net8.0\MASES.JCOReflectorCLI -JobType Reflect -JobFile .github\workflows\reflect_net9.0.job
+        run: .\bin\net9.0\MASES.JCOReflectorCLI -JobType Reflect -JobFile .github\workflows\reflect_net9.0.job
 
       - name: Reflect .NET Framework Java files
         run: .\bin\net462\MASES.JCOReflectorCLI -JobType Reflect -JobFile .github\workflows\reflect_net462.job

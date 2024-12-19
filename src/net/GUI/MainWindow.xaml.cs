@@ -121,6 +121,10 @@ namespace MASES.JCOReflectorGUI
             Title = "JCOReflector Builder - CLR to JVM reflection class generator (.NET 8)";
 
             tbAssemblyNames.Text += "PresentationFramework";
+#elif NET9_0
+            Title = "JCOReflector Builder - CLR to JVM reflection class generator (.NET 9)";
+
+            tbAssemblyNames.Text += "PresentationFramework";
 #elif NETFRAMEWORK
             Title = "JCOReflector Builder - CLR to JVM reflection class generator (.NET Framework)";
 

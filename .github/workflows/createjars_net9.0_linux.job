@@ -7,7 +7,7 @@
   <JDKFolder>jdk</JDKFolder>
   <JDKTarget>Version8</JDKTarget>
   <JDKToolExtraOptions></JDKToolExtraOptions>
-  <JarDestinationFolder>bin/net6.0</JarDestinationFolder>
+  <JarDestinationFolder>bin/net9.0</JarDestinationFolder>
   <WithJARSource>false</WithJARSource>
   <EmbeddingJCOBridge>true</EmbeddingJCOBridge>
 </JARBuilderEventArgs>

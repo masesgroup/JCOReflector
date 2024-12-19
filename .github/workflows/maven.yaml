@@ -54,7 +54,7 @@ jobs:
     strategy:
       fail-fast: false
       matrix:
-        framework: [ 'net462', 'net6.0', 'net8.0' ]
+        framework: [ 'net462', 'net8.0', 'net9.0' ]
 
     # Steps represent a sequence of tasks that will be executed as part of the job
     steps:
@@ -98,7 +98,7 @@ jobs:
 
       - name: Install local file to be used within Javadoc section of generated POM 
         shell: bash
-        run: mvn install:install-file --no-transfer-progress -Dfile=../../../bin/${{ matrix.framework }}/JCOBridge.jar -DgroupId=JCOBridge -DartifactId=JCOBridge -Dversion=2.5.17 -Dpackaging=jar -f ./src/jvm/src/${{ matrix.framework }}.xml
+        run: mvn install:install-file --no-transfer-progress -Dfile=../../../bin/${{ matrix.framework }}/JCOBridge.jar -DgroupId=JCOBridge -DartifactId=JCOBridge -Dversion=2.5.21 -Dpackaging=jar -f ./src/jvm/src/${{ matrix.framework }}.xml
 
       - name: Publish ${{ matrix.framework }} to Apache Maven Central
         shell: bash

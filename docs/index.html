@@ -78,30 +78,30 @@
 <table>
 <thead>
 <tr>
-<th>.NET Framework</th>
-<th>.NET 6</th>
-<th>.NET 8</th>
+<th style="text-align: center;">.NET Framework</th>
+<th style="text-align: center;">.NET 8</th>
+<th style="text-align: center;">.NET 9</th>
 </tr>
 </thead>
 <tbody>
 <tr>
-<td><a href="https://search.maven.org/search?q=g:%22com.masesgroup%22%20AND%20a:%22jcoreflector_net462%22"><img src="https://img.shields.io/maven-central/v/com.masesgroup/jcoreflector_net462.svg?label=Maven%20Central" alt="Maven Central"></a></td>
-<td><a href="https://search.maven.org/search?q=g:%22com.masesgroup%22%20AND%20a:%22jcoreflector_net6.0%22"><img src="https://img.shields.io/maven-central/v/com.masesgroup/jcoreflector_net6.0.svg?label=Maven%20Central" alt="Maven Central"></a></td>
-<td><a href="https://search.maven.org/search?q=g:%22com.masesgroup%22%20AND%20a:%22jcoreflector_net8.0%22"><img src="https://img.shields.io/maven-central/v/com.masesgroup/jcoreflector_net8.0.svg?label=Maven%20Central" alt="Maven Central"></a></td>
+<td style="text-align: center;"><a href="https://search.maven.org/search?q=g:%22com.masesgroup%22%20AND%20a:%22jcoreflector_net462%22"><img src="https://img.shields.io/maven-central/v/com.masesgroup/jcoreflector_net462.svg?label=Maven%20Central" alt="Maven Central"></a></td>
+<td style="text-align: center;"><a href="https://search.maven.org/search?q=g:%22com.masesgroup%22%20AND%20a:%22jcoreflector_net8.0%22"><img src="https://img.shields.io/maven-central/v/com.masesgroup/jcoreflector_net8.0.svg?label=Maven%20Central" alt="Maven Central"></a></td>
+<td style="text-align: center;"><a href="https://search.maven.org/search?q=g:%22com.masesgroup%22%20AND%20a:%22jcoreflector_net9.0%22"><img src="https://img.shields.io/maven-central/v/com.masesgroup/jcoreflector_net9.0.svg?label=Maven%20Central" alt="Maven Central"></a></td>
 </tr>
 </tbody>
 </table>
 <table>
 <thead>
 <tr>
-<th>JCOReflectorEngine</th>
-<th>JCOReflectorCLI</th>
+<th style="text-align: center;">JCOReflectorEngine</th>
+<th style="text-align: center;">JCOReflectorCLI</th>
 </tr>
 </thead>
 <tbody>
 <tr>
-<td><a href="https://www.nuget.org/packages/MASES.JCOReflectorEngine"><img src="https://img.shields.io/nuget/v/MASES.JCOReflectorEngine" alt="latest version"></a> <a href="https://www.nuget.org/packages/MASES.JCOReflectorEngine"><img src="https://img.shields.io/nuget/dt/MASES.JCOReflectorEngine" alt="downloads"></a></td>
-<td><a href="https://www.nuget.org/packages/MASES.JCOReflectorCLI"><img src="https://img.shields.io/nuget/v/MASES.JCOReflectorCLI" alt="latest version"></a> <a href="https://www.nuget.org/packages/MASES.JCOReflectorCLI"><img src="https://img.shields.io/nuget/dt/MASES.JCOReflectorCLI" alt="downloads"></a></td>
+<td style="text-align: center;"><a href="https://www.nuget.org/packages/MASES.JCOReflectorEngine"><img src="https://img.shields.io/nuget/v/MASES.JCOReflectorEngine" alt="latest version"></a> <a href="https://www.nuget.org/packages/MASES.JCOReflectorEngine"><img src="https://img.shields.io/nuget/dt/MASES.JCOReflectorEngine" alt="downloads"></a></td>
+<td style="text-align: center;"><a href="https://www.nuget.org/packages/MASES.JCOReflectorCLI"><img src="https://img.shields.io/nuget/v/MASES.JCOReflectorCLI" alt="latest version"></a> <a href="https://www.nuget.org/packages/MASES.JCOReflectorCLI"><img src="https://img.shields.io/nuget/dt/MASES.JCOReflectorCLI" alt="downloads"></a></td>
 </tr>
 </tbody>
 </table>
@@ -235,7 +235,7 @@ object HelloIterator {
 <li><a href="https://www.jcobridge.com">JCOBridge</a> is able to access and execute directly within a JVM using C# code, from C# it is possible to execute directly Java code with a similar syntax: look at the examples in <a href="https://github.com/masesgroup/JCOBridge-Examples">JCOBridge-Examples</a>.</li>
 <li>The project <a href="https://github.com/masesgroup/JNet">JNet</a> uses <a href="https://www.jcobridge.com">JCOBridge</a>: a developer has some ready made Java classes to be used from .NET.</li>
 </ol>
-<h2 id="actual-state">Actual state</h2>
+<h2 id="current-state">Current state</h2>
 <p>The JCOBridge is a mature platform for .NET assembly reflection, the .NET wrapper JARs are available and cover most of the .NET framework functionality.<br>
 The reflector executables, available for both Framework and CoreCLR, is limited in the following features:</p>
 <h3 id="implemented-in-the-reflector">Implemented in the reflector</h3>
@@ -291,9 +291,22 @@ In all cases <a href="https://www.jcobridge.com">JCOBridge</a> superside these l
 <h2 id="reflected-assemblies">Reflected Assemblies</h2>
 <p>The folder <a href="/src/jvm/src">src/jvm/src</a> contains all reflected classes generated for <strong>.NET</strong> <strong>Framework</strong> (<em>net462</em>), <strong>6</strong> (<em>net6.0</em>) and <strong>8</strong> (<em>net8.0</em>). Below the coverage <a href="#statistics">statistics</a>:</p>
 <h3 id="statistics">Statistics</h3>
-<p><img src="https://docs.google.com/spreadsheets/d/e/2PACX-1vTe94B4KWTddOWDnIHGRkHHPq23g_oPzZUfmVU3ls1lEUwNQmG_T4Zi7xCCNkb0RMqkT8LblRNW7aT9/pubchart?oid=845891829&amp;format=image" alt="FrameworkStatistic"></p>
-<p><img src="https://docs.google.com/spreadsheets/d/e/2PACX-1vTe94B4KWTddOWDnIHGRkHHPq23g_oPzZUfmVU3ls1lEUwNQmG_T4Zi7xCCNkb0RMqkT8LblRNW7aT9/pubchart?oid=1200391981&amp;format=image" alt="Net6Statistic"></p>
-<p><img src="https://docs.google.com/spreadsheets/d/e/2PACX-1vTe94B4KWTddOWDnIHGRkHHPq23g_oPzZUfmVU3ls1lEUwNQmG_T4Zi7xCCNkb0RMqkT8LblRNW7aT9/pubchart?oid=1753386013&amp;format=image" alt="Net8Statistic"></p>
+<table>
+<thead>
+<tr>
+<th>.NET Framework</th>
+<th>.NET 8</th>
+<th>.NET 9</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><img src="https://docs.google.com/spreadsheets/d/e/2PACX-1vTe94B4KWTddOWDnIHGRkHHPq23g_oPzZUfmVU3ls1lEUwNQmG_T4Zi7xCCNkb0RMqkT8LblRNW7aT9/pubchart?oid=845891829&amp;format=image" alt="FrameworkStatistic"></td>
+<td><img src="https://docs.google.com/spreadsheets/d/e/2PACX-1vTe94B4KWTddOWDnIHGRkHHPq23g_oPzZUfmVU3ls1lEUwNQmG_T4Zi7xCCNkb0RMqkT8LblRNW7aT9/pubchart?oid=1200391981&amp;format=image" alt="Net8Statistic"></td>
+<td><img src="https://docs.google.com/spreadsheets/d/e/2PACX-1vTe94B4KWTddOWDnIHGRkHHPq23g_oPzZUfmVU3ls1lEUwNQmG_T4Zi7xCCNkb0RMqkT8LblRNW7aT9/pubchart?oid=1753386013&amp;format=image" alt="Net9Statistic"></td>
+</tr>
+</tbody>
+</table>
 
 </article>
 

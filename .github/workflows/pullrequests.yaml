@@ -7,6 +7,8 @@ name: CI_PULLREQUEST
 on:
   pull_request:
     branches: [ master ]
+    paths-ignore:
+      - 'docs/**'
 
 # This workflow contains two jobs called "check" and "build_windows"
 jobs:
@@ -36,7 +38,7 @@ jobs:
                 echo "run_job=true" >> $GITHUB_OUTPUT
                 break
               fi
-              if [[ $added_modified_file == "src/"* ]]; then
+              if [[ $added_modified_file == "src/net/"* ]]; then
                 echo "$added_modified_file is under the directory 'src/'."
                 echo "run_job=true" >> $GITHUB_OUTPUT
                 break

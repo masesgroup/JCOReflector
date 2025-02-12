@@ -18,13 +18,13 @@
       {
         "files": [
           "api/**.yml",
-          "api/index.md",
+          "api/index.md"
         ]
       },
       {
         "files": [
           "javadoc/**.yml",
-          "javadoc/index.md",
+          "javadoc/index.md"
         ]
       },
       {
@@ -59,10 +59,10 @@
     ],
     "postProcessors": [ "ExtractSearchIndex" ],
     "globalMetadata": {
-	  "_appLogoPath": "images/logo.png",
+      "_appLogoPath": "images/logo.png",
       "_appFaviconPath": "images/favicon.png",
       "_appTitle": "MASES Group website - JCOReflector",
-      "_appFooter": "<div style=\"text-align: center;\">Copyright © 2024 MASES s.r.l.. | Via San Cesidio 16 - San Valentino in A.C. - PE | P.I. 01932310681</div>",
+      "_appFooter": "<script type=\"text/javascript\">document.write('<div style=\"text-align: center;\">Copyright © 2020 - ' + new Date().getFullYear() + ' MASES s.r.l. | Via San Cesidio 16 - San Valentino in A.C. - PE | P.I. 01932310681</div>');</script>",
       "_gitContribute": {
 
       }

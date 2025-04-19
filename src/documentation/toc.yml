@@ -13,33 +13,9 @@
 - name: Issues
   href: https://github.com/masesgroup/JCOReflector/issues/
 - name: Open source projects
-  dropdown: true
-  items:
-  - name: JNet
-    href: https://masesgroup.github.io/JNet/
-  - name: KNet
-    href: https://masesgroup.github.io/KNet/
-  - name: KEFCore
-    href: https://masesgroup.github.io/KEFCore/
-  - name: JCOReflector
-    href: https://masesgroup.github.io/JCOReflector/
-  - name: NuReflector
-    href: https://masesgroup.github.io/NuReflector/
-  - name: DataDistributionManager
-    href: https://masesgroup.github.io/DataDistributionManager/
-  - name: CLIParser
-    href: https://masesgroup.github.io/CLIParser/
-  - name: JCO SWT Bridge
-    href: https://masesgroup.github.io/JCOSWTBridge/
+  href: open_source/toc.yml
 - name: Other products
-  dropdown: true
-  items:
-  - name: Sinapse Platform
-    href: https://masesgroup.github.io/sinapse/
-  - name: JCOBridge
-    href: https://masesgroup.github.io/JCOBridge/
-  - name: KNetOPC
-    href: https://masesgroup.github.io/KNetOPC/
+  href: products/toc.yml
 - name: External links
   dropdown: true
   items:

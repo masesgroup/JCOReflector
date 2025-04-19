@@ -18,7 +18,11 @@
           "relative_path": "api/ClrTest.Reflection.DefaultFormatProvider.html"
         }
       },
-      "version": ""
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "ClrTest.Reflection.DefaultFormatProvider",
+      "Summary": null
     },
     {
       "type": "ManagedReference",
@@ -28,7 +32,11 @@
           "relative_path": "api/ClrTest.Reflection.IFormatProvider.html"
         }
       },
-      "version": ""
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "ClrTest.Reflection.IFormatProvider",
+      "Summary": null
     },
     {
       "type": "ManagedReference",
@@ -38,7 +46,11 @@
           "relative_path": "api/ClrTest.Reflection.IILProvider.html"
         }
       },
-      "version": ""
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "ClrTest.Reflection.IILProvider",
+      "Summary": null
     },
     {
       "type": "ManagedReference",
@@ -48,7 +60,11 @@
           "relative_path": "api/ClrTest.Reflection.IILStringCollector.html"
         }
       },
-      "version": ""
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "ClrTest.Reflection.IILStringCollector",
+      "Summary": null
     },
     {
       "type": "ManagedReference",
@@ -58,7 +74,11 @@
           "relative_path": "api/ClrTest.Reflection.ILInstruction.html"
         }
       },
-      "version": ""
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "ClrTest.Reflection.ILInstruction",
+      "Summary": null
     },
     {
       "type": "ManagedReference",
@@ -68,7 +88,11 @@
           "relative_path": "api/ClrTest.Reflection.ILInstructionVisitor.html"
         }
       },
-      "version": ""
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "ClrTest.Reflection.ILInstructionVisitor",
+      "Summary": null
     },
     {
       "type": "ManagedReference",
@@ -78,7 +102,11 @@
           "relative_path": "api/ClrTest.Reflection.ILReader.html"
         }
       },
-      "version": ""
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "ClrTest.Reflection.ILReader",
+      "Summary": null
     },
     {
       "type": "ManagedReference",
@@ -88,7 +116,11 @@
           "relative_path": "api/ClrTest.Reflection.ITokenResolver.html"
         }
       },
-      "version": ""
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "ClrTest.Reflection.ITokenResolver",
+      "Summary": null
     },
     {
       "type": "ManagedReference",
@@ -98,7 +130,11 @@
           "relative_path": "api/ClrTest.Reflection.InlineBrTargetInstruction.html"
         }
       },
-      "version": ""
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "ClrTest.Reflection.InlineBrTargetInstruction",
+      "Summary": null
     },
     {
       "type": "ManagedReference",
@@ -108,7 +144,11 @@
           "relative_path": "api/ClrTest.Reflection.InlineFieldInstruction.html"
         }
       },
-      "version": ""
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "ClrTest.Reflection.InlineFieldInstruction",
+      "Summary": null
     },
     {
       "type": "ManagedReference",
@@ -118,7 +158,11 @@
           "relative_path": "api/ClrTest.Reflection.InlineI8Instruction.html"
         }
       },
-      "version": ""
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "ClrTest.Reflection.InlineI8Instruction",
+      "Summary": null
     },
     {
       "type": "ManagedReference",
@@ -128,7 +172,11 @@
           "relative_path": "api/ClrTest.Reflection.InlineIInstruction.html"
         }
       },
-      "version": ""
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "ClrTest.Reflection.InlineIInstruction",
+      "Summary": null
     },
     {
       "type": "ManagedReference",
@@ -138,7 +186,11 @@
           "relative_path": "api/ClrTest.Reflection.InlineMethodInstruction.html"
         }
       },
-      "version": ""
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "ClrTest.Reflection.InlineMethodInstruction",
+      "Summary": null
     },
     {
       "type": "ManagedReference",
@@ -148,7 +200,11 @@
           "relative_path": "api/ClrTest.Reflection.InlineNoneInstruction.html"
         }
       },
-      "version": ""
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "ClrTest.Reflection.InlineNoneInstruction",
+      "Summary": null
     },
     {
       "type": "ManagedReference",
@@ -158,7 +214,11 @@
           "relative_path": "api/ClrTest.Reflection.InlineRInstruction.html"
         }
       },
-      "version": ""
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "ClrTest.Reflection.InlineRInstruction",
+      "Summary": null
     },
     {
       "type": "ManagedReference",
@@ -168,7 +228,11 @@
           "relative_path": "api/ClrTest.Reflection.InlineSigInstruction.html"
         }
       },
-      "version": ""
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "ClrTest.Reflection.InlineSigInstruction",
+      "Summary": null
     },
     {
       "type": "ManagedReference",
@@ -178,7 +242,11 @@
           "relative_path": "api/ClrTest.Reflection.InlineStringInstruction.html"
         }
       },
-      "version": ""
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "ClrTest.Reflection.InlineStringInstruction",
+      "Summary": null
     },
     {
       "type": "ManagedReference",
@@ -188,7 +256,11 @@
           "relative_path": "api/ClrTest.Reflection.InlineSwitchInstruction.html"
         }
       },
-      "version": ""
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "ClrTest.Reflection.InlineSwitchInstruction",
+      "Summary": null
     },
     {
       "type": "ManagedReference",
@@ -198,7 +270,11 @@
           "relative_path": "api/ClrTest.Reflection.InlineTokInstruction.html"
         }
       },
-      "version": ""
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "ClrTest.Reflection.InlineTokInstruction",
+      "Summary": null
     },
     {
       "type": "ManagedReference",
@@ -208,7 +284,11 @@
           "relative_path": "api/ClrTest.Reflection.InlineTypeInstruction.html"
         }
       },
-      "version": ""
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "ClrTest.Reflection.InlineTypeInstruction",
+      "Summary": null
     },
     {
       "type": "ManagedReference",
@@ -218,7 +298,11 @@
           "relative_path": "api/ClrTest.Reflection.InlineVarInstruction.html"
         }
       },
-      "version": ""
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "ClrTest.Reflection.InlineVarInstruction",
+      "Summary": null
     },
     {
       "type": "ManagedReference",
@@ -228,7 +312,11 @@
           "relative_path": "api/ClrTest.Reflection.MethodBaseILProvider.html"
         }
       },
-      "version": ""
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "ClrTest.Reflection.MethodBaseILProvider",
+      "Summary": null
     },
     {
       "type": "ManagedReference",
@@ -238,7 +326,11 @@
           "relative_path": "api/ClrTest.Reflection.ModuleScopeTokenResolver.html"
         }
       },
-      "version": ""
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "ClrTest.Reflection.ModuleScopeTokenResolver",
+      "Summary": null
     },
     {
       "type": "ManagedReference",
@@ -248,7 +340,11 @@
           "relative_path": "api/ClrTest.Reflection.RawILStringToTextWriter.html"
         }
       },
-      "version": ""
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "ClrTest.Reflection.RawILStringToTextWriter",
+      "Summary": null
     },
     {
       "type": "ManagedReference",
@@ -258,7 +354,11 @@
           "relative_path": "api/ClrTest.Reflection.RawILStringVisitor.html"
         }
       },
-      "version": ""
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "ClrTest.Reflection.RawILStringVisitor",
+      "Summary": null
     },
     {
       "type": "ManagedReference",
@@ -268,7 +368,11 @@
           "relative_path": "api/ClrTest.Reflection.ReadableILStringToTextWriter.html"
         }
       },
-      "version": ""
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "ClrTest.Reflection.ReadableILStringToTextWriter",
+      "Summary": null
     },
     {
       "type": "ManagedReference",
@@ -278,7 +382,11 @@
           "relative_path": "api/ClrTest.Reflection.ReadableILStringVisitor.html"
         }
       },
-      "version": ""
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "ClrTest.Reflection.ReadableILStringVisitor",
+      "Summary": null
     },
     {
       "type": "ManagedReference",
@@ -288,7 +396,11 @@
           "relative_path": "api/ClrTest.Reflection.ShortInlineBrTargetInstruction.html"
         }
       },
-      "version": ""
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "ClrTest.Reflection.ShortInlineBrTargetInstruction",
+      "Summary": null
     },
     {
       "type": "ManagedReference",
@@ -298,7 +410,11 @@
           "relative_path": "api/ClrTest.Reflection.ShortInlineIInstruction.html"
         }
       },
-      "version": ""
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "ClrTest.Reflection.ShortInlineIInstruction",
+      "Summary": null
     },
     {
       "type": "ManagedReference",
@@ -308,7 +424,11 @@
           "relative_path": "api/ClrTest.Reflection.ShortInlineRInstruction.html"
         }
       },
-      "version": ""
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "ClrTest.Reflection.ShortInlineRInstruction",
+      "Summary": null
     },
     {
       "type": "ManagedReference",
@@ -318,7 +438,11 @@
           "relative_path": "api/ClrTest.Reflection.ShortInlineVarInstruction.html"
         }
       },
-      "version": ""
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "ClrTest.Reflection.ShortInlineVarInstruction",
+      "Summary": null
     },
     {
       "type": "ManagedReference",
@@ -328,7 +452,11 @@
           "relative_path": "api/ClrTest.Reflection.html"
         }
       },
-      "version": ""
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "ClrTest.Reflection",
+      "Summary": null
     },
     {
       "type": "ManagedReference",
@@ -338,7 +466,11 @@
           "relative_path": "api/MASES.JCOReflectorEngine.AssemblyData.html"
         }
       },
-      "version": ""
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "MASES.JCOReflectorEngine.AssemblyData",
+      "Summary": "<p sourcefile=\"api/MASES.JCOReflectorEngine.AssemblyData.yml\" sourcestartlinenumber=\"1\">The single AssemblyData.</p>\n"
     },
     {
       "type": "ManagedReference",
@@ -348,7 +480,11 @@
           "relative_path": "api/MASES.JCOReflectorEngine.AssemblyDataCollection.html"
         }
       },
-      "version": ""
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "MASES.JCOReflectorEngine.AssemblyDataCollection",
+      "Summary": "<p sourcefile=\"api/MASES.JCOReflectorEngine.AssemblyDataCollection.yml\" sourcestartlinenumber=\"1\">A collection of Manager objects.</p>\n"
     },
     {
       "type": "ManagedReference",
@@ -358,7 +494,11 @@
           "relative_path": "api/MASES.JCOReflectorEngine.CommonEventArgs.html"
         }
       },
-      "version": ""
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "MASES.JCOReflectorEngine.CommonEventArgs",
+      "Summary": null
     },
     {
       "type": "ManagedReference",
@@ -368,7 +508,11 @@
           "relative_path": "api/MASES.JCOReflectorEngine.DocsBuilderEventArgs.html"
         }
       },
-      "version": ""
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "MASES.JCOReflectorEngine.DocsBuilderEventArgs",
+      "Summary": null
     },
     {
       "type": "ManagedReference",
@@ -378,7 +522,11 @@
           "relative_path": "api/MASES.JCOReflectorEngine.EndOperationEventArgs.html"
         }
       },
-      "version": ""
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "MASES.JCOReflectorEngine.EndOperationEventArgs",
+      "Summary": null
     },
     {
       "type": "ManagedReference",
@@ -388,7 +536,11 @@
           "relative_path": "api/MASES.JCOReflectorEngine.ErrorReportingType.html"
         }
       },
-      "version": ""
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "MASES.JCOReflectorEngine.ErrorReportingType",
+      "Summary": null
     },
     {
       "type": "ManagedReference",
@@ -398,7 +550,11 @@
           "relative_path": "api/MASES.JCOReflectorEngine.FolderBuilderEventArgs.html"
         }
       },
-      "version": ""
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "MASES.JCOReflectorEngine.FolderBuilderEventArgs",
+      "Summary": null
     },
     {
       "type": "ManagedReference",
@@ -408,7 +564,11 @@
           "relative_path": "api/MASES.JCOReflectorEngine.JARBuilderEventArgs.html"
         }
       },
-      "version": ""
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "MASES.JCOReflectorEngine.JARBuilderEventArgs",
+      "Summary": null
     },
     {
       "type": "ManagedReference",
@@ -418,7 +578,11 @@
           "relative_path": "api/MASES.JCOReflectorEngine.JDKVersion.html"
         }
       },
-      "version": ""
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "MASES.JCOReflectorEngine.JDKVersion",
+      "Summary": null
     },
     {
       "type": "ManagedReference",
@@ -428,7 +592,11 @@
           "relative_path": "api/MASES.JCOReflectorEngine.JavaBuilderEventArgs.html"
         }
       },
-      "version": ""
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "MASES.JCOReflectorEngine.JavaBuilderEventArgs",
+      "Summary": null
     },
     {
       "type": "ManagedReference",
@@ -438,7 +606,11 @@
           "relative_path": "api/MASES.JCOReflectorEngine.JobManager.CmdParam.html"
         }
       },
-      "version": ""
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "MASES.JCOReflectorEngine.JobManager.CmdParam",
+      "Summary": null
     },
     {
       "type": "ManagedReference",
@@ -448,7 +620,11 @@
           "relative_path": "api/MASES.JCOReflectorEngine.JobManager.html"
         }
       },
-      "version": ""
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "MASES.JCOReflectorEngine.JobManager",
+      "Summary": "<p sourcefile=\"api/MASES.JCOReflectorEngine.JobManager.yml\" sourcestartlinenumber=\"1\">The main entry point</p>\n"
     },
     {
       "type": "ManagedReference",
@@ -458,7 +634,11 @@
           "relative_path": "api/MASES.JCOReflectorEngine.JobTypes.html"
         }
       },
-      "version": ""
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "MASES.JCOReflectorEngine.JobTypes",
+      "Summary": null
     },
     {
       "type": "ManagedReference",
@@ -468,7 +648,11 @@
           "relative_path": "api/MASES.JCOReflectorEngine.LogLevel.html"
         }
       },
-      "version": ""
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "MASES.JCOReflectorEngine.LogLevel",
+      "Summary": null
     },
     {
       "type": "ManagedReference",
@@ -478,7 +662,11 @@
           "relative_path": "api/MASES.JCOReflectorEngine.POMBuilderEventArgs.html"
         }
       },
-      "version": ""
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "MASES.JCOReflectorEngine.POMBuilderEventArgs",
+      "Summary": null
     },
     {
       "type": "ManagedReference",
@@ -488,7 +676,11 @@
           "relative_path": "api/MASES.JCOReflectorEngine.POMStagingType.html"
         }
       },
-      "version": ""
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "MASES.JCOReflectorEngine.POMStagingType",
+      "Summary": null
     },
     {
       "type": "ManagedReference",
@@ -498,7 +690,11 @@
           "relative_path": "api/MASES.JCOReflectorEngine.POMType.html"
         }
       },
-      "version": ""
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "MASES.JCOReflectorEngine.POMType",
+      "Summary": null
     },
     {
       "type": "ManagedReference",
@@ -508,7 +704,11 @@
           "relative_path": "api/MASES.JCOReflectorEngine.ReflectorEventArgs.html"
         }
       },
-      "version": ""
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "MASES.JCOReflectorEngine.ReflectorEventArgs",
+      "Summary": null
     },
     {
       "type": "ManagedReference",
@@ -518,7 +718,11 @@
           "relative_path": "api/MASES.JCOReflectorEngine.appendToConsoleHandler.html"
         }
       },
-      "version": ""
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "MASES.JCOReflectorEngine.appendToConsoleHandler",
+      "Summary": null
     },
     {
       "type": "ManagedReference",
@@ -528,7 +732,11 @@
           "relative_path": "api/MASES.JCOReflectorEngine.html"
         }
       },
-      "version": ""
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "MASES.JCOReflectorEngine",
+      "Summary": null
     },
     {
       "type": "ManagedReference",
@@ -538,7 +746,11 @@
           "relative_path": "api/MASES.JCOReflectorGUI.App.html"
         }
       },
-      "version": ""
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "MASES.JCOReflectorGUI.App",
+      "Summary": "<p sourcefile=\"api/MASES.JCOReflectorGUI.App.yml\" sourcestartlinenumber=\"1\">Interaction logic for App.xaml</p>\n"
     },
     {
       "type": "ManagedReference",
@@ -548,7 +760,11 @@
           "relative_path": "api/MASES.JCOReflectorGUI.AssemblyCollectionControl.html"
         }
       },
-      "version": ""
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "MASES.JCOReflectorGUI.AssemblyCollectionControl",
+      "Summary": "<p sourcefile=\"api/MASES.JCOReflectorGUI.AssemblyCollectionControl.yml\" sourcestartlinenumber=\"1\">Interaction logic for AssemblyCollectionControl.xaml</p>\n"
     },
     {
       "type": "ManagedReference",
@@ -558,7 +774,11 @@
           "relative_path": "api/MASES.JCOReflectorGUI.MainWindow.appendToConsoleDelegate.html"
         }
       },
-      "version": ""
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "MASES.JCOReflectorGUI.MainWindow.appendToConsoleDelegate",
+      "Summary": null
     },
     {
       "type": "ManagedReference",
@@ -568,7 +788,11 @@
           "relative_path": "api/MASES.JCOReflectorGUI.MainWindow.html"
         }
       },
-      "version": ""
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "MASES.JCOReflectorGUI.MainWindow",
+      "Summary": "<p sourcefile=\"api/MASES.JCOReflectorGUI.MainWindow.yml\" sourcestartlinenumber=\"1\">Interaction logic for MainWindow.xaml</p>\n"
     },
     {
       "type": "ManagedReference",
@@ -578,7 +802,11 @@
           "relative_path": "api/MASES.JCOReflectorGUI.html"
         }
       },
-      "version": ""
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "MASES.JCOReflectorGUI",
+      "Summary": null
     },
     {
       "type": "Conceptual",

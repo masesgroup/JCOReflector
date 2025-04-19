@@ -218,7 +218,7 @@ jobs:
           branch-suffix: short-commit-hash
           add-paths: .\*.*
           commit-message: Update documentation after commit ${{ env.GITHUB_COMMIT_MESSAGE }}
-          title: Changes by GitHub action
+          title: Update documentation after commit ${{ env.GITHUB_COMMIT_MESSAGE }}
           body: Automated changes by GitHub action
           reviewers: masesdevelopers
           assignees: masesdevelopers

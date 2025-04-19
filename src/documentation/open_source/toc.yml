@@ -1,0 +1,26 @@
+dropdown: true
+items:
+- name: Introduction
+  href: https://masesgroup.com/en/open_source/index.html
+- name: Netdroid
+  href: https://netdroid.masesgroup.com/
+- name: JNet
+  href: https://jnet.masesgroup.com/
+- name: KNet
+  href: https://knet.masesgroup.com/
+- name: KEFCore
+  href: https://kefcore.masesgroup.com/
+- name: NetPDF
+  href: https://netpdf.masesgroup.com/
+- name: PLCOnNet
+  href: https://plconnet.masesgroup.com/
+- name: JCOReflector
+  href: https://jcoreflector.masesgroup.com/
+- name: NuReflector
+  href: https://nureflector.masesgroup.com/
+- name: DataDistributionManager
+  href: https://ddm.masesgroup.com
+- name: CLIParser
+  href: https://cliparser.masesgroup.com/
+- name: JCO SWT Bridge
+  href: https://jnetswt.masesgroup.com/

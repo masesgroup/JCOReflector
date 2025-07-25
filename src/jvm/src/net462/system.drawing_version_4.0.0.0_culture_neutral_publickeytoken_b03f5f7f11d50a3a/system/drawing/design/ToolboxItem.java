@@ -1,7 +1,7 @@
 /*
  *  MIT License
  *
- *  Copyright (c) 2024 MASES s.r.l.
+ *  Copyright (c) 2020-2025 MASES s.r.l.
  *
  *  Permission is hereby granted, free of charge, to any person obtaining a copy
  *  of this software and associated documentation files (the "Software"), to deal
@@ -185,7 +185,7 @@ public class ToolboxItem extends NetObject implements system.runtime.serializati
     
     // Methods section
     
-    public IComponent[] CreateComponents() throws Throwable, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.ArgumentException, system.FormatException, system.NotImplementedException, system.NotSupportedException, system.InvalidOperationException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.security.SecurityException {
+    public IComponent[] CreateComponents() throws Throwable, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.ArgumentException, system.FormatException, system.NotImplementedException, system.NotSupportedException, system.InvalidOperationException, system.resources.MissingManifestResourceException, system.ObjectDisposedException {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {

@@ -1,7 +1,7 @@
 /*
  *  MIT License
  *
- *  Copyright (c) 2024 MASES s.r.l.
+ *  Copyright (c) 2020-2025 MASES s.r.l.
  *
  *  Permission is hereby granted, free of charge, to any person obtaining a copy
  *  of this software and associated documentation files (the "Software"), to deal
@@ -195,7 +195,7 @@ public class ComponentTray extends ScrollableControl implements system.component
         }
     }
 
-    public Point GetLocation(IComponent receiver) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.ArgumentOutOfRangeException, system.InvalidOperationException, system.TypeLoadException, system.security.SecurityException, system.MissingMethodException, system.reflection.TargetInvocationException, system.IndexOutOfRangeException, system.globalization.CultureNotFoundException, system.NullReferenceException, system.configuration.ConfigurationException, system.configuration.ConfigurationErrorsException, system.OverflowException, system.resources.MissingManifestResourceException {
+    public Point GetLocation(IComponent receiver) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.security.SecurityException, system.MissingMethodException, system.reflection.TargetInvocationException, system.ObjectDisposedException, system.threading.AbandonedMutexException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.globalization.CultureNotFoundException, system.NullReferenceException, system.configuration.ConfigurationException, system.configuration.ConfigurationErrorsException, system.OverflowException, system.resources.MissingManifestResourceException {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
@@ -227,7 +227,7 @@ public class ComponentTray extends ScrollableControl implements system.component
         }
     }
 
-    public void CreateComponentFromTool(ToolboxItem tool) throws Throwable, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.security.SecurityException, system.ObjectDisposedException, system.resources.MissingManifestResourceException, system.IndexOutOfRangeException, system.NotSupportedException, system.globalization.CultureNotFoundException, system.NullReferenceException, system.componentmodel.Win32Exception, system.OutOfMemoryException, system.NotImplementedException, system.RankException {
+    public void CreateComponentFromTool(ToolboxItem tool) throws Throwable, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.ArgumentException, system.resources.MissingManifestResourceException, system.InvalidOperationException, system.IndexOutOfRangeException, system.NotSupportedException, system.globalization.CultureNotFoundException, system.NullReferenceException, system.componentmodel.Win32Exception, system.ObjectDisposedException, system.OutOfMemoryException, system.NotImplementedException, system.RankException {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
@@ -247,7 +247,7 @@ public class ComponentTray extends ScrollableControl implements system.component
         }
     }
 
-    public void SetLocation(IComponent receiver, Point location) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.configuration.ConfigurationException, system.configuration.ConfigurationErrorsException, system.OverflowException, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.InvalidOperationException, system.IndexOutOfRangeException, system.componentmodel.Win32Exception, system.NotSupportedException, system.TypeLoadException, system.security.SecurityException, system.globalization.CultureNotFoundException, system.NullReferenceException {
+    public void SetLocation(IComponent receiver, Point location) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.configuration.ConfigurationException, system.configuration.ConfigurationErrorsException, system.OverflowException, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.InvalidOperationException, system.IndexOutOfRangeException, system.componentmodel.Win32Exception, system.NotSupportedException, system.security.SecurityException, system.ObjectDisposedException, system.threading.AbandonedMutexException, system.globalization.CultureNotFoundException, system.NullReferenceException {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {

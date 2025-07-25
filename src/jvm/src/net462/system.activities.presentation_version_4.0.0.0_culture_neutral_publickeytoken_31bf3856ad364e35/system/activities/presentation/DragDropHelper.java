@@ -1,7 +1,7 @@
 /*
  *  MIT License
  *
- *  Copyright (c) 2024 MASES s.r.l.
+ *  Copyright (c) 2020-2025 MASES s.r.l.
  *
  *  Permission is hereby granted, free of charge, to any person obtaining a copy
  *  of this software and associated documentation files (the "Software"), to deal
@@ -196,7 +196,7 @@ public class DragDropHelper extends NetObject  {
         }
     }
 
-    public static NetObject GetDroppedObject(DependencyObject dropTarget, DragEventArgs e, EditingContext context) throws Throwable, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.TypeLoadException, system.InvalidOperationException, system.NotSupportedException, system.ArgumentException, system.resources.MissingManifestResourceException, system.NullReferenceException, system.OverflowException, system.io.IOException, system.NotImplementedException, system.RankException, system.componentmodel.Win32Exception, system.collections.generic.KeyNotFoundException, system.FormatException, system.OutOfMemoryException, system.configuration.ConfigurationException, system.configuration.ConfigurationErrorsException {
+    public static NetObject GetDroppedObject(DependencyObject dropTarget, DragEventArgs e, EditingContext context) throws Throwable, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.TypeLoadException, system.InvalidOperationException, system.NotSupportedException, system.ArgumentException, system.resources.MissingManifestResourceException, system.NullReferenceException, system.OverflowException, system.io.IOException, system.security.SecurityException, system.NotImplementedException, system.RankException, system.componentmodel.Win32Exception, system.collections.generic.KeyNotFoundException, system.FormatException, system.OutOfMemoryException, system.configuration.ConfigurationException, system.configuration.ConfigurationErrorsException {
         if (classType == null)
             throw new UnsupportedOperationException("classType is null.");
         try {

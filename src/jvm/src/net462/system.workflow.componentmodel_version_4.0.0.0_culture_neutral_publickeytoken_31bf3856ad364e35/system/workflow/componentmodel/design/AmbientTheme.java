@@ -1,7 +1,7 @@
 /*
  *  MIT License
  *
- *  Copyright (c) 2024 MASES s.r.l.
+ *  Copyright (c) 2020-2025 MASES s.r.l.
  *
  *  Permission is hereby granted, free of charge, to any person obtaining a copy
  *  of this software and associated documentation files (the "Software"), to deal
@@ -340,7 +340,7 @@ public class AmbientTheme extends DesignerTheme  {
         }
     }
 
-    public int getBorderWidth() throws Throwable, system.ArgumentNullException, system.collections.generic.KeyNotFoundException, system.ArgumentException, system.ArgumentOutOfRangeException, system.InvalidOperationException, system.security.SecurityException, system.ObjectDisposedException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.FormatException, system.IndexOutOfRangeException, system.xml.XmlException, system.NotSupportedException, system.configuration.ConfigurationErrorsException, system.OutOfMemoryException, system.NullReferenceException, system.InvalidCastException, system.workflow.componentmodel.serialization.WorkflowMarkupSerializationException, system.MissingMethodException {
+    public int getBorderWidth() throws Throwable, system.ArgumentNullException, system.collections.generic.KeyNotFoundException, system.ArgumentOutOfRangeException, system.ArgumentException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ObjectDisposedException, system.InvalidOperationException, system.IndexOutOfRangeException, system.xml.XmlException, system.NotSupportedException, system.configuration.ConfigurationErrorsException, system.FormatException, system.OutOfMemoryException, system.NullReferenceException, system.InvalidCastException, system.workflow.componentmodel.serialization.WorkflowMarkupSerializationException, system.MissingMethodException, system.reflection.TargetInvocationException {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
@@ -660,7 +660,7 @@ public class AmbientTheme extends DesignerTheme  {
         }
     }
 
-    public Pen getDropIndicatorPen() throws Throwable, system.ArgumentNullException, system.collections.generic.KeyNotFoundException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ObjectDisposedException, system.InvalidOperationException, system.IndexOutOfRangeException, system.xml.XmlException, system.NotSupportedException, system.ArgumentException, system.ArgumentOutOfRangeException, system.configuration.ConfigurationErrorsException, system.FormatException, system.MulticastNotSupportedException, system.NullReferenceException, system.InvalidCastException, system.workflow.componentmodel.serialization.WorkflowMarkupSerializationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.runtime.interopservices.ExternalException {
+    public Pen getDropIndicatorPen() throws Throwable, system.ArgumentNullException, system.collections.generic.KeyNotFoundException, system.ArgumentOutOfRangeException, system.ArgumentException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ObjectDisposedException, system.InvalidOperationException, system.IndexOutOfRangeException, system.xml.XmlException, system.NotSupportedException, system.configuration.ConfigurationErrorsException, system.FormatException, system.MulticastNotSupportedException, system.NullReferenceException, system.InvalidCastException, system.workflow.componentmodel.serialization.WorkflowMarkupSerializationException, system.MissingMethodException, system.runtime.interopservices.ExternalException {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {

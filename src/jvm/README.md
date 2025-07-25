@@ -93,7 +93,7 @@ Parsed assemblies are:
 > * Microsoft.Workflow.Compiler, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35
 > * System.Workflow.Activities, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35
 
-> * Analyzed Types = 43402
+> * Analyzed Types = 43406
 >   * Enumerators = 26
 >   * Delegates = 557
 >   * Classes
@@ -114,8 +114,8 @@ Parsed assemblies are:
 >       * Duplicated Methods = 999
 >     * Properties = 29775
 >     * Events = 2185
-> * Discarded Types = 31085
->   * Non Public = 30631
+> * Discarded Types = 31089
+>   * Non Public = 30635
 >   * Generic = 354
 >   * Internals = 50
 
@@ -423,7 +423,7 @@ Parsed assemblies are:
 > * PresentationUI, Version=8.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35
 > * System.DirectoryServices, Version=8.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a
 
-> * Analyzed Types = 26819
+> * Analyzed Types = 26820
 >   * Enumerators = 24
 >   * Delegates = 364
 >   * Classes
@@ -444,8 +444,8 @@ Parsed assemblies are:
 >       * Duplicated Methods = 826
 >     * Properties = 17285
 >     * Events = 1636
-> * Discarded Types = 19468
->   * Non Public = 19102
+> * Discarded Types = 19469
+>   * Non Public = 19103
 >   * Generic = 309
 >   * Internals = 20
 
@@ -756,7 +756,7 @@ Parsed assemblies are:
 > * PresentationUI, Version=9.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35
 > * System.DirectoryServices, Version=9.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a
 
-> * Analyzed Types = 28081
+> * Analyzed Types = 28070
 >   * Enumerators = 24
 >   * Delegates = 365
 >   * Classes
@@ -777,8 +777,8 @@ Parsed assemblies are:
 >       * Duplicated Methods = 852
 >     * Properties = 17531
 >     * Events = 1641
-> * Discarded Types = 20634
->   * Non Public = 20260
+> * Discarded Types = 20623
+>   * Non Public = 20249
 >   * Generic = 317
 >   * Internals = 20
 

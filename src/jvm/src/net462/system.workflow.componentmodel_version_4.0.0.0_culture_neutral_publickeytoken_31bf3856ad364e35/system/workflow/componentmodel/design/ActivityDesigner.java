@@ -1,7 +1,7 @@
 /*
  *  MIT License
  *
- *  Copyright (c) 2024 MASES s.r.l.
+ *  Copyright (c) 2020-2025 MASES s.r.l.
  *
  *  Permission is hereby granted, free of charge, to any person obtaining a copy
  *  of this software and associated documentation files (the "Software"), to deal
@@ -206,7 +206,7 @@ public class ActivityDesigner extends NetObject implements system.componentmodel
         }
     }
 
-    public Image GetPreviewImage(Graphics compatibleGraphics) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.NotImplementedException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.FormatException, system.PlatformNotSupportedException, system.NotSupportedException, system.collections.generic.KeyNotFoundException, system.configuration.ConfigurationErrorsException, system.NullReferenceException, system.InvalidCastException, system.workflow.componentmodel.serialization.WorkflowMarkupSerializationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.runtime.interopservices.ExternalException, system.OverflowException, system.componentmodel.InvalidEnumArgumentException, system.UriFormatException, system.OutOfMemoryException, system.RankException {
+    public Image GetPreviewImage(Graphics compatibleGraphics) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.NotImplementedException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.FormatException, system.PlatformNotSupportedException, system.NotSupportedException, system.collections.generic.KeyNotFoundException, system.configuration.ConfigurationErrorsException, system.NullReferenceException, system.InvalidCastException, system.workflow.componentmodel.serialization.WorkflowMarkupSerializationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.runtime.interopservices.ExternalException, system.OverflowException, system.componentmodel.InvalidEnumArgumentException, system.UriFormatException, system.security.SecurityException, system.OutOfMemoryException, system.RankException {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {

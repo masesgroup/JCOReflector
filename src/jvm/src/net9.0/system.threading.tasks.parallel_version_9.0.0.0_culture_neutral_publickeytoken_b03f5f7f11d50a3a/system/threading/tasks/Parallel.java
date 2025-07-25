@@ -1,7 +1,7 @@
 /*
  *  MIT License
  *
- *  Copyright (c) 2024 MASES s.r.l.
+ *  Copyright (c) 2020-2025 MASES s.r.l.
  *
  *  Permission is hereby granted, free of charge, to any person obtaining a copy
  *  of this software and associated documentation files (the "Software"), to deal
@@ -164,7 +164,7 @@ public class Parallel extends NetObject  {
         }
     }
 
-    public static void Invoke(ParallelOptions parallelOptions, Action... actions) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.ArgumentNullException, system.OperationCanceledException, system.diagnostics.tracing.EventSourceException, system.MissingMethodException, system.reflection.TargetInvocationException, system.MissingMemberException, system.threading.tasks.TaskSchedulerException, system.AggregateException {
+    public static void Invoke(ParallelOptions parallelOptions, Action... actions) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.ArgumentNullException, system.OperationCanceledException, system.diagnostics.tracing.EventSourceException, system.MissingMethodException, system.reflection.TargetInvocationException, system.MissingMemberException, system.OutOfMemoryException, system.threading.tasks.TaskSchedulerException, system.AggregateException {
         if (classType == null)
             throw new UnsupportedOperationException("classType is null.");
         try {

@@ -1,7 +1,7 @@
 /*
  *  MIT License
  *
- *  Copyright (c) 2024 MASES s.r.l.
+ *  Copyright (c) 2020-2025 MASES s.r.l.
  *
  *  Permission is hereby granted, free of charge, to any person obtaining a copy
  *  of this software and associated documentation files (the "Software"), to deal
@@ -155,7 +155,7 @@ public class HttpMetricsEnrichmentContext extends NetObject  {
     
     // Methods section
     
-    public void AddCustomTag(java.lang.String name, NetObject value) throws Throwable, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.PlatformNotSupportedException, system.IndexOutOfRangeException, system.RankException, system.ArgumentException, system.ArrayTypeMismatchException, system.InvalidCastException {
+    public void AddCustomTag(java.lang.String name, NetObject value) throws Throwable, system.NotSupportedException, system.ArgumentException, system.PlatformNotSupportedException, system.IndexOutOfRangeException, system.ArrayTypeMismatchException, system.ArgumentOutOfRangeException {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {

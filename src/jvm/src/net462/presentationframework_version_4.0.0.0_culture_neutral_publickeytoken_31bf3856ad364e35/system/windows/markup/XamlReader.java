@@ -1,7 +1,7 @@
 /*
  *  MIT License
  *
- *  Copyright (c) 2024 MASES s.r.l.
+ *  Copyright (c) 2020-2025 MASES s.r.l.
  *
  *  Permission is hereby granted, free of charge, to any person obtaining a copy
  *  of this software and associated documentation files (the "Software"), to deal
@@ -208,7 +208,7 @@ public class XamlReader extends NetObject  {
         }
     }
 
-    public NetObject LoadAsync(Stream stream, ParserContext parserContext) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.ArgumentOutOfRangeException, system.FormatException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ObjectDisposedException, system.threading.AbandonedMutexException, system.security.SecurityException, system.IndexOutOfRangeException, system.NotSupportedException, system.NullReferenceException, system.xml.XmlException, system.UriFormatException, system.OutOfMemoryException, system.UnauthorizedAccessException, system.io.IOException, system.io.PathTooLongException, system.threading.ThreadAbortException, system.collections.generic.KeyNotFoundException, system.xaml.XamlSchemaException, system.xaml.XamlException, system.windows.markup.XamlParseException, system.OverflowException {
+    public NetObject LoadAsync(Stream stream, ParserContext parserContext) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.ArgumentOutOfRangeException, system.FormatException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ObjectDisposedException, system.threading.AbandonedMutexException, system.IndexOutOfRangeException, system.NotSupportedException, system.NullReferenceException, system.xml.XmlException, system.UriFormatException, system.OutOfMemoryException, system.security.SecurityException, system.UnauthorizedAccessException, system.io.IOException, system.io.PathTooLongException, system.threading.ThreadAbortException, system.collections.generic.KeyNotFoundException, system.xaml.XamlSchemaException, system.xaml.XamlException, system.windows.markup.XamlParseException, system.OverflowException {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {

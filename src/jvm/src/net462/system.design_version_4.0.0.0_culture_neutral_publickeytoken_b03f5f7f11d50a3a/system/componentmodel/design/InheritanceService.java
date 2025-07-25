@@ -1,7 +1,7 @@
 /*
  *  MIT License
  *
- *  Copyright (c) 2024 MASES s.r.l.
+ *  Copyright (c) 2020-2025 MASES s.r.l.
  *
  *  Permission is hereby granted, free of charge, to any person obtaining a copy
  *  of this software and associated documentation files (the "Software"), to deal
@@ -175,7 +175,7 @@ public class InheritanceService extends NetObject implements AutoCloseable {
         }
     }
 
-    public void AddInheritedComponents(IComponent component, IContainer container) throws Throwable, system.InvalidOperationException, system.ArgumentNullException, system.ArgumentException, system.ArgumentOutOfRangeException, system.FormatException, system.TypeLoadException, system.security.SecurityException {
+    public void AddInheritedComponents(IComponent component, IContainer container) throws Throwable, system.InvalidOperationException, system.ArgumentNullException, system.ArgumentException, system.ArgumentOutOfRangeException, system.FormatException, system.security.SecurityException, system.ObjectDisposedException, system.threading.AbandonedMutexException {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {

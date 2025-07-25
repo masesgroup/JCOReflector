@@ -1,7 +1,7 @@
 /*
  *  MIT License
  *
- *  Copyright (c) 2024 MASES s.r.l.
+ *  Copyright (c) 2020-2025 MASES s.r.l.
  *
  *  Permission is hereby granted, free of charge, to any person obtaining a copy
  *  of this software and associated documentation files (the "Software"), to deal
@@ -162,7 +162,7 @@ public class CollectionCodeDomSerializer extends CodeDomSerializer  {
     
     // Methods section
     
-    public NetObject Serialize(IDesignerSerializationManager manager, NetObject value) throws Throwable, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.InvalidOperationException, system.ArgumentException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ObjectDisposedException, system.IndexOutOfRangeException, system.NotSupportedException, system.componentmodel.design.serialization.CodeDomSerializerException, system.NullReferenceException {
+    public NetObject Serialize(IDesignerSerializationManager manager, NetObject value) throws Throwable, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.InvalidOperationException, system.ArgumentException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ObjectDisposedException, system.IndexOutOfRangeException, system.NotSupportedException, system.componentmodel.design.serialization.CodeDomSerializerException, system.TypeLoadException, system.NullReferenceException, system.MissingMethodException, system.reflection.TargetInvocationException {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {

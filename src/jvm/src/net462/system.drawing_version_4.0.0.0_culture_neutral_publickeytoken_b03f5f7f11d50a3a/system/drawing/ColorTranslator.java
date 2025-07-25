@@ -1,7 +1,7 @@
 /*
  *  MIT License
  *
- *  Copyright (c) 2024 MASES s.r.l.
+ *  Copyright (c) 2020-2025 MASES s.r.l.
  *
  *  Permission is hereby granted, free of charge, to any person obtaining a copy
  *  of this software and associated documentation files (the "Software"), to deal
@@ -174,7 +174,7 @@ public class ColorTranslator extends NetObject  {
         }
     }
 
-    public static Color FromHtml(java.lang.String htmlColor) throws Throwable, system.ArgumentOutOfRangeException, system.ArgumentException, system.ArgumentNullException, system.NotImplementedException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.FormatException, system.NotSupportedException, system.TypeLoadException, system.security.SecurityException {
+    public static Color FromHtml(java.lang.String htmlColor) throws Throwable, system.ArgumentOutOfRangeException, system.ArgumentException, system.ArgumentNullException, system.NotImplementedException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.FormatException, system.NotSupportedException, system.security.SecurityException {
         if (classType == null)
             throw new UnsupportedOperationException("classType is null.");
         try {

@@ -1,7 +1,7 @@
 /*
  *  MIT License
  *
- *  Copyright (c) 2024 MASES s.r.l.
+ *  Copyright (c) 2020-2025 MASES s.r.l.
  *
  *  Permission is hereby granted, free of charge, to any person obtaining a copy
  *  of this software and associated documentation files (the "Software"), to deal
@@ -176,7 +176,7 @@ public class AttributeCollection extends NetObjectEnumerable  {
         }
     }
 
-    public boolean Contains(Attribute[] attributes) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.FormatException, system.ObjectDisposedException, system.threading.AbandonedMutexException, system.InvalidOperationException, system.security.SecurityException {
+    public boolean Contains(Attribute[] attributes) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.FormatException, system.ObjectDisposedException, system.threading.AbandonedMutexException {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {

@@ -1,7 +1,7 @@
 /*
  *  MIT License
  *
- *  Copyright (c) 2024 MASES s.r.l.
+ *  Copyright (c) 2020-2025 MASES s.r.l.
  *
  *  Permission is hereby granted, free of charge, to any person obtaining a copy
  *  of this software and associated documentation files (the "Software"), to deal
@@ -163,7 +163,7 @@ public class PropertyConverter extends NetObject  {
         }
     }
 
-    public static NetObject ObjectFromString(NetType objType, MemberInfo propertyInfo, java.lang.String value) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.FormatException, system.InvalidCastException, system.ArgumentOutOfRangeException, system.NotSupportedException, system.InvalidOperationException, system.IndexOutOfRangeException, system.globalization.CultureNotFoundException, system.NullReferenceException, system.TypeLoadException, system.security.SecurityException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotImplementedException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.web.HttpException {
+    public static NetObject ObjectFromString(NetType objType, MemberInfo propertyInfo, java.lang.String value) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.FormatException, system.InvalidCastException, system.ArgumentOutOfRangeException, system.NotSupportedException, system.InvalidOperationException, system.IndexOutOfRangeException, system.globalization.CultureNotFoundException, system.NullReferenceException, system.security.SecurityException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotImplementedException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.web.HttpException {
         if (classType == null)
             throw new UnsupportedOperationException("classType is null.");
         try {

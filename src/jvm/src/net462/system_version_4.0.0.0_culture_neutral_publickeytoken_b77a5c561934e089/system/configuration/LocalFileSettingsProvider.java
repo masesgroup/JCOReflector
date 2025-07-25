@@ -1,7 +1,7 @@
 /*
  *  MIT License
  *
- *  Copyright (c) 2024 MASES s.r.l.
+ *  Copyright (c) 2020-2025 MASES s.r.l.
  *
  *  Permission is hereby granted, free of charge, to any person obtaining a copy
  *  of this software and associated documentation files (the "Software"), to deal
@@ -208,7 +208,7 @@ public class LocalFileSettingsProvider extends SettingsProvider  {
         }
     }
 
-    public void SetPropertyValues(SettingsContext context, SettingsPropertyValueCollection values) throws Throwable, system.ArgumentNullException, system.ObjectDisposedException, system.threading.AbandonedMutexException, system.ArgumentOutOfRangeException, system.OutOfMemoryException, system.FormatException, system.IndexOutOfRangeException, system.ArgumentException, system.InvalidOperationException, system.NotSupportedException, system.security.SecurityException, system.configuration.ConfigurationErrorsException, system.NullReferenceException, system.xml.XmlException, system.runtime.serialization.SerializationException, system.NotImplementedException, system.io.FileNotFoundException, system.TypeLoadException, system.MissingMethodException, system.reflection.TargetInvocationException, system.collections.generic.KeyNotFoundException, system.io.PathTooLongException {
+    public void SetPropertyValues(SettingsContext context, SettingsPropertyValueCollection values) throws Throwable, system.ArgumentNullException, system.ObjectDisposedException, system.threading.AbandonedMutexException, system.ArgumentOutOfRangeException, system.OutOfMemoryException, system.FormatException, system.IndexOutOfRangeException, system.ArgumentException, system.InvalidOperationException, system.NotSupportedException, system.security.SecurityException, system.configuration.ConfigurationErrorsException, system.NullReferenceException, system.xml.XmlException, system.runtime.serialization.SerializationException, system.NotImplementedException, system.io.FileNotFoundException, system.TypeLoadException, system.collections.generic.KeyNotFoundException, system.io.PathTooLongException {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {

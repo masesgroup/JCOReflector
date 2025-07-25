@@ -1,7 +1,7 @@
 /*
  *  MIT License
  *
- *  Copyright (c) 2024 MASES s.r.l.
+ *  Copyright (c) 2020-2025 MASES s.r.l.
  *
  *  Permission is hereby granted, free of charge, to any person obtaining a copy
  *  of this software and associated documentation files (the "Software"), to deal
@@ -156,7 +156,7 @@ public class MemberDescriptor extends NetObject  {
     
     // Properties section
     
-    public boolean getDesignTimeOnly() throws Throwable, system.ArgumentException, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.InvalidOperationException, system.ObjectDisposedException, system.threading.AbandonedMutexException, system.security.SecurityException, system.MissingMethodException, system.reflection.TargetInvocationException {
+    public boolean getDesignTimeOnly() throws Throwable, system.ArgumentException, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.InvalidOperationException, system.ObjectDisposedException, system.threading.AbandonedMutexException, system.security.SecurityException {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
@@ -166,7 +166,7 @@ public class MemberDescriptor extends NetObject  {
         }
     }
 
-    public boolean getIsBrowsable() throws Throwable, system.ArgumentException, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.InvalidOperationException, system.ObjectDisposedException, system.threading.AbandonedMutexException, system.security.SecurityException, system.MissingMethodException, system.reflection.TargetInvocationException {
+    public boolean getIsBrowsable() throws Throwable, system.ArgumentException, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.InvalidOperationException, system.ObjectDisposedException, system.threading.AbandonedMutexException, system.security.SecurityException {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
@@ -187,7 +187,7 @@ public class MemberDescriptor extends NetObject  {
         }
     }
 
-    public java.lang.String getCategory() throws Throwable, system.ArgumentException, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.InvalidOperationException, system.ObjectDisposedException, system.threading.AbandonedMutexException, system.security.SecurityException, system.MissingMethodException, system.reflection.TargetInvocationException, system.IndexOutOfRangeException, system.NotImplementedException, system.globalization.CultureNotFoundException {
+    public java.lang.String getCategory() throws Throwable, system.ArgumentException, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.InvalidOperationException, system.ObjectDisposedException, system.threading.AbandonedMutexException, system.security.SecurityException, system.IndexOutOfRangeException, system.NotImplementedException, system.globalization.CultureNotFoundException {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
@@ -197,7 +197,7 @@ public class MemberDescriptor extends NetObject  {
         }
     }
 
-    public java.lang.String getDescription() throws Throwable, system.ArgumentException, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.InvalidOperationException, system.ObjectDisposedException, system.threading.AbandonedMutexException, system.security.SecurityException, system.MissingMethodException, system.reflection.TargetInvocationException {
+    public java.lang.String getDescription() throws Throwable, system.ArgumentException, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.InvalidOperationException, system.ObjectDisposedException, system.threading.AbandonedMutexException, system.security.SecurityException {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
@@ -207,7 +207,7 @@ public class MemberDescriptor extends NetObject  {
         }
     }
 
-    public java.lang.String getDisplayName() throws Throwable, system.ArgumentException, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.InvalidOperationException, system.ObjectDisposedException, system.threading.AbandonedMutexException, system.security.SecurityException, system.MissingMethodException, system.reflection.TargetInvocationException {
+    public java.lang.String getDisplayName() throws Throwable, system.ArgumentException, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.InvalidOperationException, system.ObjectDisposedException, system.threading.AbandonedMutexException, system.security.SecurityException {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {

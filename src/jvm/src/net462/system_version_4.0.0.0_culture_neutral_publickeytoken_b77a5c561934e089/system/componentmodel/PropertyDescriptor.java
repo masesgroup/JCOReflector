@@ -1,7 +1,7 @@
 /*
  *  MIT License
  *
- *  Copyright (c) 2024 MASES s.r.l.
+ *  Copyright (c) 2020-2025 MASES s.r.l.
  *
  *  Permission is hereby granted, free of charge, to any person obtaining a copy
  *  of this software and associated documentation files (the "Software"), to deal
@@ -177,7 +177,7 @@ public class PropertyDescriptor extends MemberDescriptor  {
         }
     }
 
-    public PropertyDescriptorCollection GetChildProperties() throws Throwable, system.ArgumentNullException, system.ArgumentException, system.ArgumentOutOfRangeException, system.InvalidOperationException, system.security.SecurityException, system.MissingMethodException, system.reflection.TargetInvocationException, system.ObjectDisposedException, system.threading.AbandonedMutexException, system.NotSupportedException, system.resources.MissingManifestResourceException, system.IndexOutOfRangeException {
+    public PropertyDescriptorCollection GetChildProperties() throws Throwable, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.security.SecurityException, system.ObjectDisposedException, system.ArgumentOutOfRangeException, system.NotSupportedException, system.resources.MissingManifestResourceException, system.IndexOutOfRangeException, system.FormatException {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
@@ -188,7 +188,7 @@ public class PropertyDescriptor extends MemberDescriptor  {
         }
     }
 
-    public PropertyDescriptorCollection GetChildProperties(Attribute[] filter) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.ArgumentOutOfRangeException, system.InvalidOperationException, system.security.SecurityException, system.MissingMethodException, system.reflection.TargetInvocationException, system.ObjectDisposedException, system.threading.AbandonedMutexException, system.NotSupportedException, system.resources.MissingManifestResourceException, system.IndexOutOfRangeException {
+    public PropertyDescriptorCollection GetChildProperties(Attribute[] filter) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.security.SecurityException, system.ObjectDisposedException, system.ArgumentOutOfRangeException, system.NotSupportedException, system.resources.MissingManifestResourceException, system.IndexOutOfRangeException, system.FormatException {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
@@ -199,7 +199,7 @@ public class PropertyDescriptor extends MemberDescriptor  {
         }
     }
 
-    public PropertyDescriptorCollection GetChildProperties(NetObject instance) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.ArgumentOutOfRangeException, system.InvalidOperationException, system.security.SecurityException, system.MissingMethodException, system.reflection.TargetInvocationException, system.ObjectDisposedException, system.threading.AbandonedMutexException, system.NotSupportedException, system.resources.MissingManifestResourceException, system.IndexOutOfRangeException {
+    public PropertyDescriptorCollection GetChildProperties(NetObject instance) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.security.SecurityException, system.ObjectDisposedException, system.ArgumentOutOfRangeException, system.NotSupportedException, system.resources.MissingManifestResourceException, system.IndexOutOfRangeException, system.FormatException {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
@@ -210,7 +210,7 @@ public class PropertyDescriptor extends MemberDescriptor  {
         }
     }
 
-    public PropertyDescriptorCollection GetChildProperties(NetObject instance, Attribute[] filter) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.ArgumentOutOfRangeException, system.InvalidOperationException, system.TypeLoadException, system.security.SecurityException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotSupportedException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ObjectDisposedException, system.IndexOutOfRangeException {
+    public PropertyDescriptorCollection GetChildProperties(NetObject instance, Attribute[] filter) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.security.SecurityException, system.MissingMethodException, system.reflection.TargetInvocationException, system.ObjectDisposedException, system.threading.AbandonedMutexException, system.ArgumentOutOfRangeException, system.NotSupportedException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.IndexOutOfRangeException {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
@@ -243,7 +243,7 @@ public class PropertyDescriptor extends MemberDescriptor  {
         }
     }
 
-    public void AddValueChanged(NetObject component, EventHandler handler) throws Throwable, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.FormatException, system.ObjectDisposedException, system.threading.AbandonedMutexException, system.MulticastNotSupportedException {
+    public void AddValueChanged(NetObject component, EventHandler handler) throws Throwable, system.ArgumentNullException, system.InvalidOperationException, system.ArgumentException, system.ArgumentOutOfRangeException, system.MissingMethodException, system.reflection.TargetInvocationException, system.FormatException, system.ObjectDisposedException, system.threading.AbandonedMutexException, system.MulticastNotSupportedException {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
@@ -253,7 +253,7 @@ public class PropertyDescriptor extends MemberDescriptor  {
         }
     }
 
-    public void RemoveValueChanged(NetObject component, EventHandler handler) throws Throwable, system.ArgumentNullException, system.ObjectDisposedException, system.threading.AbandonedMutexException, system.ArgumentException, system.ArgumentOutOfRangeException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.FormatException {
+    public void RemoveValueChanged(NetObject component, EventHandler handler) throws Throwable, system.ArgumentNullException, system.InvalidOperationException, system.ArgumentException, system.ObjectDisposedException, system.threading.AbandonedMutexException, system.ArgumentOutOfRangeException, system.MissingMethodException, system.reflection.TargetInvocationException, system.FormatException {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
@@ -287,7 +287,7 @@ public class PropertyDescriptor extends MemberDescriptor  {
     
     // Properties section
     
-    public boolean getIsLocalizable() throws Throwable, system.ArgumentException, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.InvalidOperationException, system.ObjectDisposedException, system.threading.AbandonedMutexException, system.security.SecurityException, system.MissingMethodException, system.reflection.TargetInvocationException {
+    public boolean getIsLocalizable() throws Throwable, system.ArgumentException, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.InvalidOperationException, system.ObjectDisposedException, system.threading.AbandonedMutexException, system.security.SecurityException {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
@@ -317,7 +317,7 @@ public class PropertyDescriptor extends MemberDescriptor  {
         }
     }
 
-    public DesignerSerializationVisibility getSerializationVisibility() throws Throwable, system.ArgumentException, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.InvalidOperationException, system.ObjectDisposedException, system.threading.AbandonedMutexException, system.security.SecurityException, system.MissingMethodException, system.reflection.TargetInvocationException {
+    public DesignerSerializationVisibility getSerializationVisibility() throws Throwable, system.ArgumentException, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.InvalidOperationException, system.ObjectDisposedException, system.threading.AbandonedMutexException, system.security.SecurityException {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
@@ -328,7 +328,7 @@ public class PropertyDescriptor extends MemberDescriptor  {
         }
     }
 
-    public TypeConverter getConverter() throws Throwable, system.ArgumentException, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.InvalidOperationException, system.ObjectDisposedException, system.threading.AbandonedMutexException, system.security.SecurityException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotImplementedException, system.NullReferenceException, system.globalization.CultureNotFoundException, system.IndexOutOfRangeException, system.resources.MissingManifestResourceException, system.NotSupportedException {
+    public TypeConverter getConverter() throws Throwable, system.ArgumentException, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.InvalidOperationException, system.ObjectDisposedException, system.threading.AbandonedMutexException, system.security.SecurityException, system.NotImplementedException, system.NullReferenceException, system.globalization.CultureNotFoundException, system.IndexOutOfRangeException, system.resources.MissingManifestResourceException, system.NotSupportedException {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {

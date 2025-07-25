@@ -1,7 +1,7 @@
 /*
  *  MIT License
  *
- *  Copyright (c) 2024 MASES s.r.l.
+ *  Copyright (c) 2020-2025 MASES s.r.l.
  *
  *  Permission is hereby granted, free of charge, to any person obtaining a copy
  *  of this software and associated documentation files (the "Software"), to deal
@@ -164,7 +164,7 @@ public class ListBindingHelper extends NetObject  {
         }
     }
 
-    public static PropertyDescriptorCollection GetListItemProperties(NetObject list, PropertyDescriptor[] listAccessors) throws Throwable, system.InvalidOperationException, system.ArgumentNullException, system.NotSupportedException, system.NotImplementedException, system.ArgumentException, system.MissingMethodException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.security.SecurityException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException {
+    public static PropertyDescriptorCollection GetListItemProperties(NetObject list, PropertyDescriptor[] listAccessors) throws Throwable, system.InvalidOperationException, system.ArgumentNullException, system.NotSupportedException, system.NotImplementedException, system.ArgumentException, system.MissingMethodException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException {
         if (classType == null)
             throw new UnsupportedOperationException("classType is null.");
         try {
@@ -175,7 +175,7 @@ public class ListBindingHelper extends NetObject  {
         }
     }
 
-    public static PropertyDescriptorCollection GetListItemProperties(NetObject dataSource, java.lang.String dataMember, PropertyDescriptor[] listAccessors) throws Throwable, system.InvalidOperationException, system.ArgumentNullException, system.NotSupportedException, system.NotImplementedException, system.ArgumentException, system.MissingMethodException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.security.SecurityException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.OutOfMemoryException, system.globalization.CultureNotFoundException, system.NullReferenceException {
+    public static PropertyDescriptorCollection GetListItemProperties(NetObject dataSource, java.lang.String dataMember, PropertyDescriptor[] listAccessors) throws Throwable, system.InvalidOperationException, system.ArgumentNullException, system.NotSupportedException, system.NotImplementedException, system.ArgumentException, system.MissingMethodException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.OutOfMemoryException, system.globalization.CultureNotFoundException, system.NullReferenceException {
         if (classType == null)
             throw new UnsupportedOperationException("classType is null.");
         try {
@@ -197,7 +197,7 @@ public class ListBindingHelper extends NetObject  {
         }
     }
 
-    public static NetObject GetList(NetObject dataSource, java.lang.String dataMember) throws Throwable, system.InvalidOperationException, system.ArgumentNullException, system.NotSupportedException, system.NotImplementedException, system.ArgumentException, system.MissingMethodException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.security.SecurityException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.OutOfMemoryException, system.globalization.CultureNotFoundException, system.NullReferenceException {
+    public static NetObject GetList(NetObject dataSource, java.lang.String dataMember) throws Throwable, system.InvalidOperationException, system.ArgumentNullException, system.NotSupportedException, system.NotImplementedException, system.ArgumentException, system.MissingMethodException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.OutOfMemoryException, system.globalization.CultureNotFoundException, system.NullReferenceException {
         if (classType == null)
             throw new UnsupportedOperationException("classType is null.");
         try {
@@ -229,7 +229,7 @@ public class ListBindingHelper extends NetObject  {
         }
     }
 
-    public static NetType GetListItemType(NetObject dataSource, java.lang.String dataMember) throws Throwable, system.InvalidOperationException, system.ArgumentNullException, system.NotSupportedException, system.ArgumentException, system.NotImplementedException, system.globalization.CultureNotFoundException, system.IndexOutOfRangeException, system.ArgumentOutOfRangeException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.security.SecurityException, system.NullReferenceException {
+    public static NetType GetListItemType(NetObject dataSource, java.lang.String dataMember) throws Throwable, system.InvalidOperationException, system.ArgumentNullException, system.NotSupportedException, system.ArgumentException, system.NotImplementedException, system.globalization.CultureNotFoundException, system.IndexOutOfRangeException, system.ArgumentOutOfRangeException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.NullReferenceException {
         if (classType == null)
             throw new UnsupportedOperationException("classType is null.");
         try {

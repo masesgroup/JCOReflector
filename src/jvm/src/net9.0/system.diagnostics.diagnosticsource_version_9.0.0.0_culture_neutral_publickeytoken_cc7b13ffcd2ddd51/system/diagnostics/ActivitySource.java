@@ -1,7 +1,7 @@
 /*
  *  MIT License
  *
- *  Copyright (c) 2024 MASES s.r.l.
+ *  Copyright (c) 2020-2025 MASES s.r.l.
  *
  *  Permission is hereby granted, free of charge, to any person obtaining a copy
  *  of this software and associated documentation files (the "Software"), to deal
@@ -187,7 +187,7 @@ public class ActivitySource extends NetObject implements AutoCloseable {
         }
     }
 
-    public Activity CreateActivity(java.lang.String name, ActivityKind kind) throws Throwable, system.IndexOutOfRangeException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.ArgumentException, system.ArgumentNullException, system.globalization.CultureNotFoundException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.NullReferenceException, system.NotSupportedException, system.OutOfMemoryException {
+    public Activity CreateActivity(java.lang.String name, ActivityKind kind) throws Throwable, system.IndexOutOfRangeException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.ArgumentException, system.globalization.CultureNotFoundException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.NullReferenceException, system.NotSupportedException, system.OutOfMemoryException {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
@@ -198,7 +198,7 @@ public class ActivitySource extends NetObject implements AutoCloseable {
         }
     }
 
-    public Activity StartActivity(java.lang.String name, ActivityKind kind) throws Throwable, system.IndexOutOfRangeException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.ArgumentException, system.ArgumentNullException, system.globalization.CultureNotFoundException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.NullReferenceException, system.NotSupportedException, system.OutOfMemoryException {
+    public Activity StartActivity(java.lang.String name, ActivityKind kind) throws Throwable, system.IndexOutOfRangeException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.ArgumentException, system.globalization.CultureNotFoundException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.NullReferenceException, system.NotSupportedException, system.OutOfMemoryException {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {

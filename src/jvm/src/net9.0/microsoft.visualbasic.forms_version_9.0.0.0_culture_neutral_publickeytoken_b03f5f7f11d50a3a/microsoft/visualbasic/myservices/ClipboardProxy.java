@@ -1,7 +1,7 @@
 /*
  *  MIT License
  *
- *  Copyright (c) 2024 MASES s.r.l.
+ *  Copyright (c) 2020-2025 MASES s.r.l.
  *
  *  Permission is hereby granted, free of charge, to any person obtaining a copy
  *  of this software and associated documentation files (the "Software"), to deal
@@ -160,7 +160,7 @@ public class ClipboardProxy extends NetObject  {
     
     // Methods section
     
-    public boolean ContainsAudio() throws Throwable, system.IndexOutOfRangeException, system.PlatformNotSupportedException, system.ArgumentException, system.ArgumentOutOfRangeException, system.InvalidOperationException, system.threading.ThreadStateException, system.runtime.interopservices.ExternalException, system.ArgumentNullException {
+    public boolean ContainsAudio() throws Throwable, system.IndexOutOfRangeException, system.PlatformNotSupportedException, system.ArgumentException, system.ArgumentOutOfRangeException, system.InvalidOperationException, system.threading.ThreadStateException, system.runtime.interopservices.ExternalException {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
@@ -170,7 +170,7 @@ public class ClipboardProxy extends NetObject  {
         }
     }
 
-    public boolean ContainsData(java.lang.String format) throws Throwable, system.NotSupportedException, system.ArgumentException, system.IndexOutOfRangeException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.InvalidOperationException, system.threading.ThreadStateException, system.runtime.interopservices.ExternalException, system.ArgumentNullException {
+    public boolean ContainsData(java.lang.String format) throws Throwable, system.NotSupportedException, system.ArgumentException, system.IndexOutOfRangeException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.InvalidOperationException, system.threading.ThreadStateException, system.runtime.interopservices.ExternalException {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
@@ -200,7 +200,7 @@ public class ClipboardProxy extends NetObject  {
         }
     }
 
-    public boolean ContainsText() throws Throwable, system.PlatformNotSupportedException, system.componentmodel.InvalidEnumArgumentException, system.threading.ThreadStateException, system.runtime.interopservices.ExternalException, system.ArgumentOutOfRangeException, system.ArgumentNullException {
+    public boolean ContainsText() throws Throwable, system.PlatformNotSupportedException, system.componentmodel.InvalidEnumArgumentException, system.threading.ThreadStateException, system.runtime.interopservices.ExternalException, system.ArgumentOutOfRangeException {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
@@ -210,7 +210,7 @@ public class ClipboardProxy extends NetObject  {
         }
     }
 
-    public boolean ContainsText(TextDataFormat format) throws Throwable, system.ArgumentException, system.PlatformNotSupportedException, system.IndexOutOfRangeException, system.ArgumentOutOfRangeException, system.FormatException, system.componentmodel.InvalidEnumArgumentException, system.InvalidOperationException, system.threading.ThreadStateException, system.runtime.interopservices.ExternalException, system.ArgumentNullException {
+    public boolean ContainsText(TextDataFormat format) throws Throwable, system.ArgumentException, system.PlatformNotSupportedException, system.IndexOutOfRangeException, system.ArgumentOutOfRangeException, system.FormatException, system.componentmodel.InvalidEnumArgumentException, system.InvalidOperationException, system.threading.ThreadStateException, system.runtime.interopservices.ExternalException {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
@@ -242,7 +242,7 @@ public class ClipboardProxy extends NetObject  {
         }
     }
 
-    public Stream GetAudioStream() throws Throwable, system.IndexOutOfRangeException, system.PlatformNotSupportedException, system.ArgumentException, system.ArgumentOutOfRangeException, system.InvalidOperationException, system.threading.ThreadStateException, system.runtime.interopservices.ExternalException, system.ArgumentNullException {
+    public Stream GetAudioStream() throws Throwable, system.IndexOutOfRangeException, system.PlatformNotSupportedException, system.ArgumentException, system.ArgumentOutOfRangeException, system.InvalidOperationException, system.threading.ThreadStateException, system.runtime.interopservices.ExternalException {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
@@ -253,7 +253,7 @@ public class ClipboardProxy extends NetObject  {
         }
     }
 
-    public NetObject GetData(java.lang.String format) throws Throwable, system.NotSupportedException, system.ArgumentException, system.IndexOutOfRangeException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.InvalidOperationException, system.threading.ThreadStateException, system.runtime.interopservices.ExternalException, system.ArgumentNullException {
+    public NetObject GetData(java.lang.String format) throws Throwable, system.NotSupportedException, system.ArgumentException, system.IndexOutOfRangeException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.InvalidOperationException, system.threading.ThreadStateException, system.runtime.interopservices.ExternalException {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
@@ -264,7 +264,7 @@ public class ClipboardProxy extends NetObject  {
         }
     }
 
-    public java.lang.String GetText() throws Throwable, system.PlatformNotSupportedException, system.componentmodel.InvalidEnumArgumentException, system.threading.ThreadStateException, system.runtime.interopservices.ExternalException, system.ArgumentOutOfRangeException, system.ArgumentNullException {
+    public java.lang.String GetText() throws Throwable, system.PlatformNotSupportedException, system.componentmodel.InvalidEnumArgumentException, system.threading.ThreadStateException, system.runtime.interopservices.ExternalException, system.ArgumentOutOfRangeException {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
@@ -274,7 +274,7 @@ public class ClipboardProxy extends NetObject  {
         }
     }
 
-    public java.lang.String GetText(TextDataFormat format) throws Throwable, system.ArgumentException, system.PlatformNotSupportedException, system.IndexOutOfRangeException, system.ArgumentOutOfRangeException, system.FormatException, system.componentmodel.InvalidEnumArgumentException, system.InvalidOperationException, system.threading.ThreadStateException, system.runtime.interopservices.ExternalException, system.ArgumentNullException {
+    public java.lang.String GetText(TextDataFormat format) throws Throwable, system.ArgumentException, system.PlatformNotSupportedException, system.IndexOutOfRangeException, system.ArgumentOutOfRangeException, system.FormatException, system.componentmodel.InvalidEnumArgumentException, system.InvalidOperationException, system.threading.ThreadStateException, system.runtime.interopservices.ExternalException {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {

@@ -1,7 +1,7 @@
 /*
  *  MIT License
  *
- *  Copyright (c) 2024 MASES s.r.l.
+ *  Copyright (c) 2020-2025 MASES s.r.l.
  *
  *  Permission is hereby granted, free of charge, to any person obtaining a copy
  *  of this software and associated documentation files (the "Software"), to deal
@@ -186,7 +186,7 @@ public class DataGridViewComboBoxCell extends DataGridViewCell  {
         }
     }
 
-    public NetObject ParseFormattedValue(NetObject formattedValue, DataGridViewCellStyle cellStyle, TypeConverter formattedValueTypeConverter, TypeConverter valueTypeConverter) throws Throwable, system.ArgumentException, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.InvalidOperationException, system.ObjectDisposedException, system.threading.AbandonedMutexException, system.security.SecurityException, system.NotImplementedException, system.NullReferenceException, system.resources.MissingManifestResourceException, system.NotSupportedException, system.MissingMethodException, system.FormatException, system.InvalidCastException, system.IndexOutOfRangeException, system.RankException {
+    public NetObject ParseFormattedValue(NetObject formattedValue, DataGridViewCellStyle cellStyle, TypeConverter formattedValueTypeConverter, TypeConverter valueTypeConverter) throws Throwable, system.ArgumentException, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.InvalidOperationException, system.ObjectDisposedException, system.threading.AbandonedMutexException, system.NotImplementedException, system.NullReferenceException, system.resources.MissingManifestResourceException, system.NotSupportedException, system.MissingMethodException, system.FormatException, system.InvalidCastException, system.IndexOutOfRangeException, system.RankException {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {

@@ -1,7 +1,7 @@
 /*
  *  MIT License
  *
- *  Copyright (c) 2024 MASES s.r.l.
+ *  Copyright (c) 2020-2025 MASES s.r.l.
  *
  *  Permission is hereby granted, free of charge, to any person obtaining a copy
  *  of this software and associated documentation files (the "Software"), to deal
@@ -229,7 +229,7 @@ public class SettingsPropertyValue extends NetObject  {
         }
     }
 
-    public NetObject getPropertyValue() throws Throwable, system.ArgumentNullException, system.NotSupportedException, system.ArgumentException, system.ArgumentOutOfRangeException, system.runtime.serialization.SerializationException, system.OutOfMemoryException, system.NotImplementedException, system.InvalidOperationException, system.io.FileNotFoundException, system.FormatException, system.xml.XmlException, system.MissingMethodException, system.IndexOutOfRangeException, system.io.PathTooLongException, system.MemberAccessException, system.io.DirectoryNotFoundException, system.UnauthorizedAccessException, system.io.IOException, system.io.DriveNotFoundException, system.OperationCanceledException, system.TypeLoadException, system.reflection.TargetInvocationException {
+    public NetObject getPropertyValue() throws Throwable, system.ArgumentNullException, system.NotSupportedException, system.ArgumentException, system.ArgumentOutOfRangeException, system.runtime.serialization.SerializationException, system.OutOfMemoryException, system.NotImplementedException, system.InvalidOperationException, system.io.FileNotFoundException, system.FormatException, system.xml.XmlException, system.MissingMethodException, system.IndexOutOfRangeException, system.io.PathTooLongException, system.MemberAccessException, system.io.DirectoryNotFoundException, system.UnauthorizedAccessException, system.io.IOException, system.io.DriveNotFoundException, system.OperationCanceledException, system.TypeLoadException {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
@@ -250,7 +250,7 @@ public class SettingsPropertyValue extends NetObject  {
         }
     }
 
-    public NetObject getSerializedValue() throws Throwable, system.ArgumentNullException, system.ArgumentException, system.ArgumentOutOfRangeException, system.InvalidOperationException, system.security.SecurityException, system.ObjectDisposedException, system.resources.MissingManifestResourceException, system.IndexOutOfRangeException, system.NotSupportedException, system.runtime.serialization.SerializationException, system.NotImplementedException, system.NullReferenceException, system.OutOfMemoryException, system.threading.ThreadAbortException, system.configuration.ConfigurationErrorsException, system.componentmodel.InvalidEnumArgumentException, system.io.FileNotFoundException, system.UnauthorizedAccessException, system.MissingMethodException {
+    public NetObject getSerializedValue() throws Throwable, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.NotSupportedException, system.ArgumentException, system.runtime.serialization.SerializationException, system.NotImplementedException, system.security.SecurityException, system.NullReferenceException, system.OutOfMemoryException, system.threading.ThreadAbortException, system.configuration.ConfigurationErrorsException, system.componentmodel.InvalidEnumArgumentException, system.io.FileNotFoundException, system.UnauthorizedAccessException, system.MissingMethodException {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {

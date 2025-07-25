@@ -1,7 +1,7 @@
 /*
  *  MIT License
  *
- *  Copyright (c) 2024 MASES s.r.l.
+ *  Copyright (c) 2020-2025 MASES s.r.l.
  *
  *  Permission is hereby granted, free of charge, to any person obtaining a copy
  *  of this software and associated documentation files (the "Software"), to deal
@@ -151,7 +151,7 @@ public class InputLanguageChangingEventArgs extends CancelEventArgs  {
     public InputLanguageChangingEventArgs() throws Throwable {
     }
 
-    public InputLanguageChangingEventArgs(CultureInfo culture, boolean sysCharSet) throws Throwable, system.ArgumentException, system.NotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.ArrayTypeMismatchException, system.IndexOutOfRangeException, system.PlatformNotSupportedException, system.ObjectDisposedException, system.MissingMethodException, system.reflection.TargetInvocationException, system.OutOfMemoryException, system.security.SecurityException, system.io.IOException, system.UnauthorizedAccessException, system.NullReferenceException, system.globalization.CultureNotFoundException {
+    public InputLanguageChangingEventArgs(CultureInfo culture, boolean sysCharSet) throws Throwable, system.ArgumentException, system.NotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.IndexOutOfRangeException, system.PlatformNotSupportedException, system.ObjectDisposedException, system.MissingMethodException, system.reflection.TargetInvocationException, system.OutOfMemoryException, system.security.SecurityException, system.ArrayTypeMismatchException, system.io.IOException, system.UnauthorizedAccessException, system.NullReferenceException, system.globalization.CultureNotFoundException {
         try {
             // add reference to assemblyName.dll file
             addReference(JCOReflector.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);

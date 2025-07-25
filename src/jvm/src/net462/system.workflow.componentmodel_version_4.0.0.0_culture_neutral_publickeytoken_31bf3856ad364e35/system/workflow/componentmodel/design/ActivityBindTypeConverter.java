@@ -1,7 +1,7 @@
 /*
  *  MIT License
  *
- *  Copyright (c) 2024 MASES s.r.l.
+ *  Copyright (c) 2020-2025 MASES s.r.l.
  *
  *  Permission is hereby granted, free of charge, to any person obtaining a copy
  *  of this software and associated documentation files (the "Software"), to deal
@@ -165,7 +165,7 @@ public class ActivityBindTypeConverter extends TypeConverter  {
     
     // Methods section
     
-    public boolean CanConvertFrom(ITypeDescriptorContext context, NetType sourceType) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.ArgumentOutOfRangeException, system.InvalidOperationException, system.security.SecurityException, system.MissingMethodException, system.reflection.TargetInvocationException, system.ObjectDisposedException, system.threading.AbandonedMutexException, system.NotImplementedException, system.NullReferenceException, system.resources.MissingManifestResourceException, system.NotSupportedException {
+    public boolean CanConvertFrom(ITypeDescriptorContext context, NetType sourceType) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.security.SecurityException, system.ObjectDisposedException, system.ArgumentOutOfRangeException, system.NotImplementedException, system.NullReferenceException, system.resources.MissingManifestResourceException, system.NotSupportedException {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
@@ -175,7 +175,7 @@ public class ActivityBindTypeConverter extends TypeConverter  {
         }
     }
 
-    public boolean CanConvertTo(ITypeDescriptorContext context, NetType destinationType) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.ArgumentOutOfRangeException, system.InvalidOperationException, system.security.SecurityException, system.MissingMethodException, system.reflection.TargetInvocationException, system.ObjectDisposedException, system.threading.AbandonedMutexException, system.NotImplementedException, system.NullReferenceException, system.resources.MissingManifestResourceException, system.NotSupportedException {
+    public boolean CanConvertTo(ITypeDescriptorContext context, NetType destinationType) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.security.SecurityException, system.ObjectDisposedException, system.ArgumentOutOfRangeException, system.NotImplementedException, system.NullReferenceException, system.resources.MissingManifestResourceException, system.NotSupportedException {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
@@ -185,7 +185,7 @@ public class ActivityBindTypeConverter extends TypeConverter  {
         }
     }
 
-    public boolean GetPropertiesSupported(ITypeDescriptorContext context) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.ArgumentOutOfRangeException, system.InvalidOperationException, system.security.SecurityException, system.MissingMethodException, system.reflection.TargetInvocationException, system.ObjectDisposedException, system.threading.AbandonedMutexException, system.NotImplementedException, system.NullReferenceException, system.resources.MissingManifestResourceException, system.NotSupportedException {
+    public boolean GetPropertiesSupported(ITypeDescriptorContext context) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.security.SecurityException, system.ObjectDisposedException, system.ArgumentOutOfRangeException, system.NotImplementedException, system.NullReferenceException, system.resources.MissingManifestResourceException, system.NotSupportedException {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
@@ -195,7 +195,7 @@ public class ActivityBindTypeConverter extends TypeConverter  {
         }
     }
 
-    public boolean GetStandardValuesExclusive(ITypeDescriptorContext context) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.ArgumentOutOfRangeException, system.InvalidOperationException, system.security.SecurityException, system.MissingMethodException, system.reflection.TargetInvocationException, system.ObjectDisposedException, system.threading.AbandonedMutexException, system.NotImplementedException, system.NullReferenceException, system.resources.MissingManifestResourceException, system.NotSupportedException {
+    public boolean GetStandardValuesExclusive(ITypeDescriptorContext context) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.security.SecurityException, system.ObjectDisposedException, system.ArgumentOutOfRangeException, system.NotImplementedException, system.NullReferenceException, system.resources.MissingManifestResourceException, system.NotSupportedException {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
@@ -205,7 +205,7 @@ public class ActivityBindTypeConverter extends TypeConverter  {
         }
     }
 
-    public boolean GetStandardValuesSupported(ITypeDescriptorContext context) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.ArgumentOutOfRangeException, system.InvalidOperationException, system.security.SecurityException, system.MissingMethodException, system.reflection.TargetInvocationException, system.ObjectDisposedException, system.threading.AbandonedMutexException, system.NotImplementedException, system.NullReferenceException, system.resources.MissingManifestResourceException, system.NotSupportedException {
+    public boolean GetStandardValuesSupported(ITypeDescriptorContext context) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.security.SecurityException, system.ObjectDisposedException, system.ArgumentOutOfRangeException, system.NotImplementedException, system.NullReferenceException, system.resources.MissingManifestResourceException, system.NotSupportedException {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
@@ -215,7 +215,7 @@ public class ActivityBindTypeConverter extends TypeConverter  {
         }
     }
 
-    public PropertyDescriptorCollection GetProperties(ITypeDescriptorContext context, NetObject value, Attribute[] attributes) throws Throwable, system.ArgumentException, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.NotSupportedException, system.globalization.CultureNotFoundException, system.NullReferenceException {
+    public PropertyDescriptorCollection GetProperties(ITypeDescriptorContext context, NetObject value, Attribute[] attributes) throws Throwable, system.ArgumentException, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.NotSupportedException, system.globalization.CultureNotFoundException, system.NullReferenceException, system.TypeLoadException {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {

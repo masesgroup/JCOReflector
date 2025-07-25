@@ -1,7 +1,7 @@
 /*
  *  MIT License
  *
- *  Copyright (c) 2024 MASES s.r.l.
+ *  Copyright (c) 2020-2025 MASES s.r.l.
  *
  *  Permission is hereby granted, free of charge, to any person obtaining a copy
  *  of this software and associated documentation files (the "Software"), to deal
@@ -215,7 +215,7 @@ public class ResXDataNode extends NetObject implements system.runtime.serializat
         }
     }
 
-    public java.lang.String GetValueTypeName(ITypeResolutionService typeResolver) throws Throwable, system.NullReferenceException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.ArgumentException, system.FormatException, system.IndexOutOfRangeException, system.InvalidOperationException, system.security.SecurityException, system.ObjectDisposedException, system.threading.AbandonedMutexException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.NotSupportedException, system.globalization.CultureNotFoundException {
+    public java.lang.String GetValueTypeName(ITypeResolutionService typeResolver) throws Throwable, system.NullReferenceException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.ArgumentException, system.FormatException, system.IndexOutOfRangeException, system.InvalidOperationException, system.security.SecurityException, system.ObjectDisposedException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.NotSupportedException, system.globalization.CultureNotFoundException {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
@@ -225,7 +225,7 @@ public class ResXDataNode extends NetObject implements system.runtime.serializat
         }
     }
 
-    public java.lang.String GetValueTypeName(AssemblyName[] names) throws Throwable, system.NullReferenceException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.FormatException, system.ArgumentException, system.IndexOutOfRangeException, system.InvalidOperationException, system.security.SecurityException, system.ObjectDisposedException, system.resources.MissingManifestResourceException, system.NotSupportedException, system.globalization.CultureNotFoundException {
+    public java.lang.String GetValueTypeName(AssemblyName[] names) throws Throwable, system.NullReferenceException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.FormatException, system.ArgumentException, system.IndexOutOfRangeException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.NotSupportedException, system.globalization.CultureNotFoundException {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {

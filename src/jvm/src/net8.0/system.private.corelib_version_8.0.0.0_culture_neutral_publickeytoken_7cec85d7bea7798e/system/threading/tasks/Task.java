@@ -1,7 +1,7 @@
 /*
  *  MIT License
  *
- *  Copyright (c) 2024 MASES s.r.l.
+ *  Copyright (c) 2020-2025 MASES s.r.l.
  *
  *  Permission is hereby granted, free of charge, to any person obtaining a copy
  *  of this software and associated documentation files (the "Software"), to deal
@@ -207,7 +207,7 @@ public class Task extends NetObject implements AutoCloseable {
     
     // Methods section
     
-    public boolean Wait(int millisecondsTimeout, CancellationToken cancellationToken) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.InvalidOperationException, system.PlatformNotSupportedException, system.ArrayTypeMismatchException, system.NotSupportedException, system.ObjectDisposedException, system.RankException, system.IndexOutOfRangeException, system.diagnostics.tracing.EventSourceException, system.threading.tasks.TaskSchedulerException, system.OperationCanceledException, system.OutOfMemoryException, system.FormatException {
+    public boolean Wait(int millisecondsTimeout, CancellationToken cancellationToken) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.InvalidOperationException, system.PlatformNotSupportedException, system.ArrayTypeMismatchException, system.NotSupportedException, system.ObjectDisposedException, system.RankException, system.IndexOutOfRangeException, system.diagnostics.tracing.EventSourceException, system.threading.tasks.TaskSchedulerException, system.threading.LockRecursionException, system.threading.SynchronizationLockException, system.OutOfMemoryException, system.OperationCanceledException, system.FormatException {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
@@ -217,7 +217,7 @@ public class Task extends NetObject implements AutoCloseable {
         }
     }
 
-    public boolean Wait(int millisecondsTimeout) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.threading.tasks.TaskSchedulerException, system.OperationCanceledException, system.FormatException, system.ArgumentNullException {
+    public boolean Wait(int millisecondsTimeout) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.threading.tasks.TaskSchedulerException, system.threading.SynchronizationLockException, system.OutOfMemoryException, system.OperationCanceledException, system.FormatException, system.ArgumentNullException {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
@@ -227,7 +227,7 @@ public class Task extends NetObject implements AutoCloseable {
         }
     }
 
-    public boolean Wait(TimeSpan timeout, CancellationToken cancellationToken) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.InvalidOperationException, system.PlatformNotSupportedException, system.ArrayTypeMismatchException, system.NotSupportedException, system.ObjectDisposedException, system.RankException, system.IndexOutOfRangeException, system.OperationCanceledException, system.threading.tasks.TaskSchedulerException, system.FormatException {
+    public boolean Wait(TimeSpan timeout, CancellationToken cancellationToken) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.InvalidOperationException, system.PlatformNotSupportedException, system.ArrayTypeMismatchException, system.NotSupportedException, system.ObjectDisposedException, system.RankException, system.IndexOutOfRangeException, system.OperationCanceledException, system.threading.tasks.TaskSchedulerException, system.threading.SynchronizationLockException, system.OutOfMemoryException, system.FormatException {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
@@ -557,7 +557,7 @@ public class Task extends NetObject implements AutoCloseable {
         }
     }
 
-    public void RunSynchronously() throws Throwable, system.ArgumentException, system.NotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.IndexOutOfRangeException, system.OperationCanceledException, system.ArgumentNullException {
+    public void RunSynchronously() throws Throwable, system.ArgumentException, system.NotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.threading.LockRecursionException, system.threading.SynchronizationLockException, system.OutOfMemoryException, system.IndexOutOfRangeException, system.ObjectDisposedException, system.OperationCanceledException, system.ArgumentNullException {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
@@ -567,7 +567,7 @@ public class Task extends NetObject implements AutoCloseable {
         }
     }
 
-    public void RunSynchronously(TaskScheduler scheduler) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.InvalidOperationException, system.PlatformNotSupportedException, system.ArrayTypeMismatchException, system.NotSupportedException, system.ArgumentNullException, system.ObjectDisposedException, system.RankException, system.IndexOutOfRangeException, system.OperationCanceledException {
+    public void RunSynchronously(TaskScheduler scheduler) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.InvalidOperationException, system.PlatformNotSupportedException, system.ArrayTypeMismatchException, system.NotSupportedException, system.ArgumentNullException, system.ObjectDisposedException, system.RankException, system.IndexOutOfRangeException, system.threading.LockRecursionException, system.threading.SynchronizationLockException, system.OutOfMemoryException, system.OperationCanceledException {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
@@ -597,7 +597,7 @@ public class Task extends NetObject implements AutoCloseable {
         }
     }
 
-    public void Wait() throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.threading.tasks.TaskSchedulerException, system.OperationCanceledException, system.FormatException, system.ArgumentNullException {
+    public void Wait() throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.threading.tasks.TaskSchedulerException, system.threading.SynchronizationLockException, system.OutOfMemoryException, system.OperationCanceledException, system.FormatException, system.ArgumentNullException {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
@@ -607,7 +607,7 @@ public class Task extends NetObject implements AutoCloseable {
         }
     }
 
-    public void Wait(CancellationToken cancellationToken) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.threading.tasks.TaskSchedulerException, system.OperationCanceledException, system.FormatException, system.ArgumentNullException {
+    public void Wait(CancellationToken cancellationToken) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.threading.tasks.TaskSchedulerException, system.threading.SynchronizationLockException, system.OutOfMemoryException, system.OperationCanceledException, system.FormatException, system.ArgumentNullException {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {

@@ -1,7 +1,7 @@
 /*
  *  MIT License
  *
- *  Copyright (c) 2024 MASES s.r.l.
+ *  Copyright (c) 2020-2025 MASES s.r.l.
  *
  *  Permission is hereby granted, free of charge, to any person obtaining a copy
  *  of this software and associated documentation files (the "Software"), to deal
@@ -183,7 +183,7 @@ public class AssemblyInstaller extends Installer  {
     
     // Methods section
     
-    public static void CheckIfInstallable(java.lang.String assemblyName) throws Throwable, system.ArgumentNullException, system.InvalidOperationException, system.NotSupportedException, system.ArgumentException, system.IndexOutOfRangeException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.NotImplementedException, system.InvalidCastException, system.NullReferenceException, system.MissingMethodException, system.FormatException, system.security.SecurityException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.io.IOException {
+    public static void CheckIfInstallable(java.lang.String assemblyName) throws Throwable, system.ArgumentNullException, system.InvalidOperationException, system.NotSupportedException, system.ArgumentException, system.IndexOutOfRangeException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.NotImplementedException, system.InvalidCastException, system.NullReferenceException, system.MissingMethodException, system.FormatException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.io.IOException {
         if (classType == null)
             throw new UnsupportedOperationException("classType is null.");
         try {

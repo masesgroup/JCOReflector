@@ -1,7 +1,7 @@
 /*
  *  MIT License
  *
- *  Copyright (c) 2024 MASES s.r.l.
+ *  Copyright (c) 2020-2025 MASES s.r.l.
  *
  *  Permission is hereby granted, free of charge, to any person obtaining a copy
  *  of this software and associated documentation files (the "Software"), to deal
@@ -193,7 +193,7 @@ public class ColorConverter extends TypeConverter  {
         }
     }
 
-    public NetObject ConvertFrom(ITypeDescriptorContext context, CultureInfo culture, NetObject value) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.FormatException, system.InvalidOperationException, system.ObjectDisposedException, system.threading.AbandonedMutexException, system.globalization.CultureNotFoundException, system.NotSupportedException, system.NullReferenceException, system.TypeLoadException, system.security.SecurityException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotImplementedException, system.resources.MissingManifestResourceException, system.runtime.interopservices.ExternalException, system.collections.generic.KeyNotFoundException {
+    public NetObject ConvertFrom(ITypeDescriptorContext context, CultureInfo culture, NetObject value) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.FormatException, system.InvalidOperationException, system.ObjectDisposedException, system.threading.AbandonedMutexException, system.globalization.CultureNotFoundException, system.NotSupportedException, system.NullReferenceException, system.security.SecurityException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotImplementedException, system.resources.MissingManifestResourceException, system.runtime.interopservices.ExternalException, system.collections.generic.KeyNotFoundException {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {

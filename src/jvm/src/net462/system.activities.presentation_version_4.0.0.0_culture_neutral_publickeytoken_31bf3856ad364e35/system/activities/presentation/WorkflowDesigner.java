@@ -1,7 +1,7 @@
 /*
  *  MIT License
  *
- *  Copyright (c) 2024 MASES s.r.l.
+ *  Copyright (c) 2020-2025 MASES s.r.l.
  *
  *  Permission is hereby granted, free of charge, to any person obtaining a copy
  *  of this software and associated documentation files (the "Software"), to deal
@@ -196,7 +196,7 @@ public class WorkflowDesigner extends NetObject  {
         }
     }
 
-    public void Load(NetObject instance) throws Throwable, system.IndexOutOfRangeException, system.ArgumentException, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.InvalidOperationException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.security.SecurityException, system.NotSupportedException, system.NullReferenceException, system.MissingMethodException, system.InvalidCastException, system.componentmodel.InvalidEnumArgumentException, system.componentmodel.Win32Exception, system.threading.ThreadAbortException, system.FormatException, system.io.EndOfStreamException, system.io.IOException, system.OverflowException {
+    public void Load(NetObject instance) throws Throwable, system.IndexOutOfRangeException, system.ArgumentException, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.InvalidOperationException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.NotSupportedException, system.NullReferenceException, system.MissingMethodException, system.InvalidCastException, system.componentmodel.InvalidEnumArgumentException, system.componentmodel.Win32Exception, system.threading.ThreadAbortException, system.FormatException, system.io.EndOfStreamException, system.io.IOException, system.OverflowException {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {

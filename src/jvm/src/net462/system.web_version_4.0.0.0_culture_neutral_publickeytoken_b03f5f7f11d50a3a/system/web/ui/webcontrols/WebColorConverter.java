@@ -1,7 +1,7 @@
 /*
  *  MIT License
  *
- *  Copyright (c) 2024 MASES s.r.l.
+ *  Copyright (c) 2020-2025 MASES s.r.l.
  *
  *  Permission is hereby granted, free of charge, to any person obtaining a copy
  *  of this software and associated documentation files (the "Software"), to deal
@@ -163,7 +163,7 @@ public class WebColorConverter extends ColorConverter  {
     
     // Methods section
     
-    public NetObject ConvertFrom(ITypeDescriptorContext context, CultureInfo culture, NetObject value) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.InvalidOperationException, system.ObjectDisposedException, system.threading.AbandonedMutexException, system.globalization.CultureNotFoundException, system.NotSupportedException, system.IndexOutOfRangeException, system.security.SecurityException, system.MissingMethodException, system.reflection.TargetInvocationException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.runtime.interopservices.ExternalException {
+    public NetObject ConvertFrom(ITypeDescriptorContext context, CultureInfo culture, NetObject value) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.InvalidOperationException, system.ObjectDisposedException, system.threading.AbandonedMutexException, system.globalization.CultureNotFoundException, system.NotSupportedException, system.IndexOutOfRangeException, system.security.SecurityException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.runtime.interopservices.ExternalException {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {

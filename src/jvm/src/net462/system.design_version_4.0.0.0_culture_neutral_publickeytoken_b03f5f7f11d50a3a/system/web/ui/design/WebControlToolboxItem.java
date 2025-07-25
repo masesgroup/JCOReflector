@@ -1,7 +1,7 @@
 /*
  *  MIT License
  *
- *  Copyright (c) 2024 MASES s.r.l.
+ *  Copyright (c) 2020-2025 MASES s.r.l.
  *
  *  Permission is hereby granted, free of charge, to any person obtaining a copy
  *  of this software and associated documentation files (the "Software"), to deal
@@ -158,7 +158,7 @@ public class WebControlToolboxItem extends ToolboxItem  {
         }
     }
 
-    public WebControlToolboxItem(NetType type) throws Throwable, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.configuration.ConfigurationErrorsException, system.ArgumentException, system.globalization.CultureNotFoundException, system.NotSupportedException, system.ObjectDisposedException, system.NotImplementedException, system.InvalidOperationException, system.FormatException, system.security.SecurityException, system.io.IOException, system.io.FileNotFoundException, system.OutOfMemoryException {
+    public WebControlToolboxItem(NetType type) throws Throwable, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.configuration.ConfigurationErrorsException, system.ArgumentException, system.globalization.CultureNotFoundException, system.NotSupportedException, system.ObjectDisposedException, system.NotImplementedException, system.InvalidOperationException, system.FormatException, system.io.IOException, system.io.FileNotFoundException, system.OutOfMemoryException {
         try {
             // add reference to assemblyName.dll file
             addReference(JCOReflector.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);

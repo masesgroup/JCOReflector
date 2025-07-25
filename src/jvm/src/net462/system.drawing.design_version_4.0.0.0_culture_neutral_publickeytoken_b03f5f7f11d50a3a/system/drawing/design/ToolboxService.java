@@ -1,7 +1,7 @@
 /*
  *  MIT License
  *
- *  Copyright (c) 2024 MASES s.r.l.
+ *  Copyright (c) 2020-2025 MASES s.r.l.
  *
  *  Permission is hereby granted, free of charge, to any person obtaining a copy
  *  of this software and associated documentation files (the "Software"), to deal
@@ -162,7 +162,7 @@ public class ToolboxService extends NetObject implements system.componentmodel.d
     
     // Methods section
     
-    public static ICollection GetToolboxItems(Assembly a, java.lang.String newCodeBase) throws Throwable, system.ArgumentNullException, system.NotImplementedException, system.InvalidOperationException, system.ArgumentException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.NotSupportedException, system.io.FileNotFoundException, system.NullReferenceException {
+    public static ICollection GetToolboxItems(Assembly a, java.lang.String newCodeBase) throws Throwable, system.ArgumentNullException, system.NotImplementedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.ArgumentException, system.TypeLoadException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.IndexOutOfRangeException, system.NotSupportedException, system.io.FileNotFoundException, system.NullReferenceException, system.security.SecurityException, system.MissingMethodException, system.reflection.TargetInvocationException {
         if (classType == null)
             throw new UnsupportedOperationException("classType is null.");
         try {
@@ -173,7 +173,7 @@ public class ToolboxService extends NetObject implements system.componentmodel.d
         }
     }
 
-    public static ICollection GetToolboxItems(Assembly a, java.lang.String newCodeBase, boolean throwOnError) throws Throwable, system.ArgumentNullException, system.NotImplementedException, system.InvalidOperationException, system.ArgumentException, system.ArgumentOutOfRangeException, system.security.SecurityException, system.ObjectDisposedException, system.resources.MissingManifestResourceException, system.FormatException, system.NotSupportedException, system.io.FileNotFoundException, system.NullReferenceException {
+    public static ICollection GetToolboxItems(Assembly a, java.lang.String newCodeBase, boolean throwOnError) throws Throwable, system.ArgumentNullException, system.NotImplementedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.ArgumentException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.NotSupportedException, system.io.FileNotFoundException, system.NullReferenceException {
         if (classType == null)
             throw new UnsupportedOperationException("classType is null.");
         try {
@@ -206,7 +206,7 @@ public class ToolboxService extends NetObject implements system.componentmodel.d
         }
     }
 
-    public static ToolboxItem GetToolboxItem(NetType toolType) throws Throwable, system.ArgumentNullException, system.InvalidOperationException, system.ArgumentException, system.ArgumentOutOfRangeException, system.security.SecurityException, system.MissingMethodException, system.reflection.TargetInvocationException, system.ObjectDisposedException, system.threading.AbandonedMutexException, system.NotImplementedException, system.globalization.CultureNotFoundException, system.IndexOutOfRangeException, system.resources.MissingManifestResourceException, system.NotSupportedException, system.FormatException, system.io.IOException, system.io.FileNotFoundException {
+    public static ToolboxItem GetToolboxItem(NetType toolType) throws Throwable, system.ArgumentNullException, system.InvalidOperationException, system.ArgumentException, system.security.SecurityException, system.ObjectDisposedException, system.ArgumentOutOfRangeException, system.NotImplementedException, system.globalization.CultureNotFoundException, system.IndexOutOfRangeException, system.resources.MissingManifestResourceException, system.FormatException, system.NotSupportedException, system.io.IOException, system.io.FileNotFoundException {
         if (classType == null)
             throw new UnsupportedOperationException("classType is null.");
         try {
@@ -217,7 +217,7 @@ public class ToolboxService extends NetObject implements system.componentmodel.d
         }
     }
 
-    public static ToolboxItem GetToolboxItem(NetType toolType, boolean nonPublic) throws Throwable, system.ArgumentNullException, system.InvalidOperationException, system.ArgumentException, system.ArgumentOutOfRangeException, system.TypeLoadException, system.security.SecurityException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotImplementedException, system.globalization.CultureNotFoundException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.IndexOutOfRangeException, system.NotSupportedException, system.InvalidCastException, system.NullReferenceException, system.FormatException, system.configuration.ConfigurationErrorsException, system.io.FileNotFoundException {
+    public static ToolboxItem GetToolboxItem(NetType toolType, boolean nonPublic) throws Throwable, system.ArgumentNullException, system.InvalidOperationException, system.ArgumentException, system.security.SecurityException, system.MissingMethodException, system.reflection.TargetInvocationException, system.ObjectDisposedException, system.threading.AbandonedMutexException, system.ArgumentOutOfRangeException, system.NotImplementedException, system.globalization.CultureNotFoundException, system.resources.MissingManifestResourceException, system.IndexOutOfRangeException, system.NotSupportedException, system.InvalidCastException, system.NullReferenceException, system.FormatException, system.configuration.ConfigurationErrorsException, system.io.FileNotFoundException {
         if (classType == null)
             throw new UnsupportedOperationException("classType is null.");
         try {

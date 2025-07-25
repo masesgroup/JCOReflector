@@ -1,7 +1,7 @@
 /*
  *  MIT License
  *
- *  Copyright (c) 2024 MASES s.r.l.
+ *  Copyright (c) 2020-2025 MASES s.r.l.
  *
  *  Permission is hereby granted, free of charge, to any person obtaining a copy
  *  of this software and associated documentation files (the "Software"), to deal
@@ -743,7 +743,7 @@ public class BigInteger extends ValueType  {
         }
     }
 
-    public static BigInteger RotateLeft(BigInteger value, int rotateAmount) throws Throwable, system.ArgumentException, system.NotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.ArrayTypeMismatchException, system.PlatformNotSupportedException, system.IndexOutOfRangeException, system.OverflowException {
+    public static BigInteger RotateLeft(BigInteger value, int rotateAmount) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.IndexOutOfRangeException, system.OverflowException {
         if (classType == null)
             throw new UnsupportedOperationException("classType is null.");
         try {
@@ -754,7 +754,7 @@ public class BigInteger extends ValueType  {
         }
     }
 
-    public static BigInteger RotateRight(BigInteger value, int rotateAmount) throws Throwable, system.ArgumentException, system.NotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.ArrayTypeMismatchException, system.PlatformNotSupportedException, system.IndexOutOfRangeException, system.OverflowException {
+    public static BigInteger RotateRight(BigInteger value, int rotateAmount) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.IndexOutOfRangeException, system.OverflowException {
         if (classType == null)
             throw new UnsupportedOperationException("classType is null.");
         try {

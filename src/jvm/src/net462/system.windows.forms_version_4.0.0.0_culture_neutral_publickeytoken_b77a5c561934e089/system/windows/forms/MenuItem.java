@@ -1,7 +1,7 @@
 /*
  *  MIT License
  *
- *  Copyright (c) 2024 MASES s.r.l.
+ *  Copyright (c) 2020-2025 MASES s.r.l.
  *
  *  Permission is hereby granted, free of charge, to any person obtaining a copy
  *  of this software and associated documentation files (the "Software"), to deal
@@ -238,7 +238,7 @@ public class MenuItem extends Menu  {
         }
     }
 
-    public void MergeMenu(MenuItem itemSrc) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotImplementedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.NullReferenceException, system.OutOfMemoryException, system.NotSupportedException, system.componentmodel.Win32Exception {
+    public void MergeMenu(MenuItem itemSrc) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotImplementedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.NullReferenceException, system.OutOfMemoryException, system.NotSupportedException, system.componentmodel.Win32Exception, system.security.SecurityException {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
@@ -282,7 +282,7 @@ public class MenuItem extends Menu  {
         }
     }
 
-    public void setBarBreak(boolean BarBreak) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.NullReferenceException, system.InvalidOperationException, system.OutOfMemoryException, system.ArgumentOutOfRangeException, system.NotSupportedException, system.ObjectDisposedException, system.componentmodel.Win32Exception {
+    public void setBarBreak(boolean BarBreak) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.NullReferenceException, system.InvalidOperationException, system.OutOfMemoryException, system.ArgumentOutOfRangeException, system.NotSupportedException, system.ObjectDisposedException, system.componentmodel.Win32Exception, system.security.SecurityException {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
@@ -302,7 +302,7 @@ public class MenuItem extends Menu  {
         }
     }
 
-    public void setBreak(boolean Break) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.NullReferenceException, system.InvalidOperationException, system.OutOfMemoryException, system.ArgumentOutOfRangeException, system.NotSupportedException, system.ObjectDisposedException, system.componentmodel.Win32Exception {
+    public void setBreak(boolean Break) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.NullReferenceException, system.InvalidOperationException, system.OutOfMemoryException, system.ArgumentOutOfRangeException, system.NotSupportedException, system.ObjectDisposedException, system.componentmodel.Win32Exception, system.security.SecurityException {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
@@ -322,7 +322,7 @@ public class MenuItem extends Menu  {
         }
     }
 
-    public void setChecked(boolean Checked) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotImplementedException, system.NotSupportedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.NullReferenceException, system.OutOfMemoryException, system.componentmodel.Win32Exception {
+    public void setChecked(boolean Checked) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotImplementedException, system.NotSupportedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.NullReferenceException, system.OutOfMemoryException, system.componentmodel.Win32Exception, system.security.SecurityException {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
@@ -342,7 +342,7 @@ public class MenuItem extends Menu  {
         }
     }
 
-    public void setDefaultItem(boolean DefaultItem) throws Throwable, system.ArgumentException, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ObjectDisposedException, system.InvalidOperationException, system.NullReferenceException, system.OutOfMemoryException, system.ArgumentOutOfRangeException, system.NotSupportedException, system.componentmodel.Win32Exception {
+    public void setDefaultItem(boolean DefaultItem) throws Throwable, system.ArgumentException, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ObjectDisposedException, system.InvalidOperationException, system.NullReferenceException, system.OutOfMemoryException, system.ArgumentOutOfRangeException, system.NotSupportedException, system.componentmodel.Win32Exception, system.security.SecurityException {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
@@ -362,7 +362,7 @@ public class MenuItem extends Menu  {
         }
     }
 
-    public void setEnabled(boolean Enabled) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.NullReferenceException, system.InvalidOperationException, system.OutOfMemoryException, system.ArgumentOutOfRangeException, system.NotSupportedException, system.ObjectDisposedException, system.componentmodel.Win32Exception {
+    public void setEnabled(boolean Enabled) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.NullReferenceException, system.InvalidOperationException, system.OutOfMemoryException, system.ArgumentOutOfRangeException, system.NotSupportedException, system.ObjectDisposedException, system.componentmodel.Win32Exception, system.security.SecurityException {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
@@ -402,7 +402,7 @@ public class MenuItem extends Menu  {
         }
     }
 
-    public void setOwnerDraw(boolean OwnerDraw) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.NullReferenceException, system.InvalidOperationException, system.OutOfMemoryException, system.ArgumentOutOfRangeException, system.NotSupportedException, system.ObjectDisposedException, system.componentmodel.Win32Exception {
+    public void setOwnerDraw(boolean OwnerDraw) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.NullReferenceException, system.InvalidOperationException, system.OutOfMemoryException, system.ArgumentOutOfRangeException, system.NotSupportedException, system.ObjectDisposedException, system.componentmodel.Win32Exception, system.security.SecurityException {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
@@ -422,7 +422,7 @@ public class MenuItem extends Menu  {
         }
     }
 
-    public void setRadioCheck(boolean RadioCheck) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.NullReferenceException, system.InvalidOperationException, system.OutOfMemoryException, system.ArgumentOutOfRangeException, system.NotSupportedException, system.ObjectDisposedException, system.componentmodel.Win32Exception {
+    public void setRadioCheck(boolean RadioCheck) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.NullReferenceException, system.InvalidOperationException, system.OutOfMemoryException, system.ArgumentOutOfRangeException, system.NotSupportedException, system.ObjectDisposedException, system.componentmodel.Win32Exception, system.security.SecurityException {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
@@ -442,7 +442,7 @@ public class MenuItem extends Menu  {
         }
     }
 
-    public void setShowShortcut(boolean ShowShortcut) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.NullReferenceException, system.resources.MissingManifestResourceException, system.InvalidOperationException, system.ObjectDisposedException, system.ArgumentOutOfRangeException, system.OutOfMemoryException, system.security.SecurityException, system.IndexOutOfRangeException, system.NotSupportedException, system.componentmodel.Win32Exception {
+    public void setShowShortcut(boolean ShowShortcut) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.NullReferenceException, system.resources.MissingManifestResourceException, system.InvalidOperationException, system.ObjectDisposedException, system.ArgumentOutOfRangeException, system.OutOfMemoryException, system.IndexOutOfRangeException, system.NotSupportedException, system.componentmodel.Win32Exception {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
@@ -492,7 +492,7 @@ public class MenuItem extends Menu  {
         }
     }
 
-    public void setIndex(int Index) throws Throwable, system.ArgumentNullException, system.TypeLoadException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotSupportedException, system.globalization.CultureNotFoundException, system.ArgumentOutOfRangeException, system.NotImplementedException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.NullReferenceException, system.OutOfMemoryException, system.componentmodel.Win32Exception {
+    public void setIndex(int Index) throws Throwable, system.ArgumentNullException, system.TypeLoadException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotSupportedException, system.globalization.CultureNotFoundException, system.ArgumentOutOfRangeException, system.NotImplementedException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.NullReferenceException, system.OutOfMemoryException, system.componentmodel.Win32Exception, system.security.SecurityException {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
@@ -532,7 +532,7 @@ public class MenuItem extends Menu  {
         }
     }
 
-    public void setText(java.lang.String Text) throws Throwable, system.NullReferenceException, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.OutOfMemoryException, system.ArgumentOutOfRangeException, system.NotSupportedException, system.ObjectDisposedException, system.componentmodel.Win32Exception {
+    public void setText(java.lang.String Text) throws Throwable, system.NullReferenceException, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.OutOfMemoryException, system.ArgumentOutOfRangeException, system.NotSupportedException, system.ObjectDisposedException, system.componentmodel.Win32Exception, system.security.SecurityException {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
@@ -585,7 +585,7 @@ public class MenuItem extends Menu  {
         }
     }
 
-    public void setShortcut(Shortcut Shortcut) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.ArgumentOutOfRangeException, system.FormatException, system.NotSupportedException, system.NotImplementedException, system.IndexOutOfRangeException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.threading.AbandonedMutexException, system.componentmodel.InvalidEnumArgumentException, system.NullReferenceException, system.OutOfMemoryException, system.security.SecurityException, system.componentmodel.Win32Exception {
+    public void setShortcut(Shortcut Shortcut) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.ArgumentOutOfRangeException, system.FormatException, system.NotSupportedException, system.NotImplementedException, system.IndexOutOfRangeException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.threading.AbandonedMutexException, system.componentmodel.InvalidEnumArgumentException, system.NullReferenceException, system.OutOfMemoryException, system.componentmodel.Win32Exception {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {

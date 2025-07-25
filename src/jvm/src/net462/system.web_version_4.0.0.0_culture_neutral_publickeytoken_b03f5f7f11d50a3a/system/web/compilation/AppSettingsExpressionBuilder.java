@@ -1,7 +1,7 @@
 /*
  *  MIT License
  *
- *  Copyright (c) 2024 MASES s.r.l.
+ *  Copyright (c) 2020-2025 MASES s.r.l.
  *
  *  Permission is hereby granted, free of charge, to any person obtaining a copy
  *  of this software and associated documentation files (the "Software"), to deal
@@ -174,7 +174,7 @@ public class AppSettingsExpressionBuilder extends ExpressionBuilder  {
         }
     }
 
-    public NetObject EvaluateExpression(NetObject target, BoundPropertyEntry entry, NetObject parsedData, ExpressionBuilderContext context) throws Throwable, system.ArgumentException, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.configuration.ConfigurationErrorsException, system.ObjectDisposedException, system.threading.AbandonedMutexException, system.ArgumentOutOfRangeException, system.OutOfMemoryException, system.InvalidOperationException, system.security.SecurityException, system.MissingMethodException, system.reflection.TargetInvocationException, system.IndexOutOfRangeException, system.globalization.CultureNotFoundException, system.NotSupportedException, system.NullReferenceException, system.NotImplementedException, system.FormatException {
+    public NetObject EvaluateExpression(NetObject target, BoundPropertyEntry entry, NetObject parsedData, ExpressionBuilderContext context) throws Throwable, system.ArgumentException, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.configuration.ConfigurationErrorsException, system.ObjectDisposedException, system.threading.AbandonedMutexException, system.ArgumentOutOfRangeException, system.OutOfMemoryException, system.InvalidOperationException, system.security.SecurityException, system.IndexOutOfRangeException, system.globalization.CultureNotFoundException, system.NotSupportedException, system.NullReferenceException, system.NotImplementedException, system.FormatException {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
@@ -196,7 +196,7 @@ public class AppSettingsExpressionBuilder extends ExpressionBuilder  {
         }
     }
 
-    public static NetObject GetAppSetting(java.lang.String key, NetType targetType, java.lang.String propertyName) throws Throwable, system.ArgumentException, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.InvalidOperationException, system.configuration.ConfigurationErrorsException, system.ObjectDisposedException, system.threading.AbandonedMutexException, system.ArgumentOutOfRangeException, system.OutOfMemoryException, system.TypeLoadException, system.security.SecurityException, system.MissingMethodException, system.reflection.TargetInvocationException, system.IndexOutOfRangeException, system.globalization.CultureNotFoundException, system.NullReferenceException, system.NotImplementedException, system.NotSupportedException {
+    public static NetObject GetAppSetting(java.lang.String key, NetType targetType, java.lang.String propertyName) throws Throwable, system.ArgumentException, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.InvalidOperationException, system.configuration.ConfigurationErrorsException, system.ObjectDisposedException, system.threading.AbandonedMutexException, system.ArgumentOutOfRangeException, system.OutOfMemoryException, system.security.SecurityException, system.MissingMethodException, system.reflection.TargetInvocationException, system.IndexOutOfRangeException, system.globalization.CultureNotFoundException, system.NullReferenceException, system.NotImplementedException, system.NotSupportedException {
         if (classType == null)
             throw new UnsupportedOperationException("classType is null.");
         try {

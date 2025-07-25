@@ -1,7 +1,7 @@
 /*
  *  MIT License
  *
- *  Copyright (c) 2024 MASES s.r.l.
+ *  Copyright (c) 2020-2025 MASES s.r.l.
  *
  *  Permission is hereby granted, free of charge, to any person obtaining a copy
  *  of this software and associated documentation files (the "Software"), to deal
@@ -176,7 +176,7 @@ public class TypeBrowserEditor extends UITypeEditor  {
         }
     }
 
-    public NetObject EditValue(ITypeDescriptorContext typeDescriptorContext, IServiceProvider serviceProvider, NetObject value) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.ArgumentOutOfRangeException, system.InvalidOperationException, system.ObjectDisposedException, system.threading.AbandonedMutexException, system.security.SecurityException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotImplementedException, system.globalization.CultureNotFoundException, system.resources.MissingManifestResourceException, system.NotSupportedException, system.NullReferenceException, system.IndexOutOfRangeException, system.configuration.ConfigurationErrorsException, system.componentmodel.Win32Exception, system.componentmodel.InvalidEnumArgumentException, system.TypeLoadException, system.InvalidCastException, system.io.IOException, system.collections.generic.KeyNotFoundException, system.OutOfMemoryException, system.UnauthorizedAccessException, system.AccessViolationException {
+    public NetObject EditValue(ITypeDescriptorContext typeDescriptorContext, IServiceProvider serviceProvider, NetObject value) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.ArgumentOutOfRangeException, system.InvalidOperationException, system.ObjectDisposedException, system.threading.AbandonedMutexException, system.security.SecurityException, system.NotImplementedException, system.globalization.CultureNotFoundException, system.resources.MissingManifestResourceException, system.NotSupportedException, system.MissingMethodException, system.NullReferenceException, system.IndexOutOfRangeException, system.configuration.ConfigurationErrorsException, system.componentmodel.Win32Exception, system.componentmodel.InvalidEnumArgumentException, system.TypeLoadException, system.InvalidCastException, system.io.IOException, system.collections.generic.KeyNotFoundException, system.OutOfMemoryException, system.UnauthorizedAccessException, system.AccessViolationException {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {

@@ -1,7 +1,7 @@
 /*
  *  MIT License
  *
- *  Copyright (c) 2024 MASES s.r.l.
+ *  Copyright (c) 2020-2025 MASES s.r.l.
  *
  *  Permission is hereby granted, free of charge, to any person obtaining a copy
  *  of this software and associated documentation files (the "Software"), to deal
@@ -164,7 +164,7 @@ public class ValueProviderResult extends NetObject  {
     
     // Methods section
     
-    public NetObject ConvertTo(NetType type) throws Throwable, system.ArgumentNullException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.ArgumentException, system.NotSupportedException, system.NotImplementedException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.FormatException {
+    public NetObject ConvertTo(NetType type) throws Throwable, system.ArgumentNullException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.ArgumentException, system.NotSupportedException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotImplementedException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.FormatException {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
@@ -175,7 +175,7 @@ public class ValueProviderResult extends NetObject  {
         }
     }
 
-    public NetObject ConvertTo(NetType type, CultureInfo culture) throws Throwable, system.ArgumentNullException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.ArgumentException, system.NotSupportedException, system.security.SecurityException, system.ObjectDisposedException, system.globalization.CultureNotFoundException, system.NotImplementedException, system.IndexOutOfRangeException, system.resources.MissingManifestResourceException, system.FormatException {
+    public NetObject ConvertTo(NetType type, CultureInfo culture) throws Throwable, system.ArgumentNullException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.ArgumentException, system.NotSupportedException, system.globalization.CultureNotFoundException, system.NotImplementedException, system.IndexOutOfRangeException, system.resources.MissingManifestResourceException, system.ObjectDisposedException {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {

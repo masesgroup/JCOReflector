@@ -1,7 +1,7 @@
 /*
  *  MIT License
  *
- *  Copyright (c) 2024 MASES s.r.l.
+ *  Copyright (c) 2020-2025 MASES s.r.l.
  *
  *  Permission is hereby granted, free of charge, to any person obtaining a copy
  *  of this software and associated documentation files (the "Software"), to deal
@@ -167,7 +167,7 @@ public class ActivityPreviewDesignerTheme extends CompositeDesignerTheme  {
     
     // Methods section
     
-    public void Initialize() throws Throwable, system.ArgumentNullException, system.collections.generic.KeyNotFoundException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.NotImplementedException, system.IndexOutOfRangeException, system.ArgumentException, system.ArgumentOutOfRangeException, system.configuration.ConfigurationErrorsException, system.FormatException, system.MulticastNotSupportedException, system.NullReferenceException, system.InvalidCastException, system.workflow.componentmodel.serialization.WorkflowMarkupSerializationException, system.NotSupportedException, system.MissingMethodException, system.reflection.TargetInvocationException {
+    public void Initialize() throws Throwable, system.ArgumentNullException, system.collections.generic.KeyNotFoundException, system.ArgumentOutOfRangeException, system.ArgumentException, system.InvalidOperationException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.NotImplementedException, system.IndexOutOfRangeException, system.configuration.ConfigurationErrorsException, system.FormatException, system.MulticastNotSupportedException, system.NullReferenceException, system.InvalidCastException, system.workflow.componentmodel.serialization.WorkflowMarkupSerializationException, system.NotSupportedException, system.MissingMethodException, system.reflection.TargetInvocationException {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {

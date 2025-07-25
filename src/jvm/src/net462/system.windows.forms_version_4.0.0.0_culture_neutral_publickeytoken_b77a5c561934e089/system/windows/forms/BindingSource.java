@@ -1,7 +1,7 @@
 /*
  *  MIT License
  *
- *  Copyright (c) 2024 MASES s.r.l.
+ *  Copyright (c) 2020-2025 MASES s.r.l.
  *
  *  Permission is hereby granted, free of charge, to any person obtaining a copy
  *  of this software and associated documentation files (the "Software"), to deal
@@ -185,7 +185,7 @@ public class BindingSource extends Component implements system.componentmodel.IC
         }
     }
 
-    public BindingSource(NetObject dataSource, java.lang.String dataMember) throws Throwable, system.MulticastNotSupportedException, system.IndexOutOfRangeException, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.NullReferenceException, system.ObjectDisposedException, system.ArgumentException, system.InvalidOperationException, system.resources.MissingManifestResourceException, system.InvalidCastException, system.FormatException {
+    public BindingSource(NetObject dataSource, java.lang.String dataMember) throws Throwable, system.MulticastNotSupportedException, system.IndexOutOfRangeException, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.NullReferenceException, system.InvalidOperationException, system.ArgumentException, system.ObjectDisposedException, system.resources.MissingManifestResourceException, system.InvalidCastException, system.FormatException {
         try {
             // add reference to assemblyName.dll file
             addReference(JCOReflector.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
@@ -322,7 +322,7 @@ public class BindingSource extends Component implements system.componentmodel.IC
         }
     }
 
-    public void Clear() throws Throwable, system.IndexOutOfRangeException, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.ArgumentException, system.RankException, system.NullReferenceException, system.ObjectDisposedException, system.threading.AbandonedMutexException, system.FormatException, system.InvalidOperationException, system.NotSupportedException, system.resources.MissingManifestResourceException, system.globalization.CultureNotFoundException, system.MulticastNotSupportedException {
+    public void Clear() throws Throwable, system.IndexOutOfRangeException, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.ArgumentException, system.RankException, system.NullReferenceException, system.InvalidOperationException, system.ObjectDisposedException, system.threading.AbandonedMutexException, system.FormatException, system.NotSupportedException, system.resources.MissingManifestResourceException, system.globalization.CultureNotFoundException, system.MulticastNotSupportedException {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {

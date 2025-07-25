@@ -1,7 +1,7 @@
 /*
  *  MIT License
  *
- *  Copyright (c) 2024 MASES s.r.l.
+ *  Copyright (c) 2020-2025 MASES s.r.l.
  *
  *  Permission is hereby granted, free of charge, to any person obtaining a copy
  *  of this software and associated documentation files (the "Software"), to deal
@@ -159,7 +159,7 @@ public class Binding extends NetObject  {
     public Binding() throws Throwable {
     }
 
-    public Binding(java.lang.String propertyName, NetObject dataSource, java.lang.String dataMember) throws Throwable, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.ArgumentException, system.NotSupportedException, system.NullReferenceException, system.NotImplementedException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.FormatException, system.MulticastNotSupportedException, system.IndexOutOfRangeException, system.RankException, system.TypeLoadException {
+    public Binding(java.lang.String propertyName, NetObject dataSource, java.lang.String dataMember) throws Throwable, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.ArgumentException, system.InvalidOperationException, system.NotSupportedException, system.NullReferenceException, system.NotImplementedException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.FormatException, system.MulticastNotSupportedException, system.IndexOutOfRangeException, system.RankException, system.TypeLoadException {
         try {
             // add reference to assemblyName.dll file
             addReference(JCOReflector.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
@@ -169,7 +169,7 @@ public class Binding extends NetObject  {
         }
     }
 
-    public Binding(java.lang.String propertyName, NetObject dataSource, java.lang.String dataMember, boolean formattingEnabled) throws Throwable, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.ArgumentException, system.NotSupportedException, system.NullReferenceException, system.NotImplementedException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.FormatException, system.MulticastNotSupportedException, system.IndexOutOfRangeException, system.RankException, system.TypeLoadException {
+    public Binding(java.lang.String propertyName, NetObject dataSource, java.lang.String dataMember, boolean formattingEnabled) throws Throwable, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.ArgumentException, system.InvalidOperationException, system.NotSupportedException, system.NullReferenceException, system.NotImplementedException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.FormatException, system.MulticastNotSupportedException, system.IndexOutOfRangeException, system.RankException, system.TypeLoadException {
         try {
             // add reference to assemblyName.dll file
             addReference(JCOReflector.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
@@ -179,7 +179,7 @@ public class Binding extends NetObject  {
         }
     }
 
-    public Binding(java.lang.String propertyName, NetObject dataSource, java.lang.String dataMember, boolean formattingEnabled, DataSourceUpdateMode dataSourceUpdateMode) throws Throwable, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.ArgumentException, system.NotSupportedException, system.NullReferenceException, system.NotImplementedException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.FormatException, system.MulticastNotSupportedException, system.IndexOutOfRangeException, system.RankException, system.TypeLoadException {
+    public Binding(java.lang.String propertyName, NetObject dataSource, java.lang.String dataMember, boolean formattingEnabled, DataSourceUpdateMode dataSourceUpdateMode) throws Throwable, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.ArgumentException, system.InvalidOperationException, system.NotSupportedException, system.NullReferenceException, system.NotImplementedException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.FormatException, system.MulticastNotSupportedException, system.IndexOutOfRangeException, system.RankException, system.TypeLoadException {
         try {
             // add reference to assemblyName.dll file
             addReference(JCOReflector.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
@@ -189,7 +189,7 @@ public class Binding extends NetObject  {
         }
     }
 
-    public Binding(java.lang.String propertyName, NetObject dataSource, java.lang.String dataMember, boolean formattingEnabled, DataSourceUpdateMode dataSourceUpdateMode, NetObject nullValue) throws Throwable, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.ArgumentException, system.NotSupportedException, system.NullReferenceException, system.NotImplementedException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.FormatException, system.MulticastNotSupportedException, system.IndexOutOfRangeException, system.RankException, system.TypeLoadException {
+    public Binding(java.lang.String propertyName, NetObject dataSource, java.lang.String dataMember, boolean formattingEnabled, DataSourceUpdateMode dataSourceUpdateMode, NetObject nullValue) throws Throwable, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.ArgumentException, system.InvalidOperationException, system.NotSupportedException, system.NullReferenceException, system.NotImplementedException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.FormatException, system.MulticastNotSupportedException, system.IndexOutOfRangeException, system.RankException, system.TypeLoadException {
         try {
             // add reference to assemblyName.dll file
             addReference(JCOReflector.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
@@ -199,7 +199,7 @@ public class Binding extends NetObject  {
         }
     }
 
-    public Binding(java.lang.String propertyName, NetObject dataSource, java.lang.String dataMember, boolean formattingEnabled, DataSourceUpdateMode dataSourceUpdateMode, NetObject nullValue, java.lang.String formatString) throws Throwable, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.ArgumentException, system.NotSupportedException, system.NullReferenceException, system.NotImplementedException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.FormatException, system.MulticastNotSupportedException, system.IndexOutOfRangeException, system.RankException, system.TypeLoadException {
+    public Binding(java.lang.String propertyName, NetObject dataSource, java.lang.String dataMember, boolean formattingEnabled, DataSourceUpdateMode dataSourceUpdateMode, NetObject nullValue, java.lang.String formatString) throws Throwable, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.ArgumentException, system.InvalidOperationException, system.NotSupportedException, system.NullReferenceException, system.NotImplementedException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.FormatException, system.MulticastNotSupportedException, system.IndexOutOfRangeException, system.RankException, system.TypeLoadException {
         try {
             // add reference to assemblyName.dll file
             addReference(JCOReflector.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);

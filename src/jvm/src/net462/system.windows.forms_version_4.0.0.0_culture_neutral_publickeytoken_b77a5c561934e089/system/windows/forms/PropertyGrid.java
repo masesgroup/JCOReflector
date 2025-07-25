@@ -1,7 +1,7 @@
 /*
  *  MIT License
  *
- *  Copyright (c) 2024 MASES s.r.l.
+ *  Copyright (c) 2020-2025 MASES s.r.l.
  *
  *  Permission is hereby granted, free of charge, to any person obtaining a copy
  *  of this software and associated documentation files (the "Software"), to deal
@@ -166,7 +166,7 @@ public class PropertyGrid extends ContainerControl  {
 
     // Constructors section
     
-    public PropertyGrid() throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.NullReferenceException, system.MemberAccessException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.MulticastNotSupportedException, system.io.FileNotFoundException, system.io.DirectoryNotFoundException, system.UnauthorizedAccessException, system.io.IOException, system.io.PathTooLongException, system.io.DriveNotFoundException, system.OperationCanceledException, system.threading.AbandonedMutexException, system.runtime.interopservices.ExternalException, system.collections.generic.KeyNotFoundException, system.NotSupportedException, system.configuration.ConfigurationErrorsException, system.globalization.CultureNotFoundException, system.componentmodel.Win32Exception, system.OutOfMemoryException, system.security.SecurityException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotImplementedException, system.FormatException, system.IndexOutOfRangeException, system.TypeLoadException, system.componentmodel.InvalidEnumArgumentException, system.InvalidCastException, system.OverflowException {
+    public PropertyGrid() throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.NullReferenceException, system.MemberAccessException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.MulticastNotSupportedException, system.io.FileNotFoundException, system.io.DirectoryNotFoundException, system.UnauthorizedAccessException, system.io.IOException, system.io.PathTooLongException, system.io.DriveNotFoundException, system.OperationCanceledException, system.threading.AbandonedMutexException, system.runtime.interopservices.ExternalException, system.collections.generic.KeyNotFoundException, system.NotSupportedException, system.configuration.ConfigurationErrorsException, system.globalization.CultureNotFoundException, system.componentmodel.Win32Exception, system.OutOfMemoryException, system.security.SecurityException, system.NotImplementedException, system.FormatException, system.IndexOutOfRangeException, system.TypeLoadException, system.componentmodel.InvalidEnumArgumentException, system.InvalidCastException, system.OverflowException {
         try {
             // add reference to assemblyName.dll file
             addReference(JCOReflector.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);

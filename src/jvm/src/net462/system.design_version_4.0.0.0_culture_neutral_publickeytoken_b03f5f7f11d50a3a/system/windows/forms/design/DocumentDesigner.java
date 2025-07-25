@@ -1,7 +1,7 @@
 /*
  *  MIT License
  *
- *  Copyright (c) 2024 MASES s.r.l.
+ *  Copyright (c) 2020-2025 MASES s.r.l.
  *
  *  Permission is hereby granted, free of charge, to any person obtaining a copy
  *  of this software and associated documentation files (the "Software"), to deal
@@ -180,7 +180,7 @@ public class DocumentDesigner extends ScrollableControlDesigner implements syste
         }
     }
 
-    public void Initialize(IComponent component) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.ArgumentOutOfRangeException, system.InvalidOperationException, system.security.SecurityException, system.ObjectDisposedException, system.globalization.CultureNotFoundException, system.NotSupportedException, system.NullReferenceException, system.componentmodel.Win32Exception, system.OutOfMemoryException, system.threading.ThreadStateException, system.configuration.ConfigurationErrorsException, system.componentmodel.InvalidEnumArgumentException, system.componentmodel.InvalidAsynchronousStateException, system.NotImplementedException, system.io.IOException, system.IndexOutOfRangeException, system.io.FileNotFoundException, system.UnauthorizedAccessException, system.runtime.serialization.SerializationException, system.runtime.interopservices.ExternalException, system.reflection.TargetInvocationException {
+    public void Initialize(IComponent component) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.globalization.CultureNotFoundException, system.ArgumentOutOfRangeException, system.NotSupportedException, system.NullReferenceException, system.InvalidOperationException, system.ObjectDisposedException, system.componentmodel.Win32Exception, system.OutOfMemoryException, system.threading.ThreadStateException, system.configuration.ConfigurationErrorsException, system.security.SecurityException, system.componentmodel.InvalidEnumArgumentException, system.componentmodel.InvalidAsynchronousStateException, system.NotImplementedException, system.MissingMethodException, system.reflection.TargetInvocationException, system.io.IOException, system.IndexOutOfRangeException, system.io.FileNotFoundException, system.UnauthorizedAccessException, system.runtime.serialization.SerializationException, system.runtime.interopservices.ExternalException {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {

@@ -1,7 +1,7 @@
 /*
  *  MIT License
  *
- *  Copyright (c) 2024 MASES s.r.l.
+ *  Copyright (c) 2020-2025 MASES s.r.l.
  *
  *  Permission is hereby granted, free of charge, to any person obtaining a copy
  *  of this software and associated documentation files (the "Software"), to deal
@@ -175,7 +175,7 @@ public class FilterableAttribute extends Attribute  {
         }
     }
 
-    public static boolean IsObjectFilterable(NetObject instance) throws Throwable, system.ArgumentNullException, system.ObjectDisposedException, system.threading.AbandonedMutexException, system.ArgumentException, system.ArgumentOutOfRangeException, system.InvalidOperationException, system.security.SecurityException, system.MissingMethodException, system.reflection.TargetInvocationException {
+    public static boolean IsObjectFilterable(NetObject instance) throws Throwable, system.ArgumentNullException, system.ObjectDisposedException, system.threading.AbandonedMutexException, system.ArgumentException, system.InvalidOperationException, system.security.SecurityException, system.ArgumentOutOfRangeException {
         if (classType == null)
             throw new UnsupportedOperationException("classType is null.");
         try {
@@ -185,7 +185,7 @@ public class FilterableAttribute extends Attribute  {
         }
     }
 
-    public static boolean IsPropertyFilterable(PropertyDescriptor propertyDescriptor) throws Throwable, system.ArgumentException, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.InvalidOperationException, system.ObjectDisposedException, system.threading.AbandonedMutexException, system.security.SecurityException, system.MissingMethodException, system.reflection.TargetInvocationException {
+    public static boolean IsPropertyFilterable(PropertyDescriptor propertyDescriptor) throws Throwable, system.ArgumentException, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.InvalidOperationException, system.ObjectDisposedException, system.threading.AbandonedMutexException, system.security.SecurityException {
         if (classType == null)
             throw new UnsupportedOperationException("classType is null.");
         try {
@@ -195,7 +195,7 @@ public class FilterableAttribute extends Attribute  {
         }
     }
 
-    public static boolean IsTypeFilterable(NetType type) throws Throwable, system.ArgumentNullException, system.ObjectDisposedException, system.threading.AbandonedMutexException, system.ArgumentException, system.ArgumentOutOfRangeException, system.InvalidOperationException, system.TypeLoadException, system.security.SecurityException, system.MissingMethodException, system.reflection.TargetInvocationException {
+    public static boolean IsTypeFilterable(NetType type) throws Throwable, system.ArgumentNullException, system.ObjectDisposedException, system.threading.AbandonedMutexException, system.ArgumentException, system.InvalidOperationException, system.security.SecurityException, system.MissingMethodException, system.reflection.TargetInvocationException, system.ArgumentOutOfRangeException {
         if (classType == null)
             throw new UnsupportedOperationException("classType is null.");
         try {

@@ -1,7 +1,7 @@
 /*
  *  MIT License
  *
- *  Copyright (c) 2024 MASES s.r.l.
+ *  Copyright (c) 2020-2025 MASES s.r.l.
  *
  *  Permission is hereby granted, free of charge, to any person obtaining a copy
  *  of this software and associated documentation files (the "Software"), to deal
@@ -180,7 +180,7 @@ public class WorkflowTheme extends NetObject implements system.IDisposable, Auto
         }
     }
 
-    public ActivityDesignerTheme GetDesignerTheme(ActivityDesigner designer) throws Throwable, system.ArgumentNullException, system.collections.generic.KeyNotFoundException, system.ArgumentException, system.ArgumentOutOfRangeException, system.InvalidOperationException, system.security.SecurityException, system.MissingMethodException, system.reflection.TargetInvocationException, system.ObjectDisposedException, system.threading.AbandonedMutexException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.IndexOutOfRangeException, system.NotSupportedException, system.xml.XmlException, system.FormatException, system.globalization.CultureNotFoundException, system.configuration.ConfigurationErrorsException, system.OutOfMemoryException, system.NullReferenceException, system.InvalidCastException, system.workflow.componentmodel.serialization.WorkflowMarkupSerializationException, system.reflection.AmbiguousMatchException {
+    public ActivityDesignerTheme GetDesignerTheme(ActivityDesigner designer) throws Throwable, system.ArgumentNullException, system.collections.generic.KeyNotFoundException, system.ArgumentException, system.InvalidOperationException, system.security.SecurityException, system.ObjectDisposedException, system.ArgumentOutOfRangeException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.FormatException, system.IndexOutOfRangeException, system.NotSupportedException, system.xml.XmlException, system.globalization.CultureNotFoundException, system.configuration.ConfigurationErrorsException, system.OutOfMemoryException, system.NullReferenceException, system.InvalidCastException, system.workflow.componentmodel.serialization.WorkflowMarkupSerializationException, system.reflection.AmbiguousMatchException, system.MissingMethodException {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
@@ -256,7 +256,7 @@ public class WorkflowTheme extends NetObject implements system.IDisposable, Auto
         }
     }
 
-    public static void SaveThemeSettingToRegistry() throws Throwable, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.NotImplementedException, system.security.SecurityException, system.io.FileNotFoundException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.UnauthorizedAccessException, system.io.IOException, system.PlatformNotSupportedException, system.collections.generic.KeyNotFoundException, system.configuration.ConfigurationErrorsException, system.FormatException, system.MulticastNotSupportedException, system.NullReferenceException, system.InvalidCastException, system.workflow.componentmodel.serialization.WorkflowMarkupSerializationException, system.NotSupportedException, system.MissingMethodException, system.runtime.interopservices.ExternalException {
+    public static void SaveThemeSettingToRegistry() throws Throwable, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.NotImplementedException, system.security.SecurityException, system.io.FileNotFoundException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.UnauthorizedAccessException, system.io.IOException, system.PlatformNotSupportedException, system.collections.generic.KeyNotFoundException, system.configuration.ConfigurationErrorsException, system.FormatException, system.MulticastNotSupportedException, system.NullReferenceException, system.InvalidCastException, system.workflow.componentmodel.serialization.WorkflowMarkupSerializationException, system.NotSupportedException, system.MissingMethodException, system.ObjectDisposedException, system.runtime.interopservices.ExternalException {
         if (classType == null)
             throw new UnsupportedOperationException("classType is null.");
         try {
@@ -453,7 +453,7 @@ public class WorkflowTheme extends NetObject implements system.IDisposable, Auto
         }
     }
 
-    public AmbientTheme getAmbientTheme() throws Throwable, system.ArgumentNullException, system.collections.generic.KeyNotFoundException, system.ArgumentException, system.ArgumentOutOfRangeException, system.InvalidOperationException, system.security.SecurityException, system.MissingMethodException, system.reflection.TargetInvocationException, system.ObjectDisposedException, system.threading.AbandonedMutexException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.IndexOutOfRangeException, system.NotSupportedException, system.xml.XmlException, system.FormatException, system.globalization.CultureNotFoundException, system.configuration.ConfigurationErrorsException, system.OutOfMemoryException, system.NullReferenceException, system.InvalidCastException, system.workflow.componentmodel.serialization.WorkflowMarkupSerializationException, system.reflection.AmbiguousMatchException {
+    public AmbientTheme getAmbientTheme() throws Throwable, system.ArgumentNullException, system.collections.generic.KeyNotFoundException, system.ArgumentException, system.InvalidOperationException, system.security.SecurityException, system.ObjectDisposedException, system.ArgumentOutOfRangeException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.FormatException, system.IndexOutOfRangeException, system.NotSupportedException, system.xml.XmlException, system.globalization.CultureNotFoundException, system.configuration.ConfigurationErrorsException, system.OutOfMemoryException, system.NullReferenceException, system.InvalidCastException, system.workflow.componentmodel.serialization.WorkflowMarkupSerializationException, system.reflection.AmbiguousMatchException, system.MissingMethodException {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {

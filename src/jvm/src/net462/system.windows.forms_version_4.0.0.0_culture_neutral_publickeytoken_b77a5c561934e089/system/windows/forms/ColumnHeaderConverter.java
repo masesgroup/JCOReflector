@@ -1,7 +1,7 @@
 /*
  *  MIT License
  *
- *  Copyright (c) 2024 MASES s.r.l.
+ *  Copyright (c) 2020-2025 MASES s.r.l.
  *
  *  Permission is hereby granted, free of charge, to any person obtaining a copy
  *  of this software and associated documentation files (the "Software"), to deal
@@ -173,7 +173,7 @@ public class ColumnHeaderConverter extends ExpandableObjectConverter  {
         }
     }
 
-    public NetObject ConvertTo(ITypeDescriptorContext context, CultureInfo culture, NetObject value, NetType destinationType) throws Throwable, system.ArgumentNullException, system.ObjectDisposedException, system.threading.AbandonedMutexException, system.ArgumentException, system.ArgumentOutOfRangeException, system.InvalidOperationException, system.security.SecurityException, system.MissingMethodException, system.reflection.TargetInvocationException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.AccessViolationException, system.NotSupportedException {
+    public NetObject ConvertTo(ITypeDescriptorContext context, CultureInfo culture, NetObject value, NetType destinationType) throws Throwable, system.ArgumentNullException, system.ObjectDisposedException, system.threading.AbandonedMutexException, system.ArgumentException, system.InvalidOperationException, system.security.SecurityException, system.ArgumentOutOfRangeException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.AccessViolationException, system.NotSupportedException {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {

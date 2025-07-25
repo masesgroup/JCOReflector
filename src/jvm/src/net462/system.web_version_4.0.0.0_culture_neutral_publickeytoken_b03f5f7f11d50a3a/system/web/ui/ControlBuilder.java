@@ -1,7 +1,7 @@
 /*
  *  MIT License
  *
- *  Copyright (c) 2024 MASES s.r.l.
+ *  Copyright (c) 2020-2025 MASES s.r.l.
  *
  *  Permission is hereby granted, free of charge, to any person obtaining a copy
  *  of this software and associated documentation files (the "Software"), to deal
@@ -215,7 +215,7 @@ public class ControlBuilder extends NetObject  {
         }
     }
 
-    public NetObject BuildObject() throws Throwable, system.ArgumentNullException, system.ArgumentException, system.ArgumentOutOfRangeException, system.InvalidOperationException, system.security.SecurityException, system.ObjectDisposedException, system.NotSupportedException, system.MissingMethodException, system.FormatException, system.NotImplementedException, system.resources.MissingManifestResourceException, system.IndexOutOfRangeException, system.NullReferenceException, system.TypeLoadException, system.web.HttpException, system.MulticastNotSupportedException {
+    public NetObject BuildObject() throws Throwable, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.FormatException, system.ArgumentException, system.NotSupportedException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotImplementedException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.IndexOutOfRangeException, system.NullReferenceException, system.TypeLoadException, system.web.HttpException, system.MulticastNotSupportedException {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {

@@ -1,7 +1,7 @@
 /*
  *  MIT License
  *
- *  Copyright (c) 2024 MASES s.r.l.
+ *  Copyright (c) 2020-2025 MASES s.r.l.
  *
  *  Permission is hereby granted, free of charge, to any person obtaining a copy
  *  of this software and associated documentation files (the "Software"), to deal
@@ -158,7 +158,7 @@ public class ErrorProvider extends Component implements system.componentmodel.IS
 
     // Constructors section
     
-    public ErrorProvider() throws Throwable, system.ArgumentException, system.NotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.IndexOutOfRangeException, system.ArgumentNullException, system.FormatException, system.OverflowException, system.componentmodel.Win32Exception, system.ObjectDisposedException, system.MulticastNotSupportedException, system.OutOfMemoryException {
+    public ErrorProvider() throws Throwable, system.ArgumentException, system.NotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.IndexOutOfRangeException, system.MulticastNotSupportedException, system.ArgumentNullException, system.OutOfMemoryException, system.componentmodel.Win32Exception {
         try {
             // add reference to assemblyName.dll file
             addReference(JCOReflector.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
@@ -168,7 +168,7 @@ public class ErrorProvider extends Component implements system.componentmodel.IS
         }
     }
 
-    public ErrorProvider(IContainer container) throws Throwable, system.NotSupportedException, system.ArgumentException, system.ArgumentOutOfRangeException, system.InvalidOperationException, system.PlatformNotSupportedException, system.IndexOutOfRangeException, system.ArgumentNullException, system.FormatException, system.OverflowException, system.componentmodel.Win32Exception, system.ObjectDisposedException, system.MulticastNotSupportedException, system.OutOfMemoryException, system.RankException, system.ArrayTypeMismatchException {
+    public ErrorProvider(IContainer container) throws Throwable, system.NotSupportedException, system.ArgumentException, system.ArgumentOutOfRangeException, system.InvalidOperationException, system.PlatformNotSupportedException, system.IndexOutOfRangeException, system.MulticastNotSupportedException, system.ArgumentNullException, system.OutOfMemoryException, system.RankException, system.ArrayTypeMismatchException {
         try {
             // add reference to assemblyName.dll file
             addReference(JCOReflector.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
@@ -178,7 +178,7 @@ public class ErrorProvider extends Component implements system.componentmodel.IS
         }
     }
 
-    public ErrorProvider(ContainerControl parentControl) throws Throwable, system.NotSupportedException, system.ArgumentException, system.ArgumentOutOfRangeException, system.InvalidOperationException, system.PlatformNotSupportedException, system.IndexOutOfRangeException, system.ArgumentNullException, system.FormatException, system.OverflowException, system.componentmodel.Win32Exception, system.ObjectDisposedException, system.MulticastNotSupportedException, system.OutOfMemoryException, system.RankException, system.ArrayTypeMismatchException, system.globalization.CultureNotFoundException {
+    public ErrorProvider(ContainerControl parentControl) throws Throwable, system.NotSupportedException, system.ArgumentException, system.ArgumentOutOfRangeException, system.InvalidOperationException, system.PlatformNotSupportedException, system.IndexOutOfRangeException, system.MulticastNotSupportedException, system.ArgumentNullException, system.OutOfMemoryException, system.RankException, system.ArrayTypeMismatchException, system.globalization.CultureNotFoundException, system.FormatException {
         try {
             // add reference to assemblyName.dll file
             addReference(JCOReflector.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
@@ -335,7 +335,7 @@ public class ErrorProvider extends Component implements system.componentmodel.IS
         }
     }
 
-    public void setRightToLeft(boolean RightToLeft) throws Throwable, system.NotSupportedException, system.ArgumentException, system.ArgumentNullException, system.ObjectDisposedException, system.PlatformNotSupportedException, system.InvalidOperationException, system.FormatException, system.ArgumentOutOfRangeException, system.ArrayTypeMismatchException, system.OverflowException, system.AccessViolationException, system.componentmodel.Win32Exception, system.OutOfMemoryException {
+    public void setRightToLeft(boolean RightToLeft) throws Throwable, system.NotSupportedException, system.ArgumentException, system.ArgumentNullException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.IndexOutOfRangeException, system.OverflowException, system.componentmodel.Win32Exception, system.ObjectDisposedException, system.FormatException, system.ArrayTypeMismatchException, system.AccessViolationException, system.OutOfMemoryException {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
@@ -365,7 +365,7 @@ public class ErrorProvider extends Component implements system.componentmodel.IS
         }
     }
 
-    public Icon getIcon() throws Throwable {
+    public Icon getIcon() throws Throwable, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ArgumentException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.IndexOutOfRangeException, system.FormatException, system.OverflowException, system.componentmodel.Win32Exception {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
@@ -376,7 +376,7 @@ public class ErrorProvider extends Component implements system.componentmodel.IS
         }
     }
 
-    public void setIcon(Icon Icon) throws Throwable, system.ArgumentException, system.NotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.IndexOutOfRangeException, system.PlatformNotSupportedException, system.ObjectDisposedException, system.FormatException, system.OverflowException, system.AccessViolationException, system.OutOfMemoryException, system.componentmodel.Win32Exception {
+    public void setIcon(Icon Icon) throws Throwable, system.ArgumentException, system.NotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.IndexOutOfRangeException, system.PlatformNotSupportedException, system.OverflowException, system.componentmodel.Win32Exception, system.ObjectDisposedException, system.FormatException, system.AccessViolationException, system.OutOfMemoryException {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
@@ -480,7 +480,7 @@ public class ErrorProvider extends Component implements system.componentmodel.IS
         }
     }
 
-    public void setBlinkStyle(ErrorBlinkStyle BlinkStyle) throws Throwable, system.ArgumentException, system.InvalidOperationException, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.PlatformNotSupportedException, system.FormatException, system.componentmodel.InvalidEnumArgumentException, system.NotSupportedException, system.componentmodel.Win32Exception, system.OutOfMemoryException, system.ObjectDisposedException, system.OverflowException, system.AccessViolationException, system.MulticastNotSupportedException {
+    public void setBlinkStyle(ErrorBlinkStyle BlinkStyle) throws Throwable, system.ArgumentException, system.InvalidOperationException, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.PlatformNotSupportedException, system.FormatException, system.componentmodel.InvalidEnumArgumentException, system.NotSupportedException, system.componentmodel.Win32Exception, system.OutOfMemoryException, system.AccessViolationException, system.MulticastNotSupportedException {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {

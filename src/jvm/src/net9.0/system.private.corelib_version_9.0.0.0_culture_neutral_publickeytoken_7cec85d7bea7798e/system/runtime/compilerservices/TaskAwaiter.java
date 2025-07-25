@@ -1,7 +1,7 @@
 /*
  *  MIT License
  *
- *  Copyright (c) 2024 MASES s.r.l.
+ *  Copyright (c) 2020-2025 MASES s.r.l.
  *
  *  Permission is hereby granted, free of charge, to any person obtaining a copy
  *  of this software and associated documentation files (the "Software"), to deal
@@ -155,7 +155,7 @@ public class TaskAwaiter extends ValueType  {
     
     // Methods section
     
-    public void GetResult() throws Throwable, system.PlatformNotSupportedException, system.InvalidOperationException, system.threading.tasks.TaskSchedulerException, system.ArgumentOutOfRangeException, system.NullReferenceException, system.ObjectDisposedException, system.OperationCanceledException, system.threading.tasks.TaskCanceledException, system.IndexOutOfRangeException, system.NotSupportedException, system.ArgumentNullException, system.ArgumentException, system.AggregateException {
+    public void GetResult() throws Throwable, system.PlatformNotSupportedException, system.InvalidOperationException, system.threading.tasks.TaskSchedulerException, system.ArgumentOutOfRangeException, system.NotSupportedException, system.OutOfMemoryException, system.ObjectDisposedException, system.OperationCanceledException, system.threading.tasks.TaskCanceledException, system.IndexOutOfRangeException, system.ArgumentNullException, system.ArgumentException, system.AggregateException {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {

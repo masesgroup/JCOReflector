@@ -1,7 +1,7 @@
 /*
  *  MIT License
  *
- *  Copyright (c) 2024 MASES s.r.l.
+ *  Copyright (c) 2020-2025 MASES s.r.l.
  *
  *  Permission is hereby granted, free of charge, to any person obtaining a copy
  *  of this software and associated documentation files (the "Software"), to deal
@@ -170,7 +170,7 @@ public class ControlBindingsCollection extends BindingsCollection  {
     
     // Methods section
     
-    public system.windows.forms.Binding Add(java.lang.String propertyName, NetObject dataSource, java.lang.String dataMember) throws Throwable, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.ArgumentException, system.NotSupportedException, system.NullReferenceException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ObjectDisposedException, system.InvalidOperationException, system.IndexOutOfRangeException, system.MulticastNotSupportedException, system.RankException, system.TypeLoadException, system.FormatException {
+    public system.windows.forms.Binding Add(java.lang.String propertyName, NetObject dataSource, java.lang.String dataMember) throws Throwable, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.ArgumentException, system.InvalidOperationException, system.NotSupportedException, system.NullReferenceException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ObjectDisposedException, system.IndexOutOfRangeException, system.MulticastNotSupportedException, system.RankException, system.TypeLoadException, system.FormatException {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
@@ -181,7 +181,7 @@ public class ControlBindingsCollection extends BindingsCollection  {
         }
     }
 
-    public system.windows.forms.Binding Add(java.lang.String propertyName, NetObject dataSource, java.lang.String dataMember, boolean formattingEnabled) throws Throwable, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.ArgumentException, system.NotSupportedException, system.NullReferenceException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ObjectDisposedException, system.InvalidOperationException, system.IndexOutOfRangeException, system.MulticastNotSupportedException, system.RankException, system.TypeLoadException, system.FormatException {
+    public system.windows.forms.Binding Add(java.lang.String propertyName, NetObject dataSource, java.lang.String dataMember, boolean formattingEnabled) throws Throwable, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.ArgumentException, system.InvalidOperationException, system.NotSupportedException, system.NullReferenceException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ObjectDisposedException, system.IndexOutOfRangeException, system.MulticastNotSupportedException, system.RankException, system.TypeLoadException, system.FormatException {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
@@ -192,7 +192,7 @@ public class ControlBindingsCollection extends BindingsCollection  {
         }
     }
 
-    public system.windows.forms.Binding Add(java.lang.String propertyName, NetObject dataSource, java.lang.String dataMember, boolean formattingEnabled, DataSourceUpdateMode updateMode) throws Throwable, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.ArgumentException, system.NotSupportedException, system.NullReferenceException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ObjectDisposedException, system.InvalidOperationException, system.IndexOutOfRangeException, system.MulticastNotSupportedException, system.RankException, system.TypeLoadException, system.FormatException {
+    public system.windows.forms.Binding Add(java.lang.String propertyName, NetObject dataSource, java.lang.String dataMember, boolean formattingEnabled, DataSourceUpdateMode updateMode) throws Throwable, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.ArgumentException, system.InvalidOperationException, system.NotSupportedException, system.NullReferenceException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ObjectDisposedException, system.IndexOutOfRangeException, system.MulticastNotSupportedException, system.RankException, system.TypeLoadException, system.FormatException {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
@@ -203,7 +203,7 @@ public class ControlBindingsCollection extends BindingsCollection  {
         }
     }
 
-    public system.windows.forms.Binding Add(java.lang.String propertyName, NetObject dataSource, java.lang.String dataMember, boolean formattingEnabled, DataSourceUpdateMode updateMode, NetObject nullValue) throws Throwable, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.ArgumentException, system.NotSupportedException, system.NullReferenceException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ObjectDisposedException, system.InvalidOperationException, system.IndexOutOfRangeException, system.MulticastNotSupportedException, system.RankException, system.TypeLoadException, system.FormatException {
+    public system.windows.forms.Binding Add(java.lang.String propertyName, NetObject dataSource, java.lang.String dataMember, boolean formattingEnabled, DataSourceUpdateMode updateMode, NetObject nullValue) throws Throwable, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.ArgumentException, system.InvalidOperationException, system.NotSupportedException, system.NullReferenceException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ObjectDisposedException, system.IndexOutOfRangeException, system.MulticastNotSupportedException, system.RankException, system.TypeLoadException, system.FormatException {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
@@ -214,7 +214,7 @@ public class ControlBindingsCollection extends BindingsCollection  {
         }
     }
 
-    public system.windows.forms.Binding Add(java.lang.String propertyName, NetObject dataSource, java.lang.String dataMember, boolean formattingEnabled, DataSourceUpdateMode updateMode, NetObject nullValue, java.lang.String formatString) throws Throwable, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.ArgumentException, system.NotSupportedException, system.NullReferenceException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ObjectDisposedException, system.InvalidOperationException, system.IndexOutOfRangeException, system.MulticastNotSupportedException, system.RankException, system.TypeLoadException, system.FormatException {
+    public system.windows.forms.Binding Add(java.lang.String propertyName, NetObject dataSource, java.lang.String dataMember, boolean formattingEnabled, DataSourceUpdateMode updateMode, NetObject nullValue, java.lang.String formatString) throws Throwable, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.ArgumentException, system.InvalidOperationException, system.NotSupportedException, system.NullReferenceException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ObjectDisposedException, system.IndexOutOfRangeException, system.MulticastNotSupportedException, system.RankException, system.TypeLoadException, system.FormatException {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
@@ -225,7 +225,7 @@ public class ControlBindingsCollection extends BindingsCollection  {
         }
     }
 
-    public system.windows.forms.Binding Add(java.lang.String propertyName, NetObject dataSource, java.lang.String dataMember, boolean formattingEnabled, DataSourceUpdateMode updateMode, NetObject nullValue, java.lang.String formatString, IFormatProvider formatInfo) throws Throwable, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.ArgumentException, system.NotSupportedException, system.NullReferenceException, system.NotImplementedException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.FormatException, system.MulticastNotSupportedException, system.IndexOutOfRangeException, system.RankException, system.TypeLoadException {
+    public system.windows.forms.Binding Add(java.lang.String propertyName, NetObject dataSource, java.lang.String dataMember, boolean formattingEnabled, DataSourceUpdateMode updateMode, NetObject nullValue, java.lang.String formatString, IFormatProvider formatInfo) throws Throwable, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.ArgumentException, system.InvalidOperationException, system.NotSupportedException, system.NullReferenceException, system.NotImplementedException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.FormatException, system.MulticastNotSupportedException, system.IndexOutOfRangeException, system.RankException, system.TypeLoadException {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {

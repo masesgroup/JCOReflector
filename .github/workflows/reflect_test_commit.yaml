@@ -18,6 +18,11 @@ on:
         required: false
         default: true
         type: boolean
+      GeneratePR:
+        description: 'Generate the PR at the end'
+        required: true
+        default: false
+        type: boolean
 
 # This workflow contains two jobs called "check" and "build_windows"
 jobs:
@@ -750,12 +755,13 @@ jobs:
           Compress-Archive -Path .\bin\net462\* -DestinationPath .\bin\net462.zip
 
       - name: Extract commit SHA
+        if: ${{ inputs.GeneratePR == true }}
         run: |
           echo "GITHUB_COMMIT_MESSAGE=$(echo $GITHUB_SHA | cut -c 1-7)" >> $GITHUB_ENV
         shell: bash
 
       - name: Request a PR to commit changes
-        if: ${{ github.repository_owner == 'masesgroup' }} # do not push any changes outside main repo or GeneratePR is false
+        if: ${{ inputs.GeneratePR == true }}
         uses: peter-evans/create-pull-request@v7
         with:
           branch-suffix: short-commit-hash
@@ -765,7 +771,7 @@ jobs:
             .\src\jvm\src\*.list
             .\src\jvm\src\*.java
           commit-message: Update JVM after commit ${{ env.GITHUB_COMMIT_MESSAGE }}
-          title: Changes by GitHub action
+          title: Update JVM after commit ${{ env.GITHUB_COMMIT_MESSAGE }}
           body: Automated changes by GitHub action
           reviewers: masesdevelopers
           assignees: masesdevelopers

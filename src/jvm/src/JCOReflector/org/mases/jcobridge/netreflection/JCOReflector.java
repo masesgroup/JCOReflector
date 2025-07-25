@@ -68,7 +68,7 @@ public class JCOReflector {
      * 
      * @return the ScopeOn value
      */
-    public static synchronized boolean getScopeOn() {
+    public static synchronized String getScopeOn() {
         return _scopeOn;
     }
 
@@ -86,7 +86,7 @@ public class JCOReflector {
      * 
      * @return the ScopeOnVersion value
      */
-    public static synchronized boolean getScopeOnVersion() {
+    public static synchronized String getScopeOnVersion() {
         return _scopeOnVersion;
     }
 

@@ -1,7 +1,7 @@
 /*
  *  MIT License
  *
- *  Copyright (c) 2021 MASES s.r.l.
+ *  Copyright (c) 2020-2025 MASES s.r.l.
  *
  *  Permission is hereby granted, free of charge, to any person obtaining a copy
  *  of this software and associated documentation files (the "Software"), to deal
@@ -39,6 +39,8 @@ import java.lang.reflect.*;
  * Main class to manage {@link JCOReflector} features
  */
 public class JCOReflector {
+    static String _scopeOn = "JCOReflector";
+    static String _scopeOnVersion = "1.16.0.0";
     static String _runtimeFolder = null;
     static boolean _isLogging = false;
     static String _loggingFilename = "JCOBridge.log";
@@ -59,6 +61,42 @@ public class JCOReflector {
             System.exit(1);
         }
         return null;
+    }
+
+    /**
+     * Return the ScopeOn value
+     * 
+     * @return the ScopeOn value
+     */
+    public static synchronized boolean getScopeOn() {
+        return _scopeOn;
+    }
+
+    /**
+     * Set the ScopeOn value
+     * 
+     * @param scopeOn the ScopeOn value
+     */
+    public static synchronized void setScopeOn(String scopeOn) {
+        _scopeOn = scopeOn;
+    }
+
+    /**
+     * Return the ScopeOnVersion value
+     * 
+     * @return the ScopeOnVersion value
+     */
+    public static synchronized boolean getScopeOnVersion() {
+        return _scopeOnVersion;
+    }
+
+    /**
+     * Set the ScopeOnVersion value
+     * 
+     * @param scopeOnVersion the ScopeOnVersion value
+     */
+    public static synchronized void setScopeOnVersion(String scopeOnVersion) {
+        _scopeOnVersion = scopeOnVersion;
     }
 
     /**
@@ -428,6 +466,10 @@ public class JCOReflector {
                 initTempRT();
             } else if (string.toLowerCase() == "-path") {
                 registerPath(args[index++]);
+            } else if (string.toLowerCase() == "-scopeon") {
+                setScopeOn(args[index++]);
+            } else if (string.toLowerCase() == "-scopeonversion") {
+                setScopeOnVersion(args[index++]);
             }
         }
     }

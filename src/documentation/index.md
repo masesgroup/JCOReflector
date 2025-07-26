@@ -42,17 +42,26 @@ JCOReflector uses [JCOBridge](https://www.jcobridge.com), and its [features](htt
   * [JVM](https://en.wikipedia.org/wiki/Java_virtual_machine) and [CLR, or CoreCLR,](https://en.wikipedia.org/wiki/Common_Language_Runtime) runs in the same process, but are insulated from each other;
   * JCOBridge does not make any code injection into CLR or JVM;
   * JCOBridge does not use any other communication mechanism than JNI;
-  * JVM inherently inherits the cyber-security levels of running .NET (CLR); 
-* **Direct access the CLR from any JVM application**: 
+  * JVM inherently inherits the cyber-security levels of running .NET (CLR);
+* **Direct access the CLR from any JVM application**:
   * No need to learn new APIs: we try to expose the same .NET APIs in Java style;
   * No extra validation cycle: bug fix, improvements, new features are immediately available;
   * Documentation is shared.
 
-Have a look at the following resources:
-- [Release notes](https://www.jcobridge.com/release-notes/)
-- [Community Edition](https://www.jcobridge.com/pricing-25/)
-- [Commercial Edition](https://www.jcobridge.com/pricing-25/)
-- [![JCOBridge nuget](https://img.shields.io/nuget/v/MASES.JCOBridge)](https://www.nuget.org/packages/MASES.JCOBridge)
+[JCOBridge 2.6.*](https://www.jcobridge.com), and consequently JCOReflector, can be used for free without any obligations; you need to purchase a commercial license, or uninstall the software, if you have incomes from the product usage.
+
+### JCOBridge resources
+
+Have a look at the following JCOBridge resources:
+
+|JCOBridge | 2.5.* series | 2.6.* series |
+|:---:	|:---:	|:---:	|
+|JCOReflector | > 1.12.* series | > 1.16.* series |
+|Release notes|[Link](https://www.jcobridge.com/release-notes/)| [Link](https://www.jcobridge.com/release-notes/)|
+|Community Edition|[Conditions](https://www.jcobridge.com/pricing-25/)|[Conditions](https://www.jcobridge.com/pricing-25/)|
+|Commercial Edition|[Information](https://www.jcobridge.com/pricing-26/)|[Information](https://www.jcobridge.com/pricing-26/)|
+
+Latest release: [![JCOBridge nuget](https://img.shields.io/nuget/v/MASES.JCOBridge)](https://www.nuget.org/packages/MASES.JCOBridge)
 
 ## History of the project
 

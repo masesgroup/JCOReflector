@@ -11,7 +11,7 @@ updates:
       interval: "weekly"
       
   - package-ecosystem: maven
-    directory: "/src/java/jnet"
+    directory: "/src/jvm/src"
     schedule:
       interval: "weekly"
 

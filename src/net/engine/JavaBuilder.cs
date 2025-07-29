@@ -181,12 +181,12 @@ namespace MASES.JCOReflectorEngine
             var extraOptions = string.IsNullOrEmpty(toolExtraOptions) ? string.Empty : string.Format(" {0} ", toolExtraOptions);
             if (jdkTarget == JDKVersion.NotSet)
             {
-                await LaunchProcess(sourceFolder, Path.Combine(jdkFolder, JavaCompiler), "-cp " + jcoBridgeCp + extraOptions + " @" + Const.FileNameAndDirectory.SourceFile, timeout);
+                await LaunchProcess(sourceFolder, Path.Combine(jdkFolder, JavaCompiler), "-cp " + jcoBridgeCp + extraOptions + " @" + Const.FileNameAndDirectory.SourceFile, timeout, true);
             }
             else
             {
                 string compatibility = string.Format(" -source {0} -target {0}", (int)jdkTarget); // -bootclasspath rt{0}.jar
-                await LaunchProcess(sourceFolder, Path.Combine(jdkFolder, JavaCompiler), "-cp " + jcoBridgeCp + compatibility + extraOptions + " @" + Const.FileNameAndDirectory.SourceFile, timeout);
+                await LaunchProcess(sourceFolder, Path.Combine(jdkFolder, JavaCompiler), "-cp " + jcoBridgeCp + compatibility + extraOptions + " @" + Const.FileNameAndDirectory.SourceFile, timeout, true);
             }
             return counter;
         }
@@ -512,7 +512,7 @@ namespace MASES.JCOReflectorEngine
         static string errorData = string.Empty;
         static string outputData = string.Empty;
 
-        async static Task LaunchProcess(string workingDir, string processToLaunch, string arguments, int timeout = Timeout.Infinite)
+        async static Task LaunchProcess(string workingDir, string processToLaunch, string arguments, int timeout, bool checkForErrors = false)
         {
             DateTime dtStart = DateTime.Now;
             JobManager.AppendToConsole(LogLevel.Info, "Starting operation {0} {1} with {2} seconds of timeout at {3}.", processToLaunch, arguments, timeout, dtStart);
@@ -592,6 +592,11 @@ namespace MASES.JCOReflectorEngine
                         {
                             errorData = errorData.Replace("{", "{{").Replace("}", "}}");
                             JobManager.AppendToConsole(LogLevel.Error, errorData);
+                        }
+
+                        if (checkForErrors && (errorData.Contains(" errors") || outputData.Contains(" errors")))
+                        {
+                            throw new InvalidOperationException("Invoked process ended reporting errors.");
                         }
                     }
                 }

@@ -1,7 +1,7 @@
 /*
  *  MIT License
  *
- *  Copyright (c) 2021 MASES s.r.l.
+ *  Copyright (c) 2020-2025 MASES s.r.l.
  *
  *  Permission is hereby granted, free of charge, to any person obtaining a copy
  *  of this software and associated documentation files (the "Software"), to deal
@@ -119,6 +119,8 @@ public final class JCOBridgeInstance implements IJCEventLog {
                 try {
                     JCOReflector.writeLog("Initializing JCOBridge runtime");
                     try {
+                        JCOBridge.setScopeOn(JCOReflector.getScopeOn());
+                        JCOBridge.setScopeOnVersion(JCOReflector.getScopeOnVersion());
                         JCOBridge.Initialize(JCOReflector.getCommandLineArgs());
                     } catch (JCNativeException e) {
                         if (!e.getCLRType().contains("FallbackInTrialModeException")) {

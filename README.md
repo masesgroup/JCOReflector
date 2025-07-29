@@ -1,6 +1,6 @@
-# JCOReflector (a .NET Java wrapper)
+# JCOReflector (a .NET Java™ wrapper)
 
-JCOReflector is a comprehensive suite of libraries and tools to use Java/JVM APIs (Java, Scala, Kotlin, ...) and .NET side-by-side.
+JCOReflector is a comprehensive suite of libraries and tools to use Java™/JVM™ APIs (Java, Scala, Kotlin, ...) and .NET side-by-side.
 
 ### Libraries and Tools
 
@@ -14,7 +14,7 @@ JCOReflector is a comprehensive suite of libraries and tools to use Java/JVM API
 
 ### Pipelines
 
-![CI_WINDOWS](https://github.com/masesgroup/JCOReflector/workflows/CI_WINDOWS/badge.svg)  ![CI_LINUX](https://github.com/masesgroup/JCOReflector/workflows/CI_LINUX/badge.svg)  [![CI_DOCS](https://github.com/masesgroup/JCOReflector/actions/workflows/docs.yaml/badge.svg)](https://github.com/masesgroup/JCOReflector/actions/workflows/docs.yaml)  [![CI_MAVEN](https://github.com/masesgroup/JCOReflector/actions/workflows/maven.yaml/badge.svg)](https://github.com/masesgroup/JCOReflector/actions/workflows/maven.yaml)  ![CI_RELEASE](https://github.com/masesgroup/JCOReflector/workflows/CI_RELEASE/badge.svg)
+[![CI_REFLECT_TEST_COMMIT](https://github.com/masesgroup/JCOReflector/actions/workflows/reflect_test_commit.yaml/badge.svg)](https://github.com/masesgroup/JCOReflector/actions/workflows/reflect_test_commit.yaml)  [![CI_DOCS](https://github.com/masesgroup/JCOReflector/actions/workflows/docs.yaml/badge.svg)](https://github.com/masesgroup/JCOReflector/actions/workflows/docs.yaml)  [![CI_MAVEN](https://github.com/masesgroup/JCOReflector/actions/workflows/maven.yaml/badge.svg)](https://github.com/masesgroup/JCOReflector/actions/workflows/maven.yaml)  ![CI_RELEASE](https://github.com/masesgroup/JCOReflector/workflows/CI_RELEASE/badge.svg)
 
 ### Project disclaimer
 
@@ -24,17 +24,17 @@ Its primary scope is to support other, public or internal, MASES Group projects:
 
 The repository code and releases may contain bugs, the release cycle depends from critical discovered issues and/or enhancement requested from this or other projects.
 
-Looking for the help of experts? MASES Group can help you design, build, deploy, and manage applications mixing .NET and JVM enabled languages.
+Looking for the help of experts? MASES Group can help you design, build, deploy, and manage applications mixing .NET and JVM™ enabled languages.
 
 ---
 
 ## The project
 
-JCOReflectorEngine produces a set of **.NET wrapper for Java** as JARs that are available for download. It's simple to use: you only need to reference JCOReflector.jar in the class-path and use the .NET API within your Java projects like exposed in the example section. 
+JCOReflectorEngine produces a set of **.NET wrapper for Java™** as JARs that are available for download. It's simple to use: you only need to reference JCOReflector.jar in the class-path and use the .NET API within your Java™ projects like exposed in the example section. 
 
-The core of the project is the innovative JCOReflector, a reflection engine which automatically writes Java classes using .NET class reflection.
+The core of the project is the innovative JCOReflector, a reflection engine which automatically writes Java™ classes using .NET class reflection.
 JCOReflector can be used to reflects any .NET assembly (even assembly outside the Microsoft ones) into JARs.
-The generated wrapper classes are based on the powerful [JCOBridge](https://www.jcobridge.com) engine and extends its use to simplify the use of .NET from Java(JVM).
+The generated wrapper classes are based on the powerful [JCOBridge](https://www.jcobridge.com) engine and extends its use to simplify the use of .NET from Java™(JVM™).
 It was created internally from us to support our customers, now we made it available for everyone.
 
 This project adheres to the Contributor [Covenant code of conduct](CODE_OF_CONDUCT.md). By participating, you are expected to uphold this code. Please report unacceptable behavior to coc_reporting@masesgroup.com.
@@ -43,25 +43,34 @@ This project adheres to the Contributor [Covenant code of conduct](CODE_OF_CONDU
 
 JCOReflector uses [JCOBridge](https://www.jcobridge.com), and its [features](https://www.jcobridge.com/features/), to obtain many benefits:
 * **Cyber-security**: 
-  * [JVM](https://en.wikipedia.org/wiki/Java_virtual_machine) and [CLR, or CoreCLR,](https://en.wikipedia.org/wiki/Common_Language_Runtime) runs in the same process, but are insulated from each other;
-  * JCOBridge does not make any code injection into CLR or JVM;
+  * [JVM™](https://en.wikipedia.org/wiki/Java_virtual_machine) and [CLR, or CoreCLR,](https://en.wikipedia.org/wiki/Common_Language_Runtime) runs in the same process, but are insulated from each other;
+  * JCOBridge does not make any code injection into CLR or JVM™;
   * JCOBridge does not use any other communication mechanism than JNI;
-  * JVM inherently inherits the cyber-security levels of running .NET (CLR); 
-* **Direct access the CLR from any JVM application**: 
-  * No need to learn new APIs: we try to expose the same .NET APIs in Java style;
+  * JVM™ inherently inherits the cyber-security levels of running .NET (CLR);
+* **Direct access the CLR from any JVM™ application**:
+  * No need to learn new APIs: we try to expose the same .NET APIs in Java™ style;
   * No extra validation cycle: bug fix, improvements, new features are immediately available;
   * Documentation is shared.
 
-Have a look at the following resources:
-- [Release notes](https://www.jcobridge.com/release-notes/)
-- [Community Edition](https://www.jcobridge.com/pricing-25/)
-- [Commercial Edition](https://www.jcobridge.com/pricing-25/)
-- [![JCOBridge nuget](https://img.shields.io/nuget/v/MASES.JCOBridge)](https://www.nuget.org/packages/MASES.JCOBridge)
+[JCOBridge 2.6.*](https://www.jcobridge.com) can be used for free without any obligations; you need to purchase a commercial license, or uninstall the software, if you have direct or indirect incomes from the product usage.
+
+### JCOBridge resources
+
+Have a look at the following JCOBridge resources:
+
+|JCOBridge | 2.5.* series | 2.6.* series |
+|:---:	|:---:	|:---:	|
+|JCOReflector | > 1.12.* series | > 1.16.* series |
+|Release notes|[Link](https://www.jcobridge.com/release-notes/)| [Link](https://www.jcobridge.com/release-notes/)|
+|Community Edition|[Conditions](https://www.jcobridge.com/pricing-25/)|[Conditions](https://www.jcobridge.com/pricing-25/)|
+|Commercial Edition|[Information](https://www.jcobridge.com/pricing-26/)|[Information](https://www.jcobridge.com/pricing-26/)|
+
+Latest release: [![JCOBridge nuget](https://img.shields.io/nuget/v/MASES.JCOBridge)](https://www.nuget.org/packages/MASES.JCOBridge)
 
 ## History of the project
 
-This project started in 2019 with the aims to create a set of Java (JVM) classes which mimic .NET (Framework/6/8) conterparts, in May 2020 the first commit in GitHub.
-Using this project it is possible to use .NET API in Java and all JVM enabled languages (Scala, Kotlin, and so on).
+This project started in 2019 with the aims to create a set of Java™ (JVM™) classes which mimic .NET (Framework/6/8) conterparts, in May 2020 the first commit in GitHub.
+Using this project it is possible to use .NET API in Java™ and all JVM™ enabled languages (Scala, Kotlin, and so on).
 The final output of JCOReflector are JARs.
 At its first stages no JARs was available: only the JCOBridge engine, the graphical UI that helps to manages reflection and the operations needed to finally build JARs was relased.
 Starting from recent relases automated continous integration and verification process are in places, so the produced JARs are directly available for download and is no more needed to manually rebuils JARs before use it. 
@@ -158,11 +167,11 @@ object HelloIterator {
 }
 ```
 
-### Whats in .NET for Java?
+### Whats in .NET for Java™?
 
-From the point of view of .NET it is very simple to use Java classes and it is not necessary to have some kind of reflection classes:
-  1. [JCOBridge](https://www.jcobridge.com) is able to access and execute directly within a JVM using C# code, from C# it is possible to execute directly Java code with a similar syntax: look at the examples in [JCOBridge-Examples](https://github.com/masesgroup/JCOBridge-Examples).
-  2. The project [JNet](https://github.com/masesgroup/JNet) uses [JCOBridge](https://www.jcobridge.com): a developer has some ready made Java classes to be used from .NET.
+From the point of view of .NET it is very simple to use Java™ classes and it is not necessary to have some kind of reflection classes:
+  1. [JCOBridge](https://www.jcobridge.com) is able to access and execute directly within a JVM™ using C# code, from C# it is possible to execute directly Java™ code with a similar syntax: look at the examples in [JCOBridge-Examples](https://github.com/masesgroup/JCOBridge-Examples).
+  2. The project [JNet](https://github.com/masesgroup/JNet) uses [JCOBridge](https://www.jcobridge.com): a developer has some ready made Java™ classes to be used from .NET.
 
 ## Current state
 
@@ -181,9 +190,9 @@ The reflector executables, available for both Framework and CoreCLR, is limited 
 - Arrays: partial support
 - Inheritance
 - Out/Ref parameters
-- Native types managed from JCOBridge are directly mapped to native Java type
+- Native types managed from JCOBridge are directly mapped to native Java™ type
 - Base types (System.Object, System.Type, System.Enum, System.Exception, System.Collections.ArrayList) are mapped to specific type into a support library (**JCOReflector.jar**)
-- Management of thrown declaration as expected in Java: a generic Throwable is used with all exceptions found in code (used the algorithm in https://stackoverflow.com/questions/986180/how-can-i-determine-which-exceptions-can-be-thrown-by-a-given-method and code from https://docs.microsoft.com/en-us/archive/blogs/haibo_luo/)
+- Management of thrown declaration as expected in Java™: a generic Throwable is used with all exceptions found in code (used the algorithm in https://stackoverflow.com/questions/986180/how-can-i-determine-which-exceptions-can-be-thrown-by-a-given-method and code from https://docs.microsoft.com/en-us/archive/blogs/haibo_luo/)
 - Documentation
 
 ### Not implemented in reflector:
@@ -195,8 +204,8 @@ The reflector executables, available for both Framework and CoreCLR, is limited 
 
 ### Limitations
 
-C# and Java are different languages. The reflection process cannot reflects into Java some features available on C#: an example are properties where get/set is automatically choosed from C# compiler
-Other limitations comes from some differences between the two engines (CLR and JVM).
+C# and Java™ are different languages. The reflection process cannot reflects into Java™ some features available on C#: an example are properties where get/set is automatically choosed from C# compiler
+Other limitations comes from some differences between the two engines (CLR and JVM™).
 In all cases [JCOBridge](https://www.jcobridge.com) superside these limitations, but manual operations shall be made: do not change the reflected classes, override them in your code.
 
 ## How to use the generator tool (JCOReflector)

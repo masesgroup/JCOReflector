@@ -18,6 +18,11 @@ on:
         required: false
         default: true
         type: boolean
+      GeneratePR:
+        description: 'Generate the PR at the end'
+        required: true
+        default: false
+        type: boolean
 
 # This workflow contains two jobs called "check" and "build_windows"
 jobs:
@@ -225,7 +230,7 @@ jobs:
     runs-on: windows-latest
     env:
       JCOBRIDGE_SCOPEDON: JCOReflector|1.0.0
-      JCOBRIDGE_LicensePath: ${{ secrets.JCOBRIDGE_ENCODED_2_5_21 }}
+      JCOBRIDGE_LicensePath: ${{ secrets.JCOBRIDGE_ENCODED_2_6_0 }}
     
     steps:
       # Runs a set of commands using the runners shell
@@ -259,7 +264,7 @@ jobs:
       - name: Prepare extra argument
         if: matrix.framework == 'net9.0'
         shell: bash
-        run: echo "EXTRA_ARGUMENT=--CoreCLRApp:Microsoft.NET9.App" >> $GITHUB_ENV
+        run: echo "EXTRA_ARGUMENT=--CoreCLRVersion:9" >> $GITHUB_ENV
 
       - run: java -cp "./bin/${{ matrix.framework }}/JCOReflector.jar;./tests/jvm/java/src/" mscorlib.HelloLock ${{ env.EXTRA_ARGUMENT }}
         continue-on-error: true
@@ -313,7 +318,7 @@ jobs:
     runs-on: windows-latest
     env:
       JCOBRIDGE_SCOPEDON: JCOReflector|1.0.0
-      JCOBRIDGE_LicensePath: ${{ secrets.JCOBRIDGE_ENCODED_2_5_21 }}
+      JCOBRIDGE_LicensePath: ${{ secrets.JCOBRIDGE_ENCODED_2_6_0 }}
       
     steps:
       # Runs a set of commands using the runners shell
@@ -344,7 +349,7 @@ jobs:
       - name: Prepare extra argument
         if: matrix.framework == 'net9.0'
         shell: bash
-        run: echo "EXTRA_ARGUMENT=--CoreCLRApp:Microsoft.NET9.App" >> $GITHUB_ENV
+        run: echo "EXTRA_ARGUMENT=--CoreCLRVersion:9" >> $GITHUB_ENV
 
       - name: Build Scala test source file for ${{ matrix.framework }}
         shell: cmd
@@ -424,7 +429,7 @@ jobs:
     runs-on: ${{ matrix.os }}
     env:
       JCOBRIDGE_SCOPEDON: JCOReflector|1.0.0
-      JCOBRIDGE_LicensePath: ${{ secrets.JCOBRIDGE_ENCODED_2_5_21 }}
+      JCOBRIDGE_LicensePath: ${{ secrets.JCOBRIDGE_ENCODED_2_6_0 }}
 
     steps:
       # Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it
@@ -456,7 +461,7 @@ jobs:
       - name: Prepare extra argument
         if: matrix.framework == 'net9.0'
         shell: bash
-        run: echo "EXTRA_ARGUMENT=--CoreCLRApp:Microsoft.NET9.App" >> $GITHUB_ENV
+        run: echo "EXTRA_ARGUMENT=--CoreCLRVersion:9" >> $GITHUB_ENV
 
       - name: Build Java test source file
         run: javac -cp ./bin/${{ matrix.framework }}/JCOReflector.jar ./tests/jvm/java/src/hierarchy/*.java ./tests/jvm/java/src/mscorlib/*.java ./tests/jvm/java/src/nettest/*.java ./tests/jvm/java/src/refout/*.java
@@ -510,7 +515,7 @@ jobs:
     runs-on: ubuntu-22.04
     env:
       JCOBRIDGE_SCOPEDON: JCOReflector|1.0.0
-      JCOBRIDGE_LicensePath: ${{ secrets.JCOBRIDGE_ENCODED_2_5_21 }}
+      JCOBRIDGE_LicensePath: ${{ secrets.JCOBRIDGE_ENCODED_2_6_0 }}
 
     steps:
       # Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it
@@ -551,7 +556,7 @@ jobs:
       - name: Prepare extra argument
         if: matrix.framework == 'net9.0'
         shell: bash
-        run: echo "EXTRA_ARGUMENT=--CoreCLRApp:Microsoft.NET9.App" >> $GITHUB_ENV
+        run: echo "EXTRA_ARGUMENT=--CoreCLRVersion:9" >> $GITHUB_ENV
 
       - name: Build Scala test source file
         run: |
@@ -618,7 +623,7 @@ jobs:
     runs-on: ${{ matrix.os }}
     env:
       JCOBRIDGE_SCOPEDON: JCOReflector|1.0.0
-      JCOBRIDGE_LicensePath: ${{ secrets.JCOBRIDGE_ENCODED_2_5_21 }}
+      JCOBRIDGE_LicensePath: ${{ secrets.JCOBRIDGE_ENCODED_2_6_0 }}
 
     steps:
       # Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it
@@ -665,7 +670,7 @@ jobs:
       - name: Prepare extra argument
         if: matrix.framework == 'net9.0'
         shell: bash
-        run: echo "EXTRA_ARGUMENT=--CoreCLRApp:Microsoft.NET9.App" >> $GITHUB_ENV
+        run: echo "EXTRA_ARGUMENT=--CoreCLRVersion:9" >> $GITHUB_ENV
 
       - name: Build Scala test source file
         run: |
@@ -750,12 +755,13 @@ jobs:
           Compress-Archive -Path .\bin\net462\* -DestinationPath .\bin\net462.zip
 
       - name: Extract commit SHA
+        if: ${{ inputs.GeneratePR == true }}
         run: |
           echo "GITHUB_COMMIT_MESSAGE=$(echo $GITHUB_SHA | cut -c 1-7)" >> $GITHUB_ENV
         shell: bash
 
       - name: Request a PR to commit changes
-        if: ${{ github.repository_owner == 'masesgroup' }} # do not push any changes outside main repo or GeneratePR is false
+        if: ${{ inputs.GeneratePR == true }}
         uses: peter-evans/create-pull-request@v7
         with:
           branch-suffix: short-commit-hash
@@ -765,7 +771,7 @@ jobs:
             .\src\jvm\src\*.list
             .\src\jvm\src\*.java
           commit-message: Update JVM after commit ${{ env.GITHUB_COMMIT_MESSAGE }}
-          title: Changes by GitHub action
+          title: Update JVM after commit ${{ env.GITHUB_COMMIT_MESSAGE }}
           body: Automated changes by GitHub action
           reviewers: masesdevelopers
           assignees: masesdevelopers

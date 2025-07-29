@@ -48,7 +48,7 @@ JCOReflector uses [JCOBridge](https://www.jcobridge.com), and its [features](htt
   * No extra validation cycle: bug fix, improvements, new features are immediately available;
   * Documentation is shared.
 
-[JCOBridge 2.6.*](https://www.jcobridge.com), and consequently JCOReflector, can be used for free without any obligations; you need to purchase a commercial license, or uninstall the software, if you have incomes from the product usage.
+[JCOBridge 2.6.*](https://www.jcobridge.com), and consequently JCOReflector, can be used for free without any obligations; you need to purchase a commercial license, or uninstall the software, if you have direct or indirect incomes from the product usage.
 
 ### JCOBridge resources
 

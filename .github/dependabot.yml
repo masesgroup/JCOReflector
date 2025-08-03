@@ -9,13 +9,19 @@ updates:
     directory: "/src/net" # Location of package manifests
     schedule:
       interval: "weekly"
-      
+    reviewers:
+      - "masesdevelopers"
+
   - package-ecosystem: maven
     directory: "/src/jvm/src"
     schedule:
       interval: "weekly"
+    reviewers:
+      - "masesdevelopers"
 
   - package-ecosystem: "github-actions"
     directory: "/"
     schedule:
       interval: weekly
+    reviewers:
+      - "masesdevelopers"

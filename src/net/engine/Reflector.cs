@@ -1,7 +1,7 @@
 ﻿/*
  *  MIT License
  *
- *  Copyright (c) 2024 MASES s.r.l.
+ *  Copyright (c) 2020-2025 MASES s.r.l.
  *
  *  Permission is hereby granted, free of charge, to any person obtaining a copy
  *  of this software and associated documentation files (the "Software"), to deal
@@ -32,7 +32,7 @@ using System.Text;
 using System.Threading;
 using System.Threading.Tasks;
 
-namespace MASES.JCOReflectorEngine
+namespace MASES.JCOReflector.Engine
 {
     static class Reflector
     {

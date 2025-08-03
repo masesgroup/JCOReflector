@@ -1,7 +1,7 @@
 ﻿<!--
  MIT License
 
- Copyright (c) 2024 MASES s.r.l.
+ Copyright (c) 2020-2025 MASES s.r.l.
 
  Permission is hereby granted, free of charge, to any person obtaining a copy
  of this software and associated documentation files (the "Software"), to deal
@@ -22,13 +22,13 @@
  SOFTWARE.
  -->
 
-<Window x:Class="MASES.JCOReflectorGUI.MainWindow"
+<Window x:Class="MASES.JCOReflector.GUI.MainWindow"
         x:Name="mainWindow"
         xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
-        xmlns:local="clr-namespace:MASES.JCOReflectorGUI"
+        xmlns:local="clr-namespace:MASES.JCOReflector.GUI"
         mc:Ignorable="d" SizeToContent="WidthAndHeight">
     <DockPanel>
         <Button Name="btnStop" DockPanel.Dock="Top" Content="Abort current operation..." Visibility="Collapsed" Click="btnStop_Click"/>

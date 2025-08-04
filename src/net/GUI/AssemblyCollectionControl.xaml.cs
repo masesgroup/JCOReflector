@@ -22,7 +22,7 @@
  *  SOFTWARE.
  */
 
-using MASES.JCOReflectorEngine;
+using MASES.JCOReflector.Engine;
 using System.Windows;
 using System.Windows.Controls;
 

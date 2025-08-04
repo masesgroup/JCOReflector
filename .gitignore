@@ -341,3 +341,6 @@ ASALocalRun/
 
 # Local History for Visual Studio
 .localhistory/
+
+# Extra folder used from documentation generation
+/**/CommonTools/

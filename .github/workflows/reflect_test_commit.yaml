@@ -16,7 +16,7 @@ on:
       ForceExecution:
         description: 'Force execution of workflow'
         required: false
-        default: true
+        default: false
         type: boolean
       GeneratePR:
         description: 'Generate the PR at the end'
@@ -28,18 +28,23 @@ on:
 jobs:
   # Verify if a build is needed
   check:
-    if: ${{ inputs.GeneratePR == false && github.repository_owner == 'masesgroup' || (github.repository_owner != 'masesgroup' && github.ref_name != 'master') }} #do not execute on master outside main repo
+    if: ${{ github.repository_owner == 'masesgroup' || (github.repository_owner != 'masesgroup' && github.ref_name != 'master') }} #do not execute on master outside main repo
     name: Check changed files
     outputs:
       run_job: ${{ steps.check_files.outputs.run_job }}
     runs-on: ubuntu-22.04
     steps:
+      - if: ${{ inputs.GeneratePR == true }}
+        run: echo "run_job=true" >> $GITHUB_OUTPUT
+        
       - id: get_changed_files
+        if: ${{ inputs.GeneratePR == false }}
         uses: masesgroup/retrieve-changed-files@v3
         with:
           format: 'csv'
 
       - id: check_files
+        if: ${{ inputs.GeneratePR == false }}
         run: |
           mapfile -d ',' -t added_modified_files < <(printf '%s,' '${{ steps.get_changed_files.outputs.added_modified }}')
           for added_modified_file in "${added_modified_files[@]}"; do

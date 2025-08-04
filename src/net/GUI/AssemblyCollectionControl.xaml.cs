@@ -1,7 +1,7 @@
 ﻿/*
  *  MIT License
  *
- *  Copyright (c) 2024 MASES s.r.l.
+ *  Copyright (c) 2020-2025 MASES s.r.l.
  *
  *  Permission is hereby granted, free of charge, to any person obtaining a copy
  *  of this software and associated documentation files (the "Software"), to deal
@@ -26,7 +26,7 @@ using MASES.JCOReflectorEngine;
 using System.Windows;
 using System.Windows.Controls;
 
-namespace MASES.JCOReflectorGUI
+namespace MASES.JCOReflector.GUI
 {
     /// <summary>
     /// Interaction logic for AssemblyCollectionControl.xaml

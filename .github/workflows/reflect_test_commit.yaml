@@ -20,7 +20,7 @@ on:
         type: boolean
       GeneratePR:
         description: 'Generate the PR at the end'
-        required: true
+        required: false
         default: false
         type: boolean
 
@@ -28,7 +28,7 @@ on:
 jobs:
   # Verify if a build is needed
   check:
-    if: ${{ github.repository_owner == 'masesgroup' || (github.repository_owner != 'masesgroup' && github.ref_name != 'master') }} #do not execute on master outside main repo
+    if: ${{ inputs.GeneratePR == false && github.repository_owner == 'masesgroup' || (github.repository_owner != 'masesgroup' && github.ref_name != 'master') }} #do not execute on master outside main repo
     name: Check changed files
     outputs:
       run_job: ${{ steps.check_files.outputs.run_job }}

@@ -31,10 +31,11 @@ jobs:
     if: ${{ github.repository_owner == 'masesgroup' || (github.repository_owner != 'masesgroup' && github.ref_name != 'master') }} #do not execute on master outside main repo
     name: Check changed files
     outputs:
-      run_job: ${{ steps.check_files.outputs.run_job }}
+      run_job: ${{ steps.check_files.outputs.run_job || steps.force_execution.outputs.run_job }}
     runs-on: ubuntu-22.04
     steps:
-      - if: ${{ inputs.GeneratePR == true }}
+      - id: force_execution
+        if: ${{ inputs.GeneratePR == true || inputs.ForceExecution == true }}
         run: echo "run_job=true" >> $GITHUB_OUTPUT
         
       - id: get_changed_files
@@ -73,7 +74,7 @@ jobs:
   # This workflow contains a single job called "build"
   build_windows:
     needs: check
-    if: ${{ needs.check.outputs.run_job == 'true' || inputs.ForceExecution == true }}
+    if: ${{ needs.check.outputs.run_job == 'true' }}
     # The type of runner that the job will run on
     runs-on: windows-2022
 

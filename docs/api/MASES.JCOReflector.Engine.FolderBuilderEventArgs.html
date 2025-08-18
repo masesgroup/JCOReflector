@@ -2,9 +2,9 @@
 <html>
   <head>
     <meta charset="utf-8">
-      <title>Class EndOperationEventArgs | MASES Group website - JCOReflector </title>
+      <title>Class FolderBuilderEventArgs | MASES Group website - JCOReflector </title>
       <meta name="viewport" content="width=device-width, initial-scale=1.0">
-      <meta name="title" content="Class EndOperationEventArgs | MASES Group website - JCOReflector ">
+      <meta name="title" content="Class FolderBuilderEventArgs | MASES Group website - JCOReflector ">
       
       
       <link rel="icon" href="../images/favicon.png">
@@ -16,7 +16,7 @@
       <meta name="docfx:rel" content="../">
       
       
-      <meta name="docfx:docurl" content="https://github.com/masesgroup/JCOReflector/new/master/apiSpec/new?filename=MASES_JCOReflectorEngine_EndOperationEventArgs.md&amp;value=---%0Auid%3A%20MASES.JCOReflectorEngine.EndOperationEventArgs%0Asummary%3A%20&#39;*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax&#39;%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">
+      <meta name="docfx:docurl" content="https://github.com/masesgroup/JCOReflector/new/master/apiSpec/new?filename=MASES_JCOReflector_Engine_FolderBuilderEventArgs.md&amp;value=---%0Auid%3A%20MASES.JCOReflector.Engine.FolderBuilderEventArgs%0Asummary%3A%20&#39;*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax&#39;%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">
       <meta name="loc:inThisArticle" content="In this article">
       <meta name="loc:searchResultsCount" content="{count} results for &quot;{query}&quot;">
       <meta name="loc:searchNoResults" content="No results for &quot;{query}&quot;">
@@ -84,16 +84,16 @@
           <nav id="breadcrumb"></nav>
         </div>
 
-        <article data-uid="MASES.JCOReflectorEngine.EndOperationEventArgs">
+        <article data-uid="MASES.JCOReflector.Engine.FolderBuilderEventArgs">
 
 
 
-  <h1 id="MASES_JCOReflectorEngine_EndOperationEventArgs" data-uid="MASES.JCOReflectorEngine.EndOperationEventArgs" class="text-break">
-Class EndOperationEventArgs  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/JCOReflector/blob/master/src/net/engine/SharedClasses.cs/#L1505"><i class="bi bi-code-slash"></i></a>
+  <h1 id="MASES_JCOReflector_Engine_FolderBuilderEventArgs" data-uid="MASES.JCOReflector.Engine.FolderBuilderEventArgs" class="text-break">
+Class FolderBuilderEventArgs  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/JCOReflector/blob/master/src/net/engine/SharedClasses.cs/#L1545"><i class="bi bi-code-slash"></i></a>
   </h1>
 
   <div class="facts text-secondary">
-    <dl><dt>Namespace</dt><dd><a class="xref" href="MASES.html">MASES</a>.<a class="xref" href="MASES.JCOReflectorEngine.html">JCOReflectorEngine</a></dd></dl>
+    <dl><dt>Namespace</dt><dd><a class="xref" href="MASES.html">MASES</a>.<a class="xref" href="MASES.JCOReflector.html">JCOReflector</a>.<a class="xref" href="MASES.JCOReflector.Engine.html">Engine</a></dd></dl>
   <dl><dt>Assembly</dt><dd>MASES.JCOReflectorEngine.dll</dd></dl>
   </div>
 
@@ -101,7 +101,8 @@ Class EndOperationEventArgs  <a class="header-action link-secondary" title="View
   <div class="markdown conceptual"></div>
 
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public class EndOperationEventArgs : EventArgs</code></pre>
+    <pre><code class="lang-csharp hljs">[Serializable]
+public class FolderBuilderEventArgs : CommonEventArgs</code></pre>
   </div>
 
 
@@ -112,15 +113,40 @@ Class EndOperationEventArgs  <a class="header-action link-secondary" title="View
     <dd>
       <div><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object">object</a></div>
       <div><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.eventargs">EventArgs</a></div>
-      <div><span class="xref">EndOperationEventArgs</span></div>
+      <div><a class="xref" href="MASES.JCOReflector.Engine.CommonEventArgs.html">CommonEventArgs</a></div>
+      <div><span class="xref">FolderBuilderEventArgs</span></div>
     </dd>
   </dl>
 
 
+  <dl class="typelist derived">
+    <dt>Derived</dt>
+    <dd>
+      <div><a class="xref" href="MASES.JCOReflector.Engine.JavaBuilderEventArgs.html">JavaBuilderEventArgs</a></div>
+    </dd>
+  </dl>
 
   <dl class="typelist inheritedMembers">
     <dt>Inherited Members</dt>
     <dd>
+    <div>
+      <a class="xref" href="MASES.JCOReflector.Engine.CommonEventArgs.html#MASES_JCOReflector_Engine_CommonEventArgs_JobType">CommonEventArgs.JobType</a>
+    </div>
+    <div>
+      <a class="xref" href="MASES.JCOReflector.Engine.CommonEventArgs.html#MASES_JCOReflector_Engine_CommonEventArgs_LogLevel">CommonEventArgs.LogLevel</a>
+    </div>
+    <div>
+      <a class="xref" href="MASES.JCOReflector.Engine.CommonEventArgs.html#MASES_JCOReflector_Engine_CommonEventArgs_RootFolder">CommonEventArgs.RootFolder</a>
+    </div>
+    <div>
+      <a class="xref" href="MASES.JCOReflector.Engine.CommonEventArgs.html#MASES_JCOReflector_Engine_CommonEventArgs_SourceFolder">CommonEventArgs.SourceFolder</a>
+    </div>
+    <div>
+      <a class="xref" href="MASES.JCOReflector.Engine.CommonEventArgs.html#MASES_JCOReflector_Engine_CommonEventArgs_SplitFolderByAssembly">CommonEventArgs.SplitFolderByAssembly</a>
+    </div>
+    <div>
+      <a class="xref" href="MASES.JCOReflector.Engine.CommonEventArgs.html#MASES_JCOReflector_Engine_CommonEventArgs_AvoidJCOReflectorFolder">CommonEventArgs.AvoidJCOReflectorFolder</a>
+    </div>
     <div>
       <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.eventargs.empty">EventArgs.Empty</a>
     </div>
@@ -147,6 +173,25 @@ Class EndOperationEventArgs  <a class="header-action link-secondary" title="View
     </div>
   </dd></dl>
 
+  <dl class="typelist extensionMethods">
+    <dt>Extension Methods</dt>
+    <dd>
+  <div>
+      <a class="xref" href="MASES.JCOReflector.Engine.JobManager.html#MASES_JCOReflector_Engine_JobManager_UpdateFromArgs_MASES_JCOReflector_Engine_CommonEventArgs_System_Collections_Generic_IEnumerable_MASES_CLIParser_IArgumentMetadataParsed__">JobManager.UpdateFromArgs(CommonEventArgs, IEnumerable&lt;IArgumentMetadataParsed&gt;)</a>
+  </div>
+  <div>
+      <a class="xref" href="MASES.JCOReflector.Engine.JobManager.html#MASES_JCOReflector_Engine_JobManager_UpdateFromArgs_MASES_JCOReflector_Engine_CommonEventArgs_System_String___">JobManager.UpdateFromArgs(CommonEventArgs, string[])</a>
+  </div>
+  <div>
+      <a class="xref" href="MASES.JCOReflector.Engine.JobManager.html#MASES_JCOReflector_Engine_JobManager_CreateList_MASES_JCOReflector_Engine_FolderBuilderEventArgs_System_Boolean_">JobManager.CreateList(FolderBuilderEventArgs, bool)</a>
+  </div>
+  <div>
+      <a class="xref" href="MASES.JCOReflector.Engine.JobManager.html#MASES_JCOReflector_Engine_JobManager_UpdateFromArgs__1___0_System_Collections_Generic_IEnumerable_MASES_CLIParser_IArgumentMetadataParsed__">JobManager.UpdateFromArgs&lt;T&gt;(T, IEnumerable&lt;IArgumentMetadataParsed&gt;)</a>
+  </div>
+  <div>
+      <a class="xref" href="MASES.JCOReflector.Engine.JobManager.html#MASES_JCOReflector_Engine_JobManager_UpdateFromArgs__1___0_System_String___">JobManager.UpdateFromArgs&lt;T&gt;(T, string[])</a>
+  </div>
+  </dd></dl>
 
 
 
@@ -156,97 +201,55 @@ Class EndOperationEventArgs  <a class="header-action link-secondary" title="View
 </h2>
 
 
-  <a id="MASES_JCOReflectorEngine_EndOperationEventArgs__ctor_" data-uid="MASES.JCOReflectorEngine.EndOperationEventArgs.#ctor*"></a>
+  <a id="MASES_JCOReflector_Engine_FolderBuilderEventArgs__ctor_" data-uid="MASES.JCOReflector.Engine.FolderBuilderEventArgs.#ctor*"></a>
 
-  <h3 id="MASES_JCOReflectorEngine_EndOperationEventArgs__ctor_System_String_System_Boolean_" data-uid="MASES.JCOReflectorEngine.EndOperationEventArgs.#ctor(System.String,System.Boolean)">
-  EndOperationEventArgs(string, bool)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/JCOReflector/blob/master/src/net/engine/SharedClasses.cs/#L1507"><i class="bi bi-code-slash"></i></a>
+  <h3 id="MASES_JCOReflector_Engine_FolderBuilderEventArgs__ctor" data-uid="MASES.JCOReflector.Engine.FolderBuilderEventArgs.#ctor">
+  FolderBuilderEventArgs()
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/JCOReflector/blob/master/src/net/engine/SharedClasses.cs/#L1548"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
 
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public EndOperationEventArgs(string report, bool failed)</code></pre>
+    <pre><code class="lang-csharp hljs">public FolderBuilderEventArgs()</code></pre>
+  </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+  <a id="MASES_JCOReflector_Engine_FolderBuilderEventArgs__ctor_" data-uid="MASES.JCOReflector.Engine.FolderBuilderEventArgs.#ctor*"></a>
+
+  <h3 id="MASES_JCOReflector_Engine_FolderBuilderEventArgs__ctor_MASES_JCOReflector_Engine_LogLevel_" data-uid="MASES.JCOReflector.Engine.FolderBuilderEventArgs.#ctor(MASES.JCOReflector.Engine.LogLevel)">
+  FolderBuilderEventArgs(LogLevel)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/JCOReflector/blob/master/src/net/engine/SharedClasses.cs/#L1552"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public FolderBuilderEventArgs(LogLevel logLevel)</code></pre>
   </div>
 
   <h4 class="section">Parameters</h4>
   <dl class="parameters">
-    <dt><code>report</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
-    <dd></dd>
-    <dt><code>failed</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
+    <dt><code>logLevel</code> <a class="xref" href="MASES.JCOReflector.Engine.LogLevel.html">LogLevel</a></dt>
     <dd></dd>
   </dl>
 
 
 
 
-
-
-
-
-
-
-
-
-  <h2 class="section" id="properties">Properties
-</h2>
-
-
-  <a id="MASES_JCOReflectorEngine_EndOperationEventArgs_Failed_" data-uid="MASES.JCOReflectorEngine.EndOperationEventArgs.Failed*"></a>
-
-  <h3 id="MASES_JCOReflectorEngine_EndOperationEventArgs_Failed" data-uid="MASES.JCOReflectorEngine.EndOperationEventArgs.Failed">
-  Failed
-  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/JCOReflector/blob/master/src/net/engine/SharedClasses.cs/#L1514"><i class="bi bi-code-slash"></i></a>
-  </h3>
-
-  <div class="markdown level1 summary"></div>
-  <div class="markdown level1 conceptual"></div>
-
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public bool Failed { get; }</code></pre>
-  </div>
-
-
-
-
-
-  <h4 class="section">Property Value</h4>
-  <dl class="parameters">
-    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
-    <dd></dd>
-  </dl>
-
-
-
-
-
-
-
-
-  <a id="MASES_JCOReflectorEngine_EndOperationEventArgs_Report_" data-uid="MASES.JCOReflectorEngine.EndOperationEventArgs.Report*"></a>
-
-  <h3 id="MASES_JCOReflectorEngine_EndOperationEventArgs_Report" data-uid="MASES.JCOReflectorEngine.EndOperationEventArgs.Report">
-  Report
-  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/JCOReflector/blob/master/src/net/engine/SharedClasses.cs/#L1513"><i class="bi bi-code-slash"></i></a>
-  </h3>
-
-  <div class="markdown level1 summary"></div>
-  <div class="markdown level1 conceptual"></div>
-
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public string Report { get; }</code></pre>
-  </div>
-
-
-
-
-
-  <h4 class="section">Property Value</h4>
-  <dl class="parameters">
-    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
-    <dd></dd>
-  </dl>
 
 
 
@@ -259,7 +262,7 @@ Class EndOperationEventArgs  <a class="header-action link-secondary" title="View
 </article>
 
         <div class="contribution d-print-none">
-          <a href="https://github.com/masesgroup/JCOReflector/blob/master/src/net/engine/SharedClasses.cs/#L1505" class="edit-link">Edit this page</a>
+          <a href="https://github.com/masesgroup/JCOReflector/blob/master/src/net/engine/SharedClasses.cs/#L1545" class="edit-link">Edit this page</a>
         </div>
 
 

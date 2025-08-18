@@ -30,7 +30,7 @@ jobs:
         run: git config --system core.longpaths true
 
       # Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it
-      - uses: actions/checkout@v4
+      - uses: actions/checkout@v5
 
       # Runs a set of commands using the runners shell
       - name: Build JCOReflectorCLI
@@ -81,7 +81,7 @@ jobs:
         run: git config --system core.longpaths true
       
       # Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it
-      - uses: actions/checkout@v4
+      - uses: actions/checkout@v5
         with: 
           submodules: 'true'
 

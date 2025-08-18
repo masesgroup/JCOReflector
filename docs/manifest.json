@@ -460,352 +460,352 @@
     },
     {
       "type": "ManagedReference",
-      "source_relative_path": "api/MASES.JCOReflectorEngine.AssemblyData.yml",
+      "source_relative_path": "api/MASES.JCOReflector.Engine.AssemblyData.yml",
       "output": {
         ".html": {
-          "relative_path": "api/MASES.JCOReflectorEngine.AssemblyData.html"
+          "relative_path": "api/MASES.JCOReflector.Engine.AssemblyData.html"
         }
       },
       "version": "",
       "Uid": null,
       "IsMRef": true,
-      "Title": "MASES.JCOReflectorEngine.AssemblyData",
-      "Summary": "<p sourcefile=\"api/MASES.JCOReflectorEngine.AssemblyData.yml\" sourcestartlinenumber=\"1\">The single AssemblyData.</p>\n"
+      "Title": "MASES.JCOReflector.Engine.AssemblyData",
+      "Summary": "<p sourcefile=\"api/MASES.JCOReflector.Engine.AssemblyData.yml\" sourcestartlinenumber=\"1\">The single AssemblyData.</p>\n"
     },
     {
       "type": "ManagedReference",
-      "source_relative_path": "api/MASES.JCOReflectorEngine.AssemblyDataCollection.yml",
+      "source_relative_path": "api/MASES.JCOReflector.Engine.AssemblyDataCollection.yml",
       "output": {
         ".html": {
-          "relative_path": "api/MASES.JCOReflectorEngine.AssemblyDataCollection.html"
+          "relative_path": "api/MASES.JCOReflector.Engine.AssemblyDataCollection.html"
         }
       },
       "version": "",
       "Uid": null,
       "IsMRef": true,
-      "Title": "MASES.JCOReflectorEngine.AssemblyDataCollection",
-      "Summary": "<p sourcefile=\"api/MASES.JCOReflectorEngine.AssemblyDataCollection.yml\" sourcestartlinenumber=\"1\">A collection of Manager objects.</p>\n"
+      "Title": "MASES.JCOReflector.Engine.AssemblyDataCollection",
+      "Summary": "<p sourcefile=\"api/MASES.JCOReflector.Engine.AssemblyDataCollection.yml\" sourcestartlinenumber=\"1\">A collection of Manager objects.</p>\n"
     },
     {
       "type": "ManagedReference",
-      "source_relative_path": "api/MASES.JCOReflectorEngine.CommonEventArgs.yml",
+      "source_relative_path": "api/MASES.JCOReflector.Engine.CommonEventArgs.yml",
       "output": {
         ".html": {
-          "relative_path": "api/MASES.JCOReflectorEngine.CommonEventArgs.html"
+          "relative_path": "api/MASES.JCOReflector.Engine.CommonEventArgs.html"
         }
       },
       "version": "",
       "Uid": null,
       "IsMRef": true,
-      "Title": "MASES.JCOReflectorEngine.CommonEventArgs",
+      "Title": "MASES.JCOReflector.Engine.CommonEventArgs",
       "Summary": null
     },
     {
       "type": "ManagedReference",
-      "source_relative_path": "api/MASES.JCOReflectorEngine.DocsBuilderEventArgs.yml",
+      "source_relative_path": "api/MASES.JCOReflector.Engine.DocsBuilderEventArgs.yml",
       "output": {
         ".html": {
-          "relative_path": "api/MASES.JCOReflectorEngine.DocsBuilderEventArgs.html"
+          "relative_path": "api/MASES.JCOReflector.Engine.DocsBuilderEventArgs.html"
         }
       },
       "version": "",
       "Uid": null,
       "IsMRef": true,
-      "Title": "MASES.JCOReflectorEngine.DocsBuilderEventArgs",
+      "Title": "MASES.JCOReflector.Engine.DocsBuilderEventArgs",
       "Summary": null
     },
     {
       "type": "ManagedReference",
-      "source_relative_path": "api/MASES.JCOReflectorEngine.EndOperationEventArgs.yml",
+      "source_relative_path": "api/MASES.JCOReflector.Engine.EndOperationEventArgs.yml",
       "output": {
         ".html": {
-          "relative_path": "api/MASES.JCOReflectorEngine.EndOperationEventArgs.html"
+          "relative_path": "api/MASES.JCOReflector.Engine.EndOperationEventArgs.html"
         }
       },
       "version": "",
       "Uid": null,
       "IsMRef": true,
-      "Title": "MASES.JCOReflectorEngine.EndOperationEventArgs",
+      "Title": "MASES.JCOReflector.Engine.EndOperationEventArgs",
       "Summary": null
     },
     {
       "type": "ManagedReference",
-      "source_relative_path": "api/MASES.JCOReflectorEngine.ErrorReportingType.yml",
+      "source_relative_path": "api/MASES.JCOReflector.Engine.ErrorReportingType.yml",
       "output": {
         ".html": {
-          "relative_path": "api/MASES.JCOReflectorEngine.ErrorReportingType.html"
+          "relative_path": "api/MASES.JCOReflector.Engine.ErrorReportingType.html"
         }
       },
       "version": "",
       "Uid": null,
       "IsMRef": true,
-      "Title": "MASES.JCOReflectorEngine.ErrorReportingType",
+      "Title": "MASES.JCOReflector.Engine.ErrorReportingType",
       "Summary": null
     },
     {
       "type": "ManagedReference",
-      "source_relative_path": "api/MASES.JCOReflectorEngine.FolderBuilderEventArgs.yml",
+      "source_relative_path": "api/MASES.JCOReflector.Engine.FolderBuilderEventArgs.yml",
       "output": {
         ".html": {
-          "relative_path": "api/MASES.JCOReflectorEngine.FolderBuilderEventArgs.html"
+          "relative_path": "api/MASES.JCOReflector.Engine.FolderBuilderEventArgs.html"
         }
       },
       "version": "",
       "Uid": null,
       "IsMRef": true,
-      "Title": "MASES.JCOReflectorEngine.FolderBuilderEventArgs",
+      "Title": "MASES.JCOReflector.Engine.FolderBuilderEventArgs",
       "Summary": null
     },
     {
       "type": "ManagedReference",
-      "source_relative_path": "api/MASES.JCOReflectorEngine.JARBuilderEventArgs.yml",
+      "source_relative_path": "api/MASES.JCOReflector.Engine.JARBuilderEventArgs.yml",
       "output": {
         ".html": {
-          "relative_path": "api/MASES.JCOReflectorEngine.JARBuilderEventArgs.html"
+          "relative_path": "api/MASES.JCOReflector.Engine.JARBuilderEventArgs.html"
         }
       },
       "version": "",
       "Uid": null,
       "IsMRef": true,
-      "Title": "MASES.JCOReflectorEngine.JARBuilderEventArgs",
+      "Title": "MASES.JCOReflector.Engine.JARBuilderEventArgs",
       "Summary": null
     },
     {
       "type": "ManagedReference",
-      "source_relative_path": "api/MASES.JCOReflectorEngine.JDKVersion.yml",
+      "source_relative_path": "api/MASES.JCOReflector.Engine.JDKVersion.yml",
       "output": {
         ".html": {
-          "relative_path": "api/MASES.JCOReflectorEngine.JDKVersion.html"
+          "relative_path": "api/MASES.JCOReflector.Engine.JDKVersion.html"
         }
       },
       "version": "",
       "Uid": null,
       "IsMRef": true,
-      "Title": "MASES.JCOReflectorEngine.JDKVersion",
+      "Title": "MASES.JCOReflector.Engine.JDKVersion",
       "Summary": null
     },
     {
       "type": "ManagedReference",
-      "source_relative_path": "api/MASES.JCOReflectorEngine.JavaBuilderEventArgs.yml",
+      "source_relative_path": "api/MASES.JCOReflector.Engine.JavaBuilderEventArgs.yml",
       "output": {
         ".html": {
-          "relative_path": "api/MASES.JCOReflectorEngine.JavaBuilderEventArgs.html"
+          "relative_path": "api/MASES.JCOReflector.Engine.JavaBuilderEventArgs.html"
         }
       },
       "version": "",
       "Uid": null,
       "IsMRef": true,
-      "Title": "MASES.JCOReflectorEngine.JavaBuilderEventArgs",
+      "Title": "MASES.JCOReflector.Engine.JavaBuilderEventArgs",
       "Summary": null
     },
     {
       "type": "ManagedReference",
-      "source_relative_path": "api/MASES.JCOReflectorEngine.JobManager.CmdParam.yml",
+      "source_relative_path": "api/MASES.JCOReflector.Engine.JobManager.CmdParam.yml",
       "output": {
         ".html": {
-          "relative_path": "api/MASES.JCOReflectorEngine.JobManager.CmdParam.html"
+          "relative_path": "api/MASES.JCOReflector.Engine.JobManager.CmdParam.html"
         }
       },
       "version": "",
       "Uid": null,
       "IsMRef": true,
-      "Title": "MASES.JCOReflectorEngine.JobManager.CmdParam",
+      "Title": "MASES.JCOReflector.Engine.JobManager.CmdParam",
       "Summary": null
     },
     {
       "type": "ManagedReference",
-      "source_relative_path": "api/MASES.JCOReflectorEngine.JobManager.yml",
+      "source_relative_path": "api/MASES.JCOReflector.Engine.JobManager.yml",
       "output": {
         ".html": {
-          "relative_path": "api/MASES.JCOReflectorEngine.JobManager.html"
+          "relative_path": "api/MASES.JCOReflector.Engine.JobManager.html"
         }
       },
       "version": "",
       "Uid": null,
       "IsMRef": true,
-      "Title": "MASES.JCOReflectorEngine.JobManager",
-      "Summary": "<p sourcefile=\"api/MASES.JCOReflectorEngine.JobManager.yml\" sourcestartlinenumber=\"1\">The main entry point</p>\n"
+      "Title": "MASES.JCOReflector.Engine.JobManager",
+      "Summary": "<p sourcefile=\"api/MASES.JCOReflector.Engine.JobManager.yml\" sourcestartlinenumber=\"1\">The main entry point</p>\n"
     },
     {
       "type": "ManagedReference",
-      "source_relative_path": "api/MASES.JCOReflectorEngine.JobTypes.yml",
+      "source_relative_path": "api/MASES.JCOReflector.Engine.JobTypes.yml",
       "output": {
         ".html": {
-          "relative_path": "api/MASES.JCOReflectorEngine.JobTypes.html"
+          "relative_path": "api/MASES.JCOReflector.Engine.JobTypes.html"
         }
       },
       "version": "",
       "Uid": null,
       "IsMRef": true,
-      "Title": "MASES.JCOReflectorEngine.JobTypes",
+      "Title": "MASES.JCOReflector.Engine.JobTypes",
       "Summary": null
     },
     {
       "type": "ManagedReference",
-      "source_relative_path": "api/MASES.JCOReflectorEngine.LogLevel.yml",
+      "source_relative_path": "api/MASES.JCOReflector.Engine.LogLevel.yml",
       "output": {
         ".html": {
-          "relative_path": "api/MASES.JCOReflectorEngine.LogLevel.html"
+          "relative_path": "api/MASES.JCOReflector.Engine.LogLevel.html"
         }
       },
       "version": "",
       "Uid": null,
       "IsMRef": true,
-      "Title": "MASES.JCOReflectorEngine.LogLevel",
+      "Title": "MASES.JCOReflector.Engine.LogLevel",
       "Summary": null
     },
     {
       "type": "ManagedReference",
-      "source_relative_path": "api/MASES.JCOReflectorEngine.POMBuilderEventArgs.yml",
+      "source_relative_path": "api/MASES.JCOReflector.Engine.POMBuilderEventArgs.yml",
       "output": {
         ".html": {
-          "relative_path": "api/MASES.JCOReflectorEngine.POMBuilderEventArgs.html"
+          "relative_path": "api/MASES.JCOReflector.Engine.POMBuilderEventArgs.html"
         }
       },
       "version": "",
       "Uid": null,
       "IsMRef": true,
-      "Title": "MASES.JCOReflectorEngine.POMBuilderEventArgs",
+      "Title": "MASES.JCOReflector.Engine.POMBuilderEventArgs",
       "Summary": null
     },
     {
       "type": "ManagedReference",
-      "source_relative_path": "api/MASES.JCOReflectorEngine.POMStagingType.yml",
+      "source_relative_path": "api/MASES.JCOReflector.Engine.POMStagingType.yml",
       "output": {
         ".html": {
-          "relative_path": "api/MASES.JCOReflectorEngine.POMStagingType.html"
+          "relative_path": "api/MASES.JCOReflector.Engine.POMStagingType.html"
         }
       },
       "version": "",
       "Uid": null,
       "IsMRef": true,
-      "Title": "MASES.JCOReflectorEngine.POMStagingType",
+      "Title": "MASES.JCOReflector.Engine.POMStagingType",
       "Summary": null
     },
     {
       "type": "ManagedReference",
-      "source_relative_path": "api/MASES.JCOReflectorEngine.POMType.yml",
+      "source_relative_path": "api/MASES.JCOReflector.Engine.POMType.yml",
       "output": {
         ".html": {
-          "relative_path": "api/MASES.JCOReflectorEngine.POMType.html"
+          "relative_path": "api/MASES.JCOReflector.Engine.POMType.html"
         }
       },
       "version": "",
       "Uid": null,
       "IsMRef": true,
-      "Title": "MASES.JCOReflectorEngine.POMType",
+      "Title": "MASES.JCOReflector.Engine.POMType",
       "Summary": null
     },
     {
       "type": "ManagedReference",
-      "source_relative_path": "api/MASES.JCOReflectorEngine.ReflectorEventArgs.yml",
+      "source_relative_path": "api/MASES.JCOReflector.Engine.ReflectorEventArgs.yml",
       "output": {
         ".html": {
-          "relative_path": "api/MASES.JCOReflectorEngine.ReflectorEventArgs.html"
+          "relative_path": "api/MASES.JCOReflector.Engine.ReflectorEventArgs.html"
         }
       },
       "version": "",
       "Uid": null,
       "IsMRef": true,
-      "Title": "MASES.JCOReflectorEngine.ReflectorEventArgs",
+      "Title": "MASES.JCOReflector.Engine.ReflectorEventArgs",
       "Summary": null
     },
     {
       "type": "ManagedReference",
-      "source_relative_path": "api/MASES.JCOReflectorEngine.appendToConsoleHandler.yml",
+      "source_relative_path": "api/MASES.JCOReflector.Engine.appendToConsoleHandler.yml",
       "output": {
         ".html": {
-          "relative_path": "api/MASES.JCOReflectorEngine.appendToConsoleHandler.html"
+          "relative_path": "api/MASES.JCOReflector.Engine.appendToConsoleHandler.html"
         }
       },
       "version": "",
       "Uid": null,
       "IsMRef": true,
-      "Title": "MASES.JCOReflectorEngine.appendToConsoleHandler",
+      "Title": "MASES.JCOReflector.Engine.appendToConsoleHandler",
       "Summary": null
     },
     {
       "type": "ManagedReference",
-      "source_relative_path": "api/MASES.JCOReflectorEngine.yml",
+      "source_relative_path": "api/MASES.JCOReflector.Engine.yml",
       "output": {
         ".html": {
-          "relative_path": "api/MASES.JCOReflectorEngine.html"
+          "relative_path": "api/MASES.JCOReflector.Engine.html"
         }
       },
       "version": "",
       "Uid": null,
       "IsMRef": true,
-      "Title": "MASES.JCOReflectorEngine",
+      "Title": "MASES.JCOReflector.Engine",
       "Summary": null
     },
     {
       "type": "ManagedReference",
-      "source_relative_path": "api/MASES.JCOReflectorGUI.App.yml",
+      "source_relative_path": "api/MASES.JCOReflector.GUI.App.yml",
       "output": {
         ".html": {
-          "relative_path": "api/MASES.JCOReflectorGUI.App.html"
+          "relative_path": "api/MASES.JCOReflector.GUI.App.html"
         }
       },
       "version": "",
       "Uid": null,
       "IsMRef": true,
-      "Title": "MASES.JCOReflectorGUI.App",
-      "Summary": "<p sourcefile=\"api/MASES.JCOReflectorGUI.App.yml\" sourcestartlinenumber=\"1\">Interaction logic for App.xaml</p>\n"
+      "Title": "MASES.JCOReflector.GUI.App",
+      "Summary": "<p sourcefile=\"api/MASES.JCOReflector.GUI.App.yml\" sourcestartlinenumber=\"1\">Interaction logic for App.xaml</p>\n"
     },
     {
       "type": "ManagedReference",
-      "source_relative_path": "api/MASES.JCOReflectorGUI.AssemblyCollectionControl.yml",
+      "source_relative_path": "api/MASES.JCOReflector.GUI.AssemblyCollectionControl.yml",
       "output": {
         ".html": {
-          "relative_path": "api/MASES.JCOReflectorGUI.AssemblyCollectionControl.html"
+          "relative_path": "api/MASES.JCOReflector.GUI.AssemblyCollectionControl.html"
         }
       },
       "version": "",
       "Uid": null,
       "IsMRef": true,
-      "Title": "MASES.JCOReflectorGUI.AssemblyCollectionControl",
-      "Summary": "<p sourcefile=\"api/MASES.JCOReflectorGUI.AssemblyCollectionControl.yml\" sourcestartlinenumber=\"1\">Interaction logic for AssemblyCollectionControl.xaml</p>\n"
+      "Title": "MASES.JCOReflector.GUI.AssemblyCollectionControl",
+      "Summary": "<p sourcefile=\"api/MASES.JCOReflector.GUI.AssemblyCollectionControl.yml\" sourcestartlinenumber=\"1\">Interaction logic for AssemblyCollectionControl.xaml</p>\n"
     },
     {
       "type": "ManagedReference",
-      "source_relative_path": "api/MASES.JCOReflectorGUI.MainWindow.appendToConsoleDelegate.yml",
+      "source_relative_path": "api/MASES.JCOReflector.GUI.MainWindow.appendToConsoleDelegate.yml",
       "output": {
         ".html": {
-          "relative_path": "api/MASES.JCOReflectorGUI.MainWindow.appendToConsoleDelegate.html"
+          "relative_path": "api/MASES.JCOReflector.GUI.MainWindow.appendToConsoleDelegate.html"
         }
       },
       "version": "",
       "Uid": null,
       "IsMRef": true,
-      "Title": "MASES.JCOReflectorGUI.MainWindow.appendToConsoleDelegate",
+      "Title": "MASES.JCOReflector.GUI.MainWindow.appendToConsoleDelegate",
       "Summary": null
     },
     {
       "type": "ManagedReference",
-      "source_relative_path": "api/MASES.JCOReflectorGUI.MainWindow.yml",
+      "source_relative_path": "api/MASES.JCOReflector.GUI.MainWindow.yml",
       "output": {
         ".html": {
-          "relative_path": "api/MASES.JCOReflectorGUI.MainWindow.html"
+          "relative_path": "api/MASES.JCOReflector.GUI.MainWindow.html"
         }
       },
       "version": "",
       "Uid": null,
       "IsMRef": true,
-      "Title": "MASES.JCOReflectorGUI.MainWindow",
-      "Summary": "<p sourcefile=\"api/MASES.JCOReflectorGUI.MainWindow.yml\" sourcestartlinenumber=\"1\">Interaction logic for MainWindow.xaml</p>\n"
+      "Title": "MASES.JCOReflector.GUI.MainWindow",
+      "Summary": "<p sourcefile=\"api/MASES.JCOReflector.GUI.MainWindow.yml\" sourcestartlinenumber=\"1\">Interaction logic for MainWindow.xaml</p>\n"
     },
     {
       "type": "ManagedReference",
-      "source_relative_path": "api/MASES.JCOReflectorGUI.yml",
+      "source_relative_path": "api/MASES.JCOReflector.GUI.yml",
       "output": {
         ".html": {
-          "relative_path": "api/MASES.JCOReflectorGUI.html"
+          "relative_path": "api/MASES.JCOReflector.GUI.html"
         }
       },
       "version": "",
       "Uid": null,
       "IsMRef": true,
-      "Title": "MASES.JCOReflectorGUI",
+      "Title": "MASES.JCOReflector.GUI",
       "Summary": null
     },
     {

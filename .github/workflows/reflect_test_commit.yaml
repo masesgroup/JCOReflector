@@ -236,7 +236,7 @@ jobs:
     runs-on: windows-latest
     env:
       JCOBRIDGE_SCOPEDON: JCOReflector|1.0.0
-      JCOBRIDGE_LicensePath: ${{ secrets.JCOBRIDGE_ENCODED_2_6_1 }}
+      JCOBRIDGE_LicensePath: ${{ secrets.JCOBRIDGE_ENCODED_2_6_3 }}
     
     steps:
       # Runs a set of commands using the runners shell
@@ -324,7 +324,7 @@ jobs:
     runs-on: windows-latest
     env:
       JCOBRIDGE_SCOPEDON: JCOReflector|1.0.0
-      JCOBRIDGE_LicensePath: ${{ secrets.JCOBRIDGE_ENCODED_2_6_1 }}
+      JCOBRIDGE_LicensePath: ${{ secrets.JCOBRIDGE_ENCODED_2_6_3 }}
       
     steps:
       # Runs a set of commands using the runners shell
@@ -435,7 +435,7 @@ jobs:
     runs-on: ${{ matrix.os }}
     env:
       JCOBRIDGE_SCOPEDON: JCOReflector|1.0.0
-      JCOBRIDGE_LicensePath: ${{ secrets.JCOBRIDGE_ENCODED_2_6_1 }}
+      JCOBRIDGE_LicensePath: ${{ secrets.JCOBRIDGE_ENCODED_2_6_3 }}
 
     steps:
       # Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it
@@ -521,7 +521,7 @@ jobs:
     runs-on: ubuntu-22.04
     env:
       JCOBRIDGE_SCOPEDON: JCOReflector|1.0.0
-      JCOBRIDGE_LicensePath: ${{ secrets.JCOBRIDGE_ENCODED_2_6_1 }}
+      JCOBRIDGE_LicensePath: ${{ secrets.JCOBRIDGE_ENCODED_2_6_3 }}
 
     steps:
       # Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it
@@ -619,17 +619,13 @@ jobs:
         jdk_vendor: [ 'temurin', 'zulu', 'microsoft', 'corretto', 'oracle']
         jdk_version: [ '11', '17', '21' ] # only LTS versions
         exclude:
-          - os: macos-latest
-            framework: net6.0
-          - os: macos-13
-            framework: net6.0
           - jdk_vendor: oracle
             jdk_version: 11
 
     runs-on: ${{ matrix.os }}
     env:
       JCOBRIDGE_SCOPEDON: JCOReflector|1.0.0
-      JCOBRIDGE_LicensePath: ${{ secrets.JCOBRIDGE_ENCODED_2_6_1 }}
+      JCOBRIDGE_LicensePath: ${{ secrets.JCOBRIDGE_ENCODED_2_6_3 }}
 
     steps:
       # Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it

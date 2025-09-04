@@ -39,13 +39,13 @@ jobs:
         run: echo "run_job=true" >> $GITHUB_OUTPUT
         
       - id: get_changed_files
-        if: ${{ inputs.GeneratePR == false }}
+        if: ${{ inputs.GeneratePR == false && inputs.ForceExecution == false }}
         uses: masesgroup/retrieve-changed-files@v3
         with:
           format: 'csv'
 
       - id: check_files
-        if: ${{ inputs.GeneratePR == false }}
+        if: ${{ inputs.GeneratePR == false && inputs.ForceExecution == false }}
         run: |
           mapfile -d ',' -t added_modified_files < <(printf '%s,' '${{ steps.get_changed_files.outputs.added_modified }}')
           for added_modified_file in "${added_modified_files[@]}"; do

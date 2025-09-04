@@ -306,7 +306,7 @@ jobs:
         with:
           if-no-files-found: ignore
           name: Errors_java_tests_windows_${{ matrix.framework }}_${{ matrix.jdk_vendor }}_${{ matrix.jdk_version }}
-          path: .\hs_err_*
+          path: ./**/hs_err_*
           retention-days: 1
 
   execute_scala_tests_windows:
@@ -412,7 +412,7 @@ jobs:
         with:
           if-no-files-found: ignore
           name: Errors_scala_tests_windows_${{ matrix.framework }}_${{ matrix.jdk_vendor }}_${{ matrix.jdk_version }}
-          path: .\hs_err_*
+          path: ./**/hs_err_*
           retention-days: 1
 
   execute_java_tests_unix:
@@ -503,7 +503,7 @@ jobs:
         with:
           if-no-files-found: ignore
           name: Errors_java_tests_${{ matrix.os }}_${{ matrix.framework }}_${{ matrix.jdk_vendor }}_${{ matrix.jdk_version }}
-          path: .\hs_err_*
+          path: ./**/hs_err_*
           retention-days: 1
 
   execute_scala_tests_linux:
@@ -606,7 +606,7 @@ jobs:
         with:
           if-no-files-found: ignore
           name: Errors_java_tests_linux_${{ matrix.framework }}_${{ matrix.jdk_vendor }}_${{ matrix.jdk_version }}
-          path: .\hs_err_*
+          path: ./**/hs_err_*
           retention-days: 1
 
   execute_scala_tests_mac:
@@ -719,7 +719,7 @@ jobs:
         with:
           if-no-files-found: ignore
           name: Errors_scala_tests_${{ matrix.os }}_${{ matrix.framework }}_${{ matrix.jdk_vendor }}_${{ matrix.jdk_version }}
-          path: .\hs_err_*
+          path: ./**/hs_err_*
           retention-days: 1
 
   execute_finalize:

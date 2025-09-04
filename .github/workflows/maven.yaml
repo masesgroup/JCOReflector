@@ -85,7 +85,7 @@ jobs:
         run: .\bin\${{ matrix.framework }}\MASES.JCOReflectorCLI -JobType CreatePOM -JobFile .github\workflows\createpom_win19.job
 
       - name: Set up Apache Maven Central
-        uses: actions/setup-java@v4
+        uses: actions/setup-java@v5
         with: # running setup-java again overwrites the settings.xml
           distribution: temurin
           java-version: 11

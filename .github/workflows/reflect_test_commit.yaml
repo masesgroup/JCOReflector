@@ -232,7 +232,6 @@ jobs:
         exclude:
           - jdk_vendor: oracle
             jdk_version: 11
-        exclude:
           - jdk_vendor: graalvm
             jdk_version: 11
 
@@ -323,7 +322,6 @@ jobs:
         exclude:
           - jdk_vendor: oracle
             jdk_version: 11
-        exclude:
           - jdk_vendor: graalvm
             jdk_version: 11
 
@@ -433,7 +431,6 @@ jobs:
         exclude:
           - jdk_vendor: oracle
             jdk_version: 11
-        exclude:
           - jdk_vendor: graalvm
             jdk_version: 11
 
@@ -522,7 +519,6 @@ jobs:
         exclude:
           - jdk_vendor: oracle
             jdk_version: 11
-        exclude:
           - jdk_vendor: graalvm
             jdk_version: 11
 
@@ -629,7 +625,6 @@ jobs:
         exclude:
           - jdk_vendor: oracle
             jdk_version: 11
-        exclude:
           - jdk_vendor: graalvm
             jdk_version: 11
 

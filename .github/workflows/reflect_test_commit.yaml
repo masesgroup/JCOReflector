@@ -227,10 +227,13 @@ jobs:
       fail-fast: false
       matrix:
         framework: [ 'net462', 'net8.0', 'net9.0' ]
-        jdk_vendor: [ 'temurin', 'zulu', 'microsoft', 'corretto', 'oracle']
+        jdk_vendor: [ 'temurin', 'zulu', 'microsoft', 'corretto', 'oracle', 'graalvm' ]
         jdk_version: [ '11', '17', '21' ] # only LTS versions
         exclude:
           - jdk_vendor: oracle
+            jdk_version: 11
+        exclude:
+          - jdk_vendor: graalvm
             jdk_version: 11
 
     runs-on: windows-latest
@@ -315,10 +318,13 @@ jobs:
       fail-fast: false
       matrix:
         framework: [ 'net462', 'net8.0', 'net9.0' ]
-        jdk_vendor: [ 'temurin', 'zulu', 'microsoft', 'corretto', 'oracle']
+        jdk_vendor: [ 'temurin', 'zulu', 'microsoft', 'corretto', 'oracle', 'graalvm' ]
         jdk_version: [ '11', '17', '21' ] # only LTS versions
         exclude:
           - jdk_vendor: oracle
+            jdk_version: 11
+        exclude:
+          - jdk_vendor: graalvm
             jdk_version: 11
 
     runs-on: windows-latest
@@ -420,16 +426,15 @@ jobs:
     strategy:
       fail-fast: false
       matrix:
-        os: [ 'ubuntu-22.04', 'macos-latest', 'macos-13' ]
+        os: [ 'ubuntu-latest', 'macos-latest' ]
         framework: [ 'net8.0', 'net9.0' ]
-        jdk_vendor: [ 'temurin', 'zulu', 'microsoft', 'corretto', 'oracle']
+        jdk_vendor: [ 'temurin', 'zulu', 'microsoft', 'corretto', 'oracle', 'graalvm' ]
         jdk_version: [ '11', '17', '21' ] # only LTS versions
         exclude:
-          - os: macos-latest
-            framework: net6.0
-          - os: macos-13
-            framework: net6.0
           - jdk_vendor: oracle
+            jdk_version: 11
+        exclude:
+          - jdk_vendor: graalvm
             jdk_version: 11
 
     runs-on: ${{ matrix.os }}
@@ -512,10 +517,13 @@ jobs:
       fail-fast: false
       matrix:
         framework: [ 'net8.0', 'net9.0' ]
-        jdk_vendor: [ 'temurin', 'zulu', 'microsoft', 'corretto', 'oracle']
+        jdk_vendor: [ 'temurin', 'zulu', 'microsoft', 'corretto', 'oracle', 'graalvm' ]
         jdk_version: [ '11', '17', '21' ] # only LTS versions
         exclude:
           - jdk_vendor: oracle
+            jdk_version: 11
+        exclude:
+          - jdk_vendor: graalvm
             jdk_version: 11
 
     runs-on: ubuntu-22.04
@@ -614,12 +622,15 @@ jobs:
     strategy:
       fail-fast: false
       matrix:
-        os: [ 'macos-latest', 'macos-13' ]
+        os: [ 'macos-latest' ]
         framework: [ 'net8.0', 'net9.0' ]
-        jdk_vendor: [ 'temurin', 'zulu', 'microsoft', 'corretto', 'oracle']
+        jdk_vendor: [ 'temurin', 'zulu', 'microsoft', 'corretto', 'oracle', 'graalvm' ]
         jdk_version: [ '11', '17', '21' ] # only LTS versions
         exclude:
           - jdk_vendor: oracle
+            jdk_version: 11
+        exclude:
+          - jdk_vendor: graalvm
             jdk_version: 11
 
     runs-on: ${{ matrix.os }}

@@ -90,6 +90,9 @@ jobs:
         with: 
           fetch-depth: '1'
 
+      - name: Add local NuGet source
+        run: dotnet nuget add source ${{ github.workspace }}\JCOBridge\
+
       # Runs a set of commands using the runners shell
       - name: Build JCOReflectorCLI
         run: dotnet build --no-incremental --configuration Release /p:Platform="Any CPU" src\net\JCOReflectorCLI.sln
@@ -190,6 +193,9 @@ jobs:
           enableCrossOsArchive: true
           path: ./src/jvm/
           key: JCOReflector_${{ github.run_number }}_${{ github.run_attempt }}_source_${{ github.sha }}
+
+      - name: Add local NuGet source
+        run: dotnet nuget add source ${{ github.workspace }}\JCOBridge\
 
       # Runs a set of commands using the runners shell
       - name: Build JCOReflectorCLI

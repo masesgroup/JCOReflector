@@ -23,6 +23,16 @@ on:
         required: false
         default: false
         type: boolean
+      ExecuteSocketTest:
+        description: 'Execute the test related to socket'
+        required: false
+        default: false
+        type: boolean
+      ExecuteScalaEventTest:
+        description: 'Execute the test related to event under Scala'
+        required: false
+        default: false
+        type: boolean
 
 env:
     SCALARELEASE: 2.13.13
@@ -306,11 +316,13 @@ jobs:
       - run: java -cp "./bin/${{ matrix.framework }}/JCOReflector.jar;./tests/jvm/java/src/" hierarchy.HelloInterfaces ${{ env.EXTRA_ARGUMENT }}
         continue-on-error: true
 
-    #  - run: java -cp "./bin/${{ matrix.framework }}/JCOReflector.jar;./tests/jvm/java/src/" nettest.HelloNETSocket ${{ env.EXTRA_ARGUMENT }}
-    #    continue-on-error: true
-    #
-    #  - run: java -cp "./bin/${{ matrix.framework }}/JCOReflector.jar;./tests/jvm/java/src/" nettest.HelloNETSocket -async ${{ env.EXTRA_ARGUMENT }}
-    #    continue-on-error: true
+      - run: java -cp "./bin/${{ matrix.framework }}/JCOReflector.jar;./tests/jvm/java/src/" nettest.HelloNETSocket ${{ env.EXTRA_ARGUMENT }}
+        if: ${{ inputs.ExecuteSocketTest == true }}
+        continue-on-error: true
+    
+      - run: java -cp "./bin/${{ matrix.framework }}/JCOReflector.jar;./tests/jvm/java/src/" nettest.HelloNETSocket -async ${{ env.EXTRA_ARGUMENT }}
+        if: ${{ inputs.ExecuteSocketTest == true }}
+        continue-on-error: true
 
       - run: java -cp "./bin/${{ matrix.framework }}/JCOReflector.jar;./tests/jvm/java/src/" refout.HelloRefOutBase ${{ env.EXTRA_ARGUMENT }}
         continue-on-error: true
@@ -410,6 +422,7 @@ jobs:
         continue-on-error: true
 
       - run: .\bin\scala-${{ env.SCALARELEASE }}\bin\scala -toolcp "./bin/${{ matrix.framework }}/*;./tests/jvm/scala/output" mscorlib.HelloNETEvent ${{ env.EXTRA_ARGUMENT }}
+        if: ${{ inputs.ExecuteScalaEventTest == true }}
         shell: cmd
         continue-on-error: true
 
@@ -425,13 +438,15 @@ jobs:
         shell: cmd
         continue-on-error: true
 
-    #  - run: .\bin\scala-${{ env.SCALARELEASE }}\bin\scala -toolcp "./bin/${{ matrix.framework }}/*;./tests/jvm/scala/output" nettest.HelloNETSocket ${{ env.EXTRA_ARGUMENT }}
-    #    shell: cmd
-    #    continue-on-error: true
-    #
-    #  - run: .\bin\scala-${{ env.SCALARELEASE }}\bin\scala -toolcp "./bin/${{ matrix.framework }}/*;./tests/jvm/scala/output" nettest.HelloNETSocket -async ${{ env.EXTRA_ARGUMENT }}
-    #    shell: cmd
-    #    continue-on-error: true
+      - run: .\bin\scala-${{ env.SCALARELEASE }}\bin\scala -toolcp "./bin/${{ matrix.framework }}/*;./tests/jvm/scala/output" nettest.HelloNETSocket ${{ env.EXTRA_ARGUMENT }}
+        if: ${{ inputs.ExecuteSocketTest == true }}
+        shell: cmd
+        continue-on-error: true
+    
+      - run: .\bin\scala-${{ env.SCALARELEASE }}\bin\scala -toolcp "./bin/${{ matrix.framework }}/*;./tests/jvm/scala/output" nettest.HelloNETSocket -async ${{ env.EXTRA_ARGUMENT }}
+        if: ${{ inputs.ExecuteSocketTest == true }}
+        shell: cmd
+        continue-on-error: true
 
       - run: .\bin\scala-${{ env.SCALARELEASE }}\bin\scala -toolcp "./bin/${{ matrix.framework }}/*;./tests/jvm/scala/output" refout.HelloRefOutBase ${{ env.EXTRA_ARGUMENT }}
         shell: cmd
@@ -535,14 +550,19 @@ jobs:
       - run: java -cp "./bin/${{ matrix.framework }}/JCOReflector.jar:./tests/jvm/java/src/" hierarchy.HelloInterfaces ${{ env.EXTRA_ARGUMENT }}
         continue-on-error: true
 
-    #  - run: java -cp "./bin/${{ matrix.framework }}/JCOReflector.jar:./tests/jvm/java/src/" nettest.HelloNETSocket -server 127.0.0.1 ${{ env.EXTRA_ARGUMENT }}
-    #    continue-on-error: true
-    #
-    #  - run: java -cp "./bin/${{ matrix.framework }}/JCOReflector.jar:./tests/jvm/java/src/" nettest.HelloNETSocket -async -server 127.0.0.1 ${{ env.EXTRA_ARGUMENT }}
-    #    continue-on-error: true
-        
-          #java -cp "./bin/${{ matrix.framework }}/JCOReflector.jar;./tests/jvm/java/src/" refout.HelloRefOutBase
-          #java -cp "./bin/${{ matrix.framework }}/JCOReflector.jar;./tests/jvm/java/src/" refout.HelloRefOut
+      - run: java -cp "./bin/${{ matrix.framework }}/JCOReflector.jar:./tests/jvm/java/src/" nettest.HelloNETSocket -server 127.0.0.1 ${{ env.EXTRA_ARGUMENT }}
+        if: ${{ inputs.ExecuteSocketTest == true }}
+        continue-on-error: true
+    
+      - run: java -cp "./bin/${{ matrix.framework }}/JCOReflector.jar:./tests/jvm/java/src/" nettest.HelloNETSocket -async -server 127.0.0.1 ${{ env.EXTRA_ARGUMENT }}
+        if: ${{ inputs.ExecuteSocketTest == true }}
+        continue-on-error: true
+  
+      - run: java -cp "./bin/${{ matrix.framework }}/JCOReflector.jar:./tests/jvm/java/src/" refout.HelloRefOutBase ${{ env.EXTRA_ARGUMENT }}
+        continue-on-error: true
+
+      - run: java -cp "./bin/${{ matrix.framework }}/JCOReflector.jar:./tests/jvm/java/src/" refout.HelloRefOut ${{ env.EXTRA_ARGUMENT }}
+        continue-on-error: true
 
       - uses: actions/upload-artifact@v4
         with:
@@ -635,6 +655,7 @@ jobs:
         continue-on-error: true
 
       - run: source "$HOME/.sdkman/bin/sdkman-init.sh" && scala -nobootcp -toolcp "./bin/${{ matrix.framework }}/*:./tests/jvm/scala/output" mscorlib.HelloNETEvent ${{ env.EXTRA_ARGUMENT }}
+        if: ${{ inputs.ExecuteScalaEventTest == true }}
         continue-on-error: true
 
       - run: source "$HOME/.sdkman/bin/sdkman-init.sh" && scala -nobootcp -toolcp "./bin/${{ matrix.framework }}/*:./tests/jvm/scala/output" mscorlib.HelloIterator ${{ env.EXTRA_ARGUMENT }}
@@ -646,11 +667,13 @@ jobs:
       - run: source "$HOME/.sdkman/bin/sdkman-init.sh" && scala -nobootcp -toolcp "./bin/${{ matrix.framework }}/*:./tests/jvm/scala/output" hierarchy.HelloInterfaces ${{ env.EXTRA_ARGUMENT }}
         continue-on-error: true
 
-    #  - run: source "$HOME/.sdkman/bin/sdkman-init.sh" && scala -nobootcp -toolcp "./bin/${{ matrix.framework }}/*:./tests/jvm/scala/output" nettest.HelloNETSocket ${{ env.EXTRA_ARGUMENT }}
-    #    continue-on-error: true
-    #
-    #  - run: source "$HOME/.sdkman/bin/sdkman-init.sh" && scala -nobootcp -toolcp "./bin/${{ matrix.framework }}/*:./tests/jvm/scala/output" nettest.HelloNETSocket -async ${{ env.EXTRA_ARGUMENT }}
-    #    continue-on-error: true
+      - run: source "$HOME/.sdkman/bin/sdkman-init.sh" && scala -nobootcp -toolcp "./bin/${{ matrix.framework }}/*:./tests/jvm/scala/output" nettest.HelloNETSocket ${{ env.EXTRA_ARGUMENT }}
+        if: ${{ inputs.ExecuteSocketTest == true }}  
+        continue-on-error: true
+    
+      - run: source "$HOME/.sdkman/bin/sdkman-init.sh" && scala -nobootcp -toolcp "./bin/${{ matrix.framework }}/*:./tests/jvm/scala/output" nettest.HelloNETSocket -async ${{ env.EXTRA_ARGUMENT }}
+        if: ${{ inputs.ExecuteSocketTest == true }}
+        continue-on-error: true
 
       - run: source "$HOME/.sdkman/bin/sdkman-init.sh" && scala -nobootcp -toolcp "./bin/${{ matrix.framework }}/*:./tests/jvm/scala/output" refout.HelloRefOutBase ${{ env.EXTRA_ARGUMENT }}
         continue-on-error: true
@@ -756,6 +779,7 @@ jobs:
         continue-on-error: true
 
       - run: ${{ env.SCALA_BIN }}/scala -nobootcp -toolcp "./bin/${{ matrix.framework }}/*:./tests/jvm/scala/output" mscorlib.HelloNETEvent ${{ env.EXTRA_ARGUMENT }}
+        if: ${{ inputs.ExecuteScalaEventTest == true }}
         continue-on-error: true
 
       - run: ${{ env.SCALA_BIN }}/scala -nobootcp -toolcp "./bin/${{ matrix.framework }}/*:./tests/jvm/scala/output" mscorlib.HelloIterator ${{ env.EXTRA_ARGUMENT }}
@@ -767,11 +791,13 @@ jobs:
       - run: ${{ env.SCALA_BIN }}/scala -nobootcp -toolcp "./bin/${{ matrix.framework }}/*:./tests/jvm/scala/output" hierarchy.HelloInterfaces ${{ env.EXTRA_ARGUMENT }}
         continue-on-error: true
 
-    #  - run: ${{ env.SCALA_BIN }}/scala -nobootcp -toolcp "./bin/${{ matrix.framework }}/*:./tests/jvm/scala/output" nettest.HelloNETSocket ${{ env.EXTRA_ARGUMENT }}
-    #    continue-on-error: true
-    #
-    #  - run: ${{ env.SCALA_BIN }}/scala -nobootcp -toolcp "./bin/${{ matrix.framework }}/*:./tests/jvm/scala/output" nettest.HelloNETSocket -async ${{ env.EXTRA_ARGUMENT }}
-    #    continue-on-error: true
+      - run: ${{ env.SCALA_BIN }}/scala -nobootcp -toolcp "./bin/${{ matrix.framework }}/*:./tests/jvm/scala/output" nettest.HelloNETSocket ${{ env.EXTRA_ARGUMENT }}
+        if: ${{ inputs.ExecuteSocketTest == true }}
+        continue-on-error: true
+    
+      - run: ${{ env.SCALA_BIN }}/scala -nobootcp -toolcp "./bin/${{ matrix.framework }}/*:./tests/jvm/scala/output" nettest.HelloNETSocket -async ${{ env.EXTRA_ARGUMENT }}
+        if: ${{ inputs.ExecuteSocketTest == true }}
+        continue-on-error: true
 
       - run: ${{ env.SCALA_BIN }}/scala -nobootcp -toolcp "./bin/${{ matrix.framework }}/*:./tests/jvm/scala/output" refout.HelloRefOutBase ${{ env.EXTRA_ARGUMENT }}
         continue-on-error: true

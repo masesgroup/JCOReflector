@@ -234,8 +234,10 @@ jobs:
             jdk_version: 11
           - jdk_vendor: graalvm
             jdk_version: 11
+          - jdk_vendor: graalvm
+            jdk_version: 17
 
-    runs-on: windows-latest
+    runs-on: windows-2022
     env:
       JCOBRIDGE_SCOPEDON: JCOReflector|1.0.0
       JCOBRIDGE_LicensePath: ${{ secrets.JCOBRIDGE_ENCODED_2_6_1 }}
@@ -332,8 +334,10 @@ jobs:
             jdk_version: 11
           - jdk_vendor: graalvm
             jdk_version: 11
+          - jdk_vendor: graalvm
+            jdk_version: 17
 
-    runs-on: windows-latest
+    runs-on: windows-2022
     env:
       JCOBRIDGE_SCOPEDON: JCOReflector|1.0.0
       JCOBRIDGE_LicensePath: ${{ secrets.JCOBRIDGE_ENCODED_2_6_1 }}
@@ -449,6 +453,8 @@ jobs:
             jdk_version: 11
           - jdk_vendor: graalvm
             jdk_version: 11
+          - jdk_vendor: graalvm
+            jdk_version: 17
 
     runs-on: ${{ matrix.os }}
     env:
@@ -545,6 +551,8 @@ jobs:
             jdk_version: 11
           - jdk_vendor: graalvm
             jdk_version: 11
+          - jdk_vendor: graalvm
+            jdk_version: 17
 
     runs-on: ubuntu-22.04
     env:
@@ -659,6 +667,8 @@ jobs:
             jdk_version: 11
           - jdk_vendor: graalvm
             jdk_version: 11
+          - jdk_vendor: graalvm
+            jdk_version: 17
 
     runs-on: ${{ matrix.os }}
     env:
@@ -767,7 +777,7 @@ jobs:
   execute_finalize:
     needs: [execute_java_tests_windows, execute_scala_tests_windows, execute_java_tests_unix, execute_scala_tests_linux, execute_scala_tests_mac]
 
-    runs-on: windows-latest
+    runs-on: windows-2022
     steps:
 
       # Runs a set of commands using the runners shell

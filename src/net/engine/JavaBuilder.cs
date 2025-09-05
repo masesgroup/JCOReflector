@@ -225,7 +225,9 @@ namespace MASES.JCOReflector.Engine
             return counter;
         }
 
+#pragma warning disable CS1998
         public static async Task CreatePOM(object o)
+#pragma warning restore CS1998
         {
             bool failed = false;
             DateTime dtStart = DateTime.Now;
@@ -305,7 +307,9 @@ namespace MASES.JCOReflector.Engine
             }
         }
 
+#pragma warning disable CS1998
         public static async Task ExtractPOM(object o)
+#pragma warning restore CS1998
         {
             bool failed = false;
             DateTime dtStart = DateTime.Now;
@@ -512,7 +516,9 @@ namespace MASES.JCOReflector.Engine
         static string errorData = string.Empty;
         static string outputData = string.Empty;
 
+#pragma warning disable CS1998
         async static Task LaunchProcess(string workingDir, string processToLaunch, string arguments, int timeout, bool checkForErrors = false)
+#pragma warning restore CS1998
         {
             DateTime dtStart = DateTime.Now;
             JobManager.AppendToConsole(LogLevel.Info, "Starting operation {0} {1} with {2} seconds of timeout at {3}.", processToLaunch, arguments, timeout, dtStart);

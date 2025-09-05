@@ -366,7 +366,7 @@ public class Single extends ValueType  {
         }
     }
 
-    public static int ILogB(Single x) throws Throwable, system.NotSupportedException, system.PlatformNotSupportedException, system.ArgumentException {
+    public static int ILogB(Single x) throws Throwable, system.NotSupportedException, system.PlatformNotSupportedException, system.ArgumentException, system.ArgumentOutOfRangeException {
         if (classType == null)
             throw new UnsupportedOperationException("classType is null.");
         try {

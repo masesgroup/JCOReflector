@@ -227,13 +227,17 @@ jobs:
       fail-fast: false
       matrix:
         framework: [ 'net462', 'net8.0', 'net9.0' ]
-        jdk_vendor: [ 'temurin', 'zulu', 'microsoft', 'corretto', 'oracle']
+        jdk_vendor: [ 'temurin', 'zulu', 'microsoft', 'corretto', 'oracle', 'graalvm' ]
         jdk_version: [ '11', '17', '21' ] # only LTS versions
         exclude:
           - jdk_vendor: oracle
             jdk_version: 11
+          - jdk_vendor: graalvm
+            jdk_version: 11
+          - jdk_vendor: graalvm
+            jdk_version: 17
 
-    runs-on: windows-latest
+    runs-on: windows-2022
     env:
       JCOBRIDGE_SCOPEDON: JCOReflector|1.0.0
       JCOBRIDGE_LicensePath: ${{ secrets.JCOBRIDGE_ENCODED_2_6_1 }}
@@ -258,11 +262,19 @@ jobs:
           key: JCOReflector_${{ github.run_number }}_${{ github.run_attempt }}_windows_bin_${{ github.sha }}
  
       - name: Set up JDK distribution
+        if: ${{ matrix.jdk_vendor != 'graalvm' }} 
         uses: actions/setup-java@v5
         with: # running setup-java again overwrites the settings.xml
           distribution: ${{ matrix.jdk_vendor }}
           java-version: ${{ matrix.jdk_version }}
-          cache: 'maven'
+
+      - name: Set up GraalVM distribution
+        if: ${{ matrix.jdk_vendor == 'graalvm' }}
+        uses: graalvm/setup-graalvm@v1
+        with:
+          java-version: '${{ matrix.jdk_version }}' # See 'Options' for more details
+          distribution: 'graalvm' # See 'Supported distributions' for available options
+          github-token: ${{ secrets.GITHUB_TOKEN }}
 
       - name: Build Java test source file for ${{ matrix.framework }}
         run: javac -cp ./bin/${{ matrix.framework }}/JCOReflector.jar ./tests/jvm/java/src/hierarchy/*.java ./tests/jvm/java/src/mscorlib/*.java ./tests/jvm/java/src/nettest/*.java ./tests/jvm/java/src/refout/*.java
@@ -315,13 +327,17 @@ jobs:
       fail-fast: false
       matrix:
         framework: [ 'net462', 'net8.0', 'net9.0' ]
-        jdk_vendor: [ 'temurin', 'zulu', 'microsoft', 'corretto', 'oracle']
+        jdk_vendor: [ 'temurin', 'zulu', 'microsoft', 'corretto', 'oracle', 'graalvm' ]
         jdk_version: [ '11', '17', '21' ] # only LTS versions
         exclude:
           - jdk_vendor: oracle
             jdk_version: 11
+          - jdk_vendor: graalvm
+            jdk_version: 11
+          - jdk_vendor: graalvm
+            jdk_version: 17
 
-    runs-on: windows-latest
+    runs-on: windows-2022
     env:
       JCOBRIDGE_SCOPEDON: JCOReflector|1.0.0
       JCOBRIDGE_LicensePath: ${{ secrets.JCOBRIDGE_ENCODED_2_6_1 }}
@@ -346,11 +362,19 @@ jobs:
           key: JCOReflector_${{ github.run_number }}_${{ github.run_attempt }}_windows_bin_${{ github.sha }}
  
       - name: Set up JDK distribution
+        if: ${{ matrix.jdk_vendor != 'graalvm' }}
         uses: actions/setup-java@v5
         with: # running setup-java again overwrites the settings.xml
           distribution: ${{ matrix.jdk_vendor }}
           java-version: ${{ matrix.jdk_version }}
-          cache: 'maven'
+
+      - name: Set up GraalVM distribution
+        if: ${{ matrix.jdk_vendor == 'graalvm' }}
+        uses: graalvm/setup-graalvm@v1
+        with:
+          java-version: '${{ matrix.jdk_version }}' # See 'Options' for more details
+          distribution: 'graalvm' # See 'Supported distributions' for available options
+          github-token: ${{ secrets.GITHUB_TOKEN }}
 
       - name: Prepare extra argument
         if: matrix.framework == 'net9.0'
@@ -420,17 +444,17 @@ jobs:
     strategy:
       fail-fast: false
       matrix:
-        os: [ 'ubuntu-22.04', 'macos-latest', 'macos-13' ]
+        os: [ 'ubuntu-latest', 'macos-latest' ]
         framework: [ 'net8.0', 'net9.0' ]
-        jdk_vendor: [ 'temurin', 'zulu', 'microsoft', 'corretto', 'oracle']
+        jdk_vendor: [ 'temurin', 'zulu', 'microsoft', 'corretto', 'oracle', 'graalvm' ]
         jdk_version: [ '11', '17', '21' ] # only LTS versions
         exclude:
-          - os: macos-latest
-            framework: net6.0
-          - os: macos-13
-            framework: net6.0
           - jdk_vendor: oracle
             jdk_version: 11
+          - jdk_vendor: graalvm
+            jdk_version: 11
+          - jdk_vendor: graalvm
+            jdk_version: 17
 
     runs-on: ${{ matrix.os }}
     env:
@@ -458,11 +482,19 @@ jobs:
           key: JCOReflector_${{ github.run_number }}_${{ github.run_attempt }}_linux_bin_${{ github.sha }}
 
       - name: Set up JDK distribution
+        if: ${{ matrix.jdk_vendor != 'graalvm' }}
         uses: actions/setup-java@v5
         with: # running setup-java again overwrites the settings.xml
           distribution: ${{ matrix.jdk_vendor }}
           java-version: ${{ matrix.jdk_version }}
-          cache: 'maven'
+
+      - name: Set up GraalVM distribution
+        if: ${{ matrix.jdk_vendor == 'graalvm' }}
+        uses: graalvm/setup-graalvm@v1
+        with:
+          java-version: '${{ matrix.jdk_version }}' # See 'Options' for more details
+          distribution: 'graalvm' # See 'Supported distributions' for available options
+          github-token: ${{ secrets.GITHUB_TOKEN }}
 
       - name: Prepare extra argument
         if: matrix.framework == 'net9.0'
@@ -512,11 +544,15 @@ jobs:
       fail-fast: false
       matrix:
         framework: [ 'net8.0', 'net9.0' ]
-        jdk_vendor: [ 'temurin', 'zulu', 'microsoft', 'corretto', 'oracle']
+        jdk_vendor: [ 'temurin', 'zulu', 'microsoft', 'corretto', 'oracle', 'graalvm' ]
         jdk_version: [ '11', '17', '21' ] # only LTS versions
         exclude:
           - jdk_vendor: oracle
             jdk_version: 11
+          - jdk_vendor: graalvm
+            jdk_version: 11
+          - jdk_vendor: graalvm
+            jdk_version: 17
 
     runs-on: ubuntu-22.04
     env:
@@ -544,11 +580,19 @@ jobs:
           key: JCOReflector_${{ github.run_number }}_${{ github.run_attempt }}_linux_bin_${{ github.sha }}
 
       - name: Set up JDK distribution
+        if: ${{ matrix.jdk_vendor != 'graalvm' }}
         uses: actions/setup-java@v5
         with: # running setup-java again overwrites the settings.xml
           distribution: ${{ matrix.jdk_vendor }}
           java-version: ${{ matrix.jdk_version }}
-          cache: 'maven'
+
+      - name: Set up GraalVM distribution
+        if: ${{ matrix.jdk_vendor == 'graalvm' }}
+        uses: graalvm/setup-graalvm@v1
+        with:
+          java-version: '${{ matrix.jdk_version }}' # See 'Options' for more details
+          distribution: 'graalvm' # See 'Supported distributions' for available options
+          github-token: ${{ secrets.GITHUB_TOKEN }}
 
       - name: Download and install Scala package
         run: |
@@ -614,17 +658,17 @@ jobs:
     strategy:
       fail-fast: false
       matrix:
-        os: [ 'macos-latest', 'macos-13' ]
+        os: [ 'macos-latest' ]
         framework: [ 'net8.0', 'net9.0' ]
-        jdk_vendor: [ 'temurin', 'zulu', 'microsoft', 'corretto', 'oracle']
+        jdk_vendor: [ 'temurin', 'zulu', 'microsoft', 'corretto', 'oracle', 'graalvm' ]
         jdk_version: [ '11', '17', '21' ] # only LTS versions
         exclude:
-          - os: macos-latest
-            framework: net6.0
-          - os: macos-13
-            framework: net6.0
           - jdk_vendor: oracle
             jdk_version: 11
+          - jdk_vendor: graalvm
+            jdk_version: 11
+          - jdk_vendor: graalvm
+            jdk_version: 17
 
     runs-on: ${{ matrix.os }}
     env:
@@ -652,11 +696,19 @@ jobs:
           key: JCOReflector_${{ github.run_number }}_${{ github.run_attempt }}_linux_bin_${{ github.sha }}
 
       - name: Set up JDK distribution
+        if: ${{ matrix.jdk_vendor != 'graalvm' }}
         uses: actions/setup-java@v5
         with: # running setup-java again overwrites the settings.xml
           distribution: ${{ matrix.jdk_vendor }}
           java-version: ${{ matrix.jdk_version }}
-          cache: 'maven'
+
+      - name: Set up GraalVM distribution
+        if: ${{ matrix.jdk_vendor == 'graalvm' }}
+        uses: graalvm/setup-graalvm@v1
+        with:
+          java-version: '${{ matrix.jdk_version }}' # See 'Options' for more details
+          distribution: 'graalvm' # See 'Supported distributions' for available options
+          github-token: ${{ secrets.GITHUB_TOKEN }}
 
       - name: Download and install Scala package
         run: brew install scala@2.13
@@ -725,7 +777,7 @@ jobs:
   execute_finalize:
     needs: [execute_java_tests_windows, execute_scala_tests_windows, execute_java_tests_unix, execute_scala_tests_linux, execute_scala_tests_mac]
 
-    runs-on: windows-latest
+    runs-on: windows-2022
     steps:
 
       # Runs a set of commands using the runners shell

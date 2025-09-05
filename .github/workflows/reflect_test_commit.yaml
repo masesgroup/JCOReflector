@@ -788,7 +788,7 @@ jobs:
   execute_finalize:
     needs: [execute_java_tests_windows, execute_scala_tests_windows, execute_java_tests_unix, execute_scala_tests_linux, execute_scala_tests_mac]
 
-    runs-on: windows-latest
+    runs-on: windows-2022
     steps:
 
       # Runs a set of commands using the runners shell

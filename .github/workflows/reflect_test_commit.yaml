@@ -24,6 +24,9 @@ on:
         default: false
         type: boolean
 
+env:
+    SCALARELEASE: 2.13.13
+
 # This workflow contains two jobs called "check" and "build_windows"
 jobs:
   # Verify if a build is needed
@@ -75,8 +78,14 @@ jobs:
   build_windows:
     needs: check
     if: ${{ needs.check.outputs.run_job == 'true' }}
+    strategy:
+      fail-fast: false
+      matrix:
+        os: [ 'windows-2022' ]
+        framework: [ 'net462', 'net8.0', 'net9.0' ]
+
     # The type of runner that the job will run on
-    runs-on: windows-2022
+    runs-on: ${{ matrix.os }}
 
     # Steps represent a sequence of tasks that will be executed as part of the job
     steps:
@@ -92,7 +101,7 @@ jobs:
 
       # Runs a set of commands using the runners shell
       - name: Build JCOReflectorCLI
-        run: dotnet build --no-incremental --configuration Release /p:Platform="Any CPU" src\net\JCOReflectorCLI.sln
+        run: dotnet build --no-incremental --configuration Release --framework ${{ matrix.framework }} /p:Platform="Any CPU" src\net\JCOReflectorCLI.sln
 
       - uses: nuget/setup-nuget@v2.0.1
         with:
@@ -107,69 +116,69 @@ jobs:
           Copy-Item .github\workflows\JCOReflectorCLI_net9.0.runtimeconfig.json -Destination bin\net9.0\MASES.JCOReflectorCLI.runtimeconfig.json -Force
           
       - name: Remove Java files
-        run: |
-          Remove-Item .\src\jvm\src\net8.0 -Recurse -Force
-          Remove-Item .\src\jvm\src\net9.0 -Recurse -Force
-          Remove-Item .\src\jvm\src\net462 -Recurse -Force
+        run: Remove-Item .\src\jvm\src\${{ matrix.framework }} -Recurse -Force
 
-      - name: Reflect .NET 8 Java files
-        run: .\bin\net8.0\MASES.JCOReflectorCLI -JobType Reflect -JobFile .github\workflows\reflect_net8.0.job
+      - name: Reflect ${{ matrix.framework }} Java files
+        run: .\bin\${{ matrix.framework }}\MASES.JCOReflectorCLI -JobType Reflect -JobFile .github\workflows\reflect_${{ matrix.framework }}.job
 
-      - name: Reflect .NET 9 Java files
-        run: .\bin\net9.0\MASES.JCOReflectorCLI -JobType Reflect -JobFile .github\workflows\reflect_net9.0.job
-
-      - name: Reflect .NET Framework Java files
-        run: .\bin\net462\MASES.JCOReflectorCLI -JobType Reflect -JobFile .github\workflows\reflect_net462.job
-
-      - name: Build Java files .NET Core 8
-        run: .\bin\net8.0\MASES.JCOReflectorCLI -JobType Build -JobFile .github\workflows\build_win19.job -JDKFolder %JAVA_HOME_11_X64%
+      - name: Build Java files ${{ matrix.framework }}
+        run: .\bin\${{ matrix.framework }}\MASES.JCOReflectorCLI -JobType Build -JobFile .github\workflows\build_win19.job -JDKFolder %JAVA_HOME_11_X64%
         shell: cmd
 
-      - name: Build Java files .NET Core 9
-        run: .\bin\net9.0\MASES.JCOReflectorCLI -JobType Build -JobFile .github\workflows\build_win19.job -JDKFolder %JAVA_HOME_11_X64%
+      - name: Build JAR files ${{ matrix.framework }}
+        run: .\bin\${{ matrix.framework }}\MASES.JCOReflectorCLI -JobType CreateJars -JobFile .github\workflows\createjars_${{ matrix.framework }}_win19.job -JDKFolder %JAVA_HOME_11_X64%
         shell: cmd
-
-      - name: Build Java files .NET Framework
-        run: .\bin\net462\MASES.JCOReflectorCLI -JobType Build -JobFile .github\workflows\build_win19.job -JDKFolder %JAVA_HOME_11_X64%
-        shell: cmd
-        
-      - name: Build JAR files .NET Core 8
-        run: .\bin\net8.0\MASES.JCOReflectorCLI -JobType CreateJars -JobFile .github\workflows\createjars_net8.0_win19.job -JDKFolder %JAVA_HOME_11_X64%
-        shell: cmd
-
-      - name: Build JAR files .NET Core 9
-        run: .\bin\net9.0\MASES.JCOReflectorCLI -JobType CreateJars -JobFile .github\workflows\createjars_net9.0_win19.job -JDKFolder %JAVA_HOME_11_X64%
-        shell: cmd
-
-      - name: Build JAR files .NET Framework
-        run: .\bin\net462\MASES.JCOReflectorCLI -JobType CreateJars -JobFile .github\workflows\createjars_net462_win19.job -JDKFolder %JAVA_HOME_11_X64%
-        shell: cmd
-
-      - name: Download Scala package
-        run: C:\msys64\usr\bin\wget.exe https://downloads.lightbend.com/scala/2.13.13/scala-2.13.13.zip
-
-      - name: Expand Scala package
-        run: Expand-Archive -LiteralPath '.\scala-2.13.13.zip' -DestinationPath .\bin\ -Force
 
       - name: Save JCOReflector source in cache
         uses: actions/cache/save@v4
         with:
           enableCrossOsArchive: true
           path: ./src/jvm/
-          key: JCOReflector_${{ github.run_number }}_${{ github.run_attempt }}_source_${{ github.sha }}
+          key: JCOReflector_${{ github.run_number }}_${{ github.run_attempt }}_source_${{ matrix.framework }}_${{ github.sha }}
 
       - name: Save JCOReflector bin in cache
         uses: actions/cache/save@v4
         with:
           enableCrossOsArchive: true
           path: ./bin/
-          key: JCOReflector_${{ github.run_number }}_${{ github.run_attempt }}_windows_bin_${{ github.sha }}
+          key: JCOReflector_${{ github.run_number }}_${{ github.run_attempt }}_windows_bin_${{ matrix.framework }}_${{ github.sha }}
+
+  # This workflow contains a single job called "build"
+  build_windows_prepare_scala:
+    needs: build_windows
+    strategy:
+      fail-fast: false
+      matrix:
+        os: [ 'windows-2022' ]
+
+    # The type of runner that the job will run on
+    runs-on: ${{ matrix.os }}
+
+    # Steps represent a sequence of tasks that will be executed as part of the job
+    steps:
+      - name: Download Scala package
+        run: C:\msys64\usr\bin\wget.exe https://downloads.lightbend.com/scala/${{ env.SCALARELEASE }}/scala-${{ env.SCALARELEASE }}.zip
+
+      - name: Expand Scala package
+        run: Expand-Archive -LiteralPath '.\scala-${{ env.SCALARELEASE }}.zip' -DestinationPath .\bin\ -Force
+
+      - name: Save Scala bin in cache
+        uses: actions/cache/save@v4
+        with:
+          enableCrossOsArchive: true
+          path: ./bin/
+          key: JCOReflector_${{ github.run_number }}_${{ github.run_attempt }}_windows_bin_scala_${{ env.SCALARELEASE }}_${{ github.sha }}
 
   # This workflow contains a single job called "build"
   build_linux:
     needs: build_windows
+    strategy:
+      fail-fast: false
+      matrix:
+        os: [ 'ubuntu-22.04' ]
+        framework: [ 'net8.0', 'net9.0' ]
     # The type of runner that the job will run on
-    runs-on: ubuntu-22.04
+    runs-on: ${{ matrix.os }}
 
       # Steps represent a sequence of tasks that will be executed as part of the job
     steps:
@@ -183,49 +192,41 @@ jobs:
           dotnet-version: |
             9.x
 
-      - name: Restore JCOReflector source from cache
+      - name: Restore ${{ matrix.framework }} JCOReflector source from cache
         uses: actions/cache/restore@v4
         with:
           fail-on-cache-miss: true
           enableCrossOsArchive: true
           path: ./src/jvm/
-          key: JCOReflector_${{ github.run_number }}_${{ github.run_attempt }}_source_${{ github.sha }}
+          key: JCOReflector_${{ github.run_number }}_${{ github.run_attempt }}_source_${{ matrix.framework }}_${{ github.sha }}
 
       # Runs a set of commands using the runners shell
-      - name: Build JCOReflectorCLI
-        run: dotnet build --no-incremental --framework net8.0 --configuration Release src/net/JCOReflectorCLI.sln
+      - name: Build ${{ matrix.framework }} JCOReflectorCLI
+        run: dotnet build --no-incremental --framework ${{ matrix.framework }} --configuration Release src/net/JCOReflectorCLI.sln
 
-      - name: Build Java files
-        run: dotnet bin/net8.0/MASES.JCOReflectorCLI.dll -JobType Build -JDKFolder $JAVA_HOME_11_X64 -JobFile .github/workflows/build_linux.job
-
-      - name: Build JAR files
-        run: dotnet bin/net8.0/MASES.JCOReflectorCLI.dll -JobType CreateJars -JDKFolder $JAVA_HOME_11_X64 -JobFile .github/workflows/createjars_net8.0_linux.job
-
-      - name: Build JCOReflectorCLI
-        run: dotnet build --no-incremental --framework net9.0 --configuration Release src/net/JCOReflectorCLI.sln
-
-      - name: Build Java files
-        run: dotnet bin/net9.0/MASES.JCOReflectorCLI.dll -JobType Build -JDKFolder $JAVA_HOME_11_X64 -JobFile .github/workflows/build_linux.job
+      - name: Build ${{ matrix.framework }} Java files
+        run: dotnet bin/${{ matrix.framework }}/MASES.JCOReflectorCLI.dll -JobType Build -JDKFolder $JAVA_HOME_11_X64 -JobFile .github/workflows/build_linux.job
 
       - name: Build JAR files
-        run: dotnet bin/net9.0/MASES.JCOReflectorCLI.dll -JobType CreateJars -JDKFolder $JAVA_HOME_11_X64 -JobFile .github/workflows/createjars_net9.0_linux.job
+        run: dotnet bin/${{ matrix.framework }}/MASES.JCOReflectorCLI.dll -JobType CreateJars -JDKFolder $JAVA_HOME_11_X64 -JobFile .github/workflows/createjars_${{ matrix.framework }}_linux.job
 
       - name: Extract commit SHA
         run: |
           echo "GITHUB_COMMIT_MESSAGE=$(echo $GITHUB_SHA | cut -c 1-7)" >> $GITHUB_ENV
 
-      - name: Save JCOReflector bin in cache
+      - name: Save ${{ matrix.framework }} JCOReflector bin in cache
         uses: actions/cache/save@v4
         with:
           enableCrossOsArchive: true
           path: ./bin/
-          key: JCOReflector_${{ github.run_number }}_${{ github.run_attempt }}_linux_bin_${{ github.sha }}
+          key: JCOReflector_${{ github.run_number }}_${{ github.run_attempt }}_linux_bin_${{ matrix.framework }}_${{ github.sha }}
 
   execute_java_tests_windows:
     needs: build_windows
     strategy:
       fail-fast: false
       matrix:
+        os: [ 'windows-2022' ]
         framework: [ 'net462', 'net8.0', 'net9.0' ]
         jdk_vendor: [ 'temurin', 'zulu', 'microsoft', 'corretto', 'oracle', 'graalvm' ]
         jdk_version: [ '11', '17', '21' ] # only LTS versions
@@ -237,7 +238,7 @@ jobs:
           - jdk_vendor: graalvm
             jdk_version: 17
 
-    runs-on: windows-2022
+    runs-on: ${{ matrix.os }}
     env:
       JCOBRIDGE_SCOPEDON: JCOReflector|1.0.0
       JCOBRIDGE_LicensePath: ${{ secrets.JCOBRIDGE_ENCODED_2_6_3 }}
@@ -253,13 +254,13 @@ jobs:
         with: 
           fetch-depth: '1'
 
-      - name: Restore JCOReflector bin from cache
+      - name: Restore ${{ matrix.framework }} JCOReflector bin from cache
         uses: actions/cache/restore@v4
         with:
           fail-on-cache-miss: true
           enableCrossOsArchive: true
           path: ./bin/
-          key: JCOReflector_${{ github.run_number }}_${{ github.run_attempt }}_windows_bin_${{ github.sha }}
+          key: JCOReflector_${{ github.run_number }}_${{ github.run_attempt }}_windows_bin_${{ matrix.framework }}_${{ github.sha }}
  
       - name: Set up JDK distribution
         if: ${{ matrix.jdk_vendor != 'graalvm' }}
@@ -322,10 +323,11 @@ jobs:
           retention-days: 1
 
   execute_scala_tests_windows:
-    needs: build_windows
+    needs: build_windows_prepare_scala
     strategy:
       fail-fast: false
       matrix:
+        os: [ 'windows-2022' ]
         framework: [ 'net462', 'net8.0', 'net9.0' ]
         jdk_vendor: [ 'temurin', 'zulu', 'microsoft', 'corretto', 'oracle', 'graalvm' ]
         jdk_version: [ '11', '17', '21' ] # only LTS versions
@@ -337,7 +339,7 @@ jobs:
           - jdk_vendor: graalvm
             jdk_version: 17
 
-    runs-on: windows-2022
+    runs-on: ${{ matrix.os }}
     env:
       JCOBRIDGE_SCOPEDON: JCOReflector|1.0.0
       JCOBRIDGE_LicensePath: ${{ secrets.JCOBRIDGE_ENCODED_2_6_3 }}
@@ -353,14 +355,22 @@ jobs:
         with: 
           fetch-depth: '1'
 
-      - name: Restore JCOReflector bin from cache
+      - name: Restore ${{ matrix.framework }} JCOReflector bin from cache
         uses: actions/cache/restore@v4
         with:
           fail-on-cache-miss: true
           enableCrossOsArchive: true
           path: ./bin/
-          key: JCOReflector_${{ github.run_number }}_${{ github.run_attempt }}_windows_bin_${{ github.sha }}
- 
+          key: JCOReflector_${{ github.run_number }}_${{ github.run_attempt }}_windows_bin_${{ matrix.framework }}_${{ github.sha }}
+
+      - name: Restore Scala bin from cache
+        uses: actions/cache/restore@v4
+        with:
+          fail-on-cache-miss: true
+          enableCrossOsArchive: true
+          path: ./bin/
+          key: JCOReflector_${{ github.run_number }}_${{ github.run_attempt }}_windows_bin_scala_${{ env.SCALARELEASE }}_${{ github.sha }}
+
       - name: Set up JDK distribution
         if: ${{ matrix.jdk_vendor != 'graalvm' }}
         uses: actions/setup-java@v5
@@ -386,45 +396,45 @@ jobs:
         run: |
           cd ./tests/jvm/scala
           mkdir output
-          ..\..\..\bin\scala-2.13.13\bin\scalac -toolcp "../../../bin/${{ matrix.framework }}/*" -d ./output ./src/main/scala/hierarchy/* ./src/main/scala/mscorlib/* ./src/main/scala/nettest/* ./src/main/scala/refout/*
+          ..\..\..\bin\scala-${{ env.SCALARELEASE }}\bin\scalac -toolcp "../../../bin/${{ matrix.framework }}/*" -d ./output ./src/main/scala/hierarchy/* ./src/main/scala/mscorlib/* ./src/main/scala/nettest/* ./src/main/scala/refout/*
               
-      - run: .\bin\scala-2.13.13\bin\scala -toolcp "./bin/${{ matrix.framework }}/*;./tests/jvm/scala/output" mscorlib.HelloLock ${{ env.EXTRA_ARGUMENT }}
+      - run: .\bin\scala-${{ env.SCALARELEASE }}\bin\scala -toolcp "./bin/${{ matrix.framework }}/*;./tests/jvm/scala/output" mscorlib.HelloLock ${{ env.EXTRA_ARGUMENT }}
         shell: cmd
         continue-on-error: true
 
-      - run: .\bin\scala-2.13.13\bin\scala -toolcp "./bin/${{ matrix.framework }}/*;./tests/jvm/scala/output" mscorlib.HelloNet ${{ env.EXTRA_ARGUMENT }}
+      - run: .\bin\scala-${{ env.SCALARELEASE }}\bin\scala -toolcp "./bin/${{ matrix.framework }}/*;./tests/jvm/scala/output" mscorlib.HelloNet ${{ env.EXTRA_ARGUMENT }}
         shell: cmd
         continue-on-error: true
 
-      - run: .\bin\scala-2.13.13\bin\scala -toolcp "./bin/${{ matrix.framework }}/*;./tests/jvm/scala/output" mscorlib.HelloNETEvent ${{ env.EXTRA_ARGUMENT }}
+      - run: .\bin\scala-${{ env.SCALARELEASE }}\bin\scala -toolcp "./bin/${{ matrix.framework }}/*;./tests/jvm/scala/output" mscorlib.HelloNETEvent ${{ env.EXTRA_ARGUMENT }}
         shell: cmd
         continue-on-error: true
 
-      - run: .\bin\scala-2.13.13\bin\scala -toolcp "./bin/${{ matrix.framework }}/*;./tests/jvm/scala/output" mscorlib.HelloIterator ${{ env.EXTRA_ARGUMENT }}
+      - run: .\bin\scala-${{ env.SCALARELEASE }}\bin\scala -toolcp "./bin/${{ matrix.framework }}/*;./tests/jvm/scala/output" mscorlib.HelloIterator ${{ env.EXTRA_ARGUMENT }}
         shell: cmd
         continue-on-error: true
 
-      - run: .\bin\scala-2.13.13\bin\scala -toolcp "./bin/${{ matrix.framework }}/*;./tests/jvm/scala/output" hierarchy.HelloHierarchy ${{ env.EXTRA_ARGUMENT }}
+      - run: .\bin\scala-${{ env.SCALARELEASE }}\bin\scala -toolcp "./bin/${{ matrix.framework }}/*;./tests/jvm/scala/output" hierarchy.HelloHierarchy ${{ env.EXTRA_ARGUMENT }}
         shell: cmd
         continue-on-error: true
 
-      - run: .\bin\scala-2.13.13\bin\scala -toolcp "./bin/${{ matrix.framework }}/*;./tests/jvm/scala/output" hierarchy.HelloInterfaces ${{ env.EXTRA_ARGUMENT }}
+      - run: .\bin\scala-${{ env.SCALARELEASE }}\bin\scala -toolcp "./bin/${{ matrix.framework }}/*;./tests/jvm/scala/output" hierarchy.HelloInterfaces ${{ env.EXTRA_ARGUMENT }}
         shell: cmd
         continue-on-error: true
 
-    #  - run: .\bin\scala-2.13.13\bin\scala -toolcp "./bin/${{ matrix.framework }}/*;./tests/jvm/scala/output" nettest.HelloNETSocket ${{ env.EXTRA_ARGUMENT }}
+    #  - run: .\bin\scala-${{ env.SCALARELEASE }}\bin\scala -toolcp "./bin/${{ matrix.framework }}/*;./tests/jvm/scala/output" nettest.HelloNETSocket ${{ env.EXTRA_ARGUMENT }}
     #    shell: cmd
     #    continue-on-error: true
     #
-    #  - run: .\bin\scala-2.13.13\bin\scala -toolcp "./bin/${{ matrix.framework }}/*;./tests/jvm/scala/output" nettest.HelloNETSocket -async ${{ env.EXTRA_ARGUMENT }}
+    #  - run: .\bin\scala-${{ env.SCALARELEASE }}\bin\scala -toolcp "./bin/${{ matrix.framework }}/*;./tests/jvm/scala/output" nettest.HelloNETSocket -async ${{ env.EXTRA_ARGUMENT }}
     #    shell: cmd
     #    continue-on-error: true
 
-      - run: .\bin\scala-2.13.13\bin\scala -toolcp "./bin/${{ matrix.framework }}/*;./tests/jvm/scala/output" refout.HelloRefOutBase ${{ env.EXTRA_ARGUMENT }}
+      - run: .\bin\scala-${{ env.SCALARELEASE }}\bin\scala -toolcp "./bin/${{ matrix.framework }}/*;./tests/jvm/scala/output" refout.HelloRefOutBase ${{ env.EXTRA_ARGUMENT }}
         shell: cmd
         continue-on-error: true
 
-      - run: .\bin\scala-2.13.13\bin\scala -toolcp "./bin/${{ matrix.framework }}/*;./tests/jvm/scala/output" refout.HelloRefOut ${{ env.EXTRA_ARGUMENT }}
+      - run: .\bin\scala-${{ env.SCALARELEASE }}\bin\scala -toolcp "./bin/${{ matrix.framework }}/*;./tests/jvm/scala/output" refout.HelloRefOut ${{ env.EXTRA_ARGUMENT }}
         shell: cmd
         continue-on-error: true
 
@@ -473,13 +483,13 @@ jobs:
           dotnet-version: |
             9.x
 
-      - name: Restore JCOReflector bin from cache
+      - name: Restore ${{ matrix.framework }} JCOReflector bin from cache
         uses: actions/cache/restore@v4
         with:
           fail-on-cache-miss: true
           enableCrossOsArchive: true
           path: ./bin/
-          key: JCOReflector_${{ github.run_number }}_${{ github.run_attempt }}_linux_bin_${{ github.sha }}
+          key: JCOReflector_${{ github.run_number }}_${{ github.run_attempt }}_linux_bin_${{ matrix.framework }}_${{ github.sha }}
 
       - name: Set up JDK distribution
         if: ${{ matrix.jdk_vendor != 'graalvm' }}
@@ -543,6 +553,7 @@ jobs:
     strategy:
       fail-fast: false
       matrix:
+        os: [ 'ubuntu-latest' ]
         framework: [ 'net8.0', 'net9.0' ]
         jdk_vendor: [ 'temurin', 'zulu', 'microsoft', 'corretto', 'oracle', 'graalvm' ]
         jdk_version: [ '11', '17', '21' ] # only LTS versions
@@ -554,7 +565,7 @@ jobs:
           - jdk_vendor: graalvm
             jdk_version: 17
 
-    runs-on: ubuntu-22.04
+    runs-on: ${{ matrix.os }}
     env:
       JCOBRIDGE_SCOPEDON: JCOReflector|1.0.0
       JCOBRIDGE_LicensePath: ${{ secrets.JCOBRIDGE_ENCODED_2_6_3 }}
@@ -577,7 +588,7 @@ jobs:
           fail-on-cache-miss: true
           enableCrossOsArchive: true
           path: ./bin/
-          key: JCOReflector_${{ github.run_number }}_${{ github.run_attempt }}_linux_bin_${{ github.sha }}
+          key: JCOReflector_${{ github.run_number }}_${{ github.run_attempt }}_linux_bin_${{ matrix.framework }}_${{ github.sha }}
 
       - name: Set up JDK distribution
         if: ${{ matrix.jdk_vendor != 'graalvm' }}
@@ -601,7 +612,7 @@ jobs:
           sudo apt-get install zip
           curl -s "https://get.sdkman.io" | bash
           source "$HOME/.sdkman/bin/sdkman-init.sh"
-          sdk install scala 2.13.13
+          sdk install scala ${{ env.SCALARELEASE }}
 
       - name: Prepare extra argument
         if: matrix.framework == 'net9.0'
@@ -687,13 +698,13 @@ jobs:
           dotnet-version: |
             9.x
 
-      - name: Restore JCOReflector bin from cache
+      - name: Restore ${{ matrix.framework }} JCOReflector bin from cache
         uses: actions/cache/restore@v4
         with:
           fail-on-cache-miss: true
           enableCrossOsArchive: true
           path: ./bin/
-          key: JCOReflector_${{ github.run_number }}_${{ github.run_attempt }}_linux_bin_${{ github.sha }}
+          key: JCOReflector_${{ github.run_number }}_${{ github.run_attempt }}_linux_bin_${{ matrix.framework }}_${{ github.sha }}
 
       - name: Set up JDK distribution
         if: ${{ matrix.jdk_vendor != 'graalvm' }}
@@ -777,7 +788,7 @@ jobs:
   execute_finalize:
     needs: [execute_java_tests_windows, execute_scala_tests_windows, execute_java_tests_unix, execute_scala_tests_linux, execute_scala_tests_mac]
 
-    runs-on: windows-2022
+    runs-on: windows-latest
     steps:
 
       # Runs a set of commands using the runners shell
@@ -790,21 +801,53 @@ jobs:
         with: 
           fetch-depth: '1'
 
-      - name: Restore JCOReflector bin from cache
+      - name: Restore net462 JCOReflector bin from cache
         uses: actions/cache/restore@v4
         with:
           fail-on-cache-miss: true
           enableCrossOsArchive: true
           path: ./bin/
-          key: JCOReflector_${{ github.run_number }}_${{ github.run_attempt }}_windows_bin_${{ github.sha }}
-          
-      - name: Restore JCOReflector source from cache
+          key: JCOReflector_${{ github.run_number }}_${{ github.run_attempt }}_windows_bin_net462_${{ github.sha }}
+   
+      - name: Restore net8.0 JCOReflector bin from cache
+        uses: actions/cache/restore@v4
+        with:
+          fail-on-cache-miss: true
+          enableCrossOsArchive: true
+          path: ./bin/
+          key: JCOReflector_${{ github.run_number }}_${{ github.run_attempt }}_windows_bin_net8.0_${{ github.sha }}
+
+      - name: Restore net9.0 JCOReflector bin from cache
+        uses: actions/cache/restore@v4
+        with:
+          fail-on-cache-miss: true
+          enableCrossOsArchive: true
+          path: ./bin/
+          key: JCOReflector_${{ github.run_number }}_${{ github.run_attempt }}_windows_bin_net9.0_${{ github.sha }}
+
+      - name: Restore net462 JCOReflector source from cache
         uses: actions/cache/restore@v4
         with:
           fail-on-cache-miss: true
           enableCrossOsArchive: true
           path: ./src/jvm/
-          key: JCOReflector_${{ github.run_number }}_${{ github.run_attempt }}_source_${{ github.sha }}
+          key: JCOReflector_${{ github.run_number }}_${{ github.run_attempt }}_source_net462_${{ github.sha }}
+
+      - name: Restore net8.0 JCOReflector source from cache
+        uses: actions/cache/restore@v4
+        with:
+          fail-on-cache-miss: true
+          enableCrossOsArchive: true
+          path: ./src/jvm/
+          key: JCOReflector_${{ github.run_number }}_${{ github.run_attempt }}_source_net8.0_${{ github.sha }}
+
+      - name: Restore net9.0 JCOReflector source from cache
+        uses: actions/cache/restore@v4
+        with:
+          fail-on-cache-miss: true
+          enableCrossOsArchive: true
+          path: ./src/jvm/
+          key: JCOReflector_${{ github.run_number }}_${{ github.run_attempt }}_source_net9.0_${{ github.sha }}
 
       - name: Compress release files
         run: |
@@ -902,7 +945,7 @@ jobs:
   final_cleanup:
     needs: [ execute_finalize ]
     if: "always()"
-    runs-on: ubuntu-22.04
+    runs-on: ubuntu-latest
     # Steps represent a sequence of tasks that will be executed as part of the job
     steps:
       # Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it

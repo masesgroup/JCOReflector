@@ -881,7 +881,7 @@ jobs:
 
       - uses: actions/upload-artifact@v4
         with:
-          name: NuGet
+          name: JCOReflectorNuGet
           path: .\bin\*nupkg
 
       - uses: actions/upload-artifact@v4

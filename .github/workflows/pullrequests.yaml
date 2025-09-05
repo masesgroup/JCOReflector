@@ -10,6 +10,9 @@ on:
     paths-ignore:
       - 'docs/**'
 
+env:
+    SCALARELEASE: 2.13.13
+
 # This workflow contains two jobs called "check" and "build_windows"
 jobs:
   # Verify if a build is needed
@@ -151,15 +154,15 @@ jobs:
         run: javac -cp ./bin/${{ matrix.framework }}/JCOReflector.jar ./tests/jvm/java/src/hierarchy/*.java ./tests/jvm/java/src/mscorlib/*.java ./tests/jvm/java/src/nettest/*.java ./tests/jvm/java/src/refout/*.java
 
       - name: Download Scala package
-        run: C:\msys64\usr\bin\wget.exe https://downloads.lightbend.com/scala/2.13.5/scala-2.13.5.zip
+        run: C:\msys64\usr\bin\wget.exe https://downloads.lightbend.com/scala/${{ env.SCALARELEASE }}/scala-${{ env.SCALARELEASE }}.zip
 
       - name: Expand Scala package
-        run: Expand-Archive -LiteralPath '.\scala-2.13.5.zip' -DestinationPath .\ -Force
+        run: Expand-Archive -LiteralPath '.\scala-${{ env.SCALARELEASE }}.zip' -DestinationPath .\ -Force
         
       - name: Build Scala test source file
         shell: cmd
         run: |
           cd ./tests/jvm/scala
           mkdir output
-          ..\..\..\scala-2.13.5\bin\scalac -toolcp "../../../bin/${{ matrix.framework }}/*" -d ./output ./src/main/scala/hierarchy/* ./src/main/scala/mscorlib/* ./src/main/scala/nettest/* ./src/main/scala/refout/*
+          ..\..\..\scala-${{ env.SCALARELEASE }}\bin\scalac -toolcp "../../../bin/${{ matrix.framework }}/*" -d ./output ./src/main/scala/hierarchy/* ./src/main/scala/mscorlib/* ./src/main/scala/nettest/* ./src/main/scala/refout/*
 

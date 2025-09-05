@@ -2,9 +2,9 @@
 <html>
   <head>
     <meta charset="utf-8">
-      <title>Enum ErrorReportingType | MASES Group website - JCOReflector </title>
+      <title>Enum LogLevel | MASES Group website - JCOReflector </title>
       <meta name="viewport" content="width=device-width, initial-scale=1.0">
-      <meta name="title" content="Enum ErrorReportingType | MASES Group website - JCOReflector ">
+      <meta name="title" content="Enum LogLevel | MASES Group website - JCOReflector ">
       
       
       <link rel="icon" href="../images/favicon.png">
@@ -16,7 +16,7 @@
       <meta name="docfx:rel" content="../">
       
       
-      <meta name="docfx:docurl" content="https://github.com/masesgroup/JCOReflector/new/master/apiSpec/new?filename=MASES_JCOReflectorEngine_ErrorReportingType.md&amp;value=---%0Auid%3A%20MASES.JCOReflectorEngine.ErrorReportingType%0Asummary%3A%20&#39;*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax&#39;%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">
+      <meta name="docfx:docurl" content="https://github.com/masesgroup/JCOReflector/new/master/apiSpec/new?filename=MASES_JCOReflector_Engine_LogLevel.md&amp;value=---%0Auid%3A%20MASES.JCOReflector.Engine.LogLevel%0Asummary%3A%20&#39;*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax&#39;%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">
       <meta name="loc:inThisArticle" content="In this article">
       <meta name="loc:searchResultsCount" content="{count} results for &quot;{query}&quot;">
       <meta name="loc:searchNoResults" content="No results for &quot;{query}&quot;">
@@ -84,17 +84,17 @@
           <nav id="breadcrumb"></nav>
         </div>
 
-        <article data-uid="MASES.JCOReflectorEngine.ErrorReportingType">
+        <article data-uid="MASES.JCOReflector.Engine.LogLevel">
 
 
 
 
-  <h1 id="MASES_JCOReflectorEngine_ErrorReportingType" data-uid="MASES.JCOReflectorEngine.ErrorReportingType" class="text-break">
-Enum ErrorReportingType  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/JCOReflector/blob/master/src/net/engine/SharedClasses.cs/#L97"><i class="bi bi-code-slash"></i></a>
+  <h1 id="MASES_JCOReflector_Engine_LogLevel" data-uid="MASES.JCOReflector.Engine.LogLevel" class="text-break">
+Enum LogLevel  <a class="header-action link-secondary" title="View source" href="https://github.com/masesgroup/JCOReflector/blob/master/src/net/engine/SharedClasses.cs/#L39"><i class="bi bi-code-slash"></i></a>
   </h1>
 
   <div class="facts text-secondary">
-    <dl><dt>Namespace</dt><dd><a class="xref" href="MASES.html">MASES</a>.<a class="xref" href="MASES.JCOReflectorEngine.html">JCOReflectorEngine</a></dd></dl>
+    <dl><dt>Namespace</dt><dd><a class="xref" href="MASES.html">MASES</a>.<a class="xref" href="MASES.JCOReflector.html">JCOReflector</a>.<a class="xref" href="MASES.JCOReflector.Engine.html">Engine</a></dd></dl>
   <dl><dt>Assembly</dt><dd>MASES.JCOReflectorEngine.dll</dd></dl>
   </div>
 
@@ -102,8 +102,7 @@ Enum ErrorReportingType  <a class="header-action link-secondary" title="View sou
   <div class="markdown conceptual"></div>
 
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">[Flags]
-public enum ErrorReportingType</code></pre>
+    <pre><code class="lang-csharp hljs">public enum LogLevel</code></pre>
   </div>
 
 
@@ -117,18 +116,18 @@ public enum ErrorReportingType</code></pre>
   <h2 id="fields">Fields
 </h2>
   <dl class="parameters">
-    <dt id="MASES_JCOReflectorEngine_ErrorReportingType_Both"><code>Both = Callback | Exception</code></dt>
+    <dt id="MASES_JCOReflector_Engine_LogLevel_Error"><code>Error = 0</code></dt>
   
-  <dd><p>The <a class="xref" href="MASES.JCOReflectorEngine.ErrorReportingType.html#MASES_JCOReflectorEngine_ErrorReportingType_Callback">Callback</a> is executed and the <a class="xref" href="MASES.JCOReflectorEngine.ErrorReportingType.html#MASES_JCOReflectorEngine_ErrorReportingType_Exception">Exception</a> is executed</p>
-</dd>
-    <dt id="MASES_JCOReflectorEngine_ErrorReportingType_Callback"><code>Callback = 1</code></dt>
+  <dd></dd>
+    <dt id="MASES_JCOReflector_Engine_LogLevel_Info"><code>Info = 2</code></dt>
   
-  <dd><p>The <span class="xref">MASES.JCOReflectorEngine.JobManager.EndOperationHandler</span> will be called in case of error</p>
-</dd>
-    <dt id="MASES_JCOReflectorEngine_ErrorReportingType_Exception"><code>Exception = 2</code></dt>
+  <dd></dd>
+    <dt id="MASES_JCOReflector_Engine_LogLevel_Verbose"><code>Verbose = 3</code></dt>
   
-  <dd><p>The <a class="xref" href="MASES.JCOReflectorEngine.ErrorReportingType.html#MASES_JCOReflectorEngine_ErrorReportingType_Exception">Exception</a> will be propagated</p>
-</dd>
+  <dd></dd>
+    <dt id="MASES_JCOReflector_Engine_LogLevel_Warning"><code>Warning = 1</code></dt>
+  
+  <dd></dd>
   </dl>
 
 
@@ -136,7 +135,7 @@ public enum ErrorReportingType</code></pre>
 </article>
 
         <div class="contribution d-print-none">
-          <a href="https://github.com/masesgroup/JCOReflector/blob/master/src/net/engine/SharedClasses.cs/#L97" class="edit-link">Edit this page</a>
+          <a href="https://github.com/masesgroup/JCOReflector/blob/master/src/net/engine/SharedClasses.cs/#L39" class="edit-link">Edit this page</a>
         </div>
 
 

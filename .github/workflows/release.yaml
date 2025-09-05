@@ -58,7 +58,7 @@ jobs:
 
       - name: Install local file to be used within Javadoc section of generated POM 
         shell: bash
-        run: mvn install:install-file --no-transfer-progress -Dfile=../../../bin/${{ matrix.framework }}/JCOBridge.jar -DgroupId=JCOBridge -DartifactId=JCOBridge -Dversion=2.6.2 -Dpackaging=jar -f ./src/jvm/src/${{ matrix.framework }}.xml
+        run: mvn install:install-file --no-transfer-progress -Dfile=../../../bin/${{ matrix.framework }}/JCOBridge.jar -DgroupId=JCOBridge -DartifactId=JCOBridge -Dversion=2.6.3 -Dpackaging=jar -f ./src/jvm/src/${{ matrix.framework }}.xml
 
       - name: Publish ${{ matrix.framework }} to Apache Maven Central
         shell: bash
@@ -110,7 +110,7 @@ jobs:
           
       - name: Build JAR files
         run: |
-          .\bin\net8.0\MASES.JCOReflectorCLI -JobType CreateJars -JobFile .github\workflows\createjars_net8.0_win19.job -JDKFolder %JAVA_HOME_11_X64%
+          .\bin\net8.0\MASES.JCOReflectorCLI -JobType C\teJars -JobFile .github\workflows\createjars_net8.0_win19.job -JDKFolder %JAVA_HOME_11_X64%
           .\bin\net9.0\MASES.JCOReflectorCLI -JobType CreateJars -JobFile .github\workflows\createjars_net9.0_win19.job -JDKFolder %JAVA_HOME_11_X64%
           .\bin\net462\MASES.JCOReflectorCLI -JobType CreateJars -JobFile .github\workflows\createjars_net462_win19.job -JDKFolder %JAVA_HOME_11_X64%
         shell: cmd
@@ -127,59 +127,16 @@ jobs:
           Compress-Archive -Path .\docs\net9.0\* -DestinationPath .\net9.0.docs.zip
           Compress-Archive -Path .\docs\net462\* -DestinationPath .\net462.docs.zip
 
-      - name: Upload net8.0 binaries to release
-        uses: svenstaro/upload-release-action@v2
-        with:
-          repo_token: ${{ secrets.GITHUB_TOKEN }}
-          file: .\bin\net8.0.zip
-          asset_name: net8.0.zip
-          tag: ${{ github.ref }}
-          overwrite: true
-
-      - name: Upload net9.0 binaries to release
-        uses: svenstaro/upload-release-action@v2
-        with:
-          repo_token: ${{ secrets.GITHUB_TOKEN }}
-          file: .\bin\net9.0.zip
-          asset_name: net9.0.zip
-          tag: ${{ github.ref }}
-          overwrite: true
-
-      - name: Upload net462 binaries to release
-        uses: svenstaro/upload-release-action@v2
-        with:
-          repo_token: ${{ secrets.GITHUB_TOKEN }}
-          file: .\bin\net462.zip
-          asset_name: net462.zip
-          tag: ${{ github.ref }}
-          overwrite: true
-
-      - name: Upload net8.0 documentation to release
-        uses: svenstaro/upload-release-action@v2
-        with:
-          repo_token: ${{ secrets.GITHUB_TOKEN }}
-          file: .\net8.0.docs.zip
-          asset_name: net8.0.docs.zip
-          tag: ${{ github.ref }}
-          overwrite: true
-
-      - name: Upload net9.0 documentation to release
-        uses: svenstaro/upload-release-action@v2
-        with:
-          repo_token: ${{ secrets.GITHUB_TOKEN }}
-          file: .\net9.0.docs.zip
-          asset_name: net9.0.docs.zip
-          tag: ${{ github.ref }}
-          overwrite: true
-
-      - name: Upload net462 documentation to release
-        uses: svenstaro/upload-release-action@v2
-        with:
-          repo_token: ${{ secrets.GITHUB_TOKEN }}
-          file: .\net462.docs.zip
-          asset_name: net462.docs.zip
-          tag: ${{ github.ref }}
-          overwrite: true
+      - name: Upload GitHub release
+        run: |
+          gh release upload ${{ github.event.release.tag_name }} .\bin\net8.0.zip
+          gh release upload ${{ github.event.release.tag_name }} .\bin\net9.0.zip
+          gh release upload ${{ github.event.release.tag_name }} .\bin\net462.zip
+          gh release upload ${{ github.event.release.tag_name }} .\net8.0.docs.zip
+          gh release upload ${{ github.event.release.tag_name }} .\net9.0.docs.zip
+          gh release upload ${{ github.event.release.tag_name }} .\net462.docs.zip
+        env:
+          GH_TOKEN: ${{ github.token }}
 
       - name: Publish to NuGet
         run: |

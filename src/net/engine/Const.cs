@@ -682,7 +682,19 @@ namespace MASES.JCOReflector.Engine
         public class Report
         {
             public const string ASSEMBLIES_FILE_TO_WRITE = "assemblies.list";
-            public const string REPORT_FILE_TO_WRITE = "README.md";
+#if NET6_0
+            public const string REPORT_FILE_TO_WRITE = "net6.0.md";
+#elif NET7_0
+            public const string REPORT_FILE_TO_WRITE = "net7.0.md";
+#elif NET8_0
+            public const string REPORT_FILE_TO_WRITE = "net8.0.md";
+#elif NET9_0
+            public const string REPORT_FILE_TO_WRITE = "net9.0.md";
+#elif NETFRAMEWORK
+            public const string REPORT_FILE_TO_WRITE = "net462.md";
+#else
+#error Unable to identify .NET engine
+#endif
             public const string REPORT_BEGIN_PLACEHOLDER = "[//]: # \"BeginReport {0}\"";
             public const string REPORT_END_PLACEHOLDER = "[//]: # \"EndReport {0}\"";
         }

@@ -110,7 +110,7 @@ jobs:
           
       - name: Build JAR files
         run: |
-          .\bin\net8.0\MASES.JCOReflectorCLI -JobType CreateJars -JobFile .github\workflows\createjars_net8.0_win19.job -JDKFolder %JAVA_HOME_11_X64%
+          .\bin\net8.0\MASES.JCOReflectorCLI -JobType C\teJars -JobFile .github\workflows\createjars_net8.0_win19.job -JDKFolder %JAVA_HOME_11_X64%
           .\bin\net9.0\MASES.JCOReflectorCLI -JobType CreateJars -JobFile .github\workflows\createjars_net9.0_win19.job -JDKFolder %JAVA_HOME_11_X64%
           .\bin\net462\MASES.JCOReflectorCLI -JobType CreateJars -JobFile .github\workflows\createjars_net462_win19.job -JDKFolder %JAVA_HOME_11_X64%
         shell: cmd

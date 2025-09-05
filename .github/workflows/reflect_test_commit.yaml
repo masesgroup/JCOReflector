@@ -129,11 +129,14 @@ jobs:
         run: .\bin\${{ matrix.framework }}\MASES.JCOReflectorCLI -JobType CreateJars -JobFile .github\workflows\createjars_${{ matrix.framework }}_win19.job -JDKFolder %JAVA_HOME_11_X64%
         shell: cmd
 
-      - name: Save JCOReflector source in cache
+      - name: Save ${{ matrix.framework }} JCOReflector source in cache
         uses: actions/cache/save@v4
         with:
           enableCrossOsArchive: true
-          path: ./src/jvm/
+          path: |
+              ./src/jvm/${{ matrix.framework }}.md
+              ./src/jvm/statistics/${{ matrix.framework }}/
+              ./src/jvm/src/${{ matrix.framework }}/
           key: JCOReflector_${{ github.run_number }}_${{ github.run_attempt }}_source_${{ matrix.framework }}_${{ github.sha }}
 
       - name: Save JCOReflector bin in cache
@@ -197,7 +200,10 @@ jobs:
         with:
           fail-on-cache-miss: true
           enableCrossOsArchive: true
-          path: ./src/jvm/
+          path: |
+              ./src/jvm/${{ matrix.framework }}.md
+              ./src/jvm/statistics/${{ matrix.framework }}/
+              ./src/jvm/src/${{ matrix.framework }}/
           key: JCOReflector_${{ github.run_number }}_${{ github.run_attempt }}_source_${{ matrix.framework }}_${{ github.sha }}
 
       # Runs a set of commands using the runners shell
@@ -830,7 +836,10 @@ jobs:
         with:
           fail-on-cache-miss: true
           enableCrossOsArchive: true
-          path: ./src/jvm/
+          path: |
+              ./src/jvm/net462.md
+              ./src/jvm/statistics/net462/
+              ./src/jvm/src/net462/
           key: JCOReflector_${{ github.run_number }}_${{ github.run_attempt }}_source_net462_${{ github.sha }}
 
       - name: Restore net8.0 JCOReflector source from cache
@@ -838,7 +847,10 @@ jobs:
         with:
           fail-on-cache-miss: true
           enableCrossOsArchive: true
-          path: ./src/jvm/
+          path: |
+              ./src/jvm/net8.0.md
+              ./src/jvm/statistics/net8.0/
+              ./src/jvm/src/net8.0/
           key: JCOReflector_${{ github.run_number }}_${{ github.run_attempt }}_source_net8.0_${{ github.sha }}
 
       - name: Restore net9.0 JCOReflector source from cache
@@ -846,7 +858,10 @@ jobs:
         with:
           fail-on-cache-miss: true
           enableCrossOsArchive: true
-          path: ./src/jvm/
+          path: |
+              ./src/jvm/net9.0.md
+              ./src/jvm/statistics/net9.0/
+              ./src/jvm/src/net9.0/
           key: JCOReflector_${{ github.run_number }}_${{ github.run_attempt }}_source_net9.0_${{ github.sha }}
 
       - name: Compress release files

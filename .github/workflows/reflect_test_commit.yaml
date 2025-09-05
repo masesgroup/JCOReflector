@@ -912,7 +912,7 @@ jobs:
           branch-suffix: short-commit-hash
           add-paths: |
             .\src\jvm\statistics\*.*
-            .\src\jvm\README.md
+            .\src\jvm\net*.md
             .\src\jvm\src\*.list
             .\src\jvm\src\*.java
           commit-message: Update JVM after commit ${{ env.GITHUB_COMMIT_MESSAGE }}

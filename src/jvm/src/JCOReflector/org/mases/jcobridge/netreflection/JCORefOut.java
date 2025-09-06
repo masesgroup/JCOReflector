@@ -81,9 +81,9 @@ public class JCORefOut<T> {
         if (mrefObj != null) {
             if (mrefObj instanceof IJCOBridgeReflected) {
                 IJCOBridgeReflected o = (IJCOBridgeReflected) mrefObj;
-                return JCRefOut.Create(o.getJCOInstance(), mrefObj);
+                return JCRefOut.Create(o.getJCOInstance(), this);
             } else
-                return JCRefOut.Create((T) mrefObj, mrefObj);
+                return JCRefOut.Create((T) mrefObj, this);
         } else {
             if (mrefArray != null && mrefArray.length > 0 && mrefArray[0] instanceof IJCOBridgeReflected) {
                 ArrayList<Object> retValJCArrayList = new ArrayList<Object>();
@@ -91,9 +91,9 @@ public class JCORefOut<T> {
                     IJCOBridgeReflected o = (IJCOBridgeReflected) mrefArray[index];
                     retValJCArrayList.add(o.getJCOInstance());
                 }
-                return JCRefOut.Create(retValJCArrayList.toArray(), mrefArray);
+                return JCRefOut.Create(retValJCArrayList.toArray(), this);
             } else
-                return JCRefOut.Create((T[]) mrefArray, mrefArray);
+                return JCRefOut.Create((T[]) mrefArray, this);
         }
     }
 }

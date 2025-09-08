@@ -33,6 +33,7 @@ import java.util.concurrent.atomic.*;
  * Wrapper class around {@link JCRefOut}
  */
 public class JCORefOut<T> {
+	JCRefOut mJCRefOut = null;
     T mrefObj = null;
     T[] mrefArray = null;
 
@@ -81,9 +82,9 @@ public class JCORefOut<T> {
         if (mrefObj != null) {
             if (mrefObj instanceof IJCOBridgeReflected) {
                 IJCOBridgeReflected o = (IJCOBridgeReflected) mrefObj;
-                return JCRefOut.Create(o.getJCOInstance(), this);
+                mJCRefOut = JCRefOut.Create(o.getJCOInstance(), this);
             } else
-                return JCRefOut.Create((T) mrefObj, this);
+                mJCRefOut = JCRefOut.Create((T) mrefObj, this);
         } else {
             if (mrefArray != null && mrefArray.length > 0 && mrefArray[0] instanceof IJCOBridgeReflected) {
                 ArrayList<Object> retValJCArrayList = new ArrayList<Object>();
@@ -91,9 +92,11 @@ public class JCORefOut<T> {
                     IJCOBridgeReflected o = (IJCOBridgeReflected) mrefArray[index];
                     retValJCArrayList.add(o.getJCOInstance());
                 }
-                return JCRefOut.Create(retValJCArrayList.toArray(), this);
+				Object[] newArray = retValJCArrayList.toArray();
+                mJCRefOut = JCRefOut.Create(newArray, new Object[] { this, newArray } );
             } else
-                return JCRefOut.Create((T[]) mrefArray, this);
+                mJCRefOut = JCRefOut.Create((T[]) mrefArray, this);
         }
+		return mJCRefOut;
     }
 }

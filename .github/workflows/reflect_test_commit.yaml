@@ -197,7 +197,7 @@ jobs:
         with: 
           fetch-depth: '1'
 
-      - uses: actions/setup-dotnet@v4
+      - uses: actions/setup-dotnet@v5
         with:
           dotnet-version: |
             9.x
@@ -495,7 +495,7 @@ jobs:
         with: 
           fetch-depth: '1'
 
-      - uses: actions/setup-dotnet@v4
+      - uses: actions/setup-dotnet@v5
         if: matrix.framework == 'net9.0'
         with:
           dotnet-version: |
@@ -599,7 +599,7 @@ jobs:
         with: 
           fetch-depth: '1'
 
-      - uses: actions/setup-dotnet@v4
+      - uses: actions/setup-dotnet@v5
         if: matrix.framework == 'net9.0'
         with:
           dotnet-version: |
@@ -718,7 +718,7 @@ jobs:
         with: 
           fetch-depth: '1'
 
-      - uses: actions/setup-dotnet@v4
+      - uses: actions/setup-dotnet@v5
         if: matrix.framework == 'net9.0'
         with:
           dotnet-version: |

@@ -111,10 +111,14 @@ public class HelloNETSocketClientAsync {
 
     public static void main(String[] args) throws Throwable {
         JCOReflector.setCommandLineArgs(args);
-
-        connectDone = new ManualResetEvent(false);
-        sendDone = new ManualResetEvent(false);
-        receiveDone = new ManualResetEvent(false);
-        StartClient();
+        try {
+            connectDone = new ManualResetEvent(false);
+            sendDone = new ManualResetEvent(false);
+            receiveDone = new ManualResetEvent(false);
+            StartClient();
+        } catch (Throwable e) {
+            e.printStackTrace();
+            System.exit(-1);
+        }
     }
 }

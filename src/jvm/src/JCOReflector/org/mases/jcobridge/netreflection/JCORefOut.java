@@ -33,7 +33,7 @@ import java.util.concurrent.atomic.*;
  * Wrapper class around {@link JCRefOut}
  */
 public class JCORefOut<T> {
-	JCRefOut mJCRefOut = null;
+    JCRefOut mJCRefOut = null;
     T mrefObj = null;
     T[] mrefArray = null;
 
@@ -92,11 +92,11 @@ public class JCORefOut<T> {
                     IJCOBridgeReflected o = (IJCOBridgeReflected) mrefArray[index];
                     retValJCArrayList.add(o.getJCOInstance());
                 }
-				Object[] newArray = retValJCArrayList.toArray();
+                Object[] newArray = retValJCArrayList.toArray();
                 mJCRefOut = JCRefOut.Create(newArray, new Object[] { this, newArray } );
             } else
                 mJCRefOut = JCRefOut.Create((T[]) mrefArray, this);
         }
-		return mJCRefOut;
+        return mJCRefOut;
     }
 }

@@ -54,6 +54,7 @@
     <EmbeddedResource Include="JCObjectReflectorClassEnumerable.template" />
     <EmbeddedResource Include="JCObjectReflectorClassEvent.template" />
     <EmbeddedResource Include="JCObjectReflectorClassNativeGetPropertyArray.template" />
+    <EmbeddedResource Include="JCObjectReflectorClassNativeMethodWithCastToNumber.template" />
     <EmbeddedResource Include="JCObjectReflectorClassNativeMethodArray.template" />
     <EmbeddedResource Include="JCObjectReflectorClassObjectGetPropertyArray.template" />
     <EmbeddedResource Include="JCObjectReflectorClassObjectMethodArray.template" />
